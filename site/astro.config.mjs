@@ -8,7 +8,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Software Architecture Guide',
-			customCss: ['./src/styles/custom.css'],
+			customCss: ['@fontsource-variable/bricolage-grotesque', './src/styles/custom.css'],
 			components: { Footer: './src/components/Footer.astro' },
 			sidebar,
 		}),

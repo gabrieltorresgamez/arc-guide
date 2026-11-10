@@ -1,3 +1,37 @@
+/* Theme: electric orange on warm cream and coffee-brown neutrals. Light values after Zapier's DESIGN.md
+   (github.com/VoltAgent/awesome-design-md); the dark theme is extrapolated from its ink colours. */
+:root {
+  --sl-color-accent-low: #3a1403;
+  --sl-color-accent: #ff4f00;
+  --sl-color-accent-high: #ff4f00;
+  --sl-color-white: #fffefb;
+  --sl-color-gray-1: #f8f4f0;
+  --sl-color-gray-2: #c5c0b1;
+  --sl-color-gray-3: #939084;
+  --sl-color-gray-4: #605d52;
+  --sl-color-gray-5: #3a332d;
+  --sl-color-gray-6: #241c19;
+  --sl-color-black: #1a1210;
+}
+:root[data-theme='light'] {
+  --sl-color-accent-low: #ffe3d5;
+  --sl-color-accent: #ff4f00;
+  --sl-color-accent-high: #7c2d12;
+  --sl-color-text-accent: #c2410c; /* pure #ff4f00 is about 3:1 on cream, too low for link text */
+  --sl-color-white: #201515;
+  --sl-color-gray-1: #2f2a26;
+  --sl-color-gray-2: #36342e;
+  --sl-color-gray-3: #605d52;
+  --sl-color-gray-4: #807d72;
+  --sl-color-gray-5: #c5c0b1;
+  --sl-color-gray-6: #f8f4f0;
+  --sl-color-gray-7: #fbf9f5;
+  --sl-color-black: #fffefb;
+}
+:is(h1, h2, h3, h4, .site-title) {
+  font-family: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+}
+
 /* About 70-75 characters per line (Starlight default 45rem gives ~90). */
 :root {
   --sl-content-width: 38rem;
