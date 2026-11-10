@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.org/bpmn">
+  <process id="order" isExecutable="false">
+    <startEvent id="start" name="Order received">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <parallelGateway id="andSplit">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+      <outgoing>f3</outgoing>
+    </parallelGateway>
+    <task id="stock" name="Check stock">
+      <incoming>f2</incoming>
+      <outgoing>f8</outgoing>
+    </task>
+    <exclusiveGateway id="xorSplit">
+      <incoming>f3</incoming>
+      <outgoing>f4</outgoing>
+      <outgoing>f5</outgoing>
+    </exclusiveGateway>
+    <task id="card" name="Charge card">
+      <incoming>f4</incoming>
+      <outgoing>f6</outgoing>
+    </task>
+    <task id="invoice" name="Send invoice">
+      <incoming>f5</incoming>
+      <outgoing>f7</outgoing>
+    </task>
+    <exclusiveGateway id="xorJoin">
+      <incoming>f6</incoming>
+      <incoming>f7</incoming>
+      <outgoing>f9</outgoing>
+    </exclusiveGateway>
+    <parallelGateway id="andJoin">
+      <incoming>f8</incoming>
+      <incoming>f9</incoming>
+      <outgoing>f10</outgoing>
+    </parallelGateway>
+    <task id="ship" name="Ship order">
+      <incoming>f10</incoming>
+      <outgoing>f11</outgoing>
+    </task>
+    <endEvent id="end" name="Order shipped">
+      <incoming>f11</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="start" targetRef="andSplit" />
+    <sequenceFlow id="f2" sourceRef="andSplit" targetRef="stock" />
+    <sequenceFlow id="f3" sourceRef="andSplit" targetRef="xorSplit" />
+    <sequenceFlow id="f4" sourceRef="xorSplit" targetRef="card" />
+    <sequenceFlow id="f5" sourceRef="xorSplit" targetRef="invoice" />
+    <sequenceFlow id="f6" sourceRef="card" targetRef="xorJoin" />
+    <sequenceFlow id="f7" sourceRef="invoice" targetRef="xorJoin" />
+    <sequenceFlow id="f8" sourceRef="stock" targetRef="andJoin" />
+    <sequenceFlow id="f9" sourceRef="xorJoin" targetRef="andJoin" />
+    <sequenceFlow id="f10" sourceRef="andJoin" targetRef="ship" />
+    <sequenceFlow id="f11" sourceRef="ship" targetRef="end" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_order">
+    <bpmndi:BPMNPlane id="BPMNPlane_order" bpmnElement="order">
+      <bpmndi:BPMNShape id="BPMNShape_start" bpmnElement="start">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="68" y="143" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_andSplit" bpmnElement="andSplit" isMarkerVisible="true">
+        <dc:Bounds x="216" y="95" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_stock" bpmnElement="stock">
+        <dc:Bounds x="366" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_xorSplit" bpmnElement="xorSplit" isMarkerVisible="true">
+        <dc:Bounds x="391" y="255" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_card" bpmnElement="card">
+        <dc:Bounds x="566" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_invoice" bpmnElement="invoice">
+        <dc:Bounds x="566" y="400" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_xorJoin" bpmnElement="xorJoin" isMarkerVisible="true">
+        <dc:Bounds x="766" y="255" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_andJoin" bpmnElement="andJoin" isMarkerVisible="true">
+        <dc:Bounds x="916" y="95" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ship" bpmnElement="ship">
+        <dc:Bounds x="1066" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_end" bpmnElement="end">
+        <dc:Bounds x="1266" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1258" y="143" width="53" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="266" y="120" />
+        <di:waypoint x="366" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f8" bpmnElement="f8">
+        <di:waypoint x="466" y="120" />
+        <di:waypoint x="916" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f10" bpmnElement="f10">
+        <di:waypoint x="966" y="120" />
+        <di:waypoint x="1066" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f11" bpmnElement="f11">
+        <di:waypoint x="1166" y="120" />
+        <di:waypoint x="1266" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="441" y="280" />
+        <di:waypoint x="566" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f6" bpmnElement="f6">
+        <di:waypoint x="666" y="280" />
+        <di:waypoint x="766" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f9" bpmnElement="f9">
+        <di:waypoint x="816" y="280" />
+        <di:waypoint x="941" y="280" />
+        <di:waypoint x="941" y="145" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="241" y="145" />
+        <di:waypoint x="241" y="280" />
+        <di:waypoint x="391" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f5" bpmnElement="f5">
+        <di:waypoint x="416" y="305" />
+        <di:waypoint x="416" y="440" />
+        <di:waypoint x="566" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f7" bpmnElement="f7">
+        <di:waypoint x="666" y="440" />
+        <di:waypoint x="791" y="440" />
+        <di:waypoint x="791" y="305" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

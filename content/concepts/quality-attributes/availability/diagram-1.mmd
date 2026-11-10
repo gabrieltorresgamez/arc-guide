@@ -1,0 +1,5 @@
+flowchart LR
+  U[Users] --> A1[App copy 1: 99.9%]
+  U --> A2[App copy 2: 99.9%]
+  A1 --> P[Payment service: hard dependency]
+  A2 --> P

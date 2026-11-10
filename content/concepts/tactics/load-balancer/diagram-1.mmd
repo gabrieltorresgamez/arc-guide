@@ -1,0 +1,6 @@
+flowchart LR
+  C1[Client A] --> LB[Load balancer]
+  C2[Client B] --> LB
+  LB --> S1[Server 1]
+  LB --> S2[Server 2]
+  LB -. avoids failed server .-> S3[Server 3 - failed]

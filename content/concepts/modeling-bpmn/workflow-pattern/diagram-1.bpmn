@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.org/wp">
+  <process id="refund" isExecutable="false">
+    <startEvent id="s" name="Request received">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <task id="register" name="Register request">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+    </task>
+    <parallelGateway id="split" name="Split">
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+      <outgoing>f4</outgoing>
+    </parallelGateway>
+    <task id="pay" name="Prepare payment">
+      <incoming>f3</incoming>
+      <outgoing>f5</outgoing>
+    </task>
+    <task id="notify" name="Notify customer">
+      <incoming>f4</incoming>
+      <outgoing>f6</outgoing>
+    </task>
+    <parallelGateway id="join" name="Join">
+      <incoming>f5</incoming>
+      <incoming>f6</incoming>
+      <outgoing>f7</outgoing>
+    </parallelGateway>
+    <task id="close" name="Close case">
+      <incoming>f7</incoming>
+      <outgoing>f8</outgoing>
+    </task>
+    <endEvent id="e" name="Done">
+      <incoming>f8</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="s" targetRef="register" />
+    <sequenceFlow id="f2" sourceRef="register" targetRef="split" />
+    <sequenceFlow id="f3" sourceRef="split" targetRef="pay" />
+    <sequenceFlow id="f4" sourceRef="split" targetRef="notify" />
+    <sequenceFlow id="f5" sourceRef="pay" targetRef="join" />
+    <sequenceFlow id="f6" sourceRef="notify" targetRef="join" />
+    <sequenceFlow id="f7" sourceRef="join" targetRef="close" />
+    <sequenceFlow id="f8" sourceRef="close" targetRef="e" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_refund">
+    <bpmndi:BPMNPlane id="BPMNPlane_refund" bpmnElement="refund">
+      <bpmndi:BPMNShape id="BPMNShape_s" bpmnElement="s">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="68" y="143" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_register" bpmnElement="register">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_split" bpmnElement="split" isMarkerVisible="true">
+        <dc:Bounds x="416" y="95" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="421" y="76" width="41" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pay" bpmnElement="pay">
+        <dc:Bounds x="566" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_notify" bpmnElement="notify">
+        <dc:Bounds x="566" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_join" bpmnElement="join" isMarkerVisible="true">
+        <dc:Bounds x="766" y="95" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="774" y="76" width="34" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_close" bpmnElement="close">
+        <dc:Bounds x="916" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_e" bpmnElement="e">
+        <dc:Bounds x="1116" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1117" y="143" width="34" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="466" y="120" />
+        <di:waypoint x="566" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f5" bpmnElement="f5">
+        <di:waypoint x="666" y="120" />
+        <di:waypoint x="766" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f7" bpmnElement="f7">
+        <di:waypoint x="816" y="120" />
+        <di:waypoint x="916" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f8" bpmnElement="f8">
+        <di:waypoint x="1016" y="120" />
+        <di:waypoint x="1116" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="441" y="145" />
+        <di:waypoint x="441" y="280" />
+        <di:waypoint x="566" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f6" bpmnElement="f6">
+        <di:waypoint x="666" y="280" />
+        <di:waypoint x="791" y="280" />
+        <di:waypoint x="791" y="145" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

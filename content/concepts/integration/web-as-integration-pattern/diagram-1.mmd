@@ -1,0 +1,5 @@
+flowchart LR
+  A[Component A] -->|PUT / GET| R1[(Resource at URI 1)]
+  B[Component B] -->|GET| R1
+  R1 -. link .-> R2[(Resource at URI 2)]
+  B -->|follows link, GET| R2

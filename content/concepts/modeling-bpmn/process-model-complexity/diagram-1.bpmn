@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.com/bpmn">
+  <process id="enrollment" isExecutable="false">
+    <startEvent id="s" name="Request received">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <subProcess id="pay" name="Handle payment">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+      <startEvent id="ps">
+        <outgoing>p1</outgoing>
+      </startEvent>
+      <task id="pt" name="Check payment">
+        <incoming>p1</incoming>
+        <outgoing>p2</outgoing>
+      </task>
+      <endEvent id="pe">
+        <incoming>p2</incoming>
+      </endEvent>
+      <sequenceFlow id="p1" sourceRef="ps" targetRef="pt" />
+      <sequenceFlow id="p2" sourceRef="pt" targetRef="pe" />
+    </subProcess>
+    <task id="reg" name="Register">
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+    </task>
+    <endEvent id="e" name="Done">
+      <incoming>f3</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="s" targetRef="pay" />
+    <sequenceFlow id="f2" sourceRef="pay" targetRef="reg" />
+    <sequenceFlow id="f3" sourceRef="reg" targetRef="e" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_enrollment">
+    <bpmndi:BPMNPlane id="BPMNPlane_enrollment" bpmnElement="enrollment">
+      <bpmndi:BPMNShape id="BPMNShape_s" bpmnElement="s">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="68" y="143" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pay" bpmnElement="pay">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_reg" bpmnElement="reg">
+        <dc:Bounds x="416" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_e" bpmnElement="e">
+        <dc:Bounds x="616" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="617" y="143" width="34" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="516" y="120" />
+        <di:waypoint x="616" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_pay">
+    <bpmndi:BPMNPlane id="BPMNPlane_pay" bpmnElement="pay">
+      <bpmndi:BPMNShape id="BPMNShape_ps" bpmnElement="ps">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pt" bpmnElement="pt">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pe" bpmnElement="pe">
+        <dc:Bounds x="416" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_p1" bpmnElement="p1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_p2" bpmnElement="p2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

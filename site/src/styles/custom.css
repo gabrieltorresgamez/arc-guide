@@ -1,0 +1,26 @@
+/* About 70-75 characters per line (Starlight default 45rem gives ~90). */
+:root {
+  --sl-content-width: 38rem;
+}
+
+/* No single word alone on the last line; headings break into even lines. */
+.sl-markdown-content :is(p, li) {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Diagrams are SVGs with black lines and a transparent background; give them a white one so they stay readable in the dark theme. */
+img[src^="/diagrams/"] {
+  display: block;
+  margin-inline: auto;
+  background: #fff;
+  padding: 0.75rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: auto;
+}

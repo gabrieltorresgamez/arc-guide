@@ -1,0 +1,11 @@
+flowchart LR
+ A[XML message] --> R{Router}
+ B[CSV message] --> R
+ C[Other format] --> R
+ R --> T1[XML translator]
+ R --> T2[CSV translator]
+ R --> T3[Other translator]
+ T1 --> O[Common format]
+ T2 --> O
+ T3 --> O
+ O --> D[Downstream consumer]

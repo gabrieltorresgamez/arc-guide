@@ -1,0 +1,9 @@
+@startuml
+package "Bounded Context: Ordering" {
+  class Order <<aggregate root>>
+  class OrderItem <<entity>>
+  class Price <<value object>>
+  Order "1" *-- "many" OrderItem
+  OrderItem --> Price
+}
+@enduml

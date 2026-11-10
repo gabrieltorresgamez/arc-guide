@@ -1,0 +1,9 @@
+flowchart TD
+  W["Run the shop's sales (summary, white)"]
+  B1["Place an order (user goal, blue)"]
+  B2["Track a delivery (user goal, blue)"]
+  I["Find a product (subfunction, indigo)"]
+  W --> B1
+  W --> B2
+  B1 --> I
+  B2 --> I

@@ -1,0 +1,7 @@
+flowchart LR
+  A[Business processes] -->|create, read, update, delete| B[(Operational database)]
+  M[(Database of record: master data)] --> B
+  B -->|export| C[(Data lake)]
+  C --> D[Data warehouse]
+  D --> E[Analytics]
+  B -->|data API| F[Other applications]

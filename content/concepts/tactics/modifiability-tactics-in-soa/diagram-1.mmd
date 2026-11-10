@@ -1,0 +1,5 @@
+flowchart LR
+  P[Order service] --> C((Publish-subscribe channel))
+  C --> B[Billing]
+  C --> S[Shipping]
+  C --> L[New subscriber]

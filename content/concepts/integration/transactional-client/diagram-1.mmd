@@ -1,0 +1,4 @@
+flowchart LR
+  A[Service] -->|one transaction| B[(Database: business data + outgoing message)]
+  B --> C[Relay]
+  C -->|may publish twice| D[Message channel]

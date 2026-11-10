@@ -1,0 +1,11 @@
+@startuml
+interface ShippingCalculator
+class Checkout
+class StandardDelivery
+class ExpressDelivery
+class Pickup
+Checkout --> ShippingCalculator : uses
+StandardDelivery ..|> ShippingCalculator
+ExpressDelivery ..|> ShippingCalculator
+Pickup ..|> ShippingCalculator
+@enduml

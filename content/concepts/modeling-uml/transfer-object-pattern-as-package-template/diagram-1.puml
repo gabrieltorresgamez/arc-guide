@@ -1,0 +1,5 @@
+@startuml
+package "Transfer Object Template" as T
+package "Customer Access" as C
+C ..> T : <<bind>> <Key -> Integer, Data -> Customer>
+@enduml

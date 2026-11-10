@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant S as Sender
+  participant D as Data store
+  participant Q as Message channel
+  participant R as Receiver
+  S->>D: 1. Write payload
+  D-->>S: Write succeeded
+  S->>Q: 2. Send claim check
+  Q->>R: 3. Deliver claim check
+  R->>D: 4. Fetch payload with claim check
+  D-->>R: Payload

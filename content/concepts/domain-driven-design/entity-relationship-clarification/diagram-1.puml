@@ -1,0 +1,7 @@
+@startuml
+class Order
+class LineItem
+class Customer
+Order --> "*" LineItem
+Order --> Customer
+@enduml

@@ -1,0 +1,8 @@
+sequenceDiagram
+  participant R as Requester
+  participant P as Replier
+  R->>P: Request (ID 101, reply-to: callback queue)
+  R->>P: Request (ID 102, reply-to: callback queue)
+  P-->>R: Reply (correlation ID 102)
+  P-->>R: Reply (correlation ID 101)
+  Note over R: Each reply is matched to its request by ID

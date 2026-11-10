@@ -1,0 +1,6 @@
+flowchart LR
+  O[Orders service] -->|API or message| P[Payments service]
+  O -->|API or message| C[Catalog service]
+  O --- OD[(Orders data)]
+  P --- PD[(Payments data)]
+  C --- CD[(Catalog data)]

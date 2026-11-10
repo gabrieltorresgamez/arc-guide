@@ -1,0 +1,18 @@
+@startuml
+[*] --> Fulfillment
+state Fulfillment {
+  state Payment {
+    [*] --> Pending
+    Pending --> Paid : payment received
+    Paid --> [*]
+  }
+  --
+  state Packing {
+    [*] --> Waiting
+    Waiting --> Packed : items packed
+    Packed --> [*]
+  }
+}
+Fulfillment --> ReadyToShip
+ReadyToShip --> [*]
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+class Cargo {
+  trackingId
+}
+class RouteSpecification
+class Itinerary
+class Delivery
+class HandlingEvent
+Cargo --> RouteSpecification : requirement
+Cargo --> Itinerary : plan
+Cargo --> Delivery : actual
+HandlingEvent ..> Delivery : feeds
+@enduml

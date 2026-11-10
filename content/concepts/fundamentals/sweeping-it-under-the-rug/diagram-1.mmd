@@ -1,0 +1,6 @@
+flowchart LR
+  A[Rest of the system] --> F[Clean façade]
+  subgraph Enclave[Quarantined code]
+    F --> M1[Tangled part 1]
+    F --> M2[Tangled part 2]
+  end

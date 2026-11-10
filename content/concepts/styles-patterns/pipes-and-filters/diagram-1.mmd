@@ -1,0 +1,5 @@
+flowchart LR
+  S[Source] -->|pipe| F1[Filter 1: validate]
+  F1 -->|pipe| F2[Filter 2: convert]
+  F2 -->|pipe| F3[Filter 3: enrich]
+  F3 -->|pipe| K[Sink]

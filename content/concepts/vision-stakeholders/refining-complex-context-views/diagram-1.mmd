@@ -1,0 +1,9 @@
+flowchart LR
+  Customer[Customers] -->|orders| S[Shop system]
+  S -->|payment requests| Pay[Payment provider]
+  subgraph Logistics cluster
+    Ship1[Shipper A]
+    Ship2[Shipper B]
+  end
+  S -->|shipment data| Ship1
+  S -->|shipment data| Ship2

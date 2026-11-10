@@ -1,0 +1,4 @@
+flowchart LR
+  C[Client] -- TLS encrypted --> A[Application]
+  A -- encrypts with data key --> D[(Encrypted storage)]
+  K[Key management service / HSM] -. provides keys .-> A

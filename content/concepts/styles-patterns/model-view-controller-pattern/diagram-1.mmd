@@ -1,0 +1,7 @@
+flowchart LR
+  U[User] -->|input| C[Controller]
+  C -->|updates| M[Model]
+  M -.->|notifies| V1[View A]
+  M -.->|notifies| V2[View B]
+  V1 -->|output| U
+  V2 -->|output| U

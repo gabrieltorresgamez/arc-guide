@@ -1,0 +1,8 @@
+stateDiagram-v2
+    [*] --> Placed: create via factory
+    Placed --> Paid: pay
+    Paid --> Shipped: ship
+    Placed --> Cancelled: cancel
+    Paid --> Cancelled: cancel
+    Shipped --> [*]
+    Cancelled --> [*]

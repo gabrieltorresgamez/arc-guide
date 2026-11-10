@@ -1,0 +1,15 @@
+@startuml
+class Order {
+  status : String
+  total : Integer
+}
+object "o1 : Order" as o1 {
+  status = open
+  total = 40
+}
+object "anonymous : Order" as o2 {
+  status = paid
+}
+o1 ..> Order : <<instantiate>>
+o2 ..> Order : <<instantiate>>
+@enduml

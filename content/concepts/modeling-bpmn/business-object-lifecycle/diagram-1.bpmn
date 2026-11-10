@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.com/lifecycle">
+  <process id="p1" isExecutable="false">
+    <startEvent id="s1" name="Invoice received">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <task id="t1" name="Check invoice">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+      <dataOutputAssociation id="doa1">
+        <targetRef>d1</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="g1" name="Valid?">
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+      <outgoing>f4</outgoing>
+    </exclusiveGateway>
+    <task id="t2" name="Pay invoice">
+      <incoming>f3</incoming>
+      <outgoing>f5</outgoing>
+    </task>
+    <task id="t3" name="Return invoice to sender">
+      <incoming>f4</incoming>
+      <outgoing>f6</outgoing>
+    </task>
+    <endEvent id="e1" name="Invoice paid">
+      <incoming>f5</incoming>
+    </endEvent>
+    <endEvent id="e2" name="Invoice rejected">
+      <incoming>f6</incoming>
+    </endEvent>
+    <dataObjectReference id="d1" name="Invoice" dataObjectRef="do1">
+      <dataState id="ds1" name="checked" />
+    </dataObjectReference>
+    <dataObject id="do1" />
+    <sequenceFlow id="f1" sourceRef="s1" targetRef="t1" />
+    <sequenceFlow id="f2" sourceRef="t1" targetRef="g1" />
+    <sequenceFlow id="f3" name="yes" sourceRef="g1" targetRef="t2" />
+    <sequenceFlow id="f4" name="no" sourceRef="g1" targetRef="t3" />
+    <sequenceFlow id="f5" sourceRef="t2" targetRef="e1" />
+    <sequenceFlow id="f6" sourceRef="t3" targetRef="e2" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="p1">
+      <bpmndi:BPMNShape id="s1_di" bpmnElement="s1">
+        <dc:Bounds x="150" y="182" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t1_di" bpmnElement="t1">
+        <dc:Bounds x="240" y="160" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g1_di" bpmnElement="g1" isMarkerVisible="true">
+        <dc:Bounds x="400" y="175" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t2_di" bpmnElement="t2">
+        <dc:Bounds x="510" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t3_di" bpmnElement="t3">
+        <dc:Bounds x="510" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="e1_di" bpmnElement="e1">
+        <dc:Bounds x="670" y="122" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="e2_di" bpmnElement="e2">
+        <dc:Bounds x="670" y="262" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="d1_di" bpmnElement="d1">
+        <dc:Bounds x="265" y="40" width="36" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="f1_di" bpmnElement="f1">
+        <di:waypoint x="186" y="200" />
+        <di:waypoint x="240" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="f2_di" bpmnElement="f2">
+        <di:waypoint x="340" y="200" />
+        <di:waypoint x="400" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="f3_di" bpmnElement="f3">
+        <di:waypoint x="425" y="175" />
+        <di:waypoint x="425" y="140" />
+        <di:waypoint x="510" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="f4_di" bpmnElement="f4">
+        <di:waypoint x="425" y="225" />
+        <di:waypoint x="425" y="280" />
+        <di:waypoint x="510" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="f5_di" bpmnElement="f5">
+        <di:waypoint x="610" y="140" />
+        <di:waypoint x="670" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="f6_di" bpmnElement="f6">
+        <di:waypoint x="610" y="280" />
+        <di:waypoint x="670" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="doa1_di" bpmnElement="doa1">
+        <di:waypoint x="290" y="160" />
+        <di:waypoint x="283" y="112" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,18 @@
+---
+// Starlight's footer plus a link to the privacy notice on every page.
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default />
+<p class="legal"><a href="/privacy/">Privacy notice</a></p>
+
+<style>
+	.legal {
+		margin-top: 2rem;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+	.legal a {
+		color: inherit;
+	}
+</style>

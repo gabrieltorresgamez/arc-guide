@@ -1,0 +1,9 @@
+flowchart LR
+  C[Client] -->|request| S[Scatter]
+  S --> R1[Recipient A]
+  S --> R2[Recipient B]
+  S --> R3[Recipient C]
+  R1 --> A[Aggregator]
+  R2 --> A
+  R3 --> A
+  A -->|single response| C

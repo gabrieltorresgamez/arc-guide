@@ -1,0 +1,5 @@
+sequenceDiagram
+    participant A as Requester
+    participant B as Replier
+    A->>B: Request (header: request ID, return address / body: data)
+    B-->>A: Reply (header: correlation ID = request ID / body: result)

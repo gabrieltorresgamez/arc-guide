@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant C as Commander (server)
+    participant B as Backup Soldier
+    participant S as Other Soldiers
+    C->>B: state message
+    B-->>C: acknowledgement
+    Note over C: Commander fails
+    Note over B: Backup converts from client to server
+    B->>S: announce new Commander

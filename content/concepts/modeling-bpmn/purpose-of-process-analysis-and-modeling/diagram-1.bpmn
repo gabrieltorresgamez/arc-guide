@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="d" targetNamespace="http://example.org">
+  <bpmn:collaboration id="c">
+    <bpmn:participant id="p" name="Order handling" processRef="proc" />
+  </bpmn:collaboration>
+  <bpmn:process id="proc" isExecutable="false">
+    <bpmn:laneSet id="ls">
+      <bpmn:lane id="l1" name="Sales">
+        <bpmn:flowNodeRef>start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>accept</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="l2" name="Warehouse">
+        <bpmn:flowNodeRef>ship</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>cancel</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>endOk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>endCancel</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="start" name="Order received">
+      <bpmn:outgoing>f1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="accept" name="Accept order">
+      <bpmn:incoming>f1</bpmn:incoming>
+      <bpmn:outgoing>f2</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:subProcess id="ship" name="Pack and ship">
+      <bpmn:incoming>f2</bpmn:incoming>
+      <bpmn:outgoing>f3</bpmn:outgoing>
+    </bpmn:subProcess>
+    <bpmn:boundaryEvent id="cancel" name="Customer cancels" attachedToRef="ship">
+      <bpmn:outgoing>f4</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:boundaryEvent>
+    <bpmn:endEvent id="endOk" name="Order shipped">
+      <bpmn:incoming>f3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="endCancel" name="Order cancelled">
+      <bpmn:incoming>f4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="f1" sourceRef="start" targetRef="accept" />
+    <bpmn:sequenceFlow id="f2" sourceRef="accept" targetRef="ship" />
+    <bpmn:sequenceFlow id="f3" sourceRef="ship" targetRef="endOk" />
+    <bpmn:sequenceFlow id="f4" sourceRef="cancel" targetRef="endCancel" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_c">
+    <bpmndi:BPMNPlane id="BPMNPlane_c" bpmnElement="c">
+      <bpmndi:BPMNShape id="BPMNShape_p" bpmnElement="p" isHorizontal="true">
+        <dc:Bounds x="80" y="80" width="682" height="596" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_l1" bpmnElement="l1" isHorizontal="true">
+        <dc:Bounds x="110" y="80" width="652" height="240" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_l2" bpmnElement="l2" isHorizontal="true">
+        <dc:Bounds x="110" y="320" width="652" height="356" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_start" bpmnElement="start">
+        <dc:Bounds x="150" y="182" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="138" y="223" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_accept" bpmnElement="accept">
+        <dc:Bounds x="286" y="160" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ship" bpmnElement="ship">
+        <dc:Bounds x="486" y="400" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_endOk" bpmnElement="endOk">
+        <dc:Bounds x="686" y="422" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="678" y="463" width="53" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_endCancel" bpmnElement="endCancel">
+        <dc:Bounds x="686" y="560" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="671" y="601" width="67" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_cancel" bpmnElement="cancel">
+        <dc:Bounds x="518" y="462" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="464" y="503" width="65" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="186" y="200" />
+        <di:waypoint x="286" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="386" y="200" />
+        <di:waypoint x="536" y="200" />
+        <di:waypoint x="536" y="400" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="586" y="440" />
+        <di:waypoint x="686" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="536" y="498" />
+        <di:waypoint x="536" y="578" />
+        <di:waypoint x="686" y="578" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_ship">
+    <bpmndi:BPMNPlane id="BPMNPlane_ship" bpmnElement="ship" />
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

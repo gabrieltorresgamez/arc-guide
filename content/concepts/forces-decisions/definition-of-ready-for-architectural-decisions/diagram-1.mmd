@@ -1,0 +1,9 @@
+flowchart LR
+  S[Stakeholders] --> T[Time]
+  T --> A[Alternatives]
+  A --> R[Requirements]
+  R --> M[Template]
+  M --> D{All five met?}
+  D -- yes --> X[Make the decision]
+  D -- no --> W[Close the gap first]
+  X --> F[Check Definition of Done]

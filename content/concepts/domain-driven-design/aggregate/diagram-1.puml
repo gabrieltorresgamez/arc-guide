@@ -1,0 +1,9 @@
+@startuml
+class Client
+package "Order aggregate" {
+  class Order <<root>>
+  class OrderItem
+}
+Client --> Order
+Order *-- "many" OrderItem
+@enduml

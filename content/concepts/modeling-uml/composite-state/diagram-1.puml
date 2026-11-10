@@ -1,0 +1,12 @@
+@startuml
+[*] --> Checkout
+state Checkout {
+  [*] --> EnterPayment
+  EnterPayment --> PaymentDone
+  PaymentDone --> [*]
+  --
+  [*] --> ChooseDelivery
+  ChooseDelivery --> DeliveryDone
+  DeliveryDone --> [*]
+}
+@enduml

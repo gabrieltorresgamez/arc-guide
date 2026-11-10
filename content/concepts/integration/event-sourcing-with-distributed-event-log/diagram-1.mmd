@@ -1,0 +1,6 @@
+flowchart LR
+ W1[Writer A] -->|append| L[(Event log, ordered per partition)]
+ W2[Writer B] -->|append| L
+ L -->|pull from offset| C1[Consumer group 1]
+ L -->|pull from offset| C2[Consumer group 2]
+ L -.->|pruned after retention| X[Removed]

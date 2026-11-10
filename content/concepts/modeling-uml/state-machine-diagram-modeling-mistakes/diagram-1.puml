@@ -1,0 +1,7 @@
+@startuml
+[*] --> Checking
+Checking --> Approved : [amount <= limit]
+Checking --> Declined : [else]
+Approved --> [*]
+Declined --> [*]
+@enduml

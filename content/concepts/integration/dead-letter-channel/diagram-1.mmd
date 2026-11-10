@@ -1,0 +1,7 @@
+flowchart LR
+  P[Sender] --> Q[Source queue]
+  Q --> C[Consumer]
+  Q -- expired --> D[Dead-letter queue]
+  C -- retries exhausted --> D
+  D --> I[Inspect and fix]
+  I -- resubmit --> Q

@@ -1,0 +1,9 @@
+flowchart TB
+  N[Business needs and quality goals] --> A[Architecture]
+  subgraph Env[Environment]
+    subgraph Sys[System boundary]
+      B1[Building block A]
+      B2[Building block B]
+    end
+  end
+  A --> Sys

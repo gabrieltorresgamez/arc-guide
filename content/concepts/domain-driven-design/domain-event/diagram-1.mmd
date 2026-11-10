@@ -1,0 +1,5 @@
+flowchart LR
+  A[Order aggregate] -->|raises| E((Order paid event))
+  E -->|after commit| H1[Handler: reserve stock]
+  E -->|after commit| H2[Handler: create integration event]
+  H2 -->|event bus, asynchronous| B[Shipping bounded context]

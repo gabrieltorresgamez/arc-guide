@@ -1,0 +1,6 @@
+flowchart LR
+  C1[Client A] --> I[Public interface]
+  C2[Client B] --> I
+  subgraph M[Module]
+    I --> S[Hidden decision]
+  end

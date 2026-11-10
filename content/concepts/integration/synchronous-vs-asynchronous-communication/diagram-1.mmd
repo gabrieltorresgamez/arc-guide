@@ -1,0 +1,10 @@
+sequenceDiagram
+ participant A as Caller
+ participant B as Callee
+ Note over A,B: Synchronous
+ A->>B: request
+ B-->>A: reply (caller waited)
+ Note over A,B: Asynchronous
+ A->>B: request + correlation ID
+ A->>A: continues other work
+ B-->>A: reply + same correlation ID

@@ -1,0 +1,6 @@
+flowchart TD
+  A[Request hazardous operation] --> B{Interlock: preconditions met?}
+  B -- yes --> C[Run operation]
+  B -- no or unknown --> D[Safe state]
+  C --> E[Watchdog monitors component]
+  E -- hang detected --> F[Restart]

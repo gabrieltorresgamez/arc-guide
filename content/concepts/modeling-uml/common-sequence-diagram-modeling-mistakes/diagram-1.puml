@@ -1,0 +1,8 @@
+@startuml
+participant "order:OrderService" as O
+participant "pay:PaymentService" as P
+participant "wh:Warehouse" as W
+O -> P : chargeCard
+P --> O : chargeCard
+O ->> W : notifyWarehouse
+@enduml

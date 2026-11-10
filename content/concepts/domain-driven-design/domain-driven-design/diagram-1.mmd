@@ -1,0 +1,8 @@
+flowchart LR
+  subgraph Sales[Sales context]
+    S[Sales model with aggregates]
+  end
+  subgraph Billing[Billing context]
+    B[Billing model with aggregates]
+  end
+  Sales -- relationship between contexts --- Billing

@@ -1,0 +1,7 @@
+flowchart LR
+  R1[Recipient A] -.register + rules.-> C((Control channel))
+  R2[Recipient B] -.register + rules.-> C
+  C --> Router[Dynamic Router\nrule base]
+  In[Input channel] --> Router
+  Router --> R1
+  Router --> R2

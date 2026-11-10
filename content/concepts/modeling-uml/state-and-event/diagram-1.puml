@@ -1,0 +1,5 @@
+@startuml
+[*] --> Closed
+Closed --> Open : openRequested [unlocked]
+Open --> Closed : closeRequested
+@enduml

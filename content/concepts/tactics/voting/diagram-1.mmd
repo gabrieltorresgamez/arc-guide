@@ -1,0 +1,9 @@
+flowchart LR
+  I[Same input] --> A[Unit A]
+  I --> B[Unit B]
+  I --> C[Unit C]
+  A --> V{Voter}
+  B --> V
+  C --> V
+  V --> O[Majority output]
+  V -.-> F[Mismatch flag]

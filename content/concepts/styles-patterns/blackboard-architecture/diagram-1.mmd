@@ -1,0 +1,8 @@
+flowchart LR
+  C[Control component] -->|reads state, picks next| B[(Blackboard)]
+  K1[Knowledge source A] <--> B
+  K2[Knowledge source B] <--> B
+  K3[Knowledge source C] <--> B
+  C -.activates.-> K1
+  C -.activates.-> K2
+  C -.activates.-> K3

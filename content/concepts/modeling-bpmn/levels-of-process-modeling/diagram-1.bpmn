@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.org/levels">
+  <process id="orderHandling" isExecutable="false">
+    <startEvent id="start" name="Order received">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <subProcess id="fulfill" name="Fulfill order">
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+      <startEvent id="cStart">
+        <outgoing>c1</outgoing>
+      </startEvent>
+      <task id="pick" name="Pick items">
+        <incoming>c1</incoming>
+        <outgoing>c2</outgoing>
+      </task>
+      <task id="pack" name="Pack items">
+        <incoming>c2</incoming>
+        <outgoing>c3</outgoing>
+      </task>
+      <endEvent id="cEnd">
+        <incoming>c3</incoming>
+      </endEvent>
+      <sequenceFlow id="c1" sourceRef="cStart" targetRef="pick" />
+      <sequenceFlow id="c2" sourceRef="pick" targetRef="pack" />
+      <sequenceFlow id="c3" sourceRef="pack" targetRef="cEnd" />
+    </subProcess>
+    <callActivity id="pay" name="Check payment" calledElement="paymentProcess">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+    </callActivity>
+    <endEvent id="end" name="Order done">
+      <incoming>f3</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="start" targetRef="pay" />
+    <sequenceFlow id="f2" sourceRef="pay" targetRef="fulfill" />
+    <sequenceFlow id="f3" sourceRef="fulfill" targetRef="end" />
+  </process>
+  <process id="paymentProcess" name="Payment process" isExecutable="false">
+    <startEvent id="pStart">
+      <outgoing>p1</outgoing>
+    </startEvent>
+    <task id="charge" name="Charge payment">
+      <incoming>p1</incoming>
+      <outgoing>p2</outgoing>
+    </task>
+    <endEvent id="pEnd">
+      <incoming>p2</incoming>
+    </endEvent>
+    <sequenceFlow id="p1" sourceRef="pStart" targetRef="charge" />
+    <sequenceFlow id="p2" sourceRef="charge" targetRef="pEnd" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_orderHandling">
+    <bpmndi:BPMNPlane id="BPMNPlane_orderHandling" bpmnElement="orderHandling">
+      <bpmndi:BPMNShape id="BPMNShape_start" bpmnElement="start">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="68" y="143" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_fulfill" bpmnElement="fulfill">
+        <dc:Bounds x="416" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pay" bpmnElement="pay">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_end" bpmnElement="end">
+        <dc:Bounds x="616" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="598" y="143" width="73" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="516" y="120" />
+        <di:waypoint x="616" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_fulfill">
+    <bpmndi:BPMNPlane id="BPMNPlane_fulfill" bpmnElement="fulfill">
+      <bpmndi:BPMNShape id="BPMNShape_cStart" bpmnElement="cStart">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pick" bpmnElement="pick">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pack" bpmnElement="pack">
+        <dc:Bounds x="416" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_cEnd" bpmnElement="cEnd">
+        <dc:Bounds x="616" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_c1" bpmnElement="c1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_c2" bpmnElement="c2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_c3" bpmnElement="c3">
+        <di:waypoint x="516" y="120" />
+        <di:waypoint x="616" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,5 @@
+flowchart LR
+  C([Customer]) -- "1 sends" --> R[/Return request/]
+  R -- "2 is checked by" --> A([Agent])
+  A -- "3 sends" --> L[/Return label/]
+  L --> C

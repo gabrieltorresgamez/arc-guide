@@ -1,0 +1,6 @@
+sequenceDiagram
+  participant C as Caller application
+  participant S as Server application
+  C->>S: Call procedure (data)
+  Note over C: Caller blocks and waits
+  S-->>C: Result (control returns)

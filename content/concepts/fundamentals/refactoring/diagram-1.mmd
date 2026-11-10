@@ -1,0 +1,6 @@
+flowchart LR
+  A[Spot a code smell] --> B[Run tests]
+  B --> C[Make one small change]
+  C --> D[Run tests again]
+  D -->|behavior unchanged| E[Better structure]
+  E --> A

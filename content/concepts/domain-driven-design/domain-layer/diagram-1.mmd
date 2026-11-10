@@ -1,0 +1,5 @@
+flowchart TD
+  UI[Presentation layer] --> APP[Application layer - thin]
+  APP --> DOM[Domain layer - business logic]
+  APP --> INF[Infrastructure layer]
+  DOM --> INF

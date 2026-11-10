@@ -1,0 +1,10 @@
+@startuml
+actor Customer
+participant "Web Shop" as W
+participant "Payment Service" as P
+participant "Warehouse System" as H
+Customer -> W : place order
+W -> P : charge card
+P --> W : confirmed
+W -> H : ship order
+@enduml

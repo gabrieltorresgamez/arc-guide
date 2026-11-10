@@ -1,0 +1,8 @@
+flowchart LR
+  M[Content Metamodel] --> C[Catalogs: inventories]
+  M --> X[Matrices: relationships]
+  C --> X
+  X --> D[Diagrams: visual views]
+  C --> D
+  D --> G[Gaps between baseline and target]
+  G --> R[Roadmap candidates]

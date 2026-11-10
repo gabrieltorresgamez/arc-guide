@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant S as Monitored component
+    participant M as Listener
+    participant F as Fault correction
+    S->>M: heartbeat
+    S->>M: heartbeat
+    Note over S,M: heartbeats stop
+    M->>F: notify: component assumed failed

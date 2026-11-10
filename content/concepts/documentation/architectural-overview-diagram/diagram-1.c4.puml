@@ -1,0 +1,12 @@
+@startuml
+!include <C4/C4_Container>
+Person(user, "Customer")
+System_Boundary(sys, "Shop System") {
+  Container(web, "Web Front End", "Browser app")
+  Container(api, "Backend Service", "Server")
+}
+System_Ext(pay, "Payment Provider")
+Rel(user, web, "Uses")
+Rel(web, api, "Calls")
+Rel(api, pay, "Requests payment")
+@enduml

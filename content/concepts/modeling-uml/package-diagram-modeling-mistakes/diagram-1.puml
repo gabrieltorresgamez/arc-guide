@@ -1,0 +1,9 @@
+@startuml
+package Orders
+package Billing
+package Customers
+Orders ..> Billing : <<import>>
+Billing ..> Customers : <<access>>
+Customers ..> Orders : <<import>>
+note right of Customers : Cycle: Orders, Billing and\nCustomers must change together
+@enduml

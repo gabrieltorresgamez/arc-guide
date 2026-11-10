@@ -1,0 +1,5 @@
+@startuml
+class Customer
+class Order
+Customer "buyer 1" --> "orders *" Order : places
+@enduml

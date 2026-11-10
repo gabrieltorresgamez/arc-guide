@@ -1,0 +1,4 @@
+flowchart LR
+  App[Application] -- message --> Server[Driver or service<br/>ordinary program]
+  Server -- message --> Core[Microkernel<br/>address space, threads, messages]
+  App -- message --> Core

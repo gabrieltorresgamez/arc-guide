@@ -1,0 +1,5 @@
+flowchart LR
+  P[Producer] --> C[(Channel)]
+  C -- region = EU --> A[EU billing consumer]
+  C -- region = US --> B[US billing consumer]
+  C -. no match .-> X[Message waits until it expires]

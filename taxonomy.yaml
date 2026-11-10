@@ -1,0 +1,264 @@
+# taxonomy.yaml — curated by hand. Committed to git.
+# The pipeline reads this file. LLM prompts receive these lists and MUST only use these ids.
+# The LLM never invents categories, arc42 sections or guide steps.
+
+# ---------------------------------------------------------------------------
+# Concept categories. Every article has exactly one `category`.
+# `scope` goes into the prompts so the LLM can choose the right category.
+# ---------------------------------------------------------------------------
+categories:
+  - id: fundamentals
+    title: Fundamentals
+    scope: What software architecture is, the architect's role, architecture levels, structures and views (basics), Conway's law, why architecture matters, architectural erosion (Big Ball of Mud).
+  - id: vision-stakeholders
+    title: Vision, Stakeholders and Context
+    scope: Project vision, system idea, business goals, stakeholders and their concerns, system scope, system context.
+  - id: functional-requirements
+    title: Functional Requirements
+    scope: Use cases, goal levels, user stories, acceptance criteria, story mapping, story splitting.
+  - id: quality-attributes
+    title: Quality Attributes
+    scope: ISO 25010 quality model, quality attribute scenarios, quality trees / utility trees, single quality attributes (availability, performance, security, modifiability, ...), trade-offs between them.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: quality-models
+        title: "Quality models, prioritization and trade-offs"
+      - id: scenarios
+        title: "Quality attribute scenarios"
+      - id: reliability-safety
+        title: "Reliability, availability and safety"
+      - id: security
+        title: "Security"
+      - id: maintainability-portability
+        title: "Maintainability, modifiability and portability"
+      - id: performance-usability
+        title: "Performance, usability, compatibility and other attributes"
+  - id: forces-decisions
+    title: Forces, Constraints and Decisions
+    scope: Architectural forces, concerns, constraints, architecturally significant requirements, architectural decisions, decision records (ADR), decision management and guidance.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: forces-concerns
+        title: "Forces, concerns and constraints"
+      - id: decisions
+        title: "Architectural decisions"
+      - id: decision-records
+        title: "Decision records and templates"
+      - id: decision-management
+        title: "Decision management and process"
+  - id: principles
+    title: Architecture Principles
+    scope: Architecture principles and how to write them, modularity, coupling, cohesion, separation of concerns, information hiding.
+  - id: tactics
+    title: Architecture Tactics
+    scope: Tactics per quality attribute (availability, modifiability, performance, security, safety, ...), how to choose and combine tactics.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: tactics-basics
+        title: "Tactics: concepts and how to use them"
+      - id: availability-tactics
+        title: "Availability tactics"
+      - id: modifiability-tactics
+        title: "Modifiability tactics"
+      - id: other-tactics
+        title: "Performance, security, safety, usability and energy tactics"
+  - id: styles-patterns
+    title: Architecture Styles and Patterns
+    scope: Architecture styles (layered, pipeline, microkernel, service-based, event-driven, space-based, microservices, ...) and architecture patterns, their trade-offs.
+  - id: integration
+    title: Integration
+    scope: Integration styles (file transfer, shared database, RPC, messaging), enterprise integration patterns, message channels, routing, the web as connector, APIs.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: integration-basics
+        title: "Integration styles and fundamentals"
+      - id: channels
+        title: "Messaging and channels"
+      - id: message-construction
+        title: "Message construction"
+      - id: routing
+        title: "Message routing"
+      - id: transformation
+        title: "Message transformation"
+      - id: endpoints
+        title: "Messaging endpoints"
+  - id: domain-driven-design
+    title: Domain-Driven Design
+    scope: Ubiquitous language, domain model, bounded context, context map, entities, value objects, aggregates, repositories, domain events, strategic design.
+  - id: data-architecture
+    title: Data Architecture
+    scope: Conceptual, logical and physical data models, data modelling practice, data storage and data flow concerns.
+  - id: modeling-uml
+    title: Modeling with UML
+    scope: UML diagram types, notation and semantics (class, component, deployment, sequence, activity, state, use case, ...).
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: uml-basics
+        title: "UML basics, taxonomy and good practice"
+      - id: class-diagrams
+        title: "Class diagrams and relationships"
+      - id: component-package-deployment
+        title: "Component, package and deployment diagrams"
+      - id: sequence-use-case
+        title: "Sequence and use case diagrams"
+      - id: state-machines
+        title: "State machine diagrams"
+  - id: modeling-bpmn
+    title: Process Modeling with BPMN
+    scope: BPMN elements (events, activities, gateways, pools, lanes, messages), process modeling practice, levels of process models.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: bpmn-basics
+        title: "BPMN basics: motivation, history, notation, diagram types"
+      - id: bpmn-elements
+        title: "BPMN elements: events, activities, gateways, data, pools"
+      - id: bpmn-quality
+        title: "Model quality, guidelines and typical errors"
+      - id: bpm-practice
+        title: "Business process management in practice"
+  - id: documentation
+    title: Architecture Documentation
+    scope: arc42, C4 model, ISO/IEC/IEEE 42010 (architecture description, viewpoints, views, models), documentation as code, documenting for stakeholders.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: arc42
+        title: "arc42 template and its sections"
+      - id: views-viewpoints
+        title: "Views, viewpoints and view models"
+      - id: concrete-views
+        title: "Context, component, runtime and deployment views (incl. C4)"
+      - id: practices-tools
+        title: "Documentation practices and tools"
+      - id: antipatterns
+        title: "Documentation antipatterns"
+  - id: evaluation
+    title: Architecture Evaluation
+    scope: ATAM, scenario-based and lightweight evaluation methods, risks, non-risks, sensitivity points, trade-off points, technical debt.
+  - id: enterprise-architecture
+    title: Enterprise Architecture and Frameworks
+    scope: Enterprise architecture, architecture frameworks (Zachman, TOGAF, ...), the framework landscape, how software architecture fits into enterprise architecture.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: ea-fundamentals
+        title: "Enterprise architecture fundamentals, maturity and strategy"
+      - id: ea-frameworks
+        title: "Frameworks: TOGAF and Zachman"
+      - id: business-architecture
+        title: "Business architecture and capabilities"
+      - id: application-data-technology
+        title: "Application, data and technology architecture"
+
+# ---------------------------------------------------------------------------
+# arc42 sections. Articles list the sections they help with in `arc42: [..]`.
+# The review page groups article checks by these sections.
+# ---------------------------------------------------------------------------
+arc42:
+  - {n: 1, title: Introduction and Goals, scope: "Requirements overview, top quality goals, stakeholders"}
+  - {n: 2, title: Architecture Constraints, scope: "Technical, organizational and regulatory constraints"}
+  - {n: 3, title: Context and Scope, scope: "Business and technical context, external interfaces"}
+  - {n: 4, title: Solution Strategy, scope: "Fundamental decisions and solution approaches"}
+  - {n: 5, title: Building Block View, scope: "Static decomposition into building blocks"}
+  - {n: 6, title: Runtime View, scope: "Behavior of building blocks in important scenarios"}
+  - {n: 7, title: Deployment View, scope: "Technical infrastructure and mapping of building blocks to it"}
+  - {n: 8, title: Cross-cutting Concepts, scope: "Concepts that apply to many building blocks"}
+  - {n: 9, title: Architecture Decisions, scope: "Important, expensive, risky decisions with rationale"}
+  - {n: 10, title: Quality Requirements, scope: "Quality tree and quality scenarios"}
+  - {n: 11, title: Risks and Technical Debts, scope: "Known risks and technical debt"}
+  - {n: 12, title: Glossary, scope: "Important domain and technical terms"}
+
+# ---------------------------------------------------------------------------
+# Guides ("Start here" section of the site). Order = order on the site.
+# Articles list the step they belong to in `step: <id>` (or null).
+# ---------------------------------------------------------------------------
+guides:
+  - id: what-is-architecture
+    title: What is software architecture?
+    goal: Explain in plain language what architecture is, why it matters, and what an architect does. No prior knowledge.
+    arc42: []
+    categories: [fundamentals]
+  - id: before-you-start
+    title: "Before you start: what should already exist"
+    goal: List each prerequisite (see `prerequisites` below). For each one say what it is, why architecture needs it, who usually provides it, what a minimal good-enough version looks like, and what to do if it is missing.
+    arc42: [1, 2, 3]
+    categories: [vision-stakeholders, functional-requirements, quality-attributes, forces-decisions]
+  - id: s01-goals-stakeholders
+    title: "Step 1: Understand the goals and the stakeholders"
+    goal: Write down the vision, the business goals, the stakeholders and their concerns.
+    arc42: [1]
+    categories: [vision-stakeholders]
+  - id: s02-scope-context
+    title: "Step 2: Define scope and context"
+    goal: Decide what is inside and outside the system. Draw the context with all external actors and systems.
+    arc42: [3]
+    categories: [vision-stakeholders, documentation]
+  - id: s03-functional-requirements
+    title: "Step 3: Capture the key functional requirements"
+    goal: Find the use cases or user stories that matter most for the architecture.
+    arc42: [1]
+    categories: [functional-requirements]
+  - id: s04-quality-requirements
+    title: "Step 4: Make quality requirements concrete"
+    goal: Choose the top quality goals and write them as measurable quality scenarios. Build a quality tree.
+    arc42: [1, 10]
+    categories: [quality-attributes]
+  - id: s05-constraints
+    title: "Step 5: Collect constraints and forces"
+    goal: List the constraints you cannot change and the forces that pull the design in different directions.
+    arc42: [2]
+    categories: [forces-decisions]
+  - id: s06-domain
+    title: "Step 6: Understand and structure the domain"
+    goal: Build a shared language and split the domain into bounded contexts. Sketch the important data.
+    arc42: [5, 12]
+    categories: [domain-driven-design, data-architecture]
+  - id: s07-solution-strategy
+    title: "Step 7: Choose a solution strategy"
+    goal: Choose principles, an architecture style and tactics that serve the top quality goals.
+    arc42: [4, 8]
+    categories: [principles, styles-patterns, tactics]
+  - id: s08-integration-data
+    title: "Step 8: Design integration and data"
+    goal: Decide how parts and external systems communicate and where data lives.
+    arc42: [5, 6, 8]
+    categories: [integration, data-architecture]
+  - id: s09-decisions
+    title: "Step 9: Make and record decisions"
+    goal: Make the important decisions explicit and record them with context, options and consequences.
+    arc42: [9]
+    categories: [forces-decisions]
+  - id: s10-document
+    title: "Step 10: Model and document"
+    goal: Write the architecture down for its readers with arc42, C4, UML and BPMN.
+    arc42: [3, 5, 6, 7]
+    categories: [documentation, modeling-uml, modeling-bpmn]
+  - id: s11-evaluate
+    title: "Step 11: Evaluate the architecture"
+    goal: Check the architecture against the quality scenarios. Find risks, sensitivity points and trade-offs.
+    arc42: [10, 11]
+    categories: [evaluation]
+  - id: s12-evolve
+    title: "Step 12: Keep the architecture alive"
+    goal: Keep decisions, documentation and the code structure in line as the system changes.
+    arc42: []
+    categories: [fundamentals, documentation, forces-decisions]
+  - id: recovery
+    title: Joining a project without architecture documentation
+    goal: How to recover the missing information in an existing project, in a sensible order, and what to write down first.
+    arc42: [1, 2, 3, 5, 9, 11]
+    categories: []
+
+# Prerequisites for the "before-you-start" guide. Each one becomes a section.
+prerequisites:
+  - {id: vision, title: Vision and system idea, arc42: [1]}
+  - {id: business-goals, title: Business goals, arc42: [1]}
+  - {id: stakeholders, title: Stakeholders and their concerns, arc42: [1]}
+  - {id: scope-context, title: Scope and context, arc42: [3]}
+  - {id: key-functions, title: Key functional requirements, arc42: [1]}
+  - {id: quality-goals, title: Top quality goals, arc42: [1, 10]}
+  - {id: constraints, title: Constraints (technical, organizational, regulatory, budget, time), arc42: [2]}
+
+# ---------------------------------------------------------------------------
+# Running example. Used ONLY in guides (not in concept articles).
+# Fictional.
+# ---------------------------------------------------------------------------
+running_example:
+  name: ClinicBook
+  description: >
+    ClinicBook is an online appointment booking system for a network of 40 small medical practices.
+    Patients book, move and cancel appointments on the web and in a mobile app. Practice staff manage
+    calendars. ClinicBook must integrate with the practices' existing practice-management software
+    (different vendors), send reminders by SMS and e-mail, and protect health data.
+    Interesting forces: privacy and security, availability during morning peaks, integration with
+    legacy systems, a small team, and a fixed launch date.

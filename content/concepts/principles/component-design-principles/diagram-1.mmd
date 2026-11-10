@@ -1,0 +1,5 @@
+flowchart LR
+  A[Order component] --> I[Payment interface]
+  P[Provider module] -.implements.-> I
+  S[Assembler] -.injects.-> A
+  S -.creates.-> P

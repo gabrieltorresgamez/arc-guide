@@ -1,0 +1,7 @@
+flowchart LR
+  A[Client calls service] --> B{Service responds in time?}
+  B -- yes --> C[Call completes]
+  B -- no, no timeout --> D[Thread stays blocked]
+  D --> E[More threads blocked]
+  E --> F[Threads run out]
+  F --> G[Whole application unresponsive]

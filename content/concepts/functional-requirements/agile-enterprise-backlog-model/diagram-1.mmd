@@ -1,0 +1,8 @@
+flowchart TD
+  T[Theme] --> E[Epic]
+  E --> F[Feature]
+  F --> S[Story]
+  S --> K[Task]
+  AT[Acceptance tests] -.verify.-> S
+  AT -.verify.-> F
+  SV[System validation tests] -.verify.-> NFR[Nonfunctional requirements]

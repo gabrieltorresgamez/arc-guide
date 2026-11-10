@@ -1,0 +1,5 @@
+flowchart LR
+  P[Provider] -->|publishes description| R[(Registry)]
+  C[Consumer] -->|discovers| R
+  C -->|calls| I[Service interface]
+  I --> M[Implementation]

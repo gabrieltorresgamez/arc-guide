@@ -1,0 +1,5 @@
+@startuml
+[*] --> Placed
+Placed --> Paid : paymentReceived [amountCorrect]
+Paid --> Shipped
+@enduml

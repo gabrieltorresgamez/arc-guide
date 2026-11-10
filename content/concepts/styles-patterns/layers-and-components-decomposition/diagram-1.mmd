@@ -1,0 +1,10 @@
+flowchart TB
+  subgraph Catalog
+    C1[Presentation] --> C2[Domain logic] --> C3[Data access]
+  end
+  subgraph Orders
+    O1[Presentation] --> O2[Domain logic] --> O3[Data access]
+  end
+  subgraph Payment
+    P1[Presentation] --> P2[Domain logic] --> P3[Data access]
+  end

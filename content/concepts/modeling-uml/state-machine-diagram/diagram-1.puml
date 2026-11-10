@@ -1,0 +1,6 @@
+@startuml
+[*] --> Created
+Created --> Paid : payment [amount correct] / send receipt
+Paid --> Shipped : ship
+Shipped --> [*]
+@enduml

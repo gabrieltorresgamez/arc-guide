@@ -1,0 +1,6 @@
+flowchart LR
+  D[Business driver: gap between current and desired state] --> S{Migration strategy}
+  S -->|redundant or low value| R[Retire]
+  S -->|cut custom maintenance| P[Replace with SaaS]
+  S -->|scale, speed, cost| F[Refactor]
+  S -->|compliance, dependencies| T[Retain]

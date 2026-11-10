@@ -1,0 +1,50 @@
+# Local Kroki for `pipeline.build` (`docker compose up -d`) and self-hosting of the site (profile "site").
+#
+# Self-hosting, from a plain clone of the repo:
+#   1. Set SITE_URL below to the address you open in the browser.
+#   2. docker compose --profile site up -d --build
+#      The builder renders the diagrams with Kroki and builds the site once (about 5 minutes), then nginx serves it.
+#   3. After changing content/, run step 2 again.
+services:
+  builder:
+    profiles: ["site"]
+    build: .
+    depends_on: [kroki]
+    environment:
+      KROKI_URL: http://kroki:8000
+      SITE_URL: http://localhost:8080   # the address you open in the browser; used in llms.txt and the .md files
+    volumes: ["dist:/out"]
+    command: >
+      sh -c "until curl -sf $$KROKI_URL/health >/dev/null; do sleep 2; done
+      && uv run --no-project --with pyyaml python -m pipeline.build
+      && rm -rf /out/* && cp -a site/dist/. /out/"
+    restart: "no"
+
+  site:
+    profiles: ["site"]
+    image: nginx:alpine
+    hostname: arc-site
+    depends_on:
+      builder: {condition: service_completed_successfully}
+    ports: ["8080:80"]
+    volumes:
+      - dist:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
+
+  kroki:
+    image: yuzutech/kroki
+    ports: ["8000:8000"]
+    environment:
+      KROKI_MERMAID_HOST: mermaid
+      KROKI_BPMN_HOST: bpmn
+    depends_on: [mermaid, bpmn]
+  mermaid:
+    image: yuzutech/kroki-mermaid
+    expose: ["8002"]
+  bpmn:
+    image: yuzutech/kroki-bpmn
+    expose: ["8003"]
+
+volumes:
+  dist:

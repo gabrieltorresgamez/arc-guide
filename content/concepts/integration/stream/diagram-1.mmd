@@ -1,0 +1,4 @@
+flowchart LR
+  S[Source] -->|pipe| F1[Filter A]
+  F1 -->|pipe, buffer| F2[Filter B]
+  F2 -->|pipe| K[Sink]

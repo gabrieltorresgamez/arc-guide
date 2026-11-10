@@ -1,0 +1,8 @@
+flowchart TD
+  A[Vision and business goals] --> B[Coarse functional requirement]
+  B --> C[Part 1 with business value]
+  B --> D[Part 2 with business value]
+  C --> E{Developers have no more questions?}
+  D --> E
+  E -- No --> B
+  E -- Yes --> F[Precise enough]

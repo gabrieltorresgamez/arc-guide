@@ -1,0 +1,8 @@
+flowchart LR
+  subgraph Sales
+    C1[Customer: payment history, discount level]
+  end
+  subgraph Shipping
+    C2[Recipient: address, delivery window]
+  end
+  Sales -- integration point --> Shipping

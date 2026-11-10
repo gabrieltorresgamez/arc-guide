@@ -1,0 +1,32 @@
+# --- Kroki cache and build report ---
+build/
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- Node / Astro site ---
+node_modules/
+site/dist/
+site/.astro/
+site/public/diagrams/
+site/public/**/*.md
+site/public/**/llms.txt
+site/public/robots.txt
+site/src/content/docs/
+site/sidebar.json
+
+# --- Claude Code local settings ---
+.claude/settings.local.json
+
+# --- OS / editors ---
+.DS_Store
+.idea/
+.vscode/

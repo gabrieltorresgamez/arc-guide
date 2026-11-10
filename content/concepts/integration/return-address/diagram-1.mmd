@@ -1,0 +1,9 @@
+sequenceDiagram
+  participant C as Requester
+  participant Q as Request channel
+  participant S as Replier
+  participant R as Requester reply channel
+  C->>Q: Request (reply-to header, correlation ID)
+  Q->>S: Request
+  S->>R: Reply (same correlation ID)
+  R->>C: Reply

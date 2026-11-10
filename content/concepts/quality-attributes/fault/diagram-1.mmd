@@ -1,0 +1,3 @@
+flowchart LR
+  F[Fault: dormant defect] -->|activated by trigger| E[Error: unexpected runtime state]
+  E -->|reaches the user| X[Failure: service breaks the specification]

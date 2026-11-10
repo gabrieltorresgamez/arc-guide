@@ -1,0 +1,7 @@
+flowchart LR
+  B[Phase B: Business Architecture] --> C[Phase C: Data and Application Architecture]
+  C --> D[Phase D: Technology Architecture]
+  subgraph App[Application part of Phase C]
+    A1[Document baseline] --> A2[Design target] --> A3[Gap analysis] --> A4[Candidate roadmap components]
+  end
+  C --- App

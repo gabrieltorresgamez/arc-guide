@@ -1,0 +1,7 @@
+@startuml
+entity Member
+entity Loan
+entity Book
+Member ||--o{ Loan : makes
+Book ||--o{ Loan : is lent in
+@enduml

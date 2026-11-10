@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.com/bpm">
+  <process id="lifecycle" isExecutable="false">
+    <startEvent id="s" name="Process needs documenting or improving">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <task id="t1" name="Discovery: build as-is model">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+    </task>
+    <task id="t2" name="Analysis: find weak points and causes">
+      <incoming>f2</incoming>
+      <incoming>f7</incoming>
+      <outgoing>f3</outgoing>
+    </task>
+    <task id="t3" name="Design: define to-be model">
+      <incoming>f3</incoming>
+      <outgoing>f4</outgoing>
+    </task>
+    <task id="t4" name="Implementation: go live">
+      <incoming>f4</incoming>
+      <outgoing>f5</outgoing>
+    </task>
+    <task id="t5" name="Monitoring: track KPIs">
+      <incoming>f5</incoming>
+      <outgoing>f6</outgoing>
+    </task>
+    <exclusiveGateway id="g" name="Deviation found?">
+      <incoming>f6</incoming>
+      <outgoing>f7</outgoing>
+      <outgoing>f8</outgoing>
+    </exclusiveGateway>
+    <endEvent id="e" name="Process stays as is">
+      <incoming>f8</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="s" targetRef="t1" />
+    <sequenceFlow id="f2" sourceRef="t1" targetRef="t2" />
+    <sequenceFlow id="f3" sourceRef="t2" targetRef="t3" />
+    <sequenceFlow id="f4" sourceRef="t3" targetRef="t4" />
+    <sequenceFlow id="f5" sourceRef="t4" targetRef="t5" />
+    <sequenceFlow id="f6" sourceRef="t5" targetRef="g" />
+    <sequenceFlow id="f7" name="yes" sourceRef="g" targetRef="t2" />
+    <sequenceFlow id="f8" name="no" sourceRef="g" targetRef="e" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_lifecycle">
+    <bpmndi:BPMNPlane id="BPMNPlane_lifecycle" bpmnElement="lifecycle">
+      <bpmndi:BPMNShape id="BPMNShape_s" bpmnElement="s">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="54" y="143" width="88" height="56" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t1" bpmnElement="t1">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t2" bpmnElement="t2">
+        <dc:Bounds x="416" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t3" bpmnElement="t3">
+        <dc:Bounds x="616" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t4" bpmnElement="t4">
+        <dc:Bounds x="816" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t5" bpmnElement="t5">
+        <dc:Bounds x="1016" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_g" bpmnElement="g" isMarkerVisible="true">
+        <dc:Bounds x="1216" y="95" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1207" y="62" width="69" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_e" bpmnElement="e">
+        <dc:Bounds x="1366" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1347" y="143" width="75" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="516" y="120" />
+        <di:waypoint x="616" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="716" y="120" />
+        <di:waypoint x="816" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f5" bpmnElement="f5">
+        <di:waypoint x="916" y="120" />
+        <di:waypoint x="1016" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f6" bpmnElement="f6">
+        <di:waypoint x="1116" y="120" />
+        <di:waypoint x="1216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f8" bpmnElement="f8">
+        <di:waypoint x="1266" y="120" />
+        <di:waypoint x="1366" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1307" y="98" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f7" bpmnElement="f7">
+        <di:waypoint x="1241" y="145" />
+        <di:waypoint x="1241" y="180" />
+        <di:waypoint x="466" y="180" />
+        <di:waypoint x="466" y="160" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="841" y="188" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,9 @@
+@startuml
+component WebStore {
+  portin "search" as p
+  component SearchEngine as se
+  p --> se : delegate
+}
+interface ISearch
+ISearch -- p
+@enduml

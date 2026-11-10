@@ -1,0 +1,5 @@
+flowchart LR
+  A[Data source] -->|pipe| B[Filter 1: check]
+  B -->|pipe| C[Filter 2: transform]
+  C -->|pipe| D[Filter 3: enrich]
+  D -->|pipe| E[Data sink]

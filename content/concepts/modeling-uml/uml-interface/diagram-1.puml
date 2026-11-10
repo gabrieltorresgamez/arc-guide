@@ -1,0 +1,11 @@
+@startuml
+interface PaymentService {
+  +charge()
+}
+class CardPayment
+class InvoicePayment
+class Checkout
+CardPayment ..|> PaymentService
+InvoicePayment ..|> PaymentService
+Checkout ..> PaymentService : uses
+@enduml

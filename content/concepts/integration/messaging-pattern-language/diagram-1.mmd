@@ -1,0 +1,4 @@
+flowchart LR
+  S[Sender] -->|puts message| C[Channel]
+  C -->|reads message| R[Receiver]
+  C -.->|undeliverable| D[Dead Letter Queue]

@@ -1,0 +1,5 @@
+flowchart LR
+  A[Sender message] --> E[Content Enricher]
+  S[(Other source)] -.-> E
+  E --> F[Content Filter]
+  F --> R[Receiver]

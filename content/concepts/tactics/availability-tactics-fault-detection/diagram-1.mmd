@@ -1,0 +1,5 @@
+flowchart LR
+  M[Monitor] -- ping --> S[Service]
+  S -- echo --> M
+  M -- no timely reply --> D[Fault detected]
+  D --> R[Recovery or prevention tactic]

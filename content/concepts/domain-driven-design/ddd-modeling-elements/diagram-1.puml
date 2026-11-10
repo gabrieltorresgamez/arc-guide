@@ -1,0 +1,11 @@
+@startuml
+class Reader <<aggregate root>>
+class Loan <<entity>>
+class LoanPeriod <<value object>>
+class LendingService <<domain service>>
+interface ReaderRepository <<repository>>
+Reader "1" *-- "0..*" Loan
+Loan *-- LoanPeriod
+LendingService ..> Reader
+ReaderRepository ..> Reader : loads and saves
+@enduml

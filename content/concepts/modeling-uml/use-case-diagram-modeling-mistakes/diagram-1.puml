@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+actor Customer
+rectangle Shop {
+  usecase "Place Order" as PO
+  usecase "Check Stock" as CS
+  usecase "Apply Voucher" as AV
+}
+Customer --> PO
+PO ..> CS : <<include>>
+AV ..> PO : <<extend>>
+note bottom of AV : condition: voucher code entered
+@enduml

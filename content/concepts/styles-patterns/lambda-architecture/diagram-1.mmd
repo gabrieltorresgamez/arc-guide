@@ -1,0 +1,7 @@
+flowchart LR
+  D[Incoming data] --> B[Batch layer\ncold path]
+  D --> S[Speed layer\nhot path]
+  B --> V[Batch views]
+  V --> SV[Serving layer]
+  S --> SV
+  SV --> Q[Queries]

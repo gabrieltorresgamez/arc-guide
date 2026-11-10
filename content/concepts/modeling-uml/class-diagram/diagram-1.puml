@@ -1,0 +1,7 @@
+@startuml
+class Order
+class Customer
+class Product
+Order --> Customer : placed by
+Order --> "1..*" Product
+@enduml

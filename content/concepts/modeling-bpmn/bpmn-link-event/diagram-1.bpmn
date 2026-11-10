@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.org/bpmn">
+  <process id="review" isExecutable="false">
+    <startEvent id="start" name="Work requested">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <intermediateCatchEvent id="catchRework" name="Rework">
+      <outgoing>f2</outgoing>
+      <linkEventDefinition id="ld1" name="Rework" />
+    </intermediateCatchEvent>
+    <task id="draft" name="Draft work">
+      <incoming>f1</incoming>
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+    </task>
+    <task id="review_task" name="Review work">
+      <incoming>f3</incoming>
+      <outgoing>f4</outgoing>
+    </task>
+    <exclusiveGateway id="gw" name="Approved?">
+      <incoming>f4</incoming>
+      <outgoing>f5</outgoing>
+      <outgoing>f6</outgoing>
+    </exclusiveGateway>
+    <endEvent id="end" name="Work accepted">
+      <incoming>f5</incoming>
+    </endEvent>
+    <intermediateThrowEvent id="throwRework" name="Rework">
+      <incoming>f6</incoming>
+      <linkEventDefinition id="ld2" name="Rework" />
+    </intermediateThrowEvent>
+    <sequenceFlow id="f1" sourceRef="start" targetRef="draft" />
+    <sequenceFlow id="f2" sourceRef="catchRework" targetRef="draft" />
+    <sequenceFlow id="f3" sourceRef="draft" targetRef="review_task" />
+    <sequenceFlow id="f4" sourceRef="review_task" targetRef="gw" />
+    <sequenceFlow id="f5" name="yes" sourceRef="gw" targetRef="end" />
+    <sequenceFlow id="f6" name="no" sourceRef="gw" targetRef="throwRework" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_review">
+    <bpmndi:BPMNPlane id="BPMNPlane_review" bpmnElement="review">
+      <bpmndi:BPMNShape id="BPMNShape_start" bpmnElement="start">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="65" y="143" width="67" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_catchRework" bpmnElement="catchRework">
+        <dc:Bounds x="80" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="73" y="303" width="51" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_draft" bpmnElement="draft">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_review_task" bpmnElement="review_task">
+        <dc:Bounds x="416" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_gw" bpmnElement="gw" isMarkerVisible="true">
+        <dc:Bounds x="616" y="95" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="607" y="76" width="69" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_end" bpmnElement="end">
+        <dc:Bounds x="766" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="754" y="143" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_throwRework" bpmnElement="throwRework">
+        <dc:Bounds x="766" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="759" y="303" width="51" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="516" y="120" />
+        <di:waypoint x="616" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f5" bpmnElement="f5">
+        <di:waypoint x="666" y="120" />
+        <di:waypoint x="766" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="704" y="98" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f6" bpmnElement="f6">
+        <di:waypoint x="641" y="145" />
+        <di:waypoint x="641" y="280" />
+        <di:waypoint x="766" y="280" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="647" y="206" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="116" y="280" />
+        <di:waypoint x="266" y="280" />
+        <di:waypoint x="266" y="160" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

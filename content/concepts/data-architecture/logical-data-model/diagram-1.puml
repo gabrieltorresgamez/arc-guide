@@ -1,0 +1,22 @@
+@startuml
+entity Customer {
+  * customer_id : PK
+  --
+  name
+  phone
+}
+entity "Order" as Ord {
+  * order_id : PK
+  --
+  * customer_id : FK
+  order_date
+}
+entity "Order Detail" as OD {
+  * order_id : PK, FK
+  * line_no : PK
+  --
+  quantity
+}
+Customer ||--o{ Ord
+Ord ||--|{ OD
+@enduml

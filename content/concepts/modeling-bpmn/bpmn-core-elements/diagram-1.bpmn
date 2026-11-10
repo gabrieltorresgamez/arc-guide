@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.com/bpmn">
+  <process id="order" isExecutable="false">
+    <startEvent id="start" name="Order received">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <task id="check" name="Check order">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+    </task>
+    <exclusiveGateway id="gw" name="Order valid?">
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+      <outgoing>f4</outgoing>
+    </exclusiveGateway>
+    <task id="approve" name="Approve order">
+      <incoming>f3</incoming>
+      <outgoing>f5</outgoing>
+    </task>
+    <task id="reject" name="Reject order">
+      <incoming>f4</incoming>
+      <outgoing>f6</outgoing>
+    </task>
+    <endEvent id="endOk" name="Order approved">
+      <incoming>f5</incoming>
+    </endEvent>
+    <endEvent id="endNo" name="Order rejected">
+      <incoming>f6</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="start" targetRef="check" />
+    <sequenceFlow id="f2" sourceRef="check" targetRef="gw" />
+    <sequenceFlow id="f3" name="yes" sourceRef="gw" targetRef="approve" />
+    <sequenceFlow id="f4" name="no" sourceRef="gw" targetRef="reject" />
+    <sequenceFlow id="f5" sourceRef="approve" targetRef="endOk" />
+    <sequenceFlow id="f6" sourceRef="reject" targetRef="endNo" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_order">
+    <bpmndi:BPMNPlane id="BPMNPlane_order" bpmnElement="order">
+      <bpmndi:BPMNShape id="BPMNShape_start" bpmnElement="start">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="68" y="143" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_check" bpmnElement="check">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_gw" bpmnElement="gw" isMarkerVisible="true">
+        <dc:Bounds x="416" y="95" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="398" y="76" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_approve" bpmnElement="approve">
+        <dc:Bounds x="566" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_reject" bpmnElement="reject">
+        <dc:Bounds x="566" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_endOk" bpmnElement="endOk">
+        <dc:Bounds x="766" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="754" y="143" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_endNo" bpmnElement="endNo">
+        <dc:Bounds x="766" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="754" y="303" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="466" y="120" />
+        <di:waypoint x="566" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="504" y="98" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f5" bpmnElement="f5">
+        <di:waypoint x="666" y="120" />
+        <di:waypoint x="766" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="441" y="145" />
+        <di:waypoint x="441" y="280" />
+        <di:waypoint x="566" y="280" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="447" y="206" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f6" bpmnElement="f6">
+        <di:waypoint x="666" y="280" />
+        <di:waypoint x="766" y="280" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

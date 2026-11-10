@@ -1,0 +1,8 @@
+flowchart TD
+  M[Incoming message] --> PM[Process Manager<br/>keeps state, picks next step]
+  PM -->|step A| A[Step A]
+  A -->|result| PM
+  PM -->|step B or C, based on result| B[Step B]
+  PM -->|alternative| C[Step C]
+  B -->|result| PM
+  C -->|result| PM

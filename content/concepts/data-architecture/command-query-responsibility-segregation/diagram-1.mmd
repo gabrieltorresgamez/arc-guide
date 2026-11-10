@@ -1,0 +1,8 @@
+flowchart LR
+  C[Client] -->|command| W[Write model]
+  W --> WS[(Write store)]
+  W -->|publishes events| E{{Event channel}}
+  E --> P[Read model updater]
+  P --> RS[(Read store)]
+  C -->|query| R[Read model]
+  RS --> R

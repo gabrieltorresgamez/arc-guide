@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor Member
+actor "Catalog System" as Cat
+rectangle Library {
+  usecase "Borrow Book" as UC1
+  usecase "Check Member Status" as UC2
+  usecase "Return Book" as UC3
+  usecase "Pay Late Fee" as UC4
+}
+Member --> UC1
+Member --> UC3
+UC1 ..> UC2 : <<include>>
+UC4 ..> UC3 : <<extend>>
+UC1 --> Cat
+@enduml

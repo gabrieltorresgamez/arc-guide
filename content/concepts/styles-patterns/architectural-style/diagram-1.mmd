@@ -1,0 +1,12 @@
+flowchart TD
+  subgraph T1[Tier 1: web server]
+    P[Presentation layer]
+  end
+  subgraph T2[Tier 2: application server]
+    B[Business layer]
+  end
+  subgraph T3[Tier 3: database server]
+    D[Data layer]
+  end
+  P --> B
+  B --> D

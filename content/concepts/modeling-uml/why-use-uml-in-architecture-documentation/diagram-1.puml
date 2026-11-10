@@ -1,0 +1,11 @@
+@startuml
+actor Customer
+participant "Web Shop" as Shop
+participant "Payment Service" as Pay
+participant Warehouse
+Customer -> Shop : place order
+Shop -> Pay : charge customer
+Pay --> Shop : payment confirmed
+Shop -> Warehouse : reserve items
+Shop --> Customer : order confirmation
+@enduml

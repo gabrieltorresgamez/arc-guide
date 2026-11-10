@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.org/bpmn">
+  <collaboration id="c1">
+    <participant id="pCustomer" name="Customer" processRef="customerProcess" />
+    <participant id="pShop" name="Shop" processRef="shopProcess" />
+    <messageFlow id="mf1" sourceRef="placeOrder" targetRef="receiveOrder" />
+  </collaboration>
+  <process id="customerProcess" isExecutable="false">
+    <startEvent id="cs">
+      <outgoing>c1f</outgoing>
+    </startEvent>
+    <task id="placeOrder" name="Place order">
+      <incoming>c1f</incoming>
+      <outgoing>c2f</outgoing>
+    </task>
+    <endEvent id="ce">
+      <incoming>c2f</incoming>
+    </endEvent>
+    <sequenceFlow id="c1f" sourceRef="cs" targetRef="placeOrder" />
+    <sequenceFlow id="c2f" sourceRef="placeOrder" targetRef="ce" />
+  </process>
+  <process id="shopProcess" isExecutable="false">
+    <startEvent id="ss">
+      <outgoing>s1f</outgoing>
+    </startEvent>
+    <task id="receiveOrder" name="Receive order">
+      <incoming>s1f</incoming>
+      <outgoing>s2f</outgoing>
+    </task>
+    <task id="ship" name="Ship goods">
+      <incoming>s2f</incoming>
+      <outgoing>s3f</outgoing>
+    </task>
+    <endEvent id="se">
+      <incoming>s3f</incoming>
+    </endEvent>
+    <sequenceFlow id="s1f" sourceRef="ss" targetRef="receiveOrder" />
+    <sequenceFlow id="s2f" sourceRef="receiveOrder" targetRef="ship" />
+    <sequenceFlow id="s3f" sourceRef="ship" targetRef="se" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_c1">
+    <bpmndi:BPMNPlane id="BPMNPlane_c1" bpmnElement="c1">
+      <bpmndi:BPMNShape id="BPMNShape_pCustomer" bpmnElement="pCustomer" isHorizontal="true">
+        <dc:Bounds x="80" y="80" width="482" height="160" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pShop" bpmnElement="pShop" isHorizontal="true">
+        <dc:Bounds x="80" y="320" width="682" height="160" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_mf1" bpmnElement="mf1">
+        <di:waypoint x="336" y="200" />
+        <di:waypoint x="336" y="360" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BPMNShape_cs" bpmnElement="cs">
+        <dc:Bounds x="150" y="142" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_placeOrder" bpmnElement="placeOrder">
+        <dc:Bounds x="286" y="120" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ce" bpmnElement="ce">
+        <dc:Bounds x="486" y="142" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_c1f" bpmnElement="c1f">
+        <di:waypoint x="186" y="160" />
+        <di:waypoint x="286" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_c2f" bpmnElement="c2f">
+        <di:waypoint x="386" y="160" />
+        <di:waypoint x="486" y="160" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BPMNShape_ss" bpmnElement="ss">
+        <dc:Bounds x="150" y="382" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_receiveOrder" bpmnElement="receiveOrder">
+        <dc:Bounds x="286" y="360" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ship" bpmnElement="ship">
+        <dc:Bounds x="486" y="360" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_se" bpmnElement="se">
+        <dc:Bounds x="686" y="382" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_s1f" bpmnElement="s1f">
+        <di:waypoint x="186" y="400" />
+        <di:waypoint x="286" y="400" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_s2f" bpmnElement="s2f">
+        <di:waypoint x="386" y="400" />
+        <di:waypoint x="486" y="400" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_s3f" bpmnElement="s3f">
+        <di:waypoint x="586" y="400" />
+        <di:waypoint x="686" y="400" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

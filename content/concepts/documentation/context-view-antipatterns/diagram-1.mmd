@@ -1,0 +1,5 @@
+flowchart LR
+  C[Customer] -->|order| S[Online Shop]
+  S -->|order confirmation| C
+  S -->|payment request| P[Payment Provider]
+  P -->|payment result| S

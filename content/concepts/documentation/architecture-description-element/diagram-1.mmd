@@ -1,0 +1,21 @@
+flowchart TD
+  AD[Architecture description]
+  FW[Framework]
+  ST[Stakeholders]
+  CO[Concerns]
+  VP[Viewpoints]
+  RU[Correspondence rules]
+  VW[Views]
+  MD[Models]
+  CR[Correspondences]
+  RA[Rationale]
+  AD --> FW
+  AD --> VW
+  AD --> CR
+  AD --> RA
+  FW --> ST
+  FW --> CO
+  FW --> VP
+  FW --> RU
+  VW --> MD
+  CR -. relate .-> MD

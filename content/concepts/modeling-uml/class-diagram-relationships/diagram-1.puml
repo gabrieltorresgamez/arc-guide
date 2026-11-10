@@ -1,0 +1,7 @@
+@startuml
+class Order
+class OrderLine
+class Customer
+Order *-- "1..*" OrderLine : contains
+Order --> "1" Customer : placedBy
+@enduml

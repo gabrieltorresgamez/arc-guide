@@ -1,0 +1,6 @@
+flowchart LR
+  P[Producer] -->|message + format tag| C[Single channel]
+  C --> R[Router reads tag]
+  R -->|v1| A[Receiver for v1]
+  R -->|v2| B[Receiver for v2]
+  R -->|unknown| X[Invalid message channel]

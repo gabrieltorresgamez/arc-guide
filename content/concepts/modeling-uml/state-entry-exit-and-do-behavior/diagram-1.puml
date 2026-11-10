@@ -1,0 +1,11 @@
+@startuml
+[*] --> Heating
+state Heating {
+}
+Heating : entry / element on
+Heating : do / monitor temperature
+Heating : exit / element off
+Heating --> Idle : lifted off base
+Heating --> Done
+Done --> [*]
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+actor Customer
+rectangle ATM {
+  usecase "Change PIN" as CP
+  usecase "Withdraw Cash" as WC
+  usecase "Define New PIN" as DN
+  usecase "Authenticate" as AU
+}
+Customer --> CP
+Customer --> WC
+CP ..> DN : <<include>>
+CP ..> AU : <<include>>
+WC ..> AU : <<include>>
+@enduml

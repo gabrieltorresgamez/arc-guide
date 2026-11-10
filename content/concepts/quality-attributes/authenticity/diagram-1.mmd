@@ -1,0 +1,5 @@
+flowchart LR
+  A[User or device claims an identity] --> B[Authentication: verify the claim]
+  B -->|proved| C[Authorization: decide what is allowed]
+  B -->|not proved| D[Access refused]
+  C --> E[Access to data and actions]

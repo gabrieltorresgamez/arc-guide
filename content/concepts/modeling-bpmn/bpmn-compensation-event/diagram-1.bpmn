@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.org/bpmn">
+  <process id="booking" isExecutable="false">
+    <startEvent id="start" name="Booking requested">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <task id="reserve" name="Reserve car">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+    </task>
+    <task id="pay" name="Charge customer">
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+    </task>
+    <endEvent id="done" name="Booking confirmed">
+      <incoming>f3</incoming>
+    </endEvent>
+    <boundaryEvent id="payError" attachedToRef="pay">
+      <outgoing>f4</outgoing>
+      <errorEventDefinition />
+    </boundaryEvent>
+    <endEvent id="undo" name="Undo completed work">
+      <incoming>f4</incoming>
+      <compensateEventDefinition />
+    </endEvent>
+    <boundaryEvent id="reserveComp" attachedToRef="reserve">
+      <compensateEventDefinition />
+    </boundaryEvent>
+    <task id="cancelCar" name="Cancel car reservation" isForCompensation="true" />
+    <sequenceFlow id="f1" sourceRef="start" targetRef="reserve" />
+    <sequenceFlow id="f2" sourceRef="reserve" targetRef="pay" />
+    <sequenceFlow id="f3" sourceRef="pay" targetRef="done" />
+    <sequenceFlow id="f4" sourceRef="payError" targetRef="undo" />
+    <association id="a1" associationDirection="One" sourceRef="reserveComp" targetRef="cancelCar" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_booking">
+    <bpmndi:BPMNPlane id="BPMNPlane_booking" bpmnElement="booking">
+      <bpmndi:BPMNShape id="BPMNShape_start" bpmnElement="start">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="65" y="143" width="67" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_reserve" bpmnElement="reserve">
+        <dc:Bounds x="248" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_pay" bpmnElement="pay">
+        <dc:Bounds x="448" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_done" bpmnElement="done">
+        <dc:Bounds x="648" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="631" y="143" width="70" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_undo" bpmnElement="undo">
+        <dc:Bounds x="648" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="631" y="303" width="70" height="42" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_cancelCar" bpmnElement="cancelCar">
+        <dc:Bounds x="80" y="458" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_payError" bpmnElement="payError">
+        <dc:Bounds x="480" y="142" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_reserveComp" bpmnElement="reserveComp">
+        <dc:Bounds x="280" y="142" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="248" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="348" y="120" />
+        <di:waypoint x="448" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="548" y="120" />
+        <di:waypoint x="648" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="498" y="178" />
+        <di:waypoint x="498" y="280" />
+        <di:waypoint x="648" y="280" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

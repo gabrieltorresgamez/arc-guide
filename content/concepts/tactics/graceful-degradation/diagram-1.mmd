@@ -1,0 +1,8 @@
+flowchart TD
+  A[Dependency fails] --> B{Feature critical?}
+  B -- Yes --> C[Keep running, use stale or alternate data]
+  B -- No --> D[Disable or reduce feature]
+  D --> E[Tell users and alert operations]
+  C --> F[Dependency recovers]
+  E --> F
+  F --> G[Re-enable feature]

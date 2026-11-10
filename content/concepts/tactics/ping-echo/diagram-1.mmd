@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant M as Monitor
+    participant S as Service
+    M->>S: Echo request
+    S-->>M: Echo reply
+    M->>S: Echo request
+    Note over M: No reply within time threshold
+    M->>M: Declare failure

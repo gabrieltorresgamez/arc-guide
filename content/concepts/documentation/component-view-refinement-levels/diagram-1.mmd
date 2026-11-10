@@ -1,0 +1,12 @@
+flowchart TD
+  L1[Level 1: all main blocks]
+  A[Selected block A]
+  B[Other blocks: stay black boxes]
+  L2[Level 2: inside block A]
+  C[Selected part of A]
+  L3[Level 3: inside that part]
+  L1 --> A
+  L1 --> B
+  A --> L2
+  L2 --> C
+  C --> L3

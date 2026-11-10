@@ -1,0 +1,5 @@
+flowchart LR
+  A[Sending application] -->|plain data| W[Wrap in envelope]
+  W -->|envelope with data| M[Messaging system]
+  M --> U[Unwrap at destination]
+  U -->|original data| R[Receiving application]

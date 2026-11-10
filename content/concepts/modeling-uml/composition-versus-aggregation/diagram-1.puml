@@ -1,0 +1,8 @@
+@startuml
+class Board
+class Square
+class Team
+class Player
+Board *-- Square
+Team o-- Player
+@enduml

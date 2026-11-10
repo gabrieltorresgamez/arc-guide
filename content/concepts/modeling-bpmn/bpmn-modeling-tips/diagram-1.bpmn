@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.com/bpmn">
+  <process id="p1" isExecutable="false">
+    <startEvent id="s" name="Receive order">
+      <outgoing>f1</outgoing>
+      <messageEventDefinition />
+    </startEvent>
+    <task id="t1" name="Check stock">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+    </task>
+    <exclusiveGateway id="g" name="Is the item in stock?">
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+      <outgoing>f4</outgoing>
+    </exclusiveGateway>
+    <task id="t2" name="Ship order">
+      <incoming>f3</incoming>
+      <outgoing>f5</outgoing>
+    </task>
+    <endEvent id="e1" name="Order shipped">
+      <incoming>f5</incoming>
+    </endEvent>
+    <endEvent id="e2" name="Order rejected">
+      <incoming>f4</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="s" targetRef="t1" />
+    <sequenceFlow id="f2" sourceRef="t1" targetRef="g" />
+    <sequenceFlow id="f3" name="Yes" sourceRef="g" targetRef="t2" />
+    <sequenceFlow id="f4" name="No" sourceRef="g" targetRef="e2" />
+    <sequenceFlow id="f5" sourceRef="t2" targetRef="e1" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_p1">
+    <bpmndi:BPMNPlane id="BPMNPlane_p1" bpmnElement="p1">
+      <bpmndi:BPMNShape id="BPMNShape_s" bpmnElement="s">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="71" y="143" width="55" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t1" bpmnElement="t1">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_g" bpmnElement="g" isMarkerVisible="true">
+        <dc:Bounds x="416" y="95" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="401" y="62" width="80" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t2" bpmnElement="t2">
+        <dc:Bounds x="566" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_e1" bpmnElement="e1">
+        <dc:Bounds x="766" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="758" y="143" width="53" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_e2" bpmnElement="e2">
+        <dc:Bounds x="598" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="586" y="303" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="416" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="466" y="120" />
+        <di:waypoint x="566" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="503" y="98" width="27" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f5" bpmnElement="f5">
+        <di:waypoint x="666" y="120" />
+        <di:waypoint x="766" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="441" y="145" />
+        <di:waypoint x="441" y="280" />
+        <di:waypoint x="598" y="280" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="446" y="206" width="20" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,13 @@
+@startuml
+abstract class Payment {
+  amount
+}
+class CardPayment {
+  cardNumber
+}
+class BankTransfer {
+  iban
+}
+Payment <|-- CardPayment
+Payment <|-- BankTransfer
+@enduml

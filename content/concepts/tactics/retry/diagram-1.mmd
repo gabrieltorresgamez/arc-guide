@@ -1,0 +1,7 @@
+flowchart TD
+  A[Call service] --> B{Success?}
+  B -- Yes --> C[Done]
+  B -- No --> D{Transient fault and attempts left?}
+  D -- No --> E[Treat as exception and handle]
+  D -- Yes --> F[Wait with backoff and jitter]
+  F --> A

@@ -1,0 +1,6 @@
+flowchart LR
+  C[Customer] -->|booking request| S[Booking system]
+  S -->|booking confirmation| C
+  S -->|payment order| P[Payment provider]
+  P -->|payment result| S
+  S -->|email request| M[Email service]

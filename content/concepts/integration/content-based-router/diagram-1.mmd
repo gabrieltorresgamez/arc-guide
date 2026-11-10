@@ -1,0 +1,5 @@
+flowchart LR
+  In[Incoming orders] --> R{Content-Based Router}
+  R -->|category = books| A[Book supplier channel]
+  R -->|category = electronics| B[Electronics supplier channel]
+  R -->|no rule matches| C[Fallback or error handling]

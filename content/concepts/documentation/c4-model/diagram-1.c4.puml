@@ -1,0 +1,10 @@
+@startuml
+!include <C4/C4_Container>
+Person(customer, "Customer", "Buys goods")
+System_Boundary(shop, "Online Shop") {
+  Container(web, "Web App", "Runs in a browser")
+  ContainerDb(db, "Database", "Stores orders")
+}
+Rel(customer, web, "Uses")
+Rel(web, db, "Reads and writes")
+@enduml

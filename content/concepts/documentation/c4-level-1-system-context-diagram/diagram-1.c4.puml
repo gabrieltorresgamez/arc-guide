@@ -1,0 +1,8 @@
+@startuml
+!include <C4/C4_Context>
+Person(user, "Reader", "Uses the system")
+System(sys, "Lending System", "The system in scope")
+System_Ext(pay, "Payment Service", "External system")
+Rel(user, sys, "Borrows books")
+Rel(sys, pay, "Requests payment")
+@enduml

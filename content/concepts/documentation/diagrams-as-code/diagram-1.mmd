@@ -1,0 +1,7 @@
+flowchart LR
+  M[Architecture model as text] --> V1[Context view]
+  M --> V2[Container view]
+  V1 --> R[Renderer]
+  V2 --> R
+  R --> I[png or svg images]
+  I --> D[Documentation build]

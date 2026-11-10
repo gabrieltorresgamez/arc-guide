@@ -1,0 +1,5 @@
+flowchart LR
+  A[Original channel] --> R{Receiver}
+  R -->|understood| P[Process message]
+  R -->|not understood| I[Invalid Message Channel]
+  I --> H[Inspect, correct, resubmit or remove]

@@ -1,0 +1,4 @@
+flowchart LR
+  A[Input channel] --> F{Message Filter: criteria match?}
+  F -- yes --> B[Output channel]
+  F -- no --> D[Discarded]

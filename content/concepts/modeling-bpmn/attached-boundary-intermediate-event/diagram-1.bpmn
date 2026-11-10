@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" targetNamespace="http://example.com/bpmn">
+  <process id="p1" isExecutable="false">
+    <startEvent id="start" name="Application received">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <userTask id="review" name="Review application">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+    </userTask>
+    <boundaryEvent id="reminder" name="After 1 day" cancelActivity="false" attachedToRef="review">
+      <outgoing>f3</outgoing>
+      <timerEventDefinition />
+    </boundaryEvent>
+    <boundaryEvent id="timeout" name="After 2 days" attachedToRef="review">
+      <outgoing>f5</outgoing>
+      <timerEventDefinition />
+    </boundaryEvent>
+    <sendTask id="remind" name="Send reminder">
+      <incoming>f3</incoming>
+      <outgoing>f4</outgoing>
+    </sendTask>
+    <task id="cancel" name="Cancel review">
+      <incoming>f5</incoming>
+      <outgoing>f6</outgoing>
+    </task>
+    <endEvent id="endOk" name="Reviewed">
+      <incoming>f2</incoming>
+    </endEvent>
+    <endEvent id="endRem" name="Reminder sent">
+      <incoming>f4</incoming>
+    </endEvent>
+    <endEvent id="endTimeout" name="Timed out">
+      <incoming>f6</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="start" targetRef="review" />
+    <sequenceFlow id="f2" sourceRef="review" targetRef="endOk" />
+    <sequenceFlow id="f3" sourceRef="reminder" targetRef="remind" />
+    <sequenceFlow id="f4" sourceRef="remind" targetRef="endRem" />
+    <sequenceFlow id="f5" sourceRef="timeout" targetRef="cancel" />
+    <sequenceFlow id="f6" sourceRef="cancel" targetRef="endTimeout" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_p1">
+    <bpmndi:BPMNPlane id="BPMNPlane_p1" bpmnElement="p1">
+      <bpmndi:BPMNShape id="BPMNShape_start" bpmnElement="start">
+        <dc:Bounds x="80" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="57" y="143" width="83" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_review" bpmnElement="review">
+        <dc:Bounds x="216" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_remind" bpmnElement="remind">
+        <dc:Bounds x="416" y="400" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_cancel" bpmnElement="cancel">
+        <dc:Bounds x="416" y="240" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_endOk" bpmnElement="endOk">
+        <dc:Bounds x="448" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="434" y="143" width="65" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_endRem" bpmnElement="endRem">
+        <dc:Bounds x="616" y="422" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="602" y="463" width="65" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_endTimeout" bpmnElement="endTimeout">
+        <dc:Bounds x="616" y="262" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="600" y="303" width="69" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_reminder" bpmnElement="reminder">
+        <dc:Bounds x="226" y="142" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="146" y="183" width="77" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_timeout" bpmnElement="timeout">
+        <dc:Bounds x="270" y="142" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="306" y="183" width="84" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="120" />
+        <di:waypoint x="216" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="316" y="120" />
+        <di:waypoint x="448" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f4" bpmnElement="f4">
+        <di:waypoint x="516" y="440" />
+        <di:waypoint x="616" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f6" bpmnElement="f6">
+        <di:waypoint x="516" y="280" />
+        <di:waypoint x="616" y="280" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="244" y="178" />
+        <di:waypoint x="244" y="440" />
+        <di:waypoint x="416" y="440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f5" bpmnElement="f5">
+        <di:waypoint x="288" y="178" />
+        <di:waypoint x="288" y="280" />
+        <di:waypoint x="416" y="280" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,9 @@
+@startuml
+component OrderSystem {
+  portin "orders" as p1
+  component Cart
+  component Catalogue
+}
+p1 --> Cart : delegates
+Cart --> Catalogue
+@enduml

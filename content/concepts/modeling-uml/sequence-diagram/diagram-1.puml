@@ -1,0 +1,13 @@
+@startuml
+participant Browser
+participant Shop
+participant "Payment Service" as Pay
+Browser -> Shop : place order
+activate Shop
+Shop -> Pay : charge card
+activate Pay
+Pay --> Shop : result
+deactivate Pay
+Shop --> Browser : confirmation
+deactivate Shop
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+component "Order Service" as OS {
+  portin orders
+  component "Order Handler" as OH
+  component "Price Calculator" as PC
+}
+orders --> OH : delegate
+OH --( PC : assembly
+@enduml

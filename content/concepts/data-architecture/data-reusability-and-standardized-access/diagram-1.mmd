@@ -1,0 +1,5 @@
+flowchart LR
+  A[Order system] -->|translate at edge| C((Canonical model))
+  B[Shipping system] -->|translate at edge| C
+  C --> D[Data product with standard interface]
+  D --> E[Analyst or other consumer]

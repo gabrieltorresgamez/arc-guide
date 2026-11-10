@@ -1,0 +1,16 @@
+@startuml
+!include <C4/C4_Component>
+Container(web, "Web Shop", "Web app", "Customer front end")
+Container_Boundary(os, "Order Service") {
+  Component(api, "Order Intake", "Component", "Accepts orders")
+  Component(price, "Pricing", "Component", "Calculates prices")
+  Component(pay, "Payment Client", "Component", "Calls payment provider")
+}
+ContainerDb(db, "Order Database", "Database", "Stores orders")
+System_Ext(ps, "Payment System", "External provider")
+Rel(web, api, "Sends orders to")
+Rel(api, price, "Asks for price")
+Rel(api, pay, "Requests payment")
+Rel(api, db, "Stores order in")
+Rel(pay, ps, "Charges via")
+@enduml

@@ -1,0 +1,9 @@
+sequenceDiagram
+  participant C as Consumer
+  participant Q as Channel
+  C->>Q: Request next message (long poll)
+  Note over Q: Waits until a message is available or time expires
+  Q-->>C: Message
+  C->>C: Process
+  C->>Q: Complete
+  C->>Q: Request next message

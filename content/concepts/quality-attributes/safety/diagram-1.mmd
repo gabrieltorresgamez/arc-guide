@@ -1,0 +1,5 @@
+flowchart TD
+  A[Normal operation] -->|failure or missing heartbeat| B[Fail-safe transition]
+  B --> C[Known safe state]
+  A -->|risk detected| D[Hazard warning to operator]
+  D --> E[Operation limited to safe parameters]

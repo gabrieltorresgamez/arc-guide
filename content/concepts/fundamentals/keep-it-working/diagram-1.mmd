@@ -1,0 +1,7 @@
+flowchart LR
+ A[Working system] --> B[Small change]
+ B --> C[Build and test]
+ C -->|Passes| D[New working system]
+ C -->|Breaks| E[Reject change]
+ E --> A
+ D --> B

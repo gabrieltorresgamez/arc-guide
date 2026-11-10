@@ -1,0 +1,5 @@
+flowchart LR
+  U[User] -->|authenticated, authorized| A[Application zone]
+  A -->|encrypted in transit| D[(Restricted data zone)]
+  X[Unauthorized party] -.->|blocked at trust boundary| D
+  D --> L[Audit trail]

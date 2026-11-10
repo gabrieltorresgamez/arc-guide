@@ -1,0 +1,7 @@
+graph TD
+  Q[Quality] --> P[Performance]
+  Q --> A[Availability]
+  Q --> S[Security]
+  A --> R[Recovery after failure]
+  R --> SC1[Scenario: database stops, standby takes over within set time]
+  P --> SC2[Scenario: peak load, response within set time]

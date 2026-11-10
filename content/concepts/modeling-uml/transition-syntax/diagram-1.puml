@@ -1,0 +1,5 @@
+@startuml
+[*] --> Idle
+Idle --> Active : card inserted [card valid] / show welcome
+Active --> Idle : card removed
+@enduml

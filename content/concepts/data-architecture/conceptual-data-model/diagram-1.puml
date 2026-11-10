@@ -1,0 +1,12 @@
+@startuml
+entity Member {
+  name
+}
+entity Book {
+  title
+}
+entity Loan {
+}
+Member ||--o{ Loan : borrows
+Book ||--o{ Loan : is lent in
+@enduml

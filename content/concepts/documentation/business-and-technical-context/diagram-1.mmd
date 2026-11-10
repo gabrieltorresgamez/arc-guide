@@ -1,0 +1,7 @@
+flowchart LR
+  C[Customer] -->|order data| S[Shop system]
+  S -->|payment request| P[Payment provider]
+  subgraph Technical
+  C2[Customer] -. HTTPS .- S2[Shop system]
+  S2 -. web API .- P2[Payment provider]
+  end

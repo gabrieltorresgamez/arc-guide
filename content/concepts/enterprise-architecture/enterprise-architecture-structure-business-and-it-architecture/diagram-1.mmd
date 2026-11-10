@@ -1,0 +1,8 @@
+flowchart TB
+  B[Business layer: business process, business object]
+  A[Application layer: application service, data object]
+  T[Technology layer: technology service, node, artifact]
+  A -- serves --> B
+  T -- serves --> A
+  A -. data object realizes business object .-> B
+  T -. artifact realizes data object .-> A

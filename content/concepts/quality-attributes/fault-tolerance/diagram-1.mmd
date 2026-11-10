@@ -1,0 +1,5 @@
+flowchart LR
+  C[Caller] --> B{Circuit breaker}
+  B -->|closed| S[Remote service]
+  B -->|open| F[Reduced-mode response]
+  S -->|repeated failures| B

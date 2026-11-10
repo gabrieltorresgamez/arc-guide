@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="defs" targetNamespace="http://example.com/bpmn">
+  <bpmn:dataStore id="ordersStore" name="Orders store" />
+  <bpmn:collaboration id="collab">
+    <bpmn:participant id="poolWriter" name="Order intake" processRef="writerProcess" />
+    <bpmn:participant id="poolReader" name="Reporting" processRef="readerProcess" />
+  </bpmn:collaboration>
+  <bpmn:process id="writerProcess" isExecutable="false">
+    <bpmn:dataStoreReference id="storeRef" name="Orders store" dataStoreRef="ordersStore" />
+    <bpmn:startEvent id="wStart" name="Order received">
+      <bpmn:outgoing>w1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="wTask" name="Save order">
+      <bpmn:incoming>w1</bpmn:incoming>
+      <bpmn:outgoing>w2</bpmn:outgoing>
+      <bpmn:dataOutputAssociation id="wOut">
+        <bpmn:targetRef>storeRef</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:task>
+    <bpmn:endEvent id="wEnd" name="Order saved">
+      <bpmn:incoming>w2</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="w1" sourceRef="wStart" targetRef="wTask" />
+    <bpmn:sequenceFlow id="w2" sourceRef="wTask" targetRef="wEnd" />
+  </bpmn:process>
+  <bpmn:process id="readerProcess" isExecutable="false">
+    <bpmn:dataStoreReference id="storeRef2" name="Orders store" dataStoreRef="ordersStore" />
+    <bpmn:startEvent id="rStart" name="Every night">
+      <bpmn:outgoing>r1</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="rTimer" />
+    </bpmn:startEvent>
+    <bpmn:task id="rTask" name="Build sales summary">
+      <bpmn:incoming>r1</bpmn:incoming>
+      <bpmn:outgoing>r2</bpmn:outgoing>
+      <bpmn:dataInputAssociation id="rIn">
+        <bpmn:sourceRef>storeRef2</bpmn:sourceRef>
+      </bpmn:dataInputAssociation>
+    </bpmn:task>
+    <bpmn:endEvent id="rEnd" name="Summary ready">
+      <bpmn:incoming>r2</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="r1" sourceRef="rStart" targetRef="rTask" />
+    <bpmn:sequenceFlow id="r2" sourceRef="rTask" targetRef="rEnd" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_collab">
+    <bpmndi:BPMNPlane id="BPMNPlane_collab" bpmnElement="collab">
+      <bpmndi:BPMNShape id="BPMNShape_poolWriter" bpmnElement="poolWriter" isHorizontal="true">
+        <dc:Bounds x="80" y="130" width="482" height="160" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_poolReader" bpmnElement="poolReader" isHorizontal="true">
+        <dc:Bounds x="80" y="420" width="482" height="160" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_wStart" bpmnElement="wStart">
+        <dc:Bounds x="150" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="138" y="233" width="60" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_wTask" bpmnElement="wTask">
+        <dc:Bounds x="286" y="170" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_wEnd" bpmnElement="wEnd">
+        <dc:Bounds x="486" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="464" y="233" width="80" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_storeRef" bpmnElement="storeRef">
+        <dc:Bounds x="311" y="80" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="293" y="61" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_w1" bpmnElement="w1">
+        <di:waypoint x="186" y="210" />
+        <di:waypoint x="286" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_w2" bpmnElement="w2">
+        <di:waypoint x="386" y="210" />
+        <di:waypoint x="486" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_wOut" bpmnElement="wOut">
+        <di:waypoint x="336" y="170" />
+        <di:waypoint x="336" y="130" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="BPMNShape_rStart" bpmnElement="rStart">
+        <dc:Bounds x="150" y="482" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="128" y="523" width="80" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_rTask" bpmnElement="rTask">
+        <dc:Bounds x="286" y="460" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_rEnd" bpmnElement="rEnd">
+        <dc:Bounds x="486" y="482" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="474" y="523" width="61" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_storeRef2" bpmnElement="storeRef2">
+        <dc:Bounds x="311" y="370" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="293" y="351" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_r1" bpmnElement="r1">
+        <di:waypoint x="186" y="500" />
+        <di:waypoint x="286" y="500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_r2" bpmnElement="r2">
+        <di:waypoint x="386" y="500" />
+        <di:waypoint x="486" y="500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_rIn" bpmnElement="rIn">
+        <di:waypoint x="336" y="420" />
+        <di:waypoint x="336" y="460" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

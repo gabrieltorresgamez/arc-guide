@@ -1,0 +1,8 @@
+flowchart LR
+  S[Source: system starts request] --> T[Stimulus: exchange information]
+  T --> A[Artifact: systems involved]
+  A --> R{Response}
+  R -->|accept| X[Exchange information]
+  R -->|reject| N[Notify entities]
+  X --> L[Log optional]
+  N --> L

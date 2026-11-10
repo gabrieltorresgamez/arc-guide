@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="defs1" targetNamespace="http://example.com/bpmn">
+  <category id="cat1">
+    <categoryValue id="cv1" value="Intake" />
+  </category>
+  <process id="p1" isExecutable="false">
+    <startEvent id="s1" name="Application received">
+      <outgoing>f1</outgoing>
+    </startEvent>
+    <task id="t1" name="Check documents">
+      <incoming>f1</incoming>
+      <outgoing>f2</outgoing>
+    </task>
+    <task id="t2" name="Score applicant">
+      <incoming>f2</incoming>
+      <outgoing>f3</outgoing>
+    </task>
+    <endEvent id="e1" name="Decision made">
+      <incoming>f3</incoming>
+    </endEvent>
+    <sequenceFlow id="f1" sourceRef="s1" targetRef="t1" />
+    <sequenceFlow id="f2" sourceRef="t1" targetRef="t2" />
+    <sequenceFlow id="f3" sourceRef="t2" targetRef="e1" />
+    <textAnnotation id="ta1">
+      <text>Large loans need a second reviewer</text>
+    </textAnnotation>
+    <association id="a1" sourceRef="t1" targetRef="ta1" />
+    <group id="g1" categoryValueRef="cv1" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_p1">
+    <bpmndi:BPMNPlane id="BPMNPlane_p1" bpmnElement="p1">
+      <bpmndi:BPMNShape id="BPMNShape_s1" bpmnElement="s1">
+        <dc:Bounds x="80" y="190" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="57" y="231" width="83" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t1" bpmnElement="t1">
+        <dc:Bounds x="216" y="168" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_t2" bpmnElement="t2">
+        <dc:Bounds x="416" y="168" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_e1" bpmnElement="e1">
+        <dc:Bounds x="616" y="190" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="603" y="231" width="62" height="28" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ta1" bpmnElement="ta1">
+        <dc:Bounds x="196" y="80" width="140" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_f1" bpmnElement="f1">
+        <di:waypoint x="116" y="208" />
+        <di:waypoint x="216" y="208" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f2" bpmnElement="f2">
+        <di:waypoint x="316" y="208" />
+        <di:waypoint x="416" y="208" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_f3" bpmnElement="f3">
+        <di:waypoint x="516" y="208" />
+        <di:waypoint x="616" y="208" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_a1" bpmnElement="a1">
+        <di:waypoint x="266" y="168" />
+        <di:waypoint x="266" y="128" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

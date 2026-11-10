@@ -1,0 +1,11 @@
+@startuml
+node "Load Balancer" as lb
+node "Web Server" as web {
+  artifact "shop-app"
+}
+node "Database Server" as db {
+  artifact "order-db"
+}
+lb --> web
+web --> db
+@enduml

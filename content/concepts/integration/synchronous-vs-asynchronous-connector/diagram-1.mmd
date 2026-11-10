@@ -1,0 +1,8 @@
+flowchart LR
+  subgraph Synchronous
+    A1[Sender] -->|call and wait| B1[Receiver]
+  end
+  subgraph Asynchronous
+    A2[Sender] -->|post| Q[(Queue)]
+    Q -->|read later| B2[Receiver]
+  end

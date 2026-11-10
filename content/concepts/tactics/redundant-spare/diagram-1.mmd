@@ -1,0 +1,7 @@
+flowchart LR
+  C[Clients] --> LB[Load balancer]
+  LB --> P[Primary]
+  P -- state updates --> W[Warm spare]
+  M[Monitor] -. heartbeat .-> P
+  M -. failure detected .-> LB
+  LB -. redirect after failover .-> W

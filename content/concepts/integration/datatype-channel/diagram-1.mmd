@@ -1,0 +1,5 @@
+flowchart LR
+  S1[Sender] -->|order| C1[Orders channel]
+  S1 -->|payment| C2[Payments channel]
+  C1 --> R1[Order receiver]
+  C2 --> R2[Payment receiver]

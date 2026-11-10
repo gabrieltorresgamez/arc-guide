@@ -1,0 +1,5 @@
+flowchart LR
+  P[Publisher] -->|input channel| B[Broker / event bus]
+  B -->|copy| S1[Subscriber A]
+  B -->|copy| S2[Subscriber B]
+  B -->|copy| S3[Subscriber C]

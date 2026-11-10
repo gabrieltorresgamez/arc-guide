@@ -1,0 +1,5 @@
+flowchart LR
+  C[Client] -->|request| B[Broker]
+  B -->|forwarded request| S[Server]
+  S -->|result or exception| B
+  B -->|result or exception| C

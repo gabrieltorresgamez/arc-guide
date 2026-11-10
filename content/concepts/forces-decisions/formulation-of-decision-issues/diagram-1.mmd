@@ -1,0 +1,7 @@
+flowchart LR
+  Q[Issue as a question] --> C[Criteria / drivers]
+  Q --> O[Options]
+  C --> E[Evaluate all options]
+  O --> E
+  E --> D[Choose one]
+  D --> R[Record rationale in ADR]

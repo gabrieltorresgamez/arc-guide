@@ -1,0 +1,7 @@
+sequenceDiagram
+  participant P as Producer
+  participant B as Broker
+  participant E as Event-driven consumer
+  P->>B: send message
+  B->>E: callback with message
+  E-->>B: acknowledge

@@ -1,0 +1,8 @@
+@startuml
+!include <C4/C4_Context>
+Person(customer, "Customer", "Sends orders")
+System(shop, "Online Shop", "System under construction")
+System_Ext(pay, "Payment Provider", "External system")
+Rel(customer, shop, "Orders, confirmations")
+Rel(shop, pay, "Payment requests, approvals")
+@enduml

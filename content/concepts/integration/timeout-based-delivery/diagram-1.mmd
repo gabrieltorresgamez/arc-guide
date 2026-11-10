@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant Q as Queue
+  participant A as Consumer A
+  participant B as Consumer B
+  A->>Q: receive message
+  Q-->>A: message (hidden from others)
+  Note over A: crashes, no delete
+  Note over Q: timeout expires
+  B->>Q: receive message
+  Q-->>B: same message again
+  B->>Q: delete message

@@ -1,0 +1,6 @@
+flowchart TD
+  P[Principle: loose coupling] -->|triggers| I[Issue: how to exchange data]
+  I --> A[Alternative: integration broker]
+  A -->|decomposes into| T[Issue: topology]
+  A -->|decomposes into| M[Issue: message delivery]
+  A -->|decomposes into| X[Issue: technology]

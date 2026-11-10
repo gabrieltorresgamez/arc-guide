@@ -1,0 +1,14 @@
+flowchart LR
+  subgraph Before
+    A1[Module A] --> S1[Service 1]
+    B1[Module B] --> S2[Service 2]
+    C1[Module C] --> S3[Service 3]
+  end
+  subgraph After
+    A2[Module A] --> K[Shared contract]
+    B2[Module B] --> K
+    C2[Module C] --> K
+    K --> T1[Service 1]
+    K --> T2[Service 2]
+    K --> T3[Service 3]
+  end

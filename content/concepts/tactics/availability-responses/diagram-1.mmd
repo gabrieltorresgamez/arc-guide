@@ -1,0 +1,10 @@
+flowchart LR
+ A[Availability tactics] --> B[Prevent faults]
+ A --> C[Detect faults]
+ A --> D[Recover from faults]
+ B --> B1[Redundancy]
+ B --> B2[Removal from service]
+ C --> C1[Heartbeat]
+ C --> C2[Ping/echo]
+ C --> C3[Exception detection]
+ D --> D1[Graceful degradation]

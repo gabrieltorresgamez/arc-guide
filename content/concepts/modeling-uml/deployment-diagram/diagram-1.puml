@@ -1,0 +1,11 @@
+@startuml
+node "Web Server" {
+  artifact "site files"
+}
+node "Application Server" {
+  artifact "shop program"
+}
+node "Database Server" {
+  artifact "database"
+}
+@enduml

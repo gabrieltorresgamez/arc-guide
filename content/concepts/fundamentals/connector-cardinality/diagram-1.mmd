@@ -1,0 +1,8 @@
+flowchart LR
+  P1[Sender] --> C1((Channel))
+  C1 --> R1[Receiver A]
+  C1 -.competes.-> R2[Receiver B]
+  P2[Publisher] --> C2((Pub-sub channel))
+  C2 --> S1[Subscriber 1]
+  C2 --> S2[Subscriber 2]
+  C2 --> S3[Subscriber 3]

@@ -1,0 +1,10 @@
+@startuml
+package "Presentation" {
+}
+package "Business Logic" {
+}
+package "Data Access" {
+}
+[Presentation] ..> [Business Logic]
+[Business Logic] ..> [Data Access]
+@enduml

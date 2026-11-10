@@ -1,0 +1,6 @@
+flowchart LR
+  In[Identical input] --> A[Active node]
+  In --> S[Spare node]
+  A --> V{Voter / failure detection}
+  S --> V
+  V --> Out[Output]

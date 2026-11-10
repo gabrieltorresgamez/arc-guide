@@ -1,0 +1,9 @@
+flowchart LR
+  S[Sender] -->|split| M1[Part 1]
+  S --> M2[Part 2]
+  S --> M3[Part 3]
+  M1 --> C[Channel]
+  M2 --> C
+  M3 --> C
+  C --> R[Resequencer and Aggregator]
+  R -->|rebuild| O[Original data]

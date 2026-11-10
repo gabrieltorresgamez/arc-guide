@@ -1,0 +1,8 @@
+@startuml
+component Order
+component Payment
+interface Charge
+Payment -( Charge
+Payment ..|> Charge
+Order ..> Charge : use
+@enduml

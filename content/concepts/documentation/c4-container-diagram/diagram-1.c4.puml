@@ -1,0 +1,15 @@
+@startuml
+!include <C4/C4_Container>
+Person(reader, "Reader", "Uses the library")
+System_Boundary(lib, "Online Library") {
+  Container(spa, "Single-page app", "JavaScript, browser", "Search and borrow screens")
+  Container(mobile, "Mobile app", "Mobile", "Same features on a phone")
+  Container(web, "Web application", "Server-side", "Handles requests")
+  ContainerDb(db, "Catalog database", "Database", "Stores books")
+}
+Rel(reader, spa, "Uses")
+Rel(reader, mobile, "Uses")
+Rel(spa, web, "Calls", "HTTPS")
+Rel(mobile, web, "Calls", "HTTPS")
+Rel(web, db, "Reads and writes")
+@enduml

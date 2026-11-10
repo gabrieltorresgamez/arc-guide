@@ -1,0 +1,8 @@
+@startuml
+class Order
+class Address
+class Shipment
+Order "1" *-- "1..*" Address : wrong
+Shipment "1" *-- "1..*" Address : wrong
+note bottom of Address : One part with two wholes
+@enduml
