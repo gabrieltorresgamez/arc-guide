@@ -7,7 +7,7 @@
   --on-accent: #201515;
   --link: #ff4f00;
   --ink: #fffefb;
-  --body: #c5c0b1;
+  --ink-muted: #c5c0b1;
   --canvas: #1a1210;
   --canvas-soft: #241c19;
   --hairline: #3a332d;
@@ -17,11 +17,11 @@
 :root[data-theme='light'] {
   --link: #c2410c; /* pure #ff4f00 is about 3:1 on cream, too low for link text */
   --ink: #201515;
-  --body: #605d52;
+  --ink-muted: #605d52;
   --canvas: #fffefb;
   --canvas-soft: #f8f4f0;
   --hairline: #c5c0b1;
-  --border: #939084;
+  --border: #8a877b;
   --selection: #ffe3d5;
 }
 /* High contrast (WCAG AAA). ThemeProvider.astro sets data-contrast for the High contrast choice and for
@@ -41,7 +41,7 @@
   --accent: #7c2d12;
   --on-accent: #fffefb;
   --link: #7c2d12;
-  --body: #4a4740;
+  --ink-muted: #4a4740;
   --canvas: #fffefb;
   --canvas-soft: #f8f4f0;
   --hairline: #807d72;
@@ -55,8 +55,8 @@
   --sl-color-accent-high: var(--link);
   --sl-color-white: var(--ink);
   --sl-color-gray-1: var(--ink);
-  --sl-color-gray-2: var(--body);
-  --sl-color-gray-3: var(--body);
+  --sl-color-gray-2: var(--ink-muted);
+  --sl-color-gray-3: var(--ink-muted);
   --sl-color-gray-4: var(--border);
   --sl-color-gray-5: var(--hairline);
   --sl-color-gray-6: var(--canvas-soft);
@@ -208,7 +208,7 @@ nav.sidebar a {
 }
 .sl-markdown-content summary {
   margin-inline-start: 0;
-  color: var(--body);
+  color: var(--ink-muted);
   font-size: 0.9375rem;
   font-weight: 400;
 }
