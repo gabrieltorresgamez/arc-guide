@@ -24,8 +24,8 @@
   --border: #8a877b;
   --selection: #ffe3d5;
 }
-/* High contrast (WCAG AAA). ThemeProvider.astro sets data-contrast for the High contrast choice and for
-   prefers-contrast: more. */
+/* High contrast (WCAG AAA). ThemeProvider.astro sets data-contrast for the High contrast choice, and for
+   Auto when the system asks for more contrast. A pick of Light or Dark is never overridden. */
 :root[data-contrast] {
   /* hc-dark */
   --accent: #ff8a50;

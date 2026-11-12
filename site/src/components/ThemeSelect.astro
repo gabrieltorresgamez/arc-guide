@@ -25,7 +25,7 @@ import Select from '@astrojs/starlight/components/Select.astro';
 <script>
 	const provider = (window as any).StarlightThemeProvider;
 
-	// Follow the system while the choice is Auto or High contrast.
+	// Follow the system while the choice is Auto (colours and contrast) or High contrast (colours).
 	for (const query of ['(prefers-color-scheme: light)', '(prefers-contrast: more)']) {
 		matchMedia(query).addEventListener('change', () => provider.apply());
 	}
