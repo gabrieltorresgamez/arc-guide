@@ -1,0 +1,45 @@
+---
+// Starlight's theme provider plus High contrast. `data-theme` stays 'light' or 'dark', because Starlight's own
+// styles read it; `data-contrast` is added when the visitor picks High contrast or the system asks for more contrast.
+import { Icon } from '@astrojs/starlight/components';
+---
+
+{/* Inlined to avoid a flash of the wrong theme. */}
+<script is:inline>
+	window.StarlightThemeProvider = (() => {
+		const stored = () =>
+			(typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme')) || 'auto';
+		const apply = (theme = stored()) => {
+			const root = document.documentElement;
+			root.dataset.theme =
+				theme === 'light' || theme === 'dark'
+					? theme
+					: matchMedia('(prefers-color-scheme: light)').matches
+						? 'light'
+						: 'dark';
+			root.toggleAttribute(
+				'data-contrast',
+				theme === 'hc' || matchMedia('(prefers-contrast: more)').matches
+			);
+		};
+		apply();
+		return {
+			apply,
+			updatePickers(theme = stored()) {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					const icon = document.querySelector('#theme-icons')?.content.querySelector('.' + theme);
+					if (icon) picker.querySelector('svg.label-icon')?.replaceChildren(...icon.cloneNode(true).childNodes);
+				});
+			},
+		};
+	})();
+</script>
+
+<template id="theme-icons">
+	<Icon name="sun" class="light" />
+	<Icon name="moon" class="dark" />
+	<Icon name="laptop" class="auto" />
+	<svg class="hc" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2v16a8 8 0 0 1 0-16Z" /></svg>
+</template>

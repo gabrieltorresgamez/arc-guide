@@ -12,7 +12,13 @@ export default defineConfig({
 			title: 'Software Architecture Guide',
 			customCss: ['@fontsource-variable/bricolage-grotesque', './src/styles/custom.css'],
 			expressiveCode: { styleOverrides: { borderRadius: '12px', borderWidth: '0px' } },
-			components: { Head: './src/components/Head.astro', Footer: './src/components/Footer.astro' },
+			components: {
+				Head: './src/components/Head.astro',
+				Footer: './src/components/Footer.astro',
+				SiteTitle: './src/components/SiteTitle.astro',
+				ThemeProvider: './src/components/ThemeProvider.astro',
+				ThemeSelect: './src/components/ThemeSelect.astro',
+			},
 			head: [
 				{ tag: 'meta', attrs: { property: 'og:image', content: `${site}/og.png` } },
 				{ tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },

@@ -1,79 +1,113 @@
-/* Theme shared with fuet.ch and torres.swiss: cream and coffee neutrals, one electric orange, Bricolage
-   headings on a system-font body, flat surfaces, 12px and 6px corners. Tokens are recorded in the
-   DESIGN.md of gabrieltorresgamez/fuet-site. */
+/* Torres: the design language shared with fuet.ch and torres.swiss. Coffee and cream neutrals, one electric
+   orange, Bricolage headings on a system-font body, flat surfaces, 12px and 6px corners. The first four
+   blocks are the Torres colour tokens for each theme; the fifth maps Starlight's own names onto them. */
 :root {
-  --sl-color-accent-low: #3a1403;
-  --sl-color-accent: #ff4f00;
-  --sl-color-accent-high: #ff4f00;
-  --sl-color-white: #fffefb;
-  --sl-color-gray-1: #f8f4f0;
-  --sl-color-gray-2: #c5c0b1;
-  --sl-color-gray-3: #939084;
-  --sl-color-gray-4: #605d52;
-  --sl-color-gray-5: #3a332d;
-  --sl-color-gray-6: #241c19;
-  --sl-color-black: #1a1210;
-  --sl-color-bg-inline-code: var(--sl-color-gray-6);
-  --sl-color-hairline: var(--sl-color-gray-5);
-  --sl-color-hairline-light: var(--sl-color-gray-5);
-  --sl-color-hairline-shade: var(--sl-color-gray-5);
+  /* dark */
+  --accent: #ff4f00;
+  --on-accent: #201515;
+  --link: #ff4f00;
+  --ink: #fffefb;
+  --body: #c5c0b1;
+  --canvas: #1a1210;
+  --canvas-soft: #241c19;
+  --hairline: #3a332d;
+  --border: #807d72;
   --selection: #7c2d12;
+}
+:root[data-theme='light'] {
+  --link: #c2410c; /* pure #ff4f00 is about 3:1 on cream, too low for link text */
+  --ink: #201515;
+  --body: #605d52;
+  --canvas: #fffefb;
+  --canvas-soft: #f8f4f0;
+  --hairline: #c5c0b1;
+  --border: #939084;
+  --selection: #ffe3d5;
+}
+/* High contrast (WCAG AAA). ThemeProvider.astro sets data-contrast for the High contrast choice and for
+   prefers-contrast: more. */
+:root[data-contrast] {
+  /* hc-dark */
+  --accent: #ff8a50;
+  --on-accent: #120c0a;
+  --link: #ff8a50;
+  --canvas: #120c0a;
+  --canvas-soft: #1a1210;
+  --hairline: #807d72;
+  --border: #a8a397;
+}
+:root[data-contrast][data-theme='light'] {
+  /* hc-light */
+  --accent: #7c2d12;
+  --on-accent: #fffefb;
+  --link: #7c2d12;
+  --body: #4a4740;
+  --canvas: #fffefb;
+  --canvas-soft: #f8f4f0;
+  --hairline: #807d72;
+  --border: #605d52;
+}
+
+/* Starlight's styles are in a cascade layer, so this one block wins in every theme. */
+:root {
+  --sl-color-accent-low: var(--selection);
+  --sl-color-accent: var(--accent);
+  --sl-color-accent-high: var(--link);
+  --sl-color-white: var(--ink);
+  --sl-color-gray-1: var(--ink);
+  --sl-color-gray-2: var(--body);
+  --sl-color-gray-3: var(--body);
+  --sl-color-gray-4: var(--border);
+  --sl-color-gray-5: var(--hairline);
+  --sl-color-gray-6: var(--canvas-soft);
+  --sl-color-gray-7: var(--canvas-soft);
+  --sl-color-black: var(--canvas);
+  --sl-color-text: var(--ink);
+  --sl-color-text-accent: var(--link);
+  --sl-color-text-invert: var(--on-accent);
+  --sl-color-bg-accent: var(--accent);
+  --sl-color-bg-inline-code: var(--canvas-soft);
+  --sl-color-hairline: var(--hairline);
+  --sl-color-hairline-light: var(--hairline);
+  --sl-color-hairline-shade: var(--hairline);
 
   /* Flat: depth comes from tone, not shadows. */
   --sl-shadow-sm: none;
   --sl-shadow-md: none;
   --sl-shadow-lg: none;
 
-  /* 18px body in a 36rem column: about 70 to 80 characters per line, depending on the system font. */
+  /* 18px body in a 40rem column: about 70 characters per line. */
   --sl-text-body: 1.125rem;
   --sl-line-height: 1.6;
-  --sl-content-width: 36rem;
+  --sl-content-width: 40rem;
   --sl-text-h1: clamp(2.25rem, 7vw, 3.5rem);
   --sl-text-h2: 1.75rem;
   --sl-text-h3: 1.375rem;
   --sl-text-h4: 1.125rem;
   --sl-text-h5: 1.125rem;
+  --sl-font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
 
   --radius: 12px;
   --radius-sm: 6px;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
-:root[data-theme='light'] {
-  --sl-color-accent-low: #ffe3d5;
-  --sl-color-accent: #ff4f00;
-  --sl-color-accent-high: #7c2d12;
-  --sl-color-text-accent: #c2410c; /* pure #ff4f00 is about 3:1 on cream, too low for link text */
-  --sl-color-white: #201515;
-  --sl-color-gray-1: #2f2a26;
-  --sl-color-gray-2: #36342e;
-  --sl-color-gray-3: #605d52;
-  --sl-color-gray-4: #807d72;
-  --sl-color-gray-5: #c5c0b1;
-  --sl-color-gray-6: #f8f4f0;
-  --sl-color-gray-7: #f8f4f0;
-  --sl-color-black: #fffefb;
-  --sl-color-hairline: var(--sl-color-gray-6);
-  --sl-color-hairline-light: var(--sl-color-gray-6);
-  --sl-color-hairline-shade: var(--sl-color-gray-6);
-  --selection: #ffe3d5;
-}
 
 html {
-  accent-color: var(--sl-color-accent);
-  caret-color: var(--sl-color-accent);
-  scrollbar-color: var(--sl-color-gray-3) var(--sl-color-black);
+  accent-color: var(--accent);
+  caret-color: var(--accent);
+  scrollbar-color: var(--border) var(--canvas);
 }
 ::selection {
   background: var(--selection);
-  color: var(--sl-color-white);
+  color: var(--ink);
 }
+/* One focus ring everywhere. It sits 3px outside the element, so it shows around an orange fill too. */
 :focus-visible {
-  outline: 2px solid var(--sl-color-accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
-/* An orange ring does not show on an orange fill: use ink there. */
-nav.sidebar a[aria-current='page']:focus-visible,
-.sl-skip-link:focus-visible {
-  outline-color: var(--sl-color-white);
+.sl-markdown-content a:focus-visible {
+  border-radius: var(--radius-sm);
 }
 
 /* Headings: Bricolage, tight and heavy. */
@@ -90,23 +124,28 @@ h1 {
   line-height: 1.05;
   letter-spacing: -0.025em;
 }
-.sl-markdown-content :is(h2, h3, h4) {
+.sl-markdown-content :is(h2, h3) {
   font-weight: 650;
+}
+.sl-markdown-content h4 {
+  font-weight: 600;
 }
 .sl-markdown-content h2 {
   letter-spacing: -0.01em;
 }
 
-/* Wordmark: ink with an orange full stop, as on fuet.ch. */
+/* Wordmark: uppercase ink with an orange full stop. */
 .site-title {
-  color: var(--sl-color-white);
-  font-size: clamp(1rem, 4.2vw, 1.25rem); /* fits a 390px phone without clipping */
+  color: var(--ink);
+  font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1;
   letter-spacing: -0.01em;
+  text-decoration: none;
 }
-.site-title span::after {
+.site-title::after {
   content: '.';
-  color: var(--sl-color-accent);
+  color: var(--accent);
 }
 
 /* Links: 1px underline that thickens on hover. */
@@ -130,8 +169,8 @@ h1 {
 
 /* The current page in the sidebar: coffee text on an orange fill, in both themes. */
 nav.sidebar a[aria-current='page'] {
-  background: var(--sl-color-accent);
-  color: #201515;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 nav.sidebar a {
   border-radius: var(--radius-sm);
@@ -143,20 +182,25 @@ nav.sidebar a {
   padding: 1.1rem 1.4rem;
   border: 0;
   border-radius: var(--radius);
-  background: var(--sl-color-gray-6);
+  background: var(--canvas-soft);
+}
+/* High contrast: panels get an edge, because tone alone is too quiet there. */
+:root[data-contrast] .sl-markdown-content :is(.starlight-aside, blockquote, code:not(pre code), .expressive-code pre) {
+  outline: 1px solid var(--hairline);
+  outline-offset: -1px;
 }
 .starlight-aside__title {
-  color: var(--sl-color-white);
+  color: var(--ink);
   font-weight: 650;
 }
 .starlight-aside__icon {
   display: none;
 }
 .sl-markdown-content .starlight-aside a {
-  color: var(--sl-color-text-accent);
+  color: var(--link);
 }
 .sl-markdown-content hr {
-  border-color: var(--sl-color-gray-5);
+  border-color: var(--hairline);
 }
 .sl-markdown-content details {
   border: 0;
@@ -164,7 +208,7 @@ nav.sidebar a {
 }
 .sl-markdown-content summary {
   margin-inline-start: 0;
-  color: var(--sl-color-gray-3);
+  color: var(--body);
   font-size: 0.9375rem;
   font-weight: 400;
 }
@@ -177,13 +221,17 @@ site-search button[data-open-modal],
 site-search dialog {
   border-radius: var(--radius);
 }
+/* A control's edge must be visible: border, not hairline. */
+site-search button[data-open-modal] {
+  border-color: var(--border);
+}
 #starlight__search {
   --sl-search-corners: var(--radius-sm);
 }
 .sl-menu-button {
   border-radius: var(--radius-sm); /* nothing is fully round */
 }
-/* Older and newer page: a heading voice at a quiet size, as on fuet.ch. */
+/* Older and newer page: a heading voice at a quiet size. */
 .pagination-links .link-title {
   font: 600 1.125rem/1.3 'Bricolage Grotesque Variable', system-ui, sans-serif;
 }
