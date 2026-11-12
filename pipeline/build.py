@@ -1,4 +1,5 @@
 """Build the site: diagrams, Starlight pages, .md versions, llms.txt files, checks."""
+import html
 import json
 import os
 import re
@@ -94,6 +95,14 @@ def art_urls(a):
     return f"/{base}/", f"/{base}.md"
 
 
+def diagram_img(rel, caption):
+    """<img> with the size of the rendered SVG, so the page does not shift when the image loads."""
+    svg = PUB / "diagrams" / f"{rel}.svg"
+    m = re.search(rb'<svg[^>]*?\swidth="([\d.]+)(?:px)?"[^>]*?\sheight="([\d.]+)(?:px)?"', svg.read_bytes()) if svg.exists() else None
+    size = f' width="{round(float(m[1]))}" height="{round(float(m[2]))}"' if m else ""
+    return f'<img src="/diagrams/{rel}.svg" alt="{html.escape(caption)}"{size} loading="lazy" decoding="async">'
+
+
 def diagram_blocks(a, md):
     out = []
     for d in a.get("diagrams", []):
@@ -107,7 +116,7 @@ def diagram_blocks(a, md):
             else:
                 out.append(f"{d['caption']}\n\n```{FENCE[lang]}\n{src}\n```")
         else:
-            out.append(f"![{d['caption']}](/diagrams/{rel}.svg)\n\n<details><summary>Diagram source</summary>\n\n```{FENCE[lang]}\n{src}\n```\n\n</details>")
+            out.append(f"{diagram_img(rel, d['caption'])}\n\n<details><summary>Diagram source</summary>\n\n```{FENCE[lang]}\n{src}\n```\n\n</details>")
     return "\n\n".join(out)
 
 

@@ -1,5 +1,6 @@
-/* Theme: electric orange on warm cream and coffee-brown neutrals. Light values after Zapier's DESIGN.md
-   (github.com/VoltAgent/awesome-design-md); the dark theme is extrapolated from its ink colours. */
+/* Theme shared with fuet.ch and torres.swiss: cream and coffee neutrals, one electric orange, Bricolage
+   headings on a system-font body, flat surfaces, 12px and 6px corners. Tokens are recorded in the
+   DESIGN.md of gabrieltorresgamez/fuet-site. */
 :root {
   --sl-color-accent-low: #3a1403;
   --sl-color-accent: #ff4f00;
@@ -12,6 +13,30 @@
   --sl-color-gray-5: #3a332d;
   --sl-color-gray-6: #241c19;
   --sl-color-black: #1a1210;
+  --sl-color-bg-inline-code: var(--sl-color-gray-6);
+  --sl-color-hairline: var(--sl-color-gray-5);
+  --sl-color-hairline-light: var(--sl-color-gray-5);
+  --sl-color-hairline-shade: var(--sl-color-gray-5);
+  --selection: #7c2d12;
+
+  /* Flat: depth comes from tone, not shadows. */
+  --sl-shadow-sm: none;
+  --sl-shadow-md: none;
+  --sl-shadow-lg: none;
+
+  /* 18px body in a 36rem column: about 70 to 80 characters per line, depending on the system font. */
+  --sl-text-body: 1.125rem;
+  --sl-line-height: 1.6;
+  --sl-content-width: 36rem;
+  --sl-text-h1: clamp(2.25rem, 7vw, 3.5rem);
+  --sl-text-h2: 1.75rem;
+  --sl-text-h3: 1.375rem;
+  --sl-text-h4: 1.125rem;
+  --sl-text-h5: 1.125rem;
+
+  --radius: 12px;
+  --radius-sm: 6px;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 :root[data-theme='light'] {
   --sl-color-accent-low: #ffe3d5;
@@ -25,36 +50,178 @@
   --sl-color-gray-4: #807d72;
   --sl-color-gray-5: #c5c0b1;
   --sl-color-gray-6: #f8f4f0;
-  --sl-color-gray-7: #fbf9f5;
+  --sl-color-gray-7: #f8f4f0;
   --sl-color-black: #fffefb;
+  --sl-color-hairline: var(--sl-color-gray-6);
+  --sl-color-hairline-light: var(--sl-color-gray-6);
+  --sl-color-hairline-shade: var(--sl-color-gray-6);
+  --selection: #ffe3d5;
 }
-:is(h1, h2, h3, h4, .site-title) {
+
+html {
+  accent-color: var(--sl-color-accent);
+  caret-color: var(--sl-color-accent);
+  scrollbar-color: var(--sl-color-gray-3) var(--sl-color-black);
+}
+::selection {
+  background: var(--selection);
+  color: var(--sl-color-white);
+}
+:focus-visible {
+  outline: 2px solid var(--sl-color-accent);
+}
+/* An orange ring does not show on an orange fill: use ink there. */
+nav.sidebar a[aria-current='page']:focus-visible,
+.sl-skip-link:focus-visible {
+  outline-color: var(--sl-color-white);
+}
+
+/* Headings: Bricolage, tight and heavy. */
+:is(h1, h2, h3, h4, .site-title, .starlight-aside__title) {
   font-family: 'Bricolage Grotesque Variable', system-ui, sans-serif;
-}
-
-/* About 70-75 characters per line (Starlight default 45rem gives ~90). */
-:root {
-  --sl-content-width: 38rem;
-}
-
-/* No single word alone on the last line; headings break into even lines. */
-.sl-markdown-content :is(p, li) {
-  text-wrap: pretty;
 }
 h1,
 h2,
 h3 {
-  text-wrap: balance;
+  text-wrap: balance; /* headings break into even lines */
+}
+h1 {
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+.sl-markdown-content :is(h2, h3, h4) {
+  font-weight: 650;
+}
+.sl-markdown-content h2 {
+  letter-spacing: -0.01em;
+}
+
+/* Wordmark: ink with an orange full stop, as on fuet.ch. */
+.site-title {
+  color: var(--sl-color-white);
+  font-size: clamp(1rem, 4.2vw, 1.25rem); /* fits a 390px phone without clipping */
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.site-title span::after {
+  content: '.';
+  color: var(--sl-color-accent);
+}
+
+/* Links: 1px underline that thickens on hover. */
+.sl-markdown-content a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+@media (hover: hover) and (pointer: fine) {
+  .sl-markdown-content a:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+.sl-markdown-content :is(td, th) {
+  font-variant-numeric: tabular-nums; /* figures line up down a column */
+}
+
+/* No single word alone on the last line. */
+.sl-markdown-content :is(p, li) {
+  text-wrap: pretty;
+}
+
+/* The current page in the sidebar: coffee text on an orange fill, in both themes. */
+nav.sidebar a[aria-current='page'] {
+  background: var(--sl-color-accent);
+  color: #201515;
+}
+nav.sidebar a {
+  border-radius: var(--radius-sm);
+}
+
+/* Panels: a soft ground and round corners. No border, no side stripe. */
+.sl-markdown-content .starlight-aside,
+.sl-markdown-content blockquote {
+  padding: 1.1rem 1.4rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--sl-color-gray-6);
+}
+.starlight-aside__title {
+  color: var(--sl-color-white);
+  font-weight: 650;
+}
+.starlight-aside__icon {
+  display: none;
+}
+.sl-markdown-content .starlight-aside a {
+  color: var(--sl-color-text-accent);
+}
+.sl-markdown-content hr {
+  border-color: var(--sl-color-gray-5);
+}
+.sl-markdown-content details {
+  border: 0;
+  padding: 0;
+}
+.sl-markdown-content summary {
+  margin-inline-start: 0;
+  color: var(--sl-color-gray-3);
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+.sl-markdown-content code:not(pre code) {
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius-sm);
+}
+.pagination-links a,
+site-search button[data-open-modal],
+site-search dialog {
+  border-radius: var(--radius);
+}
+#starlight__search {
+  --sl-search-corners: var(--radius-sm);
+}
+.sl-menu-button {
+  border-radius: var(--radius-sm); /* nothing is fully round */
+}
+/* Older and newer page: a heading voice at a quiet size, as on fuet.ch. */
+.pagination-links .link-title {
+  font: 600 1.125rem/1.3 'Bricolage Grotesque Variable', system-ui, sans-serif;
+}
+
+/* Motion: press feedback on the few real buttons, and a short expand for "Diagram source".
+   Navigation, search and the sidebar stay instant; they are used too often to animate. */
+@media (prefers-reduced-motion: no-preference) {
+  .pagination-links a,
+  site-search button[data-open-modal],
+  .sl-menu-button {
+    transition: scale 140ms var(--ease-out), border-color 160ms ease;
+  }
+  :is(.pagination-links a, site-search button[data-open-modal], .sl-menu-button):active {
+    scale: 0.97;
+  }
+  @supports (interpolate-size: allow-keywords) {
+    .sl-markdown-content details {
+      interpolate-size: allow-keywords;
+    }
+    .sl-markdown-content details::details-content {
+      block-size: 0;
+      overflow-y: clip;
+      opacity: 0;
+      transition: block-size 150ms var(--ease-out), opacity 150ms var(--ease-out),
+        content-visibility 150ms allow-discrete;
+    }
+    .sl-markdown-content details[open]::details-content {
+      block-size: auto;
+      opacity: 1;
+      transition-duration: 220ms; /* opening is a little slower than closing */
+    }
+  }
 }
 
 /* Diagrams are SVGs with black lines and a transparent background; give them a white one so they stay readable in the dark theme. */
 img[src^="/diagrams/"] {
-  display: block;
   margin-inline: auto;
   background: #fff;
   padding: 0.75rem;
-  border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
-  max-width: 100%;
-  height: auto;
+  border-radius: var(--radius);
 }

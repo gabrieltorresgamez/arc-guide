@@ -1,0 +1,8 @@
+---
+// Starlight's head plus a preload for the one heading font, so the page title does not swap fonts after first paint.
+import Default from '@astrojs/starlight/components/Head.astro';
+import font from '@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2?url';
+---
+
+<Default />
+<link rel="preload" as="font" type="font/woff2" href={font} crossorigin />
