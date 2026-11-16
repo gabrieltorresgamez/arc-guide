@@ -67,7 +67,7 @@ Documentation as code (also called docs as code) is a philosophy. You write docu
 
 **From text to document in three steps.** You write the source. A converter such as Asciidoctor parses AsciiDoc into a document model. It then converts that model into formats such as HTML5, DocBook 5, PDF and EPUB 3.
 
-**Diagrams from text.** See the article Diagrams as Code.
+**Diagrams from text.** For diagrams written as text, see the article Diagrams as Code.
 
 **Toolchains.** docToolchain is a docs-as-code toolchain. It publishes AsciiDoc to HTML, PDF, microsites and Confluence. It also supports teams who want docs as code but still use a wiki.
 

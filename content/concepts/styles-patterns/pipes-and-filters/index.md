@@ -50,7 +50,7 @@ Pipes and Filters breaks one large processing task into a sequence of smaller, i
 
 **Free ordering.** A filter knows only the format of its input and its output. So filters can be arranged in any order, as long as each filter's output format matches the next filter's input format. A standardized format makes reordering easier. Because all filters share the same external interface, you can add new filters, omit existing ones, or rearrange them without changing the filters themselves.
 
-**Implementation.** Teams usually build this as one monolithic pipeline, meaning one deployed unit. A pipeline can also use message queues as pipes, with each filter listening on a queue. For example, Azure Functions with Queue Storage can form an image-processing pipeline. Each filter reads a message, does its work, and posts a new or transformed message to the next queue.
+**Implementation.** Teams usually build this as a monolithic pipeline. A pipeline can also use message queues as pipes, with each filter listening on a queue. For example, Azure Functions with Queue Storage can form an image-processing pipeline. Each filter reads a message, does its work, and posts a new or transformed message to the next queue.
 
 **Error handling.** Every filter must decide what to do on a breaking error. It either fails the pipeline or passes the exception on. Filters should also be idempotent, so repeating the same message is safe.
 

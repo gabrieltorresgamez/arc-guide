@@ -81,4 +81,4 @@ The arc42 whitebox template for the overall system in the building block view co
 
 ## Example
 
-A team builds an online booking tool. Its main quality goal is that many people can book at once. A key constraint is a small team. The team writes a short idea: split the system into a web front end and a booking service, using a well-known pattern for that split. Each choice gets a one-line reason tied to the goal or the constraint. The team also notes the main cost and risk of the split.
+A team builds an online booking tool. Its main quality goal is that many people can book at once. A key constraint is a small team. The team writes a short idea: split the system into a web front end and a booking service, using a well-known pattern for that split. Each choice gets a one-line reason tied to the goal or the constraint.

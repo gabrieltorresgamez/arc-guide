@@ -53,7 +53,7 @@ Between a business conversation and a working database there are three model lev
 
 **Normalization.** Normalization organizes data so each fact lives in one place. Third normal form (3NF) moves customer details into their own entity. A phone number is then updated in one row. Splitting order-level facts from line-level facts, such as Order Detail, illustrates second normal form (2NF). Each kind of fact then sits at its own grain.
 
-**Several engines.** Mapping rules let one logical model target several database engines. The models then do not drift apart.
+**Several engines.** Mapping rules let one logical model target several database engines.
 
 For the neighboring levels, see the articles on the Conceptual Data Model and the Physical Data Model.
 
@@ -69,4 +69,4 @@ None of these definitions names a database product. That choice comes later, at 
 
 ## Trade-offs
 
-Normalizing further is not always better. The advice is to stop at 3NF unless a measured query says otherwise. Keeping the model free of engine details means mapping rules are needed to reach each target engine.
+Keeping the model free of engine details means mapping rules are needed to reach each target engine.

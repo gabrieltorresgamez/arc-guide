@@ -70,7 +70,7 @@ Technology architecture, as used here, deals with the infrastructure that softwa
 
 **Standards and guidelines.** Organizations agree on shared standards for technology. AWS guidance calls this platform architecture. It offers blueprints (ready-made patterns) and guardrails for security, networking and logging. Standards should adapt over time as goals and technology change. Standardizing patterns also improves governance and reduces administrative work as the organization grows. Exceptions should be planned and governed.
 
-**Hosting choices.** Some workloads stay on premises, meaning on hardware the organization runs itself. Reasons include latency, processing needs or data residency (rules about where data is kept). Hybrid architecture combines cloud services with datacenters, edge locations and other clouds. Hosting should follow workload requirements, not the current location of hardware.
+**Hosting choices.** Some workloads stay on premises. Reasons include latency, processing needs or data residency (rules about where data is kept). Hybrid architecture combines cloud services with datacenters, edge locations and other clouds. Hosting should follow workload requirements, not the current location of hardware.
 
 **Network design.** A hybrid setup needs connectivity to the internet, between cloud environments, and between the on-premises network and the cloud.
 

@@ -87,8 +87,6 @@ One empirical study compared conceptual data models made by expert and novice pr
 
 - **Conceptual Data Model Building Method:** A conceptual data model is built step by step: understand the business, find entities, add attributes and relationships, validate with stakeholders, then document. It describes what data is needed, not how to store it.
 
-- **Conceptual Data Model Preparation for Logical and Physical Models:** Preparing a conceptual data model means checking that it covers the business needs and defines its entities, attributes and relationships clearly. The checked model then becomes the basis for the logical and physical models.
-
 ## Example
 
 A small online library lists three entities: Member, Book and Loan. Member has a name. Book has a title. Loan links a member to a book through a business rule, such as "a member may borrow books". The model says nothing about tables, data types or indexes.

@@ -84,10 +84,6 @@ An architectural overview diagram is a high-level picture of a system. It shows 
 
 **Relation to arc42.** Section 3 delimits the system from all its communication partners. It also asks you to specify those partners, both users and IT systems. Section 5 includes an overview diagram of the whole system at level 1. It stresses abstraction without disclosing implementation details. The DokChess example chapter gives an architectural overview so readers can understand its important design decisions.
 
-**Common mistakes.**
-
-- **Architectural Overview Antipattern:** An overview diagram fails when readers cannot tell what it shows. Common causes are unclear scope, cryptic labels, and unexplained notation. Fix it with a title, a legend, plain names, and several simpler diagrams.
-
 ## Example
 
 A small online shop might draw a box for the system. Inside the box sit a web front end and a backend service. Outside the box sit customers, a payment provider and a shipping provider. Arrows connect customers to the front end, and the backend to the two providers. The diagram stays at this coarse level. It leaves out code and server details.

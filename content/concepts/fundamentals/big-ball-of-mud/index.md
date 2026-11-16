@@ -62,7 +62,7 @@ Such systems show clear signs of unregulated growth. They are repaired again and
 
 **Architecture erosion.** A systematic mapping study says architecture erosion harms software development. It also says erosion shows up in more than architectural violations and structural issues. The study asks practitioners to raise awareness of its grave consequences. It also calls for more empirical research on detecting and addressing erosion (see Big Ball of Mud).
 
-**Three ways to respond.** Two related patterns are covered here:
+**Related patterns.** Two related patterns are covered here:
 
 - *Sweeping It Under the Rug* controls decline by cordoning off the blighted areas of the code.
 - *Reconstruction* means tearing everything down and starting over. In advanced cases there may be no alternative.

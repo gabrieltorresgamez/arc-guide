@@ -46,7 +46,7 @@ review:
 
 ## Explanation
 
-Architecture reviews use several kinds of input. Each one asks for a different level of detail.
+Architecture reviews use several kinds of input.
 
 **Questionnaire.** A questionnaire is a list of general, fairly open questions. They apply to all architectures.
 
@@ -64,7 +64,7 @@ Turning a general question into a scenario-based one means moving from the quest
 
 A general questionnaire item might ask, "Does the system handle failures?"
 
-A scenario-style version describes one concrete sequence of steps instead. For example: "A user submits an order, and then one part of the system stops working. What happens next, step by step?" The answer now points to a specific situation that the team can discuss and check.
+A scenario-style version describes one concrete sequence of steps instead. For example: "A user submits an order, and then one part of the system stops working. What happens next, step by step?"
 
 ## Trade-offs
 

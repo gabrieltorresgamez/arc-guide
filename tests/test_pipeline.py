@@ -108,3 +108,10 @@ def test_title_prefix():
     orig = pathlib.Path.read_text
     # the check reads content/subgroups.json; use the real file: only assert the helper data exists
     assert any(x.get("title_prefix") for cat in build.c.TAXONOMY["categories"] for x in cat.get("subcategories", []))
+
+
+def test_fixaudit_finds_orphan():
+    from pipeline import fixaudit
+    old = {"a": "**Notes.** The tool is slow. That hurts users. It is fine otherwise.\n"}
+    assert fixaudit.audit(old, {"a": "**Notes.** That hurts users. It is fine otherwise.\n"})       # dependent sentence lost its antecedent
+    assert not fixaudit.audit(old, {"a": "**Notes.** The tool is slow. That hurts users. It is fine otherwise.\n"})

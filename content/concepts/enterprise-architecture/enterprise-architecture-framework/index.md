@@ -55,7 +55,7 @@ An enterprise architecture framework defines how to create and use an enterprise
 
 **Domains.** Since 1993 it has been normal to divide enterprise architecture into four domains: business, data, applications, and technology, though TOGAF notes that resource and time limits often prevent building all four in full. Many frameworks merge data and applications into one information-system layer. TOGAF is built on the four domains (see the article TOGAF).
 
-**The Zachman Framework.** Its own site describes a 6 x 6 matrix, with the questions as columns and the reification transformations (Identification, Definition, and so on) as rows. Its own site calls it a structure, not a process. A structure organizes things. A process tells you the steps. The framework does not tell you how to build the result (see the article Zachman Framework).
+**The Zachman Framework.** Its own site describes a 6 x 6 matrix, with the six questions as columns and the reification transformations (Identification, Definition, and so on) as rows. Its own site calls it a structure, not a process. A structure organizes things. A process tells you the steps. The framework does not tell you how to build the result (see the article Zachman Framework).
 
 **A toolbox.** One description calls an architecture framework a set of tools for developing many different architectures.
 

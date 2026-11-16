@@ -55,15 +55,9 @@ Several challenges appear together.
 
 **Even "clear" requirements can be wrong.** A team may feel sure how a function works and still build it incorrectly. However certain a team is, it can still be wrong, especially without detailed requirements.
 
-**Constraints limit freedom.** A constraint is a fixed condition the architect must respect (see Architectural Constraint). Constraints must always be dealt with, but some can be negotiated. They sometimes reach beyond one system and apply to a whole organization.
+**Constraints limit freedom.** A constraint is a requirement that limits the architect's freedom (see Architectural Constraint). Constraints must always be dealt with, but some can be negotiated. They sometimes reach beyond one system and apply to a whole organization.
 
-
-
-**Timing matters.** Teams want to decide at the most responsible moment (see Last Responsible Moment). Even very agile teams capture the essential decisions somehow, for example as Architectural Decision Records, or ADRs (see Architectural Decision Record).
-
-**More about the start of a project.**
-
-- **Architect Settles In Method Phase:** A new architect first learns who is involved, which forces and constraints apply, and how decisions will be managed. Early results are refined over time.
+**Timing matters.** Teams want to decide at the most responsible moment (see Last Responsible Moment).
 
 ## Example
 

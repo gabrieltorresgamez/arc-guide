@@ -77,7 +77,7 @@ Component design principles are guidelines for building a system from discrete p
 - Inversion of control (IoC) is about direction. A framework calls your code, not the reverse. It is also called the Hollywood Principle.
 - The Dependency Inversion Principle is about the shape of the abstraction you depend on.
 
-The key point behind DI and its alternative, Service Locator, is to keep the configuration of services separate from their use. With a Service Locator, every user depends on the locator.
+The key point behind DI and its alternative, Service Locator, is to keep the configuration of services separate from their use.
 
 ## Example
 

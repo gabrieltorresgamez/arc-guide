@@ -64,8 +64,6 @@ It is one of four integration styles: file transfer, shared database, remote inv
 
 **Coupling.** Martin Fowler warns that the database becomes a point of coupling between all applications that access it. The coupling is deep. It makes changing those applications riskier. See Coupling and Cohesion for background.
 
-**Microservices.** See Microservices Architecture.
-
 ## Example
 
 A company has an order application, a billing application and a reporting tool. All three keep customer data in one common database. When a clerk updates an address in the order application, billing and reporting read the same data. If the team wants to restructure the customer data, it must involve all three applications.

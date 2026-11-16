@@ -113,7 +113,7 @@ Stories are finer-grained chunks used for planning. The article User Stories vs.
 
 **More about use cases.**
 
-- **Use Case Template:** A use case template is a fixed form for writing a use case as text. Every use case gets the same fields, so readers can compare and review them. Teams can use a full or a short version.
+- **Use Case Template:** A use case template is a fixed form for writing a use case as text. Teams can use a full or a short version.
 - **Use Case Goal Level:** Use case goal level describes how high or low a use case sits in a hierarchy of goals. The user-goal level, called sea level or blue, is the most important level for writing use cases.
 - **Use Case Completeness Check:** A use case set is complete when it is not too small, not too large and not off target. Asking people for missing use cases is a start, but it needs a clearer measure.
 - **Use Case as Goal-Responsibility Contract between Actors:** A use case describes an actor who wants to reach a goal by using a system. The system under design is responsible for delivering that goal, which works like a contract between the actor and the system.
@@ -121,7 +121,7 @@ Stories are finer-grained chunks used for planning. The article User Stories vs.
 
 ## Example
 
-A bank describes a use case called "Change PIN" for its cash machine. The actor is the customer. The text describes the requests the customer makes and how the system responds. A one-paragraph brief gives the overview. A fuller template adds detail for readers who need it.
+A bank describes a use case called "Change PIN" for its cash machine. The actor is the customer. The text describes the requests the customer makes and how the system responds. A brief use case of two to four sentences gives the overview. A fuller template adds detail for readers who need it.
 
 ## Trade-offs
 

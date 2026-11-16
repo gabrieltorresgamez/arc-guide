@@ -49,7 +49,7 @@ ATAM is the Architecture Tradeoff Analysis Method. It is explained in the articl
 
 **Traceability to people**
 
-The arc42 tips for section 11 say to look for problems and risks together with different stakeholders. In the evaluation section, you can note which stakeholders raised or care about each finding.
+The arc42 tips for section 11 say to look for problems and risks together with different stakeholders.
 
 **What to decide before replacing**
 
@@ -59,8 +59,5 @@ For definitions of the finding types, see the related article on ATAM findings.
 
 ## Example
 
-A team documents an online shop. After an ATAM evaluation, section 11 is titled "Evaluation with ATAM". Subsection 11.1 lists a risk. It is grouped under a risk theme that names the business driver it threatens. A note beside it names the stakeholders who raised it. Subsection 11.3 lists a sensitivity point and 11.4 lists a trade-off point. The team keeps its list of technical debt in a separate place and says so in the section.
+A team documents an online shop. After an ATAM evaluation, section 11 is titled "Evaluation with ATAM". Subsection 11.1 lists a risk. It is grouped under a risk theme that names the business driver it threatens. The evaluation also lists a sensitivity point and a trade-off point. The team keeps its list of technical debt in a separate place and says so in the section.
 
-## Trade-offs
-
-The cost is that the standard risks and technical debt list no longer has a place in that section. You must then place the debt list elsewhere, or you risk losing it.

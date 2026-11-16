@@ -87,9 +87,9 @@ review:
 
 Application architecture artifacts describe which applications an organization runs and how they relate. They are a set of views, not one document. Each view answers a different question.
 
-**The catalog.** The application portfolio catalog lists all applications in the enterprise.
 
-The application interaction matrix shows which applications communicate with each other.
+
+
 
 
 

@@ -89,13 +89,9 @@ TOGAF is a framework for architecture work across a whole organization. Developm
 
 **Four domains.** TOGAF is based on four architecture domains: Business, Application, Data and Technology. Related articles cover Business Architecture, Application Architecture, Data Architecture and Technology Architecture.
 
-**Content framework.** TOGAF offers a menu of architecture products and a metamodel. TOGAF 9 added a formal content metamodel that links TOGAF's artifacts together.
+**Content framework.** TOGAF 9 added a formal content metamodel that links TOGAF's artifacts together.
 
 **Enterprise Continuum.** This is a classification structure for building blocks and artifacts. It has two parts: the Architecture Continuum and the Solutions Continuum.
-
-**Reference models.** TOGAF includes two: the III-RM and the TRM.
-
-
 
 **Current edition.** The 10th Edition is split into the TOGAF Fundamental Content and the TOGAF Series Guides.
 
@@ -107,8 +103,5 @@ TOGAF is a framework for architecture work across a whole organization. Developm
 
 ## Example
 
-A company wants to improve its order handling. The architects use the ADM as their working cycle. They describe the business, data, application and technology domains. They pick the artifacts they need from the content framework's menu. They file reusable pieces in the Enterprise Continuum classification. They check designs against a reference model.
+A company wants to improve its order handling. The architects use the ADM as their working cycle. They describe the business, data, application and technology domains. They pick the artifacts they need from the content framework. They file reusable pieces in the Enterprise Continuum classification.
 
-## Trade-offs
-
-The content framework gives you a menu and a metamodel, not a fixed documentation method. The Enterprise Continuum only classifies material; the repository is the data store that holds it.

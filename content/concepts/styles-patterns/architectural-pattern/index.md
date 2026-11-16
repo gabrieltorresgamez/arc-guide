@@ -63,7 +63,7 @@ An architectural pattern is a reusable solution that has worked before. It targe
 
 **How a pattern is described**
 
-Good pattern descriptions follow a fixed shape. The Pipes and Filters page from Azure shows it well.
+The Pipes and Filters page from Azure is one example of a pattern description.
 
 - **Context and problem.** The problem there is a processing module built as one big block. That block is hard to reuse, reorder or scale.
 - **Solution.** The pattern names the element types and what each does. Filters each do one task. Pipes only connect filters and contain no logic.

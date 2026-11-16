@@ -97,7 +97,7 @@ A consumer can read the number and judge the risk of an upgrade.
 
 **Reading data tolerantly**
 
-The Tolerant Reader tactic puts some of the effort on the consumer. The consumer reads service data tolerantly, so the provider can evolve without breaking it. In practice, the consumer takes only the elements it needs and ignores the rest. Then the provider can add new elements without breaking that consumer.
+With the Tolerant Reader approach, the consumer reads service data tolerantly, so the provider can evolve without breaking it. In practice, the consumer takes only the elements it needs and ignores the rest. Then the provider can add new elements without breaking that consumer.
 
 **Contract tests**
 

@@ -76,8 +76,8 @@ This keeps two questions apart. Components answer "what are the parts?" Connecto
 
 **More about connectors.**
 
-- **Connector Cardinality:** A point-to-point connector links two. A multicast connector delivers to several components through one shared channel.
-- **Connectors and Distribution:** A monolith can only be copied and run as several identical instances. Splitting a system into separate processes adds a new risk: a call to another process may be slow or fail while the rest keeps running.
+- **Connector Cardinality:** A point-to-point connector links two.
+- **Connectors and Distribution:** A monolith can be scaled by running several identical instances behind a load balancer. Splitting a system into separate processes adds a new risk: a call to another process may be slow or fail while the rest keeps running.
 
 ## Example
 

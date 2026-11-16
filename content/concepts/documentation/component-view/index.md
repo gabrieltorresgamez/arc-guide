@@ -71,14 +71,14 @@ The C4 Model also has component diagrams. They are optional. You create them onl
 
 **More about component views.**
 
-- **Component View Antipattern: Lifting Code to Model Level:** The diagram then mirrors the source code instead of abstracting it into meaningful building blocks.
+
 - **Component View Refinement Levels:** A building block view is built in levels. Each level zooms into chosen blocks of the level above. Only important, risky, complex or volatile blocks get refined. Simple or standard parts are left out.
 
 **In arc42.** arc42 describes this view in chapter 5. See the article arc42 Building Block View.
 
 ## Example
 
-A team documents an online shop. Level 1 treats the shop as one black box. Level 2 opens it as a white box with three blocks: catalog, orders and payments. The team then zooms into "orders" only, because it is the most complex part. That gives level 3. They leave "catalog" and "payments" as black boxes.
+A team documents an online shop. Level 1 is the white box of the whole shop, with three black boxes inside it: catalog, orders and payments. The team then zooms into "orders" only, because it is the most complex part, and shows its inside as level 2. "Catalog" and "payments" stay black boxes.
 
 ## Trade-offs
 

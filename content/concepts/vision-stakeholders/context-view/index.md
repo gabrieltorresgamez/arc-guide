@@ -80,11 +80,6 @@ The technical context shows the channels and technical interfaces to neighbors. 
 
 For the arc42 chapter that holds this view, see arc42 Context and Scope. For the C4 version, see C4 Level 1: System Context Diagram.
 
-**More about context views.**
-
-
-- **Refining Complex Context Views:** A complex system context stays readable when the top-level diagram remains a simple overview. Many external systems are grouped by clear criteria, and the detail of each interface, business and technical, is described separately.
-
 ## Example
 
 A team builds an online booking system. The context view shows one box for the booking system. Around it sit customers, a payment provider and an email service. Each line is labeled with the data exchanged, such as booking requests or payment confirmations. A second view shows the technical channels to each partner. 

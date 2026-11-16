@@ -63,7 +63,7 @@ An architecture has many parts and many readers. No single picture suits everyon
 
 **Several views, one model.** You can build different views on the same model. Kruchten's 4+1 approach describes an architecture through multiple views. It has four views: logical, development, process and physical. Scenarios are the "plus one". Views show the system from the standpoint of different stakeholders, for example end users, developers, system engineers and project managers.
 
-**Viewpoint versus view.** A viewpoint is a set of conventions for building one type of view. It covers patterns, templates and the stakeholders the view serves. The view is the instance made by following those conventions.
+**Viewpoint versus view.** A viewpoint is a set of conventions for building one type of view. It covers patterns, templates and the stakeholders the view serves.
 
 **Tooling.** The Structurizr DSL provides a clean separation between the model (content) and the views (presentation).
 

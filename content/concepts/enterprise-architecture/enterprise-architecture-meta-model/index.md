@@ -66,7 +66,7 @@ In the information systems layer, the metamodel separates logical from physical.
 
 For data, this gives a chain:
 
-1. A data entity is the thing the business describes.
+1.
 2.
 3.
 

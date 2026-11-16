@@ -72,14 +72,10 @@ Cohn's SPIDR stands for Spikes, Paths, Interfaces, Data and Rules.
 
 Splitting separates high-value parts from low-value ones. A minimal end-to-end solution is a good place to start.
 
-**Evaluating a split**
-
-Prefer the split that lets you drop or deprioritize a story. That removes waste.
-
 ## Example
 
-A team has the story "As a librarian, I manage books." The word "manage" signals several operations. The team splits it into add a book, find a book, edit a book and remove a book. They build "add a book" first, as a simple case with plain data. Later stories handle special kinds of data. If the team learns that removing books is rarely needed, it drops that story.
+A team has the story "As a librarian, I manage books." The word "manage" signals several operations. The team splits it into add a book, find a book, edit a book and remove a book. They build "add a book" first, as a simple case with plain data. Later stories handle special kinds of data.
 
 ## Trade-offs
 
-Each pattern gives a different split, so the team must choose. The evaluation step helps: prefer the split that lets you drop or deprioritize a story. A spike adds research effort without delivering a feature, so use it only when other patterns fail. Relaxing business rules is temporary. The rules still need support in the end.
+Each pattern gives a different split, so the team must choose. A spike adds research effort without delivering a feature, so use it only when other patterns fail. Relaxing business rules is temporary. The rules still need support in the end.

@@ -85,4 +85,4 @@ The launch date and easy-to-change code pull in different directions. The archit
 
 ## Trade-offs
 
-Favoring one concern, such as time-to-market, can cost another, such as long-term maintainability. It avoids hidden choices.
+Favoring one concern, such as time-to-market, can cost another, such as long-term maintainability. Making the trade-off explicit avoids hidden choices.

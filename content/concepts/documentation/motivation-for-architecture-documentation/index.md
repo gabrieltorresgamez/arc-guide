@@ -53,7 +53,7 @@ Teams often say the code is the only documentation they need. That claim is wron
 
 Without it, knowledge about the architecture ends up in one of three places. It sits in a few people's heads, it is scattered across the code, or it is lost.
 
-Decisions are a good example. Teams often remember what they decided but forget why. Stakeholders (people with an interest in the system) should be able to understand and retrace those decisions. Written rationale supports that conversation. Months or years later, a short decision record can still explain why the system looks the way it does. See the articles on Architectural Decision Record and Architecture Decision Rationale.
+Decisions are a good example. Teams often remember what they decided but forget why. Stakeholders (people with an interest in the system) should be able to understand and retrace those decisions. Months or years later, a short decision record can still explain why the system looks the way it does. See the articles on Architectural Decision Record and Architecture Decision Rationale.
 
 Documentation can also fail in two opposite ways:
 

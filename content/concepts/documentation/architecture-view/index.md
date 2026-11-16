@@ -68,8 +68,8 @@ See the articles "Architecture Viewpoint", "Stakeholder Concern" and "Essential 
 
 **More about views.**
 
-- **Architectural View:** An architectural view describes a system from the angle of one stakeholder group. Splitting the description into views keeps each part understandable and lets each reader find what matters to them.
-- **Architectural View Type:** An architectural view type is a category of diagram that shows one kind of structure of a system. Different view types show different structures of the same system, so each diagram should name its type.
+- **Architectural View:** An architectural view addresses one or more concerns of one or more stakeholders. Splitting the description into views keeps each part understandable and lets each reader find what matters to them.
+
 
 ## Example
 

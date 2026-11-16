@@ -83,7 +83,7 @@ The key point is one overall view of data repositories, their relationships and 
 **Typical building blocks**
 
 - *Enterprise data model.* It is the core of an enterprise data architecture.
-- *Logical and physical data models.* Notations include UML, IDEF1X and entity relationship diagrams (ERDs). Physical models are commonly ERDs. See the article *Conceptual, Logical and Physical Data Model*.
+- *Logical and physical data models.* Notations include UML, IDEF1X and entity relationship diagrams (ERDs). Physical models are commonly ERDs.
 - *Master data.* This is common business data, such as customers, vendors and products. It is consistent, nontransactional and controlled for accuracy.
 - *Database of record.* Data integration architecture names the database of record for reference and master data. It focuses on their quality.
 - *CRUD matrix.* This entity/process matrix shows which processes create, read, update or delete each business data entity. See *Data Entity/Business Function Matrix*.
@@ -96,11 +96,11 @@ A modern data architecture should support both the near-term and the long-term g
 
 **More about defining the target data architecture.**
 
-- **Define Target Data Architecture Method Phase:** This phase defines the major data types and data sources a business needs. It works at the level of data entities, not storage design. Its results feed matrices, gap analysis and arc42 documentation.
+- **Define Target Data Architecture Method Phase:** This phase defines the major data types and data sources a business needs. It works at the level of data entities, not storage design.
 
 ## Example
 
-A retailer keeps customer records in a billing system, a web shop and a support tool. Nobody knows which copy is correct. The team lists each repository and its owner. It names the billing database as the database of record for customers. A CRUD matrix shows that only the sign-up process creates customers, while support only reads them. Nightly exports feed a data warehouse, so reports no longer load the shop database.
+A retailer keeps customer records in a billing system, a web shop and a support tool. Nobody knows which copy is correct. The team lists each repository and its owner. It names the billing database as the database of record for customers. A CRUD matrix shows that only the sign-up process creates customers, while support only reads them.
 
 ## Trade-offs
 

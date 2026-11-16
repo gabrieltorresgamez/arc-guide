@@ -121,7 +121,7 @@ A user story is a brief statement of something a stakeholder needs. It is not a 
 
 - **Card, Conversation, Confirmation:** A user story has three parts: a short card that names it, conversations that work out the details, and confirmation tests that show when the story is done as agreed.
 - **User Story Role Formulation:** A user story names a specific user role, what that role wants, and why. The "so that" part states the benefit and helps the team judge how much the story matters.
-- **INVEST Criteria:** INVEST is a six-point checklist for judging a user story: Independent, Negotiable, Valuable, Estimable, Small, Testable. Teams use it to check a story before planning, and to check the story they are about to split.
+- **INVEST Criteria:** INVEST is a six-point checklist for judging a user story: Independent, Negotiable, Valuable, Estimable, Small, Testable.
 - **Epic:** An epic is a large user story that is too big to finish in one iteration. It holds a place for a wanted feature until the team splits it into smaller stories.
 
 ## Example
