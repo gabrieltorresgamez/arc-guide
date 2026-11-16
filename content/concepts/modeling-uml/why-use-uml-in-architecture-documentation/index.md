@@ -68,7 +68,7 @@ The arc42 authors favor UML for three reasons:
 - Its symbols have clear meaning.
 - It is largely standardized.
 
-Clear meaning matters because readers interpret the diagram the same way. Plain boxes and lines often get read differently by different people. Whatever notation you pick, all stakeholders need a shared understanding of it. Stakeholders are the people with an interest in the system. For the notation itself, see the article "Unified Modeling Language (UML)".
+Clear meaning matters because readers interpret the diagram the same way. Plain boxes and lines often get read differently by different people. Whatever notation you pick, all stakeholders need a shared understanding of it. For the notation itself, see the article "Unified Modeling Language (UML)".
 
 **A concrete case: runtime scenarios.** arc42 recommends UML sequence diagrams for runtime scenarios. They show what each participating building block is responsible for. That helps teams discuss the building blocks themselves.
 

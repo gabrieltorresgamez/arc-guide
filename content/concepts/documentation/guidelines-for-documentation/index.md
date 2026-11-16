@@ -74,7 +74,7 @@ Documentation exists to serve its readers. These rules of thumb help you decide 
 
 **Write only what will be read.** If nobody will read something, do not write it. arc42 (see "arc42 Architecture Documentation Template") says the same: write down only facts and reasons that you or your stakeholders find important enough to justify it. Do not fill in every section just because it exists.
 
-**Ask your readers.** Set the level of detail by what readers need, not by what the writer knows. arc42 advises asking stakeholders one by one what they need. Ambler's agile documentation principle agrees: focus on the actual consumers of the document. Ideally, a document is just barely sufficient for its situation.
+**Ask your readers.** Set the level of detail by what readers need, not by what the writer knows. arc42 advises asking stakeholders one by one what they need. Ideally, a document is just barely sufficient for its situation.
 
 **Keep it short.** arc42 says less is often more. Shorter documentation is read and digested faster, and it needs fewer changes later. Prioritize important, special or risky topics over completeness. Shortness has a limit, though: the text should not become cryptic. Decide deliberately how much to document.
 

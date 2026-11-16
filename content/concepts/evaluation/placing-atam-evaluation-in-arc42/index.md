@@ -39,12 +39,12 @@ review:
 
 In the standard arc42 template, section 11 is called "Risks and technical debt". It holds a list of technical risks and debts, ordered by priority, with measures to reduce them.
 
-This variant swaps that section for an evaluation section based on ATAM. ATAM is the Architecture Tradeoff Analysis Method. It is explained in the article "Architecture Tradeoff Analysis Method (ATAM)".
+ATAM is the Architecture Tradeoff Analysis Method. It is explained in the article "Architecture Tradeoff Analysis Method (ATAM)".
 
 **Why the swap makes sense**
 
 - ATAM exposes architectural risks that could stop an organization from reaching its business goals. A section that records risks is a natural home for its results.
-- In one ATAM step, the team identifies risks, sensitivity points and trade-off points together. So the evaluation section can have one subsection for each: 11.1 for risks, 11.3 for sensitivity points and 11.4 for trade-off points.
+- In one ATAM step, the team identifies risks, sensitivity points and trade-off points together.
 - ATAM also groups individual risks into risk themes. Each theme shows how risks threaten one business driver. Recording the theme next to a finding shows which business driver the related risks threaten.
 
 **Traceability to people**
@@ -63,4 +63,4 @@ A team documents an online shop. After an ATAM evaluation, section 11 is titled 
 
 ## Trade-offs
 
-Replacing section 11 gives ATAM findings a clear home and keeps them together. The cost is that the standard risks and technical debt list no longer has a place in that section. You must then place the debt list elsewhere, or you risk losing it.
+The cost is that the standard risks and technical debt list no longer has a place in that section. You must then place the debt list elsewhere, or you risk losing it.

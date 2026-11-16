@@ -49,18 +49,18 @@ review:
 
 ## Explanation
 
-The standard rests on a conceptual model. A conceptual model is a small map of ideas and how they connect. This one keeps two things apart: the architecture of a system, and the architecture description that records it. The description is a document. The architecture is what the document talks about.
+The standard rests on a conceptual model. This one keeps two things apart: the architecture of a system, and the architecture description that records it.
 
 **The main links**
 
 - An architecture description is formed from one or more architecture views. See *Architecture View*.
-- A viewpoint frames one or more stakeholder concerns. A stakeholder is a person or group with an interest in the system. A concern is something they care about. See *Stakeholder*, *Concern* and *Architecture Viewpoint*.
+- A viewpoint frames one or more stakeholder concerns. See *Stakeholder*, *Concern* and *Architecture Viewpoint*.
 
 So the chain runs from concerns, to a viewpoint that frames them, to a view, to the description that collects the views.
 
 **What a viewpoint is**
 
-A viewpoint is a set of conventions. It is not a direction from which you look at the system, like a camera angle. It states how to build and read a kind of view.
+A viewpoint is a set of conventions. It states how to build and read a kind of view.
 
 **Another book's key concepts**
 
@@ -68,7 +68,7 @@ Rozanski and Woods build their book on three key concepts: stakeholders, viewpoi
 
 **Why it helps**
 
-The model gives teams shared words. Two people who say "view" or "viewpoint" can mean the same thing.
+
 
 **Edition note**
 

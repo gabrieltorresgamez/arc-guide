@@ -89,3 +89,8 @@ Source idea: mirror the chapters of a software architecture course. Assessment: 
 
 ## Decision
 - Claim-check policy: run the gate (`uv run python -m pipeline.claimcheck`, no slugs) on changed pages only. No full-site pass. Pages never touched since the 2026-11 rework keep their original generated text and the earlier claim check of that pipeline.
+
+## Full claim-check pass (2026-11-16)
+- All 275 pages were checked with `pipeline.claimcheck`. Rounds on the changed pages: 96 findings (158 never-checked pages), about 50, 21, 14, 12, 12. About 215 sentences were removed or reworded.
+- The checker has a noise floor of about 10 findings per run. What is left are invented Example scenarios and findings the checker itself calls "not a problem". Treat the gate as done when only those remain.
+- Weak spots (sources the checker cannot read, such as PDFs): `architecture-description-element`, `iso-iec-ieee-42010-architecture-description-model`, `service-oriented-architecture`. Find readable sources for them before adding more text there.

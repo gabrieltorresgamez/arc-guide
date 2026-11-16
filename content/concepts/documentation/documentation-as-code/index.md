@@ -66,11 +66,11 @@ Documentation as code (also called docs as code) is a philosophy. You write docu
 
 **Same workflow as development.** Others can fork the docs and send pull requests with their changes. A pull request is a proposed change that teammates review before it is accepted. Because docs follow the developer workflow, a team can block a feature from merging when it lacks documentation.
 
-**From text to document in three steps.** You write the source. A converter such as Asciidoctor parses AsciiDoc into a document model. It then converts that model into formats such as HTML5, DocBook 5, PDF and EPUB 3. The asciidoctor-pdf plugin produces the PDF output.
+**From text to document in three steps.** You write the source. A converter such as Asciidoctor parses AsciiDoc into a document model. It then converts that model into formats such as HTML5, DocBook 5, PDF and EPUB 3.
 
-**Diagrams from text.** docToolchain uses the asciidoctor-diagram plugin to create PlantUML diagrams from text. See the article Diagrams as Code.
+**Diagrams from text.** See the article Diagrams as Code.
 
-**Toolchains.** docToolchain is a docs-as-code toolchain. It publishes AsciiDoc to HTML, PDF, microsites and Confluence. It uses jBake as its static site generator. It also supports teams who want docs as code but still use a wiki.
+**Toolchains.** docToolchain is a docs-as-code toolchain. It publishes AsciiDoc to HTML, PDF, microsites and Confluence. It also supports teams who want docs as code but still use a wiki.
 
 **Fit with arc42.** arc42 works well with this approach. Its AsciiDoc or Markdown templates live in Git. Pull requests review them. docToolchain or any static-site generator builds them. See the article arc42 Architecture Documentation Template.
 

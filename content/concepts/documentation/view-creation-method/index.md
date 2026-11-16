@@ -45,7 +45,7 @@ review:
 
 ## Explanation
 
-A view is a diagram or description of a system made for a specific reader. When you create one, three details should travel with it:
+When you create one, three details should travel with it:
 
 - the **notation**, meaning the drawing language you used;
 - the **target audience**, meaning who the view is for;

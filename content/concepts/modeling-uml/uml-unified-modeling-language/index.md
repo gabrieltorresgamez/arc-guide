@@ -52,9 +52,9 @@ review:
 
 UML stands for Unified Modeling Language. It began when Grady Booch and James Rumbaugh merged their separate models into one unified model. The Object Management Group (OMG) then took ownership of it.
 
-**Versions.** UML 2.0 was a major revision in 2005. It replaced version 1.5. Version 2.5 was formally released in 2015. Version 2.5.1 was adopted in December 2017.
+**Versions.** It replaced version 1.5. Version 2.5 was formally released in 2015. Version 2.5.1 was adopted in December 2017.
 
-**The 2.5 rewrite.** The UML 2.5 specification was rewritten to be easier to read. The authors removed redundancy and made the text clearer. The metamodel stayed largely unchanged. (The metamodel is the model that defines UML's own elements.)
+**The 2.5 rewrite.** The UML 2.5 specification was rewritten to be easier to read. The metamodel stayed largely unchanged. (The metamodel is the model that defines UML's own elements.)
 
 **Diagram kinds.** UML 2 defines 14 kinds of diagrams. They fall into two groups:
 
@@ -63,9 +63,9 @@ UML stands for Unified Modeling Language. It began when Grady Booch and James Ru
 
 The article UML 2.5 Diagram Taxonomy shows how the 14 kinds are arranged.
 
-**Not a method.** UML is a language, not a method. It is designed for use with many object-oriented development methods. See Modeling Method.
+**Not a method.** It is designed for use with many object-oriented development methods. See Modeling Method.
 
-**Executable subset.** fUML is a subset of UML. It has precisely defined execution semantics. Semantics means the exact meaning of the elements.
+**Executable subset.** fUML is a subset of UML. It has precisely defined execution semantics.
 
 ## Example
 

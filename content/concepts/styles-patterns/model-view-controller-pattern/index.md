@@ -59,11 +59,11 @@ Model-View-Controller (MVC) is a way to organize an application that has a user 
 
 Controllers and views have independent input and output responsibilities. This is one way of separating concerns. See Separation of Concerns.
 
-**How the parts stay in sync.** Views and controllers observe the model. When the model changes, the views update. This approach is called Observer Synchronization. The model is ignorant of the UI, and a controller does not need to know which other widgets must change. This helps when several screens show the same model objects.
+**How the parts stay in sync.** Views and controllers observe the model. When the model changes, the views update. This approach is called Observer Synchronization.
 
 **Variants.**
-- Model-View-Presenter (MVP) first appeared at IBM, and more visibly at Taligent, in the 1990s. MVP variants differ in how they update the view, from using Observer Synchronization to having the presenter do all the updates.
-- Presentation Model is a model designed for the presentation layer. It is also known as Model-View-ViewModel.
+
+
 - Web MVC frameworks later let MVC components run partly on the client. They synchronize data via Ajax.
 
 ## Example
@@ -72,4 +72,4 @@ A shop application shows an order on two screens. One lists the order lines. The
 
 ## Trade-offs
 
-MVC is a set of principles, so teams must decide how to apply them. Several variants exist, such as MVP and Presentation Model, and choosing among them is a design decision. Views that observe a model also add a notification mechanism that the team has to understand.
+MVC is a set of principles, so teams must decide how to apply them.

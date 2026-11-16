@@ -47,7 +47,7 @@ review:
 
 ## Explanation
 
-Integration is the task of making separate applications work together. The goal is a unified set of functionality that no single application delivers alone.
+Integration is the task of making separate applications work together.
 
 **Four common styles**
 
@@ -82,4 +82,4 @@ Each style and each choice has a price.
 
 - Tight coupling makes applications depend on assumptions about each other. Reducing those assumptions is the aim of good integration.
 - An anti-corruption layer protects design, but it adds latency to calls between the two systems. It is also an extra service to operate.
-- Synchronous request-response and asynchronous event-driven communication suit different needs.
+

@@ -39,7 +39,7 @@ review:
 
 ## Explanation
 
-A RACI matrix is a table. Rows are tasks or decisions. Columns are people or roles. Each cell holds one of four letters, or stays empty.
+A RACI matrix is a table. Rows are tasks or decisions. Columns are people or roles.
 
 **The four letters**
 
@@ -71,4 +71,4 @@ A team must choose a messaging product. The matrix has one row: "Select messagin
 
 ## Trade-offs
 
-The one-Accountable rule comes from some project management theories, not from all of them. A matrix shows who takes part. It does not show how the decision is reached.
+The one-Accountable rule comes from some project management theories, not from all of them.

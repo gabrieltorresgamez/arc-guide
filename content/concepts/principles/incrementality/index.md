@@ -59,9 +59,9 @@ Instead of one complete plan, the team builds in small steps and learns from eac
 **What this approach asks for**
 
 - Let the design grow as the system is built. Fowler calls this evolutionary design.
-- Favor an early first release. In discussing story ordering, Fowler says complexity the first release does not need is worth doing afterwards, and that releasing sooner is better even if adding something later takes more effort.
+
 - Do not build capability before it is needed. Early work on the wrong solution wastes effort.
-- Use prototypes to explore the problem. A prototype helps you learn, but it is not a good design and should not be mistaken for one.
+
 
 **Not purely emergent**
 
@@ -73,4 +73,4 @@ A team builds an online booking system. It ships a first version with only the b
 
 ## Trade-offs
 
-Small steps bring early feedback. Done in an uncontrolled way, incremental design is likely to end up as a mess. Teams need some mechanism that keeps the design converging to counter these risks.
+Done in an uncontrolled way, incremental design is likely to end up as a mess. Teams need some mechanism that keeps the design converging to counter these risks.

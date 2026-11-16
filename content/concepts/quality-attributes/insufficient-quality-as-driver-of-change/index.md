@@ -63,4 +63,4 @@ They add a change scenario too: "A developer adds a new payment method, and the 
 
 ## Trade-offs
 
-The source describes the payoff of investing in quality goals as long term. Teams that look only at near-term features may not see that benefit early on.
+

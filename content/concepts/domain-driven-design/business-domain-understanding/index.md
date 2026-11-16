@@ -49,7 +49,7 @@ review:
 
 ## Explanation
 
-Business domain understanding is a shared picture of the business area a system serves. The picture rests on common terms that everyone uses in the same way.
+The picture rests on common terms that everyone uses in the same way.
 
 **Terms drift apart in large organizations.** Different groups use slightly different vocabularies. The same word can mean different things in different parts of the organization. Words like "Customer" and "Product" are typical examples. They have several meanings and cause confusion again and again.
 

@@ -50,7 +50,7 @@ An architectural decision means selecting one alternative from several, based on
 
 **List all consequences.** A record should not only list the benefits. Every consequence belongs in it, including the unwelcome ones.
 
-**Make it retraceable.** Stakeholders (people with an interest in the system) should be able to understand and retrace the decisions.
+**Make it retraceable.** Stakeholders should be able to understand and retrace the decisions.
 
 For the record format, see the articles Architectural Decision Record and Architecture Decision Rationale.
 

@@ -68,7 +68,7 @@ Remote Procedure Call (RPC) is an integration style. Each application makes some
 
 **A remote call is not a local call.** Many RPC tools make a remote call look like a local one. That is deceptive. The two work quite differently, and the difference affects how well the integration works. Remote calls are usually much slower than local calls. They are also less reliable, and network problems can make them fail.
 
-**Granularity matters.** If you simply turn in-process method calls into remote calls, you get chatty communication: many small calls. This performs poorly. Remote interfaces therefore need to be coarser-grained, so each call does more work.
+**Granularity matters.** Remote interfaces therefore need to be coarser-grained, so each call does more work.
 
 **Change is harder across a boundary.** Refactoring (see the article Refactoring) is much harder when components are remote services than when they are in-process libraries. This makes it harder to evolve interfaces over time.
 

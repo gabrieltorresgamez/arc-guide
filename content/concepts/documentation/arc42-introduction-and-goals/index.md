@@ -50,7 +50,7 @@ Section 1 of arc42 (see the article arc42 Architecture Documentation Template) i
 
 **Quality goals need scenarios**
 
-A keyword such as "performance" or "security" says little. Add a brief scenario that shows what the goal means in practice. Generic keywords alone are a common pitfall.
+A keyword such as "performance" or "security" says little. Add a brief scenario that shows what the goal means in practice.
 
 **Details live elsewhere**
 

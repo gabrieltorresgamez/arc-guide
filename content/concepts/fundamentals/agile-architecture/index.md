@@ -60,9 +60,9 @@ review:
 
 Agile teams build in small steps. Architecture work has to fit that pace. Two extremes are best avoided: designing everything up front, and not designing at all.
 
-**Why no design fails.** Evolutionary design means letting the design emerge as code grows. Fowler argues it fails without design effort. The design turns into a pile of ad-hoc, short-term decisions. He names a lack of will to design as a major cause of failure. He also links decaying design to a shrinking ability to change software effectively. Fairbanks says skipping design is impractical when the risk of failure is high.
+**Why no design fails.** Evolutionary design means letting the design emerge as code grows. Fowler argues it fails without design effort. The design turns into a pile of ad-hoc, short-term decisions. He also links decaying design to a shrinking ability to change software effectively. Fairbanks says skipping design is impractical when the risk of failure is high.
 
-**Why full upfront design is not the answer.** Fowler sees a role for a broad starting-point architecture. SAFe cites Coplien: design will partly emerge, yet a little planning avoids much waste.
+**Why full upfront design is not the answer.** SAFe cites Coplien: design will partly emerge, yet a little planning avoids much waste.
 
 **Just enough, driven by risk.** Fairbanks' risk-driven model ties architecture effort to the risk of failure. You do three things:
 
@@ -82,4 +82,4 @@ A team starts a new online shop. In a short session they list their biggest risk
 
 ## Trade-offs
 
-Avoiding over-design saves time, but just enough architecture needs discipline. If the team lacks the will to design, the design can degrade into ad-hoc decisions. If the team misjudges the risks, it may skip design that mattered.
+Avoiding over-design saves time, but just enough architecture needs discipline. If the team misjudges the risks, it may skip design that mattered.

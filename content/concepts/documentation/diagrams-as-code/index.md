@@ -70,7 +70,7 @@ Structurizr DSL follows this approach. It is a text language that creates diagra
 
 Layout can be automatic. You add the `autoLayout` statement inside a view.
 
-**Renderers differ.** Image views in Structurizr DSL can take PlantUML, Mermaid, or Kroki sources and render them through those services, with png or svg output. Some styles are made for the Structurizr tools. PlantUML or Mermaid exports may not support them fully. See Kroki.
+
 
 **Keeping diagrams current.** One published example generates its views from a single Structurizr model as C4-PlantUML diagrams. The Asciidoctor task depends on the task that writes the diagrams, so the diagrams are written before the documentation is generated.
 
@@ -82,4 +82,4 @@ A team keeps one text file that describes its system: a web shop, a payment serv
 
 One benefit stands out. A single model makes renaming easy and lets tools validate the diagrams.
 
-There is also a cost. Renderers do not support every style equally, so the same model can look different in the Structurizr tools, PlantUML, or Mermaid.
+There is also a cost.

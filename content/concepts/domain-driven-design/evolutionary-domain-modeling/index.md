@@ -57,9 +57,9 @@ A domain model describes the business area a software system serves. Teams often
 
 **How the model grows.** The team's understanding of the domain deepens, and the model and its shared language should change with it. See the article Ubiquitous Language. In one shipping example, months of work with domain experts and many iterations produced a quite different model from the starting one.
 
-**Breakthroughs.** Repeated refactoring toward deeper insight can lead to a breakthrough. Chapter 8 of Evans's book tells such a project story. Refactoring means changing the structure of code step by step. See the article Refactoring.
+**Breakthroughs.** Refactoring means changing the structure of code step by step. See the article Refactoring.
 
-**Model and code stay tied together.** Because model and design are closely related, the modeling process comes to a halt when the code is hard to refactor. The team's language is based on the model used in the software. A project case shows this: as the team added domain logic, the code used more of the shared language.
+**Model and code stay tied together.** The team's language is based on the model used in the software.
 
 ## Example
 
@@ -67,4 +67,4 @@ A team builds a simple model of a clinic: a patient has appointments. They put i
 
 ## Trade-offs
 
-One risk is that modeling comes to a halt when the code is hard to refactor.
+

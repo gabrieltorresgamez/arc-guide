@@ -49,7 +49,7 @@ review:
 
 ## Explanation
 
-A responsibility is an obligation to perform a task or to know some information. Allocating responsibilities means deciding which part of the system carries each one.
+A responsibility is an obligation to perform a task or to know some information.
 
 Some responsibilities are public: a part offers them as services to others. Others are private: they only support the public ones.
 

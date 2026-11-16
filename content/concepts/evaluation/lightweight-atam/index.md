@@ -40,9 +40,9 @@ review:
 
 ## Explanation
 
-A full ATAM review (see Architecture Tradeoff Analysis Method (ATAM)) uses moderated workshops. It takes anywhere from two days to several weeks. One source describes the typical SEI-specified evaluation as two to three days of facilitated workshops.
+A full ATAM review (see Architecture Tradeoff Analysis Method (ATAM)) uses moderated workshops. It takes anywhere from two days to several weeks.
 
-Lightweight variants, sometimes called mini-ATAM or ATAM-lite, squeeze the method into one day, or even half a day. They are common in agile settings, where a formal two-day workshop is impractical.
+
 
 **How the effort shrinks**
 
@@ -52,7 +52,7 @@ Lightweight methods save effort in several ways, including:
 - The analysis steps are simpler.
 - Results arrive faster.
 
-The main cost drivers of ATAM are the number of stakeholders and the number of scenarios. A scenario is a concrete, measurable description of how the system should respond to a specific stimulus. Trimming either one cuts the cost.
+The main cost drivers of ATAM are the number of stakeholders and the number of scenarios. Trimming either one cuts the cost.
 
 **What you still get**
 

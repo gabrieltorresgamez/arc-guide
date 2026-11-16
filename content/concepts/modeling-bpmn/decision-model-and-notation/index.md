@@ -62,7 +62,7 @@ DMN is designed to work alongside BPMN, the standard notation for business proce
 
 **Expressions**
 
-DMN also has an expression language, called FEEL. A business knowledge model (BKM) can hold a literal expression. That expression can take parameters, which serve as inputs to the FEEL expression.
+A business knowledge model (BKM) can hold a literal expression. That expression can take parameters, which serve as inputs to the FEEL expression.
 
 ## Example
 

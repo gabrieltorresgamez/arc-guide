@@ -49,7 +49,7 @@ review:
 
 The phase matches TOGAF's Phase C Data Architecture (see the articles on TOGAF and the TOGAF Architecture Development Method). Its goal is to define the major data types and sources the business needs.
 
-The focus is on data entities, meaning the kinds of things the enterprise keeps data about. The phase does not design logical or physical storage systems.
+The phase does not design logical or physical storage systems.
 
 **Matrices**
 

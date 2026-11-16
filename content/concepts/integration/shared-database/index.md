@@ -64,7 +64,7 @@ It is one of four integration styles: file transfer, shared database, remote inv
 
 **Coupling.** Martin Fowler warns that the database becomes a point of coupling between all applications that access it. The coupling is deep. It makes changing those applications riskier. See Coupling and Cohesion for background.
 
-**Microservices.** Microservices take the opposite view. Each service manages its own database. Enterprises, by contrast, often prefer a single database across applications. See Microservices Architecture.
+**Microservices.** See Microservices Architecture.
 
 ## Example
 

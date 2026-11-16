@@ -70,6 +70,6 @@ An online shop wants to show sales per product. Every order goes down both paths
 
 **Latency versus accuracy.** The cold path is accurate but slow. The hot path is timely but less accurate. Clients choose between timely, less accurate results and accurate, delayed results.
 
-**Complexity.** The same processing logic appears in two places, built with different frameworks. This duplicates computation logic and makes managing both paths complex. A well-known criticism is this dual-code problem: you write and maintain the transformation logic twice. Lambda also needs reprocessing and live processing to run continuously.
+**Complexity.** The same processing logic appears in two places, built with different frameworks. This duplicates computation logic and makes managing both paths complex. A well-known criticism is this dual-code problem: you write and maintain the transformation logic twice.
 
 **Alternative.** Kappa architecture removes the second path. It replays one stream to recompute results.

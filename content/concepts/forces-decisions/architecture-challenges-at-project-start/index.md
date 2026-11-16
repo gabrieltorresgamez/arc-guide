@@ -53,7 +53,7 @@ Several challenges appear together.
 
 **Constraints limit freedom.** A constraint is a fixed condition the architect must respect (see Architectural Constraint). Constraints must always be dealt with, but some can be negotiated. They sometimes reach beyond one system and apply to a whole organization.
 
-**Early decisions may be wrong.** Teams know they may err in early architectural decisions. These decisions are not set in stone, and teams need the courage to fix them.
+
 
 **Timing matters.** Teams want to decide at the most responsible moment (see Last Responsible Moment). Even very agile teams capture the essential decisions somehow, for example as Architectural Decision Records, or ADRs (see Architectural Decision Record).
 
@@ -63,4 +63,4 @@ A team starts building an online booking tool. The business says bookings must b
 
 ## Trade-offs
 
-Recording decisions costs effort. The advice is to pick one ADR template and stick to it. Do not document everything, only the essential decisions. Staying open to revision also requires the courage to fix early decisions.
+Recording decisions costs effort. The advice is to pick one ADR template and stick to it. Do not document everything, only the essential decisions.

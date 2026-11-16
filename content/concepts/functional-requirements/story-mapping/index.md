@@ -73,7 +73,7 @@ Teams build maps with sticky notes and paper on a wall. Remote teams use a virtu
 
 **What a map is not**
 
-A story map is not a precise tool like a flow chart. It relies on storytelling to convey the varied ways users use a product. One practitioner describes the macro process across users in kite-level use cases as being like the backbone of a story map. He also says story maps lack a discipline for finding holes. See *Use Case Goal Level*.
+A story map is not a precise tool like a flow chart. It relies on storytelling to convey the varied ways users use a product. He also says story maps lack a discipline for finding holes. See *Use Case Goal Level*.
 
 ## Example
 

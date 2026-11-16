@@ -54,13 +54,13 @@ Architectural thinking is how architects move from what a system must do to a de
 
 **Resolving conflicts.** Goals often pull in different directions. Architects cannot settle this alone. They involve the relevant stakeholders, meaning the people with an interest in the system. ADD also brings quality trade-offs to light early in design.
 
-**Applying known solutions.** Patterns are one way to reach certain qualities for a problem in a given context. The context matters, because a pattern that fits one situation may not fit another. See Architectural Pattern.
+**Applying known solutions.** Patterns are one way to reach certain qualities for a problem in a given context. See Architectural Pattern.
 
 **Documenting.** Architects record their architectural decisions. The result of ADD is an architecture broken into parts and described with architectural views.
 
-**Evaluating.** Architects check the design mainly for risks to meeting the requirements. They also name the trade-offs they made and the risks those trade-offs carry.
+**Evaluating.** Architects check the design mainly for risks to meeting the requirements.
 
-**Iterating.** ADD is recursive. It repeats its steps for successive parts of the system, so each round goes deeper. Iterations are needed, especially when decisions must be made under uncertainty.
+**Iterating.** ADD is recursive. It repeats its steps for successive parts of the system, so each round goes deeper.
 
 ## Example
 
@@ -68,4 +68,4 @@ A team designs an online booking system. Fast response and strict data privacy a
 
 ## Trade-offs
 
-Iterating is needed when decisions rest on uncertain information. Early trade-off analysis surfaces conflicts sooner. Resolving them requires involving stakeholders.
+Early trade-off analysis surfaces conflicts sooner.

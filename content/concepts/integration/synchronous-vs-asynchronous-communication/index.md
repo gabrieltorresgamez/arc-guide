@@ -54,11 +54,11 @@ A **synchronous** call means the caller sends a request and waits for the reply.
 
 **Synchronous calls and failure**
 
-Any remote call can fail, because the service on the other end may be unavailable. Callers must handle that failure gracefully.
 
-Chained calls make this worse. When services make several synchronous calls to each other, the downtime of the system becomes the product of the downtimes of the individual components. There are two ways out: make the calls asynchronous, or manage the downtime. Circuit Breaker, Bulkhead and Timeout are patterns that, used together, matter for applications that communicate with each other.
 
-Cross-service transactions add another problem. They impose significant temporal coupling, which is problematic across several services.
+
+
+
 
 **Asynchronous communication**
 
@@ -72,6 +72,6 @@ An online shop checks stock, takes payment and books shipping. In a synchronous 
 
 ## Trade-offs
 
-Synchronous calls expose the caller to the supplier's downtime, and chains of them multiply that downtime.
 
-Going asynchronous is one way out of the multiplied downtime. In return, the design needs extra machinery. Replies must be matched to requests, for example with a Correlation Identifier and separate reply channels.
+
+In return, the design needs extra machinery. Replies must be matched to requests, for example with a Correlation Identifier and separate reply channels.

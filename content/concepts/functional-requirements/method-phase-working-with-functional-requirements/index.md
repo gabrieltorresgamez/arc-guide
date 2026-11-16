@@ -51,11 +51,11 @@ review:
 
 Architects handle functional requirements in a few connected activities.
 
-**Know what you are looking at.** Architects learn to tell functional requirements apart from quality requirements and constraints. A constraint is a requirement that limits the solution space beyond what the functional and quality requirements need. See *Architectural Constraint* and *arc42 Quality Requirements*.
+**Know what you are looking at.** Architects learn to tell functional requirements apart from quality requirements and constraints. See *Architectural Constraint* and *arc42 Quality Requirements*.
 
-**Make them precise enough, not perfect.** A functional requirement is precise enough once the development team has no more questions about its meaning.
 
-**Split coarse requirements.** Large requirements are broken into smaller parts. Each part should still offer business value. Such a hierarchy can be drawn as a story map (see *Story Mapping*).
+
+**Split coarse requirements.** Large requirements are broken into smaller parts. Each part should still offer business value.
 
 When you split a workflow, avoid cutting it one step at a time from beginning to end. Build the simple end-to-end case first. Then add the middle steps. See *Story Splitting*.
 
@@ -63,7 +63,7 @@ When you split a workflow, avoid cutting it one step at a time from beginning to
 
 **Go deep only where it matters.** Requirements are gathered iteratively and incrementally. Architects need detail only for the subset that drives architectural decisions. These are the *Architecturally Significant Requirements*. The rest can be gathered later, iteratively and incrementally, just in time for decisions.
 
-**Use tools.** The curriculum lists several kinds of requirements tools, including cards, wikis, modeling tools and issue trackers.
+
 
 **Document it.** The first arc42 section asks for a short description of the functional requirements. If requirements documents already exist, that overview should refer to them. See *arc42 Introduction and Goals*.
 

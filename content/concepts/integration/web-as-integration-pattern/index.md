@@ -48,7 +48,7 @@ review:
 
 ## Explanation
 
-**Resources and URIs.** The Web is built on the REST style. In REST, the resource is the central abstraction of information. Most resources are identified by a URI.
+**Resources and URIs.** The Web is built on the REST style. In REST, the resource is the central abstraction of information.
 
 **Safe reads.** HTTP defines GET as a safe operation. It does not significantly change server state. Because of this, any participant in the routing of requests can use caching.
 

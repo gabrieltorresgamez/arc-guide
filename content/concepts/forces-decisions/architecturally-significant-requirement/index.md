@@ -53,7 +53,7 @@ review:
 
 ## Explanation
 
-Not every requirement affects the architecture equally. Some can change late at little cost. Others lock in basic choices. These are architecturally significant requirements, or ASRs.
+Not every requirement affects the architecture equally. Others lock in basic choices. These are architecturally significant requirements, or ASRs.
 
 The same functionality can be built with different architectures. Each one has different quality strengths. So architects weigh trade-offs and pick the least-worst option. The requirements that force these trade-offs matter most.
 

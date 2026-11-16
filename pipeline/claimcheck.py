@@ -85,7 +85,7 @@ def main(slugs):
         print(f"{slug}: {len(probs)} problems" + (f", {len(skipped)} sources unreadable or over budget" if skipped else ""))
         rep += [f"### `{slug}`"] + [f"- **{p['kind']}**: “{p['quote']}” — {p['note']}" for p in probs]
         rep += [f"- _not checked (unreadable or over budget):_ {u}" for u in skipped] + [""]
-    c.write_report("claimcheck", rep)
+    c.write_report(os.environ.get("CLAIMCHECK_STAGE", "claimcheck"), rep)  # CLAIMCHECK_STAGE lets parallel runs write separate reports
     if blocking:
         sys.exit(f"{blocking} unsupported or contradicted findings, see build/reports/claimcheck.md")
 

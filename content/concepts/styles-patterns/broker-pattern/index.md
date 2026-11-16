@@ -51,7 +51,7 @@ review:
 
 ## Explanation
 
-A distributed system runs its parts on different machines or in different processes. In the broker pattern, these parts are decoupled. They do not talk to each other directly. They interact through remote calls, and a central component called the broker coordinates the communication.
+In the broker pattern, these parts are decoupled. They do not talk to each other directly. They interact through remote calls, and a central component called the broker coordinates the communication.
 
 The broker has a clear job. It forwards requests from one part to another. It transmits the results back. It also passes on exceptions (error reports) when a call fails.
 

@@ -64,7 +64,7 @@ Each stakeholder group has its own requirements, interests, and needs. The syste
 **How concerns connect to other things**
 
 - A view shows how the architecture deals with the concerns of one or more stakeholders.
-- A viewpoint defines which stakeholders' concerns it reflects. In ISO 42010, a viewpoint is a specification for building a single view. It names the stakeholders, the concerns, and the modeling techniques. In this way, concerns frame viewpoints. See Architecture Viewpoint and Architecture View.
+- A viewpoint defines which stakeholders' concerns it reflects. In ISO 42010, a viewpoint is a specification for building a single view. It names the stakeholders, the concerns, and the modeling techniques. See Architecture Viewpoint and Architecture View.
 - The quality goals of the most important stakeholders influence fundamental architectural decisions. arc42 recommends a table with roles, names, contacts, and what each stakeholder expects from the architecture and its documentation.
 - Business objectives are often more global and higher-level than detailed system requirements.
 

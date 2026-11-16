@@ -44,18 +44,18 @@ review:
 
 ## Explanation
 
-The Enterprise Integration Patterns book describes its patterns as vendor-independent. They apply to most messaging solutions. Its authors also chose pattern names that stay neutral about technology and product, yet still describe the idea and be easy to use conversationally.
 
-The four integration styles show what "pattern level" means:
+
+
 
 - **File Transfer:** each application produces files of shared data for others to read, and reads files that others produced.
 - **Shared Database:** applications store the data they share in one common database.
 - **Remote Procedure Invocation:** each application exposes some of its procedures so others can call them remotely.
 - **Messaging:** applications connect to a common messaging system. They exchange data and trigger behavior through messages.
 
-None of these four names a product. Each is a choice about how applications relate, made without naming a tool. The articles Integration Styles and Messaging cover them in more detail.
+The articles Integration Styles and Messaging cover them in more detail.
 
-Technology choice brings its own concerns. Many messaging implementations rely on proprietary protocols. Proprietary protocols are tied to vendor lock-in, and many proprietary messaging systems are not available on all platforms. The source also lists integration technology as one criterion when choosing among styles, noting that specialized tools can be expensive and can lead to vendor lock-in.
+Technology choice brings its own concerns. The source also lists integration technology as one criterion when choosing among styles, noting that specialized tools can be expensive and can lead to vendor lock-in.
 
 ## Example
 
@@ -63,4 +63,4 @@ A team must let an order system share data with a billing system. They first dec
 
 ## Trade-offs
 
-The book chose pattern names that are neutral about technology and product. The technology question stays open for its own constraints, such as the proprietary protocols many messaging products rely on.
+

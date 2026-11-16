@@ -46,7 +46,7 @@ review:
 
 ## Explanation
 
-A container diagram is the second level of the C4 Model (see the article "C4 Model"). It zooms in from the System Context Diagram, which shows the system as a single box. The container diagram opens that box.
+A container diagram is the second level of the C4 Model (see the article "C4 Model"). The container diagram opens that box.
 
 **What a container is.** In C4, a container is either an application or a data store. It is a runtime boundary: a border around code that is being executed or data that is being stored. A container is also something that must be running for the whole system to work.
 

@@ -85,4 +85,4 @@ A team is asked to build an app for approving purchase orders. The current proce
 
 ## Trade-offs
 
-Analyzing and redesigning a process before automating takes time and delays the start of software work. In return, the team avoids building waste into a system. Redesign also needs people who understand the process.
+In return, the team avoids building waste into a system. Redesign also needs people who understand the process.

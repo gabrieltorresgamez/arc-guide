@@ -48,7 +48,7 @@ Some architecture rules live only in documents or in people's heads.
 
 **Checking the rules.** Conventions only help if they hold. ArchUnit is a free Java library for checking the architecture of code. It runs architecture and coding rules as ordinary unit tests, so rule violations show up as failing tests at build time. For layers, you define them by package patterns and state which interactions are allowed. Waltz wanted a more concrete way than a style guide to enforce its rules, and used ArchUnit for this. It also checked the naming convention above with the same tool.
 
-**Legacy code.** Old projects may have too many violations to fix at once. ArchUnit can ignore known violations, for example by matching them with regex patterns. The aim is that the code stays covered by architecture tests, so no further violations are added to it.
+
 
 ## Example
 

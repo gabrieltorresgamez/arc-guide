@@ -82,7 +82,7 @@ Kent Beck coined the term while helping write the book on refactoring. That ties
 
 Cyclomatic complexity is a software metric. It counts the linearly independent paths through source code. McCabe developed it in 1976.
 
-SonarQube, for example, reports cyclomatic complexity and cognitive complexity. Cognitive complexity rates how hard the control flow is to understand. SonarQube also has a metric for the number of code smells.
+SonarQube, for example, reports cyclomatic complexity and cognitive complexity. SonarQube also has a metric for the number of code smells.
 
 ## Example
 

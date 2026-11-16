@@ -66,7 +66,7 @@ The arc42 template (see *arc42 Architecture Documentation Template*) gives simil
 
 **Timing decisions**
 
-Some decisions are easy to undo. These matter less to get right. Fowler advises deferring decisions or finding ways to make them changeable. The *Last Responsible Moment* is the point where not deciding removes an important alternative. Wirfs-Brock warns that this idea can give false confidence that there is always time to change one's mind. She prefers a "most responsible moment". Zimmermann adds that teams should know when that moment arrives. Cost, effort, and risk help rank which decisions come first.
+The *Last Responsible Moment* is the point where not deciding removes an important alternative. Wirfs-Brock warns that this idea can give false confidence that there is always time to change one's mind. She prefers a "most responsible moment". Zimmermann adds that teams should know when that moment arrives. Cost, effort, and risk help rank which decisions come first.
 
 **The change curve**
 

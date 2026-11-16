@@ -53,15 +53,15 @@ review:
 
 ## Explanation
 
-Service-Oriented Architecture (SOA) is a paradigm, or way of thinking, for organizing and using distributed capabilities. The capabilities may be under the control of different ownership domains.
 
-**Services.** A service is the mechanism that brings together what a consumer needs and what a provider can do.
 
-**Interface and contract.** The service interface is the way to reach a service's underlying capabilities. The implementation behind it is typically hidden from callers, apart from what the interface exposes. A contract is what consumer and provider agree on regarding constraints and policies.
 
-**Description and discovery.** A service description holds the information needed to use a service, or to decide whether to use it. Consumers usually become aware of services through discovery mechanisms such as registries.
 
-**Different owners.** SOA is motivated by ownership boundaries. A provider and its consumers may belong to different organizations.
+
+
+
+
+
 
 **Central hubs.** Separately from SOA, the Message Broker pattern routes all messages through one central broker, sometimes called the hub-and-spoke style.
 

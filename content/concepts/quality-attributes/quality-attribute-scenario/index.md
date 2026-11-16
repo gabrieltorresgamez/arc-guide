@@ -50,7 +50,7 @@ review:
 
 Requirements such as "the system must be fast" or "easy to use" are hard to check. A quality scenario fixes this. It describes a concrete situation and the response the system should show. It also states how to measure that response. The requirement becomes specific, and you can decide whether the system fulfills it.
 
-**The long form.** The Software Engineering Institute (SEI) uses six elements, and the book by Bass et al. follows them. arc42 calls this the long form. It adds fields such as artifact, environment and response. arc42 also offers a short form, called Q42, for lighter use.
+**The long form.** The Software Engineering Institute (SEI) uses six elements, and the book by Bass et al. follows them. arc42 calls this the long form. arc42 also offers a short form, called Q42, for lighter use.
 
 Across the sources, the parts fall into these ideas:
 
@@ -60,9 +60,9 @@ Across the sources, the parts fall into these ideas:
 - **Response:** what the system does.
 - **Response measure:** the criteria or metric used to judge that response.
 
-**Why the measure matters.** The measure gives you criteria to assess objectively whether the requirement is met. Without it, a scenario stays a matter of opinion.
 
-**Using scenarios.** Teams write them to make quality requirements concrete. They can also use them to analyze or evaluate an architecture systematically. arc42 points to the Architecture Tradeoff Analysis Method (ATAM) for this. arc42 also notes that Bass et al. (2021) use the term Quality Attribute Utility Tree for the tree that structures quality requirements.
+
+**Using scenarios.** Teams write them to make quality requirements concrete. They can also use them to analyze or evaluate an architecture systematically. (2021) use the term Quality Attribute Utility Tree for the tree that structures quality requirements.
 
 ## Example
 
@@ -70,4 +70,4 @@ A team starts with the requirement "New users learn the tool quickly." They rewr
 
 ## Trade-offs
 
-The full six-element template is slow to use when you document many scenarios. arc42's quality site suggests a pragmatic option: it merges the six elements into three focused sections. The short Q42 form is another lighter choice. The long form is more detailed, so pick the form that fits how many scenarios you must write.
+The full six-element template is slow to use when you document many scenarios. arc42's quality site suggests a pragmatic option: it merges the six elements into three focused sections. The short Q42 form is another lighter choice.
