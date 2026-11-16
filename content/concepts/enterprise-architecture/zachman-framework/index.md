@@ -64,4 +64,4 @@ A company wants to understand its order handling. The team lists which cells of 
 
 ## Trade-offs
 
-Filling every cell costs time and money. Skipping a cell saves effort but creates enterprise risk. The framework does not say where to start or which tools to use. You must make those choices yourself, with a method of your own.
+Skipping a cell saves effort but creates enterprise risk. The framework does not say where to start or which tools to use. You must make those choices yourself, with a method of your own.

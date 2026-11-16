@@ -62,7 +62,7 @@ Software is built from parts called components. Components rarely work alone. Th
 
 A connector represents an interaction between components.
 
-**Ports.** A component has ports. A port is a point where the component interacts with its environment. Connectors plug in at these points. The article *Port* covers ports in more detail.
+**Ports.** A component has ports. A port is a point where the component interacts with its environment. The article *Port* covers ports in more detail.
 
 **Roles.** A connector has an interface, just as a component does. The connector's interface is a set of roles. Each role is one participant in the interaction. A connector for an interaction between two parties therefore has a role for each side.
 
@@ -70,13 +70,11 @@ Putting the pieces together:
 
 - Components own the ports.
 - Connectors own the roles.
-- Plugging a connector into a port ties a component into the interaction.
 
 This keeps two questions apart. Components answer "what are the parts?" Connectors answer "how do the parts interact?"
 
 **More about connectors.**
 
-- **Connector Cardinality:** A point-to-point connector links two.
 - **Connectors and Distribution:** A monolith can be scaled by running several identical instances behind a load balancer. Splitting a system into separate processes adds a new risk: a call to another process may be slow or fail while the rest keeps running.
 
 ## Example

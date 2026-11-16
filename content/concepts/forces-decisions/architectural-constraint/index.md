@@ -78,4 +78,4 @@ A team plans an online shop. The company already runs on one cloud provider and 
 
 ## Trade-offs
 
-Every constraint narrows the design choices a bit. Constraints can also cost money or effort. Some constraints can be negotiated, which may remove that cost. Leaving out the reason behind a constraint risks losing the rationale later.
+Every constraint narrows the design choices a bit. Constraints can also cost money or effort. Leaving out the reason behind a constraint risks losing the rationale later.

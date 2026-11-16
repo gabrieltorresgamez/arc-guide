@@ -168,7 +168,7 @@ The results go into an out-brief presentation, a written report, or both. In arc
 
 **When to use it.** ATAM is most valuable early in the life cycle, when the cost of changing the architecture is minimal. It is also suggested when stakeholders have conflicting quality requirements, for example performance versus security. Older systems can be analyzed once their real architecture has been recovered, because their documentation is often missing or inaccurate.
 
-**Comparing alternatives.** Build one utility tree as the shared basis. Record the findings per draft architecture, so the lists can be set side by side. Judge by risk themes, not only by counts. arc42 suggests a table with quality goal, scenario, solution approach and risk for qualitative evaluation.
+**Comparing alternatives.** arc42 suggests a table with quality goal, scenario, solution approach and risk for qualitative evaluation.
 
 **Benefits.** Risks show up early, quality requirements become clearer, the architecture documentation improves, and stakeholders communicate more.
 

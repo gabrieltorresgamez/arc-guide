@@ -69,4 +69,4 @@ They rewrite it with a concrete behavior and a test that can pass or fail. Then 
 
 ## Trade-offs
 
-The checklist cannot answer the questions for you. Attainable is a professional judgment, so two people may disagree. Realistic depends on your staff, skills, infrastructure and time, so the same requirement can pass for one team and fail for another.
+The checklist cannot answer the questions for you. Attainable is a professional judgment. Realistic depends on your staff, skills, infrastructure and time, so the same requirement can pass for one team and fail for another.

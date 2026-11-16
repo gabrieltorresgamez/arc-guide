@@ -86,7 +86,7 @@ Info-Tech's assessment brief says its auto-generated goals and roadmap turn impr
 
 **Maturity stages.**
 
-- **Enterprise Architecture Maturity Stages:** Enterprise architecture maturity stages describe how a firm's architecture grows from business silos to standardized technology, optimized core, and business modularity, later extended to a digital ecosystem. Value depends on governance and learning, not stage alone.
+- **Enterprise Architecture Maturity Stages:** Enterprise architecture maturity stages describe how a firm's architecture grows from business silos to standardized technology, optimized core, business modularity and a digital ecosystem. Value depends on governance and learning, not stage alone.
 
 ## Example
 

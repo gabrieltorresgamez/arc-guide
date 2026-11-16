@@ -55,7 +55,7 @@ review:
 
 ## Explanation
 
-A quality attribute is a property such as security, speed, or reliability (see the article Quality Attribute). A trade-off means a design choice helps one quality and hurts another. Security choices, for example, can affect reliability, cost, or performance.
+A trade-off means a design choice helps one quality and hurts another. Security choices, for example, can affect reliability, cost, or performance.
 
 **Common conflicts**
 

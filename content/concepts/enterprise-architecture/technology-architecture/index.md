@@ -62,8 +62,6 @@ review:
 
 ## Explanation
 
-Technology architecture, as used here, deals with the infrastructure that software runs on.
-
 **Why software teams care.** Infrastructure influences the system and some of its cross-cutting concepts. Architects therefore need to know it. The arc42 deployment view records this infrastructure. From a software view, teams only need to capture the infrastructure elements that matter to them. If the system runs in several environments, document every relevant one.
 
 **Constraints.** Technical constraints limit design freedom. A team must always deal with them, though some can be negotiated.

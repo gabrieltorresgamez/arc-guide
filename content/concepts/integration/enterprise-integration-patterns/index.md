@@ -376,4 +376,4 @@ An online shop has an order application and a shipping application. The order ap
 
 ## Trade-offs
 
-Messaging is asynchronous, so the sender does not wait for the receiver. Delivery is meant to be reliable, but a pattern catalog is a vocabulary, not a recipe.
+Messaging is asynchronous, so the sender does not wait for the receiver. Delivery is meant to be reliable.

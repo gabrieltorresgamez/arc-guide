@@ -81,7 +81,7 @@ In Azure Event Hubs, an event hub is an append-only log, equivalent to a Kafka t
 
 **Ordering.** Order is guaranteed only within a partition, which is one ordered sequence of events inside the log. A partition key keeps related events together and in order. Demanding absolute order across all events limits how many partitions you can use.
 
-**Relation to other patterns.** CQRS (see Command Query Responsibility Segregation) pairs naturally with event sourcing. If the write model emits events for every update, read models can be built from them. Fowler also describes event sourcing as the foundation for patterns such as Parallel Models and Retroactive Events.
+**Relation to other patterns.** CQRS (see Command Query Responsibility Segregation) pairs naturally with event sourcing. If the write model emits events for every update, read models can be built from them.
 
 ## Example
 

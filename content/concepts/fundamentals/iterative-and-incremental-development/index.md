@@ -65,4 +65,4 @@ A team builds an online booking tool. In the first cycle, it delivers one comple
 
 ## Trade-offs
 
-Growing in small steps gives early feedback, but it needs discipline. Without a sustained commitment to refactoring, the system can erode into a Big Ball of Mud. Refactoring does not violate YAGNI, because it keeps the code malleable.
+Without a sustained commitment to refactoring, the system can erode into a Big Ball of Mud. Refactoring does not violate YAGNI, because it keeps the code malleable.

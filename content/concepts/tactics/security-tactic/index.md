@@ -87,7 +87,7 @@ review:
 
 Security tactics are a way to think about protecting software. The idea comes from physical security. In the physical world, a secure facility lets people reach only certain resources. The same kinds of strategies also make sense for computer-based systems. They lead to four categories of security tactics.
 
-**The categories and their tactics.** In the catalog of Bass, Clements and Kazman, the four categories contain these tactics:
+**The categories and their tactics.** In the InformIT chapter on making design decisions, the four categories contain these tactics:
 
 - **Detect Attacks:** detect intrusion, detect service denial, verify message integrity, detect message delivery anomalies.
 - **Resist Attacks:** identify actors, authenticate actors, authorize actors, limit access, limit exposure, encrypt data, separate entities, validate input, change credential settings.

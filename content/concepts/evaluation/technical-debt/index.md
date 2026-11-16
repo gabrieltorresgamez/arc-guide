@@ -65,7 +65,7 @@ Technical debt is a metaphor. A team takes a shortcut, finishes sooner, and pays
 
 Kruchten, Nord and Ozkaya define technical debt as design or implementation constructs that are expedient in the short term. "Expedient" means quick and convenient now.
 
-**Interest.** In the metaphor, the extra effort needed to add new features is the interest paid on the debt. The more debt a system carries, the slower future change becomes.
+**Interest.** In the metaphor, the extra effort needed to add new features is the interest paid on the debt.
 
 **Where debt lives.** Debt is not only a code problem. SEI researchers hold that it is rooted in architecture and design issues. See Software Architecture for what architecture means.
 
@@ -87,4 +87,4 @@ A team must release a booking feature before a trade fair. It copies an existing
 
 ## Trade-offs
 
-Deliberate debt buys speed now. The price is extra effort whenever the indebted area has to be changed, and the benefit holds only if the team repays the debt promptly. Teams that accept debt knowingly (prudent) are in a different position from teams that take it recklessly. Architecture debt has deep roots but is hard to measure with tools, so tool numbers alone give an incomplete picture.
+Deliberate debt buys speed now. The price is extra effort whenever the indebted area has to be changed, and the benefit holds only if the team repays the debt promptly. Architecture debt has deep roots but is hard to measure with tools, so tool numbers alone give an incomplete picture.

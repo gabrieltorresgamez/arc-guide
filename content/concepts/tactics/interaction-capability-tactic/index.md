@@ -55,7 +55,7 @@ Usability describes how well people can interact with a system. The ISO/IEC 2501
 Two sub-characteristics of interaction capability matter here:
 
 - **Learnability:** how well users can learn to use the functions of the system.
-- **User error protection:** how well the system keeps users from making operation errors. This covers the error avoidance side of usability.
+- **User error protection:** how well the system keeps users from making operation errors.
 
 Some usability features cannot be bolted on easily. Cancellation, undo and progress bars all need support from the software architecture. A team that wants them must plan for them early.
 

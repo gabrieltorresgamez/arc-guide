@@ -69,4 +69,4 @@ A web shop's level 1 view shows three nested components: Catalog, Orders and Pay
 
 ## Trade-offs
 
-Component diagrams and package diagrams can both communicate hierarchies. Pick one that fits the blocks you show and keep it consistent across levels.
+Component diagrams and package diagrams can both communicate hierarchies.

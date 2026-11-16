@@ -153,7 +153,7 @@ BPMN stands for Business Process Model and Notation. Version 2.0 is an industry 
 - **BPMN Focus on Connected Businesses:** BPMN can model processes that cross company borders. Each organization gets its own pool, and message flows show the messages passing between them. Business and technical people can both read the result.
 - **Core BPMN Element Subset:** Most BPMN models need only a small part of the notation. A study of 120 diagrams found that analysts share a small set of constructs. Using that core set eases modeling and reading.
 - **Process Notations Comparison (EPC, BPMN, UML Activity Diagram):** EPC, UML activity diagrams, and BPMN can describe the same process with different elements. Most EPC elements have a clear BPMN equivalent, so conversion follows rules, but the result usually needs manual cleanup.
-- **BPMN Modeling Tool:** A BPMN modeling tool is software for drawing process models. Camunda Modeler and bpmn.io are two examples. They differ in form, such as desktop or web, and viewer or editor. A free one suits first experiments.
+- **BPMN Modeling Tool:** A BPMN modeling tool is software for drawing process models. Camunda Modeler and bpmn.io are two examples. They differ in form, such as desktop or web, and viewer or editor.
 
 ## Example
 

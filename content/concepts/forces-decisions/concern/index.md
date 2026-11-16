@@ -65,7 +65,7 @@ Concerns also connect to views. A viewpoint defines which stakeholders, concerns
 
 **Concerns drive decisions**
 
-arc42 says the quality goals of the most important stakeholders influence fundamental architectural decisions. Knowing these goals early therefore matters.
+arc42 says the quality goals of the most important stakeholders influence fundamental architectural decisions.
 
 Rozanski and Woods classify stakeholders by their roles and concerns. They also say the architect must ensure adequate stakeholder representation.
 
@@ -73,16 +73,9 @@ Rozanski and Woods classify stakeholders by their roles and concerns. They also 
 
 Dijkstra coined the term separation of concerns. There, a concern is any aspect of software that can be defined separately from other aspects. See the article Separation of Concerns.
 
-**Conflicting concerns**
-
-Time-to-market can pull against long-term maintainability. One way is a time-boxed workshop. The reasoning is then recorded in Architecture Decision Records.
-
 ## Example
 
 A team builds an online ticket shop. The operations manager worries about the site staying fast during sales. The product owner wants a launch in three months. The developers want code that stays easy to change.
 
 The launch date and easy-to-change code pull in different directions. The architect brings these people together in a short workshop. They agree on a choice and write down why. Each concern is then addressed in the architecture description.
 
-## Trade-offs
-
-Favoring one concern, such as time-to-market, can cost another, such as long-term maintainability. Making the trade-off explicit avoids hidden choices.

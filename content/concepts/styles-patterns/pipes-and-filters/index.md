@@ -64,7 +64,7 @@ An order-intake pipeline has three filters. The first checks that an order has a
 
 ## Trade-offs
 
-**Benefits.** Filters can be added, omitted, or rearranged without changing them. Small single-purpose steps are easy to swap and extend.
+**Benefits.** Filters can be added, omitted, or rearranged without changing them.
 
 **Costs.**
 - The time to process one request depends on the slowest filter. That filter can become a bottleneck. Running several parallel instances of a slow filter improves throughput.

@@ -46,13 +46,11 @@ review:
 
 ## Explanation
 
-ISO 25010 is a standard list of product quality characteristics. Tactic catalogs and ISO 25010 do not line up one to one.
+ISO 25010 is a standard list of product quality characteristics.
 
-**The two vocabularies differ in size.** The quality model from Bass et al. has about 10 attributes. ISO/IEC 25010:2023 has nine characteristics, each with subcharacteristics. Because of this gap, you need a mapping before you can say which ISO characteristic a catalog covers.
+**The two vocabularies differ in size.** The quality model from Bass et al. has about 10 attributes. ISO/IEC 25010:2023 has nine characteristics, each with subcharacteristics.
 
 **Some catalog terms are missing from ISO 25010.** Operational topics such as deployability are not among the nine characteristics. The arc42 quality model treats deployable as a sub-goal of operable.
-
-**Testability has one place in ISO 25010, but catalogs may differ.** The 2023 model lists testability under maintainability. The arc42 quality model's author argues it should also appear under reliability. When you map a testability tactic, state which parent you mean.
 
 **Bass et al. split attributes into two groups.** They define a quality attribute as a measurable or testable property of a system. They sort attributes into runtime and development categories.
 

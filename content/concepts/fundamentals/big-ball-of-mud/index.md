@@ -67,14 +67,10 @@ Such systems show clear signs of unregulated growth. They are repaired again and
 - *Sweeping It Under the Rug* controls decline by cordoning off the blighted areas of the code.
 - *Reconstruction* means tearing everything down and starting over. In advanced cases there may be no alternative.
 
-**Countermeasure.** One countermeasure is to alternate periods of expansion with periods of consolidation, refactoring and repair (see Refactoring).
-
 **More about decay and what to do about it.**
 
-- **Accidental Architecture:** Accidental architecture is a structure nobody deliberately chose. It is merely implied, and it tends to erode through quick fixes and piecemeal growth until it ends as a Big Ball of Mud.
-- **Keep It Working:** Keep It Working means changing software in small, safe steps so a working version always exists.
-- **Sweeping It Under the Rug:** Sweeping It Under the Rug is a pattern for tangled code you cannot remove. You fence the mess off from the rest of the system and put a clean interface in front of it. short_ok: true
-- **Architecture Decay:** Architecture decay is the slow divergence of a built system from its intended design. Small, unplanned changes pile up and erode the structure.
+- **Sweeping It Under the Rug:** Sweeping It Under the Rug is a pattern for controlling decline in tangled code. You fence the mess off from the rest of the system and put a clean interface in front of it.
+- **Architecture Decay:** Architecture decay is the slow divergence of a built system from its intended design.
 
 ## Example
 
@@ -82,4 +78,4 @@ A small team builds a quick demo of an ordering tool. The company then uses it f
 
 ## Trade-offs
 
-Cordoning off bad code controls decline but does not remove the bad code. Alternating expansion with consolidation means some periods go to repair instead of new features.
+Cordoning off bad code controls decline but does not remove the bad code.

@@ -82,7 +82,8 @@ def main(slugs):
             sys.exit(f"unknown slug: {slug}")
         probs, skipped = check(files[slug])
         blocking += sum(p["kind"] in ("unsupported", "contradicted") for p in probs)
-        print(f"[{slugs.index(slug) + 1}/{len(slugs)}] {slug}: {len(probs)} problems" + (f", {len(skipped)} sources unreadable or over budget" if skipped else ""), flush=True)
+        note = f", {len(skipped)} sources NOT READ (findings may be false; rerun with CLAIMCHECK_TOTAL_CHARS=2500000)" if skipped else ""
+        print(f"[{slugs.index(slug) + 1}/{len(slugs)}] {slug}: {len(probs)} problems{note}", flush=True)
         rep += [f"### `{slug}`"] + [f"- **{p['kind']}**: “{p['quote']}” — {p['note']}" for p in probs]
         rep += [f"- _not checked (unreadable or over budget):_ {u}" for u in skipped] + [""]
     c.write_report(os.environ.get("CLAIMCHECK_STAGE", "claimcheck"), rep)  # CLAIMCHECK_STAGE lets parallel runs write separate reports

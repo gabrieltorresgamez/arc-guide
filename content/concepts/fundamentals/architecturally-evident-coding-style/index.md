@@ -42,13 +42,11 @@ review:
 
 Some architecture rules live only in documents or in people's heads.
 
-**Layers as packages.** A layered architecture splits a system into layers and states how they may interact (see Layered Architecture). The Waltz project did this. It defined layers simply as matching package patterns.
+**Layers as packages.** In the Waltz project, layers were defined simply as matching package patterns.
 
 **Conventions in names.** Names can carry rules too. In Waltz's data-access objects, `findXYZ()` methods are expected to return a collection or map.
 
 **Checking the rules.** Conventions only help if they hold. ArchUnit is a free Java library for checking the architecture of code. It runs architecture and coding rules as ordinary unit tests, so rule violations show up as failing tests at build time. For layers, you define them by package patterns and state which interactions are allowed. Waltz wanted a more concrete way than a style guide to enforce its rules, and used ArchUnit for this. It also checked the naming convention above with the same tool.
-
-
 
 ## Example
 

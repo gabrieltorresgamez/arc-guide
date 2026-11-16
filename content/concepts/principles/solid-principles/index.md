@@ -72,4 +72,4 @@ A shop has an `Order` class that calculates prices, saves itself to the database
 
 ## Trade-offs
 
-The sources present the principles by their benefits: maintainability, testability, flexibility, extensibility and loose coupling. They are guidelines for source code, so they sit at a lower level than architecture principles.
+The sources present the principles by their benefits: maintainability, testability, flexibility, extensibility and loose coupling.

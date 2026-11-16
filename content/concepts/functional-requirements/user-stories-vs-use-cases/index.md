@@ -70,7 +70,7 @@ Both ideas capture what a system should do. They differ in size, detail, and how
 
 **The Three Cs.** Stories rely on three parts (see User Story):
 
-- A card, which is a physical token.
+- A card, which can be a sticky note, a digital card or a backlog item.
 - A conversation between stakeholders.
 - A confirmation that the goals of the conversation were met.
 
@@ -79,10 +79,6 @@ Acceptance tests provide the confirmation. They make the simple card-and-convers
 **How they relate.** One view treats a story as a use case at 2 bits of precision. That means a goal plus a main scenario, and little else. So the two are not opposites. They sit at different levels of precision.
 
 **Teams new to this.** Inexperienced teams often want to try use cases. One view holds that use cases are rarely ideal compared with confirming a requirement through examples.
-
-**Keeping them consistent.**
-
-- **Consistency of User Story and Use Case:** Treat the story as the brief, early form.
 
 ## Example
 

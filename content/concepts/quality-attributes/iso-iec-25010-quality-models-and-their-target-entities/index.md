@@ -48,8 +48,6 @@ review:
 
 ## Explanation
 
-A quality model is a list of quality characteristics. Each list is built for one kind of thing, called its target.
-
 **Product quality model (ISO/IEC 25010:2023).** Its target is an ICT product that is part of an information system. The 2023 model has nine characteristics. Interaction Capability is one of them. The model also reaches the components of such a product. These include software, firmware, hardware, data and communication infrastructure. So you can apply it to hardware and communication parts when they belong to the product. The article "ISO/IEC 25010 Product Quality Model" covers the characteristics.
 
 **Data quality model (ISO/IEC 25012).** This is a separate model. Its target is data. It has 15 characteristics. It is the basis for assessing the quality of data products.

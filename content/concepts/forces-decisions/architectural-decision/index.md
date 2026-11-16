@@ -68,7 +68,7 @@ For the record format, see the articles Architectural Decision Record and Archit
 
 **More about decision modeling.**
 
-- **Requirements-Decision Modeling for Cyber-Physical Systems of Systems:** ReDeMo is a formal model that links non-functional requirements (qualities such as sustainability) to architectural decisions for cyber-physical systems. It comes from the TaSSAreCt research project and is built into a SysML v2-based toolchain for architects.
+- **ReDeMo:** ReDeMo is a formal model that links non-functional requirements (qualities such as sustainability) to architectural decisions for cyber-physical systems. It comes from the TaSSAreCt research project and is built into a SysML v2-based toolchain for architects.
 
 ## Example
 

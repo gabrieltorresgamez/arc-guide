@@ -50,7 +50,7 @@ When you create one, three details should travel with it:
 - the **target audience**, meaning who the view is for;
 - the **purpose**, meaning what the view should help that audience do.
 
-Two views from the arc42 template (see *arc42 Architecture Documentation Template*) show how purpose shapes content:
+Two views from the arc42 template (see *arc42 Architecture Documentation Template*) are:
 
 - **Building block view.** It documents the static decomposition of the system, meaning how it is split into parts. It is mandatory in every architecture documentation.
 - **Runtime view.** It shows concrete behavior and the interactions between building blocks. You pick its scenarios by how relevant they are to the architecture.

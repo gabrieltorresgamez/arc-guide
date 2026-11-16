@@ -214,13 +214,13 @@ review:
 
 - **Levels of Process Modeling:** Process models work best in levels. The top level shows the big picture, the middle level breaks it into subprocesses, and the lowest level shows detailed activities. Each level suits a different audience.
 - **Capturing Business Behavior via Process Modeling:** Process models describe business behavior at different levels of detail. A high-level model explains a process to stakeholders. A more detailed one supports analysis. A BPMN model can also be run by a workflow engine.
-- **Structured Process Modeling with Fragments:** Structured process modeling builds a model from a simple sequence of steps and inserts parallel or alternative blocks. In BPMN, these blocks use parallel gateways (AND) and exclusive gateways (XOR) as splits and joins.
-- **Process Model versus Process Instance:** A process model is the blueprint of a business process. A process instance is one run of it, tracked by a token and identified by a unique key.
+- **Structured Process Modeling with Fragments:** In BPMN, structured blocks use parallel gateways (AND) and exclusive gateways (XOR) as splits and joins.
+- **Process Model versus Process Instance:** A process model is the blueprint of a business process. A process instance is one run of it, tracked by a token.
 - **Business Object Lifecycle:** A business object lifecycle describes the states an object passes through, drawn as a state machine. Processes change those states. This data-centric view is an alternative to modeling only the activities of a process.
 - **Process Mining:** Process mining is a family of techniques that analyze event data from information systems. It shows how a process actually runs, not how people believe it runs, and helps improve it.
-- **BPM Life Cycle:** The BPM life cycle is a loop of stages for a business process: discovery, analysis, design, implementation and monitoring. A live process is measured and improved so it stays useful as goals, technology and rules change.
+- **BPM Life Cycle:** The BPM life cycle is a loop of stages for a business process: discovery, analysis, design, implementation and optimization. A live process is measured and improved so it stays useful as goals, technology and rules change.
 - **BPM Usage Scenario:** A BPM usage scenario is a typical reason for buying a business process management suite (BPMS). Four are described: automating one process, continuous improvement, moving to SOA, and business transformation. Each has different buyers and goals.
-- **Degrees of BPM Maturity:** Processes can be automated to different degrees, from steps with people involved to straight-through processing with no human at all. RPA and AI agents help move a process along, and each degree needs matching support in the architecture.
+- **Degrees of BPM Maturity:** Processes can be automated to different degrees, from steps with people involved to straight-through processing with no human at all. RPA and AI agents help move a process along.
 - **Waves of Business Process Management:** Business process thinking has changed over time. In 1990, Hammer argued for removing work that adds no value instead of automating it. Reengineering then drew criticism for downsizing and high failure rates.
 - **ARIS Process Views:** ARIS describes a business and its information systems through several views, and each view is detailed in three levels. Process chain diagrams belong to its control view. ARIS mainly supports analysis and requirements definition.
 

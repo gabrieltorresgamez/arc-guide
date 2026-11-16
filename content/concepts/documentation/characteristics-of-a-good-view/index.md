@@ -111,8 +111,7 @@ A view shows how the architecture addresses the concerns of certain stakeholders
 
 **Common mistakes.**
 
-- **Unclear Level of Abstraction Antipattern:** An architecture diagram that mixes high-level and low-level elements confuses readers. The fix is to keep each diagram at one abstraction level and draw separate diagrams when both views are needed.
-- **Self-Invented Notation Drawback:** A self-invented notation is a set of diagram symbols the author made up. Readers cannot tell what the symbols mean without help. A legend, or a standard notation, reduces the problem.
+- **Mixed Levels of Abstraction:** An architecture diagram that mixes high-level and low-level elements confuses readers. The fix is to keep each diagram at one abstraction level and draw separate diagrams when both views are needed.
 
 ## Example
 

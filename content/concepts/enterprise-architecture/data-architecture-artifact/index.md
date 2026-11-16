@@ -86,7 +86,7 @@ A logical data model is usually normalized to reduce that duplication. See Conce
 **More about data artifacts.**
 
 - **Data Entity/Business Function Matrix:** A Data Entity/Business Function Matrix links data entities to business functions. Each cell uses CRUD codes (create, read, update, delete) to show how a function uses an entity. It helps spot unclear ownership.
-- **Data Entity/Data Component Catalog:** A data entity catalog is a master list of an organization's data entities. Each entry records the entity's definition, owner, classification and system of record, so teams share one view of the data.
+- **Data Entity/Data Component Catalog:** A data entity catalog is a master list of an organization's data entities. Each entry records the entity's definition, owner and classification level.
 
 ## Example
 

@@ -51,7 +51,7 @@ Organizations make architectural decisions at different levels, such as enterpri
 
 **Decentralized decisions.** In a decentralized approach, any team may decide. It first asks the people affected for advice. It then records the decision in an Architectural Decision Record (ADR). Architects facilitate this process. They do not make the decisions themselves.
 
-**Visibility holds it together.** Because teams decide so much, decisions must be visible at all organizational levels. This helps avoid architectural compromise. Transparency in sharing decisions and seeking advice is fundamental to decentralized decision making.
+**Visibility holds it together.** Because teams decide so much, decisions must be visible at all organizational levels. This helps avoid architectural compromise.
 
 ## Example
 
