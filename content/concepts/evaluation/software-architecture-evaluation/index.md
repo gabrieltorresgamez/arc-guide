@@ -1,6 +1,7 @@
 ---
 title: Software Architecture Evaluation
 slug: software-architecture-evaluation
+order: 10
 category: evaluation
 kind: practice
 summary: Architecture evaluation examines a design for problems and risks before teams build on it. Its
@@ -13,12 +14,9 @@ step: s11-evaluate
 related:
 - architecture-tradeoff-analysis-method-atam
 - lightweight-atam
-- advantages-and-drawbacks-of-atam
-- sensitivity-point
-- trade-off-point
 - quality-attribute-scenario
 - software-architecture-analysis-method-saam
-- risk-identification
+- safety
 checks:
 - The document states when the architecture was evaluated and whether the evaluation worked from models
   or from code.
@@ -49,7 +47,7 @@ Architecture evaluation means examining a software design to find problems and r
 
 **What it finds**
 
-Methods such as the Architecture Tradeoff Analysis Method (ATAM) expose risks that could keep an organization from reaching its business goals. ATAM also names sensitivity points and trade-off points. A sensitivity point is a place in the architecture that affects one quality attribute. A trade-off point affects more than one quality attribute. See the articles on ATAM, Sensitivity Point and Trade-off Point.
+Methods such as the Architecture Tradeoff Analysis Method (ATAM) expose risks that could keep an organization from reaching its business goals. ATAM also names sensitivity points and trade-off points. A sensitivity point is a place in the architecture that affects one quality attribute. A trade-off point affects more than one quality attribute. See the article on ATAM.
 
 **Early and late evaluation**
 

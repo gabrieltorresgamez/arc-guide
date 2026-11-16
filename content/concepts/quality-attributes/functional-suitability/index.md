@@ -1,6 +1,7 @@
 ---
 title: Functional Suitability
 slug: functional-suitability
+order: 10
 category: quality-attributes
 kind: quality-attribute
 summary: 'Functional suitability is the degree to which a product provides functions that meet stated
@@ -11,11 +12,10 @@ arc42:
 step: s03-functional-requirements
 related:
 - iso-iec-25010-quality-model
-- iso-25010-2023-revision
 - quality-attribute
 - fitness-for-purpose
 - acceptance-criteria
-- usability
+- interaction-capability
 - security
 - quality-models-and-their-target-entities
 checks:
@@ -36,6 +36,30 @@ sources:
   title: 'ISO/IEC 25010 Explained: 9 Software Quality Characteristics That Matter | Sonar'
   site: sonarsource.com
   accessed: '2026-11-09'
+- url: https://quality.arc42.org/qualities/functional-completeness
+  title: "Functional completeness | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/qualities/functional-correctness
+  title: "Functional correctness | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/qualities/functional-appropriateness
+  title: "Functional appropriateness | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/user-tries-primary-function
+  title: "User tries to achieve primary function"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/display-data-based-on-context
+  title: "Display Data Based on Context"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/restore-filter-after-log-in
+  title: "Restore Filter after Log In"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated
@@ -56,7 +80,17 @@ The standard splits the characteristic into three sub-characteristics:
 
 **Where it sits in the quality model.** Functional suitability is one of several product quality characteristics. Security is another. Product quality is distinguished from quality in use. Functional suitability concerns the functions a product provides. It is not the same as the separate "suitability" quality from ISO/IEC 25019.
 
-**The 2023 revision.** The product quality model grew from eight to nine characteristics. Safety was added, and Usability was replaced by Interaction capability, which covers a broader scope. The sources reviewed did not list changes to the definition of functional suitability itself. See ISO/IEC 25010:2023 Product Quality Model Revision.
+**In ISO/IEC 25010:2023.** The product quality model has nine characteristics, including Safety and Interaction capability.
+
+**Subcharacteristics.** The ISO/IEC 25010 model lists these subcharacteristics under this characteristic:
+
+- **Functional completeness** means that the set of functions covers all the specified tasks and the objectives of the intended users. More: [arc42 quality model](https://quality.arc42.org/qualities/functional-completeness).
+- **Functional correctness** means that the product gives accurate results when the intended users use it. More: [arc42 quality model](https://quality.arc42.org/qualities/functional-correctness).
+- **Functional appropriateness** means that the functions help users accomplish their specified tasks and objectives. More: [arc42 quality model](https://quality.arc42.org/qualities/functional-appropriateness).
+
+**In the arc42 quality model.** The arc42 quality model has its own page on [Functional suitability](https://quality.arc42.org/qualities/functional-suitability).
+
+**Example quality requirements.** The arc42 quality model has example quality requirements for this characteristic: [User tries to achieve primary function](https://quality.arc42.org/requirements/user-tries-primary-function), [Display Data Based on Context](https://quality.arc42.org/requirements/display-data-based-on-context), [Restore Filter after Log In](https://quality.arc42.org/requirements/restore-filter-after-log-in).
 
 ## Example
 

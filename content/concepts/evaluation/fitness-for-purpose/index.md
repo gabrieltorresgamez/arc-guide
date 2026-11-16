@@ -1,6 +1,7 @@
 ---
 title: Fitness for Purpose
 slug: fitness-for-purpose
+order: 20
 category: evaluation
 kind: principle
 summary: An architecture is rarely good or bad on its own. It is fit or unfit for a purpose, and that
@@ -18,7 +19,7 @@ related:
 - architectural-trade-off-thinking
 - big-ball-of-mud
 - quality-attribute-prioritization
-- software-architecture-in-its-context
+- software-architecture
 - arc42-solution-strategy
 checks:
 - The document names the business drivers and prioritized quality requirements that the chosen architecture

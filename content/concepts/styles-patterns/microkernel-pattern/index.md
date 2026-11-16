@@ -14,7 +14,7 @@ related:
 - layered-architecture
 - architectural-pattern
 - microservices-architecture
-- modifiability
+- maintainability
 - performance-efficiency
 checks:
 - The document states which basic mechanisms the core provides and which services run outside it.
@@ -24,6 +24,14 @@ sources:
   title: Microkernel - Wikipedia
   site: en.wikipedia.org
   accessed: '2026-11-08'
+- url: https://dev.to/kishalay_pandey_d5d0cae01f00/microkernel-architecture-design-pattern-n79
+  title: "Microkernel Architecture — Design Pattern - DEV Community"
+  site: dev.to
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/approaches/plugin-architecture
+  title: "Plugin Architecture | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: Services run outside a small core and communicate by messages.
@@ -44,12 +52,14 @@ This split helps when a driver has bugs. A faulty driver sits outside the core, 
 
 When a program needs a service, it cannot just make one call into the core. It exchanges messages with a server that provides the service. That is the price of the small core.
 
+**In the arc42 quality model.** It has an approach page on [Plugin Architecture](https://quality.arc42.org/approaches/plugin-architecture).
+
 ## Example
 
 Imagine a small system core that only schedules work and passes messages. A printer driver runs next to it as a normal program. An application asks the printer driver for help by sending it a message. If the printer driver has a bug, the fault stays outside the core.
 
 ## Trade-offs
 
-**Performance.** On most mainstream processors, getting a service costs more than in a design where services sit inside one big kernel. Each request needs a message exchange with a server instead of a single system call.
+
 
 **Stability versus security.** Running drivers outside the core helps against buggy drivers. It does not necessarily reduce the damage a misbehaving driver can cause, though IOMMUs can allow user-mode drivers to be untrusted.

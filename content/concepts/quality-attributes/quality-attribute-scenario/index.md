@@ -1,6 +1,7 @@
 ---
 title: Quality Attribute Scenario
 slug: quality-attribute-scenario
+order: 40
 category: quality-attributes
 kind: artifact
 summary: A quality attribute scenario turns a vague quality wish into a specific, measurable statement.
@@ -12,11 +13,11 @@ step: s04-quality-requirements
 related:
 - arc42-quality-chapter
 - architecture-tradeoff-analysis-method-atam
-- availability-scenario
-- usability-scenario
+- reliability
+- interaction-capability
 - smart-requirements
 - quality-attribute
-- performance-scenario
+- performance-efficiency
 checks:
 - Each quality requirement is written as a scenario that is specific and measurable.
 - Every scenario names a response measure, meaning a metric or criteria to judge the response objectively.

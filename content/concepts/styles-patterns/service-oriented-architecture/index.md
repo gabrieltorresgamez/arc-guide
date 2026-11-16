@@ -16,8 +16,8 @@ related:
 - broker-pattern
 - microservices-architecture
 - architectural-style
-- loose-coupling
-- modifiability-tactics-in-soa
+- coupling-and-cohesion
+- maintainability-tactics
 - integration-pattern
 - messaging
 checks:

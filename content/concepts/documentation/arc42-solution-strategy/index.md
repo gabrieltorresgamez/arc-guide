@@ -1,6 +1,7 @@
 ---
 title: Solution Strategy
 slug: arc42-solution-strategy
+order: 50
 category: documentation
 kind: artifact
 summary: The solution strategy is a short chapter of an arc42 document. It lists the fundamental decisions
@@ -30,6 +31,10 @@ sources:
   title: 4 - Solution strategy | arc42 Documentation
   site: docs.arc42.org
   accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/4-1
+  title: "Tip 4-1: Explain the solution strategy as compact as possible (e.g. as list of keywords)! | arc42 Documentation"
+  site: docs.arc42.org
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated

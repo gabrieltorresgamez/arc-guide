@@ -1,6 +1,7 @@
 ---
 title: Deployment View
 slug: distribution-view
+order: 50
 category: documentation
 kind: artifact
 summary: The deployment view shows which hardware and environments run the system's building blocks. arc42
@@ -13,10 +14,8 @@ related:
 - arc42-documentation-template
 - arc42-crosscutting-concepts
 - c4-model
-- load-balancer
 - 4-1-view-model
-- deployment-diagram-modeling-mistakes
-- distribution-view-antipatterns
+- arc42-deployment-view
 checks:
 - The document maps building blocks onto hardware.
 - If the system runs in several environments, each relevant environment is documented.
@@ -51,7 +50,7 @@ A deployment view describes the infrastructure under your system. It shows which
 
 **Several environments.** Some systems run in more than one environment. In that case, arc42 advises documenting all relevant environments.
 
-**Infrastructure nodes.** The C4 model has a similar deployment diagram. It can show infrastructure nodes next to deployment nodes. Examples are DNS services, load balancers and firewalls. (See the article Load Balancer.)
+**Infrastructure nodes.** The C4 model has a similar deployment diagram. It can show infrastructure nodes next to deployment nodes. Examples are DNS services, load balancers and firewalls.
 
 ## Example
 

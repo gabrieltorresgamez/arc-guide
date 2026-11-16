@@ -1,6 +1,7 @@
 ---
 title: Architecture as Set of Design Decisions
 slug: architecture-as-set-of-design-decisions
+order: 50
 category: forces-decisions
 kind: concept
 summary: Architecture is the set of important design decisions about a system. These decisions shape quality

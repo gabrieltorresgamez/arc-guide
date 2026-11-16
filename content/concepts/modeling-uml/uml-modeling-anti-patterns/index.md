@@ -13,13 +13,12 @@ arc42:
 step: s10-document
 related:
 - uml-modeling-best-practice
-- self-invented-notation-drawback
+- characteristics-of-a-good-view
 - class-component-and-package-diagram-differences
 - c4-model
 - uml-unified-modeling-language
-- association
-- class-diagram-relationships
-- component-diagram-modeling-mistakes
+- class-diagram
+- uml-component-diagram
 checks:
 - Every diagram has a legend that explains any notation that is not standard.
 - Every relationship line is labeled, and the label matches its direction and intent.
@@ -60,7 +59,7 @@ Some diagrams present themselves as UML (the Unified Modeling Language, a standa
 
 **Unexplained boxes, lines and numbers.** Boxes and lines have no built-in meaning. Without an explanation, readers interpret them differently from the author's intent. Informal sketches often leave the meaning of different box and line styles unexplained. This is a common flaw.
 
-**Arrows need a defined meaning.** Explain the arrow in a legend. A legend is a small key on the diagram that says what each symbol means. Every diagram needs one, even diagrams drawn in UML, because not everybody knows the notation. Line labels should match the direction and intent of the relationship. Vague labels like "Uses" do not help. See UML Association and UML Class Diagram Relationship for the standard meanings.
+**Arrows need a defined meaning.** Explain the arrow in a legend. A legend is a small key on the diagram that says what each symbol means. Every diagram needs one, even diagrams drawn in UML, because not everybody knows the notation. Line labels should match the direction and intent of the relationship. Vague labels like "Uses" do not help. See UML Class Diagram Relationship for the standard meanings.
 
 **One diagram, one purpose.** Mixed levels of abstraction are a common flaw in informal sketches. Create one diagram per viewpoint, meaning one set of stakeholder concerns. See Differences between Class, Component and Package Diagrams.
 

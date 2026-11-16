@@ -1,6 +1,7 @@
 ---
 title: Stakeholder Perspective and Concern
 slug: stakeholder-perspective-and-concern
+order: 120
 category: documentation
 kind: concept
 summary: A stakeholder is a person, team or organization with an interest in a system. Their interests
@@ -18,7 +19,6 @@ related:
 - architecture-viewpoint
 - iso-iec-ieee-42010-architecture-description-model
 - arc42-introduction-and-goals
-- stakeholder-identification
 checks:
 - The document contains a stakeholder overview that lists roles and each stakeholder's expectations of
   the architecture and its documentation.

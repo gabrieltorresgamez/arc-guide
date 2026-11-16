@@ -1,6 +1,7 @@
 ---
 title: Web as a Software Connector
 slug: web-as-integration-pattern
+order: 140
 category: integration
 kind: style
 summary: The Web can connect software components. Resources have global URIs, and components read or change
@@ -17,8 +18,7 @@ related:
 - messaging
 - remote-procedure-call
 - file-transfer
-- idempotent-receiver
-- retry
+- messaging-pattern-language
 checks:
 - Shared state is exposed as resources, each identified by a URI that other representations can reference.
 - Operations that clients may retry after a failure use idempotent HTTP methods (GET, PUT, DELETE).

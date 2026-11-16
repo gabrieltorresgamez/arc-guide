@@ -1,6 +1,7 @@
 ---
 title: BPMN Collaboration Diagram
 slug: bpmn-collaboration-diagram
+order: 40
 category: modeling-bpmn
 kind: notation-element
 summary: A BPMN collaboration diagram shows each participant's process in its own pool. Dashed message
@@ -13,10 +14,9 @@ related:
 - bpmn-swimlane-pool-and-lane
 - bpmn-diagram-types
 - bpmn-conversation-diagram
-- data-exchange-between-bpmn-processes
-- bpmn-layout-guideline
+- bpmn-modeling-tips
 - bpmn-event
-- levels-of-process-modeling
+- purpose-of-process-analysis-and-modeling
 - bpmn-2-0-notation-overview
 checks:
 - Operational-level process models use a separate pool per participant instead of lanes.
@@ -36,6 +36,26 @@ sources:
 - url: https://camunda.com/bpmn/examples/
   title: BPMN 2.0 Examples | Camunda
   site: camunda.com
+  accessed: '2026-11-09'
+- url: https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation
+  title: Business Process Model and Notation - Wikipedia
+  site: en.wikipedia.org
+  accessed: '2026-11-08'
+- url: https://www.enterpriseintegrationpatterns.com/patterns/messaging/SharedDataBaseIntegration.html
+  title: Shared Database - Enterprise Integration Patterns
+  site: enterpriseintegrationpatterns.com
+  accessed: '2026-11-09'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/message-events/
+  title: Message events | Camunda 8 Docs
+  site: docs.camunda.io
+  accessed: '2026-11-09'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/timer-events/
+  title: Timer events | Camunda 8 Docs
+  site: docs.camunda.io
+  accessed: '2026-11-08'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/bpmn-coverage/
+  title: BPMN coverage | Camunda 8 Docs
+  site: docs.camunda.io
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.bpmn
@@ -68,6 +88,8 @@ A message goes to a specific recipient. A signal is a broadcast: any receiver th
 **Layout**
 
 Order the pools so that message flows cross other pools as little as possible.
+
+**Exchanging data between processes.** A message flow connects pools and can never link elements inside the same pool. A message start event creates a message subscription when the process is deployed, and an intermediate message catch event creates one when the process reaches it, so the instance waits until the message arrives.
 
 ## Example
 

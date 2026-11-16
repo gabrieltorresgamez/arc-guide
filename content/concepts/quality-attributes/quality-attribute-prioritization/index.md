@@ -1,6 +1,7 @@
 ---
 title: Quality Attribute Prioritization
 slug: quality-attribute-prioritization
+order: 60
 category: quality-attributes
 kind: practice
 summary: Teams cannot maximize every quality at once, so they pick the few that matter most and rank them.

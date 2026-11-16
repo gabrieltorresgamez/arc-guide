@@ -1,6 +1,7 @@
 ---
 title: Architectural Pattern
 slug: architectural-pattern
+order: 20
 category: styles-patterns
 kind: pattern
 summary: An architectural pattern is a proven, reusable solution to a problem that keeps recurring in
@@ -17,7 +18,7 @@ related:
 - architectural-tactic
 - tactics-vs-architectural-styles-and-patterns
 - pipes-and-filters
-- layers-pattern
+- layered-architecture
 - broker-pattern
 - model-view-controller-pattern
 checks:

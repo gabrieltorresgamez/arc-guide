@@ -1,6 +1,7 @@
 ---
 title: Domain-Driven Design of the Data Model
 slug: domain-modeling-procedure
+order: 70
 category: domain-driven-design
 kind: method
 summary: Domain-driven design of the data model builds data structures from business knowledge. Teams
@@ -15,10 +16,7 @@ step: s06-domain
 related:
 - ubiquitous-language
 - bounded-context
-- aggregate
-- entity-vs-value-object
-- domain-event
-- domain-service
+- ddd-modeling-elements
 - domain-model
 - evolutionary-domain-modeling
 checks:

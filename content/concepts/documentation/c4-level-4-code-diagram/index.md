@@ -1,6 +1,7 @@
 ---
 title: 'C4 Level 4: Code Diagram'
 slug: c4-level-4-code-diagram
+order: 50
 category: documentation
 kind: notation-element
 summary: The code diagram is the fourth and most detailed C4 level. It shows the code elements inside

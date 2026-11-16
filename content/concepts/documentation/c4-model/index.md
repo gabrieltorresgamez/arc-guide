@@ -1,6 +1,7 @@
 ---
 title: C4 Model
 slug: c4-model
+order: 10
 category: documentation
 kind: framework
 summary: 'The C4 model describes software architecture with four levels of diagrams: system context, containers,

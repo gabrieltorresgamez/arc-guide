@@ -1,6 +1,7 @@
 ---
 title: Architecture View Model
 slug: architecture-view-model
+order: 50
 category: documentation
 kind: concept
 summary: An architecture view model is a ready-made set of viewpoints that fit together to describe a
@@ -19,7 +20,7 @@ related:
 - iso-iec-ieee-42010-architecture-description-standard
 - c4-model
 - arc42-documentation-template
-- common-features-of-architecture-frameworks
+- enterprise-architecture-framework
 checks:
 - The documentation states which set of viewpoints (view model) it uses, rather than an ad hoc collection
   of diagrams.

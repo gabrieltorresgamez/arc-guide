@@ -16,8 +16,8 @@ related:
 - decision-documentation-and-requirements-management
 - architectural-decision
 - smart-requirements
-- modifiability
-- accountability
+- maintainability
+- security
 - architecturally-evident-coding-style
 checks:
 - The documentation states whether traceability is full-scale or pragmatic.

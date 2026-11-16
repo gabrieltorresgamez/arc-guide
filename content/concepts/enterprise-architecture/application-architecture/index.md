@@ -1,6 +1,7 @@
 ---
 title: Application Architecture
 slug: application-architecture
+order: 10
 category: enterprise-architecture
 kind: concept
 summary: Application architecture is the enterprise-level view of which applications an organization uses
@@ -10,11 +11,9 @@ arc42:
 - 5
 step: s10-document
 related:
-- togaf-phase-c-application-architecture
 - togaf
 - enterprise-architecture-management
 - application-architecture-artifacts
-- relationship-between-enterprise-architecture-and-application-architecture
 - data-architecture
 - business-architecture
 - technology-architecture
@@ -35,6 +34,22 @@ sources:
   title: Enterprise architecture framework - Wikipedia
   site: en.wikipedia.org
   accessed: '2026-11-09'
+- url: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy
+  title: Select your cloud migration strategies - Cloud Adoption Framework | Microsoft Learn
+  site: learn.microsoft.com
+  accessed: '2026-11-09'
+- url: https://cosh.de/en/2-application-harmonization/
+  title: 2. Application Harmonization - CosH Information Technology
+  site: cosh.de
+  accessed: '2026-11-09'
+- url: https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html
+  title: About the migration strategies - AWS Prescriptive Guidance
+  site: docs.aws.amazon.com
+  accessed: '2026-11-09'
+- url: https://www.leanix.net/en/blog/gartner-time-invest
+  title: 'Gartner® TIME Framework For App Rationalization: Invest'
+  site: leanix.net
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -45,13 +60,17 @@ review:
 
 Enterprise architecture is commonly split into four domains: business, data, applications and technology. Application architecture is one of these four. It deals with the choice of applications and the relationships between them. It does not deal with how one application is built inside.
 
-TOGAF handles this work in Phase C (see "TOGAF Phase C: Application Architecture"). Its aim is to define the major kinds of application system the business needs to process its data and support its work. The phase decides which kinds of application are relevant to the enterprise. It is not application system design.
+TOGAF handles this work in Phase C (see "TOGAF"). Its aim is to define the major kinds of application system the business needs to process its data and support its work. The phase decides which kinds of application are relevant to the enterprise. It is not application system design.
 
 TOGAF describes applications as logical groups of capabilities, not as computer systems. Each group manages data objects and supports business functions. That ties the application layer to the data and business architectures.
 
 TOGAF also defines applications without reference to particular technologies. This keeps the layer logical and free of implementation choices.
 
 The organization's application portfolio is kept as a catalog in the Architecture Repository.
+
+**More about application architecture.**
+
+- **Application Landscape Evolution Drivers:** Typical drivers are cost, agility, resilience and AI. They guide choices such as retire, replace, rehost or refactor.
 
 ## Example
 

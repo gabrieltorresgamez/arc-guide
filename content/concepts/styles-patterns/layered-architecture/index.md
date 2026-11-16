@@ -12,14 +12,12 @@ arc42:
 - 8
 step: s07-solution-strategy
 related:
-- layers-pattern
-- domain-layer
+- ddd-modeling-elements
 - separation-of-concerns
 - coupling-and-cohesion
 - domain-driven-design
-- modifiability
+- maintainability
 - architectural-style
-- layers-and-components-decomposition
 checks:
 - The document states that each layer has a defined responsibility and that dependencies run only from
   higher to lower layers.
@@ -45,6 +43,22 @@ sources:
   title: THE multiprogramming system - Wikipedia
   site: en.wikipedia.org
   accessed: '2026-11-08'
+- url: https://www.martinfowler.com/bliki/PresentationDomainDataLayering.html
+  title: Presentation Domain Data Layering
+  site: martinfowler.com
+  accessed: '2026-11-08'
+- url: https://en.wikipedia.org/wiki/Layer_(object-oriented_design)
+  title: Layer (object-oriented design) - Wikipedia
+  site: en.wikipedia.org
+  accessed: '2026-11-08'
+- url: https://docs.arc42.org/section-5/
+  title: 5 - Building block view | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://martinfowler.com/bliki/BoundedContext.html
+  title: Bounded Context
+  site: martinfowler.com
+  accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
   caption: Layers where each one uses only the layer beneath it.

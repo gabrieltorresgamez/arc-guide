@@ -1,6 +1,7 @@
 ---
 title: Message Structure
 slug: message-structure
+order: 30
 category: integration
 kind: concept
 summary: A message has a body that carries the data and a header that carries information for the messaging
@@ -12,14 +13,8 @@ arc42:
 - 5
 step: s08-integration-data
 related:
-- correlation-identifier
-- return-address
-- envelope-wrapper
-- routing-slip
-- message-sequence
+- messaging-pattern-language
 - messaging
-- request-reply
-- format-identifier
 checks:
 - Request messages that expect a reply carry a unique request ID, and replies copy it into a correlation
   ID.
@@ -76,16 +71,16 @@ A message sent through a messaging system has two parts: a header and a body.
 **Header fields that support replies.** Some fields make two-way conversations possible:
 
 - **Request ID.** A token that uniquely identifies a request.
-- **Correlation Identifier.** The replier copies the request ID into the reply. The original sender can then match the reply to its request. See the article Correlation Identifier.
-- **Return Address.** The request carries this field to tell the replier where to send the reply. It sits in the header because it is metadata, not application data. See the article Return Address.
+- **Correlation Identifier.** The replier copies the request ID into the reply. The original sender can then match the reply to its request. See the article Enterprise Integration Patterns.
+- **Return Address.** The request carries this field to tell the replier where to send the reply. It sits in the header because it is metadata, not application data. See the article Enterprise Integration Patterns.
 
 **Expiration.** A Message Expiration sets a time limit on how long a message stays viable. Consumers ignore messages that have expired.
 
-**Routing.** A Routing Slip is attached to a message. It lists the sequence of processing steps, so the message can pass through a series of components. See the article Routing Slip.
+**Routing.** A Routing Slip is attached to a message. It lists the sequence of processing steps, so the message can pass through a series of components. See the article Enterprise Integration Patterns.
 
-**Envelope.** Most messaging systems split message data into a header and a body. An Envelope Wrapper builds on this. It wraps the application data in an envelope that the messaging infrastructure accepts. The message is unwrapped at the destination. See the article Envelope Wrapper.
+**Envelope.** Most messaging systems split message data into a header and a body. An Envelope Wrapper builds on this. It wraps the application data in an envelope that the messaging infrastructure accepts. The message is unwrapped at the destination. See the article Enterprise Integration Patterns.
 
-**Sequences.** A large payload can be divided into a sequence of smaller messages. This then requires sequencing, correlation and reassembly. See the article Message Sequence.
+**Sequences.** A large payload can be divided into a sequence of smaller messages. This then requires sequencing, correlation and reassembly. See the article Enterprise Integration Patterns.
 
 ## Example
 

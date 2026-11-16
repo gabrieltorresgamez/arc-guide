@@ -1,6 +1,7 @@
 ---
 title: Architecture Viewpoint
 slug: architecture-viewpoint
+order: 40
 category: documentation
 kind: concept
 summary: 'An architecture viewpoint is a set of patterns, templates and conventions for building one type

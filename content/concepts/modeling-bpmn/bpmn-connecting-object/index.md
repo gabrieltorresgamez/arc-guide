@@ -1,6 +1,7 @@
 ---
 title: BPMN Connecting Object
 slug: bpmn-connecting-object
+order: 50
 category: modeling-bpmn
 kind: notation-element
 summary: BPMN connecting objects are the lines that link elements in a process diagram. Sequence flow
@@ -12,7 +13,6 @@ related:
 - bpmn-swimlane-pool-and-lane
 - bpmn-collaboration-diagram
 - bpmn-core-elements
-- bpmn-layout-guideline
 - bpmn-modeling-tips
 - bpmn-data-element
 - bpmn-artifacts-group-and-text-annotation

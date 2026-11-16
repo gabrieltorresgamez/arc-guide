@@ -1,6 +1,7 @@
 ---
 title: BPMN Diagram Types
 slug: bpmn-diagram-types
+order: 30
 category: modeling-bpmn
 kind: notation-element
 summary: BPMN offers collaboration diagrams, which show pools and the messages between them, and conversation
@@ -15,8 +16,7 @@ related:
 - bpmn-conversation-diagram
 - bpmn-swimlane-pool-and-lane
 - bpmn-2-0-notation-overview
-- data-exchange-between-bpmn-processes
-- levels-of-process-modeling
+- purpose-of-process-analysis-and-modeling
 - bpmn-modeling-tips
 - runtime-view
 checks:

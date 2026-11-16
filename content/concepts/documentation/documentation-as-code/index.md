@@ -1,6 +1,7 @@
 ---
 title: Documentation as Code
 slug: documentation-as-code
+order: 10
 category: documentation
 kind: practice
 summary: 'Documentation as code means writing documentation with the same tools and workflows as software:

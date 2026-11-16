@@ -1,6 +1,7 @@
 ---
 title: AS-IS and TO-BE View
 slug: as-is-and-to-be-view
+order: 70
 category: documentation
 kind: practice
 summary: An AS-IS view shows the legacy system as it is. A TO-BE view shows the target. Temporary transition

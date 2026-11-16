@@ -1,6 +1,7 @@
 ---
 title: Seven Types of Architectural Decisions
 slug: seven-types-of-architectural-decisions
+order: 40
 category: forces-decisions
 kind: concept
 summary: A decision is architectural when its effects reach beyond one place. Technology choice, such
@@ -16,7 +17,7 @@ related:
 - architectural-tactic
 - architecture-decision-rationale
 - architectural-decision-record
-- architecture-decay
+- big-ball-of-mud
 - arc42-architecture-decisions
 - architecture-as-set-of-design-decisions
 checks:

@@ -1,6 +1,7 @@
 ---
 title: Architectural Decision Making Fallacies
 slug: architectural-decision-making-fallacies
+order: 60
 category: forces-decisions
 kind: concept
 summary: Architectural decisions often fail through familiar flawed reasoning, such as copying the crowd
@@ -13,12 +14,10 @@ step: s09-decisions
 related:
 - architectural-decision-record
 - architectural-decision
-- adr-common-mistakes-and-remediations
 - smart-requirements
 - architectural-decision-management-practices
 - arc42-architecture-decisions
 - levels-of-architectural-decisions
-- decision-dependencies
 checks:
 - Context and requirements are stated explicitly, so decisions can be compared with earlier projects.
 - Decision records justify choices with SMART quality criteria, not single anecdotes.
@@ -30,6 +29,10 @@ sources:
   title: Seven Architectural Decision Making Fallacies (and Ways Around Them)
   site: ozimmer.ch
   accessed: '2026-11-09'
+- url: https://www.cs.cit.tum.de/sebis/publications/2018/ma18
+  title: "Decision making and cognitive biases in designing software architectures - TUM"
+  site: cs.cit.tum.de
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated

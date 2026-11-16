@@ -1,6 +1,7 @@
 ---
 title: Context View
 slug: context-view
+order: 30
 category: vision-stakeholders
 kind: artifact
 summary: A context view shows the system as a black box and the world around it. It focuses on what data
@@ -12,11 +13,9 @@ related:
 - arc42-context-and-scope
 - business-and-technical-context
 - c4-level-1-system-context-diagram
-- context-view-antipatterns
-- refining-complex-context-views
 - contemporary-essential-views
 - deployment-diagram
-- software-architecture-in-its-context
+- software-architecture
 checks:
 - The system appears as a black box with its communication partners around it.
 - The domain interfaces state which data are exchanged with the environment.
@@ -35,6 +34,19 @@ sources:
 - url: https://c4model.com/diagrams/system-context
   title: System context diagram | C4 model
   site: c4model.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/3-11/
+  title: 'Tip 3-11: In the business context, show data flows (instead of dependencies)! | arc42 Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/3-5/
+  title: 'Tip 3-5: Restrict the context to an overview, avoid too many details! | arc42 Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://learn.microsoft.com/en-us/azure/well-architected/architect-role/design-diagrams
+  title: Create architecture design diagrams - Microsoft Azure Well-Architected Framework | Microsoft
+    Learn
+  site: learn.microsoft.com
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
@@ -67,6 +79,11 @@ The technical context shows the channels and technical interfaces to neighbors. 
 - Keep detail low. The C4 system context diagram is a zoomed-out picture of the system landscape. It suits technical and non-technical people, inside and outside the team.
 
 For the arc42 chapter that holds this view, see arc42 Context and Scope. For the C4 version, see System Context Diagram.
+
+**More about context views.**
+
+
+- **Refining Complex Context Views:** A complex system context stays readable when the top-level diagram remains a simple overview. Many external systems are grouped by clear criteria, and the detail of each interface, business and technical, is described separately.
 
 ## Example
 

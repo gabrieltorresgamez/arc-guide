@@ -1,6 +1,7 @@
 ---
 title: ISO/IEC 25010 Product Quality Model
 slug: iso-iec-25010-quality-model
+order: 20
 category: quality-attributes
 kind: standard
 summary: ISO/IEC 25010 is a standard that sorts software product quality into named characteristics and
@@ -11,13 +12,11 @@ arc42:
 - 1
 step: s04-quality-requirements
 related:
-- iso-25010-2023-revision
 - quality-models-and-their-target-entities
 - quality-attribute
 - performance-efficiency
 - reliability
 - security
-- availability
 - arc42-quality-chapter
 checks:
 - Quality requirements use the names of the nine characteristics and their subcharacteristics from the
@@ -53,6 +52,18 @@ sources:
   title: ISO/IEC 25019:2023 - EVS standard evs.ee | en
   site: evs.ee
   accessed: '2026-11-09'
+- url: https://quality.arc42.org/articles/iso-25010-shortcomings
+  title: Shortcomings of ISO 25010 | arc42 Quality Model
+  site: quality.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.informit.com/articles/article.aspx?p=3128836&seqNum=3
+  title: Quality Attributes | Why Software Architecture is Important and Essential Activities | InformIT
+  site: informit.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-10/
+  title: 10 - Quality | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-08'
 diagrams: []
 review:
   status: generated
@@ -71,12 +82,14 @@ ISO/IEC 25010 belongs to the ISO/IEC 25000 series, called SQuaRE. The series has
 The 2023 edition of the product quality model has nine quality characteristics. Each characteristic breaks down into subcharacteristics. Some examples:
 
 - **Performance efficiency** covers time behaviour, resource utilization and capacity. See Performance Efficiency.
-- **Reliability** covers faultlessness, availability, fault tolerance and recoverability. Availability means the system is operational and reachable when someone needs it. See Reliability and Availability.
-- **Security** includes a new subcharacteristic, resistance. It means the system keeps operating while a malicious actor attacks it. See Security and Resistance.
+- **Reliability** covers faultlessness, availability, fault tolerance and recoverability. Availability means the system is operational and reachable when someone needs it. See Reliability.
+- **Security** includes the subcharacteristic resistance. It means the system keeps operating while a malicious actor attacks it. See Security.
 
 The 2023 edition also split accessibility into inclusivity and user assistance.
 
-A separate standard, ISO/IEC 25019:2023, defines the quality-in-use model. It has three characteristics. People use it to specify, measure, evaluate and improve quality in use. For what changed in 2023, see ISO/IEC 25010:2023 Product Quality Model Revision.
+A separate standard, ISO/IEC 25019:2023, defines the quality-in-use model. It has three characteristics. People use it to specify, measure, evaluate and improve quality in use.
+
+**Limits of a standard list.** A standard list gives teams a shared vocabulary, but critics point out weaknesses. Some terms overlap, for example the definitions of maintainability and flexibility, and any strict hierarchy of qualities can be disputed. Operational qualities such as deployability are missing. Quality names alone can be ambiguous, so a quality attribute scenario makes a requirement concrete (see Quality Attribute Scenario). Approximately ten scenarios are manageable for most systems.
 
 ## Example
 

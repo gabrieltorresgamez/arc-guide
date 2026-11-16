@@ -1,6 +1,7 @@
 ---
 title: Concern
 slug: concern
+order: 20
 category: forces-decisions
 kind: concept
 summary: A concern is something a stakeholder cares about in a system, such as performance, security or
@@ -31,10 +32,6 @@ sources:
 - url: https://quality.arc42.org/standards/iso-42010
   title: ISO/IEC/IEEE 42010 - Architecture Description | arc42 Quality Model
   site: quality.arc42.org
-  accessed: '2026-11-09'
-- url: https://archman.dev/docs/foundational-concepts/what-is-software-architecture/stakeholders-and-concerns
-  title: Stakeholders & Concerns | ArchMan
-  site: archman.dev
   accessed: '2026-11-09'
 - url: https://en.wikipedia.org/wiki/Concern_(computer_science)
   title: Concern (computer science) - Wikipedia
@@ -78,7 +75,7 @@ Dijkstra coined the term separation of concerns. There, a concern is any aspect 
 
 **Conflicting concerns**
 
-Concerns can conflict. Time-to-market can pull against long-term maintainability. The architect should then facilitate explicit trade-off choices. One way is a time-boxed workshop. The reasoning is then recorded in Architecture Decision Records.
+Time-to-market can pull against long-term maintainability. One way is a time-boxed workshop. The reasoning is then recorded in Architecture Decision Records.
 
 ## Example
 
@@ -88,4 +85,4 @@ The launch date and easy-to-change code pull in different directions. The archit
 
 ## Trade-offs
 
-Favoring one concern, such as time-to-market, can cost another, such as long-term maintainability. Making the trade-off explicit, in a workshop and a written decision record, takes time. It avoids hidden choices.
+Favoring one concern, such as time-to-market, can cost another, such as long-term maintainability. It avoids hidden choices.

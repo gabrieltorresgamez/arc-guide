@@ -1,6 +1,7 @@
 ---
 title: arc42 Architecture Documentation Template
 slug: arc42-documentation-template
+order: 10
 category: documentation
 kind: framework
 summary: arc42 is a free template that gives architecture information a fixed place across twelve sections.
@@ -28,6 +29,10 @@ related:
 - arc42-solution-strategy
 - iso-iec-ieee-42010-architecture-description-standard
 - agile-architecture
+- arc42-building-block-view
+- arc42-runtime-view
+- arc42-deployment-view
+- arc42-risks-and-technical-debt
 checks:
 - The architecture documentation is organized by the twelve arc42 sections, tailored to the project's
   needs.
@@ -79,7 +84,7 @@ arc42 is a template for documenting software architecture. It answers two questi
 The sections are:
 
 1. Introduction and Goals
-2. Architecture Constraints
+2. Constraints
 3. Context and Scope
 4. Solution Strategy
 5. Building Block View
@@ -97,7 +102,7 @@ The sections are:
 
 **Open source.** arc42 is free, including for commercial use. A GitHub repository holds the AsciiDoc source of the template. Releases include all languages, styles and formats, plus a manifest of checksums. The founders maintain the English and German versions.
 
-**Relation to C4.** The arc42 FAQ says the C4 model overlaps with some arc42 sections. It also omits parts such as quality requirements, crosscutting concepts and risks. See the article on the C4 Model.
+**Relation to C4.** The arc42 FAQ says the C4 model overlaps with some arc42 sections. It also omits parts such as quality requirements, crosscutting concepts and risks.
 
 ## Example
 

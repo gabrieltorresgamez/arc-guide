@@ -10,13 +10,9 @@ arc42:
 - 8
 step: s10-document
 related:
-- loose-coupling
 - coupling-and-cohesion
 - information-hiding
-- uml-interface
-- provided-and-required-interface
-- reduce-coupling
-- split-module
+- uml-component-diagram
 - patterns-for-api-design
 checks:
 - Interfaces are defined around the needs of specific consumers, not copied from all public methods of

@@ -1,6 +1,7 @@
 ---
 title: Architecture Decision Documentation and Requirements Management
 slug: decision-documentation-and-requirements-management
+order: 30
 category: forces-decisions
 kind: practice
 summary: Architects write down important decisions with their context, reasons and consequences. That
@@ -15,9 +16,6 @@ related:
 - arc42-architecture-decisions
 - architecture-decision-rationale
 - requirements-versus-constraints
-- y-statement
-- markdown-architectural-decision-records-madr
-- adr-common-mistakes-and-remediations
 - architectural-decision
 checks:
 - Each important decision is documented with its motivation and reasoning.

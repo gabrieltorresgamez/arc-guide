@@ -1,6 +1,7 @@
 ---
 title: Requirements Trawling
 slug: requirements-elicitation
+order: 20
 category: functional-requirements
 kind: practice
 summary: Requirements trawling means gathering requirements with several techniques, expecting that you

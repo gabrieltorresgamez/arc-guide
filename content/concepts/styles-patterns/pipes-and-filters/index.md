@@ -13,14 +13,9 @@ arc42:
 - 8
 step: s07-solution-strategy
 related:
-- pipe-and-filter-pattern
 - architectural-style
-- message-filter
-- message-channel
-- content-based-router
-- message-translator
-- idempotent-receiver
-- performance-tactics
+- messaging-pattern-language
+- performance-efficiency-tactics
 checks:
 - Each filter's input and output formats are documented, and adjacent filters have matching formats.
 - Pipes contain no routing or business logic; all logic sits in filters.
@@ -49,7 +44,7 @@ review:
 
 Pipes and Filters breaks one large processing task into a sequence of smaller, independent steps. Each step is a **filter**. Filters are linked by **pipes**, which carry the output messages of one filter to the next filter.
 
-**Filters.** In the basic form, a filter has one input and one output. It receives a message from the pipe before it, does its work, and sends a result into the pipe after it. A filter can transform a message. It can also test a message against criteria, which adds conditional logic. Filters are independent, self-contained, and typically stateless, meaning they keep no memory between messages.
+**Filters.** In the basic form, a filter has one input and one output. It receives a message from the pipe before it, does its work, and sends a result into the pipe after it. A filter can transform a message. It can also test a message against criteria, which adds conditional logic. Filters are independent, self-contained, and typically stateless.
 
 **Pipes.** Pipes only connect. They contain no routing and no logic.
 
@@ -58,6 +53,10 @@ Pipes and Filters breaks one large processing task into a sequence of smaller, i
 **Implementation.** Teams usually build this as one monolithic pipeline, meaning one deployed unit. A pipeline can also use message queues as pipes, with each filter listening on a queue. For example, Azure Functions with Queue Storage can form an image-processing pipeline. Each filter reads a message, does its work, and posts a new or transformed message to the next queue.
 
 **Error handling.** Every filter must decide what to do on a breaking error. It either fails the pipeline or passes the exception on. Filters should also be idempotent, so repeating the same message is safe.
+
+**More about pipes and filters.**
+
+- **Pipe-and-Filter:** Pipe-and-Filter splits a big processing job into small, independent steps called filters. Pipes pass each step's output to the next. You can add, remove, or reorder steps, but all steps must agree on the data format.
 
 ## Example
 

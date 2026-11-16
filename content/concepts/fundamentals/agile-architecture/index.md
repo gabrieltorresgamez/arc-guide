@@ -1,6 +1,7 @@
 ---
 title: Agile Architecture
 slug: agile-architecture
+order: 70
 category: fundamentals
 kind: practice
 summary: Agile architecture means doing just enough architecture, guided by the biggest risks, and revisiting
@@ -18,7 +19,7 @@ related:
 - last-responsible-moment
 - iterative-and-incremental-development
 - architecture-viewpoint
-- architecture-decay
+- big-ball-of-mud
 checks:
 - The document names the main project risks and ties architecture effort to them.
 - Models or viewpoints are chosen to answer stated questions, such as a throughput model for a throughput

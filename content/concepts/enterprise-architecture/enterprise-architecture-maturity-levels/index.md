@@ -1,6 +1,7 @@
 ---
 title: Enterprise Architecture Maturity Level
 slug: enterprise-architecture-maturity-levels
+order: 20
 category: enterprise-architecture
 kind: framework
 summary: An enterprise architecture maturity level shows how well the architecture function has developed.
@@ -11,12 +12,9 @@ arc42:
 - 4
 step: null
 related:
-- enterprise-architecture-maturity-stages
 - enterprise-architecture-management
 - togaf
-- enterprise-architecture-strategy
-- warning-signs-of-poor-enterprise-architecture
-- degrees-of-bpm-maturity
+- purpose-of-process-analysis-and-modeling
 checks:
 - The document states the target maturity level and explains why it fits the organization's size and complexity.
 - Maturity is tied to value realized by the organization, not only to a level label.
@@ -39,6 +37,26 @@ sources:
 - url: https://www.ardoq.com/knowledge-hub/enterprise-architecture-maturity-model
   title: 'Enterprise Architecture Maturity Model: A Comprehensive Guide'
   site: ardoq.com
+  accessed: '2026-11-09'
+- url: https://mitsloan.mit.edu/ideas-made-to-matter/mit-expert-recaps-30-plus-years-enterprise-architecture
+  title: MIT expert recaps 30-plus years of enterprise architecture | MIT Sloan
+  site: mitsloan.mit.edu
+  accessed: '2026-11-09'
+- url: https://cisr.mit.edu/publication/2012_0901_ArchitectureLearning_RossQuaadgras
+  title: Enterprise Architecture Is Not Just for Architects | MIT CISR
+  site: cisr.mit.edu
+  accessed: '2026-11-09'
+- url: https://cisr.mit.edu/sites/default/files/2020-02/Enterprise%20Architecture.txt
+  title: ''
+  site: cisr.mit.edu
+  accessed: '2026-11-09'
+- url: https://cisr.mit.edu/publication/2020_0601_BuildingComponentizedOrganization_RossBeathNelson
+  title: 'The Digital Operating Model: Building a Componentized Organization | MIT CISR'
+  site: cisr.mit.edu
+  accessed: '2026-11-09'
+- url: https://lethain.com/notes-on-enterprise-architecture-as-strategy/
+  title: Notes on Enterprise Architecture as Strategy | Irrational Exuberance
+  site: lethain.com
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
@@ -65,6 +83,10 @@ See the article Enterprise Architecture. A maturity level describes how develope
 Info-Tech's assessment brief says its auto-generated goals and roadmap turn improvement into a step-by-step process.
 
 **Other models exist.** TOGAF (see the article TOGAF) includes the Architecture Capability Maturity Model (ACMM). The US Department of Commerce developed it. It nominally has six levels, numbered 0 to 5. The NASCIO model is another option. It was designed for state governments.
+
+**Maturity stages.**
+
+- **Enterprise Architecture Maturity Stages:** Enterprise architecture maturity stages describe how a firm's architecture grows from business silos to standardized technology, optimized core, and business modularity, later extended to a digital ecosystem. Value depends on governance and learning, not stage alone.
 
 ## Example
 

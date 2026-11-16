@@ -1,6 +1,7 @@
 ---
 title: Event Sourcing with Distributed Event Log
 slug: event-sourcing-with-distributed-event-log
+order: 60
 category: integration
 kind: pattern
 summary: A distributed event log is a shared, append-only record of events that many applications use
@@ -17,10 +18,9 @@ step: s08-integration-data
 related:
 - shared-database
 - command-query-responsibility-segregation
-- idempotent-receiver
+- messaging-pattern-language
 - integration-pattern
-- domain-event
-- publish-subscribe-channel
+- ddd-modeling-elements
 - messaging
 - stream
 checks:
@@ -86,5 +86,5 @@ An online shop writes "order placed", "order paid" and "order shipped" events to
 - **Retention limits replay.** Events disappear after the retention period, and they cannot be deleted on demand.
 - **Ordering is partial.** Order holds only within a partition. Demanding global order limits how many partitions you can use.
 - **A broker is not a full event store.** A broker such as Kafka typically lacks per-entity stream queries and optimistic concurrency. It mainly distributes events.
-- **Duplicates are possible.** Delivery is typically at-least-once, so consumers must be idempotent (see Idempotent Receiver).
+- **Duplicates are possible.** Delivery is typically at-least-once, so consumers must be idempotent (see Enterprise Integration Patterns).
 - **Decoupling.** Producers do not depend on subscribers, which lets you add new readers without changing writers.

@@ -1,6 +1,7 @@
 ---
 title: Software Architecture Analysis Method (SAAM)
 slug: software-architecture-analysis-method-saam
+order: 60
 category: evaluation
 kind: method
 summary: SAAM is the first documented method for analyzing a software architecture. It uses scenarios
@@ -12,11 +13,8 @@ step: s11-evaluate
 related:
 - architecture-tradeoff-analysis-method-atam
 - software-architecture-evaluation
-- modifiability
-- modifiability-scenario
+- maintainability
 - quality-attribute-scenario
-- scenario-weight-assignment
-- advantages-and-drawbacks-of-atam
 - quality-attribute
 checks:
 - The architecture document lists the change scenarios used to evaluate the design.
@@ -43,7 +41,7 @@ review:
 
 ## Explanation
 
-SAAM stands for Software Architecture Analysis Method. It was the first documented method for analyzing software architecture. It was developed in the mid-1990s. Its goal was to analyze modifiability, meaning how easily a system can be changed (see the article Modifiability).
+SAAM stands for Software Architecture Analysis Method. It was the first documented method for analyzing software architecture. It was developed in the mid-1990s. Its goal was to analyze modifiability, meaning how easily a system can be changed (see the article Maintainability).
 
 The method works with scenarios. The scenarios represent possible changes or enhancements that might be needed in the future. SAAM uses scenarios to check how well an architecture supports change and modification. The original paper presents a structured, scenario-based method for analyzing architectures against quality attributes (see Quality Attribute).
 

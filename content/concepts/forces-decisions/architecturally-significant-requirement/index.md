@@ -1,6 +1,7 @@
 ---
 title: Architecturally Significant Requirement
 slug: architecturally-significant-requirement
+order: 40
 category: forces-decisions
 kind: concept
 summary: An architecturally significant requirement strongly shapes the architecture because it is hard

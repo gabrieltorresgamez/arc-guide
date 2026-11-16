@@ -1,6 +1,7 @@
 ---
 title: Choosing and Applying Tactics
 slug: choosing-and-applying-tactics
+order: 40
 category: tactics
 kind: method
 summary: Choosing tactics means picking design decisions that serve quality requirements you already captured.

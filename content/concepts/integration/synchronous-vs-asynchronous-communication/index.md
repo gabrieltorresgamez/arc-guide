@@ -1,6 +1,7 @@
 ---
 title: Synchronous vs. Asynchronous Communication
 slug: synchronous-vs-asynchronous-communication
+order: 80
 category: integration
 kind: concept
 summary: A synchronous call makes the caller wait for the answer. An asynchronous call lets the caller
@@ -13,13 +14,11 @@ arc42:
 step: s08-integration-data
 related:
 - synchronous-vs-asynchronous-connector
-- request-reply
-- correlation-identifier
+- messaging-pattern-language
 - messaging
-- circuit-breaker
 - remote-procedure-call
-- loose-coupling
-- availability
+- coupling-and-cohesion
+- reliability
 checks:
 - The document states how each remote call handles an unavailable supplier.
 - Long chains of synchronous calls between services are identified, with a stated way to handle their

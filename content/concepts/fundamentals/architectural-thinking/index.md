@@ -1,6 +1,7 @@
 ---
 title: Architectural Thinking
 slug: architectural-thinking
+order: 40
 category: fundamentals
 kind: method
 summary: Architectural thinking is a repeated cycle of designing, checking and refining. It starts from

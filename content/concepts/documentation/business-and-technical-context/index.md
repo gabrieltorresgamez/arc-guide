@@ -1,6 +1,7 @@
 ---
 title: Business and Technical Context
 slug: business-and-technical-context
+order: 20
 category: documentation
 kind: concept
 summary: Business context shows which data a system exchanges with people and neighboring systems. Technical
@@ -14,10 +15,7 @@ related:
 - context-view
 - c4-level-1-system-context-diagram
 - deployment-diagram
-- context-view-antipatterns
-- refining-complex-context-views
-- component-port
-- provided-and-required-interface
+- uml-component-diagram
 checks:
 - The business context shows the system as a black box with its domain interfaces to each communication
   partner.
@@ -33,6 +31,19 @@ sources:
 - url: https://c4model.com/diagrams/system-context
   title: System context diagram | C4 model
   site: c4model.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/3-5/
+  title: 'Tip 3-5: Restrict the context to an overview, avoid too many details! | arc42 Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://socadk.github.io/design-practice-repository/artifact-templates/DPR-ContextDiagram.html
+  title: design-practice-repository | Summaries of artifacts, templates, practices, and techniques for
+    agile architecting (DPR-mm) and service design (SDPR-nn).
+  site: socadk.github.io
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/3-11/
+  title: 'Tip 3-11: In the business context, show data flows (instead of dependencies)! | arc42 Documentation'
+  site: docs.arc42.org
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
@@ -75,6 +86,10 @@ A C4 system context diagram puts the system in the center, among users and exter
 - Drawing dependencies instead of data flows in the business view.
 
 If several neighbors are alike, you can cluster them using ports.
+
+**Common mistakes.**
+
+- **Context View Antipatterns:** A context diagram shows one system as a black box, with its direct neighbors and the data exchanged. Common mistakes blur this view: unlabeled arrows, system internals, unclear boundaries, or too much detail.
 
 ## Example
 

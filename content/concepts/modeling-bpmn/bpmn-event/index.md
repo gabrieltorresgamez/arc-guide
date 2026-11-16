@@ -1,6 +1,7 @@
 ---
 title: BPMN Event
 slug: bpmn-event
+order: 10
 category: modeling-bpmn
 kind: notation-element
 summary: A BPMN event is something that happens in a process and affects its flow. Events either wait
@@ -10,14 +11,9 @@ arc42:
 - 8
 step: s10-document
 related:
-- intermediate-event
-- attached-boundary-intermediate-event
-- bpmn-link-event
-- bpmn-compensation-event
-- event-based-gateway
+- bpmn-gateway-semantics
 - bpmn-core-elements
 - bpmn-activity
-- bpmn-gateway-semantics
 checks:
 - Boundary events in the process models are intermediate catch events.
 - Every throwing link event has a catching link event with the same link name.
@@ -43,6 +39,50 @@ sources:
   accessed: '2026-11-09'
 - url: https://docs.camunda.io/docs/components/modeler/bpmn/signal-events/
   title: Signal events | Camunda 8 Docs
+  site: docs.camunda.io
+  accessed: '2026-11-09'
+- url: https://www.flowable.com/open-source/docs/bpmn/ch07b-BPMN-Constructs
+  title: BPMN 2.0 Constructs · Flowable Open Source Documentation
+  site: flowable.com
+  accessed: '2026-11-09'
+- url: https://camunda.com/bpmn/reference/
+  title: BPMN 2.0 Symbols - A complete guide with examples. | Camunda
+  site: camunda.com
+  accessed: '2026-11-09'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/event-based-gateways/
+  title: Event-based gateway | Camunda 8 Docs
+  site: docs.camunda.io
+  accessed: '2026-11-08'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/message-events/
+  title: Message events | Camunda 8 Docs
+  site: docs.camunda.io
+  accessed: '2026-11-09'
+- url: https://camunda.com/blog/2018/08/bpmn-for-microservices-orchestration-a-primer-part-1/
+  title: BPMN and Microservices Orchestration, Part 1 of 2 | Camunda
+  site: camunda.com
+  accessed: '2026-11-09'
+- url: https://docs.axelor.com/studio/3.3/bpm-docs/BPMN/events/link_event.html
+  title: 'Link Event :: Axelor Documentation'
+  site: docs.axelor.com
+  accessed: '2026-11-09'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/compensation-events/
+  title: Compensation events | Camunda 8 Docs
+  site: docs.camunda.io
+  accessed: '2026-11-09'
+- url: https://docs.camunda.org/manual/7.6/reference/bpmn20/events/cancel-and-compensation-events/
+  title: Cancel and Compensation Events | docs.camunda.org
+  site: docs.camunda.org
+  accessed: '2026-11-09'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/error-events/
+  title: Error events | Camunda 8 Docs
+  site: docs.camunda.io
+  accessed: '2026-11-09'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/timer-events/
+  title: Timer events | Camunda 8 Docs
+  site: docs.camunda.io
+  accessed: '2026-11-08'
+- url: https://docs.camunda.io/docs/components/modeler/bpmn/escalation-events/
+  title: Escalation events | Camunda 8 Docs
   site: docs.camunda.io
   accessed: '2026-11-09'
 diagrams:
@@ -71,13 +111,13 @@ A start event reacts to something external. That trigger begins the process or a
 
 **Boundary events**
 
-A boundary event must be an intermediate catch event. The articles Boundary Event and Intermediate Event cover this in detail.
+A boundary event must be an intermediate catch event.
 
 **Link events**
 
 Link events come in pairs. One throws and marks an exit point. The other catches and marks a re-entry point. A shared link name matches them.
 
-A pair works like two plain intermediate events joined by a sequence flow. Modelers use links to build loops or to skip sections. The article Link Event covers this.
+A pair works like two plain intermediate events joined by a sequence flow. Modelers use links to build loops or to skip sections.
 
 **Terminate end events**
 
@@ -93,6 +133,12 @@ An event subprocess can be interrupting or non-interrupting.
 **Signals**
 
 Broadcasting a signal triggers every signal event with a matching name. So one signal can reach many subscribers.
+
+**More about events.**
+- **Intermediate events** sit in the middle of a process. A throwing event has a black-filled icon and fires a trigger when execution reaches it. A catching event has a white icon and makes the process wait until the trigger occurs.
+- **Boundary events** sit on the edge of a task or subprocess and watch for something while it runs. An interrupting boundary event ends the activity when it fires, and a non-interrupting one does not. An error boundary event is always interrupting.
+- **Link events** work as a jump: a throwing link event is the exit point and the catching link event with the same name is the re-entrance point. They carry no business meaning and only make diagrams easier to read.
+- **Compensation events** model the undo of work that finished successfully. A compensation boundary event marks an activity as one that may need to be reverted, and a throwing compensation event starts the undo.
 
 ## Example
 

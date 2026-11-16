@@ -1,6 +1,7 @@
 ---
 title: Architectural Decision-Making Process
 slug: architectural-decision-making-in-project-development
+order: 50
 category: forces-decisions
 kind: practice
 summary: Architectural decision-making is an ongoing, team-based activity. One decision triggers others,
@@ -13,11 +14,9 @@ step: s09-decisions
 related:
 - architectural-decision
 - architectural-decision-record
-- decision-dependencies
+- architectural-decision-management-practices
 - last-responsible-moment
 - architecturally-significant-decision
-- architectural-decision-management-cycle
-- definition-of-done-for-architectural-decisions
 - architecture-decision-rationale
 checks:
 - Each recorded decision shows at least two options that were compared.

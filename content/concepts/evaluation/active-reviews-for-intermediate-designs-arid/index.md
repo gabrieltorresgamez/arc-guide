@@ -1,6 +1,7 @@
 ---
 title: Active Reviews for Intermediate Designs (ARID)
 slug: active-reviews-for-intermediate-designs-arid
+order: 70
 category: evaluation
 kind: method
 summary: ARID is a review for a design that is finer than a full architecture and not yet fully documented.
@@ -13,11 +14,9 @@ related:
 - architecture-tradeoff-analysis-method-atam
 - lightweight-atam
 - software-architecture-evaluation
-- voting
 - lightweight-approach-for-software-reviews-lasr
 - software-architecture-analysis-method-saam
 - quality-attribute
-- advantages-and-drawbacks-of-atam
 checks:
 - The design under review is finer-grained than an architecture and not yet completely documented.
 - Application programmers who will use the design are involved in the review before the detailed specification
@@ -48,7 +47,7 @@ Some designs are more detailed than an architecture but too early to have comple
 
 The review shows the design to its user community. These are the application programmers who will build on it. They give feedback before the design is locked into a detailed specification.
 
-For more on ranking ideas as a group, see the article on Voting.
+
 
 Wikipedia describes ARID as a method for evaluating architectures at an intermediate level.
 

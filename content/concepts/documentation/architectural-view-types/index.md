@@ -1,6 +1,7 @@
 ---
 title: Architectural View Type
 slug: architectural-view-types
+order: 70
 category: documentation
 kind: concept
 summary: An architectural view type is a category of diagram that shows one kind of structure of a system.

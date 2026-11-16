@@ -1,6 +1,7 @@
 ---
 title: ISO/IEC 25010 Quality Models and Their Target Entities
 slug: quality-models-and-their-target-entities
+order: 30
 category: quality-attributes
 kind: standard
 summary: 'ISO/IEC 25010 and its sibling standards give separate quality models for different targets:
@@ -12,10 +13,8 @@ arc42:
 step: s04-quality-requirements
 related:
 - iso-iec-25010-quality-model
-- iso-25010-2023-revision
 - quality-attribute
 - arc42-quality-chapter
-- standard-quality-attribute-checklist
 - data-architecture
 checks:
 - The document states which target (ICT product, data, or IT service) each quality model is applied to.
@@ -51,7 +50,7 @@ review:
 
 A quality model is a list of quality characteristics. Each list is built for one kind of thing, called its target.
 
-**Product quality model (ISO/IEC 25010:2023).** Its target is an ICT product that is part of an information system. The 2023 model has nine characteristics. Interaction Capability is one of them. The model also reaches the components of such a product. These include software, firmware, hardware, data and communication infrastructure. So you can apply it to hardware and communication parts when they belong to the product. The articles "ISO/IEC 25010 Product Quality Model" and "ISO/IEC 25010:2023 Product Quality Model Revision" cover the characteristics.
+**Product quality model (ISO/IEC 25010:2023).** Its target is an ICT product that is part of an information system. The 2023 model has nine characteristics. Interaction Capability is one of them. The model also reaches the components of such a product. These include software, firmware, hardware, data and communication infrastructure. So you can apply it to hardware and communication parts when they belong to the product. The article "ISO/IEC 25010 Product Quality Model" covers the characteristics.
 
 **Data quality model (ISO/IEC 25012).** This is a separate model. Its target is data. It has 15 characteristics. It is the basis for assessing the quality of data products.
 

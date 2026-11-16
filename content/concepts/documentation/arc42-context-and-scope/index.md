@@ -1,6 +1,7 @@
 ---
 title: arc42 Context and Scope
 slug: arc42-context-and-scope
+order: 40
 category: documentation
 kind: artifact
 summary: Context and Scope is the arc42 chapter that shows the system as a black box and what it exchanges
@@ -12,7 +13,6 @@ related:
 - business-and-technical-context
 - c4-level-1-system-context-diagram
 - context-view
-- context-view-antipatterns
 - arc42-documentation-template
 - arc42-introduction-and-goals
 - c4-model

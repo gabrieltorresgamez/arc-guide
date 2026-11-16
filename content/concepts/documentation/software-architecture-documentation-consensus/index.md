@@ -1,6 +1,7 @@
 ---
 title: Software Architecture Documentation Consensus
 slug: software-architecture-documentation-consensus
+order: 150
 category: documentation
 kind: concept
 summary: 'Teams that document software architecture increasingly agree on the basics: split the description

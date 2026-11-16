@@ -1,6 +1,7 @@
 ---
 title: Integration
 slug: integration
+order: 10
 category: integration
 kind: concept
 summary: Integration makes separate applications work together to deliver one unified set of functionality.
@@ -16,9 +17,9 @@ related:
 - shared-database
 - remote-procedure-call
 - messaging
-- loose-coupling
+- coupling-and-cohesion
 - synchronous-vs-asynchronous-communication
-- interoperability
+- compatibility
 checks:
 - The document names the integration style used between each pair of systems (file transfer, shared database,
   remote procedure call or messaging).

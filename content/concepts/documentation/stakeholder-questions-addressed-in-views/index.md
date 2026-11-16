@@ -1,6 +1,7 @@
 ---
 title: Stakeholder Questions Addressed in Views
 slug: stakeholder-questions-addressed-in-views
+order: 130
 category: documentation
 kind: concept
 summary: Stakeholders ask recurring questions about a system. Each question points to a view that should
@@ -15,7 +16,7 @@ related:
 - stakeholder-concern
 - architecture-viewpoint
 - architecture-view
-- stakeholder-identification
+- stakeholder
 - context-view
 - arc42-introduction-and-goals
 - iso-iec-ieee-42010-architecture-description-standard

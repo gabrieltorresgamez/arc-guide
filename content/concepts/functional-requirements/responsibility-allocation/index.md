@@ -10,7 +10,7 @@ arc42:
 - 5
 step: s03-functional-requirements
 related:
-- goal-hierarchy-to-component-mapping
+- use-case
 - architectural-tactic
 - quality-attribute
 - functional-suitability

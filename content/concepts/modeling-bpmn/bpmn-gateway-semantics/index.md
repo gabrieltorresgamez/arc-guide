@@ -1,6 +1,7 @@
 ---
 title: BPMN Gateway
 slug: bpmn-gateway-semantics
+order: 30
 category: modeling-bpmn
 kind: notation-element
 summary: A BPMN gateway controls where a process path splits or joins. Splits send the flow down one,
@@ -10,12 +11,8 @@ arc42:
 - 8
 step: s10-document
 related:
-- event-based-gateway
-- antipatterns-for-process-flows
-- deadlock-in-process-models
-- lack-of-synchronization-in-process-models
-- bpmn-core-elements
 - soundness-of-process-models
+- bpmn-core-elements
 - bpmn-event
 - bpmn-modeling-tips
 checks:
@@ -45,6 +42,10 @@ sources:
   title: BPMN primer | Camunda 8 Docs
   site: docs.camunda.io
   accessed: '2026-11-08'
+- url: https://camunda.com/bpmn/reference/
+  title: BPMN 2.0 Symbols - A complete guide with examples. | Camunda
+  site: camunda.com
+  accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.bpmn
   caption: A parallel split and join, followed by an exclusive split with a default flow.
@@ -65,6 +66,8 @@ Process execution can be pictured as tokens moving through a process model. A to
 **Inclusive gateway (OR).** As a split, it takes every outgoing flow whose condition is fulfilled. The join is finished when all incoming flows were taken. It is also finished when no path remains from any active node to it.
 
 **Event-based gateway.** It waits for events and follows the flow of the first one that is triggered. The other events are then no longer possible. In Camunda, each target must be an intermediate catch event of type timer, message, or signal.
+
+**Event-based gateway.** An event-based gateway routes by which event takes place next, not by data. The process waits at the gateway, each outgoing flow leads to an intermediate catch event, such as a timer, message or signal event, and the first event that is triggered selects its flow. Compare the data-based exclusive gateway, which decides from available data and follows only one path.
 
 ## Example
 

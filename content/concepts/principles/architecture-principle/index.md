@@ -1,6 +1,7 @@
 ---
 title: Architecture Principle
 slug: architecture-principle
+order: 10
 category: principles
 kind: principle
 summary: An architecture principle is a short statement of what an organization values. It narrows the
@@ -11,14 +12,10 @@ arc42:
 - 9
 step: s07-solution-strategy
 related:
-- structure-of-an-architecture-principle
-- working-with-principles
-- conflicting-architecture-principles
 - continuous-architecture-principles
 - architectural-decision
 - arc42-solution-strategy
 - data-architecture-principle
-- relationships-between-architecture-principles
 checks:
 - Each principle has a statement, a rationale tied to stakeholder goals, consequences, exceptions and
   relations.
@@ -43,6 +40,71 @@ sources:
   title: 4 - Solution strategy | arc42 Documentation
   site: docs.arc42.org
   accessed: '2026-11-09'
+- url: https://togaf.visual-paradigm.com/2025/01/21/comprehensive-guide-to-applying-architecture-principles-in-togaf-adm/
+  title: Comprehensive Guide to Applying Architecture Principles in TOGAF ADM - Visual Paradigm
+  site: togaf.visual-paradigm.com
+  accessed: '2026-11-09'
+- url: https://togaf.visual-paradigm.com/2023/10/12/crafting-effective-architecture-principles-a-guide/
+  title: 'Crafting Effective Architecture Principles: A Guide - Visual Paradigm'
+  site: togaf.visual-paradigm.com
+  accessed: '2026-11-09'
+- url: https://public.isaqb.org/glossary/glossary-en.html
+  title: iSAQB® Glossary of Software Architecture Terminology
+  site: public.isaqb.org
+  accessed: '2026-11-09'
+- url: https://public.isaqb.org/curriculum-foundation/curriculum-foundation-en.html
+  title: 'Curriculum forCertified Professional forSoftware Architecture (CPSA)®: Foundation Level'
+  site: public.isaqb.org
+  accessed: '2026-11-09'
+- url: https://learn.microsoft.com/en-us/azure/well-architected/reliability/simplify
+  title: Architecture strategies for designing for simplicity and efficiency - Microsoft Azure Well-Architected
+    Framework | Microsoft Learn
+  site: learn.microsoft.com
+  accessed: '2026-11-09'
+- url: https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles
+  title: Architectural principles - .NET | Microsoft Learn
+  site: learn.microsoft.com
+  accessed: '2026-11-09'
+- url: https://martinfowler.com/bliki/Yagni.html
+  title: Yagni
+  site: martinfowler.com
+  accessed: '2026-11-09'
+- url: https://www.sei.cmu.edu/library/architecture-tradeoff-analysis-method-collection/
+  title: Architecture Tradeoff Analysis Method® Collection | CMU Software Engineering Institute
+  site: sei.cmu.edu
+  accessed: '2026-11-09'
+- url: https://adr.github.io/
+  title: Architectural Decision Records (ADRs) | Architectural Decision Records
+  site: adr.github.io
+  accessed: '2026-11-09'
+- url: https://www.infoq.com/articles/architectural-design-principles/
+  title: Harnessing the Power of Architectural Design Principles - InfoQ
+  site: infoq.com
+  accessed: '2026-11-09'
+- url: https://cio-wiki.org/wiki/Architectural_Principles
+  title: Architectural Principles - CIO Wiki
+  site: cio-wiki.org
+  accessed: '2026-11-09'
+- url: https://docs.sunnycalc.griesser.com/architecture/05-principles-and-guidelines/
+  title: Principles and Guidelines | Sunny Calculator Add-On
+  site: docs.sunnycalc.griesser.com
+  accessed: '2026-11-09'
+- url: https://quality.arc42.org/qualities/loose-coupling
+  title: "Loose Coupling | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/qualities/cohesion
+  title: "Cohesion | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/qualities/modularity
+  title: "Modularity | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/qualities/composability
+  title: "Composability | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated
@@ -65,11 +127,18 @@ An architecture principle is a guideline for a whole class of problems. It is co
 - the exceptions, meaning situations where deviation is acceptable;
 - the relations, for example to other principles, or to mission, vision, goals or legal restrictions.
 
-The rationale should support discussion. See Architecture Principle Structure for details.
+The rationale should support discussion.
 
 **Exceptions and review.** Sometimes a team sets a principle aside for good reasons. If that happens repeatedly, the principle may need a review. For instance, setting a principle aside three times for valid reasons could trigger one.
 
 **In arc42.** The solution strategy is a short summary and explanation of the fundamental decisions that shape the architecture. The explanation of these decisions should be kept short, and it should say what was decided and why. See Solution Strategy.
+
+**More about working with principles.**
+
+- **Architecture Principle Structure:** An architecture principle is written in four parts: a Name, a Statement, a Rationale and Implications. Together they show the rule, why it helps the business, and what it demands.
+- **Working with Principles:** Working with principles means writing short rules that tie design decisions to requirements. A good principle has a name, a statement, a rationale and implications. Teams may break one only for a justified reason.
+
+**In the arc42 quality model.** It has quality pages on related principles: [Loose Coupling](https://quality.arc42.org/qualities/loose-coupling), [Cohesion](https://quality.arc42.org/qualities/cohesion), [Modularity](https://quality.arc42.org/qualities/modularity), [Composability](https://quality.arc42.org/qualities/composability).
 
 ## Example
 

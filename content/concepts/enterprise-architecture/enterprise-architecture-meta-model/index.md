@@ -1,6 +1,7 @@
 ---
 title: Enterprise Architecture Meta Model
 slug: enterprise-architecture-meta-model
+order: 30
 category: enterprise-architecture
 kind: framework
 summary: An enterprise architecture meta model is a shared set of entity types and relationships for describing
@@ -13,8 +14,7 @@ step: s10-document
 related:
 - togaf
 - enterprise-architecture-management
-- enterprise-architecture-structure-business-and-it-architecture
-- data-entity-data-component-catalog
+- data-architecture-artifacts
 - conceptual-vs-logical-vs-physical-data-model
 - traceability
 - data-architecture
@@ -35,10 +35,6 @@ sources:
     9.2 Content Metamodel · GitHub'
   site: github.com
   accessed: '2026-11-09'
-- url: https://grahamberrisford.com/AM%201%20Methods/6PRODUCTSandTECHNIQUES/DataAndInformation/AM%20Information-Data%20architecture.htm
-  title: ''
-  site: grahamberrisford.com
-  accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
   caption: 'Data realization chain: from data entity to logical to physical data component.'
@@ -49,7 +45,7 @@ review:
 
 ## Explanation
 
-A meta model defines the building blocks, such as "data entity" or "logical data component", and the allowed links between them.
+
 
 **The TOGAF core**
 
@@ -73,10 +69,10 @@ In the information systems layer, the metamodel separates logical from physical.
 For data, this gives a chain:
 
 1. A data entity is the thing the business describes.
-2. A logical data component is a logical definition of the data held in a data store.
-3. A physical data component realizes a logical one in a vendor- or technology-specific form.
+2.
+3.
 
-Data entities are mapped to the data components that hold them. See the articles on Conceptual, Logical and Physical Data Model and on Data Entity/Data Component Catalog.
+See the articles on Conceptual, Logical and Physical Data Model and on Data Entity/Data Component Catalog.
 
 **Using the meta model in practice**
 

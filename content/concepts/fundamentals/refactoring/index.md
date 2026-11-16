@@ -14,11 +14,8 @@ related:
 - code-smell
 - technical-debt
 - big-ball-of-mud
-- architecture-decay
 - maintainability
-- testability
 - design-for-change
-- keep-it-working
 checks:
 - The document states that refactoring must not change observable behavior.
 - Tests exist that protect refactoring work as a safety net.

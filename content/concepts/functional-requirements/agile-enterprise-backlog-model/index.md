@@ -11,7 +11,6 @@ arc42:
 - 4
 step: s03-functional-requirements
 related:
-- epic
 - user-story
 - acceptance-criteria
 - story-splitting
@@ -47,7 +46,7 @@ The model describes how requirement work items relate when agile teams work at l
 **The levels**
 
 - **Themes** sit at the top. They live much longer than epics. A set of themes may stay largely unchanged for a year or more.
-- **Epics** are the highest-level expression of a customer need. They are held in an epic backlog. (See the article *Epic*.)
+- **Epics** are the highest-level expression of a customer need. They are held in an epic backlog. (See the article *User Story*.)
 - **Features** and **stories** come below epics. (See *User Story*.)
 - **Tasks** sit below stories. Each team member estimates the tasks needed to achieve a story.
 

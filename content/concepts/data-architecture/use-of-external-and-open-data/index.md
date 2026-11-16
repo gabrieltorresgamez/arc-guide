@@ -15,7 +15,7 @@ related:
 - business-and-technical-context
 - data-reusability-and-standardized-access
 - integration
-- interoperability
+- compatibility
 checks:
 - For each open data source, the document states its license, or that it is in the public domain.
 - For each open data source, the document states that the data is machine-readable and how it can be obtained.

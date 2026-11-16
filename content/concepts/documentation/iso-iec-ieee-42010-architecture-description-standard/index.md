@@ -1,6 +1,7 @@
 ---
 title: ISO/IEC/IEEE 42010 Architecture Description Standard
 slug: iso-iec-ieee-42010-architecture-description-standard
+order: 90
 category: documentation
 kind: standard
 summary: ISO/IEC/IEEE 42010 is an international standard for describing architectures. It separates a

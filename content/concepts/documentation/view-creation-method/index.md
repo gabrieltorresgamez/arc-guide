@@ -1,6 +1,7 @@
 ---
 title: View Creation Method
 slug: view-creation-method
+order: 30
 category: documentation
 kind: method
 summary: Every architecture diagram should say which notation it uses, who it is for and why it exists.

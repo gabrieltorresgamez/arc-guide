@@ -1,6 +1,7 @@
 ---
 title: Requirement Types and Documents (Wiegers/Beatty)
 slug: requirement-types-and-documents
+order: 10
 category: functional-requirements
 kind: concept
 summary: 'Requirements exist at different levels: business, user and system. Business requirements go

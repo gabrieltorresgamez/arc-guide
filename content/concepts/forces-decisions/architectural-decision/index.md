@@ -1,6 +1,7 @@
 ---
 title: Architectural Decision
 slug: architectural-decision
+order: 10
 category: forces-decisions
 kind: concept
 summary: An architectural decision is a choice of one option from several, made against stated criteria.
@@ -15,8 +16,9 @@ related:
 - architecturally-significant-decision
 - architecture-as-set-of-design-decisions
 - architectural-forces
-- decision-dependencies
+- architectural-decision-management-practices
 - levels-of-architectural-decisions
+- requirements-decision-modeling-for-cyber-physical-systems-of-systems
 checks:
 - Each decision states the alternatives considered and the criteria used to choose among them.
 - Each decision records its rationale, answering why this option was chosen.

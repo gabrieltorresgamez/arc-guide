@@ -9,6 +9,8 @@ Software architecture is the set of big decisions that shape a system and are ha
 
 **Who it is for:** developers, product owners, and anyone who joins a project and has to understand or start its architecture. You do not need to be an architect.
 
+**What it is not:** a full reference. Pages are short and point to the best public sources for the detail.
+
 **What you find here**
 
 - **Concepts:** short articles on one idea each, such as quality scenarios or architecture decisions. Every article starts with "In short" and lists the public sources it is written from.
@@ -16,6 +18,6 @@ Software architecture is the set of big decisions that shape a system and are ha
 - **Review checklist:** checks for an [arc42](https://arc42.org) architecture document, grouped by section. See the [arc42 checklist](/review/arc42/).
 - **Glossary:** all [concepts from A to Z](/glossary/).
 
-**About this content:** the articles and guides were written by an AI from public web sources, which each article lists. Code checks that every quoted sentence appears on its source page, but a human architect has not reviewed the text. Treat it as a starting point and follow the source links for anything important.
+**About this content:** the articles and guides were written by an AI from public web sources, which each article lists. An automated claim check compares each article with its sources, but a human architect has not reviewed the text. Treat it as a starting point and follow the source links for anything important.
 
 **For AI assistants:** read [llms.txt](/llms.txt). Every page also exists as Markdown.

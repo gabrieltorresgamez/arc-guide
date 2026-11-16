@@ -1,6 +1,7 @@
 ---
 title: UML Modeling Best Practice
 slug: uml-modeling-best-practice
+order: 70
 category: modeling-uml
 kind: practice
 summary: 'Good UML practice means agreeing on shared modeling standards, modeling together, and sharing

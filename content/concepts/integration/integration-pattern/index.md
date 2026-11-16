@@ -1,6 +1,7 @@
 ---
 title: Integration Style
 slug: integration-pattern
+order: 20
 category: integration
 kind: style
 summary: An integration style is the basic way separate applications are connected so they can share data
@@ -17,8 +18,9 @@ related:
 - remote-procedure-call
 - messaging
 - architectural-decision
-- loose-coupling
+- coupling-and-cohesion
 - messaging-pattern-language
+- web-as-integration-pattern
 checks:
 - The document records which integration style was chosen, the alternatives considered, and the reason
   for the choice.

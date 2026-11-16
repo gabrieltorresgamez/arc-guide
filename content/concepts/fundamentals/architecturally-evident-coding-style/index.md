@@ -12,13 +12,12 @@ arc42:
 step: s12-evolve
 related:
 - layered-architecture
-- layers-pattern
-- architecture-decay
+- big-ball-of-mud
 - documentation-as-code
 - self-documentation
 - technical-debt
 - modularity
-- module
+- ddd-modeling-elements
 checks:
 - Layers are defined as package patterns, and the allowed interactions between them are stated.
 - Architecture and coding rules run as automated unit tests in the build.

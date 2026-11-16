@@ -1,6 +1,7 @@
 ---
 title: Design for Change
 slug: design-for-change
+order: 60
 category: principles
 kind: principle
 summary: Design for change means making the parts of a system that are likely to change easy to modify.
@@ -13,9 +14,8 @@ arc42:
 - 11
 step: s07-solution-strategy
 related:
-- loose-coupling
-- modifiability
-- modifiability-scenario
+- coupling-and-cohesion
+- maintainability
 - information-hiding
 - flexibility
 - refactoring

@@ -1,6 +1,7 @@
 ---
 title: Context Map
 slug: context-map
+order: 40
 category: domain-driven-design
 kind: artifact
 summary: A context map shows how bounded contexts relate in strategic DDD. It records who provides and

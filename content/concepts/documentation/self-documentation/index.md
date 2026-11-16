@@ -1,6 +1,7 @@
 ---
 title: Self-Documentation
 slug: self-documentation
+order: 50
 category: documentation
 kind: principle
 summary: Self-documentation means a system carries the information needed to understand it inside itself,

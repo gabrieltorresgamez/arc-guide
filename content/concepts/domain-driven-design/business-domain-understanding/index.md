@@ -16,7 +16,7 @@ related:
 - domain-driven-design
 - arc42-glossary
 - arc42-context-and-scope
-- system-idea-and-vision-elements
+- system-idea
 - context-map
 checks:
 - The glossary lists the key domain and technical terms that stakeholders use when discussing the system.

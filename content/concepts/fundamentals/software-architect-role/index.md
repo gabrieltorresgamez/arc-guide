@@ -1,6 +1,7 @@
 ---
 title: Software Architect
 slug: software-architect-role
+order: 30
 category: fundamentals
 kind: concept
 summary: A software architect links business goals and technical work. They decide what matters, weigh
@@ -12,13 +13,11 @@ arc42:
 - 9
 step: s01-goals-stakeholders
 related:
-- architect-knowledge-and-tasks
 - software-architecture
 - stakeholder
 - architectural-trade-off-thinking
 - architecture-view
 - architectural-thinking
-- common-architect-mistakes
 - architectural-decision
 checks:
 - The document names who acts as architect and who is responsible for meeting requirements and the architecture
@@ -43,6 +42,38 @@ sources:
   title: The Profession of “Software Architecture” - iSAQB® - Official Website
   site: isaqb.org
   accessed: '2026-11-09'
+- url: https://learn.microsoft.com/en-us/archive/blogs/dave_langer/architecture-as-leadership
+  title: Architecture as Leadership | Microsoft Learn
+  site: learn.microsoft.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-3/
+  title: 3 - Context and scope | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://canvas.arc42.org/architecture-inception-canvas
+  title: Architecture Inception Canvas - Software Architecture Canvas
+  site: canvas.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-7/
+  title: 7 - Deployment view | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.informit.com/articles/article.aspx?p=1766161&seqNum=6
+  title: 'Our Viewpoint Catalog | Software Systems Architecture: Viewpoints and Views | InformIT'
+  site: informit.com
+  accessed: '2026-11-09'
+- url: https://c4model.com/diagrams
+  title: Diagrams | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
+- url: https://www.infoq.com/news/2007/10/top-ten-architecture-mistakes/
+  title: Top Ten Software Architecture Mistakes - InfoQ
+  site: infoq.com
+  accessed: '2026-11-09'
+- url: https://www.infoq.com/articles/avoid-architecture-pitfalls/
+  title: 12 Software Architecture Pitfalls and How to Avoid Them - InfoQ
+  site: infoq.com
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -64,6 +95,12 @@ A software architect is responsible for meeting requirements and for creating th
 **Communication.** Architects deal with many stakeholder groups, meaning people with an interest in the system. The better an architect adapts to their languages and goals, the better the decisions will be. Architects communicate and document the architecture using views and patterns. See *Architecture View* and *Architectural Pattern*.
 
 **Staying involved in building.** Architects get feedback by being directly involved in, and accountable for, delivery. They also accompany implementation and check that source code and architecture stay consistent.
+
+**More about the architect's work.**
+
+- **Role of the Software Architect:** The role needs technical skill, communication skill, and hands-on involvement in delivery.
+
+- **Common Architect Mistakes:** Architects repeat the same mistakes: weak scoping, narrow stakeholder lists, a focus on functions, vague platform details, and self-built security.
 
 ## Example
 

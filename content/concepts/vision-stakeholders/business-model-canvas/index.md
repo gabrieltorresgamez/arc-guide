@@ -1,6 +1,7 @@
 ---
 title: Business Model Canvas
 slug: business-model-canvas
+order: 40
 category: vision-stakeholders
 kind: artifact
 summary: 'The Business Model Canvas describes a business on one page in nine blocks: who it serves, what
@@ -11,9 +12,8 @@ arc42:
 step: s01-goals-stakeholders
 related:
 - arc42-introduction-and-goals
-- stakeholder-identification
 - stakeholder
-- vision-statement
+- system-idea
 - architecture-canvas
 - business-architecture
 - bounded-context-canvas

@@ -1,6 +1,7 @@
 ---
 title: Matching Diagram Type to System Aspect
 slug: matching-diagram-type-to-system-aspect
+order: 60
 category: modeling-uml
 kind: practice
 summary: No single diagram shows every aspect of a system. Pick the diagram type that fits the aspect

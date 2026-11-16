@@ -1,6 +1,7 @@
 ---
 title: Reasons for Architectural Tactics
 slug: reasons-for-architectural-tactics
+order: 20
 category: tactics
 kind: concept
 summary: Patterns rarely fit a design context perfectly. Tactics are smaller building blocks that help

@@ -1,6 +1,0 @@
-flowchart LR
-  A[Failure occurs] --> B[Detect]
-  B --> C[Respond]
-  C --> D[Repair]
-  D --> E[Recover: normal operation]
-  B -.->|failover to redundant copy| E

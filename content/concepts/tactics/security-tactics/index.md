@@ -1,6 +1,7 @@
 ---
 title: Security Tactic
 slug: security-tactics
+order: 40
 category: tactics
 kind: tactic
 summary: Security tactics are design decisions for protecting a system. They borrow ideas from physical
@@ -16,9 +17,6 @@ related:
 - security
 - tactics-vs-architectural-styles-and-patterns
 - choosing-and-applying-tactics
-- encrypt-data
-- nonrepudiation
-- security-scenario
 - architectural-pattern
 checks:
 - The document states which security tactics were chosen, rather than only naming security patterns.
@@ -47,6 +45,10 @@ sources:
   title: A methodology for mining security tactics from security patterns - Penn State
   site: pure.psu.edu
   accessed: '2026-11-09'
+- url: https://quality.arc42.org/approaches/encryption-at-rest-and-in-transit
+  title: Encryption at Rest + in Transit | arc42 Quality Model
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated
@@ -57,7 +59,7 @@ review:
 
 Security tactics are a way to think about protecting software. The idea comes from physical security. In the physical world, a secure facility lets people reach only certain resources. The same kinds of strategies also make sense for computer-based systems. They lead to four categories of security tactics.
 
-**Tactics and patterns work together.** Researchers who revisited the tactics argue that patterns and tactics complement each other. They are not alternatives. You can use them together, and a pattern can realize a tactic.
+**Tactics and patterns work together.** Researchers who revisited the tactics argue that patterns and tactics can be complementary rather than alternatives. You can use them together, and a pattern can realize a tactic.
 
 **The tactic set has been revised.** A 2014 paper noted that the initial set of security tactics had been refined only once up to that point. Its authors proposed a refined set and a new classification.
 
@@ -66,7 +68,9 @@ Security tactics are a way to think about protecting software. The idea comes fr
 - Split an existing architectural pattern into the tactics it is made of.
 - Mine tactics from well-known security patterns instead of inventing them from scratch.
 
-**Stakeholders can choose tactics together.** Security Tactic Planning Poker (SToPPER) is a technique for this. Stakeholders interact with each other and jointly select security tactics. In a study with 9 subjects, the technique helped establish a common basis for using security tactics.
+**Stakeholders can choose tactics together.** Security Tactic Planning Poker (SToPPER) is a technique for this. Stakeholders interact with each other and jointly select security tactics. In a small study with 9 subjects, the technique helped establish a common basis for using security tactics.
+
+**More tactics in the arc42 quality model.** The arc42 quality model has its own approach page on a related idea: [Encryption at Rest + in Transit](https://quality.arc42.org/approaches/encryption-at-rest-and-in-transit).
 
 ## Example
 

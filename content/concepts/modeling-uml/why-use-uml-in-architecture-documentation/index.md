@@ -1,6 +1,7 @@
 ---
 title: Why Use UML in Architecture Documentation
 slug: why-use-uml-in-architecture-documentation
+order: 20
 category: modeling-uml
 kind: concept
 summary: UML is a standardized diagram notation. arc42 authors favor it because tools support it and its
@@ -17,7 +18,7 @@ related:
 - sequence-diagram
 - c4-model
 - diagrams-as-code
-- self-invented-notation-drawback
+- characteristics-of-a-good-view
 - barriers-to-uml-adoption
 - uml-modeling-best-practice
 - uml-diagram-taxonomy

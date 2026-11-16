@@ -1,6 +1,7 @@
 ---
 title: Conceptual Data Model
 slug: conceptual-data-model
+order: 30
 category: data-architecture
 kind: artifact
 summary: A conceptual data model is a high-level description of the business information an organization
@@ -14,24 +15,50 @@ related:
 - logical-data-model
 - conceptual-vs-logical-vs-physical-data-model
 - physical-data-model
-- conceptual-data-model-building-method
 - data-architecture
-- entity
+- ddd-modeling-elements
 - domain-model
-- conceptual-data-model-preparation-for-logical-and-physical-models
 checks:
 - The conceptual data model contains entities, attributes, relationships and business rules.
 - The conceptual data model contains no database-specific concepts such as indexes, data types or storage
   details.
 - The relationships in the model reflect business processes and rules.
 sources:
-- url: https://archman.dev/docs/foundational-concepts/data-fundamentals/data-modeling/conceptual
-  title: Conceptual Data Modeling | ArchMan
-  site: archman.dev
-  accessed: '2026-11-09'
 - url: https://aisel.aisnet.org/ajis/vol4/iss2/7/
   title: '"Conceptual Data Modelling: an empirical study of expert and novice dat" by Graeme Shanks'
   site: aisel.aisnet.org
+  accessed: '2026-11-09'
+- url: https://airbyte.com/data-engineering-resources/conceptual-data-model
+  title: 'What is Conceptual Data Modeling: Purpose & Examples | Airbyte'
+  site: airbyte.com
+  accessed: '2026-11-09'
+- url: https://www.thoughtspot.com/data-trends/data-modeling/conceptual-vs-logical-vs-physical-data-models
+  title: 'Conceptual vs Logical vs Physical Data Models: Key Differences'
+  site: thoughtspot.com
+  accessed: '2026-11-09'
+- url: https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model
+  title: Entity–relationship model - Wikipedia
+  site: en.wikipedia.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-12/
+  title: 12 - Glossary | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://martinfowler.com/bliki/UbiquitousLanguage.html
+  title: Ubiquitous Language
+  site: martinfowler.com
+  accessed: '2026-11-09'
+- url: https://aws.amazon.com/compare/the-difference-between-logical-and-physical-data-model/
+  title: Logical vs Physical Data Model - Difference in Data Modeling - AWS
+  site: aws.amazon.com
+  accessed: '2026-11-09'
+- url: https://www.red-gate.com/blog/conceptual-logical-and-physical-data-model/
+  title: How to Implement a Conceptual, Logical, and Physical Data Model in Redgate Data Modeler
+  site: red-gate.com
+  accessed: '2026-11-09'
+- url: https://www.ewsolutions.com/conceptual-data-modeling-starts-with-business-use-cases/
+  title: 'Conceptual Data Model: Building a Business-Driven Data Model'
+  site: ewsolutions.com
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.puml
@@ -55,6 +82,12 @@ The core elements are:
 The model deliberately leaves out database-specific concerns. Indexes, data types and storage considerations do not belong in it. Logical modeling is a related topic that translates conceptual models into structured database designs.
 
 One empirical study compared conceptual data models made by expert and novice practitioners. It judged them with quality factors drawn from earlier studies and frameworks on modeling quality. Experts' models were more correct, complete, innovative and flexible than novices' models.
+
+**More about building and publishing a conceptual model.**
+
+- **Conceptual Data Model Building Method:** A conceptual data model is built step by step: understand the business, find entities, add attributes and relationships, validate with stakeholders, then document. It describes what data is needed, not how to store it.
+
+- **Conceptual Data Model Preparation for Logical and Physical Models:** Preparing a conceptual data model means checking that it covers the business needs and defines its entities, attributes and relationships clearly. The checked model then becomes the basis for the logical and physical models.
 
 ## Example
 

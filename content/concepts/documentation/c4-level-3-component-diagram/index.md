@@ -1,6 +1,7 @@
 ---
 title: C4 Component Diagram
 slug: c4-level-3-component-diagram
+order: 40
 category: documentation
 kind: notation-element
 summary: A C4 component diagram opens up one container and shows the components inside it, with their

@@ -13,13 +13,11 @@ arc42:
 - 11
 step: s08-integration-data
 related:
-- publish-subscribe-channel
+- messaging-pattern-language
 - broker-pattern
 - messaging
-- correlation-identifier
-- loose-coupling
-- modifiability
-- message-channel
+- coupling-and-cohesion
+- maintainability
 - synchronous-vs-asynchronous-communication
 checks:
 - The document names the broker or event bus that sits between publishers and subscribers.
@@ -40,6 +38,10 @@ sources:
   title: What do you mean by “Event-Driven”?
   site: martinfowler.com
   accessed: '2026-11-08'
+- url: https://quality.arc42.org/approaches/event-driven-architecture
+  title: "Event-Driven Architecture | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: A publisher sends one event to the broker, which delivers a copy to each subscriber.
@@ -58,7 +60,7 @@ In publish-subscribe (often called pub/sub), a sender publishes an event without
 - **Subscribers:** the receivers. Each one has its own output channel.
 - **Broker or event bus:** the intermediary. It copies each message from the input channel to the output channel of every subscriber that is interested in it.
 
-The channel delivers a copy of each event to each subscriber. See Publish/Subscribe Channel for the messaging view of this idea.
+The channel delivers a copy of each event to each subscriber. See Enterprise Integration Patterns for the messaging view of this idea.
 
 **Why use it**
 
@@ -73,6 +75,8 @@ Without pub/sub, adding or removing a consumer forces a change to the sender. Th
 
 Authenticate and authorize both publishers and subscribers for each topic. An unauthorized publisher that sends in messages can do as much harm as an unauthorized subscriber that reads them. Encrypt messages in transit, and encrypt them at rest in the broker if the content is sensitive.
 
+**In the arc42 quality model.** It has an approach page on [Event-Driven Architecture](https://quality.arc42.org/approaches/event-driven-architecture).
+
 ## Example
 
 An online shop publishes an "order placed" event. A billing service, a warehouse service, and an email service each subscribe to it. Each gets its own copy. Later, the team adds an analytics service as a new subscriber. The shop's ordering code does not change.
@@ -81,5 +85,5 @@ An online shop publishes an "order placed" event. A billing service, a warehouse
 
 - **Latency:** the broker adds delay. Pub/sub is a poor fit when consumers need near real-time interaction.
 - **Ordering:** subscribers may receive messages in a different order than the sender created them. Design subscribers to handle messages independently of arrival order.
-- **Traceability:** decoupling makes the end-to-end flow of a message harder to follow. Correlation IDs help. See Correlation Identifier.
+- **Traceability:** decoupling makes the end-to-end flow of a message harder to follow. Correlation IDs help. See Enterprise Integration Patterns.
 

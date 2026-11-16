@@ -1,6 +1,7 @@
 ---
 title: Messaging
 slug: messaging
+order: 10
 category: integration
 kind: pattern
 summary: Messaging connects applications through a shared messaging system. Applications exchange small
@@ -13,14 +14,9 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- message-channel
-- point-to-point-channel
-- publish-subscribe-channel
-- content-based-router
-- idempotent-receiver
+- messaging-pattern-language
 - file-transfer
 - integration-pattern
-- messaging-pattern-language
 checks:
 - The document states which channels are point-to-point (one consumer per message) and which are publish-subscribe
   (a copy to each receiver).
@@ -75,16 +71,16 @@ Messaging is an integration style: applications connect to a common messaging sy
 
 **Looser links.** Messaging keeps much of the decoupling that file transfer offers. The messaging system can also change a message in transit. Neither sender nor receiver needs to know about that change.
 
-**Channels.** Messages travel over channels (see Message Channel). Two kinds of channel are:
+**Channels.** Messages travel over channels (see Enterprise Integration Patterns). Two kinds of channel are:
 
-- A point-to-point channel makes sure only one receiver consumes each message (see Point-to-Point Channel).
-- A publish-subscribe channel announces an event by delivering a copy to every receiver (see Publish/Subscribe Channel).
+- A point-to-point channel makes sure only one receiver consumes each message (see Enterprise Integration Patterns).
+- A publish-subscribe channel announces an event by delivering a copy to every receiver (see Enterprise Integration Patterns).
 
 **Routing.** A content-based router looks at each message and sends it to the right recipient channel based on its content (see Content-based Router).
 
 **Delivery guarantees.** Guaranteed Delivery stores messages on disk until the receiver acknowledges them. They then survive a crash of the messaging system. Most brokers offer at-least-once delivery, so duplicates can occur. Exactly-once delivery across a distributed system is impractical.
 
-**Duplicates and order.** A producer may send a message, miss the acknowledgment because of a network fault or timeout, and send it again. The broker then holds two copies. A consumer that ignores duplicates, using a stable deduplication key, achieves effectively-once processing (see Idempotent Receiver). Deduplication does not guarantee order. Ordering needs sessions or sequence/version data so the consumer can reject stale messages.
+**Duplicates and order.** A producer may send a message, miss the acknowledgment because of a network fault or timeout, and send it again. The broker then holds two copies. A consumer that ignores duplicates, using a stable deduplication key, achieves effectively-once processing (see Enterprise Integration Patterns). Deduplication does not guarantee order. Ordering needs sessions or sequence/version data so the consumer can reject stale messages.
 
 ## Example
 

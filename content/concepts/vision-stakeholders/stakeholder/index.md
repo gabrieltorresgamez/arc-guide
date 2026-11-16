@@ -1,6 +1,7 @@
 ---
 title: Stakeholder
 slug: stakeholder
+order: 20
 category: vision-stakeholders
 kind: concept
 summary: A stakeholder is a person, team, organization, or class of such parties with an interest in a
@@ -10,8 +11,6 @@ arc42:
 step: s01-goals-stakeholders
 related:
 - stakeholder-concern
-- stakeholder-identification
-- stakeholder-power-grid
 - concern
 - arc42-introduction-and-goals
 - arc42-documentation-template
@@ -29,6 +28,26 @@ sources:
 - url: https://docs.arc42.org/section-1/
   title: 1 - Introduction and Goals | arc42 Documentation
   site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://togaf.visual-paradigm.com/2025/03/04/comprehensive-guide-to-stakeholder-management-in-togaf/
+  title: Comprehensive Guide to Stakeholder Management in TOGAF - Visual Paradigm
+  site: togaf.visual-paradigm.com
+  accessed: '2026-11-09'
+- url: https://quality.arc42.org/standards/iso-42010
+  title: ISO/IEC/IEEE 42010 - Architecture Description | arc42 Quality Model
+  site: quality.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.nngroup.com/articles/stakeholder-analysis/
+  title: Stakeholder Analysis for UX Projects - NN/G
+  site: nngroup.com
+  accessed: '2026-11-09'
+- url: https://www.visual-paradigm.com/guide/togaf/how-to-perform-togaf-stakeholder-management/
+  title: How to Perform Stakeholder Management in TOGAF?
+  site: visual-paradigm.com
+  accessed: '2026-11-09'
+- url: https://mutomorro.com/tools/mendelow-power-interest-matrix
+  title: Mendelow power-interest matrix - guide and worked example | Mutomorro
+  site: mutomorro.com
   accessed: '2026-11-09'
 diagrams: []
 review:
@@ -51,6 +70,11 @@ Typical projects involve representatives from many stakeholder classes. Each cla
 - the role,
 - the person's name,
 - their expectations about the architecture and its documentation.
+
+**More about stakeholders.**
+
+- **Stakeholder Identification:** Stakeholder identification means finding the people, teams and organizations with an interest in a system. It comes first, before you rank stakeholders or plan how to talk to them.
+- **Stakeholder Power Grid:** The stakeholder power grid sorts stakeholders by their power over a project and their interest in it. The position on the grid tells you how closely to engage each group.
 
 ## Example
 

@@ -1,6 +1,7 @@
 ---
 title: Architectural Tactic
 slug: architectural-tactic
+order: 10
 category: tactics
 kind: tactic
 summary: An architectural tactic is a design decision that changes how well a software architecture meets
@@ -13,13 +14,14 @@ arc42:
 step: s07-solution-strategy
 related:
 - quality-attribute
-- availability-tactic
-- modifiability-tactics
+- reliability-tactics
+- maintainability-tactics
 - tactics-vs-architectural-styles-and-patterns
 - choosing-and-applying-tactics
 - reasons-for-architectural-tactics
 - coupling-and-cohesion
 - architectural-pattern
+- tactic-sources-by-iso-25010-quality-characteristic
 checks:
 - Each documented tactic names the quality attribute it is meant to improve.
 - Each tactic is linked to the model parameters it adjusts, such as coupling, cohesion and cost for modifiability.
@@ -50,9 +52,9 @@ A tactic is a design decision. It changes how well the architecture meets a part
 
 **Why tactics work.** Tactics rest on the parameters of quality attribute models. A tactic gives you an architectural way to adjust those parameters. That adjustment can improve the attribute-specific behavior of the finished system.
 
-**Example from modifiability.** The modifiability report justifies its tactics using the established concepts of coupling, cohesion and cost motivations as a way to identify the parameters of interest. The tactics are then described by their ability to control those parameters. See Coupling and Cohesion and Modifiability Tactic.
+**Example from modifiability.** The modifiability report justifies its tactics using the established concepts of coupling, cohesion and cost motivations as a way to identify the parameters of interest. The tactics are then described by their ability to control those parameters. See Coupling and Cohesion and Maintainability Tactic.
 
-**Catalogs change with practice.** Availability tactics are collected in a catalog. The needs of practice led to updates of that catalog, while its underlying categorization structure stayed stable. A real-world example applies the updated tactics with heuristics and analytic models. See Availability Tactic.
+**Catalogs change with practice.** Availability tactics are collected in a catalog. The needs of practice led to updates of that catalog, while its underlying categorization structure stayed stable. A real-world example applies the updated tactics with heuristics and analytic models. See Reliability Tactic.
 
 **Tactics and patterns.** The modifiability report describes a standard set of architectural patterns and their variants in terms of the use of tactics. See Relationship between Tactics and Architectural Styles/Patterns.
 

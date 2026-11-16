@@ -1,6 +1,7 @@
 ---
 title: Kroki
 slug: kroki
+order: 30
 category: documentation
 kind: framework
 summary: Kroki is an open-source service that offers one HTTP API for creating diagrams from text, across

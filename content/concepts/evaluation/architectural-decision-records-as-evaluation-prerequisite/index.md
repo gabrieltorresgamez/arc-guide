@@ -14,9 +14,6 @@ step: s11-evaluate
 related:
 - architectural-decision-record
 - architecture-tradeoff-analysis-method-atam
-- atam-findings-risks-non-risks-sensitivity-points-and-trade-offs
-- markdown-architectural-decision-records-madr
-- y-statement
 - arc42-architecture-decisions
 - software-architecture-evaluation
 - quality-attribute-scenario
@@ -56,7 +53,7 @@ An architectural decision means choosing one alternative from several, based on 
 
 Lightweight formats exist. A Nygard-style record has a Context section. It describes the forces at play: technical, political, social and project aspects. Its Consequences section should list all consequences, not only the positive ones.
 
-MADR is another format. Its Decision Outcome names the chosen option and gives a justification. Its optional consequences list good and bad effects of the decision. See the articles on Markdown Architectural Decision Records and Y-Statement.
+MADR is another format. Its Decision Outcome names the chosen option and gives a justification. Its optional consequences list good and bad effects of the decision. See the article on Architectural Decision Record.
 
 **Why evaluation needs them**
 

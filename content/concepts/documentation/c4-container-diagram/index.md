@@ -1,6 +1,7 @@
 ---
 title: Container Diagram (C4 Level 2)
 slug: c4-container-diagram
+order: 30
 category: documentation
 kind: notation-element
 summary: 'A container diagram zooms into one software system and shows its separately running parts: applications

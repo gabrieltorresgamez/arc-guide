@@ -1,6 +1,7 @@
 ---
 title: Domain-Driven Design
 slug: domain-driven-design
+order: 10
 category: domain-driven-design
 kind: method
 summary: Domain-Driven Design (DDD) is an approach for complex business software. It organizes messy domain
@@ -17,7 +18,6 @@ related:
 - ubiquitous-language
 - context-map
 - ddd-modeling-elements
-- aggregate
 - domain-model
 - evolutionary-domain-modeling
 - business-domain-understanding

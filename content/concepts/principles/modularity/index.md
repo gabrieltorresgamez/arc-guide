@@ -1,6 +1,7 @@
 ---
 title: Modularity
 slug: modularity
+order: 50
 category: principles
 kind: principle
 summary: Modularity means dividing a system into self-contained building blocks. The quality of the split
@@ -11,13 +12,11 @@ arc42:
 - 8
 step: s07-solution-strategy
 related:
-- module
+- ddd-modeling-elements
 - information-hiding
-- high-cohesion
 - coupling-and-cohesion
 - separation-of-concerns
 - big-ball-of-mud
-- architecture-decay
 - bounded-context
 checks:
 - Building blocks are formed mainly by cohesion.
@@ -41,6 +40,10 @@ sources:
   title: Bounded Context
   site: martinfowler.com
   accessed: '2026-11-09'
+- url: https://quality.arc42.org/qualities/modularity
+  title: "Modularity | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated
@@ -49,7 +52,7 @@ review:
 
 ## Explanation
 
-A module is a building block of a system. Modularity is the practice of dividing a system into such blocks. The arc42 building block view shows this static decomposition. See the article Module for the definition.
+A module is a building block of a system. Modularity is the practice of dividing a system into such blocks. The arc42 building block view shows this static decomposition.
 
 **The criteria matter.** How effective a split is depends on the criteria used to divide the system.
 
@@ -57,13 +60,15 @@ A module is a building block of a system. Modularity is the practice of dividing
 
 **Hide the inner workings.** A module's interface should reveal as little as possible about what happens inside. This idea is called information hiding. See the article Information Hiding.
 
-**Cohesion first.** arc42 advises that cohesion should be the main driver when forming building blocks. See High Cohesion.
+**Cohesion first.** arc42 advises that cohesion should be the main driver when forming building blocks. See Coupling and Cohesion.
 
 **Use your language's constructs.** arc42 also advises mapping building blocks to the modularization constructs of your programming language.
 
 **Structure erodes.** A Big Ball of Mud is a system with a casual, haphazard structure, organized by expediency rather than design. Even systems with well-defined architectures are prone to structural erosion. Left unchecked, the structure can degrade until the system must be abandoned. See Big Ball of Mud and Architecture Decay.
 
 **Domain-oriented splits.** Domain-Driven Design divides a large system into Bounded Contexts. Each context can have a unified model. This is a domain-oriented way to decompose a system. See Bounded Context.
+
+**In the arc42 quality model.** It has a quality page on [Modularity](https://quality.arc42.org/qualities/modularity).
 
 ## Example
 

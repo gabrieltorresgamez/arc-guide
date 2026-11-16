@@ -1,6 +1,7 @@
 ---
 title: UML Deployment Diagram
 slug: deployment-diagram
+order: 40
 category: modeling-uml
 kind: notation-element
 summary: A UML deployment diagram shows where software runs. It assigns software artifacts to system elements,
@@ -10,7 +11,6 @@ arc42:
 step: s10-document
 related:
 - distribution-view
-- deployment-diagram-modeling-mistakes
 - uml-component-diagram
 - structure-diagram
 - arc42-documentation-template
@@ -27,6 +27,10 @@ sources:
 - url: https://docs.arc42.org/section-7/
   title: 7 - Deployment view | arc42 Documentation
   site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.visual-paradigm.com/VPGallery/diagrams/Deployment.html
+  title: Deployment Diagram - UML 2 Diagrams - UML Modeling Tool
+  site: visual-paradigm.com
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.puml

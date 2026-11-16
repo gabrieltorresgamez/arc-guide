@@ -1,6 +1,7 @@
 ---
 title: Story Splitting
 slug: story-splitting
+order: 80
 category: functional-requirements
 kind: practice
 summary: Story splitting breaks a large or uncertain user story into smaller ones that still deliver value.
@@ -11,10 +12,7 @@ arc42:
 step: s03-functional-requirements
 related:
 - user-story
-- epic
-- invest-criteria
 - story-mapping
-- card-conversation-confirmation
 - acceptance-criteria
 - agile-enterprise-backlog-model
 - method-phase-working-with-functional-requirements
@@ -51,7 +49,7 @@ Story splitting turns one big user story into several smaller ones. A user story
 
 **A three-step process**
 
-1. Prepare the input story. Check it against the INVEST criteria (see INVEST Criteria), but ignore its size for now.
+1. Prepare the input story. Check it against the INVEST criteria (see User Story), but ignore its size for now.
 2. Apply splitting patterns.
 3. Evaluate the split.
 

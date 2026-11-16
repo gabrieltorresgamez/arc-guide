@@ -30,21 +30,21 @@ An [Architectural Decision](concept:architectural-decision) is a choice of one o
 - **Constraints are unknown or mixed up with wishes.** List them in one place. For each, write who wants it, why, and whether it is negotiable. See [Architect Settles In Method Phase](concept:architect-settles-in-method-phase).
 - **Nobody knows who decides.** Name who is responsible, accountable, consulted and informed. A role is enough. See [RACI Matrix](concept:raci-matrix).
 - **You cannot decide yet.** Check whether the last responsible moment has come. That is the point where waiting would remove an important option. Write down which decisions you deferred and why. See [Last Responsible Moment](concept:last-responsible-moment) and [Solution as Moving Target](concept:solution-as-moving-target).
-- **No template.** Pick one lean template before you write. [Markdown Architectural Decision Records](concept:markdown-architectural-decision-records-madr) and the one-sentence [Y-Statement](concept:y-statement) are two options.
+- **No template.** Pick one lean template before you write. [Markdown Architectural Decision Records](concept:architectural-decision-record) and the one-sentence [Y-Statement](concept:architectural-decision-record) are two options.
 
 ## How to do it
 
 1. **Pick the decisions worth recording.** Choose those that are hard or costly to change, or that carry high risk or cost. The integration style is a typical case. Skip small, local choices. See [Architecturally Significant Decision](concept:architecturally-significant-decision).
 2. **Keep the list small.** A log you cannot maintain helps nobody. Tie each entry to a significant requirement, and state why you judged it significant. See [Architectural Decision Management](concept:architectural-decision-management-practices).
-3. **Phrase each decision as a short question.** One question covers one concern. See [Architectural Design Issue](concept:formulation-of-decision-issues).
-4. **Check that you are ready to decide.** Ask five things. Who are the stakeholders? Is there time? Are there alternatives? Are the requirements known? Is there a template? See [Architectural Decision Definition of Ready](concept:definition-of-ready-for-architectural-decisions).
-5. **List criteria and real options.** Take the criteria from the context and the requirements, not from the strengths of the option you prefer. List at least two real options, not filler. See [ADR Common Mistakes and Review Checklist](concept:adr-common-mistakes-and-remediations).
-6. **Decide with the right people.** Name the decision makers. Plan stakeholder involvement ahead of time. See [Architectural Decision Management Cycle](concept:architectural-decision-management-cycle).
+3. **Phrase each decision as a short question.** One question covers one concern. See [Architectural Design Issue](concept:architectural-decision-management-practices).
+4. **Check that you are ready to decide.** Ask five things. Who are the stakeholders? Is there time? Are there alternatives? Are the requirements known? Is there a template? See [Architectural Decision Definition of Ready](concept:architectural-decision-management-practices).
+5. **List criteria and real options.** Take the criteria from the context and the requirements, not from the strengths of the option you prefer. List at least two real options, not filler. See [ADR Common Mistakes and Review Checklist](concept:architectural-decision-record).
+6. **Decide with the right people.** Name the decision makers. Plan stakeholder involvement ahead of time. See [Architectural Decision Management Cycle](concept:architectural-decision-management-practices).
 7. **Write one record per decision.** Include the context, the criteria, the options, the outcome and the reasons. Explain why you chose the option; do not repeat the title. See [Architectural Decision Record](concept:architectural-decision-record) (ADR) and [Architecture Decision Rationale](concept:architecture-decision-rationale).
 8. **List all consequences, good and bad.** Name a concrete price. "More effort later" is weak. Say where the effort goes. See [Architecture Decision Documentation and Requirements Management](concept:decision-documentation-and-requirements-management).
-9. **Note follow-up decisions.** One decision often triggers others. Mark the ones with many follow-ons as early or big decisions. See [Decision Dependencies](concept:decision-dependencies).
+9. **Note follow-up decisions.** One decision often triggers others. Mark the ones with many follow-ons as early or big decisions. See [Decision Dependencies](concept:architectural-decision-management-practices).
 10. **Say when you will review it.** Name the change that would make you look again. When a decision is replaced, mark the old one as superseded and point to the new one. See [Architectural Decision-Making Process](concept:architectural-decision-making-in-project-development).
-11. **Check any AI-drafted text.** People must review it, verify every reference and make the final choice. See [GenAI Support for Architectural Decision Records](concept:genai-support-for-architectural-decision-records).
+11. **Check any AI-drafted text.** People must review it, verify every reference and make the final choice. See [GenAI Support for Architectural Decision Records](concept:architectural-decision-record).
 
 ## Example: ClinicBook
 
@@ -55,7 +55,7 @@ ClinicBook is an online booking system for 40 small medical practices. Its force
 | Question | Why it is significant |
 |---|---|
 | How does ClinicBook exchange appointments with the practices' software? | Integration style is hard to reverse. Practices use different vendors. |
-| How does the system cope with morning peaks? | Availability is a key quality goal. See [Architectural Decisions for Availability](concept:architectural-decisions-for-availability). |
+| How does the system cope with morning peaks? | Availability is a key quality goal. See [Reliability Tactic](concept:reliability-tactics). |
 | Where and how is health data protected? | Privacy is a key concern and affects the whole system. |
 
 The team does not record small local choices, such as the date-format library. These would bury the important decisions.
@@ -104,18 +104,18 @@ The team does not record small local choices, such as the date-format library. T
 - Each record covers one decision and compares at least two real options against criteria that come from the requirements. See [Architectural Decision Record](concept:architectural-decision-record).
 - Each record gives the reason for the choice and lists negative consequences too. See [Architecture Decision Rationale](concept:architecture-decision-rationale).
 - Each record names its decision makers. See [RACI Matrix](concept:raci-matrix).
-- Each record says when it will be reviewed, and follow-up decisions are noted. See [Decision Dependencies](concept:decision-dependencies).
+- Each record says when it will be reviewed, and follow-up decisions are noted. See [Decision Dependencies](concept:architectural-decision-management-practices).
 - Section 9 refers to section 4 instead of repeating fundamental decisions. See [arc42 Architecture Decisions](concept:arc42-architecture-decisions).
 
 ## Learn more
 
-- [ADR Common Mistakes and Review Checklist](concept:adr-common-mistakes-and-remediations)
+- [ADR Common Mistakes and Review Checklist](concept:architectural-decision-record)
 - [Architectural Decision Record Example](concept:middleware-architectural-decision-example)
 - [Architectural Decision Making Fallacies](concept:architectural-decision-making-fallacies)
-- [Definition of Done for Architectural Decisions](concept:definition-of-done-for-architectural-decisions)
-- [Architectural Decision Management Cycle](concept:architectural-decision-management-cycle)
+- [Definition of Done for Architectural Decisions](concept:architectural-decision-management-practices)
+- [Architectural Decision Management Cycle](concept:architectural-decision-management-practices)
 - [Levels of Architectural Decisions](concept:levels-of-architectural-decisions)
 - [Seven Types of Architectural Decisions](concept:seven-types-of-architectural-decisions)
 - [Architecture as Set of Design Decisions](concept:architecture-as-set-of-design-decisions)
 - [Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)
-- [Conflicting Architecture Principles](concept:conflicting-architecture-principles)
+- [Conflicting Architecture Principles](concept:architecture-principle)

@@ -11,11 +11,6 @@ arc42:
 step: s10-document
 related:
 - bpmn-gateway-semantics
-- antipatterns-for-process-flows
-- lack-of-synchronization-in-process-models
-- deadlock-in-process-models
-- event-based-gateway
-- process-notations-comparison
 - soundness-of-process-models
 - bpmn-2-0-notation-overview
 checks:

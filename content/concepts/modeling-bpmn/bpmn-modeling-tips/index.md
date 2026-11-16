@@ -11,13 +11,11 @@ arc42:
 step: s10-document
 related:
 - bpmn-2-0-notation-overview
-- bpmn-layout-guideline
-- bpmn-2-0-model-quality
+- soundness-of-process-models
 - bpmn-gateway-semantics
 - bpmn-collaboration-diagram
 - bpmn-swimlane-pool-and-lane
-- levels-of-process-modeling
-- antipatterns-for-process-flows
+- purpose-of-process-analysis-and-modeling
 checks:
 - Each process level has about 10 activities or fewer, so it fits on one page.
 - Every process shows explicit start and end events.
@@ -36,6 +34,26 @@ sources:
 - url: https://www.trisotech.com/bpmn-style-rules/
   title: BPMN Style Rules
   site: trisotech.com
+  accessed: '2026-11-09'
+- url: https://cloud.trisotech.com/bpmnquickguide/bpmn-quick-guide/bpmn-modeling-best-practices.html
+  title: 'BPMN Modeling Best Practices :: BPMN Quick Guide'
+  site: cloud.trisotech.com
+  accessed: '2026-11-09'
+- url: https://cloud.trisotech.com/bpmnrulebook/bpmn-rule-book/use-of-text-color-size-lines-in-diagram.html
+  title: 'Use of Text, Color, Size and Lines in Diagram :: BPMN Rule Book'
+  site: cloud.trisotech.com
+  accessed: '2026-11-09'
+- url: https://skills.visual-paradigm.com/docs/common-dfd-mistakes-and-how-to-avoid-them/dfd-readability-issues/dfd-color-misuse/
+  title: 'DFD Color Misuse: Avoiding Visual Noise in Data Flow Diagrams'
+  site: skills.visual-paradigm.com
+  accessed: '2026-11-09'
+- url: https://bpmn.io/blog/posts/2016-colors-bpmn-js
+  title: Colors are Here | Blog | bpmn.io
+  site: bpmn.io
+  accessed: '2026-11-09'
+- url: https://github.com/bpmn-io/bpmn-js-examples/blob/main/colors/README.md
+  title: bpmn-js-examples/colors/README.md at main · bpmn-io/bpmn-js-examples · GitHub
+  site: github.com
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.bpmn
@@ -63,6 +81,11 @@ BPMN is a notation for drawing business processes. See the article BPMN 2.0 Nota
 **Name tasks as actions.** Camunda asks for an object and a verb in the infinitive, for example "Check invoice". Silver says all activities, subprocesses included, should be labeled, preferably as a verb-object action.
 
 **Use pools for participants.** For models at the operational level, Camunda recommends separate pools for process participants instead of lanes, though it says lanes can suit strategic or technical models. Silver models roles or departments within the organization as lanes in a single pool. Name a pool after the process it contains. Order the pools so message flows cross other pools as little as possible.
+
+**More about layout and color.**
+
+- **BPMN Layout Guideline:** A BPMN layout guideline is a set of drawing habits that make process diagrams easy to read: one flow direction, few crossings, no very long arrows, and clearly marked gateways.
+- **Color Coding in BPMN Models:** Color coding adds a second visual layer to a BPMN diagram, on top of the standard shapes. It works best with few colors, a legend, and a diagram that still reads in grayscale.
 
 ## Example
 

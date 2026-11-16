@@ -1,6 +1,7 @@
 ---
 title: Ubiquitous Language
 slug: ubiquitous-language
+order: 20
 category: domain-driven-design
 kind: practice
 summary: A ubiquitous language is one shared vocabulary that developers and domain experts both use. It

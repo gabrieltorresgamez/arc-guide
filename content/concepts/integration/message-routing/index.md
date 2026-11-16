@@ -1,6 +1,7 @@
 ---
 title: Message Routing
 slug: message-routing
+order: 40
 category: integration
 kind: pattern
 summary: Message routing patterns decide where each message goes, so a sender does not need to know the
@@ -12,14 +13,7 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- content-based-router
-- recipient-list
-- scatter-gather
-- routing-slip
-- message-filter
-- dynamic-router
-- process-manager
-- composite-message-processor
+- messaging-pattern-language
 checks:
 - Where a message must reach a different system depending on its content, a Content-Based Router is used
   instead of the sender choosing the target.
@@ -64,15 +58,15 @@ review:
 
 Message routing is a family of patterns that decouple a message source from the message's final destination. The sender hands over a message. The routing logic decides who receives it.
 
-**Content-Based Router.** It sends each message to the right recipient based on what the message contains. This helps when one logical function is spread over several systems. See the article Content-based Router.
+**Content-Based Router.** It sends each message to the right recipient based on what the message contains. This helps when one logical function is spread over several systems. See the article Messaging Pattern Language.
 
-**Recipient List.** It computes a list of recipients. Then it sends a copy of the message to each one. Like the Content-Based Router, it normally leaves the message contents unchanged. See the article Recipient List.
+**Recipient List.** It computes a list of recipients. Then it sends a copy of the message to each one. Like the Content-Based Router, it normally leaves the message contents unchanged. See the article Enterprise Integration Patterns.
 
 **Aggregator.** It collects several messages into one. An Aggregator that waits for all replies has a weakness: one missing or delayed message can block the whole result. A time-out strategy avoids this. The Aggregator waits a set time, then decides with what has arrived.
 
-**Scatter-Gather.** It uses an Aggregator to collect the responses into a single response message. See the article Scatter/Gather.
+**Scatter-Gather.** It uses an Aggregator to collect the responses into a single response message. See the article Enterprise Integration Patterns.
 
-**Routing Slip.** It attaches the sequence of processing steps to each message. See the article Routing Slip.
+**Routing Slip.** It attaches the sequence of processing steps to each message. See the article Enterprise Integration Patterns.
 
 ## Example
 

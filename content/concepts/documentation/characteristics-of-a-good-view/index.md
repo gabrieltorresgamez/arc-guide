@@ -1,6 +1,7 @@
 ---
 title: Characteristics of a Good View
 slug: characteristics-of-a-good-view
+order: 140
 category: documentation
 kind: concept
 summary: A good view serves a named stakeholder and a clear purpose. It shows only the detail readers
@@ -18,7 +19,7 @@ related:
 - purpose-of-views
 - view-creation-method
 - c4-model
-- component-view-refinement-levels
+- component-view
 checks:
 - The documentation records which stakeholders were asked what information they expect.
 - Each view or viewpoint names the stakeholders it serves and the concerns it addresses.
@@ -46,6 +47,45 @@ sources:
   title: Review checklist | C4 model
   site: c4model.com
   accessed: '2026-11-09'
+- url: https://faq.arc42.org/questions/C-5-10/
+  title: 'Question C-5-10: How can I avoid redundancy with interfaces in the building block view? | arc42
+    FAQ'
+  site: faq.arc42.org
+  accessed: '2026-11-09'
+- url: https://en.wikipedia.org/wiki/Don't_repeat_yourself
+  title: Don't repeat yourself - Wikipedia
+  site: en.wikipedia.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/5-10/
+  title: 'Tip 5-10: Use crosscutting concepts to describe or specify similarities in building blocks!
+    | arc42 Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.ilograph.com/blog/posts/diagram-mistakes/
+  title: 7 Common Mistakes in Architecture Diagrams | Ilograph Blog
+  site: ilograph.com
+  accessed: '2026-11-09'
+- url: https://c4model.com/abstractions
+  title: Abstractions | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-5/
+  title: 5 - Building block view | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://c4model.com/introduction
+  title: Introduction | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
+- url: https://socadk.github.io/design-practice-repository/activities/DPR-ArchitectureModeling.html
+  title: design-practice-repository | Summaries of artifacts, templates, practices, and techniques for
+    agile architecting (DPR-mm) and service design (SDPR-nn).
+  site: socadk.github.io
+  accessed: '2026-11-09'
+- url: https://arxiv.org/abs/2008.11060
+  title: '[2008.11060] Applying system descriptors to address ambiguity on deployment diagrams'
+  site: arxiv.org
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -69,6 +109,12 @@ A view shows how the architecture addresses the concerns of certain stakeholders
 - Keep notation, such as color coding, consistent within and across diagrams.
 
 **Review with questions.** C4 offers a checklist. It asks, for example, whether the scope is clear and whether every element has a name.
+
+**Common mistakes.**
+
+- **Undetected Duplication Antipattern:** The same function or element is listed twice in one overview, and nobody notices. The remedy is to describe each element once, where it is handled, and have other places point to that description.
+- **Unclear Level of Abstraction Antipattern:** An architecture diagram that mixes high-level and low-level elements confuses readers. The fix is to keep each diagram at one abstraction level and draw separate diagrams when both views are needed.
+- **Self-Invented Notation Drawback:** A self-invented notation is a set of diagram symbols the author made up. Readers cannot tell what the symbols mean without help. A legend, or a standard notation, reduces the problem.
 
 ## Example
 

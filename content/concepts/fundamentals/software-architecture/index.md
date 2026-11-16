@@ -1,6 +1,7 @@
 ---
 title: Software Architecture
 slug: software-architecture
+order: 10
 category: fundamentals
 kind: concept
 summary: 'Software architecture is the set of fundamental choices about a system: its parts, how they
@@ -13,8 +14,6 @@ arc42:
 - 9
 step: s07-solution-strategy
 related:
-- implications-of-the-architecture-definition
-- software-architecture-basic-concepts
 - iso-iec-ieee-42010-architecture-description-standard
 - architecture-as-set-of-design-decisions
 - architectural-decision
@@ -47,6 +46,34 @@ sources:
   title: 'Curriculum forCertified Professional forSoftware Architecture (CPSA)®: Foundation Level'
   site: public.isaqb.org
   accessed: '2026-11-09'
+- url: https://www.sei.cmu.edu/software-architecture/
+  title: Software Architecture | CMU Software Engineering Institute
+  site: sei.cmu.edu
+  accessed: '2026-11-09'
+- url: https://www.sei.cmu.edu/library/the-software-architecture-renaissance/
+  title: The Software Architecture Renaissance | CMU Software Engineering Institute
+  site: sei.cmu.edu
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-1/
+  title: 1 - Introduction and Goals | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-3/
+  title: 3 - Context and scope | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-5/
+  title: 5 - Building block view | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.melconway.com/Home/Committees_Paper.html
+  title: Committees Paper
+  site: melconway.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-2/
+  title: 2 - Constraints | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -65,9 +92,15 @@ There is no single agreed definition of software architecture. Several sources d
 
 **Building blocks and decisions.** A software architecture curriculum describes architecture through building blocks, their interfaces and relationships, and through decisions with system-wide consequences. It makes architects responsible for meeting requirements and creating the architecture design.
 
-**Architecture and design.** Architecture is design, but not all design is architectural. The architect decides where architectural design ends and detailed design begins.
+
 
 **Why it matters.** Architectural choices are costly to change. A poor architecture contributes to the growth of cruft, meaning messy leftovers that make software harder to modify.
+
+**More about the definition.**
+
+- **Software Architecture Definition:** Definitions of software architecture differ. One says it is the design decisions about a system's overall structure and behavior. Another calls it the important stuff, or the expert developers' shared understanding of the design.
+- **Software Architecture Basic Concepts:** Software architecture is the set of design decisions about a system's overall structure and behavior. Business needs and quality goals drive it. A system has a boundary, and its building blocks are organized in levels.
+- **Software Architecture in Its Context:** Software architecture is shaped by its surroundings. The organization, its constraints and its stakeholders all influence which designs are possible. Architects need to know where they are free and where they are bound.
 
 ## Example
 

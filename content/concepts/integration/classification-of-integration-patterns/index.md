@@ -1,6 +1,7 @@
 ---
 title: Software Connector Classification
 slug: classification-of-integration-patterns
+order: 70
 category: integration
 kind: framework
 summary: Connector classification compares integration styles on shared questions, such as synchronous
@@ -14,7 +15,6 @@ step: s08-integration-data
 related:
 - software-connector
 - synchronous-vs-asynchronous-connector
-- connector-cardinality
 - connector-transparency
 - file-transfer
 - shared-database

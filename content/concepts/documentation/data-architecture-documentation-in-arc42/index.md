@@ -1,6 +1,7 @@
 ---
 title: Data Architecture Documentation in arc42
 slug: data-architecture-documentation-in-arc42
+order: 140
 category: documentation
 kind: practice
 summary: In arc42, data topics have several homes. Data flows go in the business context, data structures

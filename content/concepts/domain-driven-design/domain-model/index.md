@@ -1,6 +1,7 @@
 ---
 title: Domain Model
 slug: domain-model
+order: 50
 category: domain-driven-design
 kind: concept
 summary: A domain model is a system of abstractions that describes selected aspects of a business domain.
@@ -14,9 +15,6 @@ step: s06-domain
 related:
 - domain-driven-design
 - ubiquitous-language
-- entity
-- value-object
-- aggregate
 - ddd-modeling-elements
 - evolutionary-domain-modeling
 - bounded-context
@@ -64,9 +62,9 @@ In one common definition, a domain model is an object model of the domain. It co
 
 **Building blocks.** Several building blocks turn a model into software structure:
 
-- An entity is defined by its identity, not by its attributes. See "Entity".
-- A value object is immutable and has no conceptual identity. See "Value Object".
-- Models can be bound together by a root entity into an aggregate. See "Aggregate".
+- An entity is defined by its identity, not by its attributes. See "DDD Building Blocks (Tactical Patterns)".
+- A value object is immutable and has no conceptual identity. See "DDD Building Blocks (Tactical Patterns)".
+- Models can be bound together by a root entity into an aggregate. See "DDD Building Blocks (Tactical Patterns)".
 
 ## Example
 

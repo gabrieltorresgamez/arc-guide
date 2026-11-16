@@ -1,6 +1,7 @@
 ---
 title: Bounded Context
 slug: bounded-context
+order: 30
 category: domain-driven-design
 kind: concept
 summary: A bounded context is a boundary inside which one domain model applies. Large domains split into
@@ -17,8 +18,7 @@ related:
 - bounded-context-canvas
 - microservices-architecture
 - domain-model
-- aggregate
-- domain-event
+- ddd-modeling-elements
 checks:
 - The document lists its bounded contexts and states which subdomain model each one holds.
 - A context map shows the relationships and integration points between contexts, including external systems.

@@ -1,6 +1,7 @@
 ---
 title: Solution as Moving Target
 slug: solution-as-moving-target
+order: 70
 category: forces-decisions
 kind: concept
 summary: The solution a team delivers rarely matches the one imagined at the start. Business changes and

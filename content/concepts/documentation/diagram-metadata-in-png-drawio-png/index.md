@@ -1,6 +1,7 @@
 ---
 title: Diagram Metadata in PNG (drawio.png)
 slug: diagram-metadata-in-png-drawio-png
+order: 40
 category: documentation
 kind: practice
 summary: A .drawio.png file is a normal PNG image that also carries its own draw.io diagram source. You

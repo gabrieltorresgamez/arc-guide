@@ -1,6 +1,7 @@
 ---
 title: BPMN Conversation Diagram
 slug: bpmn-conversation-diagram
+order: 50
 category: modeling-bpmn
 kind: notation-element
 summary: A BPMN conversation diagram gives a very high-level view of which participants exchange messages.
@@ -13,7 +14,6 @@ related:
 - bpmn-diagram-types
 - bpmn-swimlane-pool-and-lane
 - bpmn-2-0-notation-overview
-- bpmn-focus-on-connected-businesses
 checks:
 - Conversations are drawn as hexagons with a single thin line.
 - Sub-conversations carry a small square marker with a plus sign.

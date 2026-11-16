@@ -1,6 +1,7 @@
 ---
 title: Story Mapping
 slug: story-mapping
+order: 70
 category: functional-requirements
 kind: method
 summary: A story map shows how users reach a goal as a picture. Activities form a backbone from left to
@@ -12,9 +13,7 @@ step: s03-functional-requirements
 related:
 - user-story
 - story-splitting
-- epic
 - use-case
-- use-case-goal-levels
 - user-story-vs-use-case
 - domain-storytelling
 - method-phase-working-with-functional-requirements

@@ -1,6 +1,7 @@
 ---
 title: Performance Efficiency
 slug: performance-efficiency
+order: 20
 category: quality-attributes
 kind: quality-attribute
 summary: Performance efficiency is a workload's ability to handle rising load without hurting user experience,
@@ -12,14 +13,12 @@ arc42:
 - 1
 step: s04-quality-requirements
 related:
-- scalability
-- performance-scenario
-- performance-tactics
+- flexibility
+- performance-efficiency-tactics
 - iso-iec-25010-quality-model
 - quality-attribute
 - architectural-trade-off-thinking
 - arc42-quality-chapter
-- energy-efficiency-tactics
 checks:
 - Performance targets for key flows are stated as acceptable user-experience effects and agreed with business
   stakeholders.
@@ -38,6 +37,34 @@ sources:
   title: ISO 25010
   site: iso25000.com
   accessed: '2026-11-08'
+- url: https://quality.arc42.org/qualities/time-behaviour
+  title: "Time behaviour | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/qualities/resource-utilization
+  title: "Resource utilization | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/qualities/capacity
+  title: "Capacity | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/efficient-generation-of-test-data
+  title: "Efficient generation of test data"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/query-execution-management
+  title: "Low-overhead query execution measurement"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/fast-shutdown-time
+  title: "Fast shutdown time (less than 10 sec)"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/qualities/performance-efficiency
+  title: "Performance efficiency | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated
@@ -58,7 +85,19 @@ Performance efficiency describes how well a workload adapts to changing demand. 
 
 **Keep watching in production.** Track end-to-end business transactions and technical metrics such as CPU, latency and requests per second. Use both real and synthetic transactions.
 
-Related articles: Scalability, Performance Efficiency Scenario, Performance Tactic and ISO/IEC 25010 Product Quality Model.
+Related articles: Flexibility, Performance Efficiency Tactic and ISO/IEC 25010 Product Quality Model.
+
+**Tactics.** See the article Performance Efficiency Tactic.
+
+**Subcharacteristics.** The ISO/IEC 25010 model lists these subcharacteristics under this characteristic:
+
+- **Time behaviour** means that response times and throughput rates, while the product performs its functions, meet the requirements. More: [arc42 quality model](https://quality.arc42.org/qualities/time-behaviour).
+- **Resource utilization** means that the amounts and types of resources the product uses while performing its functions meet the requirements. More: [arc42 quality model](https://quality.arc42.org/qualities/resource-utilization).
+- **Capacity** means that the maximum limits of a product or system parameter meet the requirements. More: [arc42 quality model](https://quality.arc42.org/qualities/capacity).
+
+**In the arc42 quality model.** The arc42 quality model has its own page on [Performance efficiency](https://quality.arc42.org/qualities/performance-efficiency).
+
+**Example quality requirements.** The arc42 quality model has example quality requirements for this characteristic: [Efficient generation of test data](https://quality.arc42.org/requirements/efficient-generation-of-test-data), [Low-overhead query execution measurement](https://quality.arc42.org/requirements/query-execution-management), [Fast shutdown time (less than 10 sec)](https://quality.arc42.org/requirements/fast-shutdown-time).
 
 ## Example
 

@@ -16,9 +16,8 @@ related:
 - iterative-and-incremental-development
 - agile-architecture
 - evolutionary-domain-modeling
-- keep-it-working
+- big-ball-of-mud
 - last-responsible-moment
-- architecture-decay
 - separation-of-concerns
 checks:
 - The document describes how first versions are released early and how functionality is added step by

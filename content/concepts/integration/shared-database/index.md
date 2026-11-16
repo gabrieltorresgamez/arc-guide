@@ -1,6 +1,7 @@
 ---
 title: Shared Database
 slug: shared-database
+order: 40
 category: integration
 kind: pattern
 summary: A shared database lets several applications exchange data by storing it in one common database.
@@ -20,7 +21,7 @@ related:
 - messaging
 - microservices-architecture
 - coupling-and-cohesion
-- canonical-data-model
+- messaging-pattern-language
 checks:
 - The document names which applications share the database and states that all of them are coupled to
   its schema.

@@ -1,6 +1,7 @@
 ---
 title: Requirements-Decision Modeling for Cyber-Physical Systems of Systems
 slug: requirements-decision-modeling-for-cyber-physical-systems-of-systems
+order: 70
 category: forces-decisions
 kind: method
 summary: ReDeMo is a formal model that links non-functional requirements (qualities such as sustainability)
@@ -18,7 +19,6 @@ related:
 - architectural-trade-off-thinking
 - traceability
 - architecture-decision-rationale
-- energy-efficiency-tactics
 - decision-documentation-and-requirements-management
 checks:
 - Non-functional requirements are explicitly linked to the architectural decisions that address them.

@@ -1,6 +1,7 @@
 ---
 title: Conceptual, Logical and Physical Data Model
 slug: conceptual-vs-logical-vs-physical-data-model
+order: 20
 category: data-architecture
 kind: concept
 summary: Data models come in three levels. The conceptual level describes the business domain. The logical
@@ -15,11 +16,9 @@ related:
 - conceptual-data-model
 - logical-data-model
 - physical-data-model
-- logical-vs-physical-data-model
 - data-architecture
-- entity
+- ddd-modeling-elements
 - domain-model
-- conceptual-data-model-preparation-for-logical-and-physical-models
 checks:
 - The conceptual model lists entity classes and their relationships without naming any storage technology.
 - The logical model is independent of a specific DBMS or storage technology.
@@ -43,6 +42,18 @@ sources:
   title: ANSI-SPARC Architecture - Wikipedia
   site: en.wikipedia.org
   accessed: '2026-11-09'
+- url: https://aws.amazon.com/compare/the-difference-between-logical-and-physical-data-model/
+  title: Logical vs Physical Data Model - Difference in Data Modeling - AWS
+  site: aws.amazon.com
+  accessed: '2026-11-09'
+- url: https://www.red-gate.com/blog/conceptual-logical-and-physical-data-model/
+  title: How to Implement a Conceptual, Logical, and Physical Data Model in Redgate Data Modeler
+  site: red-gate.com
+  accessed: '2026-11-09'
+- url: https://en.wikipedia.org/wiki/Data_vault_modeling
+  title: Data vault modeling - Wikipedia
+  site: en.wikipedia.org
+  accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
   caption: The three levels move from business meaning to database-specific implementation.
@@ -55,7 +66,7 @@ review:
 
 A data model describes what data a system keeps and how that data fits together. Teams usually work at three levels. Each level answers a different question.
 
-**Conceptual model.** It describes the meaning of a domain. Entity classes (the kinds of things the business cares about) and the relationships between them set its scope. It records data requirements without tying them to any technology. An entity–relationship model can express it in abstract form. See the articles Conceptual Data Model and Entity.
+**Conceptual model.** It describes the meaning of a domain. Entity classes (the kinds of things the business cares about) and the relationships between them set its scope. It records data requirements without tying them to any technology. An entity–relationship model can express it in abstract form. See the article Conceptual Data Model.
 
 **Logical model.** It describes the same meaning as one particular data technology represents it. That can be tables and columns, classes, or XML tags. It does not depend on a specific database product or storage technology. It helps stakeholders understand the data requirements. See Logical Data Model.
 
@@ -69,7 +80,11 @@ A data model describes what data a system keeps and how that data fits together.
 | Logical | The meaning as tables, classes or tags | No | Helping stakeholders understand requirements |
 | Physical | Storage, indexes, partitioning, access | Yes | Guiding implementation |
 
-**Relation to ANSI-SPARC.** ANSI-SPARC is an older three-level idea for databases. Its external level gives each user a view of only the part of the database that matters to them. Its conceptual level is a global view that does not say how data is physically stored. Its internal level covers how the database is physically represented on the computer. The terms differ from the three data models above, although both split logical meaning from physical storage. ANSI-SPARC never became a formal standard. Its idea of logical data independence is still widely adopted.
+**Relation to ANSI-SPARC.** ANSI-SPARC is an older three-level idea for databases. Its external level gives each user a view of only the part of the database that matters to them. Its conceptual level is a global view that does not say how data is physically stored. Its internal level covers how the database is physically represented on the computer. ANSI-SPARC never became a formal standard. Its idea of logical data independence is still widely adopted.
+
+**More about logical and physical models.**
+
+- **Logical vs. Physical Data Model:** A logical data model describes business data without tying it to any database. A physical data model refines it for one specific database, adding names, data types, keys and indexes.
 
 ## Example
 
@@ -77,4 +92,4 @@ A company builds an order system. At the conceptual level, the team notes that a
 
 ## Trade-offs
 
-The structures in each model must stay consistent with the other models. Decide per project whether a level can be skipped. Storage changes need not affect the logical or conceptual model.
+The structures in each model must stay consistent with the other models. Storage changes need not affect the logical or conceptual model.

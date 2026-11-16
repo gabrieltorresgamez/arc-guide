@@ -16,7 +16,7 @@ related:
 - story-splitting
 - story-mapping
 - architecturally-significant-requirement
-- goal-hierarchy-to-component-mapping
+- use-case
 - requirements-versus-constraints
 - arc42-introduction-and-goals
 - user-story

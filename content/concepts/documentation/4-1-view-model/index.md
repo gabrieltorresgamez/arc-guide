@@ -1,6 +1,7 @@
 ---
 title: 4+1 View Model
 slug: 4-1-view-model
+order: 60
 category: documentation
 kind: framework
 summary: The 4+1 View Model describes a software system through several views at once. Each view speaks

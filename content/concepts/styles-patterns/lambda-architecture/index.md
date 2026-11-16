@@ -18,7 +18,7 @@ related:
 - stream
 - data-architecture
 - architectural-trade-off-thinking
-- scalability
+- flexibility
 - technical-debt
 - command-query-responsibility-segregation
 checks:

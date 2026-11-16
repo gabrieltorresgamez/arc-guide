@@ -1,6 +1,7 @@
 ---
 title: Lightweight ATAM
 slug: lightweight-atam
+order: 40
 category: evaluation
 kind: method
 summary: A lightweight ATAM is a shortened form of the full Architecture Tradeoff Analysis Method. It
@@ -11,13 +12,8 @@ arc42:
 step: s11-evaluate
 related:
 - architecture-tradeoff-analysis-method-atam
-- advantages-and-drawbacks-of-atam
 - lightweight-approach-for-software-reviews-lasr
-- atam-findings-risks-non-risks-sensitivity-points-and-trade-offs
 - software-architecture-evaluation
-- sensitivity-point
-- trade-off-point
-- atam-non-risk
 checks:
 - The document states whether the architecture review was a full ATAM or a lightweight variant.
 - 'The document records who ran the lightweight review: external parties, the team, or both.'

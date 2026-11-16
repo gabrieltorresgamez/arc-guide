@@ -1,6 +1,7 @@
 ---
 title: Architecture Challenges at Project Start
 slug: architecture-challenges-at-project-start
+order: 30
 category: forces-decisions
 kind: concept
 summary: At project start, architects must make basic decisions with little certainty. Requirements change,

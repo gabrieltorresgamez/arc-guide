@@ -1,6 +1,7 @@
 ---
 title: System Context Diagram
 slug: c4-level-1-system-context-diagram
+order: 20
 category: documentation
 kind: artifact
 summary: A system context diagram shows one software system as a single box. Around it sit the people
@@ -15,9 +16,6 @@ related:
 - arc42-context-and-scope
 - c4-model
 - c4-container-diagram
-- context-view-antipatterns
-- context-view-antipattern-forgetting-bidirectional-data-flows
-- refining-complex-context-views
 checks:
 - The diagram shows the system as one box surrounded by its users and the external systems it interacts
   with.

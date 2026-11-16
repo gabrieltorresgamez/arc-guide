@@ -1,6 +1,7 @@
 ---
 title: BPMN Data Element
 slug: bpmn-data-element
+order: 60
 category: modeling-bpmn
 kind: notation-element
 summary: BPMN data elements show the information a process uses or creates. Data associations link that
@@ -13,8 +14,8 @@ related:
 - bpmn-core-elements
 - bpmn-activity
 - bpmn-connecting-object
-- process-model-versus-process-instance
-- data-exchange-between-bpmn-processes
+- purpose-of-process-analysis-and-modeling
+- bpmn-collaboration-diagram
 - bpmn-2-0-notation-overview
 checks:
 - Data stores are used for information that must outlast a single process instance, such as a database
@@ -46,7 +47,7 @@ review:
 
 A BPMN process diagram mainly shows the order of work. Data elements add the information that the work uses, creates or changes. The article "BPMN Core Elements" covers the wider notation.
 
-**Data objects.** A data object stands for information that is created, updated or consumed during a process. It sits outside the sequence flow, which is the set of arrows that sets the order of steps. Even so, every flow object in a given process instance can use it. A process instance is one run of the process. The article "Process Model versus Process Instance" explains the difference.
+**Data objects.** A data object stands for information that is created, updated or consumed during a process. It sits outside the sequence flow, which is the set of arrows that sets the order of steps. Even so, every flow object in a given process instance can use it. A process instance is one run of the process. The article "Process Analysis and Modeling" explains the difference.
 
 **Data stores.** A data store is a persistent repository, such as a database or a file system. Unlike a data object, it persists beyond the lifetime of the process instance.
 

@@ -12,13 +12,11 @@ arc42:
 step: s04-quality-requirements
 related:
 - quality-attribute-scenario
-- use-case-template
 - use-case
 - smart-requirements
 - arc42-quality-chapter
 - architecturally-significant-requirement
 - story-splitting
-- use-case-completeness-check
 checks:
 - System-wide quality requirements are stated separately from the use cases.
 - Each use-case-specific quality requirement names the functional requirement it applies to.

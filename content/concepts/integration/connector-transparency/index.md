@@ -1,6 +1,7 @@
 ---
 title: Connector Transparency (Direct vs Indirect Connection)
 slug: connector-transparency
+order: 100
 category: integration
 kind: concept
 summary: An indirect connector puts a channel between components, so a sender does not need to know who
@@ -12,9 +13,8 @@ arc42:
 step: s08-integration-data
 related:
 - software-connector
-- message-channel
-- publish-subscribe-channel
-- loose-coupling
+- messaging-pattern-language
+- coupling-and-cohesion
 - messaging
 - remote-procedure-call
 - synchronous-vs-asynchronous-connector
@@ -65,9 +65,9 @@ See the article Software Connector for what a connector is.
 - **Broadcast.** The decoupling allows integrators to broadcast messages to multiple receivers.
 - **Changes in transit.** The intermediary can transform messages without the sender or receiver knowing.
 
-**Publish-subscribe.** The publisher sends an event to one input channel. The channel delivers a copy to every subscriber. It splits into one output channel per subscriber. The publisher never names its recipients. See Publish/Subscribe Channel and Message Channel.
+**Publish-subscribe.** The publisher sends an event to one input channel. The channel delivers a copy to every subscriber. It splits into one output channel per subscriber. The publisher never names its recipients. See Enterprise Integration Patterns and Message Channel.
 
-**Low coupling.** With event notification, the source does not care about the response. Event notification also implies a low level of coupling. See Loose Coupling for the general idea.
+**Low coupling.** With event notification, the source does not care about the response. Event notification also implies a low level of coupling. See Coupling and Cohesion for the general idea.
 
 ## Example
 

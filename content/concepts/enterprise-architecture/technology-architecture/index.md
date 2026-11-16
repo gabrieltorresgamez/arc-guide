@@ -1,6 +1,7 @@
 ---
 title: Technology Architecture
 slug: technology-architecture
+order: 50
 category: enterprise-architecture
 kind: concept
 summary: Technology architecture describes the infrastructure a system runs on and the standards for choosing
@@ -13,14 +14,12 @@ arc42:
 - 11
 step: s05-constraints
 related:
-- enterprise-architecture-structure-business-and-it-architecture
+- enterprise-architecture-management
 - distribution-view
 - arc42-constraints
 - application-architecture
-- it-component-catalogue
 - deployment-diagram
-- relationship-between-enterprise-architecture-and-application-architecture
-- operational-constraint
+- safety
 checks:
 - The deployment view shows the infrastructure elements relevant to the software.
 - Every relevant environment is documented, not just production.
@@ -45,6 +44,14 @@ sources:
   title: 2 - Constraints | arc42 Documentation
   site: docs.arc42.org
   accessed: '2026-11-09'
+- url: https://documentation.alfabet.com/11-7/en/PortMan_SAG_Governance_StandardsCatalog_Analyze.html
+  title: What is our standards catalog?
+  site: documentation.alfabet.com
+  accessed: '2026-11-09'
+- url: https://www.orbussoftware.com/solutions/use-case/technology-standards-management
+  title: Technology Standards Management | OrbusInfinity
+  site: orbussoftware.com
+  accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
   caption: Inputs to hosting decisions and where they lead
@@ -57,7 +64,7 @@ review:
 
 Technology architecture, as used here, deals with the infrastructure that software runs on.
 
-**Why software teams care.** Infrastructure influences the system and some of its cross-cutting concepts (rules that apply across the whole system). Architects therefore need to know it. The arc42 deployment view records this infrastructure. From a software view, teams only need to capture the infrastructure elements that matter to them. If the system runs in several environments, document every relevant one.
+**Why software teams care.** Infrastructure influences the system and some of its cross-cutting concepts. Architects therefore need to know it. The arc42 deployment view records this infrastructure. From a software view, teams only need to capture the infrastructure elements that matter to them. If the system runs in several environments, document every relevant one.
 
 **Constraints.** Technical constraints limit design freedom. A team must always deal with them, though some can be negotiated.
 
@@ -72,6 +79,10 @@ Technology architecture, as used here, deals with the infrastructure that softwa
 **Regulation.** Sovereignty controls should be translated into specific architectural requirements. Running a workload locally does not satisfy sovereignty, privacy or regulatory requirements by itself.
 
 **Ownership.** Define who owns the hardware, platform, network and security.
+
+**More about technology artifacts.**
+
+- **IT Component Catalogue:** An IT component catalogue lists the technology components a company uses and gives each a status. Linking components to applications shows which to keep, approve, or retire.
 
 ## Example
 

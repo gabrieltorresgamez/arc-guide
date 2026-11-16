@@ -132,7 +132,7 @@ def build_article(a, titles, cats):
         if related:
             link = (lambda s: f"[{titles[s][0]}]({c.SITE_URL}{titles[s][1][1]})") if md else (lambda s: f"[{titles[s][0]}]({titles[s][1][0]})")
             parts.append("## Related\n\n" + "\n".join(f"- {link(s)}" for s in related))
-        parts.append("## Sources\n\n" + "\n".join(f"- [{s['title']}]({s['url']}) — {s['site']}, accessed {s['accessed']}" for s in srcs))
+        parts.append("## Sources\n\n" + "\n".join(f"- [{s['title']}]({s['url']}) — {s['site']}, accessed {s['accessed']}" for s in (srcs or [])))
         return "\n\n".join(parts)
     html_body = f":::note[In short]\n{a['summary']}\n:::\n\n{a['_body'].strip()}\n\n{diagram_blocks(a, False)}\n\n{tail(False)}"
     md_body = f"# {a['title']}\n\n**In short:** {a['summary']}\n\n{a['_body'].strip()}\n\n{diagram_blocks(a, True)}\n\n{tail(True)}"
@@ -167,7 +167,7 @@ def main(argv=None):
 
     def groups(cat):
         """[(title, [articles])] by subgroup of taxonomy.yaml, in its order; one group 'Concepts' if the category has none."""
-        items = sorted(by_cat[cat], key=lambda a: a["title"].lower())
+        items = sorted(by_cat[cat], key=lambda a: (a.get("order", 10**6), a["title"].lower()))  # `order:` in the front matter, then A to Z
         sg = cats[cat].get("subcategories")
         if not sg:
             return [("Concepts", items)]
@@ -246,13 +246,16 @@ def main(argv=None):
         sb.append({"label": "Start here", "items": [{"autogenerate": {"directory": "guides"}}]})
     def cat_items(k):
         if not cats[k].get("subcategories"):
-            return [{"autogenerate": {"directory": f"concepts/{k}"}}]
+            return [{"slug": f"concepts/{k}/{a['slug']}"} for a in groups(k)[0][1]]  # explicit list, so `order:` is respected
         return [{"label": t, "collapsed": True, "items": [{"slug": f"concepts/{k}/{a['slug']}"} for a in items]} for t, items in groups(k)]
     sb.append({"label": "Concepts", "items": [{"label": cats[k]["title"], "collapsed": True, "items": cat_items(k)} for k in cats if k in by_cat]})
     sb += [{"label": "Review", "slug": "review/arc42"}, {"label": "Glossary", "slug": "glossary"}]
     c.write_json(SITE / "sidebar.json", sb)
     rep = [f"articles: {len(arts)}; guides: {len(gl)}; diagrams rendered: {n_diag}; failed: {len(bad_diag)}"] + [f"- FAIL diagram {b}" for b in bad_diag]
     fails = [f"diagram {b}" for b in bad_diag]
+    cf, cw = check_content(arts)
+    fails += cf
+    rep += [f"- WARN {w}" for w in cw]
     r = subprocess.run(["npm", "run", "build"], cwd=SITE, capture_output=True, text=True, env=os.environ)
     if r.returncode:
         fails.append("npm run build failed:\n" + (r.stdout + r.stderr)[-2000:])
@@ -263,6 +266,70 @@ def main(argv=None):
     print("\n".join(rep))
     if fails:
         sys.exit(1)
+
+
+# --- content rules (see CLAUDE.md). FAIL blocks the build, WARN is only reported.
+MIN_WORDS, MAX_WORDS = 150, 650
+OLD_MODEL = (r"(?i)ISO(?:/IEC)? ?25010 ?\(2011\)|\b2011 (?:edition|version|standard)\b|\bUI aesthetics\b|user interface aesthetics"
+             r"|\bsub-?characteristic called maturity\b")
+TACTIC_SLUGS = {f"{k}-tactics" for k in ("reliability", "maintainability", "performance-efficiency", "interaction-capability", "security", "safety")}
+
+
+def check_content(arts):
+    """Source-level checks on content/. Returns (fails, warns)."""
+    fails, warns = [], []
+    slugs = {a["slug"] for a in arts}
+    titles = {a["title"].lower() for a in arts}
+    titles |= {re.sub(r"\s*\([^)]*\)\s*$", "", x) for x in titles} | {m for x in titles for m in re.findall(r"\(([^)]+)\)\s*$", x)}  # "Title (ACRONYM)": both parts
+    inbound = {s: 0 for s in slugs}
+    texts = [(a["slug"], a.get("related") or [], a["_body"]) for a in arts]
+    for g in sorted((c.CONTENT / "guides").glob("*/index.md")):
+        _, body = c.split_front(g.read_text())
+        texts.append((None, [], body))
+    for me, rel, body in texts:
+        for s in set(rel) | set(re.findall(r"\(concept:([^)]+)\)", body)):
+            if s in inbound and s != me:
+                inbound[s] += 1
+            elif s not in slugs:
+                fails.append(f"{me or 'guide'}: reference to unknown concept '{s}'")
+    sgs = json.loads((c.CONTENT / "subgroups.json").read_text()) if (c.CONTENT / "subgroups.json").exists() else {}
+    seen = {}
+    for a in arts:
+        if "order" in a:
+            key = (a["category"], sgs.get(a["slug"], "-"), a["order"])
+            if key in seen:
+                fails.append(f"{a['slug']}: same order {a['order']} as {seen[key]} in its group")
+            seen[key] = a["slug"]
+    for a in arts:
+        s, body = a["slug"], a["_body"]
+        n = len(body.split())
+        if n < MIN_WORDS and not a.get("short_ok"):
+            fails.append(f"{s}: {n} words, under {MIN_WORDS} (cut, merge, or set short_ok: true with a reason in the review)")
+        if n > MAX_WORDS and not a.get("long_ok"):
+            warns.append(f"{s}: {n} words, over {MAX_WORDS}")
+        if not a.get("sources"):
+            fails.append(f"{s}: no sources (every page needs at least one public source)")
+        elif len(a["sources"]) < 2:
+            warns.append(f"{s}: fewer than 2 sources")
+        if not inbound[s]:
+            warns.append(f"{s}: no page links to it")
+        if a.get("category") in ("quality-attributes", "tactics") and (m := re.search(OLD_MODEL, body)):
+            fails.append(f"{s}: 2011 model wording '{m[0]}' (use ISO/IEC 25010:2023 only)")
+        if a.get("category") == "tactics" and a.get("kind") == "tactic" and s not in TACTIC_SLUGS | {"architectural-tactic"}:
+            fails.append(f"{s}: tactic pages are one per ISO characteristic ({', '.join(sorted(TACTIC_SLUGS))})")
+        for m in re.finditer(r"\b[Ss]ee (?:the )?articles? (?:on )?([^\n]+)", body):
+            seg = re.split(r"(?<=[A-Za-z0-9)*\"”])\.(?:\s|$)", m[1])[0].strip(" \"“”*")
+            seg = re.sub(r"\s+for\b.*$", "", seg)
+            quoted = re.findall(r"[\"“]([^\"”]+)[\"”]", m[1])
+            if quoted and all(any(q.lower().startswith(x) for x in titles) for q in quoted):
+                continue  # quoted titles, which may contain "and"
+            if seg.lower() in titles or sum(x in seg.lower() for x in titles if len(x) > 8) >= 1 and "(" in seg:
+                continue  # a known title inside a parenthesized or quoted list
+            for part in re.split(r",\s*(?:and\s+)?|\s+and\s+", seg):
+                part = re.sub(r"^the\s+", "", part.strip(" \"“”*()"), flags=re.I)
+                if part and part[0].isupper() and part.count(")") <= part.count("(") and not any(part.lower().startswith(x) or x.startswith(part.lower()) for x in titles):  # a known title at the start (or a prefix of one) is enough; lowercase starts are sentence fragments
+                    warns.append(f"{s}: 'See the article {part}' matches no page title")
+    return fails, warns
 
 
 def check_dist(arts):

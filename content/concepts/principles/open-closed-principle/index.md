@@ -13,12 +13,12 @@ step: s07-solution-strategy
 related:
 - information-hiding
 - design-for-change
-- modifiability
-- loose-coupling
+- maintainability
+- coupling-and-cohesion
 - microkernel-pattern
 - architecture-principle
 - interface-segregation-principle
-- modifiability-tactics
+- maintainability-tactics
 checks:
 - Components that are expected to change expose a stable, well-defined interface that other components
   use.

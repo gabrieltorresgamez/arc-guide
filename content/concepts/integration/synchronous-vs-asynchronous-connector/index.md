@@ -1,6 +1,7 @@
 ---
 title: Synchronous vs Asynchronous Connector
 slug: synchronous-vs-asynchronous-connector
+order: 90
 category: integration
 kind: concept
 summary: A synchronous connector needs sender and receiver to be up at the same time. An asynchronous
@@ -14,12 +15,8 @@ step: s08-integration-data
 related:
 - synchronous-vs-asynchronous-communication
 - software-connector
-- circuit-breaker
-- retry
-- message-channel
-- dead-letter-channel
-- availability
-- request-reply
+- messaging-pattern-language
+- reliability
 checks:
 - Each synchronous call chain is identified, and its composite availability is calculated as the product
   of the components' availabilities.
@@ -63,7 +60,7 @@ review:
 
 **Synchronous connectors.** The sender calls the receiver and waits. Both must be up and ready at the same moment. Remote calls can fail or hang until a timeout. While callers wait on an unresponsive service, they hold threads, memory and connections. Many waiting callers can use up these resources. Then unrelated parts of the system that share them can fail too. Failures cascade across systems this way.
 
-**Chains add risk.** The combined availability of chained components is the product of their individual values. Each new dependency therefore lowers the total. See the Availability article for the term.
+**Chains add risk.** The combined availability of chained components is the product of their individual values. Each new dependency therefore lowers the total. See the Reliability article for the term.
 
 **Asynchronous connectors.** A queue sits between sender and receiver. The sender posts a message and moves on. The queue stores the message until the receiver picks it up. Neither side needs to be up at the same time as the other. The sender is not delayed when the receiver is down. It can keep posting messages.
 

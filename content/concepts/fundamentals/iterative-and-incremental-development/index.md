@@ -1,6 +1,7 @@
 ---
 title: Iterative and Incremental Development
 slug: iterative-and-incremental-development
+order: 80
 category: fundamentals
 kind: practice
 summary: Iterative and incremental development builds a system in complete pieces and refines it over
@@ -18,7 +19,6 @@ related:
 - evolutionary-domain-modeling
 - technical-debt
 - design-for-change
-- architecture-decay
 checks:
 - The document or team process describes delivering features as complete pieces and gathering feedback
   after each one.

@@ -1,6 +1,7 @@
 ---
 title: Architecture Canvas
 slug: architecture-canvas
+order: 60
 category: documentation
 kind: artifact
 summary: An architecture canvas is a one-page structured sheet for capturing the essentials of a software

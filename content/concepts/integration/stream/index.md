@@ -1,6 +1,7 @@
 ---
 title: Stream Connector
 slug: stream
+order: 150
 category: integration
 kind: pattern
 summary: A stream connector passes data from one step to the next while the data flows. Buffers absorb
@@ -12,12 +13,10 @@ arc42:
 step: s08-integration-data
 related:
 - pipes-and-filters
-- pipe-and-filter-pattern
 - software-connector
 - file-transfer
-- point-to-point-channel
+- messaging-pattern-language
 - synchronous-vs-asynchronous-connector
-- connector-cardinality
 - classification-of-integration-patterns
 checks:
 - The document states how each pipe connects filters and which output feeds which input.

@@ -1,6 +1,7 @@
 ---
 title: Compatibility
 slug: compatibility
+order: 30
 category: quality-attributes
 kind: quality-attribute
 summary: Compatibility is how well a product exchanges information with other products and does its job
@@ -13,14 +14,12 @@ arc42:
 - 10
 step: s08-integration-data
 related:
-- interoperability
 - iso-iec-25010-quality-model
-- iso-25010-2023-revision
-- modifiability
+- maintainability
 - patterns-for-api-design
 - architectural-tactic
 - quality-attribute-scenario
-- loose-coupling
+- coupling-and-cohesion
 checks:
 - The document states which other products a component exchanges information with, and what it shares
   with them.
@@ -40,6 +39,38 @@ sources:
   title: Tolerant Reader
   site: martinfowler.com
   accessed: '2026-11-09'
+- url: https://iso25000.com/index.php/en/iso-25000-standards/iso-25010
+  title: "ISO 25010"
+  site: iso25000.com
+  accessed: '2026-11-09'
+- url: https://quality.arc42.org/qualities/co-existence
+  title: "Co-existence | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://en.wikipedia.org/wiki/Interoperability
+  title: "Interoperability - Wikipedia"
+  site: en.wikipedia.org
+  accessed: '2026-11-09'
+- url: https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageTranslator.html
+  title: "Message Translator - Enterprise Integration Patterns"
+  site: enterpriseintegrationpatterns.com
+  accessed: '2026-11-09'
+- url: https://quality.arc42.org/qualities/interoperability
+  title: "Interoperability | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/interoperable-with-java-12
+  title: "Interoperable with Java 12"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/low-effort-deployment
+  title: "Low effort deployment"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/requirements/compatible-with-5-battery-providers
+  title: "Compatible with 5 different battery providers"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated
@@ -71,6 +102,15 @@ The Tolerant Reader tactic puts some of the effort on the consumer. The consumer
 **Contract tests**
 
 A consumer can also send its reader and the reader's tests to the provider. The provider can use them in its own build to detect potential breakages. The source describes this as a step toward Consumer-Driven Contracts.
+
+**Subcharacteristics.** The ISO/IEC 25010 model lists these subcharacteristics under this characteristic:
+
+- **Co-existence** means that the product performs its required functions efficiently while sharing an environment and resources with other products, without harming them. More: [arc42 quality model](https://quality.arc42.org/qualities/co-existence).
+- **Interoperability** is how well separate systems can exchange information and then use it. More: [arc42 quality model](https://quality.arc42.org/qualities/interoperability), [Interoperability - Wikipedia](https://en.wikipedia.org/wiki/Interoperability), [Message Translator - Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageTranslator.html).
+
+**In the arc42 quality model.** The arc42 quality model has its own page on [Compatibility](https://quality.arc42.org/qualities/compatibility).
+
+**Example quality requirements.** The arc42 quality model has example quality requirements for this characteristic: [Interoperable with Java 12](https://quality.arc42.org/requirements/interoperable-with-java-12), [Low effort deployment](https://quality.arc42.org/requirements/low-effort-deployment), [Compatible with 5 different battery providers](https://quality.arc42.org/requirements/compatible-with-5-battery-providers).
 
 ## Example
 

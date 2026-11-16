@@ -26,7 +26,7 @@ Write only what readers will use. Describe each thing once and reference it else
 
 **Write down first:** a stakeholder table and the top quality goals.
 
-- A stakeholder is a person, team or organization with an interest in the system ([Stakeholder Identification](concept:stakeholder-identification)). Ask who gains or loses, who decides and who controls resources.
+- A stakeholder is a person, team or organization with an interest in the system ([Stakeholder Identification](concept:stakeholder)). Ask who gains or loses, who decides and who controls resources.
 - For each stakeholder, note a role and what they expect from the system.
 - Pick the top three quality goals, five at most, and give each a short scenario ([Quality Attribute Prioritization](concept:quality-attribute-prioritization)). A quality goal is a quality such as speed or security that the system must meet.
 - Keep the requirements overview short. Link to existing requirements documents instead of copying them ([arc42 Introduction and Goals](concept:arc42-introduction-and-goals)).
@@ -50,7 +50,7 @@ Budget, deadlines and mandated technologies count as constraints too.
 
 - Show the system as one box. Put users and other systems around it ([arc42 Context and Scope](concept:arc42-context-and-scope)).
 - Write the business context first. It shows which data flows to and from each partner. Then write the technical context. It shows which channel or protocol carries each flow ([Business and Technical Context](concept:business-and-technical-context)).
-- Draw both directions where data moves both ways ([Context View Antipattern: Forgetting Bidirectional Data Flows](concept:context-view-antipattern-forgetting-bidirectional-data-flows)).
+- Draw both directions where data moves both ways ([Context View Antipattern: Forgetting Bidirectional Data Flows](concept:context-view)).
 - Add a table with one row per partner. Label every arrow with the data, and add a legend.
 
 ### Step 4: Recover the building blocks from the code (arc42 section 5)
@@ -58,9 +58,9 @@ Budget, deadlines and mandated technologies count as constraints too.
 **Write down first:** the level 1 view. That is the whole system as a white box, with its main building blocks as black boxes.
 
 - A black box shows what a block does and offers. A white box shows what is inside ([Component View](concept:component-view)).
-- Do not trust old documents blindly. For a legacy system, recover the real architecture first ([ATAM Application Phases](concept:atam-application-phases)).
-- Group blocks by responsibility. Do not copy code packages such as Facade, Service or Dto into the diagram ([Component View Antipattern: Lifting Code to Model Level](concept:component-view-antipattern-lifting-code-to-model-level)).
-- Zoom into a block only if it is important, risky, complex or volatile ([Component View Refinement Levels](concept:component-view-refinement-levels)).
+- Do not trust old documents blindly. For a legacy system, recover the real architecture first ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
+- Group blocks by responsibility. Do not copy code packages such as Facade, Service or Dto into the diagram ([Component View Antipattern: Lifting Code to Model Level](concept:component-view)).
+- Zoom into a block only if it is important, risky, complex or volatile ([Component View Refinement Levels](concept:component-view)).
 - Every diagram needs a title that names its type and scope, and a legend.
 
 The code can answer "what is here" ([Self-Documentation](concept:self-documentation)). It cannot answer "why", so the next step covers that.

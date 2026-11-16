@@ -1,6 +1,7 @@
 ---
 title: Architectural Force
 slug: architectural-forces
+order: 10
 category: forces-decisions
 kind: concept
 summary: Forces are pressures that pull an architectural decision in different directions, such as deadlines,
@@ -14,8 +15,6 @@ related:
 - big-ball-of-mud
 - requirements-versus-constraints
 - arc42-constraints
-- markdown-architectural-decision-records-madr
-- keep-it-working
 - architectural-decision-record
 - concern
 - technical-debt

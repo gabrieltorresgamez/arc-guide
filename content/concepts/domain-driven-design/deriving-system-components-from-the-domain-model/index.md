@@ -13,12 +13,11 @@ arc42:
 step: s06-domain
 related:
 - cargo-shipping-domain-model-example
-- aggregate
+- ddd-modeling-elements
 - bounded-context
 - domain-model
 - coupling-and-cohesion
 - arc42-crosscutting-concepts
-- domain-event
 - reflecting-the-business-domain-in-the-architecture
 checks:
 - Building blocks are grouped by cohesion, so things inside one block belong together.
@@ -57,8 +56,8 @@ A domain model describes the business concepts a system deals with. Look at whic
 **Start from cohesion.** arc42 says cohesion should be the main driver when forming building blocks. See the article Coupling and Cohesion.
 
 **Look at the groupings the model already shows.**
-- In the well-known cargo sample, Cargo is the central aggregate. Aggregates help decouple large structures by setting rules for relations between entities. See the article Aggregate. The Cargo aggregate, rooted at Cargo, also contains the value objects Delivery, Itinerary and Leg.
-- HandlingEvent is a domain event. It records a real-world happening, such as cargo being loaded or unloaded. See the article Domain Event.
+- In the well-known cargo sample, Cargo is the central aggregate. Aggregates help decouple large structures by setting rules for relations between entities. See the article DDD Building Blocks (Tactical Patterns). The Cargo aggregate, rooted at Cargo, also contains the value objects Delivery, Itinerary and Leg.
+- HandlingEvent is a domain event. It records a real-world happening, such as cargo being loaded or unloaded. See the article DDD Building Blocks (Tactical Patterns).
 - Bounded contexts split a large domain model into parts, because one unified model is not feasible for a large system. See the article Bounded Context.
 
 **Give the use cases an owner.** Application services such as BookingService support specific use cases. In the sample, such services drive workflow and coordinate transaction management.

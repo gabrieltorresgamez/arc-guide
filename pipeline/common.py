@@ -3,7 +3,10 @@ import hashlib
 import json
 import os
 import re
+import ssl
+import subprocess
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -90,3 +93,19 @@ def split_front(text):
     """Markdown with YAML front matter -> (dict, body)."""
     m = re.match(r"---\n(.*?)\n---\n?(.*)", text, re.S)
     return (yaml.safe_load(m.group(1)) or {}, m.group(2).lstrip("\n")) if m else ({}, text)
+
+
+def fetch_public(url, ua="arc-guide/1.0 (non-commercial)", timeout=30):
+    """Body of a public page as text. Falls back to curl (which still verifies certificates) when this Python's OpenSSL
+    rejects an incomplete certificate chain that curl accepts. Raises on any other failure."""
+    quoted = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
+    try:
+        with urllib.request.urlopen(urllib.request.Request(quoted, headers={"User-Agent": ua}), timeout=timeout) as r:
+            return r.read().decode("utf-8", errors="replace")
+    except urllib.error.URLError as e:
+        if not isinstance(e.reason, ssl.SSLCertVerificationError):
+            raise
+    r = subprocess.run(["curl", "-sfL", "--max-time", str(timeout), "-A", ua, quoted], capture_output=True)
+    if r.returncode:
+        raise OSError(f"curl failed ({r.returncode})")
+    return r.stdout.decode("utf-8", errors="replace")

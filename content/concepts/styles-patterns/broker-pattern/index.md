@@ -17,10 +17,10 @@ related:
 - message-routing
 - messaging
 - remote-procedure-call
-- loose-coupling
+- coupling-and-cohesion
 - architectural-pattern
 - messaging-pattern-language
-- connectors-and-distribution
+- software-connector
 checks:
 - The document names the broker component and states that it coordinates communication, forwards requests,
   and returns results and exceptions.

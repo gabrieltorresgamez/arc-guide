@@ -1,6 +1,7 @@
 ---
 title: Timeout-Based Delivery
 slug: timeout-based-delivery
+order: 50
 category: integration
 kind: pattern
 summary: Timeout-based delivery hides a message from other consumers while one consumer works on it. The
@@ -12,14 +13,8 @@ arc42:
 - 10
 step: s08-integration-data
 related:
-- idempotent-receiver
-- dead-letter-channel
-- heartbeat
-- retry
+- messaging-pattern-language
 - messaging
-- polling-consumer
-- message-channel
-- point-to-point-channel
 checks:
 - The visibility timeout or lock duration is set deliberately and is longer than normal processing time.
 - Consumers are designed to handle duplicate delivery, because the queue is at-least-once.
@@ -69,7 +64,7 @@ This model is *at-least-once* delivery: a message arrives one or more times. Eve
 
 - Size it to your normal processing time. Service Bus advises a lock longer than normal processing, so you rarely need to renew it. Its lock defaults to 1 minute, with a 5-minute maximum. The SQS default is 30 seconds.
 - A long timeout delays retries after a failure.
-- For slow jobs, extend the timeout periodically with a heartbeat (see the Heartbeat article). SQS has a 12-hour cap that extensions do not reset. The lock owner can also renew a Service Bus lock.
+- For slow jobs, extend the timeout periodically with a heartbeat. SQS has a 12-hour cap that extensions do not reset. The lock owner can also renew a Service Bus lock.
 
 **Giving a message back early or rejecting it**
 
@@ -78,7 +73,7 @@ This model is *at-least-once* delivery: a message arrives one or more times. Eve
 
 **Messages that keep failing**
 
-A dead-letter queue collects messages that fail after several attempts. They then stop circulating in the main queue. See the Dead Letter Channel article.
+A dead-letter queue collects messages that fail after several attempts. They then stop circulating in the main queue. See the Enterprise Integration Patterns article.
 
 ## Example
 

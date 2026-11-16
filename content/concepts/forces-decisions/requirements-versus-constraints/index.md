@@ -1,6 +1,7 @@
 ---
 title: Architectural Constraint
 slug: requirements-versus-constraints
+order: 30
 category: forces-decisions
 kind: concept
 summary: An architectural constraint is a requirement that limits how freely architects can design and
@@ -13,13 +14,13 @@ arc42:
 step: s05-constraints
 related:
 - arc42-constraints
-- operational-constraint
+- safety
 - architecturally-significant-requirement
 - architectural-forces
 - arc42-solution-strategy
 - architectural-decision
 - quality-attribute
-- markdown-architectural-decision-records-madr
+- architectural-decision-record
 checks:
 - The document lists its constraints in one place, so architects can see where they are free and where
   they must comply.
@@ -69,7 +70,7 @@ A constraint is any requirement that limits the freedom of architects in their d
 
 **State the consequences.** Constraints can bring extra cost or effort. arc42 advises clarifying these consequences. If a consequence is unreasonable, such as a cost that is excessively high, arc42 advises negotiating it with the relevant stakeholders (people with an interest in the system).
 
-**Where they live.** arc42 has a section for architecture constraints (see "arc42 Constraints"). Decision templates such as MADR list constraints next to qualities, forces and concerns as decision drivers (see "Markdown Architectural Decision Records").
+**Where they live.** arc42 has a section for architecture constraints (see "arc42 Constraints"). Decision templates such as MADR list constraints next to qualities, forces and concerns as decision drivers (see "Architectural Decision Record").
 
 ## Example
 

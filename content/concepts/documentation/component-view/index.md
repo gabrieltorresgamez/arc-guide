@@ -1,6 +1,7 @@
 ---
 title: Component View
 slug: component-view
+order: 30
 category: documentation
 kind: artifact
 summary: 'A component view shows how a system is built from parts. In arc42 it is the mandatory building
@@ -13,11 +14,9 @@ related:
 - c4-level-3-component-diagram
 - c4-model
 - arc42-documentation-template
-- component-view-refinement-levels
 - uml-component-diagram
-- nested-components-and-subsystems
 - architecture-view
-- component-view-antipattern-lifting-code-to-model-level
+- arc42-building-block-view
 checks:
 - The architecture document contains a building block view, since it is mandatory in arc42.
 - The building block view is organized as a hierarchy of black boxes and white boxes, each with a description.
@@ -30,6 +29,18 @@ sources:
   accessed: '2026-11-09'
 - url: https://c4model.com/diagrams/component
   title: Component diagram | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
+- url: https://c4model.com/abstractions/component
+  title: Component | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
+- url: https://c4model.com/diagrams/code
+  title: Code diagram | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
+- url: https://c4model.com/
+  title: Home | C4 model
   site: c4model.com
   accessed: '2026-11-09'
 diagrams:
@@ -57,6 +68,11 @@ The view starts with a coarse picture. You then zoom into selected blocks, one l
 **In C4**
 
 The C4 Model also has component diagrams. They are optional. You create them only when they add value. See the article C4 Component Diagram for details.
+
+**More about component views.**
+
+- **Component View Antipattern: Lifting Code to Model Level:** The diagram then mirrors the source code instead of abstracting it into meaningful building blocks.
+- **Component View Refinement Levels:** A building block view is built in levels. Each level zooms into chosen blocks of the level above. Only important, risky, complex or volatile blocks get refined. Simple or standard parts are left out.
 
 ## Example
 

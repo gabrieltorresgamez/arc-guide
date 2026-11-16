@@ -1,6 +1,7 @@
 ---
 title: Architecturally Significant Decision
 slug: architecturally-significant-decision
+order: 20
 category: forces-decisions
 kind: concept
 summary: An architecturally significant decision is hard or costly to change, or carries high risk or

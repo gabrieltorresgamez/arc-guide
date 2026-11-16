@@ -1,6 +1,7 @@
 ---
 title: Tactic Trade-Off Balancing
 slug: tactic-trade-off-balancing
+order: 70
 category: tactics
 kind: practice
 summary: Tactics serve quality goals, and those goals can conflict. Balancing means ranking the goals,
@@ -14,8 +15,6 @@ step: s07-solution-strategy
 related:
 - architectural-tactic
 - architectural-trade-off-thinking
-- trade-off-point
-- sensitivity-point
 - architecture-tradeoff-analysis-method-atam
 - quality-attribute-prioritization
 - arc42-solution-strategy

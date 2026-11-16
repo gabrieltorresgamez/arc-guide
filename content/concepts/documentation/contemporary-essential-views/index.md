@@ -1,6 +1,7 @@
 ---
 title: Essential Architecture Views (Context, Component, Runtime, Distribution)
 slug: contemporary-essential-views
+order: 60
 category: documentation
 kind: concept
 summary: 'Essential architecture views show a system from four angles: its context, its building blocks,

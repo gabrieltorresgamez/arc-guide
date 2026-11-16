@@ -17,8 +17,7 @@ related:
 - bpmn-connecting-object
 - bpmn-collaboration-diagram
 - bpmn-modeling-tips
-- bpmn-layout-guideline
-- bpmn-compensation-event
+- bpmn-event
 checks:
 - Text annotations are linked to the element they comment on by a dotted association.
 - Rules that must be enforced are modeled with real process elements, not only in text annotations, because

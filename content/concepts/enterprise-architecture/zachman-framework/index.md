@@ -1,6 +1,7 @@
 ---
 title: Zachman Framework
 slug: zachman-framework
+order: 30
 category: enterprise-architecture
 kind: framework
 summary: The Zachman Framework is a grid that sorts the descriptions of an enterprise. It is a structure,
@@ -15,7 +16,7 @@ related:
 - architecture-view
 - architecture-viewpoint
 - stakeholder-perspective-and-concern
-- common-features-of-architecture-frameworks
+- enterprise-architecture-framework
 - architecture-view-model
 checks:
 - The document states which framework cells are formalized and which are deliberately left out, with the

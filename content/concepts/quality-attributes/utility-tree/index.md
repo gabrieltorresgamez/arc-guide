@@ -1,6 +1,7 @@
 ---
 title: Utility Tree
 slug: utility-tree
+order: 50
 category: quality-attributes
 kind: artifact
 summary: A utility tree, also called a quality tree, breaks "quality" into topics and sub-topics. Concrete
@@ -13,9 +14,7 @@ related:
 - arc42-quality-chapter
 - iso-iec-25010-quality-model
 - architecture-tradeoff-analysis-method-atam
-- scenario-weight-assignment
 - quality-attribute-prioritization
-- atam-phase-1-architecture-centric-analysis
 checks:
 - The quality tree has quality as its root and refines it into areas or topics.
 - Every leaf of the tree is a quality scenario.

@@ -1,6 +1,7 @@
 ---
 title: Architecture Level
 slug: architecture-levels
+order: 20
 category: fundamentals
 kind: concept
 summary: Architecture can be described at several levels of detail. In arc42's building block view, each
@@ -10,13 +11,12 @@ arc42:
 step: s10-document
 related:
 - arc42-documentation-template
-- component-view-refinement-levels
-- c4-model
-- nested-components-and-subsystems
-- software-architecture-basic-concepts
-- unclear-level-of-abstraction-antipattern
-- levels-of-architectural-decisions
 - component-view
+- c4-model
+- uml-component-diagram
+- software-architecture
+- characteristics-of-a-good-view
+- levels-of-architectural-decisions
 checks:
 - Each deeper level of the building block view zooms into selected blocks of the level above.
 - The hierarchy continues to further levels only where details of a block need describing.
@@ -27,6 +27,10 @@ sources:
   title: 5 - Building block view | arc42 Documentation
   site: docs.arc42.org
   accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/5-2/
+  title: "Tip 5-2: Organize the building block view hierarchically! | arc42 Documentation"
+  site: docs.arc42.org
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: Each level zooms into selected blocks of the level above.

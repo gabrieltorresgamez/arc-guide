@@ -1,6 +1,7 @@
 ---
 title: Architecture Description Element
 slug: architecture-description-element
+order: 110
 category: documentation
 kind: concept
 summary: An architecture description element is a named part of an architecture description, such as a

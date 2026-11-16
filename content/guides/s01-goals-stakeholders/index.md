@@ -36,16 +36,16 @@ You write the result into section 1 of arc42, "Introduction and Goals". See [arc
 
 - **No requirements document.** Write a short overview yourself. Mark it as a first version. Early results get refined over time.
 - **No business description.** Ask the sponsor three questions. Who are the customers? What value do they get? Why does the business pay for this system?
-- **Unclear scope or security needs.** Write your assumptions down and challenge them. An assumption like "we only need a simple login" is risky when nobody has questioned it. See [Common Architect Mistakes](concept:common-architect-mistakes).
+- **Unclear scope or security needs.** Write your assumptions down and challenge them. An assumption like "we only need a simple login" is risky when nobody has questioned it. See [Common Architect Mistakes](concept:software-architect-role).
 - **Stakeholders you cannot reach.** List them anyway. Ask someone to speak for each group, so that no class is ignored. See [Stakeholder](concept:stakeholder).
 
 ## How to do it
 
-1. **Write a vision statement.** Keep it short. Name the target customers. Say what value they get. Name the few features that make the system stand out. Do not list every feature. See [Vision Statement](concept:vision-statement).
-2. **Connect the vision to business goals.** The value in the vision should link to a business goal and to the business case. See [System Idea and Vision Elements](concept:system-idea-and-vision-elements).
-3. **Find the stakeholders.** Ask guiding questions. Who gains or loses? Who decides? Who controls resources? Check every class of stakeholder, for example the people who acquire the system and the people who assess it. See [Stakeholder Identification](concept:stakeholder-identification).
+1. **Write a vision statement.** Keep it short. Name the target customers. Say what value they get. Name the few features that make the system stand out. Do not list every feature. See [Vision Statement](concept:system-idea).
+2. **Connect the vision to business goals.** The value in the vision should link to a business goal and to the business case. See [System Idea and Vision Elements](concept:system-idea).
+3. **Find the stakeholders.** Ask guiding questions. Who gains or loses? Who decides? Who controls resources? Check every class of stakeholder, for example the people who acquire the system and the people who assess it. See [Stakeholder Identification](concept:stakeholder).
 4. **Record their concerns.** Build a table with the role, the name or contact, and what each stakeholder expects from the architecture and its documentation. See [Stakeholder Concern](concept:stakeholder-concern).
-5. **Decide how closely to engage each group.** Rate each stakeholder by power and interest. Engage high-power, high-interest stakeholders closely. Keep high-power, low-interest stakeholders satisfied. See [Stakeholder Power Grid](concept:stakeholder-power-grid).
+5. **Decide how closely to engage each group.** Rate each stakeholder by power and interest. Engage high-power, high-interest stakeholders closely. Keep high-power, low-interest stakeholders satisfied. See [Stakeholder Power Grid](concept:stakeholder).
 6. **Choose the top three to five quality goals.** Pick the ones most important to the major stakeholders. Give each goal a short scenario, not only a keyword. Leave detailed quality requirements for section 10 of arc42. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).
 7. **Name concerns that conflict.** Write down which trade-off you choose and why. Record the reasoning in an Architecture Decision Record (ADR). See [Concern](concept:concern).
 8. **Keep the requirements overview short.** Link to the existing requirements documents.
@@ -89,8 +89,8 @@ The details, such as exact numbers, move to section 10.
 
 ## Done when
 
-- You wrote a short vision statement that names the target customers, their value and a few standout features. See [Vision Statement](concept:vision-statement).
-- Your stakeholder table lists roles, names or contacts and expectations, and covers every stakeholder class. See [Stakeholder Identification](concept:stakeholder-identification).
+- You wrote a short vision statement that names the target customers, their value and a few standout features. See [Vision Statement](concept:system-idea).
+- Your stakeholder table lists roles, names or contacts and expectations, and covers every stakeholder class. See [Stakeholder Identification](concept:stakeholder).
 - Each stakeholder concern appears in the table and is addressed in the architecture description. See [Stakeholder Concern](concept:stakeholder-concern).
 - Section 1 lists at most five quality goals, each with a short scenario. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).
 - The quality goals are the ones most important to the major stakeholders. See [Stakeholder Perspective and Concern](concept:stakeholder-perspective-and-concern).
@@ -102,14 +102,14 @@ The details, such as exact numbers, move to section 10.
 - [Stakeholder](concept:stakeholder)
 - [Stakeholder Perspective and Concern](concept:stakeholder-perspective-and-concern)
 - [Stakeholder Concern](concept:stakeholder-concern)
-- [Stakeholder Identification](concept:stakeholder-identification)
-- [Stakeholder Power Grid](concept:stakeholder-power-grid)
-- [Stakeholder Readiness for Change Assessment](concept:stakeholder-readiness-for-change-assessment)
+- [Stakeholder Identification](concept:stakeholder)
+- [Stakeholder Power Grid](concept:stakeholder)
+- [Stakeholder Readiness for Change Assessment](concept:enterprise-architecture-management)
 - [Concern](concept:concern)
-- [Vision Statement](concept:vision-statement)
-- [System Idea and Vision Elements](concept:system-idea-and-vision-elements)
+- [Vision Statement](concept:system-idea)
+- [System Idea and Vision Elements](concept:system-idea)
 - [arc42 Introduction and Goals](concept:arc42-introduction-and-goals)
 - [Business Model Canvas](concept:business-model-canvas)
-- [Software Architecture Basic Concepts](concept:software-architecture-basic-concepts)
+- [Software Architecture Basic Concepts](concept:software-architecture)
 - [Software Architect](concept:software-architect-role)
-- [Common Architect Mistakes](concept:common-architect-mistakes)
+- [Common Architect Mistakes](concept:software-architect-role)

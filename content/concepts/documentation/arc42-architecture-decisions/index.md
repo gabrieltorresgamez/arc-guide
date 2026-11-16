@@ -1,6 +1,7 @@
 ---
 title: arc42 Architecture Decisions
 slug: arc42-architecture-decisions
+order: 100
 category: documentation
 kind: artifact
 summary: Section 9 of arc42 records important, expensive, large-scale or risky architecture decisions
@@ -17,7 +18,6 @@ related:
 - architectural-decision
 - architecture-decision-rationale
 - architecturally-significant-decision
-- markdown-architectural-decision-records-madr
 - documentation-as-code
 checks:
 - Each entry in section 9 states the decision together with its rationale.

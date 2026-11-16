@@ -13,7 +13,7 @@ arc42:
 step: s07-solution-strategy
 related:
 - layered-architecture
-- testability
+- maintainability
 - domain-driven-design
 - use-case
 - separation-of-concerns
@@ -34,6 +34,10 @@ sources:
   title: hexagonal-architecture
   site: alistair.cockburn.us
   accessed: '2026-11-09'
+- url: https://quality.arc42.org/approaches/hexagonal-architecture
+  title: "Hexagonal Architecture | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: Control flow runs from controller through use case to presenter. The presenter implements the
@@ -64,6 +68,8 @@ The Dependency Inversion Principle resolves this conflict at the boundaries. The
 **Why it helps.** Business rules can be tested without the UI, the database, or a web server.
 
 **A related idea.** Hexagonal Architecture has a similar aim. It lets users, programs, or tests drive an application. It also lets the application be developed and tested in isolation from runtime devices and databases. There, technology-specific adapters convert events that arrive at a port.
+
+**In the arc42 quality model.** It has an approach page on [Hexagonal Architecture](https://quality.arc42.org/approaches/hexagonal-architecture).
 
 ## Example
 

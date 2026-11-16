@@ -1,6 +1,7 @@
 ---
 title: Integration Pattern vs. Middleware Technology
 slug: integration-patterns-vs-middleware-technology
+order: 110
 category: integration
 kind: principle
 summary: An integration pattern describes a solution without tying it to any product. Middleware is the

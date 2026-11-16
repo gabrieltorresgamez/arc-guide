@@ -11,14 +11,8 @@ arc42:
 - 11
 step: s04-quality-requirements
 related:
-- fault-tolerance
-- availability
-- availability-tactic
-- availability-tactics-fault-detection
-- availability-tactics-fault-prevention
-- availability-tactics-fault-recovery
 - reliability
-- graceful-degradation
+- reliability-tactics
 checks:
 - The document separates faults (causes) from failures (visible deviations from the specification).
 - Internal and external dependencies are assessed separately as possible sources of faults.
@@ -72,7 +66,7 @@ Azure's failure-mode guidance treats internal and external dependencies separate
 - **Fault prevention** tries to stop faults from entering the system.
 - **Fault tolerance** adds mechanisms so the system still delivers the required service despite faults. The service may be degraded.
 
-Availability tactics (see Availability Tactic) follow a similar split. They detect faults, recover from faults, and prevent faults. Rollback is a recovery tactic. Removal from service, which temporarily takes a component out of use, is a prevention tactic.
+Availability tactics (see Reliability Tactic) follow a similar split. They detect faults, recover from faults, and prevent faults. Rollback is a recovery tactic. Removal from service, which temporarily takes a component out of use, is a prevention tactic.
 
 Failure mode analysis supports resilience. It identifies failure points and plans mitigations, such as redundancy and degraded-mode design. Monitoring and alerting provide the detection.
 

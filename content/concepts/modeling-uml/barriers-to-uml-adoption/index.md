@@ -17,7 +17,7 @@ related:
 - uml-modeling-anti-patterns
 - diagrams-as-code
 - documentation-as-code
-- self-invented-notation-drawback
+- characteristics-of-a-good-view
 checks:
 - The document states whether its UML diagrams are sketches (selective communication) or complete specifications.
 - Where diagrams are informal, the document notes that they may deviate from the UML standard.

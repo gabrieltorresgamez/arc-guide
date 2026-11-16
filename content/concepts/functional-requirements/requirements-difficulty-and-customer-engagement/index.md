@@ -13,7 +13,6 @@ step: s03-functional-requirements
 related:
 - iterative-and-incremental-development
 - stakeholder
-- stakeholder-identification
 - architecturally-significant-requirement
 - solution-as-moving-target
 - agile-architecture

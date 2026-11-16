@@ -1,6 +1,7 @@
 ---
 title: User Stories vs. Use Cases
 slug: user-story-vs-use-case
+order: 50
 category: functional-requirements
 kind: concept
 summary: User stories are small, brief requirements that a team estimates and talks through. Use cases
@@ -12,12 +13,8 @@ step: s03-functional-requirements
 related:
 - user-story
 - use-case
-- card-conversation-confirmation
-- consistency-of-user-story-and-use-case
 - acceptance-criteria
 - smart-requirements
-- use-case-goal-levels
-- use-case-template
 checks:
 - Each user story is backed by acceptance tests or examples that confirm it.
 - Use cases in the document are detailed enough to be understood without the author.
@@ -39,6 +36,24 @@ sources:
   title: 'Essential XP: Card, Conversation, Confirmation'
   site: ronjeffries.com
   accessed: '2026-11-09'
+- url: https://socadk.github.io/design-practice-repository/artifact-templates/DPR-UseCase.html
+  title: design-practice-repository | Summaries of artifacts, templates, practices, and techniques for
+    agile architecting (DPR-mm) and service design (SDPR-nn).
+  site: socadk.github.io
+  accessed: '2026-11-09'
+- url: https://socadk.github.io/design-practice-repository/artifact-templates/DPR-UserStory.html
+  title: design-practice-repository | Summaries of artifacts, templates, practices, and techniques for
+    agile architecting (DPR-mm) and service design (SDPR-nn).
+  site: socadk.github.io
+  accessed: '2026-11-09'
+- url: https://www.mountaingoatsoftware.com/agile/user-stories
+  title: 'User Stories: What They Are, How to Write Them, and Examples - Mountain Goat Software'
+  site: mountaingoatsoftware.com
+  accessed: '2026-11-09'
+- url: https://martinfowler.com/bliki/UseCase.html
+  title: Use Case
+  site: martinfowler.com
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -53,7 +68,7 @@ Both ideas capture what a system should do. They differ in size, detail, and how
 
 **Detail.** A use case aims to give enough detail to be understood on its own. A story does not. A story works as a token for the requirement. The detail travels through conversation between the customer and the programmers.
 
-**The Three Cs.** Stories rely on three parts (see Card, Conversation, Confirmation):
+**The Three Cs.** Stories rely on three parts (see User Story):
 
 - A card, which is a physical token.
 - A conversation between stakeholders.
@@ -64,6 +79,10 @@ Acceptance tests provide the confirmation. They make the simple card-and-convers
 **How they relate.** One view treats a story as a use case at 2 bits of precision. That means a goal plus a main scenario, and little else. So the two are not opposites. They sit at different levels of precision.
 
 **Teams new to this.** Inexperienced teams often want to try use cases. One view holds that use cases are rarely ideal compared with confirming a requirement through examples.
+
+**Keeping them consistent.**
+
+- **Consistency of User Story and Use Case:** Treat the story as the brief, early form.
 
 ## Example
 

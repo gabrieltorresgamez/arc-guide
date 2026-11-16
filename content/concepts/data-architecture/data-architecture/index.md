@@ -1,6 +1,7 @@
 ---
 title: Data Architecture
 slug: data-architecture
+order: 10
 category: data-architecture
 kind: concept
 summary: Data architecture describes how an organization's data is sourced, stored, managed, integrated
@@ -13,13 +14,13 @@ arc42:
 step: s08-integration-data
 related:
 - data-architecture-artifacts
-- data-entity-business-function-matrix
-- logical-vs-physical-data-model
+- conceptual-vs-logical-vs-physical-data-model
 - data-architecture-principle
 - define-target-data-architecture-method-phase
 - data-architecture-documentation-in-arc42
 - business-architecture
 - application-architecture
+- togaf
 checks:
 - The document gives an overall view of data repositories, their relationships and their owners.
 - The document names the database of record for master and reference data.
@@ -70,7 +71,7 @@ The key point is one overall view of data repositories, their relationships and 
 **Typical building blocks**
 
 - *Enterprise data model.* It is the core of an enterprise data architecture.
-- *Logical and physical data models.* Notations include UML, IDEF1X and entity relationship diagrams (ERDs). Physical models are commonly ERDs. See the article *Logical vs. physical data model*.
+- *Logical and physical data models.* Notations include UML, IDEF1X and entity relationship diagrams (ERDs). Physical models are commonly ERDs. See the article *Conceptual, Logical and Physical Data Model*.
 - *Master data.* This is common business data, such as customers, vendors and products. It is consistent, nontransactional and controlled for accuracy.
 - *Database of record.* Data integration architecture names the database of record for reference and master data. It focuses on their quality.
 - *CRUD matrix.* This entity/process matrix shows which processes create, read, update or delete each business data entity. See *Data Entity/Business Function Matrix*.

@@ -13,7 +13,6 @@ step: s03-functional-requirements
 related:
 - traceability
 - acceptance-criteria
-- invest-criteria
 - user-story
 - use-case
 - arc42-quality-chapter

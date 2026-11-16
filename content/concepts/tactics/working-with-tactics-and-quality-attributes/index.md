@@ -1,6 +1,7 @@
 ---
 title: Working with Tactics and Quality Attributes
 slug: working-with-tactics-and-quality-attributes
+order: 50
 category: tactics
 kind: method
 summary: Working with tactics means taking measurable quality scenarios and choosing small design decisions

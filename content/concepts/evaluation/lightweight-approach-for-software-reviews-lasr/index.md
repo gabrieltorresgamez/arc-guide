@@ -1,6 +1,7 @@
 ---
 title: Lightweight Approach for Software Reviews (LASR)
 slug: lightweight-approach-for-software-reviews-lasr
+order: 80
 category: evaluation
 kind: method
 summary: LASR is a lightweight way to review a software system. A small team runs a short, game-like workshop.
@@ -15,7 +16,6 @@ related:
 - software-architecture-evaluation
 - quality-attribute
 - risk-storming
-- advantages-and-drawbacks-of-atam
 - quality-attribute-scenario
 checks:
 - The review states quantified objectives for the system's top quality attributes.

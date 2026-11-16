@@ -1,6 +1,7 @@
 ---
 title: Architectural Decision Record Example
 slug: middleware-architectural-decision-example
+order: 40
 category: forces-decisions
 kind: artifact
 summary: 'An ADR example records one decision: the question, the quality goals behind it, every option
@@ -13,11 +14,9 @@ related:
 - architectural-decision-record
 - arc42-architecture-decisions
 - architecture-decision-rationale
-- adr-common-mistakes-and-remediations
 - messaging
 - remote-procedure-call
 - integration-pattern
-- y-statement
 checks:
 - The record names the problem and links it to at least one quality goal or significant requirement.
 - Rejected options are listed and evaluated, not only the chosen one.

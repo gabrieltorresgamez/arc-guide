@@ -1,6 +1,7 @@
 ---
 title: Architectural Pattern vs. Design Pattern
 slug: architectural-pattern-vs-design-pattern
+order: 30
 category: styles-patterns
 kind: concept
 summary: An architectural pattern shapes the structure of a whole system. A design pattern solves a narrower
@@ -16,8 +17,6 @@ related:
 - architectural-style
 - microservices-architecture
 - layered-architecture
-- circuit-breaker
-- retry
 - architectural-trade-off-thinking
 - arc42-solution-strategy
 checks:

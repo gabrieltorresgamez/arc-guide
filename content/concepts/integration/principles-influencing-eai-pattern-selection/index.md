@@ -1,6 +1,7 @@
 ---
 title: Principles Influencing EAI Pattern Selection
 slug: principles-influencing-eai-pattern-selection
+order: 120
 category: integration
 kind: principle
 summary: Pick an integration style by asking how tightly it ties applications together. Prefer styles
@@ -11,12 +12,11 @@ arc42:
 - 9
 step: s08-integration-data
 related:
-- loose-coupling
 - coupling-and-cohesion
 - design-for-change
 - shared-database
 - messaging
-- message-translator
+- messaging-pattern-language
 - integration-pattern
 - file-transfer
 checks:
@@ -53,7 +53,7 @@ review:
 
 Enterprise application integration (EAI) offers four integration styles: file transfer, shared database, remote procedure invocation and messaging. See the articles on Integration Styles and Enterprise Integration Patterns for the full picture.
 
-Coupling is a main criterion for choosing among them. Even integrated applications should depend on each other as little as possible. Tightly coupled applications make many assumptions about how the other applications work. The more assumptions, the harder it is to change one application alone. See Loose Coupling and Coupling and Cohesion.
+Coupling is a main criterion for choosing among them. Even integrated applications should depend on each other as little as possible. Tightly coupled applications make many assumptions about how the other applications work. The more assumptions, the harder it is to change one application alone. See Coupling and Cohesion and Cohesion.
 
 Two styles show the difference clearly.
 

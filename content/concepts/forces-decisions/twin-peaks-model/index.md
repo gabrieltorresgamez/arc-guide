@@ -1,10 +1,12 @@
 ---
 title: Twin Peaks Model
 slug: twin-peaks-model
+order: 50
 category: forces-decisions
 kind: concept
 summary: The Twin Peaks Model treats requirements and architecture as two bodies of work that grow together.
   Both start rough and become detailed through repeated rounds, each informing the other.
+short_ok: true
 arc42:
 - 1
 - 4
@@ -26,6 +28,10 @@ sources:
   title: What Is the Twin Peaks Model? | microTOOL
   site: microtool.de
   accessed: '2026-11-09'
+- url: https://t2informatik.de/en/smartpedia/twin-peaks-model/
+  title: "What is the Twin Peaks Model? - Smartpedia - t2informatik"
+  site: t2informatik.de
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: Requirements and architecture alternate, both gaining detail each round.

@@ -41,6 +41,14 @@ sources:
   title: Microservices Architecture Style - Azure Architecture Center | Microsoft Learn
   site: learn.microsoft.com
   accessed: '2026-11-09'
+- url: https://quality.arc42.org/approaches/microservice-architecture
+  title: "Microservice Architecture | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/approaches/self-contained-systems
+  title: "Self-Contained Systems | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: Services organized by business capability, each owning its data, communicating through lightweight
@@ -65,6 +73,8 @@ A microservices architecture builds a system from many small services. Each serv
 **Operations.** Success needs a mature DevOps culture. A management or orchestration component, typically a platform such as Kubernetes, is a common part of the architecture, and CI/CD pipelines are a recommended practice for automating testing and deployment. Observability needs centralized logging and distributed tracing. Teams may pick different languages and frameworks. Too many make the system hard to maintain, so some governance is advisable.
 
 **Origin.** The term was first discussed at an architects' workshop near Venice in 2011.
+
+**In the arc42 quality model.** It has approach pages on [Microservice Architecture](https://quality.arc42.org/approaches/microservice-architecture) and [Self-Contained Systems](https://quality.arc42.org/approaches/self-contained-systems).
 
 ## Example
 

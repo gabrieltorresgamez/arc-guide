@@ -16,7 +16,7 @@ related:
 - ubiquitous-language
 - domain-model
 - c4-model
-- uml-interface
+- uml-component-diagram
 - class-diagram
 - domain-driven-design
 - uml-modeling-best-practice

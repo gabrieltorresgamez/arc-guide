@@ -12,9 +12,7 @@ step: s10-document
 related:
 - bpmn-2-0-notation-overview
 - bpmn-activity
-- bpmn-task-marker
 - bpmn-core-elements
-- bpmn-motivation
 checks:
 - Decision logic sits in a DMN model, not inside the process flow; the process calls it through a business
   rule task.

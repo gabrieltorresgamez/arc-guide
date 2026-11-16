@@ -1,6 +1,7 @@
 ---
 title: BPMN Swimlane (Pool and Lane)
 slug: bpmn-swimlane-pool-and-lane
+order: 40
 category: modeling-bpmn
 kind: notation-element
 summary: A pool is a box for one participant in a BPMN diagram. Lanes split a pool into parts. Separate
@@ -13,10 +14,9 @@ related:
 - bpmn-collaboration-diagram
 - bpmn-connecting-object
 - bpmn-core-elements
-- data-exchange-between-bpmn-processes
 - bpmn-conversation-diagram
 - bpmn-2-0-notation-overview
-- bpmn-layout-guideline
+- bpmn-modeling-tips
 checks:
 - Communication between separate pools is shown with dashed message flows, not with sequence flow.
 - No message flow connects two elements inside the same pool.

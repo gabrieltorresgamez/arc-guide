@@ -1,6 +1,7 @@
 ---
 title: Last Responsible Moment
 slug: last-responsible-moment
+order: 20
 category: forces-decisions
 kind: principle
 summary: The last responsible moment is the point where not deciding would remove an important option.
@@ -10,12 +11,10 @@ arc42:
 - 4
 step: s09-decisions
 related:
-- definition-of-ready-for-architectural-decisions
-- architectural-decision
 - architectural-decision-management-practices
+- architectural-decision
 - architectural-decision-making-in-project-development
 - architectural-decision-making-fallacies
-- decision-dependencies
 - agile-architecture
 - levels-of-architectural-decisions
 checks:

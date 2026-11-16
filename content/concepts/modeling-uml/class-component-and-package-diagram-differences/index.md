@@ -13,9 +13,6 @@ related:
 - class-diagram
 - uml-component-diagram
 - package-diagram
-- provided-and-required-interface
-- package-relationships-import-access-merge-use
-- nested-components-and-subsystems
 - structure-diagram
 - matching-diagram-type-to-system-aspect
 checks:
@@ -56,9 +53,9 @@ review:
 
 UML (the Unified Modeling Language) offers several diagrams for software structure. Component and package diagrams can both communicate hierarchies of building blocks.
 
-**Component diagram.** It shows how components are wired together into larger components or whole systems. A required interface appears as a half-circle, called a socket, on the component that needs it. The article Provided and Required Interface explains the notation.
+**Component diagram.** It shows how components are wired together into larger components or whole systems. A required interface appears as a half-circle, called a socket, on the component that needs it. The article UML Component Diagram explains the notation.
 
-**Package diagram.** It groups elements into packages. A package import is a directed relationship. The importing namespace adds the names of the package's members to its own namespace. The article Package Relationships (Import, Access, Merge, Use) covers this.
+**Package diagram.** It groups elements into packages. A package import is a directed relationship. The importing namespace adds the names of the package's members to its own namespace. The article Package Diagram covers this.
 
 **Class diagram.** See the article UML Class Diagram.
 

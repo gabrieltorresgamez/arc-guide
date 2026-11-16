@@ -1,6 +1,7 @@
 ---
 title: BPMN Core Elements
 slug: bpmn-core-elements
+order: 20
 category: modeling-bpmn
 kind: notation-element
 summary: BPMN is a standard notation for drawing business processes. Its core elements are tasks, sequence
@@ -17,8 +18,7 @@ related:
 - bpmn-connecting-object
 - bpmn-data-element
 - bpmn-swimlane-pool-and-lane
-- bpmn-link-event
-- event-based-gateway
+- decision-model-and-notation
 checks:
 - Every process diagram uses sequence flow to show the order of steps.
 - 'Each gateway type matches its routing intent: exclusive picks one path, parallel takes all, inclusive

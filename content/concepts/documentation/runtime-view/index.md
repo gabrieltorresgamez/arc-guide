@@ -1,6 +1,7 @@
 ---
 title: Runtime View
 slug: runtime-view
+order: 40
 category: documentation
 kind: artifact
 summary: The runtime view shows how building blocks work together and talk to each other while the system
@@ -14,9 +15,9 @@ related:
 - c4-model
 - component-view
 - contemporary-essential-views
-- runtime-view-antipattern-code-level-activity-diagram
 - traceability
 - bpmn-2-0-notation-overview
+- arc42-runtime-view
 checks:
 - Scenarios are selected for architectural relevance, not to cover every flow.
 - Each activity in a runtime scenario maps to an existing building block.
@@ -31,6 +32,28 @@ sources:
 - url: https://c4model.com/diagrams/dynamic
   title: Dynamic diagram | C4 model
   site: c4model.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/6-3/
+  title: 'Tip 6-3: Document ‘schematic’ (instead of detailed) scenarios! | arc42 Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/6-1/
+  title: 'Tip 6-1: Always map existing building blocks to the activities within runtime scenarios! | arc42
+    Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/6-4/
+  title: 'Tip 6-4: Document detailed scenarios (with caution)! | arc42 Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/6-7/
+  title: 'Tip 6-7: Use activity diagrams with swimlanes to describe or specify runtime scenarios! | arc42
+    Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://faq.arc42.org/questions/C-6-3/
+  title: 'Question C-6-3: How can I describe scenarios or execution flows? | arc42 FAQ'
+  site: faq.arc42.org
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.puml

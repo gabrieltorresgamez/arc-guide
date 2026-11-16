@@ -13,10 +13,8 @@ arc42:
 step: s07-solution-strategy
 related:
 - architecture-principle
-- working-with-principles
 - last-responsible-moment
 - quality-attribute
-- loose-coupling
 - coupling-and-cohesion
 - architectural-decision-record
 - design-for-change
@@ -56,7 +54,7 @@ This article covers four of these principles.
 
 **Principle 3: Delay design decisions until they are needed.** Teams decide based on facts, not guesses. That way they do not build capabilities nobody uses. See Last Responsible Moment.
 
-**Principle 4: Architect for change.** This principle leverages the "power of small" elements. Big, monolithic, tightly coupled components are hard to change. So the principle favors small, loosely coupled services. See Loose Coupling and Coupling and Cohesion.
+**Principle 4: Architect for change.** This principle leverages the "power of small" elements. Big, monolithic, tightly coupled components are hard to change. So the principle favors small, loosely coupled services. See Coupling and Cohesion and Cohesion.
 
 **Principle 6: Model your teams after the system design.** This follows Conway's Law. The way teams are organized drives the architecture and design of the systems they work on. The authors say the law is now widely accepted.
 

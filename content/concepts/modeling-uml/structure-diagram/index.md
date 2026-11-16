@@ -1,6 +1,7 @@
 ---
 title: UML Structure Diagram
 slug: structure-diagram
+order: 40
 category: modeling-uml
 kind: notation-element
 summary: UML structure diagrams show the static parts of a system and how they relate, without showing
@@ -13,7 +14,6 @@ related:
 - uml-diagram-taxonomy
 - behavior-diagram
 - uml-component-diagram
-- component-port
 - c4-model
 - distribution-view
 - uml-unified-modeling-language
@@ -63,7 +63,7 @@ A structure diagram answers one question: what is the system made of? It shows b
 
 This article covers three structure diagram types.
 
-**Composite structure diagram.** It shows the internal structure of a class and the collaborations that structure makes possible. A port is an interaction point. It connects a structured classifier (a class with internal parts) to its parts. See Port.
+**Composite structure diagram.** It shows the internal structure of a class and the collaborations that structure makes possible. A port is an interaction point. It connects a structured classifier (a class with internal parts) to its parts. See UML Component Diagram.
 
 **Component diagram.** It shows how a software system is split into components and which dependencies exist between them. See UML Component Diagram.
 

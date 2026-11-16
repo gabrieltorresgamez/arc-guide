@@ -1,6 +1,7 @@
 ---
 title: Data Architecture Artifact
 slug: data-architecture-artifacts
+order: 30
 category: enterprise-architecture
 kind: artifact
 summary: 'Data architecture artifacts are the catalogs, matrices and diagrams that document an organization''s
@@ -13,9 +14,6 @@ arc42:
 step: s08-integration-data
 related:
 - data-architecture
-- data-architecture-diagram-types
-- data-entity-data-component-catalog
-- data-entity-business-function-matrix
 - conceptual-data-model
 - conceptual-vs-logical-vs-physical-data-model
 - togaf
@@ -31,9 +29,30 @@ sources:
   title: 'Phase C: Information Systems Architectures – Data Architecture | QualiWare Center of Excellence'
   site: coe.qualiware.com
   accessed: '2026-11-09'
-- url: https://grahamberrisford.com/AM%201%20Methods/6PRODUCTSandTECHNIQUES/DataAndInformation/AM%20Information-Data%20architecture.htm
-  title: ''
-  site: grahamberrisford.com
+- url: https://open-exam-prep.com/study-guides/togaf/adm-information-systems-architectures/phase-c-data-architecture
+  title: 'Phase C Data Architecture: Principles, Data | Free Guide 2026 | OpenExamPrep'
+  site: open-exam-prep.com
+  accessed: '2026-11-09'
+- url: https://ftpdocs.broadcom.com/cadocs/0/CA%20Gen%208%205-ENU/Bookshelf_Files/HTML/AnalysisGuide/1100395.html
+  title: Analyzing Roles and Entity Types
+  site: ftpdocs.broadcom.com
+  accessed: '2026-11-09'
+- url: https://arxiv.org/abs/2011.10866
+  title: '[2011.10866] Dynamic Data Consistency Tests Using a CRUD Matrix as an Underlying Model'
+  site: arxiv.org
+  accessed: '2026-11-09'
+- url: https://open-exam-prep.com/study-guides/togaf/bdat-architecture-domains-deep-dive/data-architecture-domain-deep-dive
+  title: 'Data Architecture Domain: Data Entities, Sto | Free Guide 2026 | OpenExamPrep'
+  site: open-exam-prep.com
+  accessed: '2026-11-09'
+- url: https://www.informatica.com/blogs/business-glossary-vs-data-catalog.html
+  title: Business Glossary vs Data Catalog
+  site: informatica.com
+  accessed: '2026-11-09'
+- url: https://if4it.org/best-practices/data-and-information-inventory-and-attributes/glossary-of-terms-and-phrases/
+  title: Glossary of Terms and Phrases - Data and Information Inventory and Attributes | The International
+    Foundation for Information Technology (IF4IT)
+  site: if4it.org
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
@@ -45,7 +64,7 @@ review:
 
 ## Explanation
 
-Data architecture artifacts are the working documents of the data part of enterprise architecture. In TOGAF, they belong to Phase C, the Data Architecture phase. (See the articles TOGAF and TOGAF Architecture Development Method.) One goal of this phase is to find gaps between the current (baseline) and desired (target) data architecture. Those gaps become candidates for the roadmap.
+Data architecture artifacts are the working documents of the data part of enterprise architecture. In TOGAF, they belong to Phase C, the Data Architecture phase. (See the articles TOGAF.) One goal of this phase is to find gaps between the current (baseline) and desired (target) data architecture. Those gaps become candidates for the roadmap.
 
 There are three kinds of artifact, and each does a different job.
 
@@ -57,13 +76,18 @@ Catalogs and matrices take their structure from the attributes of entities in th
 
 **Typical artifacts**
 
-- *Data Entity/Data Component catalog.* Avancier suggests mapping data entities to the data components that hold them, and TOGAF describes catalogs as hierarchical inventories. See Data Entity/Data Component Catalog.
-- *Data Entity/Business Function matrix.* It maps each entity to the business functions that create and use it. See Data Entity/Business Function Matrix.
+See Data Architecture Artifact.
+- *Data Entity/Business Function matrix.* It maps each entity to the business functions that create and use it. See Data Architecture Artifact.
 - *Conceptual Data diagram.* This business data model shows the relationships between core entities. See Conceptual Data Model.
 - *Other data diagrams.* Phase C also suggests logical, dissemination, lifecycle, security and migration diagrams.
-- *Mastering policy.* A dissemination diagram can reveal duplicated data. In that case, define which copy is the master and which are copies.
+In that case, define which copy is the master and which are copies.
 
-A conceptual data model specifies few if any attributes and is primarily used to identify data duplication. A logical data model is usually normalized to reduce that duplication. See Conceptual, Logical and Physical Data Model.
+A logical data model is usually normalized to reduce that duplication. See Conceptual, Logical and Physical Data Model.
+
+**More about data artifacts.**
+
+- **Data Entity/Business Function Matrix:** A Data Entity/Business Function Matrix links data entities to business functions. Each cell uses CRUD codes (create, read, update, delete) to show how a function uses an entity. It helps spot unclear ownership.
+- **Data Entity/Data Component Catalog:** A data entity catalog is a master list of an organization's data entities. Each entry records the entity's definition, owner, classification and system of record, so teams share one view of the data.
 
 ## Example
 

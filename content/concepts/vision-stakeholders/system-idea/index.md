@@ -1,6 +1,7 @@
 ---
 title: System Idea
 slug: system-idea
+order: 10
 category: vision-stakeholders
 kind: concept
 summary: A system idea is an early, high-level answer to how a system will be built. In arc42, the solution
@@ -13,7 +14,6 @@ arc42:
 step: s07-solution-strategy
 related:
 - arc42-solution-strategy
-- system-idea-and-vision-elements
 - architectural-pattern
 - architectural-overview-diagram
 - architectural-trade-off-thinking
@@ -39,6 +39,22 @@ sources:
   title: 'Curriculum forCertified Professional forSoftware Architecture (CPSA)®: Foundation Level'
   site: public.isaqb.org
   accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-1/
+  title: 1 - Introduction and Goals | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.mountaingoatsoftware.com/agile/building-a-product-users-want-from-idea-to-backlog-with-the-vision-board
+  title: 'Building a Product Users Want: From Idea to Backlog with the Vision Board - Mountain Goat Software'
+  site: mountaingoatsoftware.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-3/
+  title: 3 - Context and scope | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.romanpichler.com/blog/the-product-vision-board/
+  title: 'The Product Vision Board: Vision and Product Strategy'
+  site: romanpichler.com
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -60,7 +76,12 @@ The arc42 whitebox template for the overall system in the building block view co
 
 **Looking at trade-offs**
 
-Architects can point out where designs trade one goal against another, and what risks each design brings.
+
+
+**More about the vision.**
+
+- **System Idea and Vision Elements:** A system''s vision is built from linked parts: a vision statement, the target group, needs and value behind it, and the context.
+- **Vision Statement:** A vision statement is a short, inspiring statement of the shared goal behind a product. It names the target customers, the value they get, and the few features that make the product stand out.
 
 ## Example
 
@@ -68,4 +89,4 @@ A team builds an online booking tool. Its main quality goal is that many people 
 
 ## Trade-offs
 
-Impacting one quality can impact others, which necessitates trade-offs.
+

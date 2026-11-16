@@ -1,6 +1,7 @@
 ---
 title: Logical Data Model
 slug: logical-data-model
+order: 40
 category: data-architecture
 kind: artifact
 summary: A logical data model defines the structure of business data (entities, keys, relationships) without
@@ -13,8 +14,7 @@ related:
 - conceptual-data-model
 - physical-data-model
 - conceptual-vs-logical-vs-physical-data-model
-- logical-vs-physical-data-model
-- entity
+- ddd-modeling-elements
 - data-architecture
 checks:
 - The logical model names no database engine.
@@ -51,7 +51,7 @@ Between a business conversation and a working database there are three model lev
 
 **Identifying relationships.** Logical design asks what identifies each entity. In an identifying relationship, the parent's key becomes part of the child's identifier.
 
-**Normalization.** Normalization organizes data so each fact lives in one place. Third normal form (3NF) moves customer details into their own entity. A phone number is then updated in one row. Splitting order-level facts from line-level facts, such as Order and Order Detail, illustrates second normal form (2NF). Each kind of fact then sits at its own grain.
+**Normalization.** Normalization organizes data so each fact lives in one place. Third normal form (3NF) moves customer details into their own entity. A phone number is then updated in one row. Splitting order-level facts from line-level facts, such as Order Detail, illustrates second normal form (2NF). Each kind of fact then sits at its own grain.
 
 **Several engines.** Mapping rules let one logical model target several database engines. The models then do not drift apart.
 
@@ -59,7 +59,7 @@ For the neighboring levels, see the articles on the Conceptual Data Model and th
 
 ## Example
 
-A shop models Customer, Order and Order Detail.
+A shop models Customer, Order Detail.
 
 - Customer holds name and phone number once. A phone change touches one row.
 - Order holds facts about the whole order, such as its date.

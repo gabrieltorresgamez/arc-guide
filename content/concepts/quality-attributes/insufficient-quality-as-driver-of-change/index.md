@@ -15,8 +15,8 @@ related:
 - arc42-quality-chapter
 - quality-attribute
 - technical-debt
-- architecture-decay
-- modifiability
+- big-ball-of-mud
+- maintainability
 - quality-attribute-prioritization
 checks:
 - Quality goals are stated concretely, without buzzwords.

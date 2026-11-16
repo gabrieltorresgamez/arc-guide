@@ -1,6 +1,7 @@
 ---
 title: Architect Settles In Method Phase
 slug: architect-settles-in-method-phase
+order: 40
 category: forces-decisions
 kind: method
 summary: A new architect first learns who is involved, which forces and constraints apply, and how decisions
@@ -11,14 +12,13 @@ arc42:
 - 3
 step: s01-goals-stakeholders
 related:
-- stakeholder-identification
+- stakeholder
 - architectural-forces
 - requirements-versus-constraints
 - arc42-introduction-and-goals
 - arc42-constraints
 - architectural-decision-management-practices
 - architecture-challenges-at-project-start
-- stakeholder
 checks:
 - The document lists the parties involved in or affected by the system.
 - Existing requirements documents are referenced rather than duplicated.

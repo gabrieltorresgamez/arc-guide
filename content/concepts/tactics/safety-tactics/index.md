@@ -1,6 +1,7 @@
 ---
 title: Safety Tactic
 slug: safety-tactics
+order: 60
 category: tactics
 kind: tactic
 summary: Safety tactics help a system stay in control of known hazards. They detect problems, contain
@@ -13,13 +14,9 @@ arc42:
 step: s07-solution-strategy
 related:
 - safety
-- availability-tactic
-- heartbeat
+- reliability-tactics
 - architectural-tactic
-- voting
-- hazard-warning
-- fault-tolerance
-- graceful-degradation
+- reliability
 checks:
 - Each hazardous operation is guarded by an explicit interlock that checks preconditions and defaults
   to a safe state.

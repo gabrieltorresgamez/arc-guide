@@ -23,7 +23,7 @@ review:
 ## Vision and system idea
 
 **What it is**
-The vision is a short statement of the shared goal behind the product. It names the target customers, the value they get, and the few features that make the product stand out. See [Vision Statement](concept:vision-statement). A full vision also covers needs and context, as described in [System Idea and Vision Elements](concept:system-idea-and-vision-elements). The system idea is an early, high-level answer to how the system will be built. In arc42, the closest match is the solution strategy. See [System Idea](concept:system-idea).
+The vision is a short statement of the shared goal behind the product. It names the target customers, the value they get, and the few features that make the product stand out. See [Vision Statement](concept:system-idea). A full vision also covers needs and context, as described in [System Idea and Vision Elements](concept:system-idea). The system idea is an early, high-level answer to how the system will be built. In arc42, the closest match is the solution strategy. See [System Idea](concept:system-idea).
 
 **Why you need it**
 The vision gives everyone the same picture of the intention and motivation behind the system. The system idea sums up the basic decisions that shape the architecture. Each of those decisions ties back to a quality goal or a key constraint. Without both, the later decisions have nothing to point at.
@@ -65,7 +65,7 @@ A stakeholder is a person, team, organization, or class of such parties with an 
 Architects must balance different needs. Concerns can conflict, for example time-to-market against maintainability. The chosen trade-off must be explicit. A stakeholder list helps avoid surprises later in development. Every concern should be addressed in the architecture description.
 
 **Who usually provides it**
-The architect finds stakeholders, using guiding questions: who gains or loses, who decides, who controls resources. See [Stakeholder Identification](concept:stakeholder-identification). Every stakeholder class needs a representative.
+The architect finds stakeholders, using guiding questions: who gains or loses, who decides, who controls resources. See [Stakeholder Identification](concept:stakeholder). Every stakeholder class needs a representative.
 
 **Good enough is**
 A table with role or name, contact, expectations and concerns. Cover every class of stakeholder.
@@ -78,7 +78,7 @@ For ClinicBook, the table could include:
 - Practice owners: a working system by the launch date.
 - The development team: a design that a small team can maintain.
 
-To decide how closely to engage each group, see [Stakeholder Power Grid](concept:stakeholder-power-grid).
+To decide how closely to engage each group, see [Stakeholder Power Grid](concept:stakeholder).
 
 **If it is missing**
 Answer the guiding questions yourself and write a first table. Add each stakeholder's main concern. Then ask the people on the list what you missed. Check that no class is left out.
@@ -86,7 +86,7 @@ Answer the guiding questions yourself and write a first table. Add each stakehol
 ## Scope and context
 
 **What it is**
-The scope says where the system starts and ends. A [Context View](concept:context-view) shows the system as a black box with its communication partners around it. It shows what data the system exchanges with them. The business context shows data flows. The technical context shows channels and transmission media. See [Refining Complex Context Views](concept:refining-complex-context-views).
+The scope says where the system starts and ends. A [Context View](concept:context-view) shows the system as a black box with its communication partners around it. It shows what data the system exchanges with them. The business context shows data flows. The technical context shows channels and transmission media. See [Refining Complex Context Views](concept:context-view).
 
 **Why you need it**
 Everyone can see the boundary of the system and who it talks to. Interfaces to neighboring systems become visible early. Risks can be marked directly in the context.
@@ -95,7 +95,7 @@ Everyone can see the boundary of the system and who it talks to. Interfaces to n
 The architect usually draws it, with input from the stakeholders and from the owners of neighboring systems.
 
 **Good enough is**
-One overview diagram plus a table with one row per communication partner. Label each flow with the data exchanged. Draw both directions where data moves both ways. See [Context View Antipattern: Forgetting Bidirectional Data Flows](concept:context-view-antipattern-forgetting-bidirectional-data-flows).
+One overview diagram plus a table with one row per communication partner. Label each flow with the data exchanged. Draw both directions where data moves both ways. See [Context View Antipattern: Forgetting Bidirectional Data Flows](concept:context-view).
 
 For ClinicBook, the partners are patients (web and app), practice staff, the practices' management software from several vendors, an SMS channel and an e-mail channel. The flows with the practice software run both ways. ClinicBook sends booked appointments out. Changes made in the practice software come back in. Mark the differing vendor interfaces as a risk. With many vendors, group them by an explicit criterion.
 
@@ -123,7 +123,7 @@ A brief list that points to the existing documents. For ClinicBook:
 - The system sends reminders by SMS and e-mail.
 - The system exchanges appointments with the practice software.
 
-"Manage calendar" is too vague. Split it by operation, for example view, block time and change an appointment. See [Story Splitting](concept:story-splitting). Write use cases at user-goal level. See [Use Case Goal Level](concept:use-case-goal-levels).
+"Manage calendar" is too vague. Split it by operation, for example view, block time and change an appointment. See [Story Splitting](concept:story-splitting). Write use cases at user-goal level. See [Use Case Goal Level](concept:use-case).
 
 **If it is missing**
 Write the short list above from the vision and check it with stakeholders. Detail only the requirements that affect architectural decisions. Accept that the list is incomplete and will change. See [Requirements Trawling](concept:requirements-elicitation).
@@ -140,13 +140,13 @@ Improving one quality usually costs another. See [Quality Attribute Trade-off](c
 Stakeholders rank the qualities by importance. The architect turns vague wishes into scenarios.
 
 **Good enough is**
-A table of three to five goals, ordered, each with one scenario. Use standard names to avoid ambiguity. See [ISO/IEC 25010 Product Quality Model](concept:iso-iec-25010-quality-model) and [Standard Quality Attribute List](concept:standard-quality-attribute-checklist).
+A table of three to five goals, ordered, each with one scenario. Use standard names to avoid ambiguity. See [ISO/IEC 25010 Product Quality Model](concept:iso-iec-25010-quality-model).
 
 For ClinicBook, a first ranking could be:
 
-1. [Confidentiality](concept:confidentiality). An unauthorized user tries to read another patient's appointment data. The system denies access and records the attempt in an audit trail.
-2. [Availability](concept:availability). During the morning peak, one server fails. Patients can still book. Agree the exact time limit and percentage with the stakeholders. See [Availability Scenario](concept:availability-scenario).
-3. [Interoperability](concept:interoperability). ClinicBook sends a new appointment to a practice's software. If the software rejects it, practice staff are notified. See [Interoperability Scenario](concept:interoperability-scenario).
+1. [Security](concept:security). An unauthorized user tries to read another patient's appointment data. The system denies access and records the attempt in an audit trail.
+2. [Reliability](concept:reliability). During the morning peak, one server fails. Patients can still book. Agree the exact time limit and percentage with the stakeholders. See [Quality Attribute Scenario](concept:quality-attribute-scenario).
+3. [Compatibility](concept:compatibility). ClinicBook sends a new appointment to a practice's software. If the software rejects it, practice staff are notified. See [Quality Attribute Scenario](concept:quality-attribute-scenario).
 
 **If it is missing**
 Pick candidates from the standard list and rank them with the stakeholders. Write one scenario per top goal. Leave the rest for section 10.

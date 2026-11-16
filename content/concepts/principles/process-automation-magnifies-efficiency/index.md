@@ -12,12 +12,9 @@ arc42:
 step: s03-functional-requirements
 related:
 - as-is-and-to-be-view
-- process-analysis
 - purpose-of-process-analysis-and-modeling
-- capturing-business-behavior-via-process-modeling
 - arc42-solution-strategy
 - business-architecture
-- bpm-life-cycle
 - technical-debt
 checks:
 - The documented requirements come from the target-state process, not only from the current-state process.

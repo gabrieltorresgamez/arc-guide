@@ -1,6 +1,7 @@
 ---
 title: Relationship between Tactics and Architectural Styles/Patterns
 slug: tactics-vs-architectural-styles-and-patterns
+order: 30
 category: tactics
 kind: concept
 summary: A tactic is a single design decision that influences one quality attribute response. A pattern
@@ -16,7 +17,7 @@ related:
 - architectural-style
 - choosing-and-applying-tactics
 - tactic-trade-off-balancing
-- layers-pattern
+- layered-architecture
 - quality-attribute
 - working-with-tactics-and-quality-attributes
 checks:
@@ -28,6 +29,10 @@ sources:
   title: '2.5 Design Concepts: The Building Blocks for Creating Structures | Architectural Design | InformIT'
   site: informit.com
   accessed: '2026-11-09'
+- url: https://people.ece.ubc.ca/matei/EECE417/BASS/ch05lev1sec9.html
+  title: "5.9 Architectural Patterns and Styles - Software Architecture in Practice (Bass, Clements, Kazman)"
+  site: people.ece.ubc.ca
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: A pattern is built from several tactic-level decisions and is then realized in frameworks and

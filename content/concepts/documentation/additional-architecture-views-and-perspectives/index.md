@@ -1,6 +1,7 @@
 ---
 title: Additional Architecture Viewpoints (Security, Information, Operational, Development, Process, Evolution)
 slug: additional-architecture-views-and-perspectives
+order: 80
 category: documentation
 kind: concept
 summary: Besides the basic structural views, a project can add viewpoints for information, development,

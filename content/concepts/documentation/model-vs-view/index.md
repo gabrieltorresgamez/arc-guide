@@ -1,6 +1,7 @@
 ---
 title: Model vs. View
 slug: model-vs-view
+order: 20
 category: documentation
 kind: concept
 summary: A model is structured data holding the elements of an architecture and how they relate. A view

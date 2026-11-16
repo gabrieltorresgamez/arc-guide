@@ -1,6 +1,7 @@
 ---
 title: Placing ATAM Evaluation in arc42
 slug: placing-atam-evaluation-in-arc42
+order: 50
 category: evaluation
 kind: practice
 summary: arc42 section 11 normally lists risks and technical debt. An ATAM-based variant replaces it with
@@ -11,11 +12,6 @@ arc42:
 step: s11-evaluate
 related:
 - architecture-tradeoff-analysis-method-atam
-- atam-findings-risks-non-risks-sensitivity-points-and-trade-offs
-- atam-results
-- sensitivity-point
-- trade-off-point
-- atam-non-risk
 - technical-debt
 - arc42-quality-chapter
 checks:

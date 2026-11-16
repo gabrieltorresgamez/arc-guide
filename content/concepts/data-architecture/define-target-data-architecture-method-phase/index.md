@@ -11,8 +11,8 @@ arc42:
 step: s08-integration-data
 related:
 - data-architecture
-- togaf-architecture-development-method
-- data-entity-business-function-matrix
+- togaf
+- data-architecture-artifacts
 - arc42-crosscutting-concepts
 - arc42-context-and-scope
 - data-architecture-documentation-in-arc42

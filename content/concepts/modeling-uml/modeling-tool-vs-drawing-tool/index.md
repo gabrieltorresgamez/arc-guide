@@ -14,7 +14,7 @@ related:
 - diagrams-as-code
 - documentation-as-code
 - uml-unified-modeling-language
-- bpmn-modeling-tools
+- bpmn-2-0-notation-overview
 - c4-model
 - arc42-documentation-template
 - architecture-view

@@ -1,6 +1,7 @@
 ---
 title: Messaging Protocol Support in Message Brokers
 slug: messaging-systems-and-protocols
+order: 20
 category: integration
 kind: concept
 summary: Message brokers speak different wire protocols, the formats clients use to talk to them. Some
@@ -13,11 +14,12 @@ arc42:
 step: s08-integration-data
 related:
 - messaging
-- interoperability
+- compatibility
 - broker-pattern
 - publish-subscribe-pattern
 - integration-patterns-vs-middleware-technology
 - software-connector
+- timeout-based-delivery
 checks:
 - The document names each wire protocol that clients use to reach the broker.
 - The document states which AMQP version is meant, since 1.0 and 0-9-1 differ on the wire.
@@ -56,7 +58,7 @@ review:
 
 ## Explanation
 
-A **wire protocol** is the set of rules for how a client and a broker exchange data over the network. When both sides share a protocol, they can work together. This is why protocol support matters when you choose a broker. For background, see the articles on Messaging and Interoperability.
+A **wire protocol** is the set of rules for how a client and a broker exchange data over the network. When both sides share a protocol, they can work together. This is why protocol support matters when you choose a broker. For background, see the articles on Messaging and Compatibility.
 
 **MQTT** is a lightweight client-server publish/subscribe protocol. Its designers made it light and simple to implement.
 

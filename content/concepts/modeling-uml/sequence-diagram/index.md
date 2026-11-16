@@ -1,6 +1,7 @@
 ---
 title: UML Sequence Diagram
 slug: sequence-diagram
+order: 20
 category: modeling-uml
 kind: notation-element
 summary: A UML sequence diagram shows how participants exchange messages over time, read from top to bottom.
@@ -10,8 +11,6 @@ arc42:
 step: s10-document
 related:
 - runtime-view
-- common-sequence-diagram-modeling-mistakes
-- message-types-in-sequence-diagrams
 - uml-unified-modeling-language
 - arc42-documentation-template
 - behavior-diagram
@@ -36,6 +35,18 @@ sources:
   title: Message sequence chart - Wikipedia
   site: en.wikipedia.org
   accessed: '2026-11-09'
+- url: https://www.sparxsystems.eu/languages/uml/diagrams/sequencediagram/
+  title: 'UML Sequence Diagram: chronological sequence'
+  site: sparxsystems.eu
+  accessed: '2026-11-09'
+- url: https://schematex.js.org/research/uml-synchronous-vs-asynchronous-message-arrows
+  title: 'UML synchronous vs asynchronous messages: a 202 Accepted worked sequence | Schematex Research'
+  site: schematex.js.org
+  accessed: '2026-11-09'
+- url: https://www.visual-paradigm.com/guide/mastering-uml-sequence-diagrams-a-comprehensive-guide-from-basic-notation-to-advanced-decomposition/
+  title: 'Mastering UML Sequence Diagrams: A Comprehensive Guide from Basic Notation to Advanced Decomposition'
+  site: visual-paradigm.com
+  accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.puml
   caption: A generic order scenario with three participants, one activation, and one reply.
@@ -58,6 +69,10 @@ Two more elements help readers:
 The notation is strongly inspired by the Message Sequence Chart, a diagram standardized by the ITU. According to Wikipedia, the first version of that standard appeared in 1993.
 
 In architecture work, a main use is the runtime view. This part of the documentation describes how building blocks work together while the system runs. See the article Runtime View. arc42 lists sequence diagrams as one option. Other options are activity diagrams, BPMN or EPCs, state machines, and numbered step lists. arc42 recommends sequence diagrams because they show clearly which building block is responsible for what. That helps teams discuss the building blocks.
+
+**More about sequence diagram elements.**
+
+- **Message Types in Sequence Diagrams:** A message in a sequence diagram is one step of communication between participants. The key distinction is whether the sender waits: a synchronous sender waits until the work is done, an asynchronous sender keeps going.
 
 ## Example
 

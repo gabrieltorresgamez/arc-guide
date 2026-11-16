@@ -1,6 +1,7 @@
 ---
 title: Architecture Decision Rationale
 slug: architecture-decision-rationale
+order: 20
 category: forces-decisions
 kind: practice
 summary: Architecture decision rationale is the written reason behind a key design choice. It lets stakeholders
@@ -10,12 +11,10 @@ arc42:
 step: s09-decisions
 related:
 - architectural-decision-record
-- y-statement
 - arc42-architecture-decisions
 - architectural-decision
 - architecturally-significant-requirement
 - iso-iec-ieee-42010-architecture-description-standard
-- adr-common-mistakes-and-remediations
 - traceability
 checks:
 - Each recorded decision names the chosen alternative and the criteria or requirement behind the choice.
@@ -54,7 +53,7 @@ A design choice says what the team picked. The rationale says why. Answers to "w
 
 **Where the standard stands.** The arc42 quality site summarizes ISO/IEC/IEEE 42010 as requiring that decisions and their rationale be documented (see ISO/IEC/IEEE 42010 Architecture Description Standard).
 
-**Record format.** An Architectural Decision Record (ADR) captures exactly one decision and its rationale. arc42 says you might follow the Nygard structure, in which the consequences section lists all effects, not only the positive ones. The Y-statement is a leaner template than Zimmermann's earlier attempts (see Y-Statement).
+**Record format.** An Architectural Decision Record (ADR) captures exactly one decision and its rationale. arc42 says you might follow the Nygard structure, in which the consequences section lists all effects, not only the positive ones. The Y-statement is a leaner template than Zimmermann's earlier attempts (see Architectural Decision Record).
 
 **Which decisions to record.** Record only the key decisions, because only those justify the effort. arc42 section 9 covers decisions that are important, expensive, large-scale or risky, together with their rationales.
 

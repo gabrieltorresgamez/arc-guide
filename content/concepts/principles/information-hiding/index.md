@@ -1,6 +1,7 @@
 ---
 title: Information Hiding
 slug: information-hiding
+order: 40
 category: principles
 kind: principle
 summary: Information hiding means splitting a system into modules that each conceal one hard or change-prone
@@ -13,13 +14,12 @@ arc42:
 step: s07-solution-strategy
 related:
 - modularity
-- loose-coupling
-- modifiability
 - coupling-and-cohesion
-- module
+- maintainability
+- ddd-modeling-elements
 - design-for-change
 - separation-of-concerns
-- modifiability-tactics
+- maintainability-tactics
 checks:
 - Modules are derived from a list of difficult or change-prone design decisions, not only from processing
   steps.

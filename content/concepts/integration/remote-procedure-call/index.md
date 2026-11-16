@@ -1,6 +1,7 @@
 ---
 title: Remote Procedure Call
 slug: remote-procedure-call
+order: 50
 category: integration
 kind: style
 summary: 'Remote Procedure Call lets one application run a procedure in another application across a network.
@@ -20,7 +21,7 @@ related:
 - messaging
 - file-transfer
 - shared-database
-- request-reply
+- messaging-pattern-language
 - refactoring
 - information-hiding
 checks:

@@ -1,6 +1,7 @@
 ---
 title: arc42 Constraints
 slug: arc42-constraints
+order: 30
 category: documentation
 kind: artifact
 summary: Chapter 2 of arc42 lists every requirement that limits how architects may design and build a
@@ -14,7 +15,7 @@ related:
 - arc42-solution-strategy
 - arc42-architecture-decisions
 - arc42-introduction-and-goals
-- operational-constraint
+- safety
 checks:
 - The document lists constraints in one place, with an explanation or background for each.
 - Constraints are grouped into technical, organizational/political and conventions where the list is long.

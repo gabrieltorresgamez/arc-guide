@@ -1,9 +1,0 @@
-@startuml
-component Orders
-component Customers
-package "Shared Records" as Shared
-Orders ..> Shared
-Customers ..> Shared
-artifact "shop.jar" as Jar
-Jar ..> Orders : <<manifest>>
-@enduml

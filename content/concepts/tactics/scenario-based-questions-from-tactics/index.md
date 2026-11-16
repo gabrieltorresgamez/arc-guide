@@ -1,6 +1,7 @@
 ---
 title: Scenario-Based Questions from Tactics
 slug: scenario-based-questions-from-tactics
+order: 60
 category: tactics
 kind: method
 summary: A questionnaire asks general, open questions that fit any architecture. A scenario describes
@@ -14,9 +15,8 @@ related:
 - quality-attribute-scenario
 - architectural-tactic
 - architecture-tradeoff-analysis-method-atam
-- sensitivity-point
 - software-architecture-evaluation
-- availability-scenario
+- reliability
 - choosing-and-applying-tactics
 checks:
 - The review separates general questionnaire-style questions from concrete scenarios that describe a sequence

@@ -1,6 +1,7 @@
 ---
 title: Patterns for API Design
 slug: patterns-for-api-design
+order: 130
 category: integration
 kind: framework
 summary: Patterns for API Design is a pattern language for remote APIs. It sorts patterns into five categories
@@ -18,7 +19,7 @@ related:
 - architectural-pattern
 - messaging-pattern-language
 - microservices-architecture
-- loose-coupling
+- coupling-and-cohesion
 - architectural-decision-record
 checks:
 - API design choices, such as pagination or rate limiting, are recorded as decisions with options and

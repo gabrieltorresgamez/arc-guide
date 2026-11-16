@@ -1,6 +1,7 @@
 ---
 title: Architecture Means
 slug: architecture-means
+order: 60
 category: fundamentals
 kind: concept
 summary: 'Architecture means are the architect''s toolbox: styles, patterns, tactics, reference architectures
@@ -46,6 +47,27 @@ sources:
   title: 4 - Solution strategy | arc42 Documentation
   site: docs.arc42.org
   accessed: '2026-11-09'
+- url: https://www.informit.com/articles/article.aspx?p=3197432&seqNum=2
+  title: '3.2 Design Concepts: The Building Blocks for Creating Structures | Making Design Decisions |
+    InformIT'
+  site: informit.com
+  accessed: '2026-11-09'
+- url: https://public.isaqb.org/glossary/glossary-en.html
+  title: iSAQB® Glossary of Software Architecture Terminology
+  site: public.isaqb.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-2/
+  title: 2 - Constraints | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-1/
+  title: 1 - Introduction and Goals | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://en.wikipedia.org/wiki/Architecturally_significant_requirements
+  title: Architecturally significant requirements - Wikipedia
+  site: en.wikipedia.org
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -69,6 +91,11 @@ Architects do not start from a blank page. They draw on a toolbox of means. Thes
 **Modelling means.** Notations describe architectures. ISO/IEC/IEEE 42010 defines an architecture description language broadly as any form of expression used in architecture descriptions. So these languages count as modelling means.
 
 **Why it matters.** The fundamental decisions and solution strategies shape the system's architecture. Those decisions are the basis for many detailed ones. They are recorded in the solution strategy (see Solution Strategy).
+
+**More about means and requirements.**
+
+
+- **Requirements and Means Influence Architecture:** Requirements shape architecture, and constraints limit the architect's choices. Architects need to know which decisions are free and which are bound, and they need to learn key stakeholders' quality goals early.
 
 ## Example
 

@@ -11,12 +11,11 @@ step: s12-evolve
 related:
 - refactoring
 - risk-storming
-- architecture-decay
+- big-ball-of-mud
 - maintainability
 - code-smell
-- big-ball-of-mud
 - software-architecture
-- modifiability
+- arc42-risks-and-technical-debt
 checks:
 - Known technical debts are listed in the risks and technical debts section, ordered by priority.
 - Each deliberate debt is marked as knowingly accepted, with a plan to repay it (for example by refactoring).

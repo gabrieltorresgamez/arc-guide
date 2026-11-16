@@ -1,6 +1,7 @@
 ---
 title: Stakeholder Concern
 slug: stakeholder-concern
+order: 60
 category: forces-decisions
 kind: concept
 summary: A stakeholder concern is an interest that a person or group has in a system, such as performance,
@@ -16,7 +17,6 @@ related:
 - architecture-viewpoint
 - architecture-view
 - stakeholder-perspective-and-concern
-- stakeholder-identification
 - iso-iec-ieee-42010-architecture-description-standard
 - arc42-introduction-and-goals
 checks:

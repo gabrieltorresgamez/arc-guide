@@ -1,6 +1,7 @@
 ---
 title: ISO/IEC/IEEE 42010 Architecture Description Model
 slug: iso-iec-ieee-42010-architecture-description-model
+order: 100
 category: documentation
 kind: standard
 summary: The 42010 conceptual model separates a system's architecture from the document that describes

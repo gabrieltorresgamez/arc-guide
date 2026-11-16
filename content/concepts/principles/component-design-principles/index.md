@@ -15,10 +15,8 @@ step: s07-solution-strategy
 related:
 - information-hiding
 - design-for-change
-- loose-coupling
 - coupling-and-cohesion
-- reduce-coupling
-- modifiability-tactics
+- maintainability-tactics
 - interface-segregation-principle
 - open-closed-principle
 checks:
@@ -63,7 +61,7 @@ review:
 
 ## Explanation
 
-Component design principles are guidelines for building a system from discrete parts. The parts are loosely coupled. They talk through explicit interfaces or messages, not through shared internals. See Loose Coupling and Coupling and Cohesion.
+Component design principles are guidelines for building a system from discrete parts. The parts are loosely coupled. They talk through explicit interfaces or messages, not through shared internals. See Coupling and Cohesion and Cohesion.
 
 **Design for change and information hiding.** Start from a list of design decisions that are difficult or likely to change. Do not start from a flowchart of processing steps. Then give each module one such decision to hide from the others. This is information hiding (see Information Hiding and Design for Change).
 
@@ -71,7 +69,7 @@ Component design principles are guidelines for building a system from discrete p
 
 **Encapsulation.** A component exposes behavior through well-defined functions and keeps its state private. Its internals can then change without breaking its collaborators. This holds as long as the public contract stays stable.
 
-**Narrow, explicit interfaces.** These make a split into modules real instead of nominal. Reducing coupling means the remaining dependencies are fewer, narrower and explicit. Change then stays local (see Reduce Coupling).
+**Narrow, explicit interfaces.** These make a split into modules real instead of nominal. Reducing coupling means the remaining dependencies are fewer, narrower and explicit. Change then stays local.
 
 **Use an intermediary.** A broker, message bus or mediator sits between components, so they do not call each other directly.
 

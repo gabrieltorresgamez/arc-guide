@@ -1,6 +1,7 @@
 ---
 title: RACI Matrix
 slug: raci-matrix
+order: 60
 category: forces-decisions
 kind: artifact
 summary: A RACI matrix lists, for each task or decision, who is Responsible, Accountable, Consulted and
@@ -10,11 +11,10 @@ arc42:
 - 1
 step: s09-decisions
 related:
-- definition-of-ready-for-architectural-decisions
-- stakeholder-identification
-- architectural-decision-record
-- accountability
+- architectural-decision-management-practices
 - stakeholder
+- architectural-decision-record
+- security
 - architectural-decision-making-in-project-development
 - architectural-decision
 checks:

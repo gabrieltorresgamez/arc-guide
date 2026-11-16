@@ -1,6 +1,7 @@
 ---
 title: arc42 Glossary
 slug: arc42-glossary
+order: 130
 category: documentation
 kind: artifact
 summary: The arc42 glossary is section 12 of the template. It lists the key domain and technical terms
@@ -41,7 +42,7 @@ Section 12 of arc42 is the glossary. It collects the most important domain and t
 
 **Why it exists.** Clearly defined terms let all stakeholders share an identical understanding of them and avoid synonyms and homonyms.
 
-**Link to ubiquitous language.** Domain-Driven Design has a related practice, the ubiquitous language (see the article Ubiquitous Language): a common, rigorous language between developers and users. Fowler, building on Evans, says the language should be based on the domain model that the software uses. The article Domain Model explains that model.
+**Link to ubiquitous language.** Domain-Driven Design has a related practice, the ubiquitous language (see the article Ubiquitous Language): a common, rigorous language between developers and users. Fowler, building on Evans, says the language should be based on the domain model that the software uses.
 
 **Keeping it alive.** The language evolves as the team's understanding of the domain grows. arc42 suggests making the product owner or the project manager responsible for the glossary.
 

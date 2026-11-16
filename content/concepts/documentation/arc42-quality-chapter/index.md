@@ -1,6 +1,7 @@
 ---
 title: arc42 Quality Requirements Chapter
 slug: arc42-quality-chapter
+order: 110
 category: documentation
 kind: artifact
 summary: Chapter 10 of arc42 turns quality requirements into concrete scenarios. A quality tree gives
@@ -33,6 +34,10 @@ sources:
   title: ISO 25010
   site: iso25000.com
   accessed: '2026-11-08'
+- url: https://quality.arc42.org/
+  title: arc42 Quality Model
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: 'A small quality tree: quality at the root, categories below, scenarios at the leaves.'
@@ -63,6 +68,8 @@ arc42 offers a short scenario form (Q42). A long form also exists. The SEI and B
 **Link to chapter 1**
 
 The most important quality requirements are already described in section 1.2, the quality goals. Chapter 10 therefore only references them. See arc42 Introduction and Goals for the goals themselves.
+
+**More material.** The arc42 quality model collects quality characteristics, approaches and example quality requirements that can feed this chapter ([arc42 quality model](https://quality.arc42.org/)).
 
 ## Example
 

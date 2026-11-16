@@ -1,6 +1,7 @@
 ---
 title: Rules of Thumb for Modeling
 slug: rules-of-thumb-for-modeling
+order: 50
 category: documentation
 kind: practice
 summary: Readable diagrams follow a few habits. Give each diagram a title and a key, name each element's
@@ -14,10 +15,9 @@ arc42:
 step: s10-document
 related:
 - c4-model
-- self-invented-notation-drawback
+- characteristics-of-a-good-view
 - uml-modeling-best-practice
-- color-coding-in-bpmn-models
-- bpmn-layout-guideline
+- bpmn-modeling-tips
 - guidelines-for-documentation
 - arc42-documentation-template
 checks:
@@ -31,6 +31,10 @@ sources:
   title: Notation | C4 model
   site: c4model.com
   accessed: '2026-11-09'
+- url: https://www.infoq.com/articles/C4-architecture-model/
+  title: "The C4 Model for Software Architecture - InfoQ"
+  site: infoq.com
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated

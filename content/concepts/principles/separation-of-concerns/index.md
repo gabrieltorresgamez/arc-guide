@@ -1,6 +1,7 @@
 ---
 title: Separation of Concerns
 slug: separation-of-concerns
+order: 30
 category: principles
 kind: principle
 summary: Separation of concerns means studying one aspect of a problem on its own while staying aware
@@ -13,7 +14,6 @@ arc42:
 step: s07-solution-strategy
 related:
 - layered-architecture
-- layers-pattern
 - clean-architecture
 - microservices-architecture
 - modularity
@@ -58,7 +58,7 @@ Isolation does not mean ignoring the rest. You stay focused on one aspect and aw
 - the business logic layer (BLL), and
 - the data access layer (DAL).
 
-Each has a well-known responsibility. The UI talks only to the business layer. The business layer reaches data through the data access layer. Layering can also restrict which layers may talk to each other. This gives encapsulation, meaning a layer's inner workings stay hidden. A change then affects mainly the neighboring layers. See the articles Layered Architecture and Layers Pattern.
+Each has a well-known responsibility. The UI talks only to the business layer. The business layer reaches data through the data access layer. Layering can also restrict which layers may talk to each other. This gives encapsulation, meaning a layer's inner workings stay hidden. A change then affects mainly the neighboring layers. See the article Layered Architecture.
 
 **Clean Architecture.** This style inverts the usual dependencies. Business logic sits in the center. Infrastructure and UI depend on it, so dependencies point inward. See the article Clean Architecture.
 

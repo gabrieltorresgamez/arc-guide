@@ -1,6 +1,7 @@
 ---
 title: Levels of Architectural Decisions
 slug: levels-of-architectural-decisions
+order: 30
 category: forces-decisions
 kind: concept
 summary: Architectural decisions are made at several organizational levels. Higher levels decide less
@@ -16,7 +17,7 @@ related:
 - architecture-principle
 - architectural-decision-management-practices
 - architecturally-significant-decision
-- architecture-decay
+- big-ball-of-mud
 - arc42-architecture-decisions
 checks:
 - Architectural decisions made by teams are recorded, for example in ADRs, after seeking advice from affected

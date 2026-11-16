@@ -12,11 +12,9 @@ related:
 - refactoring
 - technical-debt
 - coupling-and-cohesion
-- architecture-decay
-- maintainability
 - big-ball-of-mud
+- maintainability
 - software-architecture-evaluation
-- high-cohesion
 checks:
 - The documentation names how code smells are detected, for example through static analysis tools that
   report complexity metrics.

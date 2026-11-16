@@ -1,6 +1,7 @@
 ---
 title: Diagrams as Code
 slug: diagrams-as-code
+order: 20
 category: documentation
 kind: practice
 summary: Diagrams as code means writing architecture diagrams as plain text. A toolchain renders the text

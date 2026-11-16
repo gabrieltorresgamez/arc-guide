@@ -1,6 +1,7 @@
 ---
 title: Architectural Overview Diagram
 slug: architectural-overview-diagram
+order: 10
 category: documentation
 kind: artifact
 summary: An architectural overview diagram shows the inside of a system at a high level, together with
@@ -16,7 +17,6 @@ related:
 - context-view
 - arc42-context-and-scope
 - arc42-solution-strategy
-- architectural-overview-antipatterns
 - c4-model
 - component-view
 checks:
@@ -52,6 +52,14 @@ sources:
   title: V - DokChess — arc42 by Example
   site: leanpub.com
   accessed: '2026-11-09'
+- url: https://c4model.com/diagrams/notation
+  title: Notation | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
+- url: https://c4model.com/diagrams/checklist
+  title: Review checklist | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.c4.puml
   caption: 'Generic overview: internal parts plus external users and systems.'
@@ -75,6 +83,10 @@ An architectural overview diagram is a high-level picture of a system. It shows 
 **Relation to other models.** The C4 container diagram is a simple, high-level, technology-focused view of the shape of the architecture and major technology choices. It corresponds to the overview diagram (see Container Diagram (C4 Level 2)).
 
 **Relation to arc42.** Section 3 delimits the system from all its communication partners. It also asks you to specify those partners, both users and IT systems. Section 5 includes an overview diagram of the whole system at level 1. It stresses abstraction without disclosing implementation details. The DokChess example chapter gives an architectural overview so readers can understand its important design decisions.
+
+**Common mistakes.**
+
+- **Architectural Overview Antipattern:** An overview diagram fails when readers cannot tell what it shows. Common causes are unclear scope, cryptic labels, and unexplained notation. Fix it with a title, a legend, plain names, and several simpler diagrams.
 
 ## Example
 

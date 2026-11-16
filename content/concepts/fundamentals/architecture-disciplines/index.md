@@ -1,6 +1,7 @@
 ---
 title: Architecture Disciplines
 slug: architecture-disciplines
+order: 50
 category: fundamentals
 kind: concept
 summary: Architecture work happens at different scopes. A common picture compares enterprise architecture
@@ -13,7 +14,6 @@ step: s02-scope-context
 related:
 - enterprise-architecture-management
 - software-architecture
-- relationship-between-enterprise-architecture-and-application-architecture
 - application-architecture
 - architecture-levels
 - software-architect-role

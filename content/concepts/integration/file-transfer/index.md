@@ -1,6 +1,7 @@
 ---
 title: File Transfer
 slug: file-transfer
+order: 30
 category: integration
 kind: style
 summary: File Transfer is an integration style where each application writes files of shared data and
@@ -15,7 +16,7 @@ related:
 - shared-database
 - remote-procedure-call
 - messaging
-- message-translator
+- messaging-pattern-language
 checks:
 - The document states the file format used between each producer and consumer, such as text, XML, or a
   mainframe feed.

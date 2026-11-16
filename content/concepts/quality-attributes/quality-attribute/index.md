@@ -1,6 +1,7 @@
 ---
 title: Quality Attribute
 slug: quality-attribute
+order: 10
 category: quality-attributes
 kind: concept
 summary: A quality attribute describes how well a system meets stakeholder needs, such as speed or security.
@@ -17,7 +18,6 @@ related:
 - architectural-trade-off-thinking
 - smart-requirements
 - architectural-tactic
-- standard-quality-attribute-checklist
 checks:
 - Quality requirements are written as specific, measurable scenarios, not as vague terms like "high quality".
 - The document separates usage scenarios (runtime reaction to a stimulus) from change scenarios (modifying

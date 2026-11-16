@@ -1,6 +1,7 @@
 ---
 title: Risk Storming
 slug: risk-storming
+order: 90
 category: evaluation
 kind: method
 summary: Risk storming is a quick, collaborative way to find and show risks in an architecture. The team
@@ -13,7 +14,7 @@ related:
 - software-architecture-evaluation
 - architecture-tradeoff-analysis-method-atam
 - technical-debt
-- risk-identification
+- safety
 - lightweight-atam
 checks:
 - Each identified risk has a probability and an impact rating, on a low/medium/high or numeric scale.

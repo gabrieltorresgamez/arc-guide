@@ -5,6 +5,7 @@ category: principles
 kind: principle
 summary: Shearing Layers means grouping parts of a system that change at similar rates and keeping them
   apart from faster or slower parts. The boundaries between layers help lasting abstractions emerge.
+short_ok: true
 arc42:
 - 4
 - 8
@@ -12,12 +13,11 @@ arc42:
 step: s07-solution-strategy
 related:
 - design-for-change
-- adaptability
-- modifiability
+- flexibility
+- maintainability
 - separation-of-concerns
-- layers-pattern
+- layered-architecture
 - big-ball-of-mud
-- architecture-decay
 - architectural-forces
 checks:
 - The document states which parts of the system change at similar rates and groups them together.
@@ -30,6 +30,10 @@ sources:
   title: Big Ball of Mud
   site: laputan.org
   accessed: '2026-11-09'
+- url: https://en.wikipedia.org/wiki/Shearing_layers
+  title: "Shearing layers - Wikipedia"
+  site: en.wikipedia.org
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated

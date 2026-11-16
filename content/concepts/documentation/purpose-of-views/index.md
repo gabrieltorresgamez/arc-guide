@@ -1,6 +1,7 @@
 ---
 title: Architectural View
 slug: purpose-of-views
+order: 10
 category: documentation
 kind: concept
 summary: An architectural view describes a system from the angle of one stakeholder group. Splitting the

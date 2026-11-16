@@ -1,6 +1,7 @@
 ---
 title: Architecture View
 slug: architecture-view
+order: 30
 category: documentation
 kind: concept
 summary: An architecture view shows one side of a system's design. It shows how the architecture addresses
@@ -17,6 +18,8 @@ related:
 - architecture-view-model
 - 4-1-view-model
 - iso-iec-ieee-42010-architecture-description-standard
+- architectural-view-types
+- architecture-description-element
 checks:
 - The documentation includes a building block view of the system's static structure.
 - Each view states which stakeholder concerns it addresses.

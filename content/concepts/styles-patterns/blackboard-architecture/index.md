@@ -17,9 +17,9 @@ related:
 - architectural-style
 - publish-subscribe-pattern
 - shared-database
-- pipe-and-filter-pattern
+- pipes-and-filters
 - microkernel-pattern
-- layers-pattern
+- layered-architecture
 - broker-pattern
 checks:
 - The document identifies the blackboard as the shared, structured memory that holds the partial solution.

@@ -1,6 +1,7 @@
 ---
 title: Motivation for Architecture Documentation
 slug: motivation-for-architecture-documentation
+order: 10
 category: documentation
 kind: concept
 summary: Code shows what a system does, but not why it was built that way. Architecture documentation
@@ -14,7 +15,7 @@ related:
 - architectural-decision-record
 - arc42-documentation-template
 - guidelines-for-documentation
-- architecture-decay
+- big-ball-of-mud
 - arc42-architecture-decisions
 - self-documentation
 - documentation-as-code

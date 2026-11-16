@@ -1,6 +1,7 @@
 ---
 title: Physical Data Model
 slug: physical-data-model
+order: 50
 category: data-architecture
 kind: artifact
 summary: A physical data model describes how data is stored in one specific database product. It defines
@@ -13,7 +14,6 @@ step: s08-integration-data
 related:
 - logical-data-model
 - conceptual-vs-logical-vs-physical-data-model
-- logical-vs-physical-data-model
 - conceptual-data-model
 - data-architecture
 - data-architecture-artifacts

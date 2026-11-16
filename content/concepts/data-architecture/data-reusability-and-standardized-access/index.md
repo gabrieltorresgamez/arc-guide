@@ -11,13 +11,11 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- canonical-data-model
-- message-translator
+- messaging-pattern-language
 - data-architecture
-- interoperability
+- compatibility
 - data-architecture-principle
-- normalizer
-- reusability
+- maintainability
 - integration
 checks:
 - Analytical data that domains provide is treated as a product with a standardized interface.
@@ -54,7 +52,7 @@ Different applications often describe the same data in different formats.
 
 **Set global standards for a purpose.** Global decisions in data mesh have one purpose: creating interoperability and a compounding network effect through the discovery and composition of data products.
 
-**Use a canonical data model.** The Canonical Data Model pattern asks how to integrate applications that use different data formats while keeping dependencies minimal. The answer is a common data model that does not depend on any one application. Every application produces and consumes messages in that format. See the article Canonical Data Model for details.
+**Use a canonical data model.** The Canonical Data Model pattern asks how to integrate applications that use different data formats while keeping dependencies minimal. The answer is a common data model that does not depend on any one application. Every application produces and consumes messages in that format. See the article Enterprise Integration Patterns for details.
 
 **Balance local and global.** Federated computational governance accepts change and multiple interpretive contexts. It balances local domain autonomy against global standards.
 

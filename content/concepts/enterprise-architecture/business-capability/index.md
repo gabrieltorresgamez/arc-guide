@@ -1,6 +1,7 @@
 ---
 title: Business Capability
 slug: business-capability
+order: 20
 category: enterprise-architecture
 kind: concept
 summary: A business capability is an ability an organization has to reach a specific purpose or outcome.
@@ -12,13 +13,8 @@ arc42:
 step: s06-domain
 related:
 - business-capability-map
-- capability-versus-process
-- capability-identification-and-naming
-- capability-heat-map
-- operational-value-stream
 - business-architecture
 - business-domain-understanding
-- capability-map-development-method
 checks:
 - Capabilities are described as what the organization can do, not as steps of how work is done.
 - The capability map breaks capabilities into levels, each more detailed than the one above.

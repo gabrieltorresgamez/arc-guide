@@ -1,6 +1,7 @@
 ---
 title: Data Architecture Principle
 slug: data-architecture-principle
+order: 40
 category: enterprise-architecture
 kind: principle
 summary: 'A data architecture principle is a short, high-level rule for how an organization treats its
@@ -16,10 +17,8 @@ related:
 - data-architecture
 - arc42-crosscutting-concepts
 - togaf
-- structure-of-an-architecture-principle
-- working-with-principles
 - data-architecture-documentation-in-arc42
-- accountability
+- security
 checks:
 - Each important data element has a named trustee accountable for its quality.
 - Quality control measures exist to keep data accurate and current.

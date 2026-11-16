@@ -16,9 +16,9 @@ related:
 - layered-architecture
 - architectural-pattern
 - publish-subscribe-pattern
-- modifiability
+- maintainability
 - coupling-and-cohesion
-- domain-layer
+- ddd-modeling-elements
 checks:
 - The document keeps presentation (views and controllers) separate from the domain model.
 - Controllers and views have distinct, independent input and output responsibilities.

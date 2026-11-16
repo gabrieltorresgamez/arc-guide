@@ -17,7 +17,7 @@ related:
 - refactoring
 - iterative-and-incremental-development
 - cargo-shipping-domain-model-example
-- entity-life-cycle
+- ddd-modeling-elements
 - business-domain-understanding
 checks:
 - The documentation states that the domain model evolves as the team's understanding grows, rather than

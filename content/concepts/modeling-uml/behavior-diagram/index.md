@@ -1,6 +1,7 @@
 ---
 title: UML Behavioral Diagram
 slug: behavior-diagram
+order: 50
 category: modeling-uml
 kind: notation-element
 summary: 'UML behavior diagrams show how a system works while it runs: how users interact with it, which

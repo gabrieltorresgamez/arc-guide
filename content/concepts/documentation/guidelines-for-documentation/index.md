@@ -1,6 +1,7 @@
 ---
 title: Guidelines for Documentation
 slug: guidelines-for-documentation
+order: 20
 category: documentation
 kind: principle
 summary: Write only what readers will use. Match detail to their needs, describe each thing once and reference
@@ -16,9 +17,9 @@ related:
 - arc42-crosscutting-concepts
 - documentation-as-code
 - motivation-for-architecture-documentation
-- stakeholder-identification
+- stakeholder
 - architecture-decision-rationale
-- undetected-duplication-antipattern
+- characteristics-of-a-good-view
 - software-architecture-documentation-consensus
 checks:
 - Each section of the document was included because a named stakeholder needs it, not just because the

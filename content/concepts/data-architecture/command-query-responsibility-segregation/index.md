@@ -16,9 +16,9 @@ step: s08-integration-data
 related:
 - event-sourcing-with-distributed-event-log
 - bounded-context
-- domain-event
+- ddd-modeling-elements
 - shared-database
-- scalability
+- flexibility
 - domain-driven-design
 - publish-subscribe-pattern
 - technical-debt

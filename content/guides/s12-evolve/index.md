@@ -15,7 +15,7 @@ review:
 
 ## What you get from this step
 
-A routine that keeps three things in line while the system changes: your decisions, your documentation and your code structure. Without such a routine, the structure drifts from the design. The [Architecture Decay](concept:architecture-decay) article calls this slow drift *decay*. Small, unplanned changes pile up and erode the structure.
+A routine that keeps three things in line while the system changes: your decisions, your documentation and your code structure. Without such a routine, the structure drifts from the design. The [Architecture Decay](concept:big-ball-of-mud) article calls this slow drift *decay*. Small, unplanned changes pile up and erode the structure.
 
 You end the step with:
 
@@ -35,7 +35,7 @@ You end the step with:
 ## If something is missing
 
 - **No written intended architecture.** Every system has an architecture, even an unplanned one (see [Implicit Architecture](concept:architecture-facts-and-challenges)). Without a written intent, you cannot compare it with the code. Write a small first version. Name the main building blocks and their relations.
-- **No decision records.** An unrecorded structure is an [Accidental Architecture](concept:unsystematic-accidental-architecture). It tends to erode through quick fixes. Record only the [architecturally significant decisions](concept:architecturally-significant-decision). These are the ones that are hard or costly to change, or that carry high risk.
+- **No decision records.** An unrecorded structure is an [Accidental Architecture](concept:big-ball-of-mud). It tends to erode through quick fixes. Record only the [architecturally significant decisions](concept:architecturally-significant-decision). These are the ones that are hard or costly to change, or that carry high risk.
 - **No tests.** Do not refactor large areas yet. Add tests around the area you are about to change first.
 - **Documentation in a wiki or in slide files.** Move it step by step into plain text under version control. See [Documentation as Code](concept:documentation-as-code).
 
@@ -43,11 +43,11 @@ You end the step with:
 
 1. **Name an owner.** Pick one person who is responsible for the amount and quality of the documentation. See [Guidelines for Documentation](concept:guidelines-for-documentation). Keep the documentation short and focused on important or risky topics. Short text is easier to keep current.
 2. **Treat documentation like code.** Store it as plain text in Git. Propose changes through pull requests and review them. Let a toolchain build the published output. Generate diagrams from text where you can ([Diagrams as Code](concept:diagrams-as-code)). Let the code carry what it can, such as API documentation generated from source. Write the reasons by hand, because code does not show them. See [Self-Documentation](concept:self-documentation).
-3. **Give each decision a review trigger and a status.** In each ADR, state when you will review it, or which change in context forces a new look ([Architectural Decision-Making Process](concept:architectural-decision-making-in-project-development)). When you replace a decision, mark the old ADR as superseded and point to the new one ([Decision Dependencies](concept:decision-dependencies)). Say how you will confirm that the code follows the decision. The [MADR](concept:markdown-architectural-decision-records-madr) template has a place for this.
+3. **Give each decision a review trigger and a status.** In each ADR, state when you will review it, or which change in context forces a new look ([Architectural Decision-Making Process](concept:architectural-decision-making-in-project-development)). When you replace a decision, mark the old ADR as superseded and point to the new one ([Decision Dependencies](concept:architectural-decision-management-practices)). Say how you will confirm that the code follows the decision. The [MADR](concept:architectural-decision-record) template has a place for this.
 4. **Turn structure rules into automated checks.** Express layers and allowed dependencies in package layout and naming. Then run tests in the build that check them. ArchUnit is one such tool for Java. If the code base is old and already breaks the rules, freeze the existing violations so that no new ones appear. See [Architecturally Evident Coding Style](concept:architecturally-evident-coding-style).
-5. **Compare intended and implemented architecture on a schedule.** Use the conformance checks from step 4. Add a short review of the building block view against the code. Record every gap you accept as a risk or as technical debt ([Implicit Architecture](concept:architecture-facts-and-challenges), [Architecture Decay](concept:architecture-decay)).
+5. **Compare intended and implemented architecture on a schedule.** Use the conformance checks from step 4. Add a short review of the building block view against the code. Record every gap you accept as a risk or as technical debt ([Implicit Architecture](concept:architecture-facts-and-challenges), [Architecture Decay](concept:big-ball-of-mud)).
 6. **Update the description with the change.** When a change alters a building block, an interface or a decision, update the text in the same pull request as the code. The sources say you need a process or tool that keeps the description in step with the code. This habit is one way to do that. Review it as you review code.
-7. **Refactor in small steps.** Refactoring changes the inside of the code without changing what it does. Do it continuously, with tests as the safety net ([Refactoring](concept:refactoring)). Keep a working version at all times, and integrate often ([Keep It Working](concept:keep-it-working)).
+7. **Refactor in small steps.** Refactoring changes the inside of the code without changing what it does. Do it continuously, with tests as the safety net ([Refactoring](concept:refactoring)). Keep a working version at all times, and integrate often ([Keep It Working](concept:big-ball-of-mud)).
 8. **Track and repay debt.** [Technical debt](concept:technical-debt) is a shortcut that helps now and makes later change more costly. List known debts by priority. Mark deliberate ones as knowingly accepted, and plan how to repay each. If you add temporary parts during a move to a new design, name them and plan their removal ([AS-IS and TO-BE View](concept:as-is-and-to-be-view)).
 9. **Expect the solution to move.** Say which decisions you deliberately deferred. For each open decision, note when its [last responsible moment](concept:last-responsible-moment) arrives. Keep the [glossary](concept:arc42-glossary) current as your understanding of the domain changes. See [Solution as Moving Target](concept:solution-as-moving-target).
 
@@ -66,16 +66,16 @@ ClinicBook has a small team and a fixed launch date. The team cannot afford heav
 
 - One named person owns the documentation, and the documentation stays short ([Guidelines for Documentation](concept:guidelines-for-documentation)).
 - Documentation sources are plain text in version control, reviewed through pull requests and built by a toolchain ([Documentation as Code](concept:documentation-as-code)).
-- Each important ADR states a review trigger, and replaced decisions are marked superseded and point to their replacement ([Decision Dependencies](concept:decision-dependencies)).
+- Each important ADR states a review trigger, and replaced decisions are marked superseded and point to their replacement ([Decision Dependencies](concept:architectural-decision-management-practices)).
 - Structure rules run as automated tests in the build, and existing violations in old code are frozen ([Architecturally Evident Coding Style](concept:architecturally-evident-coding-style)).
 - Gaps between intended and implemented architecture are recorded as risks or debt, with a plan to repay each ([Technical Debt](concept:technical-debt)).
-- Refactoring happens continuously in small steps, and a working version always exists ([Keep It Working](concept:keep-it-working)).
+- Refactoring happens continuously in small steps, and a working version always exists ([Keep It Working](concept:big-ball-of-mud)).
 
 ## Learn more
 
-- [Architecture Decay](concept:architecture-decay)
+- [Architecture Decay](concept:big-ball-of-mud)
 - [Implicit Architecture](concept:architecture-facts-and-challenges)
-- [Accidental Architecture](concept:unsystematic-accidental-architecture)
+- [Accidental Architecture](concept:big-ball-of-mud)
 - [Big Ball of Mud](concept:big-ball-of-mud)
 - [Architecturally Evident Coding Style](concept:architecturally-evident-coding-style)
 - [Documentation as Code](concept:documentation-as-code)
@@ -84,16 +84,16 @@ ClinicBook has a small team and a fixed launch date. The team cannot afford heav
 - [Guidelines for Documentation](concept:guidelines-for-documentation)
 - [Motivation for Architecture Documentation](concept:motivation-for-architecture-documentation)
 - [Architectural Decision-Making Process](concept:architectural-decision-making-in-project-development)
-- [Architectural Decision Management Cycle](concept:architectural-decision-management-cycle)
-- [Definition of Done for Architectural Decisions](concept:definition-of-done-for-architectural-decisions)
-- [Markdown Architectural Decision Records](concept:markdown-architectural-decision-records-madr)
+- [Architectural Decision Management Cycle](concept:architectural-decision-management-practices)
+- [Definition of Done for Architectural Decisions](concept:architectural-decision-management-practices)
+- [Markdown Architectural Decision Records](concept:architectural-decision-record)
 - [Last Responsible Moment](concept:last-responsible-moment)
 - [Solution as Moving Target](concept:solution-as-moving-target)
 - [Technical Debt](concept:technical-debt)
 - [Code Smell](concept:code-smell)
 - [Refactoring](concept:refactoring)
-- [Keep It Working](concept:keep-it-working)
-- [Sweeping It Under the Rug](concept:sweeping-it-under-the-rug)
+- [Keep It Working](concept:big-ball-of-mud)
+- [Sweeping It Under the Rug](concept:big-ball-of-mud)
 - [Iterative and Incremental Development](concept:iterative-and-incremental-development)
 - [AS-IS and TO-BE View](concept:as-is-and-to-be-view)
 - [arc42 Glossary](concept:arc42-glossary)

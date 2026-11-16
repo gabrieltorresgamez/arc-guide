@@ -21,17 +21,9 @@ categories:
     scope: ISO 25010 quality model, quality attribute scenarios, quality trees / utility trees, single quality attributes (availability, performance, security, modifiability, ...), trade-offs between them.
     subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
       - id: quality-models
-        title: "Quality models, prioritization and trade-offs"
-      - id: scenarios
-        title: "Quality attribute scenarios"
-      - id: reliability-safety
-        title: "Reliability, availability and safety"
-      - id: security
-        title: "Security"
-      - id: maintainability-portability
-        title: "Maintainability, modifiability and portability"
-      - id: performance-usability
-        title: "Performance, usability, compatibility and other attributes"
+        title: "Quality models, scenarios and prioritization"
+      - id: characteristics
+        title: "Quality characteristics"
   - id: forces-decisions
     title: Forces, Constraints and Decisions
     scope: Architectural forces, concerns, constraints, architecturally significant requirements, architectural decisions, decision records (ADR), decision management and guidance.
@@ -44,72 +36,6 @@ categories:
         title: "Decision records and templates"
       - id: decision-management
         title: "Decision management and process"
-  - id: principles
-    title: Architecture Principles
-    scope: Architecture principles and how to write them, modularity, coupling, cohesion, separation of concerns, information hiding.
-  - id: tactics
-    title: Architecture Tactics
-    scope: Tactics per quality attribute (availability, modifiability, performance, security, safety, ...), how to choose and combine tactics.
-    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
-      - id: tactics-basics
-        title: "Tactics: concepts and how to use them"
-      - id: availability-tactics
-        title: "Availability tactics"
-      - id: modifiability-tactics
-        title: "Modifiability tactics"
-      - id: other-tactics
-        title: "Performance, security, safety, usability and energy tactics"
-  - id: styles-patterns
-    title: Architecture Styles and Patterns
-    scope: Architecture styles (layered, pipeline, microkernel, service-based, event-driven, space-based, microservices, ...) and architecture patterns, their trade-offs.
-  - id: integration
-    title: Integration
-    scope: Integration styles (file transfer, shared database, RPC, messaging), enterprise integration patterns, message channels, routing, the web as connector, APIs.
-    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
-      - id: integration-basics
-        title: "Integration styles and fundamentals"
-      - id: channels
-        title: "Messaging and channels"
-      - id: message-construction
-        title: "Message construction"
-      - id: routing
-        title: "Message routing"
-      - id: transformation
-        title: "Message transformation"
-      - id: endpoints
-        title: "Messaging endpoints"
-  - id: domain-driven-design
-    title: Domain-Driven Design
-    scope: Ubiquitous language, domain model, bounded context, context map, entities, value objects, aggregates, repositories, domain events, strategic design.
-  - id: data-architecture
-    title: Data Architecture
-    scope: Conceptual, logical and physical data models, data modelling practice, data storage and data flow concerns.
-  - id: modeling-uml
-    title: Modeling with UML
-    scope: UML diagram types, notation and semantics (class, component, deployment, sequence, activity, state, use case, ...).
-    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
-      - id: uml-basics
-        title: "UML basics, taxonomy and good practice"
-      - id: class-diagrams
-        title: "Class diagrams and relationships"
-      - id: component-package-deployment
-        title: "Component, package and deployment diagrams"
-      - id: sequence-use-case
-        title: "Sequence and use case diagrams"
-      - id: state-machines
-        title: "State machine diagrams"
-  - id: modeling-bpmn
-    title: Process Modeling with BPMN
-    scope: BPMN elements (events, activities, gateways, pools, lanes, messages), process modeling practice, levels of process models.
-    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
-      - id: bpmn-basics
-        title: "BPMN basics: motivation, history, notation, diagram types"
-      - id: bpmn-elements
-        title: "BPMN elements: events, activities, gateways, data, pools"
-      - id: bpmn-quality
-        title: "Model quality, guidelines and typical errors"
-      - id: bpm-practice
-        title: "Business process management in practice"
   - id: documentation
     title: Architecture Documentation
     scope: arc42, C4 model, ISO/IEC/IEEE 42010 (architecture description, viewpoints, views, models), documentation as code, documenting for stakeholders.
@@ -119,14 +45,61 @@ categories:
       - id: views-viewpoints
         title: "Views, viewpoints and view models"
       - id: concrete-views
-        title: "Context, component, runtime and deployment views (incl. C4)"
+        title: "Context, component, runtime and deployment views"
+      - id: c4-model
+        title: "C4 model"
       - id: practices-tools
-        title: "Documentation practices and tools"
-      - id: antipatterns
-        title: "Documentation antipatterns"
-  - id: evaluation
-    title: Architecture Evaluation
-    scope: ATAM, scenario-based and lightweight evaluation methods, risks, non-risks, sensitivity points, trade-off points, technical debt.
+        title: "Documentation practices"
+      - id: documentation-as-code
+        title: "Documentation as code"
+  - id: modeling-uml
+    title: Modeling with UML
+    scope: UML diagram types, notation and semantics (class, component, deployment, sequence, activity, state, use case, ...).
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: uml-basics
+        title: "UML basics, taxonomy and good practice"
+      - id: structure-diagrams
+        title: "Structure diagrams: class, component, package, deployment"
+      - id: behavior-diagrams
+        title: "Behavior and interaction diagrams: use case, sequence, state machine"
+  - id: modeling-bpmn
+    title: Process Modeling with BPMN
+    scope: BPMN elements (events, activities, gateways, pools, lanes, messages), process modeling practice, levels of process models.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: bpmn-basics
+        title: "BPMN basics: motivation, history, notation, diagram types"
+      - id: bpmn-elements
+        title: "BPMN elements: events, activities, gateways, data, pools"
+      - id: bpm-quality-practice
+        title: "Model quality and business process management"
+  - id: principles
+    title: Architecture Principles
+    scope: Architecture principles and how to write them, modularity, coupling, cohesion, separation of concerns, information hiding.
+  - id: styles-patterns
+    title: Architecture Styles and Patterns
+    scope: Architecture styles (layered, pipeline, microkernel, service-based, event-driven, space-based, microservices, ...) and architecture patterns, their trade-offs.
+  - id: tactics
+    title: Architecture Tactics
+    scope: Tactics per ISO/IEC 25010 quality characteristic (reliability, maintainability, performance efficiency, security, safety, interaction capability), how to choose and combine tactics.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: tactics-basics
+        title: "Tactics: concepts and how to use them"
+      - id: quality-tactics
+        title: "Tactics per quality characteristic"
+  - id: integration
+    title: Integration
+    scope: Integration styles (file transfer, shared database, RPC, messaging), enterprise integration patterns, message channels, routing, the web as connector, APIs.
+    subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
+      - id: integration-basics
+        title: "Integration styles and fundamentals"
+      - id: messaging-patterns
+        title: "Messaging, channels and patterns"
+  - id: domain-driven-design
+    title: Domain-Driven Design
+    scope: Ubiquitous language, domain model, bounded context, context map, entities, value objects, aggregates, repositories, domain events, strategic design.
+  - id: data-architecture
+    title: Data Architecture
+    scope: Conceptual, logical and physical data models, data modelling practice, data storage and data flow concerns.
   - id: enterprise-architecture
     title: Enterprise Architecture and Frameworks
     scope: Enterprise architecture, architecture frameworks (Zachman, TOGAF, ...), the framework landscape, how software architecture fits into enterprise architecture.
@@ -139,6 +112,9 @@ categories:
         title: "Business architecture and capabilities"
       - id: application-data-technology
         title: "Application, data and technology architecture"
+  - id: evaluation
+    title: Architecture Evaluation
+    scope: ATAM, scenario-based and lightweight evaluation methods, risks, non-risks, sensitivity points, trade-off points, technical debt.
 
 # ---------------------------------------------------------------------------
 # arc42 sections. Articles list the sections they help with in `arc42: [..]`.

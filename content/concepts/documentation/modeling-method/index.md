@@ -1,6 +1,7 @@
 ---
 title: Modeling Method
 slug: modeling-method
+order: 40
 category: documentation
 kind: method
 summary: A modeling method is a short set of team agreements on how to draw architecture models. It keeps
@@ -18,7 +19,7 @@ related:
 - arc42-documentation-template
 - architecture-viewpoint
 - view-creation-method
-- self-invented-notation-drawback
+- characteristics-of-a-good-view
 checks:
 - Every diagram has a title stating its diagram type and scope.
 - Every diagram carries a legend explaining its notation.

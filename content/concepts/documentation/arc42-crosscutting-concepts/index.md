@@ -1,6 +1,7 @@
 ---
 title: Crosscutting Concept
 slug: arc42-crosscutting-concepts
+order: 90
 category: documentation
 kind: concept
 summary: A crosscutting concept is a practice, pattern, or rule that applies in several parts of a system.

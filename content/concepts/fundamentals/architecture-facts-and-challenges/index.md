@@ -10,11 +10,9 @@ arc42:
 - 5
 step: s12-evolve
 related:
-- unsystematic-accidental-architecture
-- architecture-decay
+- big-ball-of-mud
 - technical-debt
 - software-architecture
-- big-ball-of-mud
 - maintainability
 - motivation-for-architecture-documentation
 - architecturally-evident-coding-style

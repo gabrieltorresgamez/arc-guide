@@ -1,6 +1,7 @@
 ---
 title: Unified Modeling Language (UML)
 slug: uml-unified-modeling-language
+order: 10
 category: modeling-uml
 kind: standard
 summary: UML is a standard graphical modeling language for software. It defines 14 diagram kinds, split
@@ -20,6 +21,7 @@ related:
 - uml-modeling-anti-patterns
 - uml-modeling-best-practice
 - why-use-uml-in-architecture-documentation
+- uml-views-conceptual-specification-implementation
 checks:
 - The document states which development method the UML diagrams are used with, because UML itself is not
   a method.

@@ -1,6 +1,7 @@
 ---
 title: arc42 Introduction and Goals
 slug: arc42-introduction-and-goals
+order: 20
 category: documentation
 kind: artifact
 summary: Section 1 of arc42 gives a short overview of what the system must achieve. It lists the top three
@@ -15,7 +16,6 @@ related:
 - arc42-context-and-scope
 - stakeholder
 - quality-attribute-scenario
-- stakeholder-identification
 checks:
 - Section 1 lists at most five quality goals.
 - Each quality goal has a brief scenario, not just a keyword.

@@ -1,6 +1,7 @@
 ---
 title: Architecture Style
 slug: architectural-style
+order: 10
 category: styles-patterns
 kind: style
 summary: 'An architecture style is a set of design constraints: which elements may appear and how they
@@ -17,10 +18,12 @@ related:
 - microservices-architecture
 - layered-architecture
 - service-oriented-architecture
-- pipe-and-filter-pattern
+- pipes-and-filters
 - arc42-solution-strategy
 - quality-attribute-prioritization
 - big-ball-of-mud
+- blackboard-architecture
+- lambda-architecture
 checks:
 - The document names the chosen architecture style and states the constraints it imposes on elements and
   their relationships.
@@ -44,6 +47,34 @@ sources:
   title: N-tier Architecture Style - Azure Architecture Center | Microsoft Learn
   site: learn.microsoft.com
   accessed: '2026-11-08'
+- url: https://quality.arc42.org/approaches/microservice-architecture
+  title: "Microservice Architecture | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/approaches/event-driven-architecture
+  title: "Event-Driven Architecture | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/approaches/hexagonal-architecture
+  title: "Hexagonal Architecture | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/approaches/plugin-architecture
+  title: "Plugin Architecture | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/approaches/self-contained-systems
+  title: "Self-Contained Systems | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/approaches/cqrs
+  title: "CQRS | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
+- url: https://quality.arc42.org/approaches/event-sourcing
+  title: "Event Sourcing | arc42 Quality Model"
+  site: quality.arc42.org
+  accessed: '2026-11-16'
 diagrams:
 - file: diagram-1.mmd
   caption: Two logical layers deployed as separate physical tiers. A higher layer uses only the layer
@@ -67,7 +98,9 @@ An architecture style limits your design choices on purpose. It says which kinds
 
 **How to choose a style.** Start from the problem, not the style. Define the key business drivers. Name the matching architecture characteristics, also called nonfunctional requirements. Prioritize them, and ask stakeholders for input. Keep validating the choice, because changing a style later is costly.
 
-Martin Fowler's point is that a style, like any other, has both costs and benefits.
+A style, like any other, has both costs and benefits.
+
+**More styles in the arc42 quality model.** The arc42 quality model has approach pages on related architecture styles and patterns: [Microservice Architecture](https://quality.arc42.org/approaches/microservice-architecture), [Event-Driven Architecture](https://quality.arc42.org/approaches/event-driven-architecture), [Hexagonal Architecture](https://quality.arc42.org/approaches/hexagonal-architecture), [Plugin Architecture](https://quality.arc42.org/approaches/plugin-architecture), [Self-Contained Systems](https://quality.arc42.org/approaches/self-contained-systems), [CQRS](https://quality.arc42.org/approaches/cqrs), [Event Sourcing](https://quality.arc42.org/approaches/event-sourcing). Microsoft's Azure Architecture Center also has a guide to [architecture styles](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/).
 
 ## Example
 
