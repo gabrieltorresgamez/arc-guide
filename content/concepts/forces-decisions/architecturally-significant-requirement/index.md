@@ -17,9 +17,9 @@ step: s04-quality-requirements
 related:
 - architecturally-significant-decision
 - quality-attribute-scenario
-- arc42-quality-chapter
+- arc42-quality-requirements
 - last-responsible-moment
-- architectural-trade-off-thinking
+- quality-attribute-trade-off
 - quality-attribute-prioritization
 - architectural-decision
 - arc42-introduction-and-goals

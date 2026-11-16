@@ -13,7 +13,7 @@ arc42:
 - 5
 step: s08-integration-data
 related:
-- messaging-pattern-language
+- enterprise-integration-patterns
 - messaging
 checks:
 - Request messages that expect a reply carry a unique request ID, and replies copy it into a correlation

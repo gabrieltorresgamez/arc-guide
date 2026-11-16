@@ -13,7 +13,7 @@ related:
 - architectural-decision
 - arc42-architecture-decisions
 - architecture-decision-rationale
-- middleware-architectural-decision-example
+- architectural-decision-record-example
 - documentation-as-code
 checks:
 - The ADR title conveys both the problem solved and the solution chosen.
@@ -84,6 +84,14 @@ sources:
   title: Using LLMs in Generating Design Rationale for Software Architecture Decisions
   site: arxiv.org
   accessed: '2026-11-09'
+- url: https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+  title: "Documenting Architecture Decisions (Michael Nygard)"
+  site: cognitect.com
+  accessed: '2026-11-16'
+- url: https://raw.githubusercontent.com/adr/madr/main/template/adr-template-minimal.md
+  title: "MADR minimal template"
+  site: raw.githubusercontent.com
+  accessed: '2026-11-16'
 diagrams: []
 review:
   status: generated
@@ -98,7 +106,23 @@ An Architectural Decision Record (ADR) records one architectural decision. It ex
 
 **Templates.** Several templates exist. The Markdown Architectural Decision Record (MADR) template dates from 2017. It grew out of earlier ADR templates, including the Y-statement, and follows a decision journey from identification to enforcement.
 
-A Y-statement is a single structured sentence. It starts with "In the context of" and "facing", which add feature- and quality-related information. It continues with "to achieve" and "accepting that", which state the goal and the trade-off. An optional "because" adds the reason.
+A Y-statement is a single structured sentence. It starts with "In the context of" and "facing", which add feature- and quality-related information. It continues with "we decided for" the chosen option, "and against" the options that were not chosen, then "to achieve" and "accepting that", which state the goal and the trade-off. An optional "because" adds the reason.
+
+**Origin and structure.** Michael Nygard proposed ADRs in 2011 for agile projects. His record has a title and four parts: context, decision, status and consequences. The decision is written in full sentences and active voice ("We will ..."). The consequences list all effects, not only the positive ones. The whole record should be one or two pages long.
+
+**Status.** A decision is "proposed" while the stakeholders have not agreed with it, and "accepted" once they have. If a later ADR changes or reverses it, the old record is marked "deprecated" or "superseded", with a reference to its replacement. MADR's full template also has a status field, whose values include proposed, rejected, accepted, deprecated and superseded.
+
+**A MADR skeleton.** The minimal MADR template has these parts:
+
+```markdown
+# {short title, representative of solved problem and found solution}
+## Context and Problem Statement
+## Considered Options
+## Decision Outcome
+### Consequences
+```
+
+The "Decision Outcome" names the chosen option with its justification. The "Consequences" section is optional.
 
 **Title.** A MADR title should convey the problem solved and the solution chosen.
 

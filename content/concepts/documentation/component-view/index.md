@@ -13,7 +13,7 @@ step: s10-document
 related:
 - c4-level-3-component-diagram
 - c4-model
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - uml-component-diagram
 - architecture-view
 - arc42-building-block-view
@@ -67,12 +67,14 @@ The view starts with a coarse picture. You then zoom into selected blocks, one l
 
 **In C4**
 
-The C4 Model also has component diagrams. They are optional. You create them only when they add value. See the article C4 Component Diagram for details.
+The C4 Model also has component diagrams. They are optional. You create them only when they add value. See the article C4 Level 3: Component Diagram for details.
 
 **More about component views.**
 
 - **Component View Antipattern: Lifting Code to Model Level:** The diagram then mirrors the source code instead of abstracting it into meaningful building blocks.
 - **Component View Refinement Levels:** A building block view is built in levels. Each level zooms into chosen blocks of the level above. Only important, risky, complex or volatile blocks get refined. Simple or standard parts are left out.
+
+**In arc42.** arc42 describes this view in chapter 5. See the article arc42 Building Block View.
 
 ## Example
 

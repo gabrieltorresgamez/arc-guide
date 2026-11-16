@@ -12,11 +12,11 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- integration-pattern
+- integration-style
 - shared-database
 - remote-procedure-call
 - messaging
-- messaging-pattern-language
+- enterprise-integration-patterns
 checks:
 - The document states the file format used between each producer and consumer, such as text, XML, or a
   mainframe feed.

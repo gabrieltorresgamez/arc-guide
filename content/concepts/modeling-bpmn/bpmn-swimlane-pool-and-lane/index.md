@@ -15,8 +15,8 @@ related:
 - bpmn-connecting-object
 - bpmn-core-elements
 - bpmn-conversation-diagram
-- bpmn-2-0-notation-overview
-- bpmn-modeling-tips
+- bpmn-2-0-notation
+- bpmn-modeling-guidelines
 checks:
 - Communication between separate pools is shown with dashed message flows, not with sequence flow.
 - No message flow connects two elements inside the same pool.

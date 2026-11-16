@@ -13,9 +13,9 @@ step: s03-functional-requirements
 related:
 - user-story
 - story-mapping
-- acceptance-criteria
+- acceptance-criterion
 - agile-enterprise-backlog-model
-- method-phase-working-with-functional-requirements
+- requirement-types-and-documents-wiegers-beatty
 checks:
 - Large stories were checked against INVEST (ignoring size), split with named patterns, and the split
   was then evaluated.

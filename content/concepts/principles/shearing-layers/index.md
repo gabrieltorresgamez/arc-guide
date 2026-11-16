@@ -18,7 +18,7 @@ related:
 - separation-of-concerns
 - layered-architecture
 - big-ball-of-mud
-- architectural-forces
+- architectural-force
 checks:
 - The document states which parts of the system change at similar rates and groups them together.
 - Elements that change most quickly are kept in data, not hard-wired into code.

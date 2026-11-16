@@ -14,7 +14,7 @@ related:
 - arc42-context-and-scope
 - context-view
 - c4-level-1-system-context-diagram
-- deployment-diagram
+- uml-deployment-diagram
 - uml-component-diagram
 checks:
 - The business context shows the system as a black box with its domain interfaces to each communication
@@ -77,7 +77,7 @@ arc42 advises you to differentiate the two views. It also advises you to explain
 
 **Notation**
 
-A C4 system context diagram puts the system in the center, among users and external systems. It is a zoomed-out view. It deliberately leaves out technologies and protocols. See the article System Context Diagram.
+A C4 system context diagram puts the system in the center, among users and external systems. It is a zoomed-out view. It deliberately leaves out technologies and protocols. See the article C4 Level 1: System Context Diagram.
 
 **Common mistakes to avoid**
 

@@ -16,10 +16,10 @@ related:
 - modularity
 - coupling-and-cohesion
 - maintainability
-- ddd-modeling-elements
+- ddd-building-blocks-tactical-patterns
 - design-for-change
 - separation-of-concerns
-- maintainability-tactics
+- maintainability-tactic
 checks:
 - Modules are derived from a list of difficult or change-prone design decisions, not only from processing
   steps.

@@ -13,7 +13,7 @@ arc42:
 - 9
 step: s10-document
 related:
-- enterprise-architecture-management
+- enterprise-architecture
 - zachman-framework
 - business-architecture
 - data-architecture

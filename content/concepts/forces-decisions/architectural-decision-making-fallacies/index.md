@@ -15,7 +15,7 @@ related:
 - architectural-decision-record
 - architectural-decision
 - smart-requirements
-- architectural-decision-management-practices
+- architectural-decision-management
 - arc42-architecture-decisions
 - levels-of-architectural-decisions
 checks:
@@ -48,7 +48,7 @@ Several fallacies weaken architectural decisions. Each comes with a countermeasu
 
 **Following the crowd.** The team assumes that what works for others will work for them. The countermeasure is to "beat the street" (when needed). Market or technology community trends alone are bad scouts, and reusing a solution without checking that requirements are compatible is a smell. Apply a recognized method or your own heuristics when moving from analysis to design.
 
-**Anecdotal evidence.** One positive or negative example from tribal knowledge carries the whole argument. The countermeasure is to provide balanced, fair judgments. Use SMART quality requirements as criteria that justify decisions in the records, and make tradeoffs and confidence levels explicit. See "SMART Requirements".
+**Anecdotal evidence.** One positive or negative example from tribal knowledge carries the whole argument. The countermeasure is to provide balanced, fair judgments. Use SMART quality requirements as criteria that justify decisions in the records, and make trade-offs and confidence levels explicit. See "SMART Requirements".
 
 **Blending whole and part.** Someone judges a whole architectural style by one concept with a bad reputation, or assumes the whole style is good because one concept fits. The countermeasure is divide and conquer. Be clear about the scope of each decision. Keep system-wide and local arguments in separate records.
 

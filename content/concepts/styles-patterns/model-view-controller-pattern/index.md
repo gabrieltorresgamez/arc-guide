@@ -18,7 +18,7 @@ related:
 - publish-subscribe-pattern
 - maintainability
 - coupling-and-cohesion
-- ddd-modeling-elements
+- ddd-building-blocks-tactical-patterns
 checks:
 - The document keeps presentation (views and controllers) separate from the domain model.
 - Controllers and views have distinct, independent input and output responsibilities.

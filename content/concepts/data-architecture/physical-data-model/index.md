@@ -13,10 +13,10 @@ arc42:
 step: s08-integration-data
 related:
 - logical-data-model
-- conceptual-vs-logical-vs-physical-data-model
+- conceptual-logical-and-physical-data-model
 - conceptual-data-model
 - data-architecture
-- data-architecture-artifacts
+- data-architecture-artifact
 checks:
 - The physical model names the target DBMS it is designed for.
 - Primary keys, foreign keys, and indexes are defined for data access.

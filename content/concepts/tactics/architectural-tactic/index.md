@@ -14,14 +14,14 @@ arc42:
 step: s07-solution-strategy
 related:
 - quality-attribute
-- reliability-tactics
-- maintainability-tactics
+- reliability-tactic
+- maintainability-tactic
 - tactics-vs-architectural-styles-and-patterns
 - choosing-and-applying-tactics
 - reasons-for-architectural-tactics
 - coupling-and-cohesion
 - architectural-pattern
-- tactic-sources-by-iso-25010-quality-characteristic
+- tactic-coverage-of-iso-25010-quality-characteristics
 checks:
 - Each documented tactic names the quality attribute it is meant to improve.
 - Each tactic is linked to the model parameters it adjusts, such as coupling, cohesion and cost for modifiability.
@@ -56,7 +56,7 @@ A tactic is a design decision. It changes how well the architecture meets a part
 
 **Catalogs change with practice.** Availability tactics are collected in a catalog. The needs of practice led to updates of that catalog, while its underlying categorization structure stayed stable. A real-world example applies the updated tactics with heuristics and analytic models. See Reliability Tactic.
 
-**Tactics and patterns.** The modifiability report describes a standard set of architectural patterns and their variants in terms of the use of tactics. See Relationship between Tactics and Architectural Styles/Patterns.
+**Tactics and patterns.** The modifiability report describes a standard set of architectural patterns and their variants in terms of the use of tactics. See Tactics vs. Architectural Styles and Patterns.
 
 ## Example
 

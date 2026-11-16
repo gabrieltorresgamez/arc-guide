@@ -1,10 +1,15 @@
 @startuml
 !include <C4/C4_Container>
 Person(customer, "Customer", "Buys goods")
+System_Ext(payment, "Payment Provider", "Takes card payments")
 System_Boundary(shop, "Online Shop") {
-  Container(web, "Web App", "Runs in a browser")
-  ContainerDb(db, "Database", "Stores orders")
+  Container(web, "Web App", "JavaScript, browser", "Shows the catalog and takes orders")
+  Container(mobile, "Mobile App", "Mobile", "Same features on a phone")
+  ContainerDb(db, "Database", "Database", "Stores orders")
 }
 Rel(customer, web, "Uses")
+Rel(customer, mobile, "Uses")
+Rel(mobile, web, "Calls")
 Rel(web, db, "Reads and writes")
+Rel(web, payment, "Sends card payments")
 @enduml

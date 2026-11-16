@@ -14,11 +14,9 @@ arc42:
 step: s10-document
 related:
 - documentation-as-code
-- modeling-tool-vs-drawing-tool
+- uml-modeling-tool-vs-drawing-tool
 - model-vs-view
 - c4-model
-- kroki
-- diagram-metadata-in-png-drawio-png
 - architecture-view
 - self-documentation
 checks:
@@ -47,6 +45,36 @@ sources:
   title: 'Structurizr & C4-PlantUML: Architecture as Code'
   site: codecentric.de
   accessed: '2026-11-09'
+- url: https://kroki.io/
+  title: Kroki!
+  site: kroki.io
+  accessed: '2026-11-09'
+- url: https://docs.kroki.io/kroki/setup/usage/
+  title: 'Usage :: Kroki Documentation'
+  site: docs.kroki.io
+  accessed: '2026-11-09'
+- url: https://www.drawio.com/docs/manual/export/xml-in-png/
+  title: Embedded XML in PNG image files | draw.io
+  site: drawio.com
+  accessed: '2026-11-09'
+- url: https://github.com/hediet/vscode-drawio
+  title: 'GitHub - hediet/vscode-drawio: This unofficial extension integrates Draw.io (also known as diagrams.net)
+    into VS Code. · GitHub'
+  site: github.com
+  accessed: '2026-11-09'
+- url: https://www.drawio.com/docs/manual/collaboration/diagram-data-image-formats/
+  title: Share diagram data in an image file | draw.io
+  site: drawio.com
+  accessed: '2026-11-09'
+- url: https://microsoft.github.io/code-with-engineering-playbook/design/design-reviews/recipes/preferred-diagram-tooling/
+  title: Preferred Diagram Tooling - Engineering Fundamentals Playbook
+  site: microsoft.github.io
+  accessed: '2026-11-09'
+- url: https://github.com/lukecarrier/mkdocs-drawio-exporter
+  title: 'GitHub - LukeCarrier/mkdocs-drawio-exporter: Exports your Draw.io diagrams at build time for
+    easier embedding into your documentation · GitHub'
+  site: github.com
+  accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
   caption: One text model produces several views, which a renderer turns into images for the documentation.
@@ -61,7 +89,7 @@ Many diagramming tools save diagrams in formats that are hard to compare. That m
 
 **Text embedded in documents.** Asciidoctor Diagram is a set of extensions for Asciidoctor, a tool that builds AsciiDoc documents. It renders plain-text diagrams from inside those documents. To do this, it calls external renderers.
 
-**One model, many views.** A second approach starts from a model, not from single drawings. A modelling tool builds a non-visual model of the software architecture. Pure drawing tools only produce boxes and lines. With a model, renaming elements is easy and the tool can validate what you draw. See Modeling Tool vs. Drawing Tool and Model vs. View.
+**One model, many views.** A second approach starts from a model, not from single drawings. A modelling tool builds a non-visual model of the software architecture. Pure drawing tools only produce boxes and lines. With a model, renaming elements is easy and the tool can validate what you draw. See UML Modeling Tool vs. Drawing Tool and Model vs. View.
 
 Structurizr DSL follows this approach. It is a text language that creates diagrams from one consistent model. A workspace has these parts:
 
@@ -73,6 +101,11 @@ Layout can be automatic. You add the `autoLayout` statement inside a view.
 
 
 **Keeping diagrams current.** One published example generates its views from a single Structurizr model as C4-PlantUML diagrams. The Asciidoctor task depends on the task that writes the diagrams, so the diagrams are written before the documentation is generated.
+
+**More about diagrams as code.**
+
+- **Kroki:** Kroki is an open-source service that offers one HTTP API for creating diagrams from text, across many diagram libraries. You can use the free public service or run your own instance.
+- **Diagram Metadata in PNG (drawio.png):** A .drawio.png file is a normal PNG image that also carries its own draw.io diagram source. You can show it in documentation and reopen it for editing. Plain XML or SVG files suit Git better.
 
 ## Example
 

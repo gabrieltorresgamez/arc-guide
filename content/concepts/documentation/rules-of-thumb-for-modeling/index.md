@@ -17,9 +17,9 @@ related:
 - c4-model
 - characteristics-of-a-good-view
 - uml-modeling-best-practice
-- bpmn-modeling-tips
+- bpmn-modeling-guidelines
 - guidelines-for-documentation
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 checks:
 - Every diagram has a title that states its type and scope.
 - Every diagram includes a key or legend that explains its notation.
@@ -59,7 +59,3 @@ These habits come from the C4 model (see the article "C4 Model"). They help peop
 ## Example
 
 A team draws a diagram of an online shop. The title reads "Container diagram for the Online Shop". Each box names its type, for example "Web Application [Container]". One arrow says "Sends order details to" instead of "Uses". Every database is blue on every diagram. A small key in the corner explains the colors and shapes.
-
-## Trade-offs
-
-The C4 guidance asks for these habits.

@@ -15,9 +15,9 @@ related:
 - bpmn-collaboration-diagram
 - bpmn-conversation-diagram
 - bpmn-swimlane-pool-and-lane
-- bpmn-2-0-notation-overview
-- purpose-of-process-analysis-and-modeling
-- bpmn-modeling-tips
+- bpmn-2-0-notation
+- process-analysis-and-modeling
+- bpmn-modeling-guidelines
 - runtime-view
 checks:
 - A diagram meant as a topic overview omits internal process steps and does not imply message order.

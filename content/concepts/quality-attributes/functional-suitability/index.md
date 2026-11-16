@@ -11,13 +11,13 @@ arc42:
 - 10
 step: s03-functional-requirements
 related:
-- iso-iec-25010-quality-model
+- iso-iec-25010-product-quality-model
 - quality-attribute
 - fitness-for-purpose
-- acceptance-criteria
+- acceptance-criterion
 - interaction-capability
 - security
-- quality-models-and-their-target-entities
+- iso-iec-25010-quality-models-and-their-target-entities
 checks:
 - The document states which tasks and user objectives the functions must cover (functional completeness).
 - The document says who the intended users are and under which conditions the functions must give accurate

@@ -11,8 +11,8 @@ arc42:
 step: s04-quality-requirements
 related:
 - quality-attribute-scenario
-- acceptance-criteria
-- arc42-quality-chapter
+- acceptance-criterion
+- arc42-quality-requirements
 - quality-attribute
 - technical-debt
 - big-ball-of-mud
@@ -60,7 +60,3 @@ For this reason, quality requirements need the same care as features. Three prac
 A team writes "the shop must be fast" as a quality goal. Nobody can check that. They rewrite it as a scenario: "On a normal day, a customer opens a product page and sees it within two seconds." Now the team can test it. They also see that this goal may call for a different design than they first planned.
 
 They add a change scenario too: "A developer adds a new payment method, and the change stays within one part of the system." Now changeability is something they can check.
-
-## Trade-offs
-
-

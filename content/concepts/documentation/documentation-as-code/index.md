@@ -14,9 +14,8 @@ arc42:
 step: s10-document
 related:
 - diagrams-as-code
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - guidelines-for-documentation
-- kroki
 - c4-model
 - motivation-for-architecture-documentation
 checks:

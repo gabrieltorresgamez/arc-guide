@@ -11,7 +11,7 @@ arc42:
 step: s10-document
 related:
 - component-view
-- structure-diagram
+- uml-structure-diagram
 checks:
 - Each component's required interfaces are satisfied by a provided interface of another component, shown
   by a dependency or ball-and-socket.
@@ -40,7 +40,7 @@ sources:
   site: en.wikipedia.org
   accessed: '2026-11-09'
 - url: https://www.eecs.uottawa.ca/~tcl/gradtheses/mnojoumian/ThesisFiles/FinalSpec/UML/9.3.11.html
-  title: ''
+  title: "9.3.11 Port"
   site: eecs.uottawa.ca
   accessed: '2026-11-09'
 - url: https://developer.ibm.com/articles/the-component-diagram/

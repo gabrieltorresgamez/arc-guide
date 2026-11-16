@@ -45,7 +45,7 @@ A tactic is a design decision that affects how well an architecture meets a part
 
 **Start from the requirements.** Tactics are how you implement the quality requirements you already captured, for example in a utility tree.
 
-**Patterns are made of tactics.** Patterns are composed of tactics, which are the building blocks. Patterns and their variants can also be described by which tactics they use. See Relationship between Tactics and Architectural Styles/Patterns.
+**Patterns are made of tactics.** Patterns are composed of tactics, which are the building blocks. Patterns and their variants can also be described by which tactics they use. See Tactics vs. Architectural Styles and Patterns.
 
 **Expect side effects.** Applying a tactic to improve one quality attribute almost always affects others. In ATAM, evaluators identify these interactions and document the conflicts they find. See Tactic Trade-off Balancing.
 

@@ -16,6 +16,7 @@ related:
 - architectural-decision
 - arc42-solution-strategy
 - data-architecture-principle
+- solid-principles
 checks:
 - Each principle has a statement, a rationale tied to stakeholder goals, consequences, exceptions and
   relations.
@@ -119,7 +120,7 @@ An architecture principle is a guideline for a whole class of problems. It is co
 
 **Reflect real values.** A good principle shows what the organization values most when it must compromise. It only works when it is grounded in the organization's context.
 
-**How to write one.** In one author's practice, an effective formulation has at least these parts:
+**How to write one.** A common form has four parts: a name, a statement, a rationale and implications. Together they show the rule, why it helps the business, and what it demands. In one author's practice, an effective formulation has at least these parts:
 
 - the statement itself;
 - the rationale, which should tie to stakeholders and their goals;
@@ -127,16 +128,11 @@ An architecture principle is a guideline for a whole class of problems. It is co
 - the exceptions, meaning situations where deviation is acceptable;
 - the relations, for example to other principles, or to mission, vision, goals or legal restrictions.
 
-The rationale should support discussion.
+The rationale should support discussion. Teams may break a principle only for a justified reason.
 
 **Exceptions and review.** Sometimes a team sets a principle aside for good reasons. If that happens repeatedly, the principle may need a review. For instance, setting a principle aside three times for valid reasons could trigger one.
 
-**In arc42.** The solution strategy is a short summary and explanation of the fundamental decisions that shape the architecture. The explanation of these decisions should be kept short, and it should say what was decided and why. See Solution Strategy.
-
-**More about working with principles.**
-
-- **Architecture Principle Structure:** An architecture principle is written in four parts: a Name, a Statement, a Rationale and Implications. Together they show the rule, why it helps the business, and what it demands.
-- **Working with Principles:** Working with principles means writing short rules that tie design decisions to requirements. A good principle has a name, a statement, a rationale and implications. Teams may break one only for a justified reason.
+**In arc42.** The solution strategy is a short summary and explanation of the fundamental decisions that shape the architecture. The explanation of these decisions should be kept short, and it should say what was decided and why. See arc42 Solution Strategy.
 
 **In the arc42 quality model.** It has quality pages on related principles: [Loose Coupling](https://quality.arc42.org/qualities/loose-coupling), [Cohesion](https://quality.arc42.org/qualities/cohesion), [Modularity](https://quality.arc42.org/qualities/modularity), [Composability](https://quality.arc42.org/qualities/composability).
 

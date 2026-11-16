@@ -10,8 +10,8 @@ arc42:
 - 2
 step: s05-constraints
 related:
-- requirements-versus-constraints
-- arc42-documentation-template
+- architectural-constraint
+- arc42-architecture-documentation-template
 - arc42-solution-strategy
 - arc42-architecture-decisions
 - arc42-introduction-and-goals

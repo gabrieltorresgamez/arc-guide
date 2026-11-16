@@ -1,5 +1,5 @@
 ---
-title: Solution Strategy
+title: arc42 Solution Strategy
 slug: arc42-solution-strategy
 order: 50
 category: documentation
@@ -10,13 +10,13 @@ arc42:
 - 4
 step: s07-solution-strategy
 related:
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - arc42-introduction-and-goals
 - arc42-constraints
 - arc42-architecture-decisions
 - architectural-pattern-vs-design-pattern
 - architectural-decision
-- arc42-quality-chapter
+- arc42-quality-requirements
 - architectural-tactic
 checks:
 - The section is short and compact, for example a keyword list, and refers onward instead of giving details.

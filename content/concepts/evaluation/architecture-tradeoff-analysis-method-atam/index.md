@@ -39,7 +39,7 @@ sources:
   site: pmc.ncbi.nlm.nih.gov
   accessed: '2026-11-09'
 - url: https://c2wiki.gothdyke.mom/ArchitectureTradeoffAnalysisMethod.html
-  title: ''
+  title: "Architecture Tradeoff Analysis Method"
   site: c2wiki.gothdyke.mom
   accessed: '2026-11-09'
 - url: https://llm-coding.github.io/Semantic-Anchors/anchor/atam/
@@ -100,7 +100,7 @@ sources:
   site: informit.com
   accessed: '2026-11-09'
 - url: https://people.ece.ubc.ca/matei/EECE417/BASS/ch11lev1sec2.html
-  title: ''
+  title: "Software Architecture in Practice, chapter 11 section 2 (Bass, Clements, Kazman)"
   site: people.ece.ubc.ca
   accessed: '2026-11-09'
 - url: https://www.sei.cmu.edu/library/quality-attribute-workshop-collection/
@@ -177,7 +177,7 @@ The results go into an out-brief presentation, a written report, or both. In arc
 **More about the ATAM terms and steps.**
 
 - **Architectural Approach Identification:** Architectural approach identification is Step 4 of ATAM. The architect names the approaches used in the system. The team only lists them here and analyzes them later.
-- **Analysis of Architectural Approaches:** Analysis of architectural approaches is the ATAM step where evaluators examine how design decisions handle important scenarios. It produces risks, non-risks, sensitivity points and tradeoff points. A second pass repeats it with stakeholder-ranked scenarios.
+- **Analysis of Architectural Approaches:** Analysis of architectural approaches is the ATAM step where evaluators examine how design decisions handle important scenarios. It produces risks, non-risks, sensitivity points and trade-off points. A second pass repeats it with stakeholder-ranked scenarios.
 - **ATAM Risk:** In ATAM, a risk is an architectural decision that may harm how the system responds to a quality scenario. Teams record risks, and the good decisions (non-risks), so they can review and mitigate them.
 - **Sensitivity Point:** A sensitivity point is a property of a system that one quality, such as speed or confidentiality, depends on strongly. Teams flag these points during evaluation so they know which decisions carry the most leverage.
 - **Trade-Off Point:** A trade-off point is a property of the architecture that affects several quality attributes at once. Improving one attribute through it costs another. ATAM reports these points so teams can decide on a compromise knowingly.
@@ -188,6 +188,6 @@ A team plans an online ticket shop. Fast checkout and strong data protection are
 
 ## Trade-offs
 
-ATAM is costly. A 2022 review says comprehensive methods, ATAM in particular, need a great deal of cost and effort. The method is scenario-based and involves many stakeholders. Its prioritization uses cumulative voting.
+ATAM is costly. The method is scenario-based and involves many stakeholders.
 
 Lightweight variants reduce cost by minimizing documentation, formality and the number of stakeholders involved. See Lightweight ATAM.

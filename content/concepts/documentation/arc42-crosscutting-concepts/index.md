@@ -1,5 +1,5 @@
 ---
-title: Crosscutting Concept
+title: arc42 Crosscutting Concepts
 slug: arc42-crosscutting-concepts
 order: 90
 category: documentation
@@ -12,11 +12,11 @@ arc42:
 - 5
 step: s10-document
 related:
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - arc42-solution-strategy
 - arc42-architecture-decisions
 - architectural-pattern
-- architectural-style
+- architecture-style
 - security
 - separation-of-concerns
 - component-view
@@ -77,7 +77,7 @@ Some decisions do not belong to one part of a system. They apply in many parts a
 **Choosing topics.** Treat section 8 as a checklist at first. Work iteratively and drop topics that do not matter for your system. To keep the section from becoming a melting pot, remove irrelevant concepts. Then group the rest.
 
 **Links to other chapters.**
-- The solution strategy (see the article *Solution Strategy*) stays brief. Section 8 explains the how and why of approaches. References connect the two.
+- The solution strategy (see the article *arc42 Solution Strategy*) stays brief. Section 8 explains the how and why of approaches. References connect the two.
 - Building blocks should show which concepts they apply. One way is to tag a block with a concept name as a stereotype. A block can apply several concepts.
 
 **Related idea.** Outside arc42, a cross-cutting concern is an aspect of a program that affects several modules. Logging and authentication are examples.

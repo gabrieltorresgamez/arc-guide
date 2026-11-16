@@ -14,9 +14,9 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- messaging-pattern-language
+- enterprise-integration-patterns
 - file-transfer
-- integration-pattern
+- integration-style
 checks:
 - The document states which channels are point-to-point (one consumer per message) and which are publish-subscribe
   (a copy to each receiver).

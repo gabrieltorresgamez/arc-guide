@@ -13,10 +13,10 @@ related:
 - bpmn-swimlane-pool-and-lane
 - bpmn-collaboration-diagram
 - bpmn-core-elements
-- bpmn-modeling-tips
+- bpmn-modeling-guidelines
 - bpmn-data-element
 - bpmn-artifacts-group-and-text-annotation
-- bpmn-gateway-semantics
+- bpmn-gateway
 checks:
 - Connectors between two elements in the same pool are sequence flows, not message flows.
 - Communication between participants is shown as message flow between separate pools.

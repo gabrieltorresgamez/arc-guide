@@ -19,7 +19,7 @@ related:
 - remote-procedure-call
 - coupling-and-cohesion
 - architectural-pattern
-- messaging-pattern-language
+- enterprise-integration-patterns
 - software-connector
 checks:
 - The document names the broker component and states that it coordinates communication, forwards requests,

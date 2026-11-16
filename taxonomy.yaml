@@ -42,12 +42,14 @@ categories:
     subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
       - id: arc42
         title: "arc42 template and its sections"
+        title_prefix: "arc42"
       - id: views-viewpoints
         title: "Views, viewpoints and view models"
       - id: concrete-views
         title: "Context, component, runtime and deployment views"
       - id: c4-model
         title: "C4 model"
+        title_prefix: "C4"
       - id: practices-tools
         title: "Documentation practices"
       - id: documentation-as-code
@@ -58,18 +60,23 @@ categories:
     subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
       - id: uml-basics
         title: "UML basics, taxonomy and good practice"
+        title_prefix: "UML"
       - id: structure-diagrams
         title: "Structure diagrams: class, component, package, deployment"
+        title_prefix: "UML"
       - id: behavior-diagrams
         title: "Behavior and interaction diagrams: use case, sequence, state machine"
+        title_prefix: "UML"
   - id: modeling-bpmn
     title: Process Modeling with BPMN
     scope: BPMN elements (events, activities, gateways, pools, lanes, messages), process modeling practice, levels of process models.
     subcategories:  # sidebar and llms.txt groups; assigned by pipeline.subgroups
       - id: bpmn-basics
         title: "BPMN basics: motivation, history, notation, diagram types"
+        title_prefix: "BPMN"
       - id: bpmn-elements
         title: "BPMN elements: events, activities, gateways, data, pools"
+        title_prefix: "BPMN"
       - id: bpm-quality-practice
         title: "Model quality and business process management"
   - id: principles
@@ -77,7 +84,7 @@ categories:
     scope: Architecture principles and how to write them, modularity, coupling, cohesion, separation of concerns, information hiding.
   - id: styles-patterns
     title: Architecture Styles and Patterns
-    scope: Architecture styles (layered, pipeline, microkernel, service-based, event-driven, space-based, microservices, ...) and architecture patterns, their trade-offs.
+    scope: Architecture styles and patterns with a page here (layered, pipes and filters, microkernel, blackboard, broker, publish-subscribe, microservices, service-oriented, clean architecture, MVC, lambda), their trade-offs, and links to the arc42 quality model for related approaches such as event-driven and hexagonal architecture.
   - id: tactics
     title: Architecture Tactics
     scope: Tactics per ISO/IEC 25010 quality characteristic (reliability, maintainability, performance efficiency, security, safety, interaction capability), how to choose and combine tactics.

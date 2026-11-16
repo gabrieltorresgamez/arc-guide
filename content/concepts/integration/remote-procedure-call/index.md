@@ -16,12 +16,12 @@ arc42:
 - 11
 step: s08-integration-data
 related:
-- integration-pattern
+- integration-style
 - synchronous-vs-asynchronous-communication
 - messaging
 - file-transfer
 - shared-database
-- messaging-pattern-language
+- enterprise-integration-patterns
 - refactoring
 - information-hiding
 checks:

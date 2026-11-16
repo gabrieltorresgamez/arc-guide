@@ -12,7 +12,7 @@ arc42:
 - 8
 step: s07-solution-strategy
 related:
-- ddd-modeling-elements
+- ddd-building-blocks-tactical-patterns
 - information-hiding
 - coupling-and-cohesion
 - separation-of-concerns

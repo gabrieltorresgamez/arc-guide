@@ -1,5 +1,5 @@
 ---
-title: System Context Diagram
+title: "C4 Level 1: System Context Diagram"
 slug: c4-level-1-system-context-diagram
 order: 20
 category: documentation
@@ -15,7 +15,7 @@ related:
 - business-and-technical-context
 - arc42-context-and-scope
 - c4-model
-- c4-container-diagram
+- c4-level-2-container-diagram
 checks:
 - The diagram shows the system as one box surrounded by its users and the external systems it interacts
   with.

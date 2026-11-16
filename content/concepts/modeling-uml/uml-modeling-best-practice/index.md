@@ -13,10 +13,10 @@ step: s10-document
 related:
 - modeling-method
 - rules-of-thumb-for-modeling
-- uml-modeling-anti-patterns
+- uml-modeling-anti-pattern
 - uml-unified-modeling-language
-- barriers-to-uml-adoption
-- why-use-uml-in-architecture-documentation
+- uml-adoption-barriers
+- uml-in-architecture-documentation
 checks:
 - The document states which modeling standards the team follows.
 - The diagrams follow the team's style guidelines consistently.

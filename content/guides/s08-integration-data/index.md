@@ -19,12 +19,12 @@ You decide how your parts and the outside systems talk to each other. You also d
 
 You end up with:
 
-- a list of connections, each with a chosen [integration style](concept:integration-pattern) and a reason for the choice;
+- a list of connections, each with a chosen [integration style](concept:integration-style) and a reason for the choice;
 - a decision for each connection: does the caller wait for the answer, or not?
 - a simple model of your business data, with one place that holds the master copy of each item;
 - notes on how you handle failures, duplicates and different data formats.
 
-The business data model goes into arc42 section 8 as a cross-cutting concept (see [Define Target Data Architecture Method Phase](concept:define-target-data-architecture-method-phase)). This step also touches sections 5 and 6.
+The business data model goes into arc42 section 8 as a cross-cutting concept (see Define Target Data Architecture Method Phase ([Data Architecture](concept:data-architecture))). This step also touches sections 5 and 6.
 
 ## What you need first
 
@@ -36,23 +36,23 @@ The business data model goes into arc42 section 8 as a cross-cutting concept (se
 
 ## If something is missing
 
-- **No list of external systems.** Ask the people who run the business. Write each system down with the data it exchanges. The [Application Interface Diagram](concept:application-architecture-artifacts) is a good place to collect this.
-- **No list of business data.** Start with the [Conceptual data model building method](concept:conceptual-data-model). Understand the business first, then find the entities.
+- **No list of external systems.** Ask the people who run the business. Write each system down with the data it exchanges. The Application Interface Diagram ([Application Architecture Artifacts](concept:application-architecture-artifacts)) is a good place to collect this.
+- **No list of business data.** Start with the Conceptual data model building method ([Conceptual Data Model](concept:conceptual-data-model)). Understand the business first, then find the entities.
 - **No quality needs.** Ask what happens when a connection is down for an hour. The answer tells you where you need to keep working during an outage.
 
 ## How to do it
 
-1. **Draw the connections.** Draw each application and each link between them. Label every link with its technology, such as REST or FTP. Show dependencies, not just a list of applications. See [Application Interface Diagram](concept:application-architecture-artifacts).
+1. **Draw the connections.** Draw each application and each link between them. Label every link with its technology, such as REST or FTP. Show dependencies, not just a list of applications. See Application Interface Diagram ([Application Architecture Artifacts](concept:application-architecture-artifacts)).
 2. **Pick an integration style per connection.** The classic styles are [File Transfer](concept:file-transfer), [Shared Database](concept:shared-database), [Remote Procedure Call](concept:remote-procedure-call) and [Messaging](concept:messaging). Prefer styles that keep the applications' dependence on each other low ([Principles Influencing EAI Pattern Selection](concept:principles-influencing-eai-pattern-selection)). Record the alternatives you considered and why you chose one.
 3. **Decide synchronous or asynchronous.** A synchronous call makes the caller wait for the answer. An asynchronous call lets the caller move on ([Synchronous vs. Asynchronous Communication](concept:synchronous-vs-asynchronous-communication)).
    - For each synchronous call, write down what happens when the other side is down. Give it a timeout.
    - Compute the availability of a call chain as the product of its parts ([Synchronous vs Asynchronous Connector](concept:synchronous-vs-asynchronous-connector)).
    - Where a sender must keep working while the receiver is down, put a queue between them.
-4. **Describe the messaging channels.** Where you use messaging, state for each [Message Channel](concept:messaging-pattern-language) whether it is point-to-point (one receiver per message, see [Point-to-Point Channel](concept:messaging-pattern-language)) or publish-subscribe (a copy for each subscriber, see [Publish/Subscribe Channel](concept:messaging-pattern-language)). Assume a receiver may see a message twice. Say how it ignores the repeat ([Idempotent Receiver](concept:messaging-pattern-language)). Add a [Dead Letter Channel](concept:messaging-pattern-language) for messages that cannot be delivered, and name who watches it.
-5. **Handle different formats and legacy systems.** Where two systems use different formats, name a [Message Translator](concept:messaging-pattern-language) between them. For a legacy or external system, say how its meaning stays out of your design, for example with an anti-corruption layer ([Integration](concept:integration)). That layer is a translation layer. It adds latency and operations work. A [Canonical Data Model](concept:messaging-pattern-language) (one shared format) pays off only with many integrated applications.
-6. **Build the conceptual data model.** List the entities (the business things you keep data about), their attributes, their relationships and the business rules. Leave out data types, tables and indexes ([Conceptual Data Model](concept:conceptual-data-model)). Check the model with business people and keep a glossary of terms. See [Conceptual Data Model Preparation for Logical and Physical Models](concept:conceptual-data-model) and [Publishing the conceptual data model](concept:conceptual-data-model).
-7. **Decide where each entity lives.** Name exactly one system of record per entity. Give each entity a definition, an owner and a classification level ([Data Entity/Data Component Catalog](concept:data-architecture-artifacts)). Link the classification to handling rules such as encryption and access control. Use a CRUD matrix (create, read, update, delete) to see which function touches which entity ([Data Entity/Business Function Matrix](concept:data-architecture-artifacts)). If several applications hold the same data, name the master and the copies ([Application/Data Matrix](concept:application-architecture-artifacts)).
-8. **Leave storage details for later.** Database engines, indexes and partitioning belong in the physical model only ([Conceptual, Logical and Physical Data Model](concept:conceptual-vs-logical-vs-physical-data-model)).
+4. **Describe the messaging channels.** Where you use messaging, state for each Message Channel ([Enterprise Integration Patterns](concept:enterprise-integration-patterns)) whether it is point-to-point (one receiver per message, see Point-to-Point Channel) or publish-subscribe (a copy for each subscriber, see Publish/Subscribe Channel). Assume a receiver may see a message twice. Say how it ignores the repeat (Idempotent Receiver). Add a Dead Letter Channel for messages that cannot be delivered, and name who watches it.
+5. **Handle different formats and legacy systems.** Where two systems use different formats, name a Message Translator ([Enterprise Integration Patterns](concept:enterprise-integration-patterns)) between them. For a legacy or external system, say how its meaning stays out of your design, for example with an anti-corruption layer ([Integration](concept:integration)). That layer is a translation layer. It adds latency and operations work. A Canonical Data Model (one shared format) pays off only with many integrated applications.
+6. **Build the conceptual data model.** List the entities (the business things you keep data about), their attributes, their relationships and the business rules. Leave out data types, tables and indexes ([Conceptual Data Model](concept:conceptual-data-model)). Check the model with business people and keep a glossary of terms. See Conceptual Data Model Preparation for Logical and Physical Models and Publishing the conceptual data model.
+7. **Decide where each entity lives.** Name exactly one system of record per entity. Give each entity a definition, an owner and a classification level (Data Entity/Data Component Catalog ([Data Architecture Artifact](concept:data-architecture-artifact))). Link the classification to handling rules such as encryption and access control. Use a CRUD matrix (create, read, update, delete) to see which function touches which entity (Data Entity/Business Function Matrix). If several applications hold the same data, name the master and the copies (Application/Data Matrix ([Application Architecture Artifacts](concept:application-architecture-artifacts))).
+8. **Leave storage details for later.** Database engines, indexes and partitioning belong in the physical model only ([Conceptual, Logical and Physical Data Model](concept:conceptual-logical-and-physical-data-model)).
 9. **Add heavier patterns only with a reason.** [CQRS](concept:command-query-responsibility-segregation) splits reads from writes. Use it only where read volume far exceeds write volume, and accept that reads may be stale.
 10. **Write it down.** Put the data model in arc42 section 8. Record each integration decision with its reason and its known risks.
 
@@ -80,30 +80,30 @@ The catalog gives each entity an owner and a classification. Patient and Appoint
 
 ## Done when
 
-- Every connection has a labeled technology and a chosen [integration style](concept:integration-pattern) with a recorded reason.
+- Every connection has a labeled technology and a chosen [integration style](concept:integration-style) with a recorded reason.
 - Each connection states whether it is synchronous or asynchronous, and what happens when the other side is down ([Synchronous vs Asynchronous Connector](concept:synchronous-vs-asynchronous-connector)).
-- Each messaging channel is marked point-to-point or publish-subscribe, and undeliverable messages have a [Dead Letter Channel](concept:messaging-pattern-language) with a named watcher.
-- Systems with different formats have a named [Message Translator](concept:messaging-pattern-language), and legacy meaning is kept out of the new design ([Integration](concept:integration)).
+- Each messaging channel is marked point-to-point or publish-subscribe, and undeliverable messages have a Dead Letter Channel ([Enterprise Integration Patterns](concept:enterprise-integration-patterns)) with a named watcher.
+- Systems with different formats have a named Message Translator ([Enterprise Integration Patterns](concept:enterprise-integration-patterns)), and legacy meaning is kept out of the new design ([Integration](concept:integration)).
 - A [conceptual data model](concept:conceptual-data-model) exists, was checked with business people, and has a glossary.
-- Every data entity has one system of record, an owner and a classification ([Data Entity/Data Component Catalog](concept:data-architecture-artifacts)).
-- The data model is in arc42 section 8 ([Define Target Data Architecture Method Phase](concept:define-target-data-architecture-method-phase)).
+- Every data entity has one system of record, an owner and a classification (Data Entity/Data Component Catalog ([Data Architecture Artifact](concept:data-architecture-artifact))).
+- The data model is in arc42 section 8 (Define Target Data Architecture Method Phase ([Data Architecture](concept:data-architecture))).
 
 ## Learn more
 
-- [Integration Style](concept:integration-pattern)
+- [Integration Style](concept:integration-style)
 - [Integration](concept:integration)
-- [Enterprise Integration Patterns](concept:messaging-pattern-language)
-- [Integration Pattern vs. Middleware Technology](concept:integration-patterns-vs-middleware-technology)
-- [Connect or Disconnect](concept:coupling-and-cohesion)
+- [Enterprise Integration Patterns](concept:enterprise-integration-patterns)
+- [Integration Pattern vs. Middleware Technology](concept:integration-pattern-vs-middleware-technology)
+- [Coupling and Cohesion](concept:coupling-and-cohesion)
 - [Messaging](concept:messaging)
 - [Synchronous vs. Asynchronous Communication](concept:synchronous-vs-asynchronous-communication)
-- [Connectors and Distribution](concept:software-connector)
+- [Software Connector](concept:software-connector)
 - [Compatibility](concept:compatibility)
 - [Data Architecture](concept:data-architecture)
-- [Conceptual data model building method](concept:conceptual-data-model)
-- [Application/Data Matrix](concept:application-architecture-artifacts)
-- [Data Entity/Business Function Matrix](concept:data-architecture-artifacts)
+- [Conceptual Data Model](concept:conceptual-data-model)
+- [Application Architecture Artifacts](concept:application-architecture-artifacts)
+- [Data Architecture Artifact](concept:data-architecture-artifact)
 - [Data Architecture Principle](concept:data-architecture-principle)
-- [Logical vs. physical data model](concept:conceptual-vs-logical-vs-physical-data-model)
+- [Conceptual, Logical and Physical Data Model](concept:conceptual-logical-and-physical-data-model)
 - [Command Query Responsibility Segregation](concept:command-query-responsibility-segregation)
 - [Use of external and open data](concept:use-of-external-and-open-data)

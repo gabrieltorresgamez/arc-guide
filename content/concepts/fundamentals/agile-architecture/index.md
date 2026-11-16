@@ -37,7 +37,7 @@ sources:
   site: martinfowler.com
   accessed: '2026-11-09'
 - url: https://www.methodsandtools.com/archive/agilearchi.html
-  title: ''
+  title: "Methods & Tools article on agile architecture"
   site: methodsandtools.com
   accessed: '2026-11-09'
 - url: https://continuous-architecture.pages.dev/practices/architecture-runway/

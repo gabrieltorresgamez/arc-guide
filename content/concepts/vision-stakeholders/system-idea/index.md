@@ -16,7 +16,7 @@ related:
 - arc42-solution-strategy
 - architectural-pattern
 - architectural-overview-diagram
-- architectural-trade-off-thinking
+- quality-attribute-trade-off
 - context-view
 - architectural-decision
 - architectural-pattern-vs-design-pattern
@@ -63,7 +63,7 @@ review:
 
 ## Explanation
 
-In arc42, the solution strategy (see the article Solution Strategy) briefly sums up and explains the basic decisions and approaches that shape the system's architecture.
+In arc42, the solution strategy (see the article arc42 Solution Strategy) briefly sums up and explains the basic decisions and approaches that shape the system's architecture.
 
 **What goes into it**
 
@@ -74,19 +74,11 @@ In arc42, the solution strategy (see the article Solution Strategy) briefly sums
 
 The arc42 whitebox template for the overall system in the building block view contains an overview diagram. (See Architectural Overview Diagram and Context View.)
 
-**Looking at trade-offs**
-
-
-
 **More about the vision.**
 
-- **System Idea and Vision Elements:** A system''s vision is built from linked parts: a vision statement, the target group, needs and value behind it, and the context.
-- **Vision Statement:** A vision statement is a short, inspiring statement of the shared goal behind a product. It names the target customers, the value they get, and the few features that make the product stand out.
+
+- **Vision Statement:** A vision statement is a short, inspiring statement of the shared goal behind a product.
 
 ## Example
 
 A team builds an online booking tool. Its main quality goal is that many people can book at once. A key constraint is a small team. The team writes a short idea: split the system into a web front end and a booking service, using a well-known pattern for that split. Each choice gets a one-line reason tied to the goal or the constraint. The team also notes the main cost and risk of the split.
-
-## Trade-offs
-
-

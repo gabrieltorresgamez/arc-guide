@@ -16,8 +16,8 @@ related:
 - design-for-change
 - shared-database
 - messaging
-- messaging-pattern-language
-- integration-pattern
+- enterprise-integration-patterns
+- integration-style
 - file-transfer
 checks:
 - The document names which integration style (file transfer, shared database, remote procedure invocation

@@ -15,7 +15,7 @@ related:
 - architectural-decision
 - architectural-decision-record
 - architecture-principle
-- architectural-decision-management-practices
+- architectural-decision-management
 - architecturally-significant-decision
 - big-ball-of-mud
 - arc42-architecture-decisions

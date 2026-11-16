@@ -12,8 +12,8 @@ arc42:
 - 3
 step: s06-domain
 related:
-- cargo-shipping-domain-model-example
-- ddd-modeling-elements
+- cargo-shipping-domain-model
+- ddd-building-blocks-tactical-patterns
 - bounded-context
 - domain-model
 - coupling-and-cohesion
@@ -72,6 +72,6 @@ A small shop system has a domain model with orders, products and shipments. The 
 
 ## Trade-offs
 
-arc42 says small or simple systems might describe domain model elements in the building block view, but recommends documenting them in the crosscutting concepts chapter. Many building blocks refer to them, which makes them well suited to a crosscutting topic. See the article Crosscutting Concept.
+arc42 says small or simple systems might describe domain model elements in the building block view, but recommends documenting them in the crosscutting concepts chapter. Many building blocks refer to them, which makes them well suited to a crosscutting topic. See the article arc42 Crosscutting Concepts.
 
 Deriving blocks from the domain model also depends on the model. One unified model for a large system is not feasible, so you need several bounded contexts.

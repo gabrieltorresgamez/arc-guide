@@ -13,7 +13,7 @@ related:
 - business-and-technical-context
 - c4-level-1-system-context-diagram
 - context-view
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - arc42-introduction-and-goals
 - c4-model
 - stakeholder
@@ -49,7 +49,7 @@ This chapter shows where the system sits in its surroundings. The system appears
 
 **Diagram and table.** Any diagram works if it shows the system as a black box and names the domain interfaces to its partners. A table can replace the diagram or sit next to it.
 
-**C4 option.** A C4 system context diagram is a good starting point for documenting a system. It puts the system as a box in the center, surrounded by users and external systems. The focus stays on people and software systems, not on technologies or protocols. See *System Context Diagram*.
+**C4 option.** A C4 system context diagram is a good starting point for documenting a system. It puts the system as a box in the center, surrounded by users and external systems. The focus stays on people and software systems, not on technologies or protocols. See *C4 Level 1: System Context Diagram*.
 
 ## Example
 

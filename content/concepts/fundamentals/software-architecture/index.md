@@ -18,8 +18,9 @@ related:
 - architecture-as-set-of-design-decisions
 - architectural-decision
 - architecture-decision-rationale
-- software-architect-role
+- software-architect
 - technical-debt
+- conways-law
 checks:
 - The document states the rationale behind the architecture, not only its structure.
 - The document separates the architecture itself from the description that documents it.
@@ -96,11 +97,7 @@ There is no single agreed definition of software architecture. Several sources d
 
 **Why it matters.** Architectural choices are costly to change. A poor architecture contributes to the growth of cruft, meaning messy leftovers that make software harder to modify.
 
-**More about the definition.**
-
-- **Software Architecture Definition:** Definitions of software architecture differ. One says it is the design decisions about a system's overall structure and behavior. Another calls it the important stuff, or the expert developers' shared understanding of the design.
-- **Software Architecture Basic Concepts:** Software architecture is the set of design decisions about a system's overall structure and behavior. Business needs and quality goals drive it. A system has a boundary, and its building blocks are organized in levels.
-- **Software Architecture in Its Context:** Software architecture is shaped by its surroundings. The organization, its constraints and its stakeholders all influence which designs are possible. Architects need to know where they are free and where they are bound.
+See the articles Conway's Law and Architecture Level for related ideas.
 
 ## Example
 

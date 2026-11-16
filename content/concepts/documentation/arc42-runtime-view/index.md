@@ -11,8 +11,8 @@ step: s10-document
 related:
 - runtime-view
 - arc42-building-block-view
-- arc42-documentation-template
-- arc42-quality-chapter
+- arc42-architecture-documentation-template
+- arc42-quality-requirements
 - arc42-architecture-decisions
 checks:
 - The runtime view describes a representative selection of scenarios, not every possible one.

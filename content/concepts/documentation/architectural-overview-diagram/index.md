@@ -13,7 +13,7 @@ arc42:
 - 5
 step: s10-document
 related:
-- c4-container-diagram
+- c4-level-2-container-diagram
 - context-view
 - arc42-context-and-scope
 - arc42-solution-strategy
@@ -70,7 +70,7 @@ review:
 
 ## Explanation
 
-An architectural overview diagram is a high-level picture of a system. It shows the main building blocks inside the system. It also shows the people and other systems outside it. Zimmermann's Design Practice Repository calls it a container diagram. It records the outcome of the early, big solution-strategy decisions (see the article Solution Strategy).
+An architectural overview diagram is a high-level picture of a system. It shows the main building blocks inside the system. It also shows the people and other systems outside it. Zimmermann's Design Practice Repository calls it a container diagram. It records the outcome of the early, big solution-strategy decisions (see the article arc42 Solution Strategy).
 
 **How it differs from a context diagram.** A context diagram shows only the outside: external dependencies, used for scope control and risk management. In the repository, it comes first. The overview diagram goes further. It looks inside the system. It still includes all external interfaces with human users and other systems. So it combines internal structure with context.
 
@@ -80,7 +80,7 @@ An architectural overview diagram is a high-level picture of a system. It shows 
 - Every external interface to users and other systems.
 - Client-server splits, such as a Remote User Interface or Distributed Presentation.
 
-**Relation to other models.** The C4 container diagram is a simple, high-level, technology-focused view of the shape of the architecture and major technology choices. It corresponds to the overview diagram (see Container Diagram (C4 Level 2)).
+**Relation to other models.** The C4 container diagram is a simple, high-level, technology-focused view of the shape of the architecture and major technology choices. It corresponds to the overview diagram (see C4 Level 2: Container Diagram).
 
 **Relation to arc42.** Section 3 delimits the system from all its communication partners. It also asks you to specify those partners, both users and IT systems. Section 5 includes an overview diagram of the whole system at level 1. It stresses abstraction without disclosing implementation details. The DokChess example chapter gives an architectural overview so readers can understand its important design decisions.
 

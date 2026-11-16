@@ -11,7 +11,7 @@ arc42:
 - 8
 step: s10-document
 related:
-- bpmn-gateway-semantics
+- bpmn-gateway
 - bpmn-core-elements
 - bpmn-activity
 checks:

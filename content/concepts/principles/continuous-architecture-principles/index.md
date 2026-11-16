@@ -38,6 +38,26 @@ sources:
     in Practice
   site: continuousarchitecture.com
   accessed: '2026-11-09'
+- url: https://edana.ch/en/2026/02/09/why-digitalizing-a-bad-process-worsens-the-problem-and-how-to-avoid-it/
+  title: 'Digitalizing a Bad Process: How to Prevent Amplified Dysfunction'
+  site: edana.ch
+  accessed: '2026-11-09'
+- url: https://egroup-us.com/news/automating-broken-processes/
+  title: Automating Broken Processes Scales Problems
+  site: egroup-us.com
+  accessed: '2026-11-09'
+- url: https://en.wikipedia.org/wiki/Business_process_re-engineering
+  title: Business process re-engineering - Wikipedia
+  site: en.wikipedia.org
+  accessed: '2026-11-09'
+- url: https://tech.lean.org/journal/the-reengineering-is-coming
+  title: The Reengineering Is Coming
+  site: tech.lean.org
+  accessed: '2026-11-09'
+- url: https://www.bpminstitute.org/resources/articles/deliver-business-value-avoid-paving-over-cow-paths/
+  title: To Deliver Business Value, Avoid Paving over Cow Paths | BPMInstitute.org
+  site: bpminstitute.org
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -59,6 +79,10 @@ This article covers four of these principles.
 **Principle 6: Model your teams after the system design.** This follows Conway's Law. The way teams are organized drives the architecture and design of the systems they work on. The authors say the law is now widely accepted.
 
 The authors also recommend lightweight decision records (ADRs) to capture decisions. See Architectural Decision Record.
+
+**More about automation.**
+
+- **Process Automation Magnifies Efficiency:** Automation speeds up whatever process it is given, good or bad. Fix or remove wasteful steps first, then automate. Otherwise software only makes the waste run faster.
 
 ## Example
 

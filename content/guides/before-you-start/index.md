@@ -23,13 +23,13 @@ review:
 ## Vision and system idea
 
 **What it is**
-The vision is a short statement of the shared goal behind the product. It names the target customers, the value they get, and the few features that make the product stand out. See [Vision Statement](concept:system-idea). A full vision also covers needs and context, as described in [System Idea and Vision Elements](concept:system-idea). The system idea is an early, high-level answer to how the system will be built. In arc42, the closest match is the solution strategy. See [System Idea](concept:system-idea).
+The vision is a short statement of the shared goal behind the product. It names the target customers, the value they get, and the few features that make the product stand out. See Vision Statement. A full vision also covers needs and context, as described in System Idea and Vision Elements. The system idea is an early, high-level answer to how the system will be built. In arc42, the closest match is the solution strategy. See [System Idea](concept:system-idea).
 
 **Why you need it**
 The vision gives everyone the same picture of the intention and motivation behind the system. The system idea sums up the basic decisions that shape the architecture. Each of those decisions ties back to a quality goal or a key constraint. Without both, the later decisions have nothing to point at.
 
 **Who usually provides it**
-Business requirements, including the vision, usually sit in a vision and scope document. See [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents). Reference that document instead of copying it, as [Architect Settles In Method Phase](concept:architect-settles-in-method-phase) advises. The system idea is the architecture's own first answer, so the architect usually drafts it.
+Business requirements, including the vision, usually sit in a vision and scope document. See [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty). Reference that document instead of copying it, as Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)) advises. The system idea is the architecture's own first answer, so the architect usually drafts it.
 
 **Good enough is**
 A vision that fits in two or three sentences and a rough system idea. Early versions get refined over time. See [Twin Peaks Model](concept:twin-peaks-model).
@@ -42,7 +42,7 @@ Write a draft yourself from the vision elements: target group, need, value and c
 ## Business goals
 
 **What it is**
-Business goals say what the organization wants to achieve with the system. They count as business requirements and belong in a vision and scope document, apart from detailed software requirements. See [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents). The [Business Model Canvas](concept:business-model-canvas) describes the business on one page. It covers who the business serves, what it offers, how it delivers, and what it costs and earns.
+Business goals say what the organization wants to achieve with the system. They count as business requirements and belong in a vision and scope document, apart from detailed software requirements. See [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty). The [Business Model Canvas](concept:business-model-canvas) describes the business on one page. It covers who the business serves, what it offers, how it delivers, and what it costs and earns.
 
 **Why you need it**
 The value in a vision links to business goals and the business case. An important requirement is tied to business value, risk, or a key stakeholder's concern. See [Architecturally Significant Requirement](concept:architecturally-significant-requirement). Without goals, you cannot tell which requirements deserve the most design effort.
@@ -65,7 +65,7 @@ A stakeholder is a person, team, organization, or class of such parties with an 
 Architects must balance different needs. Concerns can conflict, for example time-to-market against maintainability. The chosen trade-off must be explicit. A stakeholder list helps avoid surprises later in development. Every concern should be addressed in the architecture description.
 
 **Who usually provides it**
-The architect finds stakeholders, using guiding questions: who gains or loses, who decides, who controls resources. See [Stakeholder Identification](concept:stakeholder). Every stakeholder class needs a representative.
+The architect finds stakeholders, using guiding questions: who gains or loses, who decides, who controls resources. See Stakeholder Identification ([Stakeholder](concept:stakeholder)). Every stakeholder class needs a representative.
 
 **Good enough is**
 A table with role or name, contact, expectations and concerns. Cover every class of stakeholder.
@@ -78,7 +78,7 @@ For ClinicBook, the table could include:
 - Practice owners: a working system by the launch date.
 - The development team: a design that a small team can maintain.
 
-To decide how closely to engage each group, see [Stakeholder Power Grid](concept:stakeholder).
+To decide how closely to engage each group, see Stakeholder Power Grid ([Stakeholder](concept:stakeholder)).
 
 **If it is missing**
 Answer the guiding questions yourself and write a first table. Add each stakeholder's main concern. Then ask the people on the list what you missed. Check that no class is left out.
@@ -86,7 +86,7 @@ Answer the guiding questions yourself and write a first table. Add each stakehol
 ## Scope and context
 
 **What it is**
-The scope says where the system starts and ends. A [Context View](concept:context-view) shows the system as a black box with its communication partners around it. It shows what data the system exchanges with them. The business context shows data flows. The technical context shows channels and transmission media. See [Refining Complex Context Views](concept:context-view).
+The scope says where the system starts and ends. A [Context View](concept:context-view) shows the system as a black box with its communication partners around it. It shows what data the system exchanges with them. The business context shows data flows. The technical context shows channels and transmission media. See Refining Complex Context Views.
 
 **Why you need it**
 Everyone can see the boundary of the system and who it talks to. Interfaces to neighboring systems become visible early. Risks can be marked directly in the context.
@@ -95,7 +95,7 @@ Everyone can see the boundary of the system and who it talks to. Interfaces to n
 The architect usually draws it, with input from the stakeholders and from the owners of neighboring systems.
 
 **Good enough is**
-One overview diagram plus a table with one row per communication partner. Label each flow with the data exchanged. Draw both directions where data moves both ways. See [Context View Antipattern: Forgetting Bidirectional Data Flows](concept:context-view).
+One overview diagram plus a table with one row per communication partner. Label each flow with the data exchanged. Draw both directions where data moves both ways. See Context View Antipattern: Forgetting Bidirectional Data Flows ([Context View](concept:context-view)).
 
 For ClinicBook, the partners are patients (web and app), practice staff, the practices' management software from several vendors, an SMS channel and an e-mail channel. The flows with the practice software run both ways. ClinicBook sends booked appointments out. Changes made in the practice software come back in. Mark the differing vendor interfaces as a risk. With many vendors, group them by an explicit criterion.
 
@@ -105,7 +105,7 @@ Sketch the black box and list every neighbor, including users. Put each one in t
 ## Key functional requirements
 
 **What it is**
-Functional requirements say what the system must do. A requirement is precise enough when developers have no more questions. See [Working with Functional Requirements (method phase)](concept:method-phase-working-with-functional-requirements). They can take the form of a [Use Case](concept:use-case) or a [User Story](concept:user-story).
+Functional requirements say what the system must do. A requirement is precise enough when developers have no more questions. See Working with Functional Requirements (method phase) ([Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty)). They can take the form of a [Use Case](concept:use-case) or a [User Story](concept:user-story).
 
 **Why you need it**
 Architecture needs a short description of what the system does. It also needs more detail for the subset that drives architectural decisions. Functional requirements stay separate from quality requirements and constraints. Large ones are split into parts that each still offer business value. The allocation of functions to parts also depends on quality requirements. See [Responsibility Allocation](concept:responsibility-allocation).
@@ -123,10 +123,10 @@ A brief list that points to the existing documents. For ClinicBook:
 - The system sends reminders by SMS and e-mail.
 - The system exchanges appointments with the practice software.
 
-"Manage calendar" is too vague. Split it by operation, for example view, block time and change an appointment. See [Story Splitting](concept:story-splitting). Write use cases at user-goal level. See [Use Case Goal Level](concept:use-case).
+"Manage calendar" is too vague. Split it by operation, for example view, block time and change an appointment. See [Story Splitting](concept:story-splitting). Write use cases at user-goal level. See Use Case Goal Level ([Use Case](concept:use-case)).
 
 **If it is missing**
-Write the short list above from the vision and check it with stakeholders. Detail only the requirements that affect architectural decisions. Accept that the list is incomplete and will change. See [Requirements Trawling](concept:requirements-elicitation).
+Write the short list above from the vision and check it with stakeholders. Detail only the requirements that affect architectural decisions. Accept that the list is incomplete and will change. See [Requirements Trawling](concept:requirements-trawling).
 
 ## Top quality goals
 
@@ -134,13 +134,13 @@ Write the short list above from the vision and check it with stakeholders. Detai
 Quality goals are the few qualities that matter most, such as security or availability. Teams cannot maximize every quality at once. arc42 asks for the top three, at most five, in a table ordered by priority. Each goal gets at least one concrete scenario. Lesser quality requirements go to section 10. See [Quality Attribute Prioritization](concept:quality-attribute-prioritization). A scenario is a specific, measurable statement. See [Quality Attribute Scenario](concept:quality-attribute-scenario).
 
 **Why you need it**
-Improving one quality usually costs another. See [Quality Attribute Trade-off](concept:architectural-trade-off-thinking). Quality goals shape a system as much as features do. State them concretely and early. See [Insufficient Quality as Driver of Change](concept:insufficient-quality-as-driver-of-change).
+Improving one quality usually costs another. See [Quality Attribute Trade-off](concept:quality-attribute-trade-off). Quality goals shape a system as much as features do. State them concretely and early. See [Insufficient Quality as Driver of Change](concept:insufficient-quality-as-driver-of-change).
 
 **Who usually provides it**
 Stakeholders rank the qualities by importance. The architect turns vague wishes into scenarios.
 
 **Good enough is**
-A table of three to five goals, ordered, each with one scenario. Use standard names to avoid ambiguity. See [ISO/IEC 25010 Product Quality Model](concept:iso-iec-25010-quality-model).
+A table of three to five goals, ordered, each with one scenario. Use standard names to avoid ambiguity. See [ISO/IEC 25010 Product Quality Model](concept:iso-iec-25010-product-quality-model).
 
 For ClinicBook, a first ranking could be:
 
@@ -154,7 +154,7 @@ Pick candidates from the standard list and rank them with the stakeholders. Writ
 ## Constraints (technical)
 
 **What it is**
-A constraint is a requirement that limits how freely architects can design and build. Teams must deal with it, though some constraints can be negotiated. See [Architectural Constraint](concept:requirements-versus-constraints). Constraints fall into groups: technical, organizational or political, and conventions. They differ from forces, which you weigh against each other. See [Architectural Force](concept:architectural-forces).
+A constraint is a requirement that limits how freely architects can design and build. Teams must deal with it, though some constraints can be negotiated. See [Architectural Constraint](concept:architectural-constraint). Constraints fall into groups: technical, organizational or political, and conventions. They differ from forces, which you weigh against each other. See [Architectural Force](concept:architectural-force).
 
 **Why you need it**
 A written list shows where the design is free and where it is bound. It stops you from spending effort on options that are not allowed. Keep organization-wide constraints apart from system-specific ones.
@@ -168,4 +168,4 @@ One list, in one place. For each constraint, give who wants it, why, what it cos
 For ClinicBook, one technical entry could be: "Practice-management software stays in place. ClinicBook must use the interfaces each vendor offers. Wanted by the practices, who use that software daily. Consequence: extra integration work per vendor. Not negotiable in the short term." The fixed launch date and the small team are pressures. Weigh them against other goals, unless someone declares them fixed.
 
 **If it is missing**
-Ask the people around the project which technology, organizational and convention limits exist. Write each one down with its source. Mark unclear ones as "negotiability unknown". See [Architect Settles In Method Phase](concept:architect-settles-in-method-phase).
+Ask the people around the project which technology, organizational and convention limits exist. Write each one down with its source. Mark unclear ones as "negotiability unknown". See Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)).

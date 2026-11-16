@@ -13,7 +13,7 @@ arc42:
 - 9
 step: s07-solution-strategy
 related:
-- architectural-style
+- architecture-style
 - architectural-pattern
 - architectural-tactic
 - architecture-principle
@@ -90,7 +90,7 @@ Architects do not start from a blank page. They draw on a toolbox of means. Thes
 
 **Modelling means.** Notations describe architectures. ISO/IEC/IEEE 42010 defines an architecture description language broadly as any form of expression used in architecture descriptions. So these languages count as modelling means.
 
-**Why it matters.** The fundamental decisions and solution strategies shape the system's architecture. Those decisions are the basis for many detailed ones. They are recorded in the solution strategy (see Solution Strategy).
+**Why it matters.** The fundamental decisions and solution strategies shape the system's architecture. Those decisions are the basis for many detailed ones. They are recorded in the solution strategy (see arc42 Solution Strategy).
 
 **More about means and requirements.**
 

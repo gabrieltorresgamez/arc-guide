@@ -9,12 +9,12 @@ arc42:
 - 7
 step: s10-document
 related:
-- distribution-view
+- deployment-view
 - arc42-building-block-view
 - arc42-context-and-scope
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - arc42-crosscutting-concepts
-- deployment-diagram
+- uml-deployment-diagram
 checks:
 - The deployment view shows the infrastructure and maps the building blocks to it.
 - Every relevant environment, such as development, test and production, is documented.

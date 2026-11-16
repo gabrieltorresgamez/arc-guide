@@ -17,7 +17,7 @@ related:
 - arc42-architecture-decisions
 - architectural-decision-record
 - architecture-decision-rationale
-- integration-pattern
+- integration-style
 - levels-of-architectural-decisions
 - quality-attribute-scenario
 checks:

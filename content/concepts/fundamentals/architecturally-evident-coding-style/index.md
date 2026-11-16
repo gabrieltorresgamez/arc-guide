@@ -17,7 +17,7 @@ related:
 - self-documentation
 - technical-debt
 - modularity
-- ddd-modeling-elements
+- ddd-building-blocks-tactical-patterns
 checks:
 - Layers are defined as package patterns, and the allowed interactions between them are stated.
 - Architecture and coding rules run as automated unit tests in the build.

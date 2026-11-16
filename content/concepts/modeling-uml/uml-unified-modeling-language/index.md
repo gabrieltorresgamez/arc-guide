@@ -1,5 +1,5 @@
 ---
-title: Unified Modeling Language (UML)
+title: UML (Unified Modeling Language)
 slug: uml-unified-modeling-language
 order: 10
 category: modeling-uml
@@ -13,15 +13,15 @@ arc42:
 - 8
 step: s10-document
 related:
-- uml-diagram-taxonomy
-- structure-diagram
-- behavior-diagram
+- uml-2-5-diagram-taxonomy
+- uml-structure-diagram
+- uml-behavioral-diagram
 - modeling-method
-- barriers-to-uml-adoption
-- uml-modeling-anti-patterns
+- uml-adoption-barriers
+- uml-modeling-anti-pattern
 - uml-modeling-best-practice
-- why-use-uml-in-architecture-documentation
-- uml-views-conceptual-specification-implementation
+- uml-in-architecture-documentation
+- uml-perspectives-conceptual-specification-implementation
 checks:
 - The document states which development method the UML diagrams are used with, because UML itself is not
   a method.
@@ -73,4 +73,4 @@ A team builds an online shop. It draws one structure diagram showing the main pa
 
 ## Trade-offs
 
-People have criticized UML as ambiguous, inconsistent and large. At times people have also treated it as a silver bullet for design, and that causes problems. Use it as one tool among others. See Barriers to UML Adoption and UML Modeling Anti-Pattern.
+People have criticized UML as ambiguous, inconsistent and large. At times people have also treated it as a silver bullet for design, and that causes problems. Use it as one tool among others. See UML Adoption Barriers and UML Modeling Anti-Pattern.

@@ -12,11 +12,11 @@ arc42:
 step: s03-functional-requirements
 related:
 - traceability
-- acceptance-criteria
+- acceptance-criterion
 - user-story
 - use-case
-- arc42-quality-chapter
-- method-phase-working-with-functional-requirements
+- arc42-quality-requirements
+- requirement-types-and-documents-wiegers-beatty
 - architecturally-significant-requirement
 checks:
 - Each requirement is worded without ambiguity, with consistent terminology and an appropriate level of

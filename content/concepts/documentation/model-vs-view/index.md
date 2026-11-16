@@ -15,11 +15,10 @@ related:
 - architecture-view
 - architecture-viewpoint
 - c4-model
-- 4-1-view-model
+- architecture-view-model
 - iso-iec-ieee-42010-architecture-description-model
 - stakeholder-concern
-- modeling-tool-vs-drawing-tool
-- architecture-view-model
+- uml-modeling-tool-vs-drawing-tool
 checks:
 - Diagrams are described as views of a model that is kept separate from them.
 - Each view states which stakeholders and concerns it addresses.

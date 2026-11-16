@@ -16,8 +16,8 @@ related:
 - architecturally-significant-requirement
 - solution-as-moving-target
 - agile-architecture
-- requirements-elicitation
-- method-phase-working-with-functional-requirements
+- requirements-trawling
+- requirement-types-and-documents-wiegers-beatty
 checks:
 - The document names how and how often the team gets feedback from customers or users, such as sprint
   reviews or an on-site customer.

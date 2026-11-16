@@ -13,8 +13,8 @@ related:
 - arc42-context-and-scope
 - business-and-technical-context
 - c4-level-1-system-context-diagram
-- contemporary-essential-views
-- deployment-diagram
+- essential-architecture-views
+- uml-deployment-diagram
 - software-architecture
 checks:
 - The system appears as a black box with its communication partners around it.
@@ -78,7 +78,7 @@ The technical context shows the channels and technical interfaces to neighbors. 
 - If many external systems are involved, group them by explicit criteria.
 - Keep detail low. The C4 system context diagram is a zoomed-out picture of the system landscape. It suits technical and non-technical people, inside and outside the team.
 
-For the arc42 chapter that holds this view, see arc42 Context and Scope. For the C4 version, see System Context Diagram.
+For the arc42 chapter that holds this view, see arc42 Context and Scope. For the C4 version, see C4 Level 1: System Context Diagram.
 
 **More about context views.**
 

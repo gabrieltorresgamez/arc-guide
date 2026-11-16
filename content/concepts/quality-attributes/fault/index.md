@@ -12,7 +12,7 @@ arc42:
 step: s04-quality-requirements
 related:
 - reliability
-- reliability-tactics
+- reliability-tactic
 checks:
 - The document separates faults (causes) from failures (visible deviations from the specification).
 - Internal and external dependencies are assessed separately as possible sources of faults.

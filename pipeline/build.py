@@ -32,10 +32,48 @@ REVIEW_LLMS = """# Architecture review checklist (arc42)
 7. End with the three most important improvements, in priority order.
 8. Do not invent requirements that are not in the checklist or in the linked pages.
 
+## Example of a worked review
+
+Document: a short architecture description of an online shop. Section 1 (Introduction and goals).
+
+- Check: "The top quality goals are listed, three to five of them." Result: ISSUE. Evidence: "Quality goals: fast, secure, cheap, scalable, usable, reliable, maintainable". Seven goals are listed, with no priority. Fix: rank them and keep the top five. Concept: Quality Attribute Prioritization.
+- Check: "Stakeholders are listed with their expectations." Result: MISSING. Evidence: the document has no stakeholder list. Fix: add a table of roles and what each expects.
+- Check: "The business goals are stated." Result: OK. Evidence: "The shop must double its online revenue within a year."
+- Check: "Regulatory goals are described." Result: N/A. Reason: the document states that the shop sells no regulated goods.
+
+Top three improvements, in priority order: 1. rank the quality goals, 2. add the stakeholder table, 3. add a measure to each quality goal.
+
 ## Pages
 
 SECTION_LINKS- [Guides](SITE_URL/guides/llms.txt): step-by-step help to create missing parts
 """
+
+
+MAX_CHECKS, MAX_PER_SECTION = 3, 30
+
+
+def select_checks(arts, sections, cap=MAX_PER_SECTION):
+    """{section: [(check, article)]}: at most `cap` checks per section. Articles whose first arc42 section is this one come
+    first, then first checks before later ones. A check that shares 80% of its words with a kept one is dropped."""
+    cand = {n: [] for n in sections}
+    for a in arts:
+        secs = [n for n in a.get("arc42", []) if n in cand]
+        for j, ch in enumerate(a.get("checks", [])[:MAX_CHECKS] if secs else []):
+            n = secs[j % len(secs)]
+            cand[n].append(((n != secs[0], j, a["category"], a["title"]), ch, a))
+    words = lambda t: set(re.findall(r"[a-z0-9]+", t.lower()))
+    out = {}
+    for n, items in cand.items():
+        kept = []
+        for _, ch, a in sorted(items, key=lambda x: x[0]):
+            w = words(ch)
+            if any(len(w & words(k)) / max(1, len(w | words(k))) > 0.8 for k, _ in kept):
+                continue
+            kept.append((ch, a))
+            if len(kept) >= cap:
+                break
+        out[n] = kept
+    return out
 
 
 def llms_txt(h1, summary, sections, intro=""):
@@ -120,6 +158,31 @@ def diagram_blocks(a, md):
     return "\n\n".join(out)
 
 
+def link_see(text, titles, md, me):
+    """Turn the page titles named after "See ..." into links, so 'See the article Component View' is a link.
+    Only exact titles inside a "See" clause (up to the end of the sentence or a closing parenthesis) are linked."""
+    by_title = {t: s for s, (t, _) in titles.items() if s != me}
+    if not by_title:
+        return text
+    names = "|".join(re.escape(t) for t in sorted(by_title, key=len, reverse=True))
+    name_re = re.compile(r"(?<![\w\[])(\*{0,2})(\"?)(" + names + r")(\"?)(\*{0,2})(?![\w\]])")
+    def clause(m):
+        head, rest = m.group(1), m.group(2)
+        if "](" in rest:
+            return m.group(0)
+        def one(n):
+            slug = by_title[n.group(3)]
+            href = (c.SITE_URL + titles[slug][1][1]) if md else titles[slug][1][0]
+            return f"{n.group(1)}{n.group(2)}[{n.group(3)}]({href}){n.group(4)}{n.group(5)}"
+        return head + name_re.sub(one, rest)
+    out, fence = [], False
+    for line in text.split("\n"):
+        if line.startswith("```"):
+            fence = not fence
+        out.append(line if fence else re.sub(r"(\b[Ss]ee(?: also)?(?: the)?(?: articles?)?(?: on)? )((?:[^.\n)\"]|\.(?=\d)|\"[^\"\n]*\")*)", clause, line))
+    return "\n".join(out)
+
+
 def build_article(a, titles, cats):
     url, md_url = art_urls(a)
     related = [s for s in a.get("related", []) if s in titles]
@@ -129,13 +192,16 @@ def build_article(a, titles, cats):
         parts = []
         if checks:
             parts.append("## Checks\n\n" + "\n".join(f"- {x}" for x in checks))
+        if a["slug"] in SECTION_OF:
+            sec = next(x for x in c.TAXONOMY["arc42"] if x["n"] == SECTION_OF[a["slug"]])
+            parts.append(f"## Review checklist\n\nTo check your own document, use the [{review_title(sec)}]({c.SITE_URL + '/review/' + review_slug(sec) + '.md' if md else '/review/' + review_slug(sec) + '/'}).")
         if related:
             link = (lambda s: f"[{titles[s][0]}]({c.SITE_URL}{titles[s][1][1]})") if md else (lambda s: f"[{titles[s][0]}]({titles[s][1][0]})")
             parts.append("## Related\n\n" + "\n".join(f"- {link(s)}" for s in related))
         parts.append("## Sources\n\n" + "\n".join(f"- [{s['title']}]({s['url']}) — {s['site']}, accessed {s['accessed']}" for s in (srcs or [])))
         return "\n\n".join(parts)
-    html_body = f":::note[In short]\n{a['summary']}\n:::\n\n{a['_body'].strip()}\n\n{diagram_blocks(a, False)}\n\n{tail(False)}"
-    md_body = f"# {a['title']}\n\n**In short:** {a['summary']}\n\n{a['_body'].strip()}\n\n{diagram_blocks(a, True)}\n\n{tail(True)}"
+    html_body = f":::note[In short]\n{a['summary']}\n:::\n\n{link_see(a['_body'].strip(), titles, False, a['slug'])}\n\n{diagram_blocks(a, False)}\n\n{tail(False)}"
+    md_body = f"# {a['title']}\n\n**In short:** {a['summary']}\n\n{link_see(a['_body'].strip(), titles, True, a['slug'])}\n\n{diagram_blocks(a, True)}\n\n{tail(True)}"
     write_page(f"concepts/{a['category']}/{a['slug']}", a["title"], a["summary"], html_body, md_body, f"/concepts/{a['category']}/llms.txt")
 
 
@@ -190,31 +256,27 @@ def main(argv=None):
         gl.append((g["title"], f"{c.SITE_URL}/guides/{g['id']}.md", g["goal"]))
     if gl:
         c.write_atomic(PUB / "guides" / "llms.txt", llms_txt("Guides", "Step-by-step guides for starting a software architecture.", [("Guides", gl)]))
-    # arc42 review pages: one page per section, at most MAX_CHECKS checks per article (the
-    # full list had 5463 checks). Check j of an article goes to section arc42[j % len(arc42)] so no check repeats.
-    MAX_CHECKS = 3  # ponytail: the first three checks, not the most important ones; rank them if reviews miss things
-    rows = {s["n"]: [] for s in c.TAXONOMY["arc42"]}
-    for a in sorted(arts, key=lambda a: (a["category"], a["title"])):
-        secs = [n for n in a.get("arc42", []) if n in rows]
-        for j, ch in enumerate(a.get("checks", [])[:MAX_CHECKS] if secs else []):
-            if ch not in {x[0] for x in rows[secs[j % len(secs)]]}:
-                rows[secs[j % len(secs)]].append((ch, a))
+    # arc42 review pages: one page per section. Check j of an article goes to section arc42[j % len(arc42)]; each section
+    # keeps at most MAX_PER_SECTION checks, primary-section articles first, near-duplicates removed.
+    rows = select_checks(arts, [x["n"] for x in c.TAXONOMY["arc42"]])
     def review(s, md):
+        ex = titles[ARC42_PAGE[s["n"]]]
+        intro = f"Explanation of this section: [{ex[0]}]({c.SITE_URL + ex[1][1] if md else ex[1][0]}).\n\n"
         link = (lambda a: f"[{a['title']}]({c.SITE_URL}{art_urls(a)[1]})") if md else (lambda a: f"[{a['title']}]({art_urls(a)[0]})")
-        return "\n".join([f"{s['scope']}\n"] + ([f"- {ch} → {link(a)}" for ch, a in rows[s["n"]]] or ["_No checks yet._"]))
+        return intro + "\n".join([f"{s['scope']}\n"] + ([f"- {ch} → {link(a)}" for ch, a in rows[s["n"]]] or ["_No checks yet._"]))
     index = []
     for s in c.TAXONOMY["arc42"]:
-        name = f"arc42-{s['n']:02d}"
-        title = f"arc42 section {s['n']}: {s['title']}"
-        desc = f"Checks for section {s['n']} ({s['title']}) of an arc42 document."
+        name = review_slug(s)
+        title = review_title(s)
+        desc = f"Checks for section {s['n']} ({s['title']}) of an arc42 document. This is a checklist, not an explanation."
         write_page(f"review/{name}", title, desc, review(s, False), f"# {title}\n\n{desc}\n\n" + review(s, True), "/review/llms.txt")
         index.append((s, name))
     idx_html = "\n".join(f"- [{s['n']}. {s['title']}](/review/{n}/)" for s, n in index)
     idx_md = "\n".join(f"- [{s['n']}. {s['title']}]({c.SITE_URL}/review/{n}.md)" for s, n in index)
     desc = "Checks for reviewing an architecture document, one page per arc42 section."
-    write_page("review/arc42", "arc42 checklist", desc, idx_html, "# arc42 checklist\n\n" + desc + "\n\n" + idx_md, "/review/llms.txt")
+    write_page("review/checklists", "arc42 review checklists", desc, idx_html, "# arc42 review checklists\n\n" + desc + "\n\n" + idx_md, "/review/llms.txt")
     c.write_atomic(PUB / "review" / "llms.txt", REVIEW_LLMS.replace("SECTION_LINKS", "".join(
-        f"- [{s['n']}. {s['title']}](SITE_URL/review/arc42-{s['n']:02d}.md): {s['scope']}\n" for s in c.TAXONOMY["arc42"])).replace("SITE_URL", c.SITE_URL))
+        f"- [{s['n']}. {s['title']}](SITE_URL/review/{review_slug(s)}.md): {s['scope']}\n" for s in c.TAXONOMY["arc42"])).replace("SITE_URL", c.SITE_URL))
     # glossary
     gloss = sorted(arts, key=lambda a: a["title"].lower())
     write_page("glossary", "Glossary", "All concepts of this knowledge base, A to Z.",
@@ -249,7 +311,7 @@ def main(argv=None):
             return [{"slug": f"concepts/{k}/{a['slug']}"} for a in groups(k)[0][1]]  # explicit list, so `order:` is respected
         return [{"label": t, "collapsed": True, "items": [{"slug": f"concepts/{k}/{a['slug']}"} for a in items]} for t, items in groups(k)]
     sb.append({"label": "Concepts", "items": [{"label": cats[k]["title"], "collapsed": True, "items": cat_items(k)} for k in cats if k in by_cat]})
-    sb += [{"label": "Review", "slug": "review/arc42"}, {"label": "Glossary", "slug": "glossary"}]
+    sb += [{"label": "Review", "slug": "review/checklists"}, {"label": "Glossary", "slug": "glossary"}]
     c.write_json(SITE / "sidebar.json", sb)
     rep = [f"articles: {len(arts)}; guides: {len(gl)}; diagrams rendered: {n_diag}; failed: {len(bad_diag)}"] + [f"- FAIL diagram {b}" for b in bad_diag]
     fails = [f"diagram {b}" for b in bad_diag]
@@ -272,7 +334,21 @@ def main(argv=None):
 MIN_WORDS, MAX_WORDS = 150, 650
 OLD_MODEL = (r"(?i)ISO(?:/IEC)? ?25010 ?\(2011\)|\b2011 (?:edition|version|standard)\b|\bUI aesthetics\b|user interface aesthetics"
              r"|\bsub-?characteristic called maturity\b")
-TACTIC_SLUGS = {f"{k}-tactics" for k in ("reliability", "maintainability", "performance-efficiency", "interaction-capability", "security", "safety")}
+ARC42_PAGE = {1: "arc42-introduction-and-goals", 2: "arc42-constraints", 3: "arc42-context-and-scope", 4: "arc42-solution-strategy", 5: "arc42-building-block-view", 6: "arc42-runtime-view",
+              7: "arc42-deployment-view", 8: "arc42-crosscutting-concepts", 9: "arc42-architecture-decisions", 10: "arc42-quality-requirements", 11: "arc42-risks-and-technical-debt", 12: "arc42-glossary"}
+SECTION_OF = {v: k for k, v in ARC42_PAGE.items()}
+
+
+def review_slug(s):
+    """Review checklist page of an arc42 section: named so it is not confused with the explainer page of the section."""
+    return f"section-{s['n']:02d}-" + re.sub(r"[^a-z0-9]+", "-", s["title"].lower()).strip("-")
+
+
+def review_title(s):
+    return f"Review checklist: arc42 section {s['n']}, {s['title']}"
+
+
+TACTIC_SLUGS = {f"{k}-tactic" for k in ("reliability", "maintainability", "performance-efficiency", "interaction-capability", "security", "safety")}
 
 
 def check_content(arts):
@@ -286,6 +362,12 @@ def check_content(arts):
     for g in sorted((c.CONTENT / "guides").glob("*/index.md")):
         _, body = c.split_front(g.read_text())
         texts.append((None, [], body))
+        by_target = {}
+        for txt, tgt in re.findall(r"\[([^\]]+)\]\(concept:([^)]+)\)", body):
+            by_target.setdefault(tgt, set()).add(txt.lower())
+        for tgt, txts in by_target.items():
+            if len(txts) >= 3:
+                warns.append(f"guide {g.parent.name}: {len(txts)} different link texts for one target '{tgt}'")
     for me, rel, body in texts:
         for s in set(rel) | set(re.findall(r"\(concept:([^)]+)\)", body)):
             if s in inbound and s != me:
@@ -293,6 +375,11 @@ def check_content(arts):
             elif s not in slugs:
                 fails.append(f"{me or 'guide'}: reference to unknown concept '{s}'")
     sgs = json.loads((c.CONTENT / "subgroups.json").read_text()) if (c.CONTENT / "subgroups.json").exists() else {}
+    prefix = {x["id"]: x["title_prefix"] for cat in c.TAXONOMY["categories"] for x in cat.get("subcategories", []) if x.get("title_prefix")}
+    for a in arts:  # a group with a title_prefix in taxonomy.yaml names all its pages the same way
+        want = prefix.get(sgs.get(a["slug"]))
+        if want and not a["title"].startswith(want):
+            fails.append(f"{a['slug']}: title '{a['title']}' must start with '{want}' (title_prefix of its group)")
     seen = {}
     for a in arts:
         if "order" in a:
@@ -313,8 +400,43 @@ def check_content(arts):
             warns.append(f"{s}: fewer than 2 sources")
         if not inbound[s]:
             warns.append(f"{s}: no page links to it")
+        norm_urls = [re.sub(r"^https?://(www\.)?", "", x["url"]).split("#")[0].rstrip("/").lower() for x in (a.get("sources") or [])]
+        for u in {u for u in norm_urls if norm_urls.count(u) > 1}:
+            fails.append(f"{s}: source listed twice: {u}")
+        for x in a.get("sources") or []:
+            if not str(x.get("title", "")).strip():
+                fails.append(f"{s}: source without title: {x['url']}")
+            if re.search(r"learn\.microsoft\.com/(?!en-us)[a-z]{2}-[a-z]{2}/", x["url"]):
+                fails.append(f"{s}: non-English locale in source URL: {x['url']}")
+        if re.search(r"\b[Tt]radeoffs?\b(?! Analysis)", re.sub(r"Architecture Tradeoff Analysis Method|Tradeoff Analysis", "", body)):
+            warns.append(f"{s}: write 'trade-off', not 'tradeoff'")
+        by_target = {}
+        for txt, tgt in re.findall(r"\[([^\]]+)\]\(concept:([^)]+)\)", body):
+            by_target.setdefault(tgt, set()).add(txt.lower())
+        for tgt, txts in by_target.items():
+            if len(txts) >= 3:
+                warns.append(f"{s}: {len(txts)} different link texts for one target '{tgt}'")
         if a.get("category") in ("quality-attributes", "tactics") and (m := re.search(OLD_MODEL, body)):
             fails.append(f"{s}: 2011 model wording '{m[0]}' (use ISO/IEC 25010:2023 only)")
+        lines, fence = [], False  # lines inside code fences count as text, not as headings
+        for l in body.split("\n"):
+            if l.startswith("```"):
+                fence = not fence
+                lines.append("code")
+            else:
+                lines.append("code" if fence else l)
+        lead = re.compile(r"^\*\*[^*\n]+\*\*\s*[:.]?\s*$")
+        h2 = [i for i, l in enumerate(lines) if l.startswith("## ")]
+        for k, i in enumerate(h2):  # a "## " section needs text that is not just bold labels
+            end = h2[k + 1] if k + 1 < len(h2) else len(lines)
+            if not any(lines[j].strip() and not lead.match(lines[j]) for j in range(i + 1, end)):
+                fails.append(f"{s}: empty section '{lines[i].strip()[:40]}'")
+        heads = [i for i, l in enumerate(lines) if l.startswith("## ") or lead.match(l)]
+        for k, i in enumerate(heads):  # a bold label needs text before the next "## " heading or the end
+            if lead.match(lines[i]):
+                end = heads[k + 1] if k + 1 < len(heads) else len(lines)
+                if not any(lines[j].strip() for j in range(i + 1, end)) and (end >= len(lines) or lines[end].startswith("## ")):
+                    fails.append(f"{s}: empty section under '{lines[i].strip()[:40]}'")
         if a.get("category") == "tactics" and a.get("kind") == "tactic" and s not in TACTIC_SLUGS | {"architectural-tactic"}:
             fails.append(f"{s}: tactic pages are one per ISO characteristic ({', '.join(sorted(TACTIC_SLUGS))})")
         for m in re.finditer(r"\b[Ss]ee (?:the )?articles? (?:on )?([^\n]+)", body):

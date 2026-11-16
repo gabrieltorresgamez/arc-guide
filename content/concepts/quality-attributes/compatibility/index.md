@@ -14,7 +14,7 @@ arc42:
 - 10
 step: s08-integration-data
 related:
-- iso-iec-25010-quality-model
+- iso-iec-25010-product-quality-model
 - maintainability
 - patterns-for-api-design
 - architectural-tactic

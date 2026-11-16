@@ -15,10 +15,10 @@ arc42:
 step: s10-document
 related:
 - c4-level-1-system-context-diagram
-- c4-container-diagram
+- c4-level-2-container-diagram
 - c4-level-3-component-diagram
 - c4-level-4-code-diagram
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - arc42-context-and-scope
 - diagrams-as-code
 - uml-unified-modeling-language

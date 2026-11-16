@@ -12,10 +12,10 @@ step: s10-document
 related:
 - c4-model
 - c4-level-3-component-diagram
-- c4-container-diagram
+- c4-level-2-container-diagram
 - c4-level-1-system-context-diagram
-- class-diagram
-- arc42-documentation-template
+- uml-class-diagram
+- arc42-architecture-documentation-template
 - documentation-as-code
 - diagrams-as-code
 checks:
@@ -45,7 +45,7 @@ review:
 
 ## Explanation
 
-The C4 model describes a system in four levels of detail: system context, containers, components and code (see the article C4 Model). The code diagram is the last one. It zooms into a single component from the level above (see C4 Component Diagram).
+The C4 model describes a system in four levels of detail: system context, containers, components and code (see the article C4 Model). The code diagram is the last one. It zooms into a single component from the level above (see C4 Level 3: Component Diagram).
 
 **What it shows.** The elements are code elements inside the component in scope. Examples are classes, interfaces, objects, functions and database tables.
 

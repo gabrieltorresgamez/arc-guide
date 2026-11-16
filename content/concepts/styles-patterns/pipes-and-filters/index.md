@@ -13,9 +13,9 @@ arc42:
 - 8
 step: s07-solution-strategy
 related:
-- architectural-style
-- messaging-pattern-language
-- performance-efficiency-tactics
+- architecture-style
+- enterprise-integration-patterns
+- performance-efficiency-tactic
 checks:
 - Each filter's input and output formats are documented, and adjacent filters have matching formats.
 - Pipes contain no routing or business logic; all logic sits in filters.

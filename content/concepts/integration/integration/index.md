@@ -12,7 +12,7 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- integration-pattern
+- integration-style
 - file-transfer
 - shared-database
 - remote-procedure-call

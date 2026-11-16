@@ -17,7 +17,7 @@ related:
 - message-structure
 - integration
 - architectural-pattern
-- messaging-pattern-language
+- enterprise-integration-patterns
 - microservices-architecture
 - coupling-and-cohesion
 - architectural-decision-record

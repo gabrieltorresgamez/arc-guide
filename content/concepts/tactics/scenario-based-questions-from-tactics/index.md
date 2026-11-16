@@ -56,7 +56,7 @@ Architecture reviews use several kinds of input. Each one asks for a different l
 
 So the three tools differ in how specific they are. Questionnaires are general and open. Checklists are detailed and domain-specific. Scenarios are concrete and describe one use or change.
 
-**Link to ATAM.** The Architecture Tradeoff Analysis Method (ATAM) is a structured way to understand tradeoffs in the architecture of software-intensive systems. It looks at several quality attributes together. These attributes interact, so improving one can make others worse. A sensitivity point is a design decision that affects how well one quality-attribute scenario is achieved. ATAM works with scenarios. See the articles on ATAM and on sensitivity points.
+**Link to ATAM.** The Architecture Tradeoff Analysis Method (ATAM) is a structured way to understand trade-offs in the architecture of software-intensive systems. It looks at several quality attributes together. These attributes interact, so improving one can make others worse. A sensitivity point is a design decision that affects how well one quality-attribute scenario is achieved. ATAM works with scenarios. See the articles on ATAM and on sensitivity points.
 
 Turning a general question into a scenario-based one means moving from the questionnaire style to the scenario style. The question stops asking about architectures in general. It asks about one concrete sequence of steps.
 
@@ -68,4 +68,4 @@ A scenario-style version describes one concrete sequence of steps instead. For e
 
 ## Trade-offs
 
-General questionnaire questions apply to every architecture, but they stay open and non-specific. Scenarios are concrete. In ATAM, tradeoffs between competing qualities can complicate the selection and prioritization of scenarios. Checklists give more detail, and they are developed after evaluating a set of systems in one domain.
+General questionnaire questions apply to every architecture, but they stay open and non-specific. Scenarios are concrete. In ATAM, trade-offs between competing qualities can complicate the selection and prioritization of scenarios. Checklists give more detail, and they are developed after evaluating a set of systems in one domain.

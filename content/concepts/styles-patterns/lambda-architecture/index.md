@@ -13,11 +13,11 @@ arc42:
 - 11
 step: s08-integration-data
 related:
-- architectural-style
-- event-sourcing-with-distributed-event-log
-- stream
+- architecture-style
+- distributed-event-log
+- stream-connector
 - data-architecture
-- architectural-trade-off-thinking
+- quality-attribute-trade-off
 - flexibility
 - technical-debt
 - command-query-responsibility-segregation

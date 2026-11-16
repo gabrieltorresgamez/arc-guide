@@ -13,7 +13,7 @@ arc42:
 step: s10-document
 related:
 - business-model-canvas
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - bounded-context-canvas
 - architectural-decision-record
 - arc42-introduction-and-goals

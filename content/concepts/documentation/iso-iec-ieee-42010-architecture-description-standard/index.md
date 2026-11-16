@@ -17,7 +17,7 @@ related:
 - stakeholder
 - concern
 - architecture-view-model
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - c4-model
 checks:
 - The document describes the architecture through one or more architecture views.

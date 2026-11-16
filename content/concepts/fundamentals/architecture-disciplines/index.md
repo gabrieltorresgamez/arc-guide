@@ -12,11 +12,11 @@ arc42:
 - 4
 step: s02-scope-context
 related:
-- enterprise-architecture-management
+- enterprise-architecture
 - software-architecture
 - application-architecture
-- architecture-levels
-- software-architect-role
+- architecture-level
+- software-architect
 - data-architecture
 - technology-architecture
 checks:

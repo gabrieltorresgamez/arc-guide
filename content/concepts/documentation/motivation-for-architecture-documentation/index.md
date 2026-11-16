@@ -13,7 +13,7 @@ step: s10-document
 related:
 - architecture-decision-rationale
 - architectural-decision-record
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - guidelines-for-documentation
 - big-ball-of-mud
 - arc42-architecture-decisions

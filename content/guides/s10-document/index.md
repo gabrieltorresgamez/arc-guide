@@ -21,14 +21,14 @@ You get a first written version of four arc42 sections:
 - **Section 6, Runtime View:** a few chosen scenarios that show how the parts work together.
 - **Section 7, Deployment View:** which parts run on which infrastructure.
 
-Each diagram has a named audience, a title, a legend and a clear type. Readers can find what they need without asking the author. The [arc42 Architecture Documentation Template](concept:arc42-documentation-template) gives each of these topics a fixed place.
+Each diagram has a named audience, a title, a legend and a clear type. Readers can find what they need without asking the author. The [arc42 Architecture Documentation Template](concept:arc42-architecture-documentation-template) gives each of these topics a fixed place.
 
 ## What you need first
 
 - A list of stakeholders (people with an interest in the system) and what each expects. See [Stakeholder Perspective and Concern](concept:stakeholder-perspective-and-concern).
 - Your top three to five quality goals from section 1. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).
 - Your constraints from section 2. See [arc42 Constraints](concept:arc42-constraints).
-- The first big solution decisions from section 4. See [Solution Strategy](concept:arc42-solution-strategy).
+- The first big solution decisions from section 4. See [arc42 Solution Strategy](concept:arc42-solution-strategy).
 - A list of the users and neighboring systems that talk to your system.
 
 ## If something is missing
@@ -41,35 +41,35 @@ Each diagram has a named audience, a title, a legend and a clear type. Readers c
 ## How to do it
 
 1. **Name the readers and their questions.** Write down who reads each section and why. Every diagram states its notation, audience and purpose ([View Creation Method](concept:view-creation-method)). Include only what a named reader will use ([Guidelines for Documentation](concept:guidelines-for-documentation)).
-2. **Agree on a small modeling method.** Every diagram gets a title with its type and scope, plus a legend. Every arrow gets a specific label. Use color the same way in all diagrams. See [Modeling Method](concept:modeling-method) and [Rules of Thumb for Modeling](concept:rules-of-thumb-for-modeling). Avoid made-up symbols ([Self-Invented Notation Drawback](concept:characteristics-of-a-good-view)). Choose C4, UML or BPMN on purpose, and say which you use ([Why Use UML in Architecture Documentation](concept:why-use-uml-in-architecture-documentation)). If you keep diagrams as text in version control, see [Diagrams as Code](concept:diagrams-as-code).
+2. **Agree on a small modeling method.** Every diagram gets a title with its type and scope, plus a legend. Every arrow gets a specific label. Use color the same way in all diagrams. See [Modeling Method](concept:modeling-method) and [Rules of Thumb for Modeling](concept:rules-of-thumb-for-modeling). Avoid made-up symbols (Self-Invented Notation Drawback ([Characteristics of a Good View](concept:characteristics-of-a-good-view))). Choose C4, UML or BPMN on purpose, and say which you use ([UML in Architecture Documentation](concept:uml-in-architecture-documentation)). If you keep diagrams as text in version control, see [Diagrams as Code](concept:diagrams-as-code).
 3. **Write section 3: the context.**
    - Draw the system as one black box. A black box shows only what is visible from outside.
    - Put users and neighboring systems around it.
    - Label each arrow with the data that flows, not just "uses".
    - Add a table that describes each interface.
    - Keep the technical context apart. It shows which channel or protocol carries each data flow.
-   - A [C4 System Context Diagram](concept:c4-level-1-system-context-diagram) is a good first diagram. See [Business and Technical Context](concept:business-and-technical-context) and [Context View Antipatterns](concept:business-and-technical-context).
+   - A [C4 System Context Diagram](concept:c4-level-1-system-context-diagram) is a good first diagram. See [Business and Technical Context](concept:business-and-technical-context) and Context View Antipatterns.
 4. **Write section 5, level 1: the big parts.**
    - Draw the white box of the whole system. A white box shows the black boxes inside it.
    - Describe each block's responsibility and interfaces.
-   - A [Container Diagram (C4 Level 2)](concept:c4-container-diagram) fits here. A container is a separately running application or a data store, such as a database.
+   - A [C4 Level 2: Container Diagram](concept:c4-level-2-container-diagram) fits here. A container is a separately running application or a data store, such as a database.
    - Show the main technology of each container. Leave clustering and load balancing for the deployment view.
-   - Group blocks by responsibility. Do not copy code packages ([Component View Antipattern: Lifting Code to Model Level](concept:component-view)).
-5. **Refine only where it pays off.** Zoom into a block only if it is important, risky, complex or volatile. Leave simple or standard blocks as black boxes. See [Component View Refinement Levels](concept:component-view). A [C4 Component Diagram](concept:c4-level-3-component-diagram) opens up exactly one container. Draw one only when it adds value. Code-level diagrams are rarely needed, and tools can generate them ([C4 Level 4: Code Diagram](concept:c4-level-4-code-diagram)).
+   - Group blocks by responsibility. Do not copy code packages (Component View Antipattern: Lifting Code to Model Level ([Component View](concept:component-view))).
+5. **Refine only where it pays off.** Zoom into a block only if it is important, risky, complex or volatile. Leave simple or standard blocks as black boxes. See Component View Refinement Levels ([Component View](concept:component-view)). A [C4 Level 3: Component Diagram](concept:c4-level-3-component-diagram) opens up exactly one container. Draw one only when it adds value. Code-level diagrams are rarely needed, and tools can generate them ([C4 Level 4: Code Diagram](concept:c4-level-4-code-diagram)).
 6. **Write section 6: a few scenarios.**
    - Pick scenarios for architectural relevance, not completeness. Good candidates are key use cases, external interfaces, start-up or administration, and error cases ([Runtime View](concept:runtime-view)).
-   - Use a [UML Sequence Diagram](concept:sequence-diagram) to show how building blocks exchange messages. Separate synchronous from asynchronous messages ([Message Types in Sequence Diagrams](concept:sequence-diagram)).
+   - Use a [UML Sequence Diagram](concept:uml-sequence-diagram) to show how building blocks exchange messages. Separate synchronous from asynchronous messages (Message Types in Sequence Diagrams).
    - Use BPMN when a business process crosses several parties. A [BPMN Collaboration Diagram](concept:bpmn-collaboration-diagram) gives each party its own pool and connects pools with message flows.
-   - Make every step belong to a building block from section 5. Do not describe code-level steps ([Runtime View Antipattern: Code-Level Activity Diagram](concept:runtime-view)).
+   - Make every step belong to a building block from section 5. Do not describe code-level steps (Runtime View Antipattern: Code-Level Activity Diagram ([Runtime View](concept:runtime-view))).
    - Check each BPMN model for deadlock and lack of synchronization ([Soundness of Process Models](concept:soundness-of-process-models)).
 7. **Write section 7: the deployment.**
-   - Draw a [UML Deployment Diagram](concept:deployment-diagram). Put software artifacts on the nodes that run them.
+   - Draw a [UML Deployment Diagram](concept:uml-deployment-diagram). Put software artifacts on the nodes that run them.
    - Draw one environment per diagram, for example production.
    - Show infrastructure such as load balancers and firewalls where they matter.
    - Label each connection with its protocol.
    - Explain how the infrastructure shapes the system.
-   - See [Deployment View](concept:distribution-view), [Distribution View Antipatterns](concept:distribution-view) and [Deployment Diagram Modeling Mistake](concept:deployment-diagram).
-8. **Describe each thing once.** Give an interface its full description in one place. Other places only point to it ([Undetected Duplication Antipattern](concept:characteristics-of-a-good-view)). Keep detail at one abstraction level per diagram ([Unclear Level of Abstraction Antipattern](concept:characteristics-of-a-good-view)).
+   - See [Deployment View](concept:deployment-view), Distribution View Antipatterns and Deployment Diagram Modeling Mistake ([UML Deployment Diagram](concept:uml-deployment-diagram)).
+8. **Describe each thing once.** Give an interface its full description in one place. Other places only point to it (Undetected Duplication Antipattern ([Characteristics of a Good View](concept:characteristics-of-a-good-view))). Keep detail at one abstraction level per diagram (Unclear Level of Abstraction Antipattern).
 9. **Name an owner.** One named person is responsible for the amount and quality of the documentation ([Guidelines for Documentation](concept:guidelines-for-documentation)).
 
 ## Example: ClinicBook
@@ -116,9 +116,9 @@ Every diagram has a title with type and scope, a legend and labeled arrows. One 
 
 - Every diagram has a title with type and scope, a legend and labeled arrows. See [Rules of Thumb for Modeling](concept:rules-of-thumb-for-modeling).
 - Section 3 shows the system as a black box with all communication partners. The technical context sits in a separate view. See [Business and Technical Context](concept:business-and-technical-context).
-- Section 5 has a level 1 white box. Deeper levels exist only for important, risky, complex or volatile blocks. See [Component View Refinement Levels](concept:component-view).
+- Section 5 has a level 1 white box. Deeper levels exist only for important, risky, complex or volatile blocks. See Component View Refinement Levels ([Component View](concept:component-view)).
 - Section 6 has a few architecturally relevant scenarios. Each step maps to a building block. See [Runtime View](concept:runtime-view).
-- Section 7 maps building blocks to infrastructure, one environment per diagram. See [Distribution View Antipatterns](concept:distribution-view).
+- Section 7 maps building blocks to infrastructure, one environment per diagram. See Distribution View Antipatterns ([Deployment View](concept:deployment-view)).
 - Each view names the readers and concerns it serves. See [Architecture View](concept:architecture-view).
 - Any BPMN model has been checked for soundness. See [Soundness of Process Models](concept:soundness-of-process-models).
 
@@ -139,27 +139,23 @@ Every diagram has a title with type and scope, a legend and labeled arrows. One 
 - [Component View](concept:component-view)
 - [C4 Model](concept:c4-model)
 - [Architectural Overview Diagram](concept:architectural-overview-diagram)
-- [Architectural Overview Antipattern](concept:architectural-overview-diagram)
-- [Matching Diagram Type to System Aspect](concept:matching-diagram-type-to-system-aspect)
+- [UML Diagram Types by System Aspect](concept:uml-diagram-types-by-system-aspect)
 - [UML Component Diagram](concept:uml-component-diagram)
 
 **Runtime and deployment**
 
-- [Essential Architecture Views (Context, Component, Runtime, Distribution)](concept:contemporary-essential-views)
-- [Process-Application-Infrastructure Mapping](concept:application-architecture-artifacts)
-- [Additional Architecture Viewpoints (Security, Information, Operational, Development, Process, Evolution)](concept:additional-architecture-views-and-perspectives)
+- [Essential Architecture Views](concept:essential-architecture-views)
+- [Application Architecture Artifacts](concept:application-architecture-artifacts)
+- [Additional Architecture Viewpoints](concept:additional-architecture-viewpoints)
 
 **BPMN**
 
-- [BPMN 2.0 Notation](concept:bpmn-2-0-notation-overview)
+- [BPMN 2.0 Notation](concept:bpmn-2-0-notation)
 - [BPMN Core Elements](concept:bpmn-core-elements)
-- [BPMN Modeling Guidelines](concept:bpmn-modeling-tips)
-- [BPMN Layout Guideline](concept:bpmn-modeling-tips)
+- [BPMN Modeling Guidelines](concept:bpmn-modeling-guidelines)
 
 **Tooling**
 
 - [Documentation as Code](concept:documentation-as-code)
 - [Diagrams as Code](concept:diagrams-as-code)
-- [Modeling Tool vs. Drawing Tool](concept:modeling-tool-vs-drawing-tool)
-- [Kroki](concept:kroki)
-- [Diagram Metadata in PNG (drawio.png)](concept:diagram-metadata-in-png-drawio-png)
+- [UML Modeling Tool vs. Drawing Tool](concept:uml-modeling-tool-vs-drawing-tool)

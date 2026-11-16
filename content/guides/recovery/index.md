@@ -16,9 +16,9 @@ review:
 
 ## Ordered steps to recover missing information in an existing project
 
-Code shows what a system does. It does not show why it was built that way ([Motivation for Architecture Documentation](concept:motivation-for-architecture-documentation)). A system without documentation still has an architecture, though nobody may have planned or understood it ([Implicit Architecture](concept:architecture-facts-and-challenges)). Your job is to write down what you can recover, in small pieces.
+Code shows what a system does. It does not show why it was built that way ([Motivation for Architecture Documentation](concept:motivation-for-architecture-documentation)). A system without documentation still has an architecture, though nobody may have planned or understood it ([Implicit Architecture](concept:implicit-architecture)). Your job is to write down what you can recover, in small pieces.
 
-I suggest the order below. It starts with information you can get from people and existing papers. It ends with what takes the most digging. Early results will be rough. Refine them as you learn more ([Architect Settles In Method Phase](concept:architect-settles-in-method-phase)).
+I suggest the order below. It starts with information you can get from people and existing papers. It ends with what takes the most digging. Early results will be rough. Refine them as you learn more (Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start))).
 
 Write only what readers will use. Describe each thing once and reference it elsewhere ([Guidelines for Documentation](concept:guidelines-for-documentation)).
 
@@ -26,7 +26,7 @@ Write only what readers will use. Describe each thing once and reference it else
 
 **Write down first:** a stakeholder table and the top quality goals.
 
-- A stakeholder is a person, team or organization with an interest in the system ([Stakeholder Identification](concept:stakeholder)). Ask who gains or loses, who decides and who controls resources.
+- A stakeholder is a person, team or organization with an interest in the system (Stakeholder Identification ([Stakeholder](concept:stakeholder))). Ask who gains or loses, who decides and who controls resources.
 - For each stakeholder, note a role and what they expect from the system.
 - Pick the top three quality goals, five at most, and give each a short scenario ([Quality Attribute Prioritization](concept:quality-attribute-prioritization)). A quality goal is a quality such as speed or security that the system must meet.
 - Keep the requirements overview short. Link to existing requirements documents instead of copying them ([arc42 Introduction and Goals](concept:arc42-introduction-and-goals)).
@@ -37,7 +37,7 @@ Section 1 holds only the top goals. Detailed quality requirements go to section 
 
 **Write down first:** one list of everything that limits your design freedom.
 
-- A constraint is a requirement that limits how freely you can design and build ([Architectural Constraint](concept:requirements-versus-constraints)).
+- A constraint is a requirement that limits how freely you can design and build ([Architectural Constraint](concept:architectural-constraint)).
 - Put all constraints in one place, with a short reason for each ([arc42 Constraints](concept:arc42-constraints)).
 - Group them as technical, organizational or political, and conventions.
 - Mark each one as negotiable or not. Note which ones come from the wider organization rather than this system.
@@ -50,7 +50,7 @@ Budget, deadlines and mandated technologies count as constraints too.
 
 - Show the system as one box. Put users and other systems around it ([arc42 Context and Scope](concept:arc42-context-and-scope)).
 - Write the business context first. It shows which data flows to and from each partner. Then write the technical context. It shows which channel or protocol carries each flow ([Business and Technical Context](concept:business-and-technical-context)).
-- Draw both directions where data moves both ways ([Context View Antipattern: Forgetting Bidirectional Data Flows](concept:context-view)).
+- Draw both directions where data moves both ways (Context View Antipattern: Forgetting Bidirectional Data Flows ([Context View](concept:context-view))).
 - Add a table with one row per partner. Label every arrow with the data, and add a legend.
 
 ### Step 4: Recover the building blocks from the code (arc42 section 5)
@@ -59,8 +59,8 @@ Budget, deadlines and mandated technologies count as constraints too.
 
 - A black box shows what a block does and offers. A white box shows what is inside ([Component View](concept:component-view)).
 - Do not trust old documents blindly. For a legacy system, recover the real architecture first ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
-- Group blocks by responsibility. Do not copy code packages such as Facade, Service or Dto into the diagram ([Component View Antipattern: Lifting Code to Model Level](concept:component-view)).
-- Zoom into a block only if it is important, risky, complex or volatile ([Component View Refinement Levels](concept:component-view)).
+- Group blocks by responsibility. Do not copy code packages such as Facade, Service or Dto into the diagram (Component View Antipattern: Lifting Code to Model Level ([Component View](concept:component-view))).
+- Zoom into a block only if it is important, risky, complex or volatile (Component View Refinement Levels ([Component View](concept:component-view))).
 - Every diagram needs a title that names its type and scope, and a legend.
 
 The code can answer "what is here" ([Self-Documentation](concept:self-documentation)). It cannot answer "why", so the next step covers that.
@@ -81,7 +81,7 @@ Section 4 holds the most fundamental decisions. Section 9 points there and does 
 
 **Write down first:** the gaps and weak spots you met in steps 1 to 5.
 
-- Record known gaps between the intended and the implemented architecture as risks or technical debt ([Implicit Architecture](concept:architecture-facts-and-challenges)).
+- Record known gaps between the intended and the implemented architecture as risks or technical debt ([Implicit Architecture](concept:implicit-architecture)).
 - Technical debt means shortcuts that help in the short term but make later change more costly ([Technical Debt](concept:technical-debt)). List each item and order the list by priority.
 - To find more risks, run a short team session. Rate each risk by probability and impact, and plan a mitigation for the top ones ([Risk Storming](concept:risk-storming)).
 

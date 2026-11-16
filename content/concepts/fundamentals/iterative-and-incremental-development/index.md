@@ -16,7 +16,7 @@ related:
 - refactoring
 - big-ball-of-mud
 - agile-architecture
-- evolutionary-domain-modeling
+- iterative-domain-modeling
 - technical-debt
 - design-for-change
 checks:

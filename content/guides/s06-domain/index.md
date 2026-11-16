@@ -47,16 +47,16 @@ review:
    Treat boundaries taken from stories as indications, not proof.
 5. **Draw a context map.** Show how the contexts relate, including external systems. Follow [Context Map](concept:context-map). Explain every arrow. Say which side is upstream (provides) and which is downstream (consumes). Label each relationship with a named pattern. Use customer-supplier only if the downstream side can influence the upstream side.
 6. **Look inside each context.** Find the main objects and their roles:
-   - [Entity](concept:ddd-modeling-elements): defined by its identity. Its attributes can change.
-   - [Value Object](concept:ddd-modeling-elements): no identity, immutable, equal when all values match.
-   - [Aggregate](concept:ddd-modeling-elements): a group treated as one unit, with one root as the only entry point. Other aggregates are referenced by identity.
-   - [Domain Event](concept:ddd-modeling-elements): something that happened, named in the past tense.
+   - Entity ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): defined by its identity. Its attributes can change.
+   - Value Object ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): no identity, immutable, equal when all values match.
+   - Aggregate ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): a group treated as one unit, with one root as the only entry point. Other aggregates are referenced by identity.
+   - Domain Event ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): something that happened, named in the past tense.
 
-   Where a concept has a life cycle that matters to the business, sketch its states. See [Entity Life Cycle](concept:ddd-modeling-elements).
-7. **Sketch the important data.** Draw a conceptual data model with entities, attributes, relationships and business rules. State for each relationship its cardinality (how many) and whether it is mandatory or optional. Leave out data types, tables and indexes. See [Conceptual data model building method](concept:conceptual-data-model) and [Conceptual Data Model](concept:conceptual-data-model). Show it to business stakeholders and record the gaps they find. [Conceptual Data Model Preparation for Logical and Physical Models](concept:conceptual-data-model) explains how the checked model is handed on to later modeling.
+   Where a concept has a life cycle that matters to the business, sketch its states. See Entity Life Cycle ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)).
+7. **Sketch the important data.** Draw a conceptual data model with entities, attributes, relationships and business rules. State for each relationship its cardinality (how many) and whether it is mandatory or optional. Leave out data types, tables and indexes. See Conceptual data model building method and [Conceptual Data Model](concept:conceptual-data-model). Show it to business stakeholders and record the gaps they find. Conceptual Data Model Preparation for Logical and Physical Models explains how the checked model is handed on to later modeling.
 8. **Note privacy and ownership.** Mark which data is sensitive and which system holds the master data. [Data Architecture](concept:data-architecture) asks you to name the database of record and to identify privacy and security aspects.
 9. **Turn the contexts into building blocks.** Group concepts that belong together. Mark external systems as external and put a translating wrapper between them and your own components. See [Deriving System Components from the Domain Model](concept:deriving-system-components-from-the-domain-model). Record the result in arc42 section 5.
-10. **Expect to revise.** The model improves as the team learns. Change model and code together. See [Iterative Domain Modeling](concept:evolutionary-domain-modeling).
+10. **Expect to revise.** The model improves as the team learns. Change model and code together. See [Iterative Domain Modeling](concept:iterative-domain-modeling).
 
 ## Example: ClinicBook
 
@@ -93,7 +93,7 @@ Open questions go on the canvas. One example: do all 40 practices define a "slot
 - Terms that differ between groups are kept apart, not merged. See [Business Domain Understanding](concept:business-domain-understanding).
 - Each bounded context has an agreed name, a business-language purpose and a core, supporting or generic class. See [Bounded Context Canvas](concept:bounded-context-canvas).
 - A context map shows all contexts and external systems, with explained arrows and named patterns. See [Context Map](concept:context-map).
-- Each aggregate has one root, and other aggregates are referenced by identity. See [Aggregate](concept:ddd-modeling-elements).
+- Each aggregate has one root, and other aggregates are referenced by identity. See Aggregate ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)).
 - A conceptual data model with cardinalities and business rules exists. It has no storage details, and business stakeholders have checked it. See [Conceptual Data Model](concept:conceptual-data-model).
 - Building blocks follow the contexts, with external systems marked. See [Deriving System Components from the Domain Model](concept:deriving-system-components-from-the-domain-model).
 
@@ -101,13 +101,11 @@ Open questions go on the canvas. One example: do all 40 practices define a "slot
 
 - [Domain-Driven Design](concept:domain-driven-design)
 - [Domain Model](concept:domain-model)
-- [Domain-Driven Design of the Data Model](concept:domain-modeling-procedure)
+- [Domain-Driven Design of the Data Model](concept:domain-driven-design-of-the-data-model)
 - [Bounded Context](concept:bounded-context)
 - [Domain Storytelling](concept:domain-storytelling)
-- [Publishing the conceptual data model](concept:conceptual-data-model)
-- [Entity and Value Object](concept:ddd-modeling-elements)
-- [Domain Event](concept:ddd-modeling-elements)
-- [Conceptual, Logical and Physical Data Model](concept:conceptual-vs-logical-vs-physical-data-model)
+- [Conceptual Data Model](concept:conceptual-data-model)
+- [DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)
+- [Conceptual, Logical and Physical Data Model](concept:conceptual-logical-and-physical-data-model)
 - [Data Architecture](concept:data-architecture)
 - [Business Capability Map](concept:business-capability-map)
-- [Module](concept:ddd-modeling-elements)

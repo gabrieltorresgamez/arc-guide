@@ -17,7 +17,7 @@ related:
 - concern
 - architectural-tactic
 - security
-- additional-architecture-views-and-perspectives
+- additional-architecture-viewpoints
 - architecture-view-model
 checks:
 - Quality properties such as security are handled by applying a perspective to each view, not by adding

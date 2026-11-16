@@ -12,8 +12,8 @@ step: s10-document
 related:
 - bpmn-event
 - bpmn-core-elements
-- purpose-of-process-analysis-and-modeling
-- bpmn-2-0-notation-overview
+- process-analysis-and-modeling
+- bpmn-2-0-notation
 checks:
 - Reusable process logic is modeled as a call activity, not as a collapsed subprocess.
 - Each embedded subprocess has exactly one none start event.

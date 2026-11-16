@@ -14,10 +14,10 @@ arc42:
 step: s07-solution-strategy
 related:
 - architectural-pattern
-- architectural-style
+- architecture-style
 - microservices-architecture
 - layered-architecture
-- architectural-trade-off-thinking
+- quality-attribute-trade-off
 - arc42-solution-strategy
 checks:
 - The document names the architecture style or patterns chosen for the whole system.

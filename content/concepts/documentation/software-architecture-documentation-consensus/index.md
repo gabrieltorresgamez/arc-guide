@@ -14,8 +14,8 @@ step: s10-document
 related:
 - architecture-view
 - c4-model
-- arc42-documentation-template
-- 4-1-view-model
+- arc42-architecture-documentation-template
+- architecture-view-model
 - iso-iec-ieee-42010-architecture-description-standard
 - stakeholder-concern
 - documentation-as-code

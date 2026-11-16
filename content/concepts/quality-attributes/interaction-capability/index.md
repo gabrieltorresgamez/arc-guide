@@ -13,10 +13,10 @@ arc42:
 - 8
 step: s04-quality-requirements
 related:
-- interaction-capability-tactics
+- interaction-capability-tactic
 - maintainability
 - quality-attribute
-- iso-iec-25010-quality-model
+- iso-iec-25010-product-quality-model
 - model-view-controller-pattern
 - quality-attribute-scenario
 checks:

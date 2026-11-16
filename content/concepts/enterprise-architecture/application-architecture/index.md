@@ -12,7 +12,7 @@ arc42:
 step: s10-document
 related:
 - togaf
-- enterprise-architecture-management
+- enterprise-architecture
 - application-architecture-artifacts
 - data-architecture
 - business-architecture

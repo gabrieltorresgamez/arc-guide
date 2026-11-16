@@ -13,10 +13,10 @@ arc42:
 step: s05-constraints
 related:
 - last-responsible-moment
-- requirements-versus-constraints
+- architectural-constraint
 - architectural-decision-record
 - arc42-constraints
-- architectural-forces
+- architectural-force
 - architecturally-significant-requirement
 - solution-as-moving-target
 - architectural-decision
@@ -35,6 +35,10 @@ sources:
   accessed: '2026-11-09'
 - url: https://docs.arc42.org/section-2/
   title: 2 - Constraints | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-1/
+  title: 1 - Introduction and Goals | arc42 Documentation
   site: docs.arc42.org
   accessed: '2026-11-09'
 diagrams: []
@@ -56,6 +60,10 @@ Several challenges appear together.
 
 
 **Timing matters.** Teams want to decide at the most responsible moment (see Last Responsible Moment). Even very agile teams capture the essential decisions somehow, for example as Architectural Decision Records, or ADRs (see Architectural Decision Record).
+
+**More about the start of a project.**
+
+- **Architect Settles In Method Phase:** A new architect first learns who is involved, which forces and constraints apply, and how decisions will be managed. Early results are refined over time.
 
 ## Example
 

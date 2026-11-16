@@ -10,13 +10,13 @@ arc42:
 - 6
 step: s10-document
 related:
-- sequence-diagram
-- arc42-documentation-template
+- uml-sequence-diagram
+- arc42-architecture-documentation-template
 - c4-model
 - component-view
-- contemporary-essential-views
+- essential-architecture-views
 - traceability
-- bpmn-2-0-notation-overview
+- bpmn-2-0-notation
 - arc42-runtime-view
 checks:
 - Scenarios are selected for architectural relevance, not to cover every flow.
@@ -89,6 +89,8 @@ The C4 model has a similar idea, called a dynamic diagram. It shows how elements
 **Traceability**
 
 Each activity in a scenario should be mapped to an existing building block.
+
+**In arc42.** arc42 describes this view in chapter 6. See the article arc42 Runtime View.
 
 ## Example
 

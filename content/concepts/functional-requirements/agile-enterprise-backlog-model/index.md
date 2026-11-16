@@ -12,7 +12,7 @@ arc42:
 step: s03-functional-requirements
 related:
 - user-story
-- acceptance-criteria
+- acceptance-criterion
 - story-splitting
 - traceability
 - agile-architecture

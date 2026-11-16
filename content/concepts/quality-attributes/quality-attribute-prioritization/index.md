@@ -13,10 +13,10 @@ step: s04-quality-requirements
 related:
 - quality-attribute
 - arc42-introduction-and-goals
-- arc42-quality-chapter
+- arc42-quality-requirements
 - quality-attribute-scenario
-- architectural-trade-off-thinking
-- iso-iec-25010-quality-model
+- quality-attribute-trade-off
+- iso-iec-25010-product-quality-model
 checks:
 - The introduction lists only the top three quality goals, and no more than five.
 - The quality goals appear as a table ordered by priority.

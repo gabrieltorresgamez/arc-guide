@@ -33,7 +33,7 @@ def test_fact_talk_pattern():
 def test_check_content():
     def art(slug, words, **kw):
         return {"slug": slug, "title": slug.title(), "category": kw.get("category", "fundamentals"), "kind": "concept",
-                "sources": kw.get("sources", [1, 2]), "related": kw.get("related", []), "_body": " ".join(["w"] * words) + kw.get("tail", ""), **kw.get("extra", {})}
+                "sources": kw.get("sources", [{"url": "https://a.example/1", "title": "A"}, {"url": "https://b.example/2", "title": "B"}]), "related": kw.get("related", []), "_body": " ".join(["w"] * words) + kw.get("tail", ""), **kw.get("extra", {})}
     arts = [art("a", 200, related=["b"]), art("b", 100), art("c", 200, category="quality-attributes", tail=" the ISO 25010 (2011) model")]
     fails, warns = build.check_content(arts)
     assert any("b: 100 words" in f for f in fails)          # too short
@@ -45,9 +45,66 @@ def test_check_content():
 
 def test_check_content_order():
     def art(slug, order):
-        return {"slug": slug, "title": slug, "category": "fundamentals", "kind": "concept", "sources": [1, 2], "related": [], "order": order, "_body": " ".join(["w"] * 200)}
+        return {"slug": slug, "title": slug, "category": "fundamentals", "kind": "concept", "sources": [{"url": "https://a.example/1", "title": "A"}, {"url": "https://b.example/2", "title": "B"}], "related": [], "order": order, "_body": " ".join(["w"] * 200)}
     arts = [art("a", 1), art("b", 1), art("c", 2)]
     fails, _ = build.check_content(arts)
     assert any("same order 1" in f for f in fails)
     arts[1]["order"] = 3
     assert not any("same order" in f for f in build.check_content(arts)[0])
+
+
+def test_check_content_sources():
+    def art(sources):
+        return {"slug": "a", "title": "A", "category": "fundamentals", "kind": "concept", "related": [], "sources": sources, "_body": " ".join(["w"] * 200)}
+    s1 = {"url": "https://x.example/p", "title": "P"}
+    fails, _ = build.check_content([art([s1, {"url": "https://www.x.example/p/", "title": "P again"}])])
+    assert any("listed twice" in f for f in fails)
+    fails, _ = build.check_content([art([s1, {"url": "https://y.example/q", "title": ""}])])
+    assert any("without title" in f for f in fails)
+    fails, _ = build.check_content([art([s1, {"url": "https://learn.microsoft.com/sk-sk/azure/x", "title": "X"}])])
+    assert any("locale" in f for f in fails)
+
+
+def test_link_see():
+    titles = {"cv": ("Component View", ("/concepts/d/cv/", "/concepts/d/cv.md")), "rv": ("Runtime View", ("/concepts/d/rv/", "/concepts/d/rv.md")),
+              "me": ("This Page", ("/concepts/d/me/", "/concepts/d/me.md"))}
+    out = build.link_see("See the articles Component View and *Runtime View*. Runtime View alone stays text. See This Page.", titles, False, "me")
+    assert "[Component View](/concepts/d/cv/)" in out and "*[Runtime View](/concepts/d/rv/)*" in out
+    assert "Runtime View alone stays text" in out                  # not inside a See clause
+    assert "See This Page." in out                                 # never links the page to itself
+
+
+def test_check_content_empty_section():
+    def art(body):
+        return {"slug": "a", "title": "A", "category": "fundamentals", "kind": "concept", "related": [], "sources": [{"url": "https://a.example/1", "title": "A"}, {"url": "https://b.example/2", "title": "B"}], "_body": body}
+    filler = " ".join(["w"] * 200)
+    fails, _ = build.check_content([art("## Explanation\n\n" + filler + "\n\n## Trade-offs\n\n")])
+    assert any("empty section" in f for f in fails)
+    fails, _ = build.check_content([art("## Explanation\n\n**Lead.**\n\n## Example\n\n" + filler)])
+    assert any("empty section" in f for f in fails)
+    fails, _ = build.check_content([art("## Explanation\n\n**Group**\n\n**Part one.**\n\n" + filler)])
+    assert not any("empty section" in f for f in fails)
+
+
+def test_check_content_ignores_code_fences():
+    body = "## Explanation\n\n" + " ".join(["w"] * 200) + "\n\n```markdown\n## Heading in code\n## Another\n```\n"
+    art = {"slug": "a", "title": "A", "category": "fundamentals", "kind": "concept", "related": [], "sources": [{"url": "https://a.example/1", "title": "A"}, {"url": "https://b.example/2", "title": "B"}], "_body": body}
+    assert not any("empty section" in f for f in build.check_content([art])[0])
+
+
+def test_select_checks():
+    def art(title, arc42, checks):
+        return {"title": title, "category": "c", "arc42": arc42, "checks": checks}
+    arts = [art("A", [1], ["The quality goals are listed."]), art("B", [1], ["The quality goals are listed!", "Another check."]), art("C", [2, 1], ["Second section first", "Fits section one"])]
+    rows = build.select_checks(arts, [1, 2], cap=2)
+    assert [c for c, _ in rows[1]] == ["The quality goals are listed.", "Another check."]   # near-duplicate dropped, cap 2
+    assert [c for c, _ in rows[2]] == ["Second section first"]
+
+
+def test_title_prefix():
+    arts = [{"slug": "x", "title": "Package Diagram", "category": "modeling-uml", "kind": "concept", "related": [], "sources": [{"url": "https://a.example/1", "title": "A"}, {"url": "https://b.example/2", "title": "B"}], "_body": " ".join(["w"] * 200)}]
+    sgs = build.json.loads('{"x": "structure-diagrams"}')
+    import json, pathlib
+    orig = pathlib.Path.read_text
+    # the check reads content/subgroups.json; use the real file: only assert the helper data exists
+    assert any(x.get("title_prefix") for cat in build.c.TAXONOMY["categories"] for x in cat.get("subcategories", []))

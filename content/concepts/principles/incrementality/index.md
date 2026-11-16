@@ -15,7 +15,7 @@ related:
 - design-for-change
 - iterative-and-incremental-development
 - agile-architecture
-- evolutionary-domain-modeling
+- iterative-domain-modeling
 - big-ball-of-mud
 - last-responsible-moment
 - separation-of-concerns

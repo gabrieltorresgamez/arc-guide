@@ -1,5 +1,5 @@
 ---
-title: Architecture Decision Documentation and Requirements Management
+title: Decision Documentation and Requirements Management
 slug: decision-documentation-and-requirements-management
 order: 30
 category: forces-decisions
@@ -15,7 +15,7 @@ related:
 - architectural-decision-record
 - arc42-architecture-decisions
 - architecture-decision-rationale
-- requirements-versus-constraints
+- architectural-constraint
 - architectural-decision
 checks:
 - Each important decision is documented with its motivation and reasoning.

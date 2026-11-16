@@ -71,6 +71,10 @@ Kruchten, Nord and Ozkaya define technical debt as design or implementation cons
 
 **Measuring it.** Tools can measure some debt. The OMG Automated Technical Debt Measure standardizes a measure that source-code analysis tools can compute from quality characteristic measures. Architecture debt is hard to measure with tools.
 
+**Principal.** Cleaning up the cruft is, in the metaphor, paying off the principal. In Fowler's example a confusing module structure makes a feature take six days instead of four, and the two extra days are the interest. A five-day cleanup is no gain for one feature, because it takes nine days instead of six. With two more similar features coming, removing the cruft first makes the team faster.
+
+**The quadrant.** Fowler sorts debt on two axes: reckless or prudent, and deliberate or inadvertent. A team that knowingly takes on debt, after weighing the payoff of an earlier release against the cost of repaying it, has prudent and deliberate debt. A team that is ignorant of good design takes on reckless debt without realizing how deep it gets. A team that knows good practices but goes "quick and dirty" because it thinks it cannot afford the time also takes on reckless debt, which is deliberate. Fowler also argues that prudent and inadvertent debt exists and is inevitable for excellent teams: afterwards they realize what the design should have been.
+
 **Prudent or reckless.** Fowler argues the useful question is not whether something is debt. It is whether the debt is prudent or reckless. Deliberate debt can be prudent when the team knowingly accepts it.
 
 **Repayment.** In Cunningham's view, a little debt speeds development, but only if the team pays it back promptly. SEI describes repayment through refactoring or rewriting. The Refactoring article explains refactoring.

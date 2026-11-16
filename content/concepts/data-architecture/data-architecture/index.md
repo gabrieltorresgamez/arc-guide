@@ -13,11 +13,10 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- data-architecture-artifacts
-- conceptual-vs-logical-vs-physical-data-model
+- data-architecture-artifact
+- conceptual-logical-and-physical-data-model
 - data-architecture-principle
-- define-target-data-architecture-method-phase
-- data-architecture-documentation-in-arc42
+- arc42-data-architecture-documentation
 - business-architecture
 - application-architecture
 - togaf
@@ -43,6 +42,19 @@ sources:
 - url: https://docs.aws.amazon.com/prescriptive-guidance/latest/aws-caf-platform-perspective/data-arch.html
   title: Data architecture - AWS Prescriptive Guidance
   site: docs.aws.amazon.com
+  accessed: '2026-11-09'
+- url: https://www.opengroup.org/architecture/doc-review/protected-d3/htmlclean/chap10.html
+  title: 'The Open Group Architecture Framework (TOGAF) - Phase C: Information Systems Architectures -
+    Data Architecture'
+  site: opengroup.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/tips/8-5/
+  title: 'Tip 8-5: Document business or domain models! | arc42 Documentation'
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-3/
+  title: 3 - Context and scope | arc42 Documentation
+  site: docs.arc42.org
   accessed: '2026-11-09'
 diagrams:
 - file: diagram-1.mmd
@@ -81,6 +93,10 @@ The key point is one overall view of data repositories, their relationships and 
 **Serving its context**
 
 A modern data architecture should support both the near-term and the long-term goals of the business. It should also fit the culture and context of the organization.
+
+**More about defining the target data architecture.**
+
+- **Define Target Data Architecture Method Phase:** This phase defines the major data types and data sources a business needs. It works at the level of data entities, not storage design. Its results feed matrices, gap analysis and arc42 documentation.
 
 ## Example
 

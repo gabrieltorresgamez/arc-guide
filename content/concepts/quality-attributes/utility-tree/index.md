@@ -11,8 +11,8 @@ arc42:
 step: s04-quality-requirements
 related:
 - quality-attribute-scenario
-- arc42-quality-chapter
-- iso-iec-25010-quality-model
+- arc42-quality-requirements
+- iso-iec-25010-product-quality-model
 - architecture-tradeoff-analysis-method-atam
 - quality-attribute-prioritization
 checks:

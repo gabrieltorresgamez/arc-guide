@@ -13,13 +13,12 @@ arc42:
 - 8
 step: s10-document
 related:
-- 4-1-view-model
 - architecture-viewpoint
 - architecture-view
 - zachman-framework
 - iso-iec-ieee-42010-architecture-description-standard
 - c4-model
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - enterprise-architecture-framework
 checks:
 - The documentation states which set of viewpoints (view model) it uses, rather than an ad hoc collection
@@ -52,6 +51,10 @@ sources:
   title: 5 - Building block view | arc42 Documentation
   site: docs.arc42.org
   accessed: '2026-11-09'
+- url: https://c4model.com/faq
+  title: FAQ | C4 model
+  site: c4model.com
+  accessed: '2026-11-09'
 diagrams: []
 review:
   status: generated
@@ -78,6 +81,10 @@ A **viewpoint** is a collection of patterns, templates and conventions for build
 The **Zachman Framework** is a matrix. Its columns are communication interrogatives and its rows are reification transformations. (See *Zachman Framework*.)
 
 Other approaches are related but differ in kind. **C4** is a diagramming approach with hierarchical diagrams: context, containers, components and code. It does not depend on a notation. **arc42** has a building block view that shows the static decomposition. It is mandatory in every architecture documentation. Runtime views and crosscutting concepts complement it.
+
+**More about view models.**
+
+- **4+1 View Model:** The 4+1 View Model describes a software system through several views at once. Each view speaks to different stakeholders. A fifth view, made of scenarios, illustrates how the architecture works.
 
 ## Example
 

@@ -13,9 +13,9 @@ arc42:
 step: s10-document
 related:
 - togaf
-- enterprise-architecture-management
-- data-architecture-artifacts
-- conceptual-vs-logical-vs-physical-data-model
+- enterprise-architecture
+- data-architecture-artifact
+- conceptual-logical-and-physical-data-model
 - traceability
 - data-architecture
 - business-capability
@@ -44,8 +44,6 @@ review:
 ---
 
 ## Explanation
-
-
 
 **The TOGAF core**
 

@@ -18,7 +18,7 @@ related:
 - bounded-context-canvas
 - microservices-architecture
 - domain-model
-- ddd-modeling-elements
+- ddd-building-blocks-tactical-patterns
 checks:
 - The document lists its bounded contexts and states which subdomain model each one holds.
 - A context map shows the relationships and integration points between contexts, including external systems.
@@ -38,7 +38,7 @@ sources:
   title: Microservices
   site: martinfowler.com
   accessed: '2026-11-09'
-- url: https://learn.microsoft.com/sk-sk/dotnet/architecture/microservices/architect-microservice-container-applications/data-sovereignty-per-microservice
+- url: https://learn.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/data-sovereignty-per-microservice
   title: Data sovereignty per microservice - .NET | Microsoft Learn
   site: learn.microsoft.com
   accessed: '2026-11-09'

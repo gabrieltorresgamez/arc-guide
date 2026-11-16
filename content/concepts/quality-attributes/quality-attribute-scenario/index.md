@@ -11,7 +11,7 @@ arc42:
 - 1
 step: s04-quality-requirements
 related:
-- arc42-quality-chapter
+- arc42-quality-requirements
 - architecture-tradeoff-analysis-method-atam
 - reliability
 - interaction-capability
@@ -50,23 +50,31 @@ review:
 
 Requirements such as "the system must be fast" or "easy to use" are hard to check. A quality scenario fixes this. It describes a concrete situation and the response the system should show. It also states how to measure that response. The requirement becomes specific, and you can decide whether the system fulfills it.
 
-**The long form.** The Software Engineering Institute (SEI) uses six elements, and the book by Bass et al. follows them. arc42 calls this the long form. arc42 also offers a short form, called Q42, for lighter use.
+**The long form.** The Software Engineering Institute (SEI) template has six elements, and the book by Bass et al. follows them. arc42 calls this the long form. arc42 also offers a short form, called Q42, for lighter use.
 
-Across the sources, the parts fall into these ideas:
+- **Source of stimulus:** the entity, such as a person, a system or another actor, that generates the stimulus.
+- **Stimulus:** any condition or event that arrives at the system.
+- **Artifact:** the part of the system that is affected by the stimulus.
+- **Environment:** the conditions or context under which the stimulus occurs.
+- **Response:** how the system should react to the stimulus.
+- **Response measure:** the measurable criteria that show whether the response is good enough.
 
-- **Stimulus:** the event that hits the system.
-- **Stimulated system:** the part of the system that receives the event (the artifact).
-- **Environment:** the conditions under which the event happens.
-- **Response:** what the system does.
-- **Response measure:** the criteria or metric used to judge that response.
-
-
-
-**Using scenarios.** Teams write them to make quality requirements concrete. They can also use them to analyze or evaluate an architecture systematically. (2021) use the term Quality Attribute Utility Tree for the tree that structures quality requirements.
+**Using scenarios.** Teams write them to make quality requirements concrete. They can also use them to analyze or evaluate an architecture systematically.
 
 ## Example
 
-A team starts with the requirement "New users learn the tool quickly." They rewrite it as a scenario. A user who does not know the system (source) starts to use it (stimulus). The response is that the user can operate it. The response measure is that this works after 10 minutes of instruction. Now a test can show whether the requirement is met.
+A team starts with the requirement "Customers can order quickly." They rewrite it as a scenario with all six elements:
+
+| Element | Content |
+|---|---|
+| Source of stimulus | A customer in the web shop |
+| Stimulus | Submits an order |
+| Artifact | The order service |
+| Environment | Normal operation, during the evening peak |
+| Response | The order is stored and the customer sees a confirmation |
+| Response measure | 95% of orders are confirmed within 3 seconds |
+
+Now a test can show whether the requirement is met.
 
 ## Trade-offs
 

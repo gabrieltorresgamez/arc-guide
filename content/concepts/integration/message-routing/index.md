@@ -13,7 +13,7 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- messaging-pattern-language
+- enterprise-integration-patterns
 checks:
 - Where a message must reach a different system depending on its content, a Content-Based Router is used
   instead of the sender choosing the target.

@@ -13,7 +13,7 @@ arc42:
 - 11
 step: s08-integration-data
 related:
-- messaging-pattern-language
+- enterprise-integration-patterns
 - broker-pattern
 - messaging
 - coupling-and-cohesion

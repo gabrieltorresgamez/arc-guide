@@ -10,8 +10,8 @@ arc42:
 - 1
 step: s01-goals-stakeholders
 related:
-- arc42-documentation-template
-- arc42-quality-chapter
+- arc42-architecture-documentation-template
+- arc42-quality-requirements
 - arc42-constraints
 - arc42-context-and-scope
 - stakeholder
@@ -54,7 +54,7 @@ A keyword such as "performance" or "security" says little. Add a brief scenario 
 
 **Details live elsewhere**
 
-Section 1 holds only the top goals. Complete and detailed quality requirements belong in section 10. See the article arc42 Quality Requirements Chapter for that part.
+Section 1 holds only the top goals. Complete and detailed quality requirements belong in section 10. See the article arc42 Quality Requirements for that part.
 
 ## Example
 

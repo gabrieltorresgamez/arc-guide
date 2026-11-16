@@ -17,7 +17,6 @@ related:
 - architectural-perspective
 - stakeholder
 - concern
-- 4-1-view-model
 - architecture-view-model
 - iso-iec-ieee-42010-architecture-description-standard
 - model-vs-view

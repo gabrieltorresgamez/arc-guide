@@ -14,11 +14,11 @@ arc42:
 step: s04-quality-requirements
 related:
 - flexibility
-- performance-efficiency-tactics
-- iso-iec-25010-quality-model
+- performance-efficiency-tactic
+- iso-iec-25010-product-quality-model
 - quality-attribute
-- architectural-trade-off-thinking
-- arc42-quality-chapter
+- quality-attribute-trade-off
+- arc42-quality-requirements
 checks:
 - Performance targets for key flows are stated as acceptable user-experience effects and agreed with business
   stakeholders.

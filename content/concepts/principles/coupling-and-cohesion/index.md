@@ -11,8 +11,8 @@ arc42:
 - 8
 step: s07-solution-strategy
 related:
-- maintainability-tactics
-- ddd-modeling-elements
+- maintainability-tactic
+- ddd-building-blocks-tactical-patterns
 - information-hiding
 - component-design-principles
 checks:

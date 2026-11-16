@@ -16,12 +16,12 @@ review:
 
 You get a written evaluation of your architecture. It checks the design against your quality scenarios. A quality scenario is a short, concrete description of how the system should respond to a specific event.
 
-The evaluation records four kinds of findings. See [Analysis of Architectural Approaches](concept:architecture-tradeoff-analysis-method-atam).
+The evaluation records four kinds of findings. See Analysis of Architectural Approaches ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
 
-- **Risk:** a decision that may harm the response to a scenario. See [ATAM Risk](concept:architecture-tradeoff-analysis-method-atam).
+- **Risk:** a decision that may harm the response to a scenario. See ATAM Risk ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
 - **Non-risk:** a decision the team analyzed and found sound for a quality goal. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
-- **Sensitivity point:** a property that one quality depends on strongly. See [Sensitivity Point](concept:architecture-tradeoff-analysis-method-atam).
-- **Trade-off point:** a property that affects several qualities at once, so improving one costs another. See [Trade-off Point](concept:architecture-tradeoff-analysis-method-atam).
+- **Sensitivity point:** a property that one quality depends on strongly. See Sensitivity Point ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
+- **Trade-off point:** a property that affects several qualities at once, so improving one costs another. See Trade-off Point ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
 
 You also get risk themes. A theme groups related risks and names the business driver they threaten. A business driver is a business goal behind the system. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
 
@@ -51,12 +51,12 @@ The findings go into arc42 section 11. See [Placing ATAM Evaluation in arc42](co
 3. **Prepare the documentation.** Close the gaps from your questions. Give the architect a presentation template well ahead of time. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
 4. **Explain the method.** The evaluation leader describes it to all participants at the start. Plan for about three to four days in total. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
 5. **Present the business drivers.** The project manager or the customer presents them. The architect then presents the architecture and shows how it addresses those drivers. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
-6. **List the architectural approaches.** Only list them here. Add no findings yet. See [Architectural Approach Identification](concept:architecture-tradeoff-analysis-method-atam).
+6. **List the architectural approaches.** Only list them here. Add no findings yet. See Architectural Approach Identification ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
 7. **Build the utility tree.** It breaks the quality goals down until it reaches scenarios. Each scenario has a stimulus, a response and a priority. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
-8. **Analyze the approaches against the top scenarios.** For each scenario, ask how the decisions handle it. Record each finding with the decision and the scenario it concerns. See [Analysis of Architectural Approaches](concept:architecture-tradeoff-analysis-method-atam). A tactics questionnaire can add questions, but use it together with scenarios. See [Scenario-Based Questions from Tactics](concept:scenario-based-questions-from-tactics).
-9. **Repeat with the wider stakeholder group.** Brainstorm more scenarios and vote on them. Use the top-ranked ones as test cases for your earlier analysis. See [Analysis of Architectural Approaches](concept:architecture-tradeoff-analysis-method-atam).
+8. **Analyze the approaches against the top scenarios.** For each scenario, ask how the decisions handle it. Record each finding with the decision and the scenario it concerns. See Analysis of Architectural Approaches ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)). A tactics questionnaire can add questions, but use it together with scenarios. See [Scenario-Based Questions from Tactics](concept:scenario-based-questions-from-tactics).
+9. **Repeat with the wider stakeholder group.** Brainstorm more scenarios and vote on them. Use the top-ranked ones as test cases for your earlier analysis. See Analysis of Architectural Approaches ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
 10. **Group and rank the risks.** Order risks by priority and suggest a mitigation for each. Group them into themes. Name the business driver each theme threatens. Keep the non-risks in the report. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
-11. **Write up the results.** Deliver an out-brief, a written report, or both. Put the findings into section 11. Record each trade-off decision with its reasons in section 9. Track accepted trade-off consequences in the prioritized risk list. State where technical debt is recorded if section 11 no longer holds it. See [Placing ATAM Evaluation in arc42](concept:placing-atam-evaluation-in-arc42) and [Trade-off Point](concept:architecture-tradeoff-analysis-method-atam).
+11. **Write up the results.** Deliver an out-brief, a written report, or both. Put the findings into section 11. Record each trade-off decision with its reasons in section 9. Track accepted trade-off consequences in the prioritized risk list. State where technical debt is recorded if section 11 no longer holds it. See [Placing ATAM Evaluation in arc42](concept:placing-atam-evaluation-in-arc42) and Trade-off Point ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
 
 ## Example: ClinicBook
 
@@ -93,9 +93,9 @@ The team puts these findings into section 11, ordered by priority. It then notes
 
 - You evaluated the architecture early, before major implementation spending, and recorded which form of review you used. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam) and [Lightweight ATAM](concept:lightweight-atam).
 - The scenarios behind the evaluation are specific and ranked by the stakeholder group. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
-- Each risk names a decision and a scenario, and has a suggested mitigation. See [ATAM Risk](concept:architecture-tradeoff-analysis-method-atam).
+- Each risk names a decision and a scenario, and has a suggested mitigation. See ATAM Risk ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
 - Each non-risk names a scenario, a decision and a justification. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
-- Sensitivity points and trade-off points are listed and name the qualities they affect. See [Sensitivity Point](concept:architecture-tradeoff-analysis-method-atam) and [Trade-off Point](concept:architecture-tradeoff-analysis-method-atam).
+- Sensitivity points and trade-off points are listed and name the qualities they affect. See Sensitivity Point ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)) and Trade-off Point.
 - Risks are grouped into themes, and each theme names a business driver. See [Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam).
 - The results sit in section 11, and you stated where technical debt is recorded. See [Placing ATAM Evaluation in arc42](concept:placing-atam-evaluation-in-arc42).
 

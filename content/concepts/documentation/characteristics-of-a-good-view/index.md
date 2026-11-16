@@ -16,7 +16,6 @@ related:
 - architecture-viewpoint
 - stakeholder
 - stakeholder-concern
-- purpose-of-views
 - view-creation-method
 - c4-model
 - component-view

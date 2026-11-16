@@ -13,7 +13,7 @@ arc42:
 - 9
 step: s10-document
 related:
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - arc42-crosscutting-concepts
 - documentation-as-code
 - motivation-for-architecture-documentation
@@ -78,7 +78,7 @@ Documentation exists to serve its readers. These rules of thumb help you decide 
 
 **Keep it short.** arc42 says less is often more. Shorter documentation is read and digested faster, and it needs fewer changes later. Prioritize important, special or risky topics over completeness. Shortness has a limit, though: the text should not become cryptic. Decide deliberately how much to document.
 
-**Say each thing once.** Describe an interface in full once, at the level where it is handled. Everywhere else, add a reference to that description. Crosscutting concepts work the same way. A crosscutting concept is a decision that several building blocks share (see "Crosscutting Concept"). Documenting it once saves effort and avoids repeating the decision in every block.
+**Say each thing once.** Describe an interface in full once, at the level where it is handled. Everywhere else, add a reference to that description. Crosscutting concepts work the same way. A crosscutting concept is a decision that several building blocks share (see "arc42 Crosscutting Concepts"). Documenting it once saves effort and avoids repeating the decision in every block.
 
 **Prefer decisions over obvious detail.** Document a few important, architecturally relevant decisions with their motivation and reasoning. Stakeholders should be able to retrace them. arc42 also prefers crosscutting concepts to many detailed building-block diagrams, because developers can learn those details from the code.
 

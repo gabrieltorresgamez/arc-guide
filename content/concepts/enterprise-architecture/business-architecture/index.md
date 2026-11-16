@@ -15,7 +15,7 @@ step: s06-domain
 related:
 - business-capability
 - business-capability-map
-- enterprise-architecture-management
+- enterprise-architecture
 - togaf
 - data-architecture
 - application-architecture
@@ -87,10 +87,6 @@ sources:
   title: Development Value Streams - Scaled Agile Framework
   site: framework.scaledagile.com
   accessed: '2026-11-09'
-- url: https://www.bpminstitute.org/resources/articles/capabilities-value-streams-business-architectures-essential-alliance/
-  title: 'Capabilities & Value Streams: Business Architecture’s Essential Alliance | BPMInstitute.org'
-  site: bpminstitute.org
-  accessed: '2026-11-09'
 - url: https://en.wikipedia.org/wiki/Value_stream
   title: Value stream - Wikipedia
   site: en.wikipedia.org
@@ -120,7 +116,7 @@ sources:
   title: Basics of Enterprise Architecture - EA Principals
   site: eaprincipals.com
   accessed: '2026-11-09'
-- url: https://learn.microsoft.com/es-es/archive/blogs/jmeier/the-operating-model-as-company-vision
+- url: https://learn.microsoft.com/en-us/archive/blogs/jmeier/the-operating-model-as-company-vision
   title: The Operating Model as Company Vision | Microsoft Learn
   site: learn.microsoft.com
   accessed: '2026-11-09'

@@ -14,7 +14,7 @@ arc42:
 step: s07-solution-strategy
 related:
 - architectural-pattern-vs-design-pattern
-- architectural-style
+- architecture-style
 - architectural-tactic
 - tactics-vs-architectural-styles-and-patterns
 - pipes-and-filters

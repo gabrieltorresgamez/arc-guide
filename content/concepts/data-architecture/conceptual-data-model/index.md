@@ -13,10 +13,10 @@ arc42:
 step: s06-domain
 related:
 - logical-data-model
-- conceptual-vs-logical-vs-physical-data-model
+- conceptual-logical-and-physical-data-model
 - physical-data-model
 - data-architecture
-- ddd-modeling-elements
+- ddd-building-blocks-tactical-patterns
 - domain-model
 checks:
 - The conceptual data model contains entities, attributes, relationships and business rules.

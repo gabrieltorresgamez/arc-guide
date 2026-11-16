@@ -13,7 +13,7 @@ step: s11-evaluate
 related:
 - architecture-tradeoff-analysis-method-atam
 - technical-debt
-- arc42-quality-chapter
+- arc42-quality-requirements
 checks:
 - Section 11 is titled as an ATAM evaluation, and its subsections separate risks, sensitivity points and
   trade-off points.

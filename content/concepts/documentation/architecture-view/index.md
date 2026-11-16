@@ -14,12 +14,9 @@ related:
 - stakeholder-concern
 - concern
 - stakeholder
-- contemporary-essential-views
+- essential-architecture-views
 - architecture-view-model
-- 4-1-view-model
 - iso-iec-ieee-42010-architecture-description-standard
-- architectural-view-types
-- architecture-description-element
 checks:
 - The documentation includes a building block view of the system's static structure.
 - Each view states which stakeholder concerns it addresses.
@@ -31,6 +28,15 @@ sources:
   accessed: '2026-11-09'
 - url: https://docs.arc42.org/section-5/
   title: 5 - Building block view | arc42 Documentation
+  site: docs.arc42.org
+  accessed: '2026-11-09'
+- url: https://www.informit.com/articles/article.aspx?p=1766161&seqNum=4
+  title: 'The Benefits of Using Viewpoints and Views | Software Systems Architecture: Viewpoints and Views
+    | InformIT'
+  site: informit.com
+  accessed: '2026-11-09'
+- url: https://docs.arc42.org/section-7/
+  title: 7 - Deployment view | arc42 Documentation
   site: docs.arc42.org
   accessed: '2026-11-09'
 diagrams:
@@ -58,7 +64,12 @@ Rozanski and Woods offer a catalog of viewpoints for information systems. It inc
 
 The arc42 template includes a view as well. Its building block view shows the static structure of the system. arc42 compares it to the floor plan of a house. arc42 also requires it in every architecture documentation.
 
-See the articles "Architecture Viewpoint", "Stakeholder Concern" and "Essential Architecture Views (Context, Component, Runtime, Distribution)" for more detail.
+See the articles "Architecture Viewpoint", "Stakeholder Concern" and "Essential Architecture Views" for more detail.
+
+**More about views.**
+
+- **Architectural View:** An architectural view describes a system from the angle of one stakeholder group. Splitting the description into views keeps each part understandable and lets each reader find what matters to them.
+- **Architectural View Type:** An architectural view type is a category of diagram that shows one kind of structure of a system. Different view types show different structures of the same system, so each diagram should name its type.
 
 ## Example
 

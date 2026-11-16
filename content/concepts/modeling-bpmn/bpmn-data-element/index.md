@@ -14,9 +14,9 @@ related:
 - bpmn-core-elements
 - bpmn-activity
 - bpmn-connecting-object
-- purpose-of-process-analysis-and-modeling
+- process-analysis-and-modeling
 - bpmn-collaboration-diagram
-- bpmn-2-0-notation-overview
+- bpmn-2-0-notation
 checks:
 - Data stores are used for information that must outlast a single process instance, such as a database
   or file system.

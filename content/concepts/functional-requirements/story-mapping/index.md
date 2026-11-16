@@ -14,9 +14,9 @@ related:
 - user-story
 - story-splitting
 - use-case
-- user-story-vs-use-case
+- user-stories-vs-use-cases
 - domain-storytelling
-- method-phase-working-with-functional-requirements
+- requirement-types-and-documents-wiegers-beatty
 checks:
 - The map's cards are short verb phrases, each describing one user step.
 - Steps are ordered left to right, and vertical placement shows priority.

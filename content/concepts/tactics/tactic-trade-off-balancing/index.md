@@ -14,7 +14,7 @@ arc42:
 step: s07-solution-strategy
 related:
 - architectural-tactic
-- architectural-trade-off-thinking
+- quality-attribute-trade-off
 - architecture-tradeoff-analysis-method-atam
 - quality-attribute-prioritization
 - arc42-solution-strategy

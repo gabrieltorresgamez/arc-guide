@@ -13,7 +13,7 @@ arc42:
 step: s10-document
 related:
 - bpmn-activity
-- bpmn-gateway-semantics
+- bpmn-gateway
 - bpmn-event
 - bpmn-connecting-object
 - bpmn-data-element

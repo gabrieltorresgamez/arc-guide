@@ -11,7 +11,7 @@ arc42:
 - 12
 step: null
 related:
-- enterprise-architecture-management
+- enterprise-architecture
 - togaf
 - architecture-view
 - architecture-viewpoint

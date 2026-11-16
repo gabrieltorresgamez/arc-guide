@@ -10,7 +10,7 @@ arc42:
 - 5
 step: s10-document
 related:
-- bpmn-2-0-notation-overview
+- bpmn-2-0-notation
 - bpmn-activity
 - bpmn-core-elements
 checks:

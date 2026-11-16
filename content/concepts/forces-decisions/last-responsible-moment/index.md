@@ -11,9 +11,9 @@ arc42:
 - 4
 step: s09-decisions
 related:
-- architectural-decision-management-practices
+- architectural-decision-management
 - architectural-decision
-- architectural-decision-making-in-project-development
+- architectural-decision-making-process
 - architectural-decision-making-fallacies
 - agile-architecture
 - levels-of-architectural-decisions

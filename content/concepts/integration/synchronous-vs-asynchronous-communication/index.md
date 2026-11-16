@@ -14,7 +14,7 @@ arc42:
 step: s08-integration-data
 related:
 - synchronous-vs-asynchronous-connector
-- messaging-pattern-language
+- enterprise-integration-patterns
 - messaging
 - remote-procedure-call
 - coupling-and-cohesion
@@ -52,14 +52,6 @@ review:
 
 A **synchronous** call means the caller sends a request and waits for the reply. An **asynchronous** call means the caller sends the request and carries on. Any reply comes later.
 
-**Synchronous calls and failure**
-
-
-
-
-
-
-
 **Asynchronous communication**
 
 A common asynchronous style is messaging over a lightweight message bus. It is an alternative to request/response protocols.
@@ -71,7 +63,5 @@ Asynchronous communication can still produce an answer. Request-Reply sends a pa
 An online shop checks stock, takes payment and books shipping. In a synchronous design, the order service calls each one and waits. If the shipping service is down, the order fails or hangs. In an asynchronous design, the order service posts a message and moves on. The reply carries a correlation identifier copied from the request, so the order service knows which request it answers.
 
 ## Trade-offs
-
-
 
 In return, the design needs extra machinery. Replies must be matched to requests, for example with a Correlation Identifier and separate reply channels.

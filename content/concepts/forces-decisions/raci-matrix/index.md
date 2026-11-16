@@ -11,11 +11,11 @@ arc42:
 - 1
 step: s09-decisions
 related:
-- architectural-decision-management-practices
+- architectural-decision-management
 - stakeholder
 - architectural-decision-record
 - security
-- architectural-decision-making-in-project-development
+- architectural-decision-making-process
 - architectural-decision
 checks:
 - Each architectural decision names its decision makers, consulted stakeholders and affected people.

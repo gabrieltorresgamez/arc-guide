@@ -15,10 +15,9 @@ related:
 - arc42-architecture-decisions
 - architecturally-significant-decision
 - architecture-as-set-of-design-decisions
-- architectural-forces
-- architectural-decision-management-practices
+- architectural-force
+- architectural-decision-management
 - levels-of-architectural-decisions
-- requirements-decision-modeling-for-cyber-physical-systems-of-systems
 checks:
 - Each decision states the alternatives considered and the criteria used to choose among them.
 - Each decision records its rationale, answering why this option was chosen.
@@ -33,6 +32,19 @@ sources:
 - url: https://ozimmer.ch/practices/2020/04/27/ArchitectureDecisionMaking.html
   title: Architectural Decisions — The Making Of
   site: ozimmer.ch
+  accessed: '2026-11-09'
+- url: https://tassarect.github.io
+  title: TaSSAreCt – Towards Sustainable Software Architectures for CPSoS
+  site: tassarect.github.io
+  accessed: '2026-11-09'
+- url: https://www.zhaw.ch/en/research/project/76245
+  title: Towards Sustainable Software Architectures for Cyber-physical Systems of Systems (TaSSAreCt)
+    | ZHAW Zurich University of Applied Sciences
+  site: zhaw.ch
+  accessed: '2026-11-09'
+- url: https://alexandria.unisg.ch/entities/funding/4c47be0e-9009-407c-a004-6c9062022a38
+  title: Towards Sustainable Software Architectures for Cyber-physical Systems of Systems
+  site: alexandria.unisg.ch
   accessed: '2026-11-09'
 diagrams: []
 review:
@@ -53,6 +65,10 @@ An architectural decision means selecting one alternative from several, based on
 **Make it retraceable.** Stakeholders should be able to understand and retrace the decisions.
 
 For the record format, see the articles Architectural Decision Record and Architecture Decision Rationale.
+
+**More about decision modeling.**
+
+- **Requirements-Decision Modeling for Cyber-Physical Systems of Systems:** ReDeMo is a formal model that links non-functional requirements (qualities such as sustainability) to architectural decisions for cyber-physical systems. It comes from the TaSSAreCt research project and is built into a SysML v2-based toolchain for architects.
 
 ## Example
 

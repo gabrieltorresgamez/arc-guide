@@ -13,7 +13,7 @@ related:
 - stakeholder-concern
 - concern
 - arc42-introduction-and-goals
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - stakeholder-perspective-and-concern
 - iso-iec-ieee-42010-architecture-description-standard
 checks:

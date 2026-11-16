@@ -11,12 +11,12 @@ arc42:
 - 12
 step: s10-document
 related:
-- bpmn-2-0-notation-overview
+- bpmn-2-0-notation
 - bpmn-core-elements
 - bpmn-swimlane-pool-and-lane
 - bpmn-connecting-object
 - bpmn-collaboration-diagram
-- bpmn-modeling-tips
+- bpmn-modeling-guidelines
 - bpmn-event
 checks:
 - Text annotations are linked to the element they comment on by a dotted association.

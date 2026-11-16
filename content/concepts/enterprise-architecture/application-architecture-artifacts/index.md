@@ -16,7 +16,7 @@ related:
 - application-architecture
 - togaf
 - business-capability
-- distribution-view
+- deployment-view
 checks:
 - The documentation includes a list of all enterprise applications that is agreed and used to define a
   standard application set.

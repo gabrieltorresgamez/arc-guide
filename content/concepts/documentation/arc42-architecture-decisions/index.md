@@ -14,7 +14,7 @@ step: s09-decisions
 related:
 - arc42-solution-strategy
 - architectural-decision-record
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - architectural-decision
 - architecture-decision-rationale
 - architecturally-significant-decision
@@ -53,7 +53,7 @@ Section 9 covers decisions that are important, expensive, large in scale or risk
 
 **Relation to section 4**
 
-Section 4, Solution Strategy (see the article "Solution Strategy"), already summarizes the fundamental decisions that shape the architecture. Section 9 does not repeat them. It refers back to section 4 instead.
+Section 4, Solution Strategy (see the article "arc42 Solution Strategy"), already summarizes the fundamental decisions that shape the architecture. Section 9 does not repeat them. It refers back to section 4 instead.
 
 Strategy decisions are cornerstones. Many more detailed decisions or implementation rules build on them. Section 4 keeps the explanation of these key decisions short, while still motivating what was decided and why.
 

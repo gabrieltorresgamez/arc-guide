@@ -18,7 +18,7 @@ related:
 - use-case
 - separation-of-concerns
 - model-view-controller-pattern
-- architectural-style
+- architecture-style
 checks:
 - The document states that source code dependencies point only inward.
 - Boundaries between layers are crossed with simple data structures such as DTOs.

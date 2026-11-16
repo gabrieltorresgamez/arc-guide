@@ -11,7 +11,7 @@ arc42:
 - 8
 step: s08-integration-data
 related:
-- messaging-pattern-language
+- enterprise-integration-patterns
 - data-architecture
 - compatibility
 - data-architecture-principle

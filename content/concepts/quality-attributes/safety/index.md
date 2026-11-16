@@ -13,8 +13,8 @@ arc42:
 - 11
 step: s04-quality-requirements
 related:
-- safety-tactics
-- iso-iec-25010-quality-model
+- safety-tactic
+- iso-iec-25010-product-quality-model
 - reliability
 - quality-attribute-scenario
 checks:

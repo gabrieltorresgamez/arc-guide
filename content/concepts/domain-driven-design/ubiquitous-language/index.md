@@ -17,7 +17,7 @@ related:
 - domain-driven-design
 - arc42-glossary
 - context-map
-- evolutionary-domain-modeling
+- iterative-domain-modeling
 - domain-storytelling
 - bounded-context-canvas
 checks:

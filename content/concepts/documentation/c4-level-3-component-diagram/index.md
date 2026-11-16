@@ -1,5 +1,5 @@
 ---
-title: C4 Component Diagram
+title: "C4 Level 3: Component Diagram"
 slug: c4-level-3-component-diagram
 order: 40
 category: documentation
@@ -11,7 +11,7 @@ arc42:
 step: s10-document
 related:
 - c4-model
-- c4-container-diagram
+- c4-level-2-container-diagram
 - c4-level-4-code-diagram
 - c4-level-1-system-context-diagram
 - uml-component-diagram

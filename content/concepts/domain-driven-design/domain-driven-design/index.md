@@ -17,9 +17,9 @@ related:
 - bounded-context
 - ubiquitous-language
 - context-map
-- ddd-modeling-elements
+- ddd-building-blocks-tactical-patterns
 - domain-model
-- evolutionary-domain-modeling
+- iterative-domain-modeling
 - business-domain-understanding
 checks:
 - The document names the domain experts' terms and uses them consistently.

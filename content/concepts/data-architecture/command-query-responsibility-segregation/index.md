@@ -14,9 +14,9 @@ arc42:
 - 11
 step: s08-integration-data
 related:
-- event-sourcing-with-distributed-event-log
+- distributed-event-log
 - bounded-context
-- ddd-modeling-elements
+- ddd-building-blocks-tactical-patterns
 - shared-database
 - flexibility
 - domain-driven-design

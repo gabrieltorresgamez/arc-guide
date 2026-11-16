@@ -15,8 +15,8 @@ step: s06-domain
 related:
 - domain-driven-design
 - ubiquitous-language
-- ddd-modeling-elements
-- evolutionary-domain-modeling
+- ddd-building-blocks-tactical-patterns
+- iterative-domain-modeling
 - bounded-context
 checks:
 - The document states which aspects of the domain the model covers.

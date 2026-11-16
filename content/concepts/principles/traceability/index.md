@@ -11,7 +11,7 @@ arc42:
 - 9
 step: s10-document
 related:
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - arc42-architecture-decisions
 - decision-documentation-and-requirements-management
 - architectural-decision

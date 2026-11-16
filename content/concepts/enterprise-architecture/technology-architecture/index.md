@@ -14,11 +14,11 @@ arc42:
 - 11
 step: s05-constraints
 related:
-- enterprise-architecture-management
-- distribution-view
+- enterprise-architecture
+- deployment-view
 - arc42-constraints
 - application-architecture
-- deployment-diagram
+- uml-deployment-diagram
 - safety
 checks:
 - The deployment view shows the infrastructure elements relevant to the software.

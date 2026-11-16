@@ -15,13 +15,13 @@ arc42:
 - 11
 step: s08-integration-data
 related:
-- integration-pattern
+- integration-style
 - file-transfer
 - remote-procedure-call
 - messaging
 - microservices-architecture
 - coupling-and-cohesion
-- messaging-pattern-language
+- enterprise-integration-patterns
 checks:
 - The document names which applications share the database and states that all of them are coupled to
   its schema.
@@ -69,8 +69,6 @@ It is one of four integration styles: file transfer, shared database, remote inv
 ## Example
 
 A company has an order application, a billing application and a reporting tool. All three keep customer data in one common database. When a clerk updates an address in the order application, billing and reporting read the same data. If the team wants to restructure the customer data, it must involve all three applications.
-
-## Trade-offs
 
 **Benefits**
 - Applications on different languages and platforms can share information rapidly and consistently.

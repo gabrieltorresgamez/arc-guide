@@ -17,7 +17,7 @@ review:
 
 You get a short list of use cases or user stories that matter most for the architecture. A [use case](concept:use-case) describes how a system responds to requests from outside actors. A [user story](concept:user-story) is a short requirement written from a stakeholder's point of view. It is a reminder to talk, not a full specification.
 
-You do not need a complete requirements document. [Working with Functional Requirements (method phase)](concept:method-phase-working-with-functional-requirements) suggests a brief description of the functional requirements that points to existing documents. It also suggests detailed requirements only for the subset that architectural decisions need. This result feeds arc42 section 1.
+You do not need a complete requirements document. Working with Functional Requirements (method phase) ([Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty)) suggests a brief description of the functional requirements that points to existing documents. It also suggests detailed requirements only for the subset that architectural decisions need. This result feeds arc42 section 1.
 
 ## What you need first
 
@@ -27,27 +27,27 @@ You do not need a complete requirements document. [Working with Functional Requi
 
 ## If something is missing
 
-- **No requirements document exists.** Gather requirements with more than one technique, such as interviews, observation, questionnaires or workshops. See [Requirements Trawling](concept:requirements-elicitation). Expect gaps. Some requirements only appear while you build.
+- **No requirements document exists.** Gather requirements with more than one technique, such as interviews, observation, questionnaires or workshops. See [Requirements Trawling](concept:requirements-trawling). Expect gaps. Some requirements only appear while you build.
 - **Nobody is available to answer questions.** Decide who your customer representatives are. Also decide how often you get feedback, for example in reviews. See [Requirements Difficulty and Customer Engagement](concept:requirements-difficulty-and-customer-engagement).
-- **The current process is wasteful.** Automation speeds up whatever process it gets. Look at the target-state process before you write requirements. See [Process Automation Magnifies Efficiency](concept:process-automation-magnifies-efficiency).
+- **The current process is wasteful.** Automation speeds up whatever process it gets. Look at the target-state process before you write requirements. See Process Automation Magnifies Efficiency ([Continuous Architecture Principles](concept:continuous-architecture-principles)).
 - **You only have vague wishes.** Turn them into short stories first, then split them as described below.
 
 ## How to do it
 
 1. **Collect what exists.** List the existing requirements sources. Write a brief description of the functions the system must offer. Say which tasks and user objectives they cover. See [Functional suitability](concept:functional-suitability).
-2. **Keep functions apart from quality requirements.** Put speed, security and similar needs in their own list. Constraints go there too. See [Working with Functional Requirements (method phase)](concept:method-phase-working-with-functional-requirements).
+2. **Keep functions apart from quality requirements.** Put speed, security and similar needs in their own list. Constraints go there too. See Working with Functional Requirements (method phase) ([Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty)).
 3. **Write each function as a story or a use case.**
-   - A story names a specific user role, a goal and a reason. See [User Story Role Formulation](concept:user-story).
-   - A use case is named after the main actor's goal, with an active verb. Mark its goal level. The user-goal level is the most useful one. See [Use Case Goal Level](concept:use-case).
-   - A story and a use case for the same goal must not contradict each other. See [Consistency of User Story and Use Case](concept:user-story-vs-use-case).
-4. **Show the scope in a picture, if it helps.** A [use case diagram](concept:use-case-diagram) draws a system boundary. Actors stay outside it. An actor can be a person, an organization or an external system. Avoid the mistakes in [Common Use Case Diagram Errors](concept:use-case-diagram).
+   - A story names a specific user role, a goal and a reason. See User Story Role Formulation ([User Story](concept:user-story)).
+   - A use case is named after the main actor's goal, with an active verb. Mark its goal level. The user-goal level is the most useful one. See Use Case Goal Level ([Use Case](concept:use-case)).
+   - A story and a use case for the same goal must not contradict each other. See Consistency of User Story and Use Case ([User Stories vs. Use Cases](concept:user-stories-vs-use-cases)).
+4. **Show the scope in a picture, if it helps.** A [use case diagram](concept:uml-use-case-diagram) draws a system boundary. Actors stay outside it. An actor can be a person, an organization or an external system. Avoid the mistakes in Common Use Case Diagram Errors ([UML Use Case Diagram](concept:uml-use-case-diagram)).
 5. **Split items that are too big or too vague.**
-   - A story too large for one iteration is an [epic](concept:user-story). Split it before you build it.
+   - A story too large for one iteration is an epic ([User Story](concept:user-story)). Split it before you build it.
    - Look hard at any story with the word "manage". Split it by operation. See [Story Splitting](concept:story-splitting).
    - Make the first story a simple end-to-end case. A [story map](concept:story-mapping) calls this a walking skeleton.
-6. **Pick the ones that matter for the architecture.** Choose the items that need detailed requirements for architectural decisions. Start with items that touch your main quality needs or outside systems. Quality requirements steer how responsibilities are allocated, so these items shape the design most. See [Responsibility Allocation](concept:responsibility-allocation). Write the chosen items in more detail, for example with the [use case template](concept:use-case).
-7. **Add a check for each chosen item.** Give each story acceptance criteria or examples. Write them in the user's language, so a tester knows how to check them. Keep the user's goal visible next to them. See [Acceptance Criterion](concept:acceptance-criteria) and [Frequent Mistakes in Defining Acceptance Criteria](concept:acceptance-criteria).
-8. **Check the set.** Compare your use cases with the quality requirements and the domain concepts, not only with what stakeholders said. List extensions for each use case. Remove wishful thinking that the project does not need. See [Use Case Completeness Check](concept:use-case).
+6. **Pick the ones that matter for the architecture.** Choose the items that need detailed requirements for architectural decisions. Start with items that touch your main quality needs or outside systems. Quality requirements steer how responsibilities are allocated, so these items shape the design most. See [Responsibility Allocation](concept:responsibility-allocation). Write the chosen items in more detail, for example with the use case template ([Use Case](concept:use-case)).
+7. **Add a check for each chosen item.** Give each story acceptance criteria or examples. Write them in the user's language, so a tester knows how to check them. Keep the user's goal visible next to them. See [Acceptance Criterion](concept:acceptance-criterion) and Frequent Mistakes in Defining Acceptance Criteria.
+8. **Check the set.** Compare your use cases with the quality requirements and the domain concepts, not only with what stakeholders said. List extensions for each use case. Remove wishful thinking that the project does not need. See Use Case Completeness Check ([Use Case](concept:use-case)).
 
 ## Example: ClinicBook
 
@@ -60,7 +60,7 @@ ClinicBook is an online appointment booking system for 40 small medical practice
 - As a patient, I want a reminder by SMS or e-mail, so that I do not miss my appointment.
 - As practice staff, I want to manage the calendar, so that the schedule stays correct.
 
-**Step 5 (split).** "Manage the calendar" is an epic. The team splits it by operation: block a time slot, open a time slot and view the day's appointments. It then checks the pieces against [INVEST Criteria](concept:user-story).
+**Step 5 (split).** "Manage the calendar" is an epic. The team splits it by operation: block a time slot, open a time slot and view the day's appointments. It then checks the pieces against INVEST Criteria ([User Story](concept:user-story)).
 
 **Step 3 (use case).** For the most important story, the team writes a use case. Its name is "Book an appointment". The goal level is user goal. The primary actor is the patient. The practice-management software and the SMS service are supporting actors. The main success scenario is a numbered list. Extensions cover cases such as "the chosen slot was taken meanwhile" and "the practice-management software does not answer".
 
@@ -83,38 +83,26 @@ Calendar management for staff stays a short description for now. The team will d
 ## Done when
 
 - Each important function is written as a story or a use case, and each one has a role or actor and a goal. ([User Story](concept:user-story), [Use Case](concept:use-case))
-- Each use case has a goal level, and each story matches its use case. ([Use Case Goal Level](concept:use-case), [Consistency of User Story and Use Case](concept:user-story-vs-use-case))
+- Each use case has a goal level, and each story matches its use case. (Use Case Goal Level ([Use Case](concept:use-case)), Consistency of User Story and Use Case ([User Stories vs. Use Cases](concept:user-stories-vs-use-cases)))
 - Stories that were too big are split, and "manage" stories are split by operation. ([Story Splitting](concept:story-splitting))
-- The items needed for architectural decisions are chosen and described in detail. Functional requirements are kept apart from quality requirements. ([Working with Functional Requirements (method phase)](concept:method-phase-working-with-functional-requirements))
-- Each chosen story has acceptance criteria that a tester can check. ([Acceptance Criterion](concept:acceptance-criteria))
-- The set was checked against quality requirements and domain concepts, and it holds no wishful thinking. ([Use Case Completeness Check](concept:use-case))
+- The items needed for architectural decisions are chosen and described in detail. Functional requirements are kept apart from quality requirements. (Working with Functional Requirements (method phase) ([Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty)))
+- Each chosen story has acceptance criteria that a tester can check. ([Acceptance Criterion](concept:acceptance-criterion))
+- The set was checked against quality requirements and domain concepts, and it holds no wishful thinking. (Use Case Completeness Check ([Use Case](concept:use-case)))
 
 ## Learn more
 
-- [Use Case Template](concept:use-case)
-- [Use Case as Goal-Responsibility Contract between Actors](concept:use-case)
-- [Use Case Diagram](concept:use-case-diagram)
-- [Common Use Case Diagram Errors](concept:use-case-diagram)
-- [Use Case Goal Hierarchy with Include Relationships](concept:use-case-diagram)
-- [Goal Hierarchy to Component Mapping](concept:use-case)
-- [User Stories vs. Use Cases](concept:user-story-vs-use-case)
-- [Card, Conversation, Confirmation](concept:user-story)
-- [INVEST Applied to Architectural Work](concept:user-story)
+- [Use Case](concept:use-case)
+- [UML Use Case Diagram](concept:uml-use-case-diagram)
+- [User Stories vs. Use Cases](concept:user-stories-vs-use-cases)
+- [User Story](concept:user-story)
 - [SMART Requirements](concept:smart-requirements)
 - [Story Mapping](concept:story-mapping)
-- [Epic](concept:user-story)
 - [Agile Enterprise Backlog Model](concept:agile-enterprise-backlog-model)
-- [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents)
-- [Requirements Trawling](concept:requirements-elicitation)
+- [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty)
+- [Requirements Trawling](concept:requirements-trawling)
 - [Requirements Difficulty and Customer Engagement](concept:requirements-difficulty-and-customer-engagement)
-- [Capturing Business Behavior via Process Modeling](concept:purpose-of-process-analysis-and-modeling)
-- [Process Analysis](concept:purpose-of-process-analysis-and-modeling)
-- [Process Analysis and Modeling](concept:purpose-of-process-analysis-and-modeling)
-- [Process Automation Magnifies Efficiency](concept:process-automation-magnifies-efficiency)
+- [Process Analysis and Modeling](concept:process-analysis-and-modeling)
+- [Continuous Architecture Principles](concept:continuous-architecture-principles)
 - [Functional suitability](concept:functional-suitability)
 - [Responsibility Allocation](concept:responsibility-allocation)
-- [INVEST Criteria](concept:user-story)
-- [User Story Role Formulation](concept:user-story)
-- [Frequent Mistakes in Defining Acceptance Criteria](concept:acceptance-criteria)
-- [Use Case Goal Level](concept:use-case)
-- [Use Case Completeness Check](concept:use-case)
+- [Acceptance Criterion](concept:acceptance-criterion)

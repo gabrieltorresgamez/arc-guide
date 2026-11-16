@@ -48,7 +48,7 @@ An architectural tactic is a design decision that affects how a system addresses
 
 - **Top-down reasoning.** Tactics give a way of thinking about design that starts from a quality attribute objective. The architect asks which decisions would serve that goal.
 
-For more on how the two relate, see Relationship between Tactics and Architectural Styles/Patterns.
+For more on how the two relate, see Tactics vs. Architectural Styles and Patterns.
 
 ## Example
 

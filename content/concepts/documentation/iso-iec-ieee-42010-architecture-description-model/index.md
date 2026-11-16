@@ -66,10 +66,6 @@ A viewpoint is a set of conventions. It states how to build and read a kind of v
 
 Rozanski and Woods build their book on three key concepts: stakeholders, viewpoints and perspectives. They also provide a template for an architecture description. The *Architectural Perspective* article covers perspectives.
 
-**Why it helps**
-
-
-
 **Edition note**
 
 The TRAK method was designed to comply with the 2011 edition of the standard. Its authors had not assessed the 2022 edition, though they did not expect the results to differ.

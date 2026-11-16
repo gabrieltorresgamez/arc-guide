@@ -16,9 +16,8 @@ related:
 - information-hiding
 - design-for-change
 - coupling-and-cohesion
-- maintainability-tactics
-- interface-segregation-principle
-- open-closed-principle
+- maintainability-tactic
+- solid-principles
 checks:
 - Modules are defined around design decisions that are difficult or likely to change, and each module
   hides such a decision.

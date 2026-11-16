@@ -12,8 +12,8 @@ step: s10-document
 related:
 - uml-component-diagram
 - component-view
-- classification-of-integration-patterns
-- connector-transparency
+- software-connector-classification
+- connector-transparency-direct-vs-indirect-connection
 checks:
 - Interactions between components are shown as explicit connectors in the architecture description.
 - Each connector names its roles, so each participant in the interaction is identifiable.

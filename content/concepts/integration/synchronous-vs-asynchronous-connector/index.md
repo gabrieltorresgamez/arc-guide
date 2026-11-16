@@ -15,7 +15,7 @@ step: s08-integration-data
 related:
 - synchronous-vs-asynchronous-communication
 - software-connector
-- messaging-pattern-language
+- enterprise-integration-patterns
 - reliability
 checks:
 - Each synchronous call chain is identified, and its composite availability is calculated as the product

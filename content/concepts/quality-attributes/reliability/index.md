@@ -12,7 +12,7 @@ arc42:
 - 10
 step: s04-quality-requirements
 related:
-- iso-iec-25010-quality-model
+- iso-iec-25010-product-quality-model
 - security
 - performance-efficiency
 - quality-attribute

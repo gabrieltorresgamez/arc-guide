@@ -13,7 +13,7 @@ related:
 - bpmn-collaboration-diagram
 - bpmn-diagram-types
 - bpmn-swimlane-pool-and-lane
-- bpmn-2-0-notation-overview
+- bpmn-2-0-notation
 checks:
 - Conversations are drawn as hexagons with a single thin line.
 - Sub-conversations carry a small square marker with a plus sign.

@@ -17,7 +17,7 @@ related:
 - architecturally-significant-requirement
 - component-view
 - coupling-and-cohesion
-- method-phase-working-with-functional-requirements
+- requirement-types-and-documents-wiegers-beatty
 checks:
 - Responsibilities are named explicitly, and public ones (offered as services) are distinguished from
   private ones.

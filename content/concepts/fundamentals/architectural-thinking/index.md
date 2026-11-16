@@ -14,14 +14,14 @@ arc42:
 - 11
 step: s07-solution-strategy
 related:
-- architectural-trade-off-thinking
+- quality-attribute-trade-off
 - architectural-pattern
 - architectural-decision-record
 - software-architecture-evaluation
 - iterative-and-incremental-development
 - architecture-view
 - quality-attribute
-- requirements-versus-constraints
+- architectural-constraint
 checks:
 - The document lists the functional requirements, quality requirements and constraints that the design
   started from.

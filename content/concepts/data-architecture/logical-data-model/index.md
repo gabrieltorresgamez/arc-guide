@@ -13,8 +13,8 @@ step: s08-integration-data
 related:
 - conceptual-data-model
 - physical-data-model
-- conceptual-vs-logical-vs-physical-data-model
-- ddd-modeling-elements
+- conceptual-logical-and-physical-data-model
+- ddd-building-blocks-tactical-patterns
 - data-architecture
 checks:
 - The logical model names no database engine.

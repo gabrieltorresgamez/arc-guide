@@ -14,7 +14,7 @@ step: s07-solution-strategy
 related:
 - togaf
 - zachman-framework
-- enterprise-architecture-management
+- enterprise-architecture
 - enterprise-architecture-meta-model
 checks:
 - The document names which framework (or parts of frameworks) the team uses and states that it is used

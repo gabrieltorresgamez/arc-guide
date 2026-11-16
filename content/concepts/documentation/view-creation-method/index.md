@@ -13,11 +13,10 @@ step: s10-document
 related:
 - architecture-view
 - architecture-viewpoint
-- purpose-of-views
 - characteristics-of-a-good-view
 - runtime-view
-- arc42-documentation-template
-- matching-diagram-type-to-system-aspect
+- arc42-architecture-documentation-template
+- uml-diagram-types-by-system-aspect
 - stakeholder-questions-addressed-in-views
 checks:
 - Each diagram states its notation, its target audience and its purpose.

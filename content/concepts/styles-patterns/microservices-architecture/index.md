@@ -21,7 +21,7 @@ related:
 - synchronous-vs-asynchronous-communication
 - shared-database
 - business-capability
-- architectural-style
+- architecture-style
 checks:
 - Each service implements a single business capability within a bounded context.
 - Each service owns its data and schema, with no shared database.

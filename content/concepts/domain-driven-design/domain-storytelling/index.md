@@ -19,7 +19,7 @@ related:
 - arc42-glossary
 - domain-model
 - as-is-and-to-be-view
-- requirements-elicitation
+- requirements-trawling
 checks:
 - Stories that feed the documentation are labeled with the domain experts' own terms.
 - Each story states whether it describes the current process (as-is) or a future one (to-be).

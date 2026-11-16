@@ -15,10 +15,10 @@ step: s08-integration-data
 related:
 - broker-pattern
 - microservices-architecture
-- architectural-style
+- architecture-style
 - coupling-and-cohesion
-- maintainability-tactics
-- integration-pattern
+- maintainability-tactic
+- integration-style
 - messaging
 checks:
 - Each service has a documented interface that is separate from its implementation.

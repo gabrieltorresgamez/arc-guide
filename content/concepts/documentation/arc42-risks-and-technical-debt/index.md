@@ -12,8 +12,8 @@ related:
 - technical-debt
 - placing-atam-evaluation-in-arc42
 - architecture-tradeoff-analysis-method-atam
-- arc42-documentation-template
-- arc42-quality-chapter
+- arc42-architecture-documentation-template
+- arc42-quality-requirements
 - risk-storming
 checks:
 - Technical risks and technical debt are listed in one place, ordered by priority.

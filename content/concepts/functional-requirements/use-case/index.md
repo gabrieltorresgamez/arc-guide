@@ -11,8 +11,8 @@ arc42:
 - 6
 step: s03-functional-requirements
 related:
-- use-case-diagram
-- user-story-vs-use-case
+- uml-use-case-diagram
+- user-stories-vs-use-cases
 - user-story
 - uml-unified-modeling-language
 checks:
@@ -95,7 +95,7 @@ review:
 
 A use case is a structured description of how a system behaves when an outside party, called an actor, makes a request. An actor can be a person or another system. Use cases organize requirements as a narrative of how users relate to the system and use it to reach their goals.
 
-Jacobson described the technique in a 1987 OOPSLA paper. It was based on work at Ericsson, where it captured and specified a system's requirements. UML is the Unified Modeling Language (see the article Unified Modeling Language (UML)).
+Jacobson described the technique in a 1987 OOPSLA paper. It was based on work at Ericsson, where it captured and specified a system's requirements. UML is the Unified Modeling Language (see the article UML (Unified Modeling Language)).
 
 **Levels of detail**
 
@@ -105,7 +105,7 @@ Cockburn also suggests marking each use case with a symbol for its goal level. T
 
 **Diagrams**
 
- See the article Use Case Diagram.
+ See the article UML Use Case Diagram.
 
 **Compared with user stories**
 

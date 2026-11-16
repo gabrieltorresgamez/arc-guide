@@ -10,8 +10,8 @@ arc42:
 step: s10-document
 related:
 - component-view
-- architecture-levels
-- arc42-documentation-template
+- architecture-level
+- arc42-architecture-documentation-template
 - arc42-context-and-scope
 - arc42-solution-strategy
 - runtime-view

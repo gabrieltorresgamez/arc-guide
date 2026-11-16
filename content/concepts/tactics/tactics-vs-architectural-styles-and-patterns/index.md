@@ -1,5 +1,5 @@
 ---
-title: Relationship between Tactics and Architectural Styles/Patterns
+title: Tactics vs. Architectural Styles and Patterns
 slug: tactics-vs-architectural-styles-and-patterns
 order: 30
 category: tactics
@@ -14,7 +14,7 @@ step: s07-solution-strategy
 related:
 - architectural-tactic
 - architectural-pattern
-- architectural-style
+- architecture-style
 - choosing-and-applying-tactics
 - tactic-trade-off-balancing
 - layered-architecture

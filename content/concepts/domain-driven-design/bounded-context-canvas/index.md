@@ -16,7 +16,7 @@ related:
 - ubiquitous-language
 - domain-storytelling
 - arc42-glossary
-- evolutionary-domain-modeling
+- iterative-domain-modeling
 checks:
 - The purpose of each bounded context is stated in a few sentences of business language, without technical
   details.

@@ -11,8 +11,8 @@ arc42:
 - 10
 step: s03-functional-requirements
 related:
-- acceptance-criteria
-- user-story-vs-use-case
+- acceptance-criterion
+- user-stories-vs-use-cases
 - use-case
 - story-splitting
 - story-mapping

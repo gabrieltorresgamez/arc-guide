@@ -15,8 +15,8 @@ step: s07-solution-strategy
 related:
 - architecturally-significant-requirement
 - iterative-and-incremental-development
-- architectural-forces
-- evolutionary-domain-modeling
+- architectural-force
+- iterative-domain-modeling
 - solution-as-moving-target
 checks:
 - The document shows that requirements and architecture were refined together, in mutual interplay.

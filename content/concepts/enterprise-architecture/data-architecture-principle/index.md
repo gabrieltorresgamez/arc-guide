@@ -17,7 +17,7 @@ related:
 - data-architecture
 - arc42-crosscutting-concepts
 - togaf
-- data-architecture-documentation-in-arc42
+- arc42-data-architecture-documentation
 - security
 checks:
 - Each important data element has a named trustee accountable for its quality.
@@ -58,7 +58,7 @@ A principle also lists what follows from it. One implication ties to governance:
 
 **Principles in arc42**
 
-arc42 is a documentation template. It lists principles among its cross-cutting concepts. Others include approaches, rules, tactics, and strategies (see "Crosscutting Concept"). arc42 says concepts form the basis for conceptual integrity, meaning the architecture stays consistent and homogeneous. It also advises documenting at least the business or domain data model as a concept.
+arc42 is a documentation template. It lists principles among its cross-cutting concepts. Others include approaches, rules, tactics, and strategies (see "arc42 Crosscutting Concepts"). arc42 says concepts form the basis for conceptual integrity, meaning the architecture stays consistent and homogeneous. It also advises documenting at least the business or domain data model as a concept.
 
 For principles in general, see "Architecture Principle".
 

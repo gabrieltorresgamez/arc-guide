@@ -16,7 +16,7 @@ related:
 - iterative-and-incremental-development
 - agile-architecture
 - arc42-solution-strategy
-- evolutionary-domain-modeling
+- iterative-domain-modeling
 - design-for-change
 - architectural-decision
 - incrementality

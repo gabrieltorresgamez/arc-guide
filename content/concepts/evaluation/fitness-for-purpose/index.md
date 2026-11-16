@@ -14,9 +14,9 @@ arc42:
 step: s11-evaluate
 related:
 - software-architecture-evaluation
-- architectural-style
+- architecture-style
 - quality-attribute
-- architectural-trade-off-thinking
+- quality-attribute-trade-off
 - big-ball-of-mud
 - quality-attribute-prioritization
 - software-architecture

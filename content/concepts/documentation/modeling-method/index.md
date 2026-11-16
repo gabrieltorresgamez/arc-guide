@@ -14,9 +14,9 @@ step: s10-document
 related:
 - c4-model
 - diagrams-as-code
-- modeling-tool-vs-drawing-tool
+- uml-modeling-tool-vs-drawing-tool
 - rules-of-thumb-for-modeling
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - architecture-viewpoint
 - view-creation-method
 - characteristics-of-a-good-view

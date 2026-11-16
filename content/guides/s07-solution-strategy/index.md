@@ -16,7 +16,7 @@ review:
 
 ## What you get from this step
 
-You get a short list of the fundamental decisions that shape your system. This list is the arc42 chapter 4, the [Solution Strategy](concept:arc42-solution-strategy). It holds:
+You get a short list of the fundamental decisions that shape your system. This list is the arc42 chapter 4, the [arc42 Solution Strategy](concept:arc42-solution-strategy). It holds:
 
 - a few guiding principles,
 - the top-level structure (the architecture style or pattern),
@@ -30,7 +30,7 @@ A [System Idea](concept:system-idea) is the early, high-level answer to "how wil
 ## What you need first
 
 - The problem statement and the key constraints (arc42 chapters 1 and 2). You will link your decisions to them.
-- The top quality goals, ranked by how much stakeholders care about each. See [Quality Attribute Trade-off](concept:architectural-trade-off-thinking).
+- The top quality goals, ranked by how much stakeholders care about each. See [Quality Attribute Trade-off](concept:quality-attribute-trade-off).
 - For each top goal, a quality scenario with a measurable criterion. See [Working with Tactics and Quality Attributes](concept:working-with-tactics-and-quality-attributes).
 
 [Architectural Thinking](concept:architectural-thinking) describes the cycle you are in: start from requirements, quality goals and constraints, then design, check and refine.
@@ -46,18 +46,18 @@ A [System Idea](concept:system-idea) is the early, high-level answer to "how wil
 ## How to do it
 
 1. **Collect the drivers.** List the functional requirements, quality requirements and constraints the design starts from. See [Architectural Thinking](concept:architectural-thinking).
-2. **Rank the goals and find the conflicts.** Improving one quality usually costs another. For each major decision, name the quality it improves and the quality it may harm. See [Quality Attribute Trade-off](concept:architectural-trade-off-thinking).
-3. **Write a few principles.** A principle is a short rule that narrows your options without dictating one answer. Give each a name, a statement, a rationale and implications. See [Architecture Principle](concept:architecture-principle), [Architecture Principle Structure](concept:architecture-principle) and [Working with Principles](concept:architecture-principle). Principles can pull in different directions. Justify a decision by a business requirement, not by a principle alone. See [Conflicting Architecture Principles](concept:architecture-principle).
-4. **Choose the top-level structure.** An [Architecture Style](concept:architectural-style) is a set of design constraints on elements and their relations. An [Architectural Pattern](concept:architectural-pattern) is a proven solution to a recurring problem. Both shape the whole system, so changing them late is costly. See [Architectural Pattern vs. Design Pattern](concept:architectural-pattern-vs-design-pattern). Name the style, the constraints it imposes and the costs you accept. Pick it because it fits your goals and context, not because it is popular. Keep the structure as simple as the problem allows. See [Complexity Reduction](concept:complexity-reduction). For examples of styles, see [Layered Architecture](concept:layered-architecture), [Microservices Architecture](concept:microservices-architecture) and [Service-Oriented Architecture](concept:service-oriented-architecture).
-5. **Choose tactics for each top goal.** An [Architectural Tactic](concept:architectural-tactic) is a single design decision that affects one quality attribute. Patterns are built from tactics. See [Relationship between Tactics and Architectural Styles/Patterns](concept:tactics-vs-architectural-styles-and-patterns). Tie each tactic to the one goal it serves. Note its side effects on other qualities. See [Choosing and Applying Tactics](concept:choosing-and-applying-tactics). Tactics also help you adapt a catalog pattern to your context. See [Reasons for Architectural Tactics](concept:reasons-for-architectural-tactics). Useful starting points by goal:
-   - availability: [Reliability Tactic](concept:reliability-tactics) (detect, recover, prevent faults),
-   - security: [Security Tactic](concept:security-tactics),
-   - changeability: [Maintainability Tactic](concept:maintainability-tactics),
-   - speed: [Performance Efficiency Tactic](concept:performance-efficiency-tactics).
-6. **Add organizational decisions.** Record decisions about the development process and about work given to third parties. See [Solution Strategy](concept:arc42-solution-strategy).
+2. **Rank the goals and find the conflicts.** Improving one quality usually costs another. For each major decision, name the quality it improves and the quality it may harm. See [Quality Attribute Trade-off](concept:quality-attribute-trade-off).
+3. **Write a few principles.** A principle is a short rule that narrows your options without dictating one answer. Give each a name, a statement, a rationale and implications. See [Architecture Principle](concept:architecture-principle), Architecture Principle Structure and Working with Principles. Principles can pull in different directions. Justify a decision by a business requirement, not by a principle alone. See Conflicting Architecture Principles.
+4. **Choose the top-level structure.** An [Architecture Style](concept:architecture-style) is a set of design constraints on elements and their relations. An [Architectural Pattern](concept:architectural-pattern) is a proven solution to a recurring problem. Both shape the whole system, so changing them late is costly. See [Architectural Pattern vs. Design Pattern](concept:architectural-pattern-vs-design-pattern). Name the style, the constraints it imposes and the costs you accept. Pick it because it fits your goals and context, not because it is popular. Keep the structure as simple as the problem allows. See [Complexity Reduction](concept:complexity-reduction). For examples of styles, see [Layered Architecture](concept:layered-architecture), [Microservices Architecture](concept:microservices-architecture) and [Service-Oriented Architecture](concept:service-oriented-architecture).
+5. **Choose tactics for each top goal.** An [Architectural Tactic](concept:architectural-tactic) is a single design decision that affects one quality attribute. Patterns are built from tactics. See [Tactics vs. Architectural Styles and Patterns](concept:tactics-vs-architectural-styles-and-patterns). Tie each tactic to the one goal it serves. Note its side effects on other qualities. See [Choosing and Applying Tactics](concept:choosing-and-applying-tactics). Tactics also help you adapt a catalog pattern to your context. See [Reasons for Architectural Tactics](concept:reasons-for-architectural-tactics). Useful starting points by goal:
+   - availability: [Reliability Tactic](concept:reliability-tactic) (detect, recover, prevent faults),
+   - security: [Security Tactic](concept:security-tactic),
+   - changeability: [Maintainability Tactic](concept:maintainability-tactic),
+   - speed: [Performance Efficiency Tactic](concept:performance-efficiency-tactic).
+6. **Add organizational decisions.** Record decisions about the development process and about work given to third parties. See [arc42 Solution Strategy](concept:arc42-solution-strategy).
 7. **Tie goals to decisions in one table.** Use one row per key goal. Show the scenario, the chosen approaches and the side effects. Record important decisions with their rationale and all consequences, including the negative ones. See [Tactic Trade-off Balancing](concept:tactic-trade-off-balancing). A lightweight decision record per tactic works well. Consider at least two options for each decision. See [Working with Tactics and Quality Attributes](concept:working-with-tactics-and-quality-attributes). You do not need to reference every requirement. Name the requirements behind the important decisions. See [Traceability](concept:traceability).
 8. **Mark what is open and what is hard to change.** Take more care with hard-to-change decisions. Defer the others until the facts exist. See [Solution as Moving Target](concept:solution-as-moving-target) and [Continuous Architecture Principles](concept:continuous-architecture-principles).
-9. **Name the architecture.** Do not leave it implied by the code. Decisions that nobody chose lead to [Accidental Architecture](concept:big-ball-of-mud).
+9. **Name the architecture.** Do not leave it implied by the code. Decisions that nobody chose lead to Accidental Architecture ([Big Ball of Mud](concept:big-ball-of-mud)).
 
 ## Example: ClinicBook
 
@@ -80,15 +80,15 @@ ClinicBook is an online booking system for 40 small medical practices. The input
 
 This follows [Design for Change](concept:design-for-change), which asks for external systems to sit behind a single wrapping interface.
 
-**Top-level structure.** The team chooses one system split into layers (UI/API, business logic, data access). Domain logic stays free of UI and persistence code. See [Layered Architecture](concept:layered-architecture) and [Layers and Components Decomposition](concept:layered-architecture). The team does not choose microservices. That style adds network, data and operations costs, and the team is small ([Microservices Architecture](concept:microservices-architecture)). The strategy records this reason and the cost of the choice. For example, one deployable unit means a single fault can affect everything. The team accepts this and covers it with the availability tactics below.
+**Top-level structure.** The team chooses one system split into layers (UI/API, business logic, data access). Domain logic stays free of UI and persistence code. See [Layered Architecture](concept:layered-architecture) and Layers and Components Decomposition. The team does not choose microservices. That style adds network, data and operations costs, and the team is small ([Microservices Architecture](concept:microservices-architecture)). The strategy records this reason and the cost of the choice. For example, one deployable unit means a single fault can affect everything. The team accepts this and covers it with the availability tactics below.
 
 **Quality goals and approaches.** The scenarios use assumed numbers.
 
 | Goal | Scenario (assumed) | Approach | Side effect to record |
 |---|---|---|---|
 | Security and privacy | Health data is unreadable to anyone without the key, in storage and on the network. | [Encryption](https://quality.arc42.org/approaches/encryption-at-rest-and-in-transit) at rest and in transit. Keys sit in a key management service, not in code. | Key management is extra work for a small team. |
-| Availability | Patients can book between 7:00 and 9:00 even when one server fails. | Load balancer (see [Performance Efficiency Tactic](concept:performance-efficiency-tactics)) over several servers. Health checks (see [Reliability Tactic](concept:reliability-tactics)) detect failures. | More servers cost more money. |
-| Availability | A slow SMS provider does not block bookings. | Timeouts and a [Circuit Breaker](https://quality.arc42.org/approaches/circuit-breaker) on calls to the provider. Retry (see [Reliability Tactic](concept:reliability-tactics)) only for temporary faults and safe-to-repeat operations. | Callers need a defined behavior when the breaker rejects a call. |
+| Availability | Patients can book between 7:00 and 9:00 even when one server fails. | Load balancer (see [Performance Efficiency Tactic](concept:performance-efficiency-tactic)) over several servers. Health checks (see [Reliability Tactic](concept:reliability-tactic)) detect failures. | More servers cost more money. |
+| Availability | A slow SMS provider does not block bookings. | Timeouts and a [Circuit Breaker](https://quality.arc42.org/approaches/circuit-breaker) on calls to the provider. Retry (see [Reliability Tactic](concept:reliability-tactic)) only for temporary faults and safe-to-repeat operations. | Callers need a defined behavior when the breaker rejects a call. |
 | Availability | If the practice software is down, booking continues. | [Feature Degradation](https://quality.arc42.org/approaches/feature-degradation). Booking is core. Reminders can pause. The business must agree on this ranking. | Fallback paths need testing. |
 | Integration | A new vendor connects in at most 3 person-weeks. | One adapter per vendor behind one interface. See [Reduce Coupling](https://quality.arc42.org/approaches/reduce-coupling). | The extra interface must be maintained. |
 
@@ -100,27 +100,24 @@ This follows [Design for Change](concept:design-for-change), which asks for exte
 
 ## Done when
 
-- The strategy lists principles, the top-level structure, the approach for each top quality goal and the organizational decisions. It stays short and refers onward. ([Solution Strategy](concept:arc42-solution-strategy))
-- The chosen style or pattern is named. Its constraints, benefits and costs are stated. ([Architecture Style](concept:architectural-style))
+- The strategy lists principles, the top-level structure, the approach for each top quality goal and the organizational decisions. It stays short and refers onward. ([arc42 Solution Strategy](concept:arc42-solution-strategy))
+- The chosen style or pattern is named. Its constraints, benefits and costs are stated. ([Architecture Style](concept:architecture-style))
 - Each top quality goal has a measurable scenario and a table row that lists approaches and side effects. ([Tactic Trade-off Balancing](concept:tactic-trade-off-balancing))
 - Each tactic names the one quality attribute it serves. ([Choosing and Applying Tactics](concept:choosing-and-applying-tactics))
-- Each principle has a name, statement, rationale and implications. ([Architecture Principle Structure](concept:architecture-principle))
+- Each principle has a name, statement, rationale and implications. (Architecture Principle Structure ([Architecture Principle](concept:architecture-principle)))
 - Important decisions name their reasons and their negative consequences. Open decisions are marked. ([Solution as Moving Target](concept:solution-as-moving-target))
 
 ## Learn more
 
-- [Solution Strategy](concept:arc42-solution-strategy)
+- [arc42 Solution Strategy](concept:arc42-solution-strategy)
 - [System Idea](concept:system-idea)
 - [Architecture Means](concept:architecture-means)
-- [Influence of Architectural Means](concept:architecture-means)
 - [Architectural Tactic](concept:architectural-tactic)
 - [Working with Tactics and Quality Attributes](concept:working-with-tactics-and-quality-attributes)
-- [Reliability Tactic](concept:reliability-tactics)
+- [Reliability Tactic](concept:reliability-tactic)
 - [Architecture Principle](concept:architecture-principle)
-- [Working with Principles](concept:architecture-principle)
-- [Conflicting Architecture Principles](concept:architecture-principle)
-- [Loose Coupling](concept:coupling-and-cohesion)
+- [Coupling and Cohesion](concept:coupling-and-cohesion)
 - [Architectural Pattern](concept:architectural-pattern)
-- [Quality Attribute Trade-off](concept:architectural-trade-off-thinking)
+- [Quality Attribute Trade-off](concept:quality-attribute-trade-off)
 - [Twin Peaks Model](concept:twin-peaks-model)
-- [Accidental Architecture](concept:big-ball-of-mud)
+- [Big Ball of Mud](concept:big-ball-of-mud)

@@ -15,7 +15,7 @@ arc42:
 step: s04-quality-requirements
 related:
 - reliability
-- security-tactics
+- security-tactic
 checks:
 - Confidentiality requirements state who may access which data, using need-to-know (least privilege) access.
 - Integrity measures cover authentication, authorization and tamper detection such as digital signatures.

@@ -19,7 +19,7 @@ related:
 - architecturally-evident-coding-style
 - domain-driven-design
 - guidelines-for-documentation
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - diagrams-as-code
 checks:
 - Interface or API documentation is generated from the source (for example with Javadoc) instead of written

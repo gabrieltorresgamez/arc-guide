@@ -13,7 +13,7 @@ arc42:
 - 10
 step: s08-integration-data
 related:
-- messaging-pattern-language
+- enterprise-integration-patterns
 - messaging
 checks:
 - The visibility timeout or lock duration is set deliberately and is longer than normal processing time.

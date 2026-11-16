@@ -13,7 +13,7 @@ related:
 - ubiquitous-language
 - domain-model
 - domain-driven-design
-- arc42-documentation-template
+- arc42-architecture-documentation-template
 - stakeholder
 - bounded-context
 checks:

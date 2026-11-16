@@ -15,8 +15,8 @@ step: s04-quality-requirements
 related:
 - modularity
 - technical-debt
-- maintainability-tactics
-- iso-iec-25010-quality-model
+- maintainability-tactic
+- iso-iec-25010-product-quality-model
 checks:
 - The document states how the system is split into discrete components so that a change to one has minimal
   impact on others.

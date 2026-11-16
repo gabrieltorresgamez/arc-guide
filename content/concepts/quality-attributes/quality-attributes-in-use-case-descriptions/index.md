@@ -14,7 +14,7 @@ related:
 - quality-attribute-scenario
 - use-case
 - smart-requirements
-- arc42-quality-chapter
+- arc42-quality-requirements
 - architecturally-significant-requirement
 - story-splitting
 checks:

@@ -14,10 +14,10 @@ related:
 - bpmn-swimlane-pool-and-lane
 - bpmn-diagram-types
 - bpmn-conversation-diagram
-- bpmn-modeling-tips
+- bpmn-modeling-guidelines
 - bpmn-event
-- purpose-of-process-analysis-and-modeling
-- bpmn-2-0-notation-overview
+- process-analysis-and-modeling
+- bpmn-2-0-notation
 checks:
 - Operational-level process models use a separate pool per participant instead of lanes.
 - Interaction between participants is shown with message flows between pools.
