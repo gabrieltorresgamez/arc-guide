@@ -31,7 +31,9 @@ I use these logs only to run the site, to find errors, and to detect and stop ab
 
 The theme switch (Light, Dark, Auto) saves your choice in your browser's local storage under the name `starlight-theme`. The site writes this value on every visit; if you never pick a theme, the value is empty. It stays in your browser and is never sent to the server.
 
-You can delete it at any time by clearing the data of this site in your browser settings. You can also block site data for this site. The site still works, but it may not remember your theme.
+If you pick an AI assistant in the "Ask an AI" box, the site saves that choice under the name `ai-provider`, so the next page offers the same assistant. It also stays in your browser.
+
+You can delete both values at any time by clearing the data of this site in your browser settings. You can also block site data for this site. The site still works, but it may not remember your choices.
 
 ## Who receives your data
 
@@ -40,6 +42,8 @@ No one. The site runs on a server in Switzerland. I do not pass log data to thir
 ## Links to other websites
 
 Articles link to their sources on other websites. When you follow such a link, the privacy rules of that website apply.
+
+The "Ask an AI" links open the AI assistant you chose (for example ChatGPT or Claude) in a new tab, with a prompt that contains the address of the page you are reading. For assistants that cannot take a prompt in a link, the link copies the prompt to your clipboard instead. This site sends nothing to the assistant itself; what you do there is subject to that provider's privacy rules.
 
 ## Your rights
 
@@ -51,4 +55,4 @@ You can also file a complaint with the [Federal Data Protection and Information 
 
 I may update this notice when the site changes. The current version is always on this page.
 
-Last updated: 2026-11-10
+Last updated: 2026-11-17

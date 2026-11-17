@@ -1,0 +1,149 @@
+---
+// "Ask an AI": opens the reader's own AI assistant with a prompt about this page, to chat about it or to be quizzed
+// on it. The prompt points at the page's Markdown copy (written by pipeline/build.py for every page) and keeps the
+// assistant to that page and its sources. ChatGPT and Perplexity take the prompt in the link; Claude (since October
+// 2025), Gemini and Le Chat do not, so for them the link copies the prompt and the reader pastes it. The choice of
+// assistant is kept in this browser only (localStorage `ai-provider`). Needs JavaScript; hidden until the script runs.
+const id = Astro.locals.starlightRoute.id;
+const md = new URL(`/${id || 'index'}.md`, Astro.site).href;
+const providers = [
+	{ id: 'chatgpt', name: 'ChatGPT', url: 'https://chatgpt.com/?q={prompt}' },
+	{ id: 'claude', name: 'Claude', url: 'https://claude.ai/new' },
+	{ id: 'gemini', name: 'Gemini', url: 'https://gemini.google.com/app' },
+	{ id: 'perplexity', name: 'Perplexity', url: 'https://www.perplexity.ai/search/new?q={prompt}' },
+	{ id: 'lechat', name: 'Le Chat', url: 'https://chat.mistral.ai/chat' },
+];
+const prompts = {
+	chat: `Read ${md}. It is a page of an entry-level software architecture guide, written from the public sources it lists. Help me understand it and answer my questions. Use only that page and its sources, and say when something is not covered there.`,
+	quiz: `Read ${md}. Quiz me on it: ask one multiple-choice question at a time with four options, wait for my answer, then say whether it was right and explain why with the page. Use only that page and its sources.`,
+};
+const data = JSON.stringify({ providers, prompts }).replace(/</g, '\\u003c');
+---
+
+<div class="ask sl-hidden lg:sl-block">
+	<section class="ask-block" aria-labelledby="ask-heading" hidden>
+		<h2 id="ask-heading">Ask an AI</h2>
+		<p class="ask-meta">Open this page in a chat with your AI assistant.</p>
+		<select class="ask-provider" aria-label="AI assistant">
+			{providers.map((p) => <option value={p.id}>{p.name}</option>)}
+		</select>
+		<ul class="ask-links">
+			<li><a data-action="chat" target="_blank" rel="noopener">Chat about this page</a></li>
+			<li><a data-action="quiz" target="_blank" rel="noopener">Quiz me on this page</a></li>
+		</ul>
+		<p class="ask-note" aria-live="polite"></p>
+	</section>
+	<script type="application/json" class="ask-data" set:html={data} />
+</div>
+
+<script>
+	type Provider = { id: string; name: string; url: string };
+	for (const box of document.querySelectorAll<HTMLElement>('.ask')) {
+		const { providers, prompts }: { providers: Provider[]; prompts: Record<string, string> } = JSON.parse(box.querySelector('.ask-data')!.textContent!);
+		const select = box.querySelector('select')!;
+		const note = box.querySelector('.ask-note')!;
+		const links = [...box.querySelectorAll<HTMLAnchorElement>('a[data-action]')];
+		const current = () => providers.find((p) => p.id === select.value) ?? providers[0];
+		const update = () => {
+			const p = current();
+			for (const a of links) a.href = p.url.replace('{prompt}', encodeURIComponent(prompts[a.dataset.action!]));
+			note.textContent = p.url.includes('{prompt}') ? '' : `${p.name} cannot take a prompt in a link: the link copies it, then paste it into the chat.`;
+		};
+		try {
+			select.value = localStorage.getItem('ai-provider') ?? 'chatgpt';
+		} catch {}
+		select.addEventListener('change', () => {
+			try {
+				localStorage.setItem('ai-provider', select.value);
+			} catch {}
+			update();
+		});
+		for (const a of links)
+			a.addEventListener('click', () => {
+				const p = current();
+				if (p.url.includes('{prompt}')) return;
+				navigator.clipboard?.writeText(prompts[a.dataset.action!]).then(
+					() => (note.textContent = `Prompt copied. Paste it into ${p.name}.`),
+					() => (note.textContent = `Could not copy the prompt. ${p.name} opens without it.`),
+				);
+			});
+		update();
+		box.querySelector<HTMLElement>('.ask-block')!.hidden = false;
+	}
+</script>
+
+<style>
+	.ask {
+		padding: 1rem var(--sl-sidebar-pad-x);
+	}
+	.ask-block {
+		max-width: 16rem;
+	}
+	.ask-block h2 {
+		margin-bottom: 0.5rem;
+		color: var(--ink);
+		font-size: var(--sl-text-h5);
+		font-weight: 600;
+		line-height: var(--sl-line-height-headings);
+	}
+	.ask-meta,
+	.ask-note {
+		color: var(--ink-muted);
+		font-size: 0.8125rem;
+		font-weight: 500;
+		line-height: 1.3;
+	}
+	.ask-note:empty {
+		display: none;
+	}
+	.ask-note {
+		margin-top: 0.75rem;
+	}
+	/* Like the Torres theme select: canvas ground, ink text, 1px border, small corners, a chevron in currentColor. */
+	.ask-provider {
+		width: 100%;
+		height: 2.25rem;
+		margin-top: 0.75rem;
+		padding: 0 2rem 0 0.75rem;
+		color: var(--ink);
+		background: var(--canvas)
+			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5l3 3 3-3' fill='none' stroke='%23807d72' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+			no-repeat right 0.6rem center / 0.75rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		font-size: 0.9375rem;
+		appearance: none;
+		cursor: pointer;
+	}
+	.ask-provider:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+	}
+	/* Torres links in text: link colour, underlined 1px at 0.18em; the underline thickens to 2px on hover. */
+	.ask-links {
+		margin: 0.75rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+	.ask-links li + li {
+		margin-top: 0.25rem;
+	}
+	.ask-links a {
+		color: var(--link);
+		font-size: 0.9375rem;
+		line-height: 1.45;
+		text-decoration: underline 1px;
+		text-underline-offset: 0.18em;
+		transition: text-decoration-thickness 160ms ease;
+	}
+	.ask-links a:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+		border-radius: var(--radius-sm);
+	}
+	@media (hover: hover) and (pointer: fine) {
+		.ask-links a:hover {
+			text-decoration-thickness: 2px;
+		}
+	}
+</style>
