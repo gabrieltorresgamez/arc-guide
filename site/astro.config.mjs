@@ -18,6 +18,8 @@ export default defineConfig({
 				SiteTitle: './src/components/SiteTitle.astro',
 				ThemeProvider: './src/components/ThemeProvider.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',
+				PageSidebar: './src/components/PageSidebar.astro',
+				PageTitle: './src/components/PageTitle.astro',
 			},
 			head: [
 				{ tag: 'meta', attrs: { property: 'og:image', content: `${site}/og.png` } },

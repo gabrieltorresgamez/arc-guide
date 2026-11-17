@@ -13,6 +13,9 @@
   --hairline: #3a332d;
   --border: #807d72;
   --selection: #7c2d12;
+  --surface-raised: #241c19; /* anything that floats over the page: the link preview */
+  --elevation-2: 0 8px 20px -12px rgb(0 0 0 / 0.6);
+  --elevation-3: 0 22px 44px -14px rgb(0 0 0 / 0.8); /* the one surface in front: the large graph view */
 }
 :root[data-theme='light'] {
   --link: #c2410c; /* pure #ff4f00 is about 3:1 on cream, too low for link text */
@@ -23,6 +26,9 @@
   --hairline: #c5c0b1;
   --border: #8a877b;
   --selection: #ffe3d5;
+  --surface-raised: #fffefb;
+  --elevation-2: 0 8px 20px -12px rgb(32 21 21 / 0.35);
+  --elevation-3: 0 22px 44px -14px rgb(32 21 21 / 0.4);
 }
 /* High contrast (WCAG AAA). ThemeProvider.astro sets data-contrast for the High contrast choice, and for
    Auto when the system asks for more contrast. A pick of Light or Dark is never overridden. */
@@ -35,6 +41,7 @@
   --canvas-soft: #1a1210;
   --hairline: #807d72;
   --border: #a8a397;
+  --surface-raised: #1a1210;
 }
 :root[data-contrast][data-theme='light'] {
   /* hc-light */
@@ -46,6 +53,7 @@
   --canvas-soft: #f8f4f0;
   --hairline: #807d72;
   --border: #605d52;
+  --surface-raised: #fffefb;
 }
 
 /* Starlight's styles are in a cascade layer, so this one block wins in every theme. */

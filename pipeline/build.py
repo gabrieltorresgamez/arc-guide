@@ -213,6 +213,32 @@ def build_article(a, titles, cats):
     html_body = f":::note[In short]\n{a['summary']}\n:::\n\n{link_see(cite(a['_body'].strip(), srcs, False), titles, False, a['slug'])}\n\n{diagram_blocks(a, False)}\n\n{tail(False)}"
     md_body = f"# {a['title']}\n\n**In short:** {a['summary']}\n\n{link_see(cite(a['_body'].strip(), srcs, True), titles, True, a['slug'])}\n\n{diagram_blocks(a, True)}\n\n{tail(True)}"
     write_page(f"concepts/{a['category']}/{a['slug']}", a["title"], a["summary"], html_body, md_body, f"/concepts/{a['category']}/llms.txt")
+    return html_body
+
+
+def link_graph(titles, bodies):
+    """(urls, links): every concept page and every link between two of them, both directions as one pair of indices."""
+    urls = sorted(v[1][0] for v in titles.values())
+    index = {u: i for i, u in enumerate(urls)}
+    links = set()
+    for s, body in bodies.items():
+        a = index[titles[s][1][0]]
+        for u in re.findall(r"\]\((/concepts/[^)#\s]+)\)", body):
+            if u in index and index[u] != a:
+                links.add(tuple(sorted((a, index[u]))))
+    return urls, sorted(links)
+
+
+def write_link_data(arts, titles, bodies):
+    """previews.json: title and summary per page URL, for the hover cards on links. graph.json: pages and links, for
+    the graph of linked pages that site/src/components/PageSidebar.astro draws in the right sidebar."""
+    sgs = json.loads((c.CONTENT / "subgroups.json").read_text()) if (c.CONTENT / "subgroups.json").exists() else {}
+    names = {x["id"]: x["title"] for cat in c.TAXONOMY["categories"] for x in [cat] + cat.get("subcategories", [])}
+    place = lambda a: " › ".join(names[x] for x in (a["category"], sgs.get(a["slug"])) if x in names)  # as in the breadcrumbs
+    c.write_atomic(PUB / "previews.json", json.dumps({titles[a["slug"]][1][0]: [a["title"], a["summary"], place(a)] for a in arts}, ensure_ascii=False, separators=(",", ":")))
+    urls, links = link_graph(titles, bodies)
+    by_url = {v[1][0]: v[0] for v in titles.values()}
+    c.write_atomic(PUB / "graph.json", json.dumps({"nodes": [[u, by_url[u]] for u in urls], "links": links}, ensure_ascii=False, separators=(",", ":")))
 
 
 def rewrite_links(text, titles, md):
@@ -233,8 +259,7 @@ def main(argv=None):
     cats = {x["id"]: x for x in c.TAXONOMY["categories"]}
     arts = load_articles()
     titles = {a["slug"]: (a["title"], art_urls(a)) for a in arts}
-    for a in arts:
-        build_article(a, titles, cats)
+    write_link_data(arts, titles, {a["slug"]: build_article(a, titles, cats) for a in arts})
     # category llms.txt
     by_cat = {}
     for a in arts:

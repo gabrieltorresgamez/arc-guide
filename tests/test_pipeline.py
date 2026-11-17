@@ -146,3 +146,10 @@ def test_guide_check_reads_linked_pages():
     from pipeline import claimcheck
     pages = claimcheck.concept_pages("See [Utility Tree](concept:utility-tree), again [tree](concept:utility-tree).")
     assert len(pages) == 1 and pages[0].startswith("=== PAGE: Utility Tree")
+
+
+def test_link_graph_counts_each_link_once():
+    titles = {s: (s.title(), (f"/concepts/x/{s}/", "")) for s in "abc"}
+    bodies = {"a": "See [B](/concepts/x/b/).", "b": "Back to [A](/concepts/x/a/) and [C](/concepts/x/c/).", "c": "[C](/concepts/x/c/)"}
+    urls, links = build.link_graph(titles, bodies)
+    assert links == [(0, 1), (1, 2)]  # a-b once although both link, b-c, no self link

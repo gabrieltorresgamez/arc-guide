@@ -1,9 +1,11 @@
 ---
 // Starlight's footer plus a link to the privacy notice on every page.
 import Default from '@astrojs/starlight/components/Footer.astro';
+import LinkPreview from './LinkPreview.astro';
 ---
 
 <Default />
+<LinkPreview />
 <p class="legal"><a href="/privacy/">Privacy notice</a></p>
 
 <style>

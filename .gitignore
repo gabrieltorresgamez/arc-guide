@@ -22,6 +22,8 @@ site/public/**/llms.txt
 site/public/robots.txt
 site/src/content/docs/
 site/sidebar.json
+site/public/graph.json
+site/public/previews.json
 
 # --- Claude Code local settings ---
 .claude/settings.local.json

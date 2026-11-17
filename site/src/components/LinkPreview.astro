@@ -1,0 +1,133 @@
+---
+// A card with the place (category › subgroup), title and summary of a linked concept page, shown on hover (mouse
+// only) or keyboard focus.
+// Data: /previews.json, written by pipeline/build.py and fetched once, on the first hover or focus.
+---
+
+<script>
+	const fine = matchMedia('(hover: hover) and (pointer: fine)');
+	let data: Promise<Record<string, [string, string, string]>> | undefined;
+	let card: HTMLDivElement | undefined;
+	let current: HTMLAnchorElement | null = null;
+	let timer = 0;
+
+	const linkOf = (e: Event) =>
+		(e.target as Element).closest?.<HTMLAnchorElement>('.sl-markdown-content a[href^="/concepts/"]') ?? null;
+
+	async function show(a: HTMLAnchorElement, instant: boolean) {
+		data ??= fetch('/previews.json').then((r) => r.json()).catch(() => ({}));
+		const entry = (await data)[a.pathname];
+		if (!entry || current !== a || a.pathname === location.pathname) return;
+		card ??= Object.assign(document.body.appendChild(document.createElement('div')), { id: 'link-preview', role: 'tooltip' });
+		card.replaceChildren(
+			Object.assign(document.createElement('p'), { className: 'lp-place', textContent: entry[2] }),
+			Object.assign(document.createElement('p'), { className: 'lp-title', textContent: entry[0] }),
+			Object.assign(document.createElement('p'), { className: 'lp-summary', textContent: entry[1] }),
+		);
+		card.classList.toggle('instant', instant);
+		card.classList.add('open');
+		const r = a.getClientRects()[0] ?? a.getBoundingClientRect();
+		const below = r.bottom + 8 + card.offsetHeight < innerHeight;
+		const left = Math.max(8, Math.min(r.left, innerWidth - card.offsetWidth - 8));
+		card.style.left = `${left + scrollX}px`;
+		card.style.top = `${(below ? r.bottom + 8 : r.top - 8 - card.offsetHeight) + scrollY}px`;
+		card.style.transformOrigin = `${r.left - left}px ${below ? 'top' : 'bottom'}`;
+		a.setAttribute('aria-describedby', 'link-preview');
+	}
+
+	function hide(instant: boolean) {
+		clearTimeout(timer);
+		current?.removeAttribute('aria-describedby');
+		current = null;
+		card?.classList.toggle('instant', instant);
+		card?.classList.remove('open');
+	}
+
+	document.addEventListener('pointerover', (e) => {
+		const a = linkOf(e);
+		if (!a || a === current || e.pointerType !== 'mouse' || !fine.matches) return;
+		current = a;
+		clearTimeout(timer);
+		timer = window.setTimeout(() => show(a, false), 300);
+	});
+	document.addEventListener('pointerout', (e) => {
+		if (current && linkOf(e) === current && !current.contains(e.relatedTarget as Node)) hide(false);
+	});
+	document.addEventListener('focusin', (e) => {
+		const a = linkOf(e);
+		if (a && a.matches(':focus-visible')) show((current = a), true); // keyboard is instant
+	});
+	document.addEventListener('focusout', (e) => linkOf(e) === current && hide(true));
+	document.addEventListener('keydown', (e) => e.key === 'Escape' && hide(true));
+</script>
+
+<style is:global>
+	/* Torres elevation 2 (raised): surface-raised, 1px hairline, elevation-2 shadow; opens in 180ms, closes in 120ms. */
+	#link-preview {
+		position: absolute;
+		z-index: 100;
+		display: none;
+		box-sizing: border-box;
+		width: min(23rem, calc(100vw - 1rem));
+		padding: 1.5rem;
+		background: var(--surface-raised);
+		border: 1px solid var(--hairline);
+		border-radius: var(--radius);
+		box-shadow: var(--elevation-2);
+		color: var(--ink);
+		pointer-events: none;
+		opacity: 0;
+		transform: scale(0.97);
+		transition: opacity 120ms var(--ease-out), transform 120ms var(--ease-out), display 120ms allow-discrete;
+	}
+	#link-preview.open {
+		display: block;
+		opacity: 1;
+		transform: none;
+		transition-duration: 180ms;
+	}
+	@starting-style {
+		#link-preview.open {
+			opacity: 0;
+			transform: scale(0.96);
+		}
+	}
+	#link-preview.instant {
+		transition: none;
+	}
+	#link-preview p {
+		margin: 0;
+	}
+	/* Torres type: the place in meta-small (ink-muted), the title in the title style, the summary as an excerpt. */
+	#link-preview .lp-place {
+		margin-bottom: 0.5rem;
+		color: var(--ink-muted);
+		font-size: 0.9375rem;
+		line-height: 1.45;
+	}
+	#link-preview .lp-place:empty {
+		display: none;
+	}
+	#link-preview .lp-title {
+		margin-bottom: 0.75rem;
+		font: 600 1.375rem/1.25 'Bricolage Grotesque Variable', system-ui, sans-serif;
+		letter-spacing: -0.01em;
+		text-wrap: balance;
+	}
+	#link-preview .lp-summary {
+		font-size: 1.0625rem;
+		line-height: 1.5;
+		text-wrap: pretty;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		#link-preview,
+		#link-preview.open {
+			transform: none;
+		}
+		@starting-style {
+			#link-preview.open {
+				transform: none;
+			}
+		}
+	}
+</style>

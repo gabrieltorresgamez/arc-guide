@@ -1,0 +1,48 @@
+---
+// Starlight's page title with breadcrumbs above it: the sidebar groups that hold the current page. The groups have
+// no pages of their own, so the crumbs are text. Pages outside any group (Review, Glossary, home) get none.
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+type Entry = { type: string; label: string; isCurrent?: boolean; entries?: Entry[] };
+function trail(entries: Entry[], path: string[] = []): string[] | undefined {
+	for (const e of entries) {
+		if (e.type === 'link' && e.isCurrent) return path;
+		const found = e.type === 'group' ? trail(e.entries ?? [], [...path, e.label]) : undefined;
+		if (found) return found;
+	}
+}
+const crumbs = trail(Astro.locals.starlightRoute.sidebar as Entry[]) ?? [];
+---
+
+{
+	crumbs.length > 0 && (
+		<nav aria-label="Breadcrumb" class="crumbs">
+			<ol>
+				{crumbs.map((c) => (
+					<li>{c}</li>
+				))}
+			</ol>
+		</nav>
+	)
+}
+<Default />
+
+<style>
+	.crumbs ol {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+		color: var(--ink-muted);
+		font-size: 0.9375rem;
+		line-height: 1.45;
+	}
+	.crumbs li + li::before {
+		content: '›' / '';
+		margin-inline: 0.5rem;
+	}
+	.crumbs + :global(h1) {
+		margin-top: 0.25rem;
+	}
+</style>

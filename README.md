@@ -38,7 +38,7 @@ The rules for writing and fixing content (sources, own words, all or none, title
 ## Build
 
 1. `docker compose up -d` starts a local [Kroki](https://github.com/yuzutech/kroki) for the diagrams.
-2. `uv run python -m pipeline.build` builds the site into `site/dist/` and runs the checks.
+2. `uv run python -m pipeline.build` builds the site into `site/dist/` and runs the checks. It also writes the data for the hover cards on links (`site/public/previews.json`) and the graph of linked pages in the right sidebar (`site/public/graph.json`).
 3. `cd site && npm run dev` for a local preview.
 
 Self-hosting: set `SITE_URL` in `compose.yml`, then `docker compose --profile site up -d --build`; nginx serves the
