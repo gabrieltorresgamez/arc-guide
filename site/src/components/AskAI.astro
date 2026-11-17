@@ -3,9 +3,11 @@
 // on it. The prompt points at the page's Markdown copy (written by pipeline/build.py for every page) and keeps the
 // assistant to that page and its sources. ChatGPT and Perplexity take the prompt in the link; Claude (since October
 // 2025), Gemini and Le Chat do not, so for them the link copies the prompt and the reader pastes it. The choice of
-// assistant is kept in this browser only (localStorage `ai-provider`). Needs JavaScript; hidden until the script runs.
+// assistant is kept in this browser only (localStorage `ai-provider`). "Copy page as Markdown" copies the page's
+// Markdown copy itself, for any assistant (a local one, too). Needs JavaScript; hidden until the script runs.
 const id = Astro.locals.starlightRoute.id;
-const md = new URL(`/${id || 'index'}.md`, Astro.site).href;
+const mdPath = `/${id || 'index'}.md`;
+const md = new URL(mdPath, Astro.site).href;
 const providers = [
 	{ id: 'chatgpt', name: 'ChatGPT', url: 'https://chatgpt.com/?q={prompt}' },
 	{ id: 'claude', name: 'Claude', url: 'https://claude.ai/new' },
@@ -17,7 +19,7 @@ const prompts = {
 	chat: `Read ${md}. It is a page of an entry-level software architecture guide, written from the public sources it lists. Help me understand it and answer my questions. Use only that page and its sources, and say when something is not covered there.`,
 	quiz: `Read ${md}. Quiz me on it: ask one multiple-choice question at a time with four options, wait for my answer, then say whether it was right and explain why with the page. Use only that page and its sources.`,
 };
-const data = JSON.stringify({ providers, prompts }).replace(/</g, '\\u003c');
+const data = JSON.stringify({ providers, prompts, mdPath }).replace(/</g, '\\u003c');
 ---
 
 <div class="ask sl-hidden lg:sl-block">
@@ -30,6 +32,7 @@ const data = JSON.stringify({ providers, prompts }).replace(/</g, '\\u003c');
 		<ul class="ask-links">
 			<li><a data-action="chat" target="_blank" rel="noopener">Chat about this page</a></li>
 			<li><a data-action="quiz" target="_blank" rel="noopener">Quiz me on this page</a></li>
+			<li><button class="ask-copy" type="button">Copy page as Markdown</button></li>
 		</ul>
 		<p class="ask-note" aria-live="polite"></p>
 	</section>
@@ -39,7 +42,7 @@ const data = JSON.stringify({ providers, prompts }).replace(/</g, '\\u003c');
 <script>
 	type Provider = { id: string; name: string; url: string };
 	for (const box of document.querySelectorAll<HTMLElement>('.ask')) {
-		const { providers, prompts }: { providers: Provider[]; prompts: Record<string, string> } = JSON.parse(box.querySelector('.ask-data')!.textContent!);
+		const { providers, prompts, mdPath }: { providers: Provider[]; prompts: Record<string, string>; mdPath: string } = JSON.parse(box.querySelector('.ask-data')!.textContent!);
 		const select = box.querySelector('select')!;
 		const note = box.querySelector('.ask-note')!;
 		const links = [...box.querySelectorAll<HTMLAnchorElement>('a[data-action]')];
@@ -67,6 +70,15 @@ const data = JSON.stringify({ providers, prompts }).replace(/</g, '\\u003c');
 					() => (note.textContent = `Could not copy the prompt. ${p.name} opens without it.`),
 				);
 			});
+		box.querySelector('.ask-copy')!.addEventListener('click', async () => {
+			try {
+				const text = await fetch(mdPath).then((r) => (r.ok ? r.text() : Promise.reject()));
+				await navigator.clipboard.writeText(text);
+				note.textContent = 'Page copied as Markdown. Paste it into any chat.';
+			} catch {
+				note.textContent = 'Could not copy the page.';
+			}
+		});
 		update();
 		box.querySelector<HTMLElement>('.ask-block')!.hidden = false;
 	}
@@ -102,7 +114,7 @@ const data = JSON.stringify({ providers, prompts }).replace(/</g, '\\u003c');
 	/* Like the Torres theme select: canvas ground, ink text, 1px border, small corners, a chevron in currentColor. */
 	.ask-provider {
 		width: 100%;
-		height: 2.25rem;
+		height: 2.75rem;
 		margin-top: 0.75rem;
 		padding: 0 2rem 0 0.75rem;
 		color: var(--ink);
@@ -128,7 +140,14 @@ const data = JSON.stringify({ providers, prompts }).replace(/</g, '\\u003c');
 	.ask-links li + li {
 		margin-top: 0.25rem;
 	}
-	.ask-links a {
+	.ask-links a,
+	.ask-copy {
+		padding: 0;
+		background: none;
+		border: 0;
+		cursor: pointer;
+		font-family: inherit;
+		text-align: left;
 		color: var(--link);
 		font-size: 0.9375rem;
 		line-height: 1.45;
@@ -136,13 +155,15 @@ const data = JSON.stringify({ providers, prompts }).replace(/</g, '\\u003c');
 		text-underline-offset: 0.18em;
 		transition: text-decoration-thickness 160ms ease;
 	}
-	.ask-links a:focus-visible {
+	.ask-links a:focus-visible,
+	.ask-copy:focus-visible {
 		outline: 2px solid var(--accent);
 		outline-offset: 3px;
 		border-radius: var(--radius-sm);
 	}
 	@media (hover: hover) and (pointer: fine) {
-		.ask-links a:hover {
+		.ask-links a:hover,
+		.ask-copy:hover {
 			text-decoration-thickness: 2px;
 		}
 	}

@@ -224,36 +224,128 @@ nav.sidebar a {
   padding: 0.1em 0.3em;
   border-radius: var(--radius-sm);
 }
-.pagination-links a,
-site-search button[data-open-modal],
 site-search dialog {
   border-radius: var(--radius);
 }
-/* A control's edge must be visible: border, not hairline. */
+/* A control's edge must be visible: border, not hairline. Controls take the small corners. */
 site-search button[data-open-modal] {
   border-color: var(--border);
+  border-radius: var(--radius-sm);
 }
 #starlight__search {
   --sl-search-corners: var(--radius-sm);
 }
+:root {
+  --sl-menu-button-size: 2.25rem; /* an icon button, like the graph and zoom buttons */
+}
+site-search button[data-open-modal] {
+  height: 2.75rem;
+  color: var(--ink);
+  background: var(--canvas);
+  border: 1px solid var(--border);
+}
+@media (max-width: 49.99rem) {
+  /* On phones the search button is an icon button. */
+  site-search button[data-open-modal] {
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+/* Torres controls: canvas ground, ink text or icon, a 1px border edge, small corners, the one focus ring. There is
+   no secondary or filled button in Torres, so Starlight's filled menu button and its theme select become controls. */
 .sl-menu-button {
+  color: var(--ink);
+  background: var(--canvas);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm); /* nothing is fully round */
+  box-shadow: none;
+}
+.sl-menu-button:has(~ :popover-open) {
+  background: var(--canvas-soft);
+}
+starlight-theme-select label {
+  height: 2.75rem;
+  color: var(--ink);
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+starlight-theme-select select {
+  height: 100%;
+  margin-inline: 0;
+  padding-inline: 2.25rem 2rem;
+  font-size: 1rem; /* the meta style */
+}
+starlight-theme-select .label-icon {
+  inset-inline-start: 0.75rem;
+}
+starlight-theme-select .caret {
+  inset-inline-end: 0.5rem;
+}
+starlight-theme-select select:focus-visible {
+  outline: none;
+}
+starlight-theme-select label:has(select:focus-visible),
+.sl-menu-button:focus-visible,
+.expressive-code .copy button:focus-visible,
+.starlight-image-zoom-control:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+/* The copy button of code blocks: a small control on the code panel. */
+body .expressive-code .copy button {
+  width: 2.25rem; /* the size of the other icon buttons */
+  height: 2.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+/* Previous and next page: titles in ink, no underline at rest, a 2px accent underline on hover. Links, not boxes. */
+.pagination-links a {
+  padding: 0.75rem 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--ink-muted);
+}
+.pagination-links .link-title {
+  color: var(--ink);
+  text-decoration: underline 2px transparent;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 160ms ease;
+}
+.pagination-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+@media (hover: hover) and (pointer: fine) {
+  .pagination-links a:hover .link-title {
+    text-decoration-color: var(--accent);
+  }
 }
 /* Older and newer page: a heading voice at a quiet size. */
 .pagination-links .link-title {
   font: 600 1.125rem/1.3 'Bricolage Grotesque Variable', system-ui, sans-serif;
 }
 
-/* Motion: press feedback on the few real buttons, and a short expand for "Diagram source".
-   Navigation, search and the sidebar stay instant; they are used too often to animate. */
+/* Motion: press feedback on the buttons and controls (0.97; small icon buttons 0.95) in 140ms, and a short expand for "Diagram source". Links do not press. Navigation, search and the sidebar stay
+   instant; they are used too often to animate. */
 @media (prefers-reduced-motion: no-preference) {
-  .pagination-links a,
+  /* Only the press moves: a transition on background or border colour would lag behind a theme switch. */
   site-search button[data-open-modal],
-  .sl-menu-button {
-    transition: scale 140ms var(--ease-out), border-color 160ms ease;
+  .sl-menu-button,
+  .starlight-image-zoom-control {
+    transition: scale 140ms var(--ease-out);
   }
-  :is(.pagination-links a, site-search button[data-open-modal], .sl-menu-button):active {
+  body .expressive-code .copy button {
+    transition: scale 140ms var(--ease-out), opacity 160ms ease;
+  }
+  site-search button[data-open-modal]:active {
     scale: 0.97;
+  }
+  :is(.sl-menu-button, .starlight-image-zoom-control, .expressive-code .copy button):active {
+    scale: 0.95;
   }
   @supports (interpolate-size: allow-keywords) {
     .sl-markdown-content details {
@@ -354,12 +446,12 @@ html:has(.t-window[open]) {
   font-weight: 500;
   line-height: 1.3;
 }
-/* A small icon button: a control, so a 1px border edge; presses to 0.95. */
+/* An icon button: a control, so a 1px border edge; a 2.25rem square with a 1.25rem line icon; presses to 0.95. */
 .t-icon {
   display: grid;
   place-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
   padding: 0;
   color: var(--ink);
   background: var(--canvas);
@@ -385,9 +477,6 @@ html:has(.t-window[open]) {
   outline-offset: 3px;
 }
 @media (hover: hover) and (pointer: fine) {
-  .t-icon:hover {
-    background: var(--canvas-soft);
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   .t-window,
@@ -404,4 +493,65 @@ html:has(.t-window[open]) {
 /* The right sidebar, while it has something to scroll, keeps the wheel to itself (see PageSidebar.astro). */
 .right-sidebar.scrolls {
   overscroll-behavior: contain;
+}
+
+/* Diagram zoom (starlight-image-zoom) in Torres terms: the diagram moves across the screen, so ease-in-out in 250ms;
+   the veil is the page ground; the close control is a square control with a 1px border, not a circle. The white
+   plate of the diagrams (above) stays on the zoomed image. */
+html:root {
+  --starlight-image-zoom-animation-duration: 250ms;
+  --starlight-image-zoom-backdrop-bg: var(--canvas);
+}
+body .starlight-image-zoom-image {
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+body .starlight-image-zoom-control {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  color: var(--ink);
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+/* The plugin's filled icons give way to the Torres line icons of the other icon buttons (1.5px, round joins):
+   enlarge on the image, shrink in the zoomed view. Drawn as a mask, so they take the button's ink. */
+body .starlight-image-zoom-control svg {
+  display: none;
+}
+body .starlight-image-zoom-control::before {
+  content: '';
+  width: 1.25rem;
+  height: 1.25rem;
+  background: currentColor;
+  mask: var(--t-icon-enlarge) center / contain no-repeat;
+}
+body dialog .starlight-image-zoom-control::before {
+  mask-image: var(--t-icon-shrink);
+}
+:root {
+  --t-icon-enlarge: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6'/%3E%3C/svg%3E");
+  --t-icon-shrink: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 4l-5 5M11 5v4h4M4 16l5-5M9 15v-4H5'/%3E%3C/svg%3E");
+}
+body .starlight-image-zoom-control:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+body .starlight-image-zoom-dialog figcaption {
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  text-align: center;
+  background: color-mix(in srgb, var(--canvas-soft) 92%, transparent);
+  border-top: 1px solid var(--hairline);
+}
+
+/* Hover, the same on every control (mouse and trackpad only): the 1px edge turns ink, at once. Nothing else changes,
+   like a link whose underline only thickens. */
+@media (hover: hover) and (pointer: fine) {
+  :is(.t-icon, .starlight-image-zoom-control, .sl-menu-button, site-search button[data-open-modal], starlight-theme-select label, .ask-provider, .expressive-code .copy button):hover {
+    border-color: var(--ink);
+  }
 }

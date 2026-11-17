@@ -30,7 +30,7 @@ import { Icon } from '@astrojs/starlight/components';
 					const select = picker.querySelector('select');
 					if (select) select.value = theme;
 					const icon = document.querySelector('#theme-icons')?.content.querySelector('.' + theme);
-					if (icon) picker.querySelector('svg.label-icon')?.replaceChildren(...icon.cloneNode(true).childNodes);
+					if (icon) picker.querySelector('.label-icon svg')?.replaceChildren(...icon.cloneNode(true).childNodes); // Starlight 0.43: the icon sits in span.label-icon
 				});
 			},
 		};

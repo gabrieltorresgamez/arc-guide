@@ -1,17 +1,25 @@
 ---
-// Starlight's page title with breadcrumbs above it: the sidebar groups that hold the current page. The groups have
-// no pages of their own, so the crumbs are text. Pages outside any group (Review, Glossary, home) get none.
+// Starlight's page title with breadcrumbs above it: the sidebar groups that hold the current page. A category links
+// to its overview page (the group's "Overview" entry, written by pipeline/build.py); a subgroup links to its section
+// on that page. Groups without an overview ("Concepts", "Start here") stay text. Pages outside any group get none.
 import Default from '@astrojs/starlight/components/PageTitle.astro';
 
-type Entry = { type: string; label: string; isCurrent?: boolean; entries?: Entry[] };
-function trail(entries: Entry[], path: string[] = []): string[] | undefined {
+type Entry = { type: string; label: string; href?: string; isCurrent?: boolean; entries?: Entry[] };
+type Crumb = { label: string; href?: string };
+// Heading ids as Starlight makes them for these titles: lowercase, punctuation dropped, spaces to hyphens.
+const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
+function trail(entries: Entry[], path: Crumb[] = []): Crumb[] | undefined {
 	for (const e of entries) {
 		if (e.type === 'link' && e.isCurrent) return path;
-		const found = e.type === 'group' ? trail(e.entries ?? [], [...path, e.label]) : undefined;
+		if (e.type !== 'group') continue;
+		const overview = e.entries?.find((x) => x.type === 'link' && x.label === 'Overview')?.href;
+		const parent = path.at(-1)?.href?.split('#')[0];
+		const found = trail(e.entries ?? [], [...path, { label: e.label, href: overview ?? (parent && `${parent}#${anchor(e.label)}`) }]);
 		if (found) return found;
 	}
 }
-const crumbs = trail(Astro.locals.starlightRoute.sidebar as Entry[]) ?? [];
+const here = Astro.url.pathname;
+const crumbs = (trail(Astro.locals.starlightRoute.sidebar as Entry[]) ?? []).map((c) => (c.href === here ? { label: c.label } : c));
 ---
 
 {
@@ -19,7 +27,7 @@ const crumbs = trail(Astro.locals.starlightRoute.sidebar as Entry[]) ?? [];
 		<nav aria-label="Breadcrumb" class="crumbs">
 			<ol>
 				{crumbs.map((c) => (
-					<li>{c}</li>
+					<li>{c.href ? <a href={c.href}>{c.label}</a> : c.label}</li>
 				))}
 			</ol>
 		</nav>
@@ -41,6 +49,24 @@ const crumbs = trail(Astro.locals.starlightRoute.sidebar as Entry[]) ?? [];
 	.crumbs li + li::before {
 		content: '›' / '';
 		margin-inline: 0.5rem;
+	}
+	/* Navigation links: no underline at rest, a 2px accent underline on hover (Torres: titles in lists). */
+	.crumbs a {
+		color: inherit;
+		text-decoration: underline 2px transparent;
+		text-underline-offset: 0.18em;
+		transition: text-decoration-color 160ms ease;
+	}
+	.crumbs a:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+		border-radius: var(--radius-sm);
+	}
+	@media (hover: hover) and (pointer: fine) {
+		.crumbs a:hover {
+			color: var(--ink);
+			text-decoration-color: var(--accent);
+		}
 	}
 	.crumbs + :global(h1) {
 		margin-top: 0.25rem;

@@ -6,7 +6,7 @@
 import Default from '@astrojs/starlight/components/PageSidebar.astro';
 import AskAI from './AskAI.astro';
 
-const isConcept = Astro.locals.starlightRoute.id.startsWith('concepts/');
+const isConcept = /^concepts\/[^/]+\/[^/]+$/.test(Astro.locals.starlightRoute.id); // a concept page, not a category overview
 const title = Astro.locals.starlightRoute.entry.data.title;
 ---
 

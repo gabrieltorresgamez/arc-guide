@@ -279,6 +279,16 @@ def main(argv=None):
     for cat in by_cat:
         txt = llms_txt(cats[cat]["title"], cats[cat]["scope"], [(t, [(a["title"], c.SITE_URL + art_urls(a)[1], a["summary"]) for a in items]) for t, items in groups(cat)])
         c.write_atomic(PUB / "concepts" / cat / "llms.txt", txt)
+        # overview page: the category's scope, then each subgroup (a section the breadcrumbs link to) with its pages
+        def overview(md, gs=groups(cat)):
+            link = (lambda a: f"[{a['title']}]({c.SITE_URL}{art_urls(a)[1]})") if md else (lambda a: f"[{a['title']}]({art_urls(a)[0]})")
+            lists = [(t, "\n".join(f"- {link(a)}: {a['summary']}" for a in items)) for t, items in gs]
+            scope = cats[cat]["scope"]
+            intro = "This category covers " + (scope[0].lower() + scope[1:] if scope[1:2].islower() else scope)  # keep "ISO", "UML"
+            return "\n\n".join([intro] + [l if len(lists) == 1 else f"## {t}\n\n{l}" for t, l in lists])
+        title = cats[cat]["title"]
+        write_page(f"concepts/{cat}", title, f"Overview of the {title} pages: what each one covers, in one sentence.",
+                   overview(False), f"# {title}\n\n" + overview(True), f"/concepts/{cat}/llms.txt")
     # guides
     gl = []
     for i, g in enumerate(c.TAXONOMY["guides"]):
@@ -345,7 +355,8 @@ def main(argv=None):
         if not cats[k].get("subcategories"):
             return [{"slug": f"concepts/{k}/{a['slug']}"} for a in groups(k)[0][1]]  # explicit list, so `order:` is respected
         return [{"label": t, "collapsed": True, "items": [{"slug": f"concepts/{k}/{a['slug']}"} for a in items]} for t, items in groups(k)]
-    sb.append({"label": "Concepts", "items": [{"label": cats[k]["title"], "collapsed": True, "items": cat_items(k)} for k in cats if k in by_cat]})
+    sb.append({"label": "Concepts", "items": [{"label": cats[k]["title"], "collapsed": True, "items": [{"label": "Overview", "slug": f"concepts/{k}"}] + cat_items(k)}
+                                              for k in cats if k in by_cat]})  # "Overview" first: the breadcrumbs link to it
     sb += [{"label": "Review", "slug": "review/checklists"}, {"label": "Glossary", "slug": "glossary"}]
     c.write_json(SITE / "sidebar.json", sb)
     rep = [f"articles: {len(arts)}; guides: {len(gl)}; diagrams rendered: {n_diag}; failed: {len(bad_diag)}"] + [f"- FAIL diagram {b}" for b in bad_diag]
@@ -353,7 +364,9 @@ def main(argv=None):
     cf, cw = check_content(arts)
     fails += cf
     rep += [f"- WARN {w}" for w in cw]
-    r = subprocess.run(["npm", "run", "build"], cwd=SITE, capture_output=True, text=True, env=os.environ)
+    # --force: Astro's content cache can keep pages that link a stylesheet the new build no longer writes (seen when the
+    # Expressive Code settings changed); every page is regenerated here anyway, so the cache only adds that risk.
+    r = subprocess.run(["npm", "run", "build", "--", "--force"], cwd=SITE, capture_output=True, text=True, env=os.environ)
     if r.returncode:
         fails.append("npm run build failed:\n" + (r.stdout + r.stderr)[-2000:])
     else:
@@ -519,7 +532,11 @@ def check_dist(arts):
     for h in dist.rglob("*.html"):
         if h.name == "404.html":
             continue
-        tags = re.findall(r"<link\b[^>]*>", h.read_text(errors="replace"))
+        page = h.read_text(errors="replace")
+        tags = re.findall(r"<link\b[^>]*>", page)
+        for asset in set(re.findall(r'(?:href|src)="(/_astro/[^"]+)"', page)):  # a stylesheet or script that is not there
+            if not (dist / asset.lstrip("/")).exists():
+                fails.append(f"{h.relative_to(dist)}: links {asset}, which the build did not write")
         if not any('rel="alternate"' in t and "text/markdown" in t for t in tags):
             fails.append(f"{h.relative_to(dist)}: missing rel=alternate text/markdown")
         if not any('rel="describedby"' in t for t in tags):
