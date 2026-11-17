@@ -56,7 +56,7 @@ In publish-subscribe (often called pub/sub), a sender publishes an event without
 
 **The elements**
 
-- **Publisher:** the sender. It puts events on one input channel.
+- **Publisher:** the sender. It puts events on one input channel [src:2].
 - **Subscribers:** the receivers. Each one has its own output channel.
 - **Broker or event bus:** the intermediary. It copies each message from the input channel to the output channel of every subscriber that is interested in it.
 

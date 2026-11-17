@@ -6,11 +6,13 @@ Slow (about one request per second per site), so it is not part of the build. Ru
 import re
 import ssl
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 
 from pipeline import common as c
@@ -25,6 +27,11 @@ def blocked(raw):
 
 
 def probe(url):
+    if "pmc.ncbi.nlm.nih.gov/articles/" in url:  # PMC shows scripts a browser check; fetch_public reads it via Europe PMC
+        try:
+            return "captcha or block page" if blocked(c.fetch_public(url)) else None
+        except Exception as e:
+            return type(e).__name__
     req = urllib.request.Request(urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~"), headers={"User-Agent": "arc-guide-linkcheck/1.0 (non-commercial)"})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
@@ -54,15 +61,30 @@ def main(slugs):
             continue
         for s in meta.get("sources", []):
             pages[s["url"]].append(f.parent.name)
-    last, bad = defaultdict(float), []
-    for i, (u, who) in enumerate(sorted(pages.items()), 1):
-        host = urllib.parse.urlparse(u).hostname or ""
-        time.sleep(max(0, last[host] + 1.0 - time.time()))
-        last[host] = time.time()
-        if err := probe(u):
-            bad.append(f"- {err}: {u} (in {', '.join(who[:3])}{'...' if len(who) > 3 else ''})")
-        if i % 100 == 0:
-            print(f"{i}/{len(pages)} checked, {len(bad)} problems")
+    by_host = defaultdict(list)  # one request per second per host, different hosts in parallel
+    for u, who in sorted(pages.items()):
+        by_host[urllib.parse.urlparse(u).hostname or ""].append((u, who))
+    bad, done = [], [0]
+    lock = threading.Lock()
+
+    def run_host(items):
+        for u, who in items:
+            started = time.time()
+            err = probe(u)
+            with lock:
+                done[0] += 1
+                if err:
+                    bad.append((u, who))
+                if done[0] % 25 == 0:
+                    print(f"[{done[0]}/{len(pages)}] checked, {len(bad)} problems", flush=True)
+            time.sleep(max(0, 1.0 - (time.time() - started)))
+
+    with ThreadPoolExecutor(max_workers=16) as pool:  # ponytail: 16 hosts at once; lower it if a firewall objects
+        list(pool.map(run_host, by_host.values()))
+    if bad:  # timeouts, 429 and 503 are often transient: check each failure once more after a pause
+        print(f"rechecking {len(bad)} failures in 30 seconds", flush=True)
+        time.sleep(30)
+        bad = [f"- {err}: {u} (in {', '.join(who[:3])}{'...' if len(who) > 3 else ''})" for u, who in sorted(bad) if (err := probe(u))]
     c.write_report("linkcheck", [f"{date.today()}: {len(pages)} URLs, {len(bad)} problems", ""] + bad)
     print(f"{len(pages)} URLs, {len(bad)} problems, see build/reports/linkcheck.md")
     sys.exit(1 if bad else 0)

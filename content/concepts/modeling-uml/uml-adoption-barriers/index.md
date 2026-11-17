@@ -55,7 +55,7 @@ UML 2 added precision. That precision aimed at two other uses: blueprints and pr
 
 **Drift from the standard.** Informal users rarely follow every detail of the standard. The further they move from it, the more their usage diverges.
 
-**What practice looks like.** Petre's interviews with practitioners describe selective users. They treat UML as a tool for thinking. They use it only as long as it helps, then move on. Petre found that practitioners tend to use UML either in early design or in implementation. They rarely use it in both.
+**What practice looks like.** Petre's interviews with practitioners describe selective users. They treat UML as a tool for thinking. They use it only as long as it helps, then move on. Petre found that practitioners tend to use UML either in early design or in implementation [src:4]. They rarely use it in both.
 
 **Another approach.** The C4 model is one option (see the article C4 Model). It is presented as easy to learn and friendly to developers. It is also notation independent.
 

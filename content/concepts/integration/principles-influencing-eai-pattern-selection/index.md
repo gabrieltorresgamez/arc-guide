@@ -57,7 +57,7 @@ Coupling is a main criterion for choosing among them. Even integrated applicatio
 
 Two styles show the difference clearly.
 
-**Shared database.** Several applications use one common schema (the structure of the stored data). Designing one schema that meets the needs of many applications is very difficult. It is also awkward for developers. Martin Fowler describes an integration database as a point of deep coupling. It raises the risk of changing any application that uses it. This works against Design for Change.
+**Shared database.** Several applications use one common schema (the structure of the stored data). Designing one schema that meets the needs of many applications is very difficult. It is also awkward for developers. Martin Fowler describes an integration database as a point of deep coupling [src:4]. It raises the risk of changing any application that uses it. This works against Design for Change.
 
 **Messaging.** Applications connect to a common messaging system. They exchange data and invoke behavior through messages. This loosens two kinds of coupling:
 

@@ -71,7 +71,6 @@ The C4 Model also has component diagrams. They are optional. You create them onl
 
 **More about component views.**
 
-
 - **Component View Refinement Levels:** A building block view is built in levels. Each level zooms into chosen blocks of the level above. Only important, risky, complex or volatile blocks get refined. Simple or standard parts are left out.
 
 **In arc42.** arc42 describes this view in chapter 5. See the article arc42 Building Block View.

@@ -51,7 +51,7 @@ review:
 
 ## Explanation
 
-Domain-Driven Design, or DDD, takes its name from a 2003 book by Eric Evans. The book presents the approach as a catalog of patterns.
+Domain-Driven Design, or DDD, takes its name from a 2003 book by Eric Evans [src:1]. The book presents the approach as a catalog of patterns.
 
 DDD suits complex domains. These are business areas with a lot of messy logic that someone must organize. The "domain" is the business area the software serves. A "domain model" is the organized description of that area.
 

@@ -48,7 +48,7 @@ review:
 
 ISO 25010 is a standard list of product quality characteristics.
 
-**The two vocabularies differ in size.** The quality model from Bass et al. has about 10 attributes. ISO/IEC 25010:2023 has nine characteristics, each with subcharacteristics.
+**The two vocabularies differ in size.** The quality model from Bass et al. has about 10 attributes. ISO/IEC 25010:2023 has nine characteristics, each with subcharacteristics [src:4].
 
 **Some catalog terms are missing from ISO 25010.** Operational topics such as deployability are not among the nine characteristics. The arc42 quality model treats deployable as a sub-goal of operable.
 

@@ -101,7 +101,7 @@ review:
 
 ## Explanation
 
-A class diagram shows classes and the links between them. See UML Class Diagram for the full set of relationship types.
+A class diagram shows classes and the links between them.
 
 **Associations.** An association is a line between two classes. It usually stands for something like a field in a class. The link is always there, so you can always ask an order for its customer.
 

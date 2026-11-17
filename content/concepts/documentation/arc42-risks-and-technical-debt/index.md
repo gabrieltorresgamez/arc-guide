@@ -51,7 +51,6 @@ Chapter 11 of arc42 is a list of identified technical risks or technical debts, 
 - analyze data and data structures
 - analyze the source code
 
-
 ## Example
 
 A web shop lists three entries in priority order. The payment provider has no fallback, which is a risk, and the measure is a second provider or a queue. The order service has no automated tests, which is technical debt, and the measure is to add tests before the next release. The search feature relies on a library that is no longer maintained, which is a risk, and the measure is to plan its replacement.

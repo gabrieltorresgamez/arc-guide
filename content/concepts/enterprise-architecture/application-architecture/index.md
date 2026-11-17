@@ -62,7 +62,7 @@ Enterprise architecture is commonly split into four domains: business, data, app
 
 TOGAF handles this work in Phase C (see "TOGAF"). Its aim is to define the major kinds of application system the business needs to process its data and support its work. The phase decides which kinds of application are relevant to the enterprise. It is not application system design.
 
-TOGAF describes applications as logical groups of capabilities, not as computer systems. Each group manages data objects and supports business functions. That ties the application layer to the data and business architectures.
+TOGAF describes applications as logical groups of capabilities, not as computer systems [src:1]. Each group manages data objects and supports business functions. That ties the application layer to the data and business architectures.
 
 TOGAF also defines applications without reference to particular technologies. This keeps the layer logical and free of implementation choices.
 

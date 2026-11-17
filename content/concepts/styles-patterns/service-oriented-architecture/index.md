@@ -53,19 +53,19 @@ review:
 
 ## Explanation
 
+The OASIS reference model defines Service-Oriented Architecture (SOA) as a paradigm, or way of thinking, for organizing and using distributed capabilities. Those capabilities may be under the control of different ownership domains.
 
+**Services.** A service is a mechanism that gives access to one or more capabilities. Access goes through a prescribed interface and follows the constraints and policies in the service description.
 
+**Interface and contract.** The service interface is the means of interacting with a service. The implementation behind it is typically hidden from consumers, apart from what the interface exposes and what they need to judge whether the service fits. A contract is an agreement between two or more parties about the conditions of using a service.
 
+**Description and discovery.** A service description holds the information needed to use a service, or to decide whether to use it. Consumers often become aware of services through discovery mechanisms, for example a registry.
 
-
-
-
-
-
+**Different owners.** Ownership boundaries are a motivating consideration in SOA. A provider and its consumers may belong to different organizations.
 
 **Central hubs.** Separately from SOA, the Message Broker pattern routes all messages through one central broker, sometimes called the hub-and-spoke style.
 
-**A loose term.** Martin Fowler notes that SOA means many different things. For some people it means exposing software through web services. For others it means asynchronous document messaging. In their microservices article, James Lewis and Martin Fowler say that the SOA they usually came across centered on ESBs used to integrate monolithic applications. So check which meaning a document intends.
+**A loose term.** Martin Fowler notes that SOA means many different things [src:4]. For some people it means exposing software through web services. For others it means asynchronous document messaging. In their microservices article, James Lewis and Martin Fowler say that the SOA they usually came across centered on ESBs used to integrate monolithic applications. So check which meaning a document intends.
 
 **Contrast with microservices.** The microservice community prefers smart endpoints and dumb pipes. ESB products, by contrast, often include sophisticated facilities for routing, choreography, transformation and business rules.
 

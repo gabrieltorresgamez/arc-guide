@@ -102,4 +102,4 @@ An online ticket shop expects a rush when a popular event goes on sale. The team
 
 ## Trade-offs
 
-One broader finding applies: tactics in general have been extended to many quality attributes since 2003. A mapping study found little rigor in how they are defined and little industrial evidence for their use. Treat tactic lists as guidance, and check that a chosen tactic really helps in your case.
+One broader finding applies: tactics in general have been extended to many quality attributes since 2003 [src:2]. A mapping study found little rigor in how they are defined and little industrial evidence for their use. Treat tactic lists as guidance, and check that a chosen tactic really helps in your case.

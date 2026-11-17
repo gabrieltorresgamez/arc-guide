@@ -71,7 +71,7 @@ A collaboration diagram is the BPMN name for a picture in which separate pools e
 
 **Pools versus lanes**
 
-A pool ranks above its lanes. Lanes always sit inside a pool, and their boundaries are process boundaries from start to end. For operational-level models, Camunda recommends separate pools for the participants instead of lanes. It also advises avoiding lanes in most models, because lanes make changes harder to maintain.
+A pool ranks above its lanes. Lanes always sit inside a pool, and their boundaries are process boundaries from start to end. For operational-level models, Camunda recommends separate pools for the participants instead of lanes [src:1]. It also advises avoiding lanes in most models, because lanes make changes harder to maintain.
 
 **What separate pools show**
 
@@ -97,4 +97,4 @@ A customer orders a meal from a restaurant. The diagram has two pools: "Customer
 
 ## Trade-offs
 
-Separate pools make interaction explicit and show who controls each process. Pools should be ordered so message flows do not cross other pools. Camunda advises avoiding lanes in most models because they make changes harder to maintain. A signal is compact, but it cannot address one specific instance.
+Separate pools make interaction explicit and show who controls each process. Pools should be ordered so message flows do not cross other pools. Camunda advises avoiding lanes in most models because they make changes harder to maintain [src:1]. A signal is compact, but it cannot address one specific instance.

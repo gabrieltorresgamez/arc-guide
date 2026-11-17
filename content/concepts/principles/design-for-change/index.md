@@ -70,7 +70,7 @@ Some changes are probable: a new payment provider, a different database, a new e
 
 **Keep parts independent.** Changes to one subsystem should be possible without touching the others. arc42 also treats extensibility, the ability to add features, as a goal. Plugin and event-driven architectures support it.
 
-**Spend flexibility with care.** Flexible frameworks and components cost extra up front, and the payback comes later. XP advises not building them for the first case that needs the functionality.
+**Spend flexibility with care.** Flexible frameworks and components cost extra up front, and the payback comes later. XP advises not building them for the first case that needs the functionality [src:2].
 
 ## Example
 

@@ -60,7 +60,7 @@ Such systems show clear signs of unregulated growth. They are repaired again and
 
 **Different rates of change.** Systems and their parts evolve at different rates. The Shearing Layers pattern builds on this idea (see Shearing Layers).
 
-**Architecture erosion.** A systematic mapping study says architecture erosion harms software development. It also says erosion shows up in more than architectural violations and structural issues. The study asks practitioners to raise awareness of its grave consequences. It also calls for more empirical research on detecting and addressing erosion (see Big Ball of Mud).
+**Architecture erosion.** A systematic mapping study says architecture erosion harms software development. It also says erosion shows up in more than architectural violations and structural issues. The study asks practitioners to raise awareness of its grave consequences. It also calls for more empirical research on detecting and addressing erosion.
 
 **Related patterns.** Two related patterns are covered here:
 

@@ -50,13 +50,13 @@ review:
 
 ## Explanation
 
-Information hiding was first described by David Parnas in 1972. It answers a simple question: how should you cut a system into parts?
+Information hiding was first described by David Parnas in 1972 [src:3]. It answers a simple question: how should you cut a system into parts?
 
 Parnas's answer is to start from decisions, not from processing steps. First, list the design decisions that are difficult or likely to change. Many decisions are questionable and may change under many circumstances. Then design each module to hide one such decision from the other modules.
 
 **The interface is the only contact point.** A module's interface is chosen to reveal as little as possible about its inner workings. Clients perform operations purely through that interface. They do not see how the work gets done.
 
-**Why this helps.** If the hidden decision changes, clients do not need to adapt. They never depended on it.
+**Why this helps.** If the hidden decision changes, clients do not need to adapt.
 
 **Link to the black box idea.** You can use a black box by knowing only its responsibility and its input and output interfaces. This also reduces documentation effort, because responsibility and interface are enough.
 

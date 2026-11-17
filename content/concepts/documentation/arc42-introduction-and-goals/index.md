@@ -17,7 +17,7 @@ related:
 - stakeholder
 - quality-attribute-scenario
 checks:
-- Section 1 lists at most five quality goals.
+- Section 1.2 lists the top three quality goals, at most five, ordered by priority.
 - Each quality goal has a brief scenario, not just a keyword.
 - The stakeholder table gives roles, names and expectations.
 - The requirements overview is short and links to existing requirements documents.
@@ -40,7 +40,7 @@ review:
 
 ## Explanation
 
-Section 1 of arc42 (see the article arc42 Architecture Documentation Template) is the entry point. It describes the requirements and driving forces that architects and the development team must consider.
+Section 1 of arc42 (see the article arc42 Architecture Documentation Template) is the entry point. It describes the requirements and driving forces that architects and the development team must consider [src:1].
 
 **What goes into it**
 

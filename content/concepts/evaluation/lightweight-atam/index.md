@@ -42,7 +42,7 @@ review:
 
 A full ATAM review (see Architecture Tradeoff Analysis Method (ATAM)) uses moderated workshops. It takes anywhere from two days to several weeks.
 
-
+Lightweight variants, sometimes called mini-ATAM or ATAM-lite, squeeze the method into one day, or even half a day. They are common in agile settings, where a formal two-day workshop is impractical.
 
 **How the effort shrinks**
 
@@ -56,7 +56,7 @@ The main cost drivers of ATAM are the number of stakeholders and the number of s
 
 **What you still get**
 
-ATAM scenario analysis produces trade-offs, sensitivity points, and risks or non-risks. See ATAM Findings: Risks, Non-Risks, Sensitivity Points and Trade-off Points.
+ATAM scenario analysis produces trade-offs, sensitivity points, and risks or non-risks. See Architecture Tradeoff Analysis Method (ATAM).
 
 **Who runs it**
 

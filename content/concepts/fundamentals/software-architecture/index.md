@@ -93,8 +93,6 @@ There is no single agreed definition of software architecture. Several sources d
 
 **Building blocks and decisions.** A software architecture curriculum describes architecture through building blocks, their interfaces and relationships, and through decisions with system-wide consequences. It makes architects responsible for meeting requirements and creating the architecture design.
 
-
-
 **Why it matters.** Architectural choices are costly to change. A poor architecture contributes to the growth of cruft, meaning messy leftovers that make software harder to modify.
 
 See the articles Conway's Law and Architecture Level for related ideas.

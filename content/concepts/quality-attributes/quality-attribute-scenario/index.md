@@ -48,7 +48,7 @@ review:
 
 ## Explanation
 
-Requirements such as "the system must be fast" or "easy to use" are hard to check. A quality scenario fixes this. It describes a concrete situation and the response the system should show. It also states how to measure that response. The requirement becomes specific, and you can decide whether the system fulfills it.
+Requirements such as "the system must be fast" or "easy to use" are hard to check. A quality scenario fixes this. It describes a concrete situation and the response the system should show [src:1]. It also states how to measure that response. The requirement becomes specific, and you can decide whether the system fulfills it.
 
 **The long form.** The Software Engineering Institute (SEI) template has six elements, and the book by Bass et al. follows them. arc42 calls this the long form. arc42 also offers a short form, called Q42, for lighter use.
 

@@ -52,10 +52,10 @@ Basic structural views do not answer every question. Some stakeholders ask how d
 
 This article draws on the Rozanski & Woods set of viewpoints and on arc42, a documentation template. They describe these topics:
 
-- **Information viewpoint.** It describes how the architecture stores, manipulates, manages and distributes information.
-- **Development viewpoint.** It describes the architecture that supports the software development process.
-- **Operational viewpoint.** It describes how the system is operated, administered and supported once it runs in production.
-- **Deployment viewpoint.** It describes the environment the system is deployed into: hardware, network and runtime dependencies.
+- **Information viewpoint.** It describes how the architecture stores, manipulates, manages and distributes information [src:1].
+- **Development viewpoint.** It describes the architecture that supports the software development process [src:1].
+- **Operational viewpoint.** It describes how the system is operated, administered and supported once it runs in production [src:1].
+- **Deployment viewpoint.** It describes the environment the system is deployed into: hardware, network and runtime dependencies [src:1].
 - **Security.** Here it is a perspective, not a viewpoint. A perspective is a cross-cutting quality concern. Security is about reliably controlling, monitoring and auditing who can do what to which resources.
 - **Evolution.** This is also a perspective. It is about staying flexible as change arrives over the life of a system.
 

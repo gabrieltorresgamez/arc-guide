@@ -52,7 +52,7 @@ review:
 
 UML stands for Unified Modeling Language. It began when Grady Booch and James Rumbaugh merged their separate models into one unified model. The Object Management Group (OMG) then took ownership of it.
 
-**Versions.** UML 2.0, a major revision, replaced version 1.5 in 2005. Version 2.5 was formally released in 2015. Version 2.5.1 was adopted in December 2017.
+**Versions.** UML 2.0, a major revision, replaced version 1.5 in 2005 [src:1]. Version 2.5 was formally released in 2015 [src:1]. Version 2.5.1 was adopted in December 2017 [src:1].
 
 **The 2.5 rewrite.** The UML 2.5 specification was rewritten to be easier to read. The metamodel stayed largely unchanged. (The metamodel is the model that defines UML's own elements.)
 

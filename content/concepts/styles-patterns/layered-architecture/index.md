@@ -98,4 +98,4 @@ An online shop has three layers. The presentation layer shows product pages on t
 - **Strict vs. relaxed tiers:** the strict model has more latency and overhead. The relaxed model has more couplings, so changes get harder.
 - **Pass-through traffic:** closed layers limit dependencies. They can cause needless network traffic when a layer only forwards requests.
 - **Separate tiers:** hosting layers on different tiers improves scalability and resiliency. It adds latency from extra network communication.
-- **Upward calls:** the "never upward" rule needs callbacks, observers or events when a lower layer must notify a higher one. Use them with restraint.
+- **Upward calls:** the "never upward" rule needs callbacks, observers or events when a lower layer must notify a higher one [src:3]. Use them with restraint.

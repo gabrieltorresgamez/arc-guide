@@ -68,19 +68,19 @@ The conflicting forces are privacy and security, and availability during morning
 
 **Top scenarios** (example values for illustration):
 
-- *Peak availability:* On a Monday at 8:00, patients book appointments at peak load. Bookings succeed within 3 seconds.
+- *Peak availability (A1 from step 4):* On a Monday at 8:00, patients book appointments at peak load. Bookings succeed within 3 seconds.
 - *Integration:* A practice's management software is unreachable. Patients can still book, and the practice sees the booking later.
-- *Privacy:* A staff member of practice A tries to open a patient record from practice B. The system refuses and logs the attempt.
+- *Privacy (S1 from step 4):* A staff member of practice A tries to open a patient record from practice B. The system refuses and logs the attempt.
 
 **Decisions under review** (from the architect's presentation):
 
-- Booking calls the practice's own software directly.
+- Booking calls the practice's own software through the vendor's adapter and waits for the answer.
 - Reminders go through a queue.
 - ClinicBook keeps a copy of each practice's calendar.
 
 **Findings:**
 
-- **Risk.** Booking calls the practice software directly and waits for the answer. Some vendors' systems are slow in the morning. Scenario: the integration scenario. Consequence: bookings fail at peak. Suggested mitigation: save the booking in ClinicBook first and pass it on afterward.
+- **Risk.** Booking waits for the practice software's answer before it confirms. Some vendors' systems are slow in the morning. Scenario: the integration scenario. Consequence: bookings fail at peak. Suggested mitigation: save the booking in ClinicBook first and pass it on afterward.
 - **Non-risk.** ClinicBook stores the booking before it queues the reminder. Scenario: peak availability. Reason: an SMS or e-mail outage cannot block a booking.
 - **Sensitivity point.** The timeout for calls to the practice software. A small change strongly affects the response time at peak.
 - **Trade-off point.** How often the calendar copy refreshes. Frequent refreshes keep slots accurate but add load at peak. Rare refreshes ease load but risk double bookings. The team records its choice and reasons in section 9.

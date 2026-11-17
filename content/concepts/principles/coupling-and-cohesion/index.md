@@ -100,7 +100,7 @@ review:
 
 ## Explanation
 
-Coupling and cohesion are two ways to judge how a system is split into parts. The ideas come from structured design, published by Stevens, Myers and Constantine in 1974. A module is one such part.
+Coupling and cohesion are two ways to judge how a system is split into parts. The ideas come from structured design, published by Stevens, Myers and Constantine in 1974 [src:1]. A module is one such part.
 
 **Coupling** is about the links *between* modules. It can be low (also called loose or weak) or high (also called tight or strong). See *Loose Coupling*.
 
@@ -122,7 +122,7 @@ The article *Types of Cohesion* covers the range.
 
 - **High Cohesion:** High cohesion means the parts of a module belong together and serve one focused responsibility. A change to that responsibility then stays inside one module. It works best together with low coupling.
 - **Loose Coupling:** Loose coupling means building blocks depend on each other as little as possible, so a change in one rarely forces a change in another. The right level depends on how much control you have over both sides.
-- **Types of Cohesion:** Cohesion describes how well the parts of a module belong together. Seven types exist, from functional (strongest) to coincidental (weakest). Each type names the reason the parts were grouped.
+- **Types of Cohesion:** Cohesion describes how well the parts of a module belong together [src:2]. Seven types exist, from functional (strongest) to coincidental (weakest). Each type names the reason the parts were grouped.
 - **Connect or Disconnect:** Connecting components creates dependencies between them. Good design keeps few, narrow, explicit dependencies, and the right amount depends on how much control you have.
 - **Main Sequence (Balance of Abstractness and Instability):** The main sequence is an ideal line on a chart that plots how abstract a software component is against how unstable it is. Components are judged by their distance from that line.
 

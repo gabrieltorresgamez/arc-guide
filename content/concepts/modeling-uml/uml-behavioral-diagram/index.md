@@ -61,7 +61,7 @@ The behavior diagram types answer different questions:
 - **Timing diagram:** how long an action needs to change the state of an element.
 - **Interaction overview diagram:** the interactions in a system and how control flows between them.
 
-The arc42 runtime view (see Runtime View) uses these diagrams to describe scenarios. It lists activity diagrams, sequence diagrams and state machines as notations. arc42 advises activity diagrams with swimlanes for runtime scenarios. It also recommends sequence diagrams, because they show the responsibility of each building block.
+The arc42 runtime view (see Runtime View) uses these diagrams to describe scenarios. It lists activity diagrams, sequence diagrams and state machines as notations. arc42 advises activity diagrams with swimlanes for runtime scenarios [src:2]. It also recommends sequence diagrams, because they show the responsibility of each building block.
 
 The arc42 TPU example draws one scenario in four ways: as a sequence diagram, a communication diagram, an activity diagram and a swimlane activity diagram. In the swimlane version, the lanes are the level-1 building blocks.
 

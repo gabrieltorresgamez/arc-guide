@@ -6,12 +6,8 @@ review:
   flags:
   - unsupported:The suggested order of the six steps (people and papers first, code and decisions later)
     is a recommendation, not stated in the linked articles.
-  - unsupported:Asking the people who built the system as a way to find decision reasons is a practical
-    suggestion not stated in the linked articles.
   - unsupported:ClinicBook's partner list (SMS service, e-mail service) and its example building blocks,
     adapters and reminder risk are illustrative assumptions for the example.
-  - unsupported:Advice to share the finished sections with people who know the system and fix their corrections
-    is a practical suggestion not stated in the linked articles.
 ---
 
 ## Ordered steps to recover missing information in an existing project
@@ -21,6 +17,8 @@ Code shows what a system does. It does not show why it was built that way ([Moti
 I suggest the order below. It starts with information you can get from people and existing papers. It ends with what takes the most digging. Early results will be rough. Refine them as you learn more (Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start))).
 
 Write only what readers will use. Describe each thing once and reference it elsewhere ([Guidelines for Documentation](concept:guidelines-for-documentation)).
+
+**Work in timeboxes.** Start with one short session: three to five people who know the system go through the arc42 sections in two to four hours. For each section they note what readers need and what already exists, then work on the gaps. After that, give every documentation task a fixed timebox of at least 15 minutes and rarely more than 4 hours. Give the more valuable topics the longer timeboxes ([Implicit Architecture](concept:implicit-architecture)).
 
 ### Step 1: Find out who is involved and what matters most (arc42 section 1)
 
@@ -59,6 +57,8 @@ Budget, deadlines and mandated technologies count as constraints too.
 
 - A black box shows what a block does and offers. A white box shows what is inside ([Component View](concept:component-view)).
 - Do not trust old documents blindly. For a legacy system, recover the real architecture first ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
+- Make sure you can build the system from scratch. Then sketch its biggest structures from the code. A static analysis tool shows building blocks and their dependencies. Logs and stack traces show what the running system does ([Implicit Architecture](concept:implicit-architecture)).
+- Count commits per developer in version control. The counts show parts of the system where knowledge may be lost ([Implicit Architecture](concept:implicit-architecture)).
 - Group blocks by responsibility. Do not copy code packages such as Facade, Service or Dto into the diagram (Component View Antipattern: Lifting Code to Model Level ([Component View](concept:component-view))).
 - Zoom into a block only if it is important, risky, complex or volatile (Component View Refinement Levels ([Component View](concept:component-view))).
 - Every diagram needs a title that names its type and scope, and a legend.
@@ -73,7 +73,7 @@ The code can answer "what is here" ([Self-Documentation](concept:self-documentat
 - For each one, write the decision, the reason and the consequences, including the bad ones ([arc42 Architecture Decisions](concept:arc42-architecture-decisions)).
 - Use one short record per decision ([Architectural Decision Record](concept:architectural-decision-record)).
 - If nobody knows the reason, write it down as an assumption. Draft it as a decision record where you can ([Architecture Canvas](concept:architecture-canvas)).
-- Ask the people who built the system. Read the code with the question "why?".
+- Ask experienced developers of the system. They often know the solution strategy that the code does not show ([Implicit Architecture](concept:implicit-architecture)). Read the code with the question "why?".
 
 Section 4 holds the most fundamental decisions. Section 9 points there and does not repeat them.
 
@@ -104,6 +104,6 @@ In step 3, you check that data flows run both ways where they do. Appointment da
 
 ## After the first pass
 
-- Share the sections with the people who know the system. Fix what they correct.
+- Treat the first pass as a draft that aims at important content, not completeness. Share it with the people who know the system and use their feedback ([Implicit Architecture](concept:implicit-architecture)).
 - Keep the documentation small enough to maintain. Name one person who owns its quality ([Guidelines for Documentation](concept:guidelines-for-documentation)).
 - Update the sections when the system changes. Outdated documentation loses trust ([Motivation for Architecture Documentation](concept:motivation-for-architecture-documentation)).

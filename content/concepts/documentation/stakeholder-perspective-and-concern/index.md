@@ -17,8 +17,8 @@ related:
 - stakeholder-concern
 - architecture-view
 - architecture-viewpoint
-- iso-iec-ieee-42010-architecture-description-model
 - arc42-introduction-and-goals
+- iso-iec-ieee-42010-architecture-description-standard
 checks:
 - The document contains a stakeholder overview that lists roles and each stakeholder's expectations of
   the architecture and its documentation.
@@ -53,7 +53,7 @@ review:
 
 ## Explanation
 
-Start with the thing being described. ISO/IEC/IEEE 42010 calls it the *entity of interest*. It can be a system, software, an enterprise or another thing whose architecture you describe (see ISO/IEC/IEEE 42010 Architecture Description Model).
+Start with the thing being described. ISO/IEC/IEEE 42010 calls it the *entity of interest*. It can be a system, software, an enterprise or another thing whose architecture you describe (see ISO/IEC/IEEE 42010 Architecture Description Standard).
 
 **Stakeholders** are individuals, teams or organizations with an interest in that entity.
 

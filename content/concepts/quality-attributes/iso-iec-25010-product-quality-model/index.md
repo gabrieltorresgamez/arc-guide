@@ -74,22 +74,22 @@ review:
 
 ISO/IEC 25010 belongs to the ISO/IEC 25000 series, called SQuaRE. The series has five divisions. Four of them matter here:
 
-- **2500n** is the quality management division. It defines common models, terms and definitions.
+- **2500n** is the quality management division. It defines common models, terms and definitions [src:1].
 - **2501n** is the quality model division. It presents detailed quality models for computer systems and software products.
 - **2502n** is the quality measurement division. It includes a reference model for measuring software product quality.
 - **2503n** is the quality requirements division. Its standard, ISO/IEC 25030, helps you specify quality requirements. You can use it to elicit them, which means to gather them from stakeholders.
 
-The 2023 edition of the product quality model has nine quality characteristics. Each characteristic breaks down into subcharacteristics. Some examples:
+The 2023 edition of the product quality model has nine quality characteristics [src:2]. Each characteristic breaks down into subcharacteristics. Some examples:
 
 - **Performance efficiency** covers time behaviour, resource utilization and capacity. See Performance Efficiency.
 - **Reliability** covers faultlessness, availability, fault tolerance and recoverability. Availability means the system is operational and reachable when someone needs it. See Reliability.
 - **Security** includes the subcharacteristic resistance. It means the system keeps operating while a malicious actor attacks it. See Security.
 
-The 2023 edition also split accessibility into inclusivity and user assistance.
+The 2023 edition also split accessibility into inclusivity and user assistance [src:4].
 
-A separate standard, ISO/IEC 25019:2023, defines the quality-in-use model. It has three characteristics. People use it to specify, measure, evaluate and improve quality in use.
+A separate standard, ISO/IEC 25019:2023, defines the quality-in-use model [src:7]. It has three characteristics. People use it to specify, measure, evaluate and improve quality in use.
 
-**Limits of a standard list.** A standard list gives teams a shared vocabulary, but critics point out weaknesses. Some terms overlap, for example the definitions of maintainability and flexibility, and any strict hierarchy of qualities can be disputed. Operational qualities such as deployability are missing. Quality names alone can be ambiguous, so a quality attribute scenario makes a requirement concrete (see Quality Attribute Scenario). Approximately ten scenarios are manageable for most systems.
+**Limits of a standard list.** A standard list gives teams a shared vocabulary, but critics point out weaknesses. Some terms overlap, for example the definitions of maintainability and flexibility, and any strict hierarchy of qualities can be disputed. Operational qualities such as deployability are missing. Quality names alone can be ambiguous, so a quality attribute scenario makes a requirement concrete (see Quality Attribute Scenario) [src:9]. Approximately ten scenarios are manageable for most systems.
 
 ## Example
 

@@ -66,7 +66,7 @@ Remote Procedure Call (RPC) is an integration style. Each application makes some
 
 **The call blocks.** By default, the caller waits until the server finishes its work. Only then does the caller continue. The article Synchronous vs. Asynchronous Communication covers this in more depth.
 
-**A remote call is not a local call.** Many RPC tools make a remote call look like a local one. That is deceptive. The two work quite differently, and the difference affects how well the integration works. Remote calls are usually much slower than local calls. They are also less reliable, and network problems can make them fail.
+**A remote call is not a local call.** Many RPC tools make a remote call look like a local one. That is deceptive. The two work quite differently, and the difference affects how well the integration works. Remote calls are usually much slower than local calls [src:2]. They are also less reliable, and network problems can make them fail.
 
 **Granularity matters.** Remote interfaces therefore need to be coarser-grained, so each call does more work.
 

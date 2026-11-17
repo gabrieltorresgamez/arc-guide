@@ -102,7 +102,7 @@ review:
 
 Reliability is a quality characteristic in the ISO 25010 quality model (see the article ISO/IEC 25010 Product Quality Model). It asks whether a system, product or component performs specified functions under specified conditions.
 
-The 2023 definition also says the system must perform its functions for a specified period of time without interruptions and failures. So you also state how long the system must keep working.
+The 2023 definition also says the system must perform its functions for a specified period of time without interruptions and failures [src:2]. So you also state how long the system must keep working.
 
 Some people use the word dependability as a synonym for reliability. Dependability can have a larger scope that also includes security and performance efficiency. See the articles Security and Performance Efficiency.
 

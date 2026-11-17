@@ -65,7 +65,7 @@ review:
 
 ## Explanation
 
-A static view shows which building blocks exist. The runtime view shows what they do. It describes concrete behavior and interactions, written as scenarios.
+A static view shows which building blocks exist. The runtime view shows what they do. It describes concrete behavior and interactions, written as scenarios [src:1].
 
 **What to cover**
 

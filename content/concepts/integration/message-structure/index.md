@@ -66,7 +66,7 @@ A message sent through a messaging system has two parts: a header and a body.
 
 **Body.** The body holds the data you want to send. The messaging system generally ignores it and passes it along unchanged.
 
-**Header.** The header holds information that the messaging system itself uses. It describes the data being sent.
+**Header.** The header holds information that the messaging system itself uses. It describes the data being sent [src:1].
 
 **Header fields that support replies.** Some fields make two-way conversations possible:
 
@@ -76,7 +76,7 @@ A message sent through a messaging system has two parts: a header and a body.
 
 **Expiration.** A Message Expiration sets a time limit on how long a message stays viable. Consumers ignore messages that have expired.
 
-**Routing.** A Routing Slip is attached to a message. It lists the sequence of processing steps, so the message can pass through a series of components. See the article Enterprise Integration Patterns.
+**Routing.** A Routing Slip is attached to a message. It lists the sequence of processing steps, so the message can pass through a series of components [src:6]. See the article Enterprise Integration Patterns.
 
 **Envelope.** Most messaging systems split message data into a header and a body. An Envelope Wrapper builds on this. It wraps the application data in an envelope that the messaging infrastructure accepts. The message is unwrapped at the destination. See the article Enterprise Integration Patterns.
 

@@ -58,7 +58,7 @@ At project start, the planned solution is only a rough idea. Many details are st
 
 **Why the plan drifts**
 
-Fowler describes two ways to design. In planned design, you decide the design first. This idea comes from other branches of engineering. In evolutionary design, the design grows while the team builds the system. Upfront design cannot help with unforeseen changes, and it can even hurt. Many of these changes come from the business, so the target keeps moving.
+Fowler describes two ways to design [src:1]. In planned design, you decide the design first. This idea comes from other branches of engineering. In evolutionary design, the design grows while the team builds the system. Upfront design cannot help with unforeseen changes, and it can even hurt. Many of these changes come from the business, so the target keeps moving.
 
 **Not deciding everything up front**
 
@@ -66,11 +66,11 @@ The arc42 template (see *arc42 Architecture Documentation Template*) gives simil
 
 **Timing decisions**
 
-The *Last Responsible Moment* is the point where not deciding removes an important alternative. Wirfs-Brock warns that this idea can give false confidence that there is always time to change one's mind. She prefers a "most responsible moment". Zimmermann adds that teams should know when that moment arrives. Cost, effort, and risk help rank which decisions come first.
+The *Last Responsible Moment* is the point where not deciding removes an important alternative. Wirfs-Brock warns that this idea can give false confidence that there is always time to change one's mind [src:3]. She prefers a "most responsible moment". Zimmermann adds that teams should know when that moment arrives. Cost, effort, and risk help rank which decisions come first.
 
 **The change curve**
 
-A traditional belief says changes get exponentially more expensive as a project runs. Fowler calls this the change curve. This belief is what argues against evolutionary design.
+A traditional belief says changes get exponentially more expensive as a project runs. Fowler calls this the change curve [src:1]. This belief is what argues against evolutionary design.
 
 **Documentation**
 

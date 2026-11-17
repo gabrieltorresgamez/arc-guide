@@ -64,7 +64,7 @@ One way to see software architecture is as the set of important design decisions
 
 - It addresses a requirement with a measurable effect on the architecture and on the quality of the system. The ADR community calls this an architecturally significant requirement (see Architecturally Significant Requirement).
 - It is hard to change once made. Integration style is one example: switching from one style to another is costly.
-- It is large in scale or risky. What counts as important also depends on the scale you look at. A choice that matters to one team may be minor for a whole organization.
+- It is large in scale or risky. What counts as important also depends on the scale of the context you look at.
 
 **Architecture is more than a diagram**
 
@@ -72,15 +72,15 @@ One view, cited by Fowler, is that architecture is the shared understanding expe
 
 **Why the cost of change matters**
 
-Fowler argues that internal quality, which good architecture provides, lowers the cost of future change. Decisions that are expensive to reverse deserve care up front.
+Fowler argues that internal quality, which good architecture provides, lowers the cost of future change [src:6]. Decisions that are expensive to reverse deserve care up front.
 
 **Recording decisions**
 
-Teams can see a decision in the code. They often cannot see the motivation behind it. So arc42 section 9 asks you to record important, expensive, large-scale or risky decisions with their reasons. It advises documenting only a few important decisions, not all of them. Fowler describes an architecture decision record (see Architectural Decision Record) as a way to let people understand, long afterwards, why the system is built the way it is.
+Teams can see a decision in the code. They often cannot see the motivation behind it. So arc42 section 9 asks you to record important, expensive, large-scale or risky decisions with their reasons. It advises documenting only a few important decisions, not all of them [src:1]. Fowler describes an architecture decision record (see Architectural Decision Record) as a way to let people understand, long afterwards, why the system is built the way it is [src:5].
 
 ## Example
 
-A team building an order system decides that all services will talk to each other through a message queue instead of direct calls. Switching later would mean rewriting every service, so this is a principal decision. The team records it with its reasons. Choosing the color of a button is also a design decision, but it is cheap to reverse and does not belong in the architecture record.
+A team building an order system decides that all services will talk to each other through a message queue instead of direct calls. Switching later would mean rewriting every service, so the decision is costly to change. The team records it with its reasons. Choosing the color of a button is also a design decision, but it is cheap to reverse. Following arc42's advice to record only important, expensive or risky decisions, the team leaves it out.
 
 ## Trade-offs
 

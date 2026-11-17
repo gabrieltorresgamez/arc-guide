@@ -53,17 +53,17 @@ review:
 
 An enterprise architecture framework defines how to create and use an enterprise architecture. Enterprise architecture treats the enterprise as a large and complex system and strives to align business information systems technology with a given business strategy (see the article Enterprise Architecture).
 
-**Domains.** Since 1993 it has been normal to divide enterprise architecture into four domains: business, data, applications, and technology, though TOGAF notes that resource and time limits often prevent building all four in full. Many frameworks merge data and applications into one information-system layer. TOGAF is built on the four domains (see the article TOGAF).
+**Domains.** Since 1993 it has been normal to divide enterprise architecture into four domains: business, data, applications, and technology, though TOGAF notes that resource and time limits often prevent building all four in full [src:1]. Many frameworks merge data and applications into one information-system layer. TOGAF is built on the four domains (see the article TOGAF).
 
-**The Zachman Framework.** Its own site describes a 6 x 6 matrix, with the six questions as columns and the reification transformations (Identification, Definition, and so on) as rows. Its own site calls it a structure, not a process. A structure organizes things. A process tells you the steps. The framework does not tell you how to build the result (see the article Zachman Framework).
+**The Zachman Framework.** Its own site describes a 6 x 6 matrix, with the six questions as columns and the reification transformations (Identification, Definition, and so on) as rows. Its own site calls it a structure, which establishes definitions, not a process, which provides a transformation. So the framework does not tell you how to build the result (see the article Zachman Framework).
 
 **A toolbox.** One description calls an architecture framework a set of tools for developing many different architectures.
 
-**Rarely used on its own.** The critic Kotusev argues that successful real-world practice has little to do with popular frameworks. In a presentation and panel discussion, John Zachman said that Zachman and TOGAF can be integrated, and recalled Allen Brown of The Open Group saying at an earlier TOGAF conference that it is "Zachman and TOGAF" rather than one or the other. The event examined how EA frameworks can co-exist well.
+**Frameworks in practice.** The critic Kotusev argues that successful real-world practice has little to do with popular frameworks [src:5]. In a presentation and panel discussion, John Zachman said that Zachman and TOGAF can be integrated, and recalled Allen Brown of The Open Group saying at an earlier TOGAF conference that it is "Zachman and TOGAF" rather than one or the other [src:3]. The event examined how EA frameworks can co-exist well.
 
 **More about frameworks.**
 
-- **Common Features of Architecture Frameworks:** An enterprise architecture framework defines how to create and use an enterprise architecture. Zachman and TOGAF differ in purpose, but TOGAF shows common traits: architecture levels, linked artifacts, and tailoring.
+- **What a framework defines:** An enterprise architecture framework defines how to create and use an enterprise architecture.
 
 ## Example
 

@@ -82,7 +82,7 @@ review:
 
 ## Explanation
 
-Flexibility describes how well a product can be adapted when requirements or contexts of use change. Flexibility is one of the nine characteristics of ISO/IEC 25010:2023.
+Flexibility describes how well a product can be adapted when requirements or contexts of use change [src:1]. Flexibility is one of the nine characteristics of ISO/IEC 25010:2023 [src:7].
 
 The standard lists four sub-characteristics:
 
@@ -102,7 +102,7 @@ Some constructs make change easier. Microservices are one example (see Microserv
 
 **In the arc42 quality model.** The arc42 quality model has its own page on [Flexibility](https://quality.arc42.org/qualities/flexibility).
 
-**Example quality requirements.** The arc42 quality model has example quality requirements for this characteristic: [Compatible with 5 different battery providers](https://quality.arc42.org/requirements/compatible-with-5-battery-providers), [Efficient change of business rules](https://quality.arc42.org/requirements/luggage-routing), [Display Data Based on Context](https://quality.arc42.org/requirements/display-data-based-on-context).
+**Example quality requirements.** The arc42 quality model has example quality requirements for flexibility and its subcharacteristics, such as adaptability: [Compatible with 5 different battery providers](https://quality.arc42.org/requirements/compatible-with-5-battery-providers), [Efficient change of business rules](https://quality.arc42.org/requirements/luggage-routing), [Display Data Based on Context](https://quality.arc42.org/requirements/display-data-based-on-context).
 
 ## Example
 

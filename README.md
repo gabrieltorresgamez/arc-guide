@@ -15,7 +15,7 @@ It is not a full reference. Pages are short, and the sources and links carry the
 1. **Entry point first.** A page says what a topic is, when it matters and where to read more.
 2. **Every statement has a public source,** and the text is in our own words.
 3. **All or none.** A closed set (for example the ISO 25010 characteristics, the EIP patterns, the arc42 chapters) is covered completely or by one overview page, never partly.
-4. **Standards over inventions.** Quality models follow ISO/IEC 25010:2023 only. arc42 and its quality model are the preferred catalogs for tactics and approaches. They are linked, never copied (the quality model is CC BY-SA 4.0).
+4. **Standards over inventions.** Quality models follow ISO/IEC 25010:2023 only. arc42 and its quality model are the preferred catalogs for tactics and approaches. They are linked, never copied (docs.arc42.org and the quality model are CC BY-SA 4.0).
 5. **One entry point per topic,** in a reading order where one exists.
 
 The detailed rules and the automated checks are in `CLAUDE.md`.
@@ -27,9 +27,12 @@ reviewed by a person.
 
 ## Checks
 
-- `uv run python -m pipeline.build` also runs the content checks: minimum length, unknown references, 2011-model wording, tactic page naming, plus warnings for single-source pages and orphan pages.
-- `uv run python -m pipeline.claimcheck [SLUG ...]` checks articles against their sources with Claude (your subscription). Without slugs it checks the pages changed since the last commit and fails on unsupported or contradicted claims.
-- `uv run python -m pipeline.linkcheck` checks that every source URL still loads (about 30 minutes for the whole site).
+- `uv run python -m pipeline.build` also runs the content checks. It fails on: pages under 150 words, pages without sources, unknown references, 2011-model wording, tactic page naming, missing title prefixes in notation groups, duplicate order numbers, empty sections, and blank-line runs left by deleted text. It warns on: pages over 650 words, single-source pages, orphan pages, and "tradeoff" spelling.
+- `uv run python -m pipeline.claimcheck [SLUG ...]` checks articles against their sources with Claude (your subscription). Without slugs it checks the pages changed since the last commit and fails on unsupported or contradicted claims. It warns when a source could not be read in full.
+- `uv run python -m pipeline.fixaudit` compares the pages with the last commit and reports edits that left broken text (a sentence that refers to a deleted one, or a stub). Run it after fixing claim-check findings.
+- `uv run python -m pipeline.linkcheck` checks that every source URL still loads and is not a captcha page (about 10 minutes for the whole site, with a progress counter).
+
+The rules for writing and fixing content (sources, own words, all or none, titles and slugs, how to fix findings) are in `CLAUDE.md`.
 - `uv run pytest` runs the unit tests.
 
 ## Build

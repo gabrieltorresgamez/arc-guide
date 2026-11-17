@@ -106,7 +106,7 @@ review:
 
 ## Explanation
 
-An architecture style limits your design choices on purpose. It says which kinds of elements can appear in a system. It also says how those elements may relate to each other. A design that follows these limits gets certain desirable properties.
+An architecture style limits your design choices on purpose. It says which kinds of elements can appear in a system [src:1]. It also says how those elements may relate to each other. A design that follows these limits gets certain desirable properties.
 
 **Microservices as a style.** This style constrains each service to a single responsibility. Services stay independent. Each service keeps its data private, and services do not share data. These constraints produce independent deployment, fault isolation, frequent updates and an easier path to new technology.
 

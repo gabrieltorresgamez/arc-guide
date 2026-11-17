@@ -70,7 +70,7 @@ review:
 
 ## Explanation
 
-Conceptual data modeling is the process of creating a high-level picture of business information requirements. It describes the information the business needs, not how a database stores it.
+Conceptual data modeling is the process of creating a high-level picture of business information requirements. It describes the information the business needs, not how a database stores it [src:3].
 
 The core elements are:
 
@@ -85,7 +85,7 @@ One empirical study compared conceptual data models made by expert and novice pr
 
 **More about building and publishing a conceptual model.**
 
-- **Conceptual Data Model Building Method:** A conceptual data model is built step by step: understand the business, find entities, add attributes and relationships, validate with stakeholders, then document. It describes what data is needed, not how to store it.
+- **Conceptual Data Model Building Method:** A conceptual data model is built step by step: understand the business, find entities, add attributes and relationships, validate with stakeholders, then document. It describes what data is needed, not how to store it [src:2].
 
 ## Example
 

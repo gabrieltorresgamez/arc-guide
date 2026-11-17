@@ -60,6 +60,4 @@ Imagine a small system core that only schedules work and passes messages. A prin
 
 ## Trade-offs
 
-
-
 **Stability versus security.** Running drivers outside the core helps against buggy drivers. It does not necessarily reduce the damage a misbehaving driver can cause, though IOMMUs can allow user-mode drivers to be untrusted.

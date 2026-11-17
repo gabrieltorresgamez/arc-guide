@@ -48,9 +48,9 @@ review:
 
 ## Explanation
 
-Model-View-Controller (MVC) is a way to organize an application that has a user interface. A 1979 technical note from Xerox PARC first defined model, view and controller for UI design. MVC was one of the first serious attempts at large-scale UI work. It is best seen as a set of principles, not a fixed recipe.
+Model-View-Controller (MVC) is a way to organize an application that has a user interface. A 1979 technical note from Xerox PARC first defined model, view and controller for UI design [src:3]. MVC was one of the first serious attempts at large-scale UI work. It is best seen as a set of principles, not a fixed recipe.
 
-**The core idea.** Make a strong separation between presentation and domain. The domain holds the business data and rules. The presentation is what the user sees and uses. MVC calls the domain part the *model*. It splits the presentation into the *view* and the *controller*.
+**The core idea.** Make a strong separation between presentation and domain. The domain holds the business data and rules. The presentation is what the user sees and uses. MVC calls the domain part the *model* [src:1]. It splits the presentation into the *view* and the *controller*.
 
 **Who does what.**
 - The model holds the domain data and logic.
@@ -59,11 +59,11 @@ Model-View-Controller (MVC) is a way to organize an application that has a user 
 
 Controllers and views have independent input and output responsibilities. This is one way of separating concerns. See Separation of Concerns.
 
-**How the parts stay in sync.** Views and controllers observe the model. When the model changes, the views update. This approach is called Observer Synchronization.
+**How the parts stay in sync.** Views and controllers observe the model. When the model changes, the views update. This approach is called Observer Synchronization. The model is ignorant of the UI, and a controller does not need to know which other widgets must change. This helps when several screens show the same model objects.
 
 **Variants.**
-
-
+- Model-View-Presenter (MVP) first appeared at IBM, and more visibly at Taligent, in the 1990s. MVP variants differ in how they update the view, from using Observer Synchronization to having the presenter do all the updates.
+- Presentation Model is a model designed for the presentation layer. It is also known as Model-View-ViewModel.
 - Web MVC frameworks later let MVC components run partly on the client. They synchronize data via Ajax.
 
 ## Example
@@ -72,4 +72,4 @@ A shop application shows an order on two screens. One lists the order lines. The
 
 ## Trade-offs
 
-MVC is a set of principles, so teams must decide how to apply them.
+MVC is a set of principles, so teams must decide how to apply them. Several variants exist, such as MVP and Presentation Model. Views that observe a model also add a notification mechanism that the team has to understand.

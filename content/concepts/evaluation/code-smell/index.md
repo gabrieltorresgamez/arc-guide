@@ -68,7 +68,7 @@ review:
 
 A code smell is a visible hint in the code. It usually points to a deeper design problem in the system. The smell itself is not necessarily a bug. It tells you where to look closer.
 
-Kent Beck coined the term while helping write the book on refactoring. That ties smells to refactoring: a smell shows where a cleanup may be worth considering (see the article Refactoring).
+Kent Beck coined the term while helping write the book on refactoring [src:1]. That ties smells to refactoring: a smell shows where a cleanup may be worth considering (see the article Refactoring).
 
 **Common smells**
 
@@ -80,7 +80,7 @@ Kent Beck coined the term while helping write the book on refactoring. That ties
 
 **Code metrics**
 
-Cyclomatic complexity is a software metric. It counts the linearly independent paths through source code. McCabe developed it in 1976.
+Cyclomatic complexity is a software metric. It counts the linearly independent paths through source code. McCabe developed it in 1976 [src:7].
 
 SonarQube, for example, reports cyclomatic complexity and cognitive complexity. SonarQube also has a metric for the number of code smells.
 

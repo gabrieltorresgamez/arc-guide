@@ -18,6 +18,7 @@ related:
 - business-architecture
 - enterprise-architecture-framework
 - enterprise-architecture-maturity-level
+- application-architecture
 checks:
 - The document states which business vision or strategy the enterprise-level architecture supports.
 - A target (future-state) architecture is described and used to steer decisions.
@@ -169,7 +170,6 @@ Enterprise architecture, or EA, looks at the organization as a whole. A well-kno
 - **Relationship between Enterprise Architecture and Application Architecture:** Enterprise architecture sets organization-wide constraints that limit application architects'' choices. Influence also runs back: application decisions affect enterprise architecture.
 - **Warning Signs of Poor Enterprise Architecture:** Poor enterprise architecture shows up as duplicated capabilities, little reuse, fragile system connections, and workarounds. Typical causes are rewarded local optimization and no shared inventory of capabilities.
 - **Gartner Hype Cycle for Enterprise Architecture:** Gartner's Hype Cycle for Enterprise Architecture places topics in phases of rising and falling expectations. Editions show topics rising, falling and maturing. Teams can use it as one input for timing investments.
-
 
 ## Example
 

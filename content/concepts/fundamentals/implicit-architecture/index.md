@@ -21,6 +21,7 @@ checks:
 - The document records known gaps between intended and implemented architecture as risks or technical
   debt.
 - There is a process or tool to keep the architecture description in step with code changes.
+- For a system without documentation, a first overview was created in a short timebox and then refined with stakeholder feedback.
 sources:
 - url: https://blog.crisp.se/2012/12/18/mikaelbrodd/is-your-software-architecture-explicit
   title: Is your software architecture explicit? - Crisp’s Blog
@@ -38,6 +39,26 @@ sources:
   title: '[2311.04643] Software Architecture Recovery with Information Fusion'
   site: arxiv.org
   accessed: '2026-11-09'
+- url: https://aim42.org/patterns/software-archeology/
+  title: Software Archeology | aim42
+  site: aim42.org
+  accessed: '2026-11-17'
+- url: https://aim42.org/patterns/static-code-analysis/
+  title: Static Code Analysis | aim42
+  site: aim42.org
+  accessed: '2026-11-17'
+- url: https://aim42.org/patterns/runtime-artifact-analysis/
+  title: Runtime Artifact Analysis | aim42
+  site: aim42.org
+  accessed: '2026-11-17'
+- url: https://aim42.org/patterns/architectural-understanding/
+  title: Architectural Understanding | aim42
+  site: aim42.org
+  accessed: '2026-11-17'
+- url: https://leanpub.com/read/arc42inpractice/chapter-v
+  title: 'arc42 in Practice, chapter V: arc42 in Everyday Work'
+  site: leanpub.com
+  accessed: '2026-11-17'
 diagrams: []
 review:
   status: generated
@@ -48,7 +69,7 @@ review:
 
 Every software system has an architecture. This is true whether or not the team thinks about it.
 
-When a team does not choose its architecture on purpose, the result is an *implicit* architecture. It exists, but it is not visible or well communicated to the team. Crisp warns that such a system leaves you knee-deep in technical debt.
+When a team does not choose its architecture on purpose, the result is an *implicit* architecture. It exists, but it is not visible or well communicated to the team. Crisp warns that such a system leaves you knee-deep in technical debt [src:1].
 
 **Why it matters**
 
@@ -63,6 +84,15 @@ As systems evolve, their architectures inevitably change. Architects who track i
 **Finding the architecture again**
 
 Understanding the architecture is vital for maintaining large systems. Many automatic architecture recovery techniques have been proposed to ease the work of keeping architectural documentation up to date, though existing solutions still have limitations.
+
+The aim42 improvement method describes practices for the same job:
+
+- *Software archeology.* First make sure you can build the system from scratch. Then get an aerial view of its biggest structures and sketch them. The most frequent terms in the code are a start for a glossary. Commits per developer, for example from `git shortlog -ns`, show parts of the system where knowledge may be lost.
+- *Static code analysis.* Tools find the building blocks and their dependencies and measure complexity, coupling and cohesion. This suits medium and large code bases.
+- *Runtime artifact analysis.* Log files, stack traces and usage patterns show what the running system really does.
+- *Stakeholder interviews.* The solution strategy is often learned from experienced developers of the system.
+
+**Work in short timeboxes.** The arc42 authors suggest writing such hindsight documentation in a small timebox. Three to five knowledgeable people can create an acceptable overview in two to four hours. For each arc42 section they note what stakeholders need and what already exists, and they work on the gaps. The first version aims at important content, not completeness, and is used to collect feedback. For any documentation task they suggest a fixed timebox of at least 15 minutes and rarely more than 4 hours [src:9]. More valuable topics get longer timeboxes.
 
 ## Example
 

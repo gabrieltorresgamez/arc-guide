@@ -50,7 +50,7 @@ ISO/IEC 25010 defines system quality as the degree to which a system satisfies t
 
 **Why the word "quality" alone is not enough.** The term is vague and broad. Quality requirements must describe stakeholder expectations in a specific and measurable way.
 
-**Scenarios make qualities concrete.** Scenarios turn vague quality requirements into concrete ones. They should be specific and measurable. They are a practical way to document what quality is required. Bass et al. at the SEI coined the term "quality attribute scenarios" for this kind of structured requirement. See "Quality Attribute Scenario".
+**Scenarios make qualities concrete.** Scenarios turn vague quality requirements into concrete ones. They should be specific and measurable. They are a practical way to document what quality is required. Bass et al. at the SEI coined the term "quality attribute scenarios" for this kind of structured requirement [src:3]. See "Quality Attribute Scenario".
 
 **Two kinds of scenarios.** arc42 describes two especially useful kinds:
 

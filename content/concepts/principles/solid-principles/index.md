@@ -58,12 +58,12 @@ review:
 
 ## Explanation
 
-SOLID is a mnemonic acronym for five principles that are intended to make source code more understandable, flexible and maintainable. Robert C. Martin introduced the basic principles in his 2000 paper "Design Principles and Design Patterns", which was about software rot. Michael Feathers coined the acronym around 2004. The principles apply to object-oriented programming, and they are also a core philosophy for methodologies such as agile software development.
+SOLID is a mnemonic acronym for five principles that are intended to make source code more understandable, flexible and maintainable. Robert C. Martin introduced the basic principles in his 2000 paper "Design Principles and Design Patterns", which was about software rot [src:1]. Michael Feathers coined the acronym around 2004 [src:1]. The principles apply to object-oriented programming, and they are also a core philosophy for methodologies such as agile software development.
 
 - **Single responsibility (SRP):** there should never be more than one reason for a class to change. In other words, every class should have only one responsibility. It makes classes easier to understand, modify and test.
 - **Open-closed (OCP):** software entities should be open for extension but closed for modification. A building block stays open to new behavior but closed to edits of its existing code. Other parts rely on a fixed interface, and new behavior arrives through new implementations of it.
 - **Liskov substitution (LSP):** functions that use references to base classes must be able to use references to derived classes without knowing it. Replacing a superclass object with a subclass object must not break the program.
-- **Interface segregation (ISP):** clients should not be forced to depend on interface methods that they do not use. The Interface Segregation Principle says code should not depend on methods it does not use. Teams split large interfaces into smaller ones, each fitted to one role.
+- **Interface segregation (ISP):** clients should not be forced to depend on interface methods that they do not use. The Interface Segregation Principle says code should not depend on methods it does not use [src:2]. Teams split large interfaces into smaller ones, each fitted to one role.
 - **Dependency inversion (DIP):** one should depend on abstractions, not on concrete implementations. It reduces dependencies between modules and lets implementations change without affecting their clients.
 
 ## Example

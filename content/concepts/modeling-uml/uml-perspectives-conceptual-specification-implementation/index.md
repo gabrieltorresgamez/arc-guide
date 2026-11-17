@@ -61,7 +61,7 @@ The same UML notation can mean different things depending on how you read it. Th
 
 **Implementation perspective.** The diagram describes how software is built in a specific technology, such as Java.
 
-**Earlier roots.** The Syntropy method used a similar split into three models. Its essential model describes the world or domain in terms of event broadcasting. Its specification model describes the software, or at least the system boundary. Its implementation model describes the software using the conventional message-passing paradigm. The 1994 Syntropy book also influenced the Object Constraint Language, which became part of UML.
+**Earlier roots.** The Syntropy method used a similar split into three models. Its essential model describes the world or domain in terms of event broadcasting. Its specification model describes the software, or at least the system boundary. Its implementation model describes the software using the conventional message-passing paradigm. The 1994 Syntropy book also influenced the Object Constraint Language, which became part of UML [src:3].
 
 **Links to other ideas.** The ubiquitous language (see the article Ubiquitous Language) should follow the domain model that the software uses. The C4 model splits a system differently. It uses software systems, containers, components and code.
 

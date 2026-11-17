@@ -102,7 +102,7 @@ The sections are:
 
 **Open source.** arc42 is free, including for commercial use. A GitHub repository holds the AsciiDoc source of the template. Releases include all languages, styles and formats, plus a manifest of checksums. The founders maintain the English and German versions.
 
-**Relation to C4.** The arc42 FAQ says the C4 model overlaps with some arc42 sections. It also omits parts such as quality requirements, crosscutting concepts and risks.
+**Relation to C4.** The arc42 FAQ says the C4 model overlaps with some arc42 sections [src:7]. It also omits parts such as quality requirements, crosscutting concepts and risks.
 
 ## Example
 
@@ -110,4 +110,4 @@ A small team starts a new product. They create one document from the template. T
 
 ## Trade-offs
 
-The template says where information belongs, while the arc42 method describes how to work. The method fixes six activities and some stances, such as clarifying the most important quality requirements first, but leaves the order of the activities open. The C4 model is not a full replacement. According to the FAQ, it omits parts that arc42 covers.
+The template says where information belongs, while the arc42 method describes how to work. The method fixes six activities and some stances, such as clarifying the most important quality requirements first, but leaves the order of the activities open. The C4 model is not a full replacement. According to the FAQ, it omits parts that arc42 covers [src:7].

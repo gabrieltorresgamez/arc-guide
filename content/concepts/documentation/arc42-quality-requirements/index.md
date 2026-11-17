@@ -52,7 +52,7 @@ Chapter 10 of the arc42 template holds the quality requirements of a system. A v
 
 **Quality tree**
 
-The chapter can start with a quality tree. The tree puts the generic term "quality" at its root and refines it step by step. One way to build the branches is to use categories or topics. arc42 suggests ISO 25010:2023 or Q42 as sources for them. ISO/IEC 25010 defines a product quality model with nine quality characteristics. It serves as a basis for evaluating software quality. The article on the ISO/IEC 25010 Product Quality Model has details.
+The chapter can start with a quality tree. The tree puts the generic term "quality" at its root and refines it step by step. One way to build the branches is to use categories or topics. arc42 suggests ISO 25010:2023 or Q42 as sources for them [src:1]. ISO/IEC 25010 defines a product quality model with nine quality characteristics. It serves as a basis for evaluating software quality. See ISO/IEC 25010 Product Quality Model.
 
 **Quality scenarios**
 
@@ -63,7 +63,7 @@ Scenarios describe the individual requirements. This article covers two kinds:
 
 **Short and long forms**
 
-arc42 offers a short scenario form (Q42). A long form also exists. The SEI and Bass et al. favor it. It is more detailed and has more elements, such as an ID, a stimulus and a response measure. The Quality Attribute Scenario article covers this idea.
+arc42 offers a short scenario form (Q42). A long form also exists. The SEI and Bass et al. favor it. It is more detailed and has more elements, such as an ID, a stimulus and a response measure. See Quality Attribute Scenario.
 
 **Link to chapter 1**
 

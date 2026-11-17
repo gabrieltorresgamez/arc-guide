@@ -55,7 +55,6 @@ A viewpoint also identifies the stakeholders whose concerns it reflects. (see St
 - Deployment
 - Operational
 
-
 **Viewpoints and perspectives.** A perspective is a different thing. It is a set of activities, tactics and guidelines. Its goal is to make sure the system shows required quality properties. You never use a perspective alone. You apply it to a view. Perspectives address quality properties that require consideration across a number of views (see Architectural Perspective).
 
 ## Example

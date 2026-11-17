@@ -87,11 +87,10 @@ review:
 
 Application architecture artifacts describe which applications an organization runs and how they relate. They are a set of views, not one document. Each view answers a different question.
 
+**Two basic views.**
 
-
-
-
-
+- The application portfolio catalog lists all applications in the enterprise.
+- The application interaction matrix shows which applications communicate with each other.
 
 **Use in rationalization.** Rationalization decides what to do with each application: tolerate, invest, migrate or eliminate. It needs an inventory that records, for each application, the business capabilities it supports and its user groups.
 
@@ -99,10 +98,10 @@ Application architecture artifacts describe which applications an organization r
 
 **More about application artifacts.**
 
-- **Application/Data Matrix:** The Application/Data Matrix shows which applications create, read, update or delete each data entity. It names one system of record per entity and exposes overlaps in the application landscape.
-- **Application Interface Diagram:** An application interface diagram shows how an organization's applications connect to each other. Each connection is labeled with its technology, such as REST or FTP. This makes integration dependencies visible.
+- **Application/Data Matrix:** The Application/Data Matrix shows which applications create, read, update or delete each data entity. It names one system of record per entity and exposes overlaps in the application landscape [src:4].
+- **Application Cooperation View:** An application cooperation view shows how applications work together and where a new application affects the existing landscape. A useful addition is the technology interface of each connection, such as a REST API or FTP.
 - **Application Lifecycle Diagram:** An application lifecycle diagram is a Gantt chart that shows when each application is planned to start and stop supporting the business. It helps teams spot retirement and replacement needs early.
 
 ## Example
 
-A company keeps a catalog with three entries: web shop, billing and old invoicing. An interaction matrix shows that the web shop talks to billing and that old invoicing also talks to billing. The inventory records that old invoicing and billing support the same business capability. The team decides to retire old invoicing and move its data and users to billing. A migration diagram then shows old invoicing as a baseline application that disappears in the target state.
+A company keeps a catalog with three entries: web shop, billing and old invoicing. An interaction matrix shows that the web shop talks to billing and that old invoicing also talks to billing. The inventory records that old invoicing and billing support the same business capability. The team decides to retire old invoicing and move its data and users to billing. The team draws the planned migration from the current to the target landscape.

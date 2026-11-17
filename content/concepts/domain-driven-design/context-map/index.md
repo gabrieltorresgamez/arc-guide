@@ -62,7 +62,7 @@ review:
 
 A context map is a picture of the bounded contexts in a system and how they relate. A bounded context is a part of the system with its own model and vocabulary (see the article Bounded Context). Strategic DDD is the big-picture side of Domain-Driven Design.
 
-**Why draw one.** Different contexts often model the same concepts differently. Fowler says it is usually worthwhile to depict the relationships between contexts with a context map.
+**Why draw one.** Different contexts often model the same concepts differently. Fowler says it is usually worthwhile to depict the relationships between contexts with a context map [src:5].
 
 **Upstream and downstream.** The map draws relationships as influence and data flows. The upstream context provides information or services. The downstream context consumes them. In Context Mapper's notation, arrows point from upstream to downstream. Two relationships are symmetric, so neither side is upstream: partnership and shared kernel.
 
@@ -80,4 +80,4 @@ An online shop has three contexts: Ordering, Payment and Shipping. Ordering is u
 
 ## Trade-offs
 
-Because DDD prescribes no notation, readers may misread arrows unless the map explains them. Choosing a pattern also takes care: for example, labeling a link customer-supplier claims that downstream priorities factor into upstream planning. Evans notes that when bounded contexts and subdomains become misaligned, two teams can end up working in the same bounded context, which raises the risk of a big ball of mud (see Big Ball of Mud).
+Because DDD prescribes no notation, readers may misread arrows unless the map explains them. Choosing a pattern also takes care: for example, labeling a link customer-supplier claims that downstream priorities factor into upstream planning. Evans notes that when bounded contexts and subdomains become misaligned, two teams can end up working in the same bounded context, which raises the risk of a big ball of mud (see Big Ball of Mud) [src:6].

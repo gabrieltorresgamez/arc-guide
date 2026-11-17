@@ -57,7 +57,7 @@ A pattern language is a set of related patterns that work together. This one cov
 
 **How the book is organized**
 
-The book has two parts. The first covers fundamentals: a domain model and a decision model. The second presents 44 patterns in Chapters 4 to 9, grouped into five theme categories. Thirty of the 44 patterns were peer-reviewed and published in papers before the book appeared.
+The book has two parts. The first covers fundamentals: a domain model and a decision model. The second presents 44 patterns in Chapters 4 to 9, grouped into five theme categories [src:3]. Thirty of the 44 patterns were peer-reviewed and published in papers before the book appeared [src:2].
 
 The decision model identifies pattern selection questions, with options and criteria. The book's decision narratives identify 29 recurring decisions. The book's Chapter 2 covers these decisions.
 

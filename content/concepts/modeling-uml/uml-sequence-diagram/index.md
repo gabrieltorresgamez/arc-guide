@@ -66,7 +66,7 @@ Two more elements help readers:
 - **Activation bars** are thin rectangles drawn on a lifeline. They show that a participant is busy working because of a message it received.
 - **Destruction** is drawn as an X below a lifeline. After the X, the line stops.
 
-The notation is strongly inspired by the Message Sequence Chart, a diagram standardized by the ITU. According to Wikipedia, the first version of that standard appeared in 1993.
+The notation is strongly inspired by the Message Sequence Chart, a diagram standardized by the ITU. According to Wikipedia, the first version of that standard appeared in 1993 [src:4].
 
 In architecture work, a main use is the runtime view. This part of the documentation describes how building blocks work together while the system runs. See the article Runtime View. arc42 lists sequence diagrams as one option. Other options are activity diagrams, BPMN or EPCs, state machines, and numbered step lists. arc42 recommends sequence diagrams because they show clearly which building block is responsible for what. That helps teams discuss the building blocks.
 

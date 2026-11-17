@@ -49,7 +49,7 @@ review:
 
 UML is a notation for drawing software models.
 
-**Know how you use UML.** Fowler names three modes: sketch, blueprint, and programming language. Sketches stress selective communication. They show what matters and skip a full specification. UML 2 added precision aimed at the blueprint and programming-language modes. That extra precision can burden people who only sketch. Decide which mode your team is in, so nobody demands more detail than needed.
+**Know how you use UML.** Fowler names three modes: sketch, blueprint, and programming language [src:2]. Sketches stress selective communication. They show what matters and skip a full specification. UML 2 added precision aimed at the blueprint and programming-language modes. That extra precision can burden people who only sketch. Decide which mode your team is in, so nobody demands more detail than needed.
 
 **Agree on standards.** Agile Modeling has a practice called Apply Modeling Standards. The team agrees on a common set of modeling standards and then follows them. The Agile Modeling site's separate style guidelines aim to improve the quality and readability of diagrams, so they are easier to understand and work with. For related guidance, see Modeling Method and Rules of Thumb for Modeling.
 

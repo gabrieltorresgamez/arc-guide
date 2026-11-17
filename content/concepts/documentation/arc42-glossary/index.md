@@ -40,7 +40,7 @@ review:
 
 Section 12 of arc42 is the glossary. It collects the most important domain and technical terms that stakeholders use when they talk about the system.
 
-**Why it exists.** Clearly defined terms let all stakeholders share an identical understanding of them and avoid synonyms and homonyms.
+**Why it exists.** Clearly defined terms let all stakeholders share an identical understanding of them and avoid synonyms and homonyms [src:1].
 
 **Link to ubiquitous language.** Domain-Driven Design has a related practice, the ubiquitous language (see the article Ubiquitous Language): a common, rigorous language between developers and users. Fowler, building on Evans, says the language should be based on the domain model that the software uses.
 
@@ -51,5 +51,4 @@ Section 12 of arc42 is the glossary. It collects the most important domain and t
 ## Example
 
 A team builds a system for a library. Developers say "loan" for a book checkout. Staff use "loan" only for borrowing from another library. The glossary lists "loan" with one clear definition, and gives the other case its own term. The code then uses the same names. The product owner updates the entries when staff change how they work.
-
 

@@ -61,7 +61,7 @@ Quality goals often pull against each other. A choice that helps one goal can co
 
 **Rank the goals first.** The ATAM method (Architecture Tradeoff Analysis Method) evaluates an architecture against its quality goals. It also shows how those goals interact and conflict. ATAM uses a utility tree for ranking. This is a tree of the requirements that drive the architecture, and it helps the team prioritize quality goals.
 
-**Find the collision points.** In its analysis step, ATAM names three things: architectural risks, sensitivity points and trade-off points. Sensitivity Point and Trade-off Point have their own articles.
+**Find the collision points.** In its analysis step, ATAM names three things: architectural risks, sensitivity points and trade-off points [src:1]. Sensitivity Point and Trade-off Point have their own articles.
 
 **Expect surprises.** A review of tactics for big data security calls for more research on trade-offs and dependencies among tactics.
 

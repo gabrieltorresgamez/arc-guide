@@ -66,11 +66,11 @@ review:
 
 A data model describes what data a system keeps and how that data fits together. Teams usually work at three levels. Each level answers a different question.
 
-**Conceptual model.** It describes the meaning of a domain. Entity classes (the kinds of things the business cares about) and the relationships between them set its scope. It records data requirements without tying them to any technology. An entity–relationship model can express it in abstract form. See the article Conceptual Data Model.
+**Conceptual model.** It describes the meaning of a domain [src:1]. Entity classes (the kinds of things the business cares about) and the relationships between them set its scope. It records data requirements without tying them to any technology. An entity–relationship model can express it in abstract form. See the article Conceptual Data Model.
 
-**Logical model.** It describes the same meaning as one particular data technology represents it. That can be tables and columns, classes, or XML tags. It does not depend on a specific database product or storage technology. It helps stakeholders understand the data requirements. See Logical Data Model.
+**Logical model.** It describes the same meaning as one particular data technology represents it [src:1]. That can be tables and columns, classes, or XML tags. It does not depend on a specific database product or storage technology. It helps stakeholders understand the data requirements. See Logical Data Model.
 
-**Physical model.** It describes how the data is physically stored, including partitions, CPUs and tablespaces. It organizes data into tables and deals with access, performance and storage. It specifies indexes and keys that speed up data access. It also covers storage choices such as filegroups, tablespaces and partitioning. It is tailored to one database system. It is developer-oriented and guides the actual implementation. See Physical Data Model and Logical vs. physical data model.
+**Physical model.** It describes how the data is physically stored, including partitions, CPUs and tablespaces [src:1]. It organizes data into tables and deals with access, performance and storage. It specifies indexes and keys that speed up data access. It also covers storage choices such as filegroups, tablespaces and partitioning. It is tailored to one database system. It is developer-oriented and guides the actual implementation. See Physical Data Model and Logical vs. physical data model.
 
 **Why three levels.** The levels keep the perspectives independent. Storage technology can change without affecting the logical or conceptual model.
 

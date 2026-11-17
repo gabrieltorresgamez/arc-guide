@@ -60,7 +60,7 @@ The articles *File Transfer*, *Shared Database*, *Remote Procedure Call*, *Messa
 
 **Keep coupling low**
 
-Coupling describes how much applications assume about each other. Tightly coupled applications make many assumptions about how the others work. Integrated applications should keep their mutual dependencies to a minimum. See *Loose Coupling*.
+Coupling describes how much applications assume about each other [src:1]. Tightly coupled applications make many assumptions about how the others work. Integrated applications should keep their mutual dependencies to a minimum. See *Loose Coupling*.
 
 **Synchronous and asynchronous**
 

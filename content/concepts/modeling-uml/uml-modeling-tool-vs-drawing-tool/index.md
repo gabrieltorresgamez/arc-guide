@@ -62,7 +62,7 @@ A **drawing tool** (a graphics editor) works differently. It does not understand
 
 **Text-based tools** are another option. PlantUML is a free tool that renders sequence diagrams from text. You can version and merge that text like source code.
 
-The arc42 FAQ says it usually prefers real modeling tools over graphics editors, especially for better model consistency. They also warn that modeling tools often have many functions but limited usability. They advise using a modeling tool only for the graphical part of the documentation. Most modeling tools lack built-in arc42 support, so you must create the arc42 structure yourself. arc42 offers a basic, not very elaborate, model template for Sparx Enterprise Architect.
+The arc42 FAQ says it usually prefers real modeling tools over graphics editors, especially for better model consistency [src:3]. They also warn that modeling tools often have many functions but limited usability. They advise using a modeling tool only for the graphical part of the documentation. Most modeling tools lack built-in arc42 support, so you must create the arc42 structure yourself. arc42 offers a basic, not very elaborate, model template for Sparx Enterprise Architect.
 
 The C4 model site adds that creating diagrams that each focus on a single service is difficult with a diagramming tool but trivial with a modeling tool.
 

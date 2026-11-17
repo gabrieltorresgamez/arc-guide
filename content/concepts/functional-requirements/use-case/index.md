@@ -95,13 +95,13 @@ review:
 
 A use case is a structured description of how a system behaves when an outside party, called an actor, makes a request. An actor can be a person or another system. Use cases organize requirements as a narrative of how users relate to the system and use it to reach their goals.
 
-Jacobson described the technique in a 1987 OOPSLA paper. It was based on work at Ericsson, where it captured and specified a system's requirements. UML is the Unified Modeling Language (see the article UML (Unified Modeling Language)).
+Jacobson described the technique in a 1987 OOPSLA paper [src:2]. It was based on work at Ericsson, where it captured and specified a system's requirements. UML is the Unified Modeling Language (see the article UML (Unified Modeling Language)).
 
 **Levels of detail**
 
-Cockburn describes a more detailed structure for a use case. He allows teams to simplify it when less detail is needed. Many teams write use cases from a structured template, though informal writing also works. The article Use Case covers the structure.
+Cockburn describes a more detailed structure for a use case [src:2]. He allows teams to simplify it when less detail is needed. Many teams write use cases from a structured template, though informal writing also works.
 
-Cockburn also suggests marking each use case with a symbol for its goal level. The article Use Case explains this.
+Cockburn also suggests marking each use case with a symbol for its goal level.
 
 **Diagrams**
 

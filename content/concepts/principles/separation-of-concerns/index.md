@@ -48,7 +48,7 @@ review:
 
 A complex problem has many aspects at once. Separation of concerns is the habit of looking at one aspect in depth, on its own terms, so it can be made consistent. Dijkstra sometimes called this technique "the separation of concerns".
 
-Isolation does not mean ignoring the rest. You stay focused on one aspect and aware of the others at the same time. Dijkstra described this as being one-track and multiple-track minded simultaneously.
+Isolation does not mean ignoring the rest. You stay focused on one aspect and aware of the others at the same time. Dijkstra described this as being one-track and multiple-track minded simultaneously [src:1].
 
 **In software.** The same idea breaks an application up by its responsibilities, or concerns. This helps manage growing complexity. It also keeps the codebase organized, so developers can find where a given function lives.
 

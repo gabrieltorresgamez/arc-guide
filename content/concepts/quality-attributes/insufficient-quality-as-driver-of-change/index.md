@@ -43,7 +43,7 @@ review:
 
 ## Explanation
 
-Many projects put functionality, meaning what the system does, at the center of attention. Quality is different. It describes how well the system does its work, and it is the architect's core concern.
+Many projects put functionality, meaning what the system does, at the center of attention. Quality is different. It describes how well the system does its work, and it is the architect's core concern [src:2].
 
 Quality does not come for free. Clean code alone does not make a system fast, secure, reliable or maintainable. Each of these needs systematic design.
 

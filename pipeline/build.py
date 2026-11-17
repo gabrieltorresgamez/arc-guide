@@ -28,16 +28,21 @@ REVIEW_LLMS = """# Architecture review checklist (arc42)
 3. If the document does not follow arc42, first map its content to the arc42 sections and say so.
 4. For each arc42 section, apply every check. Result per check: OK, ISSUE, MISSING (information is absent), or N/A (give a reason).
 5. Fetch a linked concept page only when a result is ISSUE or unclear, or the user asks why.
-6. Report per section: check, result, evidence (quote or location in the user's document), suggested fix, and the concept link for each ISSUE.
-7. End with the three most important improvements, in priority order.
+6. Report per section: check, result, severity (for ISSUE and MISSING), evidence (quote or location in the user's document), suggested fix, and the concept link for each ISSUE.
+7. End with the three most important improvements, highest severity first.
+
+Severity of an ISSUE or MISSING result:
+- HIGH: the gap concerns a top quality goal, a fixed constraint, or an architecturally significant decision (one that is costly or risky to change).
+- MEDIUM: a stakeholder cannot use the section for its purpose, for example a diagram without a legend or a decision without a reason.
+- LOW: form and completeness details that do not block any reader.
 8. Do not invent requirements that are not in the checklist or in the linked pages.
 
 ## Example of a worked review
 
 Document: a short architecture description of an online shop. Section 1 (Introduction and goals).
 
-- Check: "The top quality goals are listed, three to five of them." Result: ISSUE. Evidence: "Quality goals: fast, secure, cheap, scalable, usable, reliable, maintainable". Seven goals are listed, with no priority. Fix: rank them and keep the top five. Concept: Quality Attribute Prioritization.
-- Check: "Stakeholders are listed with their expectations." Result: MISSING. Evidence: the document has no stakeholder list. Fix: add a table of roles and what each expects.
+- Check: "Section 1.2 lists the top three quality goals, at most five, ordered by priority." Result: ISSUE. Severity: HIGH. Evidence: "Quality goals: fast, secure, cheap, scalable, usable, reliable, maintainable". Seven goals are listed, with no priority. Fix: rank them and keep the top three, at most five. Concept: Quality Attribute Prioritization.
+- Check: "Stakeholders are listed with their expectations." Result: MISSING. Severity: MEDIUM. Evidence: the document has no stakeholder list. Fix: add a table of roles and what each expects.
 - Check: "The business goals are stated." Result: OK. Evidence: "The shop must double its online revenue within a year."
 - Check: "Regulatory goals are described." Result: N/A. Reason: the document states that the shop sells no regulated goods.
 
@@ -183,6 +188,11 @@ def link_see(text, titles, md, me):
     return "\n".join(out)
 
 
+def cite(text, srcs, md):
+    """[src:N] in an article becomes a small link to its Nth source, numbered like the Sources list."""
+    return re.sub(r"\s?\[src:(\d+)\]", lambda m: f" [[{m[1]}]]({srcs[int(m[1]) - 1]['url']})" if md else f"<sup>[{m[1]}]({srcs[int(m[1]) - 1]['url']})</sup>", text)
+
+
 def build_article(a, titles, cats):
     url, md_url = art_urls(a)
     related = [s for s in a.get("related", []) if s in titles]
@@ -198,10 +208,10 @@ def build_article(a, titles, cats):
         if related:
             link = (lambda s: f"[{titles[s][0]}]({c.SITE_URL}{titles[s][1][1]})") if md else (lambda s: f"[{titles[s][0]}]({titles[s][1][0]})")
             parts.append("## Related\n\n" + "\n".join(f"- {link(s)}" for s in related))
-        parts.append("## Sources\n\n" + "\n".join(f"- [{s['title']}]({s['url']}) — {s['site']}, accessed {s['accessed']}" for s in (srcs or [])))
+        parts.append("## Sources\n\n" + "\n".join(f"{i}. [{s['title']}]({s['url']}) — {s['site']}, accessed {s['accessed']}" for i, s in enumerate(srcs or [], 1)))
         return "\n\n".join(parts)
-    html_body = f":::note[In short]\n{a['summary']}\n:::\n\n{link_see(a['_body'].strip(), titles, False, a['slug'])}\n\n{diagram_blocks(a, False)}\n\n{tail(False)}"
-    md_body = f"# {a['title']}\n\n**In short:** {a['summary']}\n\n{link_see(a['_body'].strip(), titles, True, a['slug'])}\n\n{diagram_blocks(a, True)}\n\n{tail(True)}"
+    html_body = f":::note[In short]\n{a['summary']}\n:::\n\n{link_see(cite(a['_body'].strip(), srcs, False), titles, False, a['slug'])}\n\n{diagram_blocks(a, False)}\n\n{tail(False)}"
+    md_body = f"# {a['title']}\n\n**In short:** {a['summary']}\n\n{link_see(cite(a['_body'].strip(), srcs, True), titles, True, a['slug'])}\n\n{diagram_blocks(a, True)}\n\n{tail(True)}"
     write_page(f"concepts/{a['category']}/{a['slug']}", a["title"], a["summary"], html_body, md_body, f"/concepts/{a['category']}/llms.txt")
 
 
@@ -398,6 +408,9 @@ def check_content(arts):
             fails.append(f"{s}: no sources (every page needs at least one public source)")
         elif len(a["sources"]) < 2:
             warns.append(f"{s}: fewer than 2 sources")
+        for k in re.findall(r"\[src:(\d+)\]", body):
+            if not 1 <= int(k) <= len(a.get("sources") or []):
+                fails.append(f"{s}: [src:{k}] but the page has {len(a.get('sources') or [])} sources")
         if not inbound[s]:
             warns.append(f"{s}: no page links to it")
         norm_urls = [re.sub(r"^https?://(www\.)?", "", x["url"]).split("#")[0].rstrip("/").lower() for x in (a.get("sources") or [])]
@@ -425,8 +438,12 @@ def check_content(arts):
                 lines.append("code")
             else:
                 lines.append("code" if fence else l)
+        if m := re.search(r"(?:[Tt]he article|\b[Ss]ee(?: the article)?) \"?" + re.escape(a["title"]) + r"\"?(?=[.,)]| and\b| for\b| covers\b| explains\b| has\b)", body):
+            fails.append(f"{s}: refers to itself ('{m[0]}'), usually left by a merge; drop the reference")
+        if re.search(r"\S\n[ \t]*\n[ \t]*\n", "\n".join(lines)):  # two blank lines in a row are left where a block was deleted
+            fails.append(f"{s}: two blank lines in a row (a deleted block? rewrite the paragraph around it)")
         lead = re.compile(r"^\*\*[^*\n]+\*\*\s*[:.]?\s*$")
-        h2 = [i for i, l in enumerate(lines) if l.startswith("## ")]
+        h2 =[i for i, l in enumerate(lines) if l.startswith("## ")]
         for k, i in enumerate(h2):  # a "## " section needs text that is not just bold labels
             end = h2[k + 1] if k + 1 < len(h2) else len(lines)
             if not any(lines[j].strip() and not lead.match(lines[j]) for j in range(i + 1, end)):
@@ -451,6 +468,17 @@ def check_content(arts):
                 part = re.sub(r"^the\s+", "", part.strip(" \"“”*()"), flags=re.I)
                 if part and part[0].isupper() and part.count(")") <= part.count("(") and not any(part.lower().startswith(x) or x.startswith(part.lower()) for x in titles):  # a known title at the start (or a prefix of one) is enough; lowercase starts are sentence fragments
                     warns.append(f"{s}: 'See the article {part}' matches no page title")
+    by_title = {a["title"]: a["slug"] for a in arts if " " in a["title"]}  # one-word titles are mostly ordinary words
+    for a in arts:  # a page that names another page's title in its text should link it somewhere
+        plain = re.sub(r"(?s)```.*?```|\[[^\]]*\]\([^)]*\)|\b[Ss]ee (?:the )?(?:articles? )?[^.\n]*", " ", a["_body"])
+        linked = set(re.findall(r"\(concept:([^)]+)\)", a["_body"])) | set(a.get("related") or []) | {a["slug"]}
+        for t, slug in by_title.items():
+            for m in [] if slug in linked else re.finditer(r"(?<![\w-])" + re.escape(t) + r"(?![\w-])", plain):
+                prev = plain[:m.start()].split()[-1:]
+                if re.match(r" [A-Z(]", plain[m.end():m.end() + 2]) or prev and (prev[0][0].isupper() or prev[0][0].isdigit()) and prev[0][-1] not in ".:!?":
+                    continue  # part of a longer proper name, such as "Software Architecture in Practice"
+                warns.append(f"{a['slug']}: names '{t}' but does not link it (add 'See {t}.' or put {slug} in related)")
+                break
     return fails, warns
 
 

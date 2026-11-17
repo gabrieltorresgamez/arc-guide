@@ -68,7 +68,7 @@ Acceptance criteria say when a user story counts as complete and accepted. Some 
 
 **When they appear.** Detail, including criteria, is added as a story moves toward the top of the backlog. If the story is too large, split it (see Story Splitting).
 
-**A note on naming.** One well-known author finds the term "acceptance criteria" confusing and prefers "conditions of satisfaction". Both names point to nearly the same idea.
+**A note on naming.** One well-known author finds the term "acceptance criteria" confusing and prefers "conditions of satisfaction". Both names point to nearly the same idea [src:1].
 
 **Common mistakes.**
 

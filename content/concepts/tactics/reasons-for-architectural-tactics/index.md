@@ -42,7 +42,7 @@ review:
 
 An architectural tactic is a design decision that affects how a system addresses one quality attribute, such as availability or performance. (See Architectural Tactic and Quality Attribute.) Tactics adjust the parameters of quality attribute models.
 
-**Tactics are smaller than patterns.** A tactic is like an atom and a pattern is like a molecule. So a pattern can be seen as composed of tactics. The SEI report on modifiability tactics follows this idea. It describes standard architectural patterns and their variants in terms of tactics.
+**Tactics are smaller than patterns.** A tactic is like an atom and a pattern is like a molecule. So a pattern can be seen as composed of tactics. The SEI report on modifiability tactics follows this idea. It describes standard architectural patterns and their variants in terms of tactics [src:2].
 
 **Why use tactics next to patterns?**
 

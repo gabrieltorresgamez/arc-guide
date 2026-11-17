@@ -95,9 +95,9 @@ review:
 
 A tactic is a design decision that adjusts the parameters of a quality model. Modifiability tactics apply this idea to the cost of changing a system. In ISO/IEC 25010, modifiability is a subcharacteristic of maintainability. They form three categories: increase cohesion, reduce coupling, and defer binding.
 
-**Increase cohesion.** Cohesion describes how well the responsibilities of a module belong together (see Coupling and Cohesion). If a module mixes unrelated responsibilities, changing it will likely cost a lot. The *split module* tactic addresses this.
+**Increase cohesion.** Cohesion describes how well the responsibilities of a module belong together (see Coupling and Cohesion) [src:3]. If a module mixes unrelated responsibilities, changing it will likely cost a lot. The *split module* tactic addresses this.
 
-**Reduce coupling.** Coupling describes how much modules depend on each other. Two tactics stand out:
+**Reduce coupling.** Coupling describes how much modules depend on each other [src:4]. Two tactics stand out:
 
 - *Encapsulation* adds an explicit interface to an element. The interface hides the element's implementation details.
 - *Restrict dependencies* limits which modules a given module may interact with or depend on.

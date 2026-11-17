@@ -60,7 +60,7 @@ The business data model goes into arc42 section 8 as a cross-cutting concept (se
 
 ClinicBook books appointments for 40 small practices. It must connect to practice-management software from different vendors. It must send SMS and e-mail reminders and protect health data. The team is small and the launch date is fixed.
 
-**Connections.** The team draws web app, mobile app, booking service, reminder sender, SMS provider, e-mail provider and each vendor's practice software. Each link gets a technology label.
+**Connections.** The team draws web app, mobile app, booking service, reminder service, SMS provider, e-mail provider and each vendor's practice software. Each link gets a technology label.
 
 **Style per connection.**
 

@@ -70,7 +70,6 @@ See the articles "Architecture Viewpoint", "Stakeholder Concern" and "Essential 
 
 - **Architectural View:** An architectural view addresses one or more concerns of one or more stakeholders. Splitting the description into views keeps each part understandable and lets each reader find what matters to them.
 
-
 ## Example
 
 Imagine an online shop. The operations team asks where the system runs. A new developer asks which parts exist and how they connect. Each group gets a view that answers its own questions. Both views describe the same shop.

@@ -72,7 +72,7 @@ See the article Enterprise Architecture. A maturity level describes how develope
 
 **Value is the measure.** Info-Tech treats the value the organization actually gains as the true sign of maturity. Measuring operational maturity can only go so far.
 
-**The target should fit the organization.** Info-Tech says the target should be right-sized to the organization's size and complexity. The top level is not necessarily right for every EA department.
+**The target should fit the organization.** Info-Tech says the target should be right-sized to the organization's size and complexity [src:1]. The top level is not necessarily right for every EA department.
 
 **Assess, set a target, plan.** The Info-Tech maturity blueprint works in three parts:
 

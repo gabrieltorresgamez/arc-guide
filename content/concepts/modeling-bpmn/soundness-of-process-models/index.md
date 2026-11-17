@@ -110,7 +110,7 @@ Soundness is a correctness property of process models. A workflow graph is sound
 
 **Lack of synchronization.** This is the second flaw.
 
-**Checking it.** Tools can verify soundness. The check looks for the absence of deadlock and of lack of synchronization. These are handled as separate Petri net analysis tasks, for example in the tool LoLA. One recently introduced BPMN soundness-checking tool displays violations in the model, runs in under 500 ms, and suggests fixes.
+**Checking it.** Tools can verify soundness. The check looks for the absence of deadlock and of lack of synchronization. These are handled as separate Petri net analysis tasks, for example in the tool LoLA. One recently introduced BPMN soundness-checking tool displays violations in the model, runs in under 500 ms, and suggests fixes [src:4].
 
 **More about process model quality.**
 

@@ -84,12 +84,36 @@ def test_check_content_empty_section():
     assert any("empty section" in f for f in fails)
     fails, _ = build.check_content([art("## Explanation\n\n**Group**\n\n**Part one.**\n\n" + filler)])
     assert not any("empty section" in f for f in fails)
+    fails, _ = build.check_content([art("## Explanation\n\n" + filler + "\n\n\n**Next.** " + filler)])
+    assert any("blank lines" in f for f in fails)  # left where a block was deleted
+    assert any("refers to itself" in f for f in build.check_content([art(filler + " Cards help (see the article A).")])[0])
+    assert not any("refers to itself" in f for f in build.check_content([art(filler + " See A Better Page.")])[0])
 
 
 def test_check_content_ignores_code_fences():
     body = "## Explanation\n\n" + " ".join(["w"] * 200) + "\n\n```markdown\n## Heading in code\n## Another\n```\n"
     art = {"slug": "a", "title": "A", "category": "fundamentals", "kind": "concept", "related": [], "sources": [{"url": "https://a.example/1", "title": "A"}, {"url": "https://b.example/2", "title": "B"}], "_body": body}
     assert not any("empty section" in f for f in build.check_content([art])[0])
+
+
+def test_named_but_not_linked():
+    filler = " ".join(["w"] * 200)
+    def art(slug, title, body, related=()):
+        return {"slug": slug, "title": title, "category": "fundamentals", "kind": "concept", "related": list(related), "sources": [{"url": f"https://{slug}.example/1", "title": "A"}, {"url": f"https://{slug}.example/2", "title": "B"}], "_body": "## Explanation\n\n" + filler + " " + body}
+    other = art("shared-database", "Shared Database", "See Big Page.")
+    warned = lambda body, rel=(): [w for w in build.check_content([art("big-page", "Big Page", body, rel), other])[1] if "does not link" in w]
+    assert warned("Teams often use a Shared Database here.")
+    assert not warned("Teams often use a Shared Database here.", ["shared-database"])
+    assert not warned("The book Shared Database Patterns covers it.")  # part of a longer proper name
+
+
+def test_source_markers():
+    srcs = [{"url": "https://a.example/1", "title": "A"}, {"url": "https://b.example/2", "title": "B"}]
+    assert build.cite("It took 70 days [src:2].", srcs, False) == "It took 70 days<sup>[2](https://b.example/2)</sup>."
+    assert build.cite("It took 70 days [src:2].", srcs, True) == "It took 70 days [[2]](https://b.example/2)."
+    art = {"slug": "a", "title": "A", "category": "fundamentals", "kind": "concept", "related": [], "sources": srcs,
+           "_body": "## Explanation\n\n" + " ".join(["w"] * 200) + " It took 70 days [src:3]."}
+    assert any("[src:3]" in f for f in build.check_content([art])[0])  # no third source
 
 
 def test_select_checks():

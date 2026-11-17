@@ -52,6 +52,14 @@ review:
 
 A **synchronous** call means the caller sends a request and waits for the reply. An **asynchronous** call means the caller sends the request and carries on. Any reply comes later.
 
+**Synchronous calls and failure**
+
+Any remote call can fail, because the service on the other end may be unavailable. Callers must handle that failure gracefully.
+
+Chained calls make this worse [src:1]. When services make several synchronous calls to each other, the downtime of the system becomes the product of the downtimes of the individual components. There are two ways out: make the calls asynchronous, or manage the downtime. Circuit Breaker, Bulkhead and Timeout are patterns that, used together, matter for applications that communicate with each other.
+
+Cross-service transactions add another problem. They impose significant temporal coupling, which is problematic across several services.
+
 **Asynchronous communication**
 
 A common asynchronous style is messaging over a lightweight message bus. It is an alternative to request/response protocols.
@@ -64,4 +72,6 @@ An online shop checks stock, takes payment and books shipping. In a synchronous 
 
 ## Trade-offs
 
-In return, the design needs extra machinery. Replies must be matched to requests, for example with a Correlation Identifier and separate reply channels.
+Synchronous calls expose the caller to the supplier's downtime, and chains of them multiply that downtime [src:1].
+
+Going asynchronous is one way out of the multiplied downtime. In return, the design needs extra machinery. Replies must be matched to requests, for example with a Correlation Identifier and separate reply channels.

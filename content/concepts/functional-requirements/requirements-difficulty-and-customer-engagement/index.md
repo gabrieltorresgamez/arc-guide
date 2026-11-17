@@ -61,9 +61,9 @@ review:
 
 ## Explanation
 
+Brooks calls deciding precisely what to build the hardest single part of building a software system [src:1]. He adds that no other part cripples the finished system as badly when done wrong, and no other part is more difficult to rectify later.
 
-
-
+Clients cannot state their requirements completely at the start. Brooks therefore asks for extensive iteration between client and designer.
 
 The Agile principles take a similar view:
 - Early and continuous delivery of valuable software is the highest priority.
@@ -72,11 +72,11 @@ The Agile principles take a similar view:
 
 **Common practices**
 
-
+- **Sprint Review.** In Scrum, the team shows its latest working result (the Increment) to stakeholders. The goal is to get feedback and encourage collaboration. The Product Owner invites the key stakeholders.
 - **Product Owner.** This person is the one whom anyone wanting to change a backlog item's priority must address.
 - **On-site customer.** In Extreme Programming (XP), a business-side person sits with the developers. They answer questions and make decisions about the business value of features. The customer may be one person but is more commonly a team.
 
-Fowler says interactive communication can avoid much of the misunderstanding that documents or intermediaries cause.
+Fowler says interactive communication can avoid much of the misunderstanding that documents or intermediaries cause [src:4].
 
 **Risks**
 
@@ -92,4 +92,4 @@ A team builds an internal booking tool. Every two weeks it shows working screens
 
 In Scrum, the Product Owner is one person, and anyone who wants to change a backlog item's priority must go through them. XP's on-site customer must be physically present with the developers.
 
-The belief that requirements errors cost most when found late is widely cited. However, a 2016 empirical study of 171 projects found no evidence for a delayed issue effect, and suggested it may occur only intermittently.
+The belief that requirements errors cost most when found late is widely cited. However, a 2016 empirical study of 171 projects found no evidence for a delayed issue effect, and suggested it may occur only intermittently [src:6].

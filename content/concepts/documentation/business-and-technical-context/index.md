@@ -61,7 +61,7 @@ A system does not work alone. It talks to users and to neighboring systems. arc4
 
 - The goal is that all stakeholders understand which data the system exchanges with its environment.
 - The diagram treats the system as a black box. You see only the outside, not the inner parts.
-- It names the domain interfaces to each communication partner.
+- It names the domain interfaces to each communication partner [src:1].
 - It should show data flows, not dependencies.
 
 **Technical context**

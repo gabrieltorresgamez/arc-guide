@@ -66,7 +66,7 @@ review:
 
 ## Explanation
 
-Data architecture is a high-level concept. It describes how data supports the strategic goals of a business. Data modeling is a lower-level activity. It defines the data flows and relationships inside a system. Together they align data assets with the organization's strategy.
+Data architecture is a high-level concept. It describes how data supports the strategic goals of a business [src:1]. Data modeling is a lower-level activity. It defines the data flows and relationships inside a system [src:1]. Together they align data assets with the organization's strategy.
 
 **What it covers**
 

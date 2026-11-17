@@ -51,11 +51,11 @@ review:
 
 BPMN (Business Process Model and Notation) diagrams use lines to link their elements. Each line type has its own look and its own job. These lines are called connecting objects.
 
-**Sequence flow.** It is a solid line with an arrowhead. It shows the order in which activities are performed. Camunda describes it as the arrow that sets the order of execution between two elements. In iGrafx, a connector between two objects in the same pool is a sequence flow. A pool is a container for one participant's process. See BPMN Swimlane (Pool and Lane).
+**Sequence flow.** It is a solid line with an arrowhead. It shows the order in which activities are performed. Camunda describes it as the arrow that sets the order of execution between two elements [src:4]. In iGrafx, a connector between two objects in the same pool is a sequence flow. A pool is a container for one participant's process. See BPMN Swimlane (Pool and Lane).
 
 **Default sequence flow.** This is a sequence flow with a slash on the line. The slash marks the default path.
 
-**Message flow.** It is a dashed arrow between two pools. It runs from a source to a possible target in another pool. It shows communication between participants. A message flow can never connect activities or events inside the same pool. Camunda recommends separate pools joined by message flows to show how participants communicate.
+**Message flow.** It is a dashed arrow between two pools. It runs from a source to a possible target in another pool. It shows communication between participants. A message flow can never connect activities or events inside the same pool. Camunda recommends separate pools joined by message flows to show how participants communicate [src:3].
 
 **Association.** It is drawn as a dotted line.
 

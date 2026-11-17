@@ -18,6 +18,7 @@ related:
 - separation-of-concerns
 - big-ball-of-mud
 - bounded-context
+- domain-driven-design
 checks:
 - Building blocks are formed mainly by cohesion.
 - Building blocks map to the modularization constructs of the programming language.

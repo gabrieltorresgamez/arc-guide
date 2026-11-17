@@ -142,7 +142,7 @@ The aim is to expose architectural risks. These are weaknesses that could keep a
 
 **Who takes part.** ATAM brings together a trained evaluation team, the architects and representatives of the stakeholders. The evaluation team is external to the project and has three to five members. Its roles include a leader who runs the evaluation, scribes, a timekeeper and people who ask questions. Project decision-makers have the authority to mandate architectural changes. Broader stakeholders join in the second phase.
 
-**How it runs.** An evaluation typically takes three to four days. ATAM formally has nine steps. In phase 0, the evaluation team and key decision-makers prepare: they arrange logistics and check that the architecture is documented well enough to evaluate. Phase 1 covers steps 1 to 6 and takes about a day. Phase 2 covers steps 7 to 9 and takes about two days.
+**How it runs.** An evaluation typically takes three to four days. ATAM formally has nine steps. In phase 0, the evaluation team and key decision-makers prepare: they arrange logistics, agree on the stakeholders and deliverables, and review the existing architecture documentation. Phase 1 covers steps 1 to 6 and takes about a day. Phase 2 covers steps 7 to 9 and takes about two days.
 
 - **Step 1:** the evaluation leader describes the method to everyone present.
 - **Step 2:** a project spokesperson, ideally the project manager or the system customer, presents the business goals.
@@ -164,7 +164,7 @@ The aim is to expose architectural risks. These are weaknesses that could keep a
 
 The results go into an out-brief presentation, a written report, or both. In arc42, section 11 holds a list of technical risks and debts, ordered by priority (see Placing ATAM Evaluation in arc42).
 
-**Common mistakes.** Findings float free of the architecture when decisions are not linked to quality attributes and scenarios. A vague risk such as "the architecture might have availability problems" names no decision and no scenario, so nobody can act on it. A non-risk or a sensitivity point without a named decision and a named quality cannot be shown.
+**Common mistakes.** A vague risk such as "the architecture might have availability problems" names no decision and no scenario, so nobody can act on it. A non-risk or a sensitivity point without a named decision and a named quality cannot be shown.
 
 **When to use it.** ATAM is most valuable early in the life cycle, when the cost of changing the architecture is minimal. It is also suggested when stakeholders have conflicting quality requirements, for example performance versus security. Older systems can be analyzed once their real architecture has been recovered, because their documentation is often missing or inaccurate.
 
@@ -172,7 +172,7 @@ The results go into an out-brief presentation, a written report, or both. In arc
 
 **Benefits.** Risks show up early, quality requirements become clearer, the architecture documentation improves, and stakeholders communicate more.
 
-**Cost.** A full ATAM gathers the evaluation team, the architects and stakeholder representatives for three to four days. One source puts a medium-size evaluation at about 70 person-days across all participants and small projects at about 32. Another source gives a wider range, from two days to several weeks. Reusing recorded scenarios from earlier evaluations can reduce the effort, and lighter methods trade thoroughness for speed (see Lightweight ATAM).
+**Cost.** A full ATAM gathers the evaluation team, the architects and stakeholder representatives for three to four days. One source's tables put a medium-size evaluation at about 70 person-days across all participants, and roughly half that for a small one [src:13]. Another source gives a wider range, from two days to several weeks. Reusing recorded scenarios from earlier evaluations can reduce the effort, and lighter methods trade thoroughness for speed (see Lightweight ATAM).
 
 **More about the ATAM terms and steps.**
 
@@ -180,14 +180,23 @@ The results go into an out-brief presentation, a written report, or both. In arc
 - **Analysis of Architectural Approaches:** Analysis of architectural approaches is the ATAM step where evaluators examine how design decisions handle important scenarios. It produces risks, non-risks, sensitivity points and trade-off points. A second pass repeats it with stakeholder-ranked scenarios.
 - **ATAM Risk:** In ATAM, a risk is an architectural decision that may harm how the system responds to a quality scenario. Teams record risks, and the good decisions (non-risks), so they can review and mitigate them.
 - **Sensitivity Point:** A sensitivity point is a property of a system that one quality, such as speed or confidentiality, depends on strongly. Teams flag these points during evaluation so they know which decisions carry the most leverage.
-- **Trade-Off Point:** A trade-off point is a property of the architecture that affects several quality attributes at once. Improving one attribute through it costs another. ATAM reports these points so teams can decide on a compromise knowingly.
+- **Trade-Off Point:** A trade-off point is a property of the architecture that affects several quality attributes at once. Improving one attribute through it costs another. ATAM reports these points so teams can decide on a compromise knowingly [src:25].
 
 ## Example
 
-A team plans an online ticket shop. Fast checkout and strong data protection are both top goals. During the evaluation, the group finds that encrypting every request slows checkout. That is a trade-off point. The group also finds that checkout depends on one payment service with no fallback. That is a risk. The team records both and links the risk to the business goal of steady sales.
+A team plans an online ticket shop. Fast checkout and strong data protection are both top goals. One leaf of the utility tree is a full scenario:
+
+- Source: a customer.
+- Stimulus: submits a payment.
+- Artifact: the checkout service.
+- Environment: a sales peak.
+- Response: the order is confirmed.
+- Response measure: 95% of confirmations within 2 seconds.
+
+The group rates it (H,H), so it is analyzed first. During the evaluation, the group finds that encrypting every request makes this measure hard to meet. That is a trade-off point. The group also finds that checkout depends on one payment service with no fallback. That is a risk. The team records both and links the risk to the business goal of steady sales.
 
 ## Trade-offs
 
-ATAM is costly. The method is scenario-based and involves many stakeholders.
+ATAM is costly. A 2022 review counts it among the comprehensive methods that need a great deal of cost and effort [src:3]. The method is scenario-based and involves many stakeholders.
 
 Lightweight variants reduce cost by minimizing documentation, formality and the number of stakeholders involved. See Lightweight ATAM.

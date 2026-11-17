@@ -221,8 +221,8 @@ review:
 - **BPM Life Cycle:** The BPM life cycle is a loop of stages for a business process: discovery, analysis, design, implementation and optimization. A live process is measured and improved so it stays useful as goals, technology and rules change.
 - **BPM Usage Scenario:** A BPM usage scenario is a typical reason for buying a business process management suite (BPMS). Four are described: automating one process, continuous improvement, moving to SOA, and business transformation. Each has different buyers and goals.
 - **Degrees of BPM Maturity:** Processes can be automated to different degrees, from steps with people involved to straight-through processing with no human at all. RPA and AI agents help move a process along.
-- **Waves of Business Process Management:** Business process thinking has changed over time. In 1990, Hammer argued for removing work that adds no value instead of automating it. Reengineering then drew criticism for downsizing and high failure rates.
-- **ARIS Process Views:** ARIS describes a business and its information systems through several views, and each view is detailed in three levels. Process chain diagrams belong to its control view. ARIS mainly supports analysis and requirements definition.
+- **Waves of Business Process Management:** Business process thinking has changed over time. In 1990, Hammer argued for removing work that adds no value instead of automating it [src:37]. Reengineering then drew criticism, among other things for downsizing.
+- **ARIS Process Views:** ARIS describes a business and its information systems through several views, and each view is detailed in three levels [src:39]. Process chain diagrams belong to its control view. ARIS mainly supports analysis and requirements definition.
 
 ## Example
 

@@ -66,7 +66,7 @@ review:
 
 ## Explanation
 
-Some decisions do not belong to one part of a system. They apply in many parts at once. Logging and security are typical examples. arc42 calls these **crosscutting concepts**. It describes them as practices, patterns, regulations, or solution ideas that often span several building blocks. (A building block is a part of the system, such as a module or component.)
+Some decisions do not belong to one part of a system. They apply in many parts at once. Logging and security are typical examples. arc42 calls these **crosscutting concepts**. It describes them as practices, patterns, regulations, or solution ideas that often span several building blocks [src:1]. (A building block is a part of the system, such as a module or component.)
 
 **Where they live.** arc42 section 8 holds them. The arc42 overview describes this section as covering overarching, often very technical topics, such as technology choices and recurring patterns. The section grows as the team decides on more concepts.
 

@@ -77,7 +77,7 @@ An architecture style is a family of architectures with shared traits. It limits
 
 **Where patterns come from and how to analyze them**
 
-Fowler credits the Buschmann et al. POSA book with influential work on architectural patterns. He names layers and pipes and filters as foundations for later enterprise patterns. The SEI report on modifiability tactics describes standard patterns and their variants in terms of the tactics they use. A tactic is a design decision that affects how well an architecture addresses a particular quality attribute (see Architectural Tactic).
+Fowler credits the Buschmann et al [src:4]. POSA book with influential work on architectural patterns. He names layers and pipes and filters as foundations for later enterprise patterns [src:4]. The SEI report on modifiability tactics describes standard patterns and their variants in terms of the tactics they use. A tactic is a design decision that affects how well an architecture addresses a particular quality attribute (see Architectural Tactic).
 
 **Choosing**
 

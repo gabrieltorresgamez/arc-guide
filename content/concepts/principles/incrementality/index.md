@@ -53,19 +53,18 @@ Instead of one complete plan, the team builds in small steps and learns from eac
 
 **Why not design everything at once?**
 
-- Requirements keep changing. Fowler says changing requirements are a major headache for planned design, and that building in flexibility only helps with changes you foresaw.
+- Requirements keep changing. Fowler says changing requirements are a major headache for planned design, and that building in flexibility only helps with changes you foresaw [src:2].
 - Nobody can think through every issue before implementation starts.
 
 **What this approach asks for**
 
-- Let the design grow as the system is built. Fowler calls this evolutionary design.
+- Let the design grow as the system is built. Fowler calls this evolutionary design [src:2].
 
 - Do not build capability before it is needed. Early work on the wrong solution wastes effort.
 
-
 **Not purely emergent**
 
-Incremental does not mean unplanned. Fowler says incremental design needs something that makes the design converge into order.
+Incremental does not mean unplanned. Fowler says incremental design needs something that makes the design converge into order [src:3].
 
 ## Example
 

@@ -43,13 +43,13 @@ review:
 
 ## Explanation
 
-Timeout-based delivery is a way for a message queue to hand out work without losing it. Amazon SQS calls the timeout a *visibility timeout*. Azure Service Bus calls the same idea *Peek-Lock*.
+Timeout-based delivery is a way for a message queue to hand out work without losing it. Amazon SQS calls the timeout a *visibility timeout* [src:1]. Azure Service Bus calls the same idea *Peek-Lock* [src:2].
 
 **How it works**
 
 1. A consumer receives a message. The message stays in the queue, but other consumers cannot see it for a limited time. Service Bus does this with an exclusive lock.
 2. The consumer processes the message.
-3. On success, the consumer deletes the message before the timeout ends. Service Bus calls this step Complete.
+3. On success, the consumer deletes the message before the timeout ends. Service Bus calls this step Complete [src:2].
 4. If the timeout expires first, the message becomes visible again. Another consumer can pick it up.
 
 **Why it matters**
@@ -62,7 +62,7 @@ This model is *at-least-once* delivery: a message arrives one or more times. Eve
 
 **Choosing the timeout**
 
-- Size it to your normal processing time. Service Bus advises a lock longer than normal processing, so you rarely need to renew it. Its lock defaults to 1 minute, with a 5-minute maximum. The SQS default is 30 seconds.
+- Size it to your normal processing time. Service Bus advises a lock longer than normal processing, so you rarely need to renew it [src:2]. Its lock defaults to 1 minute, with a 5-minute maximum [src:2]. The SQS default is 30 seconds [src:1].
 - A long timeout delays retries after a failure.
 - For slow jobs, extend the timeout periodically with a heartbeat. SQS has a 12-hour cap that extensions do not reset. The lock owner can also renew a Service Bus lock.
 

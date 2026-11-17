@@ -57,7 +57,7 @@ The Attribute-Driven Design (ADD) method defines the architecture based on quali
 
 ADD is also recursive. It splits a system, or one element of it, by applying tactics and patterns that satisfy the main quality needs. Then it repeats the step on the resulting elements. Tactics and patterns shape the design so that it reflects the architecturally significant requirements. Several tactics can pull in different directions, so trade-offs arise. See Architectural Tactic and Architecturally Significant Requirement.
 
-ISO 25010 treats functional suitability as a quality characteristic. It describes how well a system provides functions that meet stated and implied needs. One sub-characteristic is completeness: whether the functions cover all specified tasks and user objectives.
+ISO 25010 treats functional suitability as a quality characteristic. It describes how well a system provides functions that meet stated and implied needs [src:4]. One sub-characteristic is completeness: whether the functions cover all specified tasks and user objectives.
 
 ## Example
 

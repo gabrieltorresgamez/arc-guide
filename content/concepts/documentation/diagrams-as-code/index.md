@@ -93,12 +93,12 @@ Many diagramming tools save diagrams in formats that are hard to compare. That m
 
 Structurizr DSL follows this approach. It is a text language that creates diagrams from one consistent model. A workspace has these parts:
 
-- A `model` block. It is required. It defines elements and relationships.
+- A `model` block. It is required. It defines elements and relationships [src:4].
 - A `views` block. It holds one or more views. Defining any view removes the default set. Inside it, a `styles` block sets how elements and relationships look.
 
 Layout can be automatic. You add the `autoLayout` statement inside a view.
 
-
+**Other renderers.** Image views in Structurizr DSL can take PlantUML, Mermaid or Kroki sources and render them through those services, as png or svg.
 
 **Keeping diagrams current.** One published example generates its views from a single Structurizr model as C4-PlantUML diagrams. The Asciidoctor task depends on the task that writes the diagrams, so the diagrams are written before the documentation is generated.
 

@@ -76,7 +76,6 @@ The arc42 whitebox template for the overall system in the building block view co
 
 **More about the vision.**
 
-
 - **Vision Statement:** A vision statement is a short, inspiring statement of the shared goal behind a product.
 
 ## Example

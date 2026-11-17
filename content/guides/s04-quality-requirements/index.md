@@ -48,7 +48,8 @@ In arc42, the top goals go into section 1.2. The scenarios and the tree go into 
 5. **Cover both kinds of scenario.** Usage scenarios describe the runtime reaction to a stimulus. Change scenarios describe the effect of modifying or extending the system. See [Maintainability](concept:maintainability).
 6. **Add lesser scenarios, but keep the total small.** Around ten scenarios is manageable for most systems.
 7. **Build the quality tree.** Put "quality" at the root. Refine it into categories and topics. Put one scenario at each leaf. Look for empty branches and either add a scenario or note why the branch is empty.
-8. **Place everything in arc42.** Top goals go into section 1.2 as a table ordered by priority. Chapter 10 holds the tree and all scenarios and points back to section 1.2.
+8. **Rank the leaves.** Rate each scenario twice, as High, Medium or Low. Stakeholders rate its importance. Architects rate how difficult it is to achieve. Write the pair as (importance, difficulty). Give the (H,H) scenarios the most attention in design and review, then (H,M) and (M,H). See [Utility Tree](concept:utility-tree).
+9. **Place everything in arc42.** Top goals go into section 1.2 as a table ordered by priority. Chapter 10 holds the tree and all scenarios and points back to section 1.2.
 
 ## Example: ClinicBook
 
@@ -115,20 +116,20 @@ ClinicBook is an online booking system for 40 small medical practices. The force
 ```
 Quality
 ├── Security
-│   └── Confidentiality ......... S1
+│   └── Confidentiality ......... S1 (H,M)
 ├── Reliability
-│   └── Availability ............ A1
+│   └── Availability ............ A1 (H,H)
 ├── Compatibility
-│   └── Interoperability ........ I1
+│   └── Interoperability ........ I1 (H,H)
 ├── Maintainability
-│   └── Modifiability ........... M1
+│   └── Modifiability ........... M1 (M,M)
 ├── Interaction Capability
-│   └── Learnability ............ U1
+│   └── Learnability ............ U1 (M,L)
 └── Performance efficiency ...... (no leaf yet: A1 sets the peak response time;
                                    add a scenario if this proves too thin)
 ```
 
-The tree shows one empty branch. The team writes down why it is empty.
+The pairs are (importance, difficulty). A1 and I1 are rated (H,H), so the team designs and reviews them first. The tree shows one empty branch. The team writes down why it is empty.
 
 ## Done when
 
@@ -137,7 +138,7 @@ The tree shows one empty branch. The team writes down why it is empty.
 - Each top goal has at least one scenario with source, stimulus, artifact, environment, response and response measure. See [Quality Attribute Scenario](concept:quality-attribute-scenario).
 - Each response measure can be checked, so a reader can decide whether the requirement is met. See [Insufficient Quality as Driver of Change](concept:insufficient-quality-as-driver-of-change).
 - The scenarios include both usage and change scenarios, and the total stays around ten. See [ISO/IEC 25010 Product Quality Model](concept:iso-iec-25010-product-quality-model).
-- The quality tree has "quality" at its root and a scenario at every leaf. Empty branches are filled or explained. See [Utility Tree](concept:utility-tree).
+- The quality tree has "quality" at its root and a scenario at every leaf. Empty branches are filled or explained. Each leaf has an (importance, difficulty) rating. See [Utility Tree](concept:utility-tree).
 - Chapter 10 holds the tree and the scenarios and references the top goals in section 1.2. See [arc42 Quality Requirements](concept:arc42-quality-requirements).
 
 ## Learn more

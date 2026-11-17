@@ -21,7 +21,7 @@ related:
 checks:
 - The stakeholder overview names the customers and partners that appear in the business model.
 - If a canvas is cited, it is dated and versioned.
-- The introduction lists only the top 3-5 quality goals.
+- Section 1.2 lists the top three quality goals, at most five, ordered by priority.
 sources:
 - url: https://www.strategyzer.com/library/the-business-model-canvas
   title: Business Model Canvas – Download the Official Template
@@ -92,4 +92,4 @@ A small online bakery fills in a canvas. Its customer segment is office workers.
 
 ## Trade-offs
 
-The canvas is static. It says little about how parts interact or about the environment. Because the canvas is a hypothesis, its content can change as evidence arrives.
+The canvas is static. It says little about how parts interact or about the environment [src:4]. Because the canvas is a hypothesis, its content can change as evidence arrives.

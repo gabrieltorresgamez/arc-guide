@@ -64,11 +64,11 @@ The canvas works as a workshop tool. Stakeholders brainstorm the sections togeth
 
 - **Inception Canvas.** It is for creating and envisioning new systems from scratch. It builds on Patrick Roos' Software Architecture Canvas.
 - **Communication Canvas.** It has fields for describing a system, such as core decisions, components and technologies.
-- **Tech Stack Canvas.** It is an INNOQ approach. It puts all relevant technologies on one page. You can use it to plan new projects or to document the status quo of an existing product.
+- **Tech Stack Canvas.** It is an INNOQ approach. It puts all relevant technologies on one page [src:3]. You can use it to plan new projects or to document the status quo of an existing product.
 
 **Selected Inception fields**
 
-- *Business Case* is the "why" field. It names the economic driver behind a software initiative.
+- *Business Case* is the "why" field. It names the economic driver behind a software initiative [src:4].
 - *Quality goals* ask for the three most important goals of the stakeholders. These goals drive the architecture.
 - *Architectural hypotheses* record your assumptions. Ideally, you can turn them into draft architecture decision records (see Architectural Decision Record).
 - *Business context* treats your system as a black box, separate from its communication partners.

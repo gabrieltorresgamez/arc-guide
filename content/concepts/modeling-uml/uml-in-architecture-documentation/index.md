@@ -74,9 +74,9 @@ Clear meaning matters because readers interpret the diagram the same way. Plain 
 
 **Tooling.** Graphical modeling tools can make sequence diagrams laborious to create and manage. PlantUML is a free, open-source, text-based alternative.
 
-**Sketches are fine.** Martin Fowler notes that most UML diagrams in books are sketches. They communicate selectively and do not try to specify everything.
+**Sketches are fine.** Martin Fowler notes that most UML diagrams in books are sketches [src:3]. They communicate selectively and do not try to specify everything.
 
-**Alternatives.** The C4 model is one alternative. Its FAQ says teams already succeeding with UML, SysML or ArchiMate should keep using them. It also says you can supplement C4 diagrams with UML state or timing diagrams.
+**Alternatives.** The C4 model is one alternative. Its FAQ says teams already succeeding with UML, SysML or ArchiMate should keep using them [src:4]. It also says you can supplement C4 diagrams with UML state or timing diagrams.
 
 ## Example
 

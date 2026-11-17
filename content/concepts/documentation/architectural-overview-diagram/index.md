@@ -70,7 +70,7 @@ review:
 
 ## Explanation
 
-An architectural overview diagram is a high-level picture of a system. It shows the main building blocks inside the system. It also shows the people and other systems outside it. Zimmermann's Design Practice Repository calls it a container diagram. It records the outcome of the early, big solution-strategy decisions (see the article arc42 Solution Strategy).
+An architectural overview diagram is a high-level picture of a system. It shows the main building blocks inside the system. It also shows the people and other systems outside it. Zimmermann's Design Practice Repository calls it a container diagram [src:1]. It records the outcome of the early, big solution-strategy decisions (see the article arc42 Solution Strategy).
 
 **How it differs from a context diagram.** A context diagram shows only the outside: external dependencies, used for scope control and risk management. In the repository, it comes first. The overview diagram goes further. It looks inside the system. It still includes all external interfaces with human users and other systems.
 

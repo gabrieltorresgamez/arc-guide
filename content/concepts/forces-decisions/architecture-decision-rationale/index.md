@@ -65,4 +65,4 @@ A team chooses a message queue over direct calls between two services. The recor
 
 ## Trade-offs
 
-Writing rationale costs effort. That is why only key decisions deserve a record. A log with more than 100 entries will probably put readers to sleep and be hard to maintain, and weak justifications convince nobody. Zimmermann notes that the Y-statement is lean, while the five sections of a Nygard-style ADR can get rather long.
+Writing rationale costs effort. That is why only key decisions deserve a record. A log with more than 100 entries will probably put readers to sleep and be hard to maintain, and weak justifications convince nobody. Zimmermann notes that the Y-statement is lean, while the five sections of a Nygard-style ADR can get rather long [src:2].

@@ -18,6 +18,7 @@ related:
 - coupling-and-cohesion
 - architectural-decision-record
 - design-for-change
+- conways-law
 checks:
 - Quality attribute requirements, not only functional ones, are named as drivers of the architecture.
 - Decisions are based on facts rather than guesses, so unused capabilities are not built.

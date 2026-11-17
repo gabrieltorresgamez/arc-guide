@@ -59,7 +59,7 @@ Strategy decisions are cornerstones. Many more detailed decisions or implementat
 
 **Format**
 
-Section 9 can be a list or table of decisions, ordered by importance and consequences. It can also hold one Architectural Decision Record (ADR) per decision. An ADR captures a single decision and its rationale. Michael Nygard's 2011 blog post popularized the idea. See "Architectural Decision Record" for details.
+Section 9 can be a list or table of decisions, ordered by importance and consequences. It can also hold one Architectural Decision Record (ADR) per decision. An ADR captures a single decision and its rationale. Michael Nygard's 2011 blog post popularized the idea [src:3]. See "Architectural Decision Record" for details.
 
 ## Example
 

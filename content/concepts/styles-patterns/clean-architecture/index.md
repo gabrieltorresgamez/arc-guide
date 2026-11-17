@@ -61,7 +61,7 @@ Clean Architecture organizes a system as circles, or layers. Business rules sit 
 
 **Control flow versus dependency direction.** At runtime, a request begins in the controller. It moves through the use case and ends in the presenter. This path goes inward and then back outward. It seems to conflict with the Dependency Rule.
 
-The Dependency Inversion Principle resolves this conflict at the boundaries. The use case does not call the presenter directly. It calls an output port, which is an interface defined in the inner circle. The outer layer implements that interface. The code dependency therefore still points inward.
+The Dependency Inversion Principle resolves this conflict at the boundaries. The use case does not call the presenter directly. It calls an output port, which is an interface defined in the inner circle [src:1]. The outer layer implements that interface. The code dependency therefore still points inward.
 
 **Crossing boundaries.** Data crosses a boundary as a simple data structure, such as a Data Transfer Object (DTO). A DTO is a plain container for values.
 

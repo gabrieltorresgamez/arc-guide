@@ -62,7 +62,7 @@ LASR is a review method for software systems. It is lighter than ATAM, a heavier
 
 **Risk catalogue.** LASR uses a catalogue of standard risks. It comes from more than 100 earlier reviews.
 
-**Evidence of effect.** A short paper in the ICSA 2026 Software Architecture in Practice track reports on 75 independently conducted reviews. Its results indicate that LASR delivers actionable insights with modest effort.
+**Evidence of effect.** A short paper in the ICSA 2026 Software Architecture in Practice track reports on 75 independently conducted reviews [src:3]. Its results indicate that LASR delivers actionable insights with modest effort.
 
 ## Example
 

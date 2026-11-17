@@ -70,7 +70,7 @@ This article covers four views: context, component (building block), runtime, an
 
 **Runtime view.** It shows how instances of building blocks do their job and communicate while the system runs. arc42 asks for a representative selection of architecturally relevant scenarios, not every possible flow. This is arc42 section 6.
 
-**Distribution view.** It describes the technical infrastructure used to run the system and maps the software building blocks to that infrastructure. arc42 recommends UML deployment diagrams for it, nested when the infrastructure is complex. Other node-and-channel diagrams are acceptable for hardware stakeholders. This is arc42 section 7.
+**Distribution view.** It describes the technical infrastructure used to run the system and maps the software building blocks to that infrastructure. arc42 recommends UML deployment diagrams for it, nested when the infrastructure is complex [src:4]. Other node-and-channel diagrams are acceptable for hardware stakeholders. This is arc42 section 7.
 
 **Relation to C4.** C4 uses a hierarchy of diagrams: system context, containers, components, and code. It does not depend on one notation. Its core diagrams can be drawn in UML with packages, components and stereotypes. UML diagrams tend to lack descriptive text, so add it.
 

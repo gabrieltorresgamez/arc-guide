@@ -54,7 +54,7 @@ Some project management theories require exactly one Accountable stakeholder for
 
 **RACI and architectural decisions**
 
-The Architectural Decision Definition of Ready says a decision should be made only when certain people are known and able to take part. These are the decision makers, the consulted stakeholders and the people affected by the outcome. It suggests grouping them in a RACI matrix.
+The Architectural Decision Definition of Ready says a decision should be made only when certain people are known and able to take part [src:2]. These are the decision makers, the consulted stakeholders and the people affected by the outcome. It suggests grouping them in a RACI matrix [src:2].
 
 **Roles, not only individuals**
 

@@ -43,7 +43,7 @@ review:
 
 ## Explanation
 
-The Twin Peaks Model says teams refine requirements and architecture in parallel, and each one influences the other.
+The Twin Peaks Model says teams refine requirements and architecture in parallel, and each one influences the other [src:1].
 
 Both start rough and general. Through repeated rounds, both become detailed.
 

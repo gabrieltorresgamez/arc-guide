@@ -53,7 +53,7 @@ The Open Definition sets four requirements for an open work:
 
 **Open government data**
 
-Data.gov is the US government's open data site. The OPEN Government Data Act says that government data must be published in open formats that machines can read.
+Data.gov is the US government's open data site. The OPEN Government Data Act says that government data must be published in open formats that machines can read [src:3].
 
 **Finding data across catalogs**
 

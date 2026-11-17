@@ -80,8 +80,8 @@ ClinicBook is an online appointment booking system for a network of 40 small med
 |---|---|
 | Privacy and security | A person without rights tries to read another patient's appointment. The system refuses and logs the attempt. |
 | Availability in morning peaks | Many patients book between 7:00 and 9:00. Booking still works. |
-| Integrability | A practice uses a different vendor's software. ClinicBook still reads and writes its calendar. |
-| Maintainability | A small team adds a new reminder channel without changing the booking logic. |
+| Interoperability with practice software | A practice uses a different vendor's software. ClinicBook still reads and writes its calendar. |
+| Maintainability | A developer adds support for a new vendor's software without changing the booking logic. |
 
 The details, such as exact numbers, move to section 10.
 

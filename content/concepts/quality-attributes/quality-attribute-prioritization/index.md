@@ -18,8 +18,8 @@ related:
 - quality-attribute-trade-off
 - iso-iec-25010-product-quality-model
 checks:
-- The introduction lists only the top three quality goals, and no more than five.
-- The quality goals appear as a table ordered by priority.
+- Section 1.2 lists the top three quality goals, at most five, ordered by priority.
+- The quality goals in section 1.2 are shown as a table.
 - Each top quality goal has at least one concrete scenario.
 - Lesser-importance quality requirements sit in section 10, which references the top goals from section
   1.2.

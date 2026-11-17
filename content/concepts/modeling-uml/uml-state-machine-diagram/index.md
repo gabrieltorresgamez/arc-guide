@@ -117,13 +117,13 @@ A state machine diagram draws the life of something as **states** and **transiti
 
 **Transition labels**
 
-A transition label can carry a guard and an effect. The guard is a condition in square brackets. The effect comes after a slash. See UML State Machine Diagram and Transition Syntax (Trigger, Guard, Behavior).
+A transition label can carry a guard and an effect. The guard is a condition in square brackets. The effect comes after a slash.
 
 The event on a transition may be omitted. In that case the state changes once the activities of the previous state have finished.
 
 **Behavior inside a state**
 
-A state may have an entry behavior, a do behavior and an exit behavior. The entry action runs when the state is entered. The exit action runs whenever the state is left. The do action repeats as long as the state does not change. See UML State Machine Diagram.
+A state may have an entry behavior, a do behavior and an exit behavior. The entry action runs when the state is entered. The exit action runs whenever the state is left. The do action repeats as long as the state does not change.
 
 **Branching**
 
@@ -132,7 +132,7 @@ A state may have an entry behavior, a do behavior and an exit behavior. The entr
 
 **Nesting and reuse**
 
-- Composite states contain other states. They can hold several regions that model parallel behavior. See UML State Machine Diagram and Concurrent Region.
+- Composite states contain other states. They can hold several regions that model parallel behavior.
 - When a composite state is left, exit starts at the innermost active state.
 - A submachine state lets you reuse one state machine specification many times. Its connection points match entry and exit points in the referenced machine.
 

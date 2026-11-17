@@ -73,7 +73,7 @@ ClinicBook is the online booking system for 40 small practices.
 | Reminders | Patients get told about upcoming appointments. | Supporting |
 | Practice Software Link | Appointment data stays aligned with each practice's own software. | Supporting |
 
-Open questions go on the canvas. One example: do all 40 practices define a "slot" the same way? The team has a small team, so one team may own several of these contexts at first. It writes the owner of each down and keeps the owned contexts related.
+Open questions go on the canvas. One example: do all 40 practices define a "slot" the same way? ClinicBook has only one small team, so that team owns several of these contexts at first. It writes the owner of each down and keeps the owned contexts related.
 
 **Context map.** The practice-management software is external, and it comes from different vendors. ClinicBook cannot influence it, so the team does not label that link customer-supplier. A translating wrapper in Practice Software Link keeps the vendors' models out of ClinicBook's own contexts. Booking is upstream of Reminders. Reminders consumes booking events and sends them by SMS and e-mail. The team explains each arrow in the diagram's legend.
 

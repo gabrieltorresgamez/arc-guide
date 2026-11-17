@@ -66,7 +66,7 @@ review:
 
 **Agree on colors.** Colors can be chosen freely. Keep any color coding consistent within and across diagrams, and be careful about black and white printers and color blindness.
 
-**Avoid diagram sprawl.** Do not draw everything. The arc42 Architecture Documentation Template advises detailing only building blocks that are important, surprising, risky, complex, or volatile. It also uses abstraction levels. Each level zooms into selected building blocks of the one before it.
+**Avoid diagram sprawl.** Do not draw everything. The arc42 Architecture Documentation Template advises detailing only building blocks that are important, surprising, risky, complex, or volatile [src:2]. It also uses abstraction levels. Each level zooms into selected building blocks of the one before it.
 
 **Consider tooling.** One question to ask is whether data is stored in git next to the source code or inside a tool or cloud service.
 

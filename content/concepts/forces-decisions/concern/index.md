@@ -71,7 +71,7 @@ Rozanski and Woods classify stakeholders by their roles and concerns. They also 
 
 **Where the word comes from**
 
-Dijkstra coined the term separation of concerns. There, a concern is any aspect of software that can be defined separately from other aspects. See the article Separation of Concerns.
+Dijkstra coined the term separation of concerns [src:2]. There, a concern is any aspect of software that can be defined separately from other aspects. See the article Separation of Concerns.
 
 ## Example
 

@@ -47,18 +47,15 @@ Some designs are more detailed than an architecture but too early to have comple
 
 The review shows the design to its user community. These are the application programmers who will build on it. They give feedback before the design is locked into a detailed specification.
 
-
-
-Wikipedia describes ARID as a method for evaluating architectures at an intermediate level.
+ARID is a hybrid. It combines a scenario-based architecture evaluation method, such as ATAM, with an active design review of design specifications. Wikipedia describes it as a method for evaluating architectures at an intermediate level, that is, architectures that are not finished [src:3].
 
 A review of lightweight architecture evaluation methods lists ARID as a lightweight method. For a broader method, see Architecture Tradeoff Analysis Method (ATAM).
 
 ## Example
 
-A team has sketched the interface of a new notification component. No full architecture document exists yet. The team invites the programmers who will call the component. Together they brainstorm and vote on the usage situations that matter most. The programmers then judge whether the design fits those situations. The review ends with a list of design issues. The team fixes them before writing the detailed specification.
+A team has sketched the interface of a new notification component. No full architecture document exists yet. The team invites the programmers who will call the component. They walk through the situations in which they would use it and point out where the design does not fit. The team fixes those points before writing the detailed specification.
 
 ## Trade-offs
 
 **Benefits:** ARID suits designs that are not yet completely documented. It gives early feedback from the people who will use the design.
-
 

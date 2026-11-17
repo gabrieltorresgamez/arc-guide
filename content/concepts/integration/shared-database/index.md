@@ -56,13 +56,13 @@ review:
 
 ## Explanation
 
-A shared database is an integration style. Applications built separately, even in different languages and on different platforms, store their data in one common database. Each application reads what the others wrote. This shares information rapidly and consistently.
+A shared database is an integration style. Applications built separately, even in different languages and on different platforms, store their data in one common database, so information is shared rapidly and consistently.
 
 It is one of four integration styles: file transfer, shared database, remote invocation and messaging. See the article Integration Styles for the overview. Each style addresses the same integration problem, and what differentiates them is different forces seeking a more sophisticated solution. Here the applications share data in a common database. Messaging goes further. It exchanges data and also invokes behavior through a common messaging system.
 
 **The schema is the hard part.** The schema is the structure of the shared data. One schema must meet the needs of many applications. Designing it is a very difficult exercise. There are also political difficulties. Conflicts between departments make agreeing on a shared schema worse.
 
-**Coupling.** Martin Fowler warns that the database becomes a point of coupling between all applications that access it. The coupling is deep. It makes changing those applications riskier. See Coupling and Cohesion for background.
+**Coupling.** Martin Fowler warns that the database becomes a point of coupling between all applications that access it [src:2]. The coupling is deep. It makes changing those applications riskier.
 
 ## Example
 

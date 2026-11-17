@@ -50,7 +50,7 @@ review:
 
 **Resources and URIs.** The Web is built on the REST style. In REST, the resource is the central abstraction of information.
 
-**Safe reads.** HTTP defines GET as a safe operation. It does not significantly change server state. Because of this, any participant in the routing of requests can use caching.
+**Safe reads.** HTTP defines GET as a safe operation [src:2]. It does not significantly change server state. Because of this, any participant in the routing of requests can use caching.
 
 **Discovery through links.** Representations can contain hyperlinks, also called hypermedia controls. These links tell a client what it can do next and give it a starting point for exploring the protocol. This also makes the protocol more self-documenting.
 

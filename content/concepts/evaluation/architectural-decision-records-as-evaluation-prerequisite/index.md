@@ -51,9 +51,9 @@ An architectural decision means choosing one alternative from several, based on 
 
 **What a record holds**
 
-Lightweight formats exist. A Nygard-style record has a Context section. It describes the forces at play: technical, political, social and project aspects. Its Consequences section should list all consequences, not only the positive ones.
+Lightweight formats exist. A Nygard-style record has a Context section. It describes the forces at play: technical, political, social and project aspects [src:1]. Its Consequences section should list all consequences, not only the positive ones.
 
-MADR is another format. Its Decision Outcome names the chosen option and gives a justification. Its optional consequences list good and bad effects of the decision. See the article on Architectural Decision Record.
+MADR is another format. Its Decision Outcome names the chosen option and gives a justification [src:3]. Its optional consequences list good and bad effects of the decision. See the article on Architectural Decision Record.
 
 **Why evaluation needs them**
 
@@ -65,7 +65,7 @@ Record only significant decisions: those that matter and are hard and costly to 
 
 **Finding risks early**
 
-ATAM exposes architectural risks that could keep an organization from reaching its business goals. The SEI lists identifying such risks early in the life cycle as a benefit.
+ATAM exposes architectural risks that could keep an organization from reaching its business goals. The SEI lists identifying such risks early in the life cycle as a benefit [src:2].
 
 ## Example
 

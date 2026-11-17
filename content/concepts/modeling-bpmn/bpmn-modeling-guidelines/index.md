@@ -76,11 +76,11 @@ BPMN is a notation for drawing business processes. See the article BPMN 2.0 Nota
 
 **Phrase XOR gateways as questions.** Label it with a question. Label each outgoing flow as an answer to that question. Draw the X symbol inside the gateway, even if your tool allows a blank one.
 
-**Leave some gateways unnamed.** Camunda advises against naming parallel gateways and all joining gateways. Silver's style also leaves AND and event gateways unlabeled, including their gates.
+**Leave some gateways unnamed.** Camunda advises against naming parallel gateways and all joining gateways [src:1]. Silver's style also leaves AND and event gateways unlabeled, including their gates.
 
-**Name tasks as actions.** Camunda asks for an object and a verb in the infinitive, for example "Check invoice". Silver says all activities, subprocesses included, should be labeled, preferably as a verb-object action.
+**Name tasks as actions.** Camunda asks for an object and a verb in the infinitive, for example "Check invoice". Silver says all activities, subprocesses included, should be labeled, preferably as a verb-object action [src:3].
 
-**Use pools for participants.** For models at the operational level, Camunda recommends separate pools for process participants instead of lanes, though it says lanes can suit strategic or technical models. Silver models roles or departments within the organization as lanes in a single pool. Name a pool after the process it contains. Order the pools so message flows cross other pools as little as possible.
+**Use pools for participants.** For models at the operational level, Camunda recommends separate pools for process participants instead of lanes, though it says lanes can suit strategic or technical models [src:2]. Silver models roles or departments within the organization as lanes in a single pool. Name a pool after the process it contains. Order the pools so message flows cross other pools as little as possible.
 
 **More about layout and color.**
 

@@ -18,6 +18,7 @@ related:
 - shared-database
 - synchronous-vs-asynchronous-communication
 - integration-style
+- pipes-and-filters
 checks:
 - The document names the messaging patterns it uses by their EIP names.
 - Where a pattern is used, the document says which problem it solves.
@@ -284,7 +285,7 @@ review:
 
 ## Explanation
 
-Enterprise Integration Patterns (EIP) are named designs for connecting applications through messaging. Messaging is asynchronous, program-to-program communication with reliable delivery. Asynchronous means the sender does not wait for the receiver (see the article Synchronous vs. Asynchronous Communication). Hohpe and Woolf group their patterns into seven categories. This page lists all of them with a short definition. The official page of each pattern has the full description.
+Enterprise Integration Patterns (EIP) are named designs for connecting applications through messaging. Messaging is asynchronous, program-to-program communication with reliable delivery. Asynchronous means the sender does not wait for the receiver (see the article Synchronous vs. Asynchronous Communication). The authors group their patterns into seven categories. This page lists all of them with a short definition. The official page of each pattern has the full description.
 
 Messaging is one of four integration styles. The others are File Transfer, Shared Database and Remote Procedure Invocation (see Integration Style). Apache Camel supports most of these patterns.
 

@@ -100,7 +100,7 @@ review:
 
 ## Explanation
 
-A business capability is something the business must be able to do. It says nothing about how the work is done or who does it.
+A business capability is something the business must be able to do. It says nothing about how the work is done or who does it [src:1].
 
 A capability map arranges these capabilities in a hierarchy. Maps usually have seven to ten level-1 capabilities. Three levels are typically enough for enterprise analysis. The aim is traceability without overcomplication.
 
@@ -110,7 +110,7 @@ Capabilities stay stable for years. Processes, systems and organizational struct
 
 **What it is not**
 
-- *Process model:* a capability does not describe activities, workflows or systems. It describes what is needed.
+- *Process model:* a capability does not describe activities, workflows or systems. It describes what is needed [src:15].
 - *Org chart:* org charts change often. Capabilities should stay stable.
 
 **Building a first draft**

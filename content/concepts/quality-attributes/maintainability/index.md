@@ -124,7 +124,7 @@ ISO/IEC 14764 sorts software maintenance into four types. Corrective maintenance
 
 **Tactics**
 
-An architectural tactic is a design decision that affects how well an architecture serves a quality attribute. See Architectural Tactic. For modifiability, a Software Engineering Institute report justifies tactics through coupling, cohesion, and cost. It describes each tactic by how well it controls these parameters.
+An architectural tactic is a design decision that affects how well an architecture serves a quality attribute. See Architectural Tactic. For modifiability, a Software Engineering Institute report justifies tactics through coupling, cohesion, and cost. It describes each tactic by how well it controls these parameters [src:3].
 
 **Technical debt and legacy systems**
 

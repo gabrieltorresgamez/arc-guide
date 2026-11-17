@@ -58,7 +58,7 @@ review:
 
 ## Explanation
 
-**Synchronous connectors.** The sender calls the receiver and waits. Both must be up and ready at the same moment. Remote calls can fail or hang until a timeout. While callers wait on an unresponsive service, they hold threads, memory and connections. Many waiting callers can use up these resources. Then unrelated parts of the system that share them can fail too. Failures cascade across systems this way.
+**Synchronous connectors.** The sender calls the receiver and waits. Both must be up and ready at the same moment. Remote calls can fail or hang until a timeout [src:3]. While callers wait on an unresponsive service, they hold threads, memory and connections. Many waiting callers can use up these resources. Then unrelated parts of the system that share them can fail too. Failures cascade across systems this way.
 
 **Chains add risk.** The combined availability of chained components is the product of their individual values. Each new dependency therefore lowers the total. See the Reliability article for the term.
 

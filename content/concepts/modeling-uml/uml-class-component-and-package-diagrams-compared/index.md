@@ -59,7 +59,7 @@ UML (the Unified Modeling Language) offers several diagrams for software structu
 
 **Class diagram.** See the article UML Class Diagram.
 
-**Hierarchy.** UML components and packages can both be nested. So, according to the arc42 FAQ, component diagrams and package diagrams can both show hierarchies.
+**Hierarchy.** UML components and packages can both be nested. So, according to the arc42 FAQ, component diagrams and package diagrams can both show hierarchies [src:1].
 
 **Fit with the arc42 building block view.** This view is hierarchical. Level 1 is the whitebox of the overall system. Level 2 and below zoom into selected blocks. The view can hold many kinds of elements, from packages and classes to components and subsystems. Every piece of source code should have a place in it.
 

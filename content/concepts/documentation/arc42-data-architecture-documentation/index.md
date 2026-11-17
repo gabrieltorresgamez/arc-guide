@@ -57,9 +57,9 @@ review:
 
 ## Explanation
 
-**Data flows in the context (Section 3).** The business context shows the system as a black box. It names the communication partners and the domain interfaces between them. arc42 says all stakeholders should understand which data the system exchanges with its environment. It also advises showing data flows rather than plain dependencies.
+**Data flows in the context (Section 3).** The business context shows the system as a black box. It names the communication partners and the domain interfaces between them. arc42 says all stakeholders should understand which data the system exchanges with its environment [src:1]. It also advises showing data flows rather than plain dependencies.
 
-The technical context is a separate view. It covers the channels and transmission media that link the system to its environment. One suggested form is a UML deployment diagram. See *Business and Technical Context* and *arc42 Context and Scope*.
+The technical context is a separate view. It covers the channels and transmission media that link the system to its environment. One suggested form is a UML deployment diagram [src:1]. See *Business and Technical Context* and *arc42 Context and Scope*.
 
 **Data structures in the building block view (Section 5).** This view is a static decomposition of the system into building blocks. Building block types can include data structures. The view is mandatory in every arc42 documentation. For the differences between conceptual, logical and physical models, see *Conceptual, Logical and Physical Data Model*.
 

@@ -147,7 +147,7 @@ BPMN stands for Business Process Model and Notation. Version 2.0 is an industry 
 
 **More about BPMN.**
 
-- **History of BPMN:** BPMN began at an industry group, BPMI, and reached the public as version 1.0 in May 2004. OMG took over in 2005. Version 2.0 arrived in January 2011. Version 2.0.2, from January 2014, is the latest.
+- **History of BPMN:** BPMN began at an industry group, BPMI, and reached the public as version 1.0 in May 2004 [src:7]. OMG took over in 2005 [src:7]. Version 2.0 arrived in January 2011 [src:6]. Version 2.0.2, from January 2014, is the latest [src:6].
 - **BPMN Motivation:** BPMN is a standard process notation built on flowcharting. Diagrams are precise enough to become software process components and are stored as XML. OMG maintains it, and it is also ISO 19510.
 - **BPMN as Modeling Language, Not Method:** BPMN is a notation, a set of drawing conventions for business processes. It aims to be readable by business users and precise enough to translate into software process components.
 - **BPMN Focus on Connected Businesses:** BPMN can model processes that cross company borders. Each organization gets its own pool, and message flows show the messages passing between them. Business and technical people can both read the result.

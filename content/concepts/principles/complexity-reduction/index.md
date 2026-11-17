@@ -67,7 +67,7 @@ Some complexity cannot be avoided. Other complexity is self-inflicted. Telling t
 - *Essential complexity* comes from the problem itself: its requirements and constraints. A solution cannot be less complex than the problem it solves.
 - *Accidental complexity* comes from choices engineers make. Engineers created it, so they can fix it.
 
-Brooks argued that removing all accidental complexity would not give an order-of-magnitude improvement, because essential complexity dominates. So the realistic goal is to avoid adding complexity the problem does not demand.
+Brooks argued that removing all accidental complexity would not give an order-of-magnitude improvement, because essential complexity dominates [src:3]. So the realistic goal is to avoid adding complexity the problem does not demand.
 
 **Why it matters**
 

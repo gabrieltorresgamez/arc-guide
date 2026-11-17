@@ -98,7 +98,7 @@ The chapter defines each tactic. For example, "detect intrusion" compares networ
 
 **Tactics and patterns work together.** Researchers who revisited the tactics argue that patterns and tactics can be complementary rather than alternatives. You can use them together, and a pattern can realize a tactic.
 
-**The tactic set has been revised.** A 2014 paper noted that the initial set of security tactics had been refined only once up to that point. Its authors proposed a refined set and a new classification.
+**The tactic set has been revised.** A 2014 paper noted that the initial set of security tactics had been refined only once up to that point [src:2]. Its authors proposed a refined set and a new classification.
 
 **New tactics can come from patterns.** Two ideas appear in the research:
 
@@ -117,4 +117,4 @@ A team builds an online shop and wants to protect customer accounts. Instead of 
 
 ## Trade-offs
 
-A 2014 paper noted that the initial tactic set had been refined only once. Its authors found that some tactics would be better described as principles or policies, that some were not needed, and that others did not cover the functions needed to secure systems. They proposed a new set and classification.
+A 2014 paper noted that the initial tactic set had been refined only once [src:2]. Its authors found that some tactics would be better described as principles or policies, that some were not needed, and that others did not cover the functions needed to secure systems. They proposed a new set and classification.

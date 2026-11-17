@@ -127,7 +127,7 @@ A secure system resists attacks. Azure's security guidance names the CIA triad: 
 
 **Availability.** The system should not go down because of malicious action. A distributed denial-of-service (DDoS) attack is one example. It can cause downtime.
 
-ISO 25010 adds more terms. The article ISO/IEC 25010 Product Quality Model covers the full model.
+ISO 25010 adds more terms. See ISO/IEC 25010 Product Quality Model for the full model.
 
 - **Accountability:** an entity's actions can be traced uniquely to that entity.
 - **Authenticity:** a claimed identity can be proved.
@@ -140,7 +140,7 @@ ISO 25010 adds more terms. The article ISO/IEC 25010 Product Quality Model cover
 **Subcharacteristics.** The ISO/IEC 25010 model lists these subcharacteristics under this characteristic:
 
 - **Confidentiality** means only authorized parties can read data. Approaches include access controls, encryption and data classification. More: [arc42 quality model](https://quality.arc42.org/qualities/confidentiality), [Security design principles - Microsoft Azure Well-Architected Framework | Microsoft Learn](https://learn.microsoft.com/en-us/azure/well-architected/security/principles), [confidentiality - Glossary | CSRC](https://csrc.nist.gov/glossary/term/confidentiality).
-- **Integrity** means a system protects its state and data from unauthorized modification or deletion. More: [arc42 quality model](https://quality.arc42.org/qualities/integrity), [System and Information Integrity - FedRAMP Consolidated Rules for 2026](https://www.fedramp.gov/2026/reference/controls/system-and-information-integrity/).
+- **Integrity** means a system protects its state and data from unauthorized modification or deletion. More: [arc42 quality model](https://quality.arc42.org/qualities/integrity), [System and Information Integrity - FedRAMP Consolidated Rules for 2026](https://www.fedramp.gov/2026/reference/controls/system-and-information-integrity/) [src:7].
 - **Non-repudiation** means actions can be proven to have happened, so an author cannot successfully deny a message or a contract. Digital signatures are a common method, and trusted third parties are a standard approach. More: [arc42 quality model](https://quality.arc42.org/qualities/non-repudiation), [Non-repudiation - Wikipedia](https://en.wikipedia.org/wiki/Non-repudiation), [RFC 3161: Internet X.509 Public Key Infrastructure Time-Stamp Protocol (TSP) | RFC Editor](https://www.rfc-editor.org/info/rfc3161/).
 - **Accountability** means you can trace each action to the one entity that did it. More: [arc42 quality model](https://quality.arc42.org/qualities/accountability), [Logging - OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html).
 - **Authenticity** is the degree to which you can prove that a user, device, or resource is the one it claims to be. More: [arc42 quality model](https://quality.arc42.org/qualities/authenticity), [Authentication vs. authorization - Microsoft identity platform | Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity-platform/authentication-vs-authorization), [Final: OpenID Connect Core 1.0 incorporating errata set 2](https://openid.net/specs/openid-connect-core-1_0.html).

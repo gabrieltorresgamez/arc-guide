@@ -58,8 +58,8 @@ arc42 attaches a warning to this field. Add fulfilled requirements only if you r
 
 ## Example
 
-A team builds an online shop. One requirement says customers can pay by invoice. In the description of the payment building block, the team fills the optional field with this requirement. The team also records the decision to use an external payment provider and names the requirement behind it. A new team member can now see why the provider exists. The team does not link minor requirements, such as button labels. This follows the pragmatic form.
+A team builds an online shop. One requirement says customers can pay by invoice. In the description of the payment building block, the team fills the optional field with this requirement. The team also records the decision to use an external payment provider and names the requirement behind it. A new team member can now see why the provider exists.
 
 ## Trade-offs
 
-The arc42 FAQ calls traceability in general horribly expensive, slow and difficult, and advises avoiding it when you can. Fill the optional requirements field only where you truly need the links.
+The arc42 FAQ calls traceability in general horribly expensive, slow and difficult, and advises avoiding it when you can [src:2]. Fill the optional requirements field only where you truly need the links.

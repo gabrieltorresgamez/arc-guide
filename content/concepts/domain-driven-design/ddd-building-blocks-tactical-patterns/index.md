@@ -146,9 +146,9 @@ review:
 
 Domain-Driven Design (see Domain-Driven Design) offers building blocks for modeling business logic. The patterns themselves are not the point. The value lies in organizing code around the business problem and using the same business terms everywhere. That shared vocabulary is the ubiquitous language (see Ubiquitous Language).
 
-**Entity.** An entity has a unique identity that persists over time. Two instances with the same identity are the same thing, even when their attributes change. Entities should also hold behavior: validation, state transitions and business rules. An entity with only data is called an anemic domain model, and you should avoid it.
+**Entity.** An entity has a unique identity that persists over time. Two instances with the same identity are the same thing, even when their attributes change. Entities should also hold behavior: validation, state transitions and business rules. A model whose entities hold only data is called an anemic domain model. Microsoft's guidance calls it an anti-pattern for complex domains, though it can be fine for simple CRUD services.
 
-**Value object.** A value object has no identity. Objects with equal attribute values are interchangeable. Value objects are immutable. To change one, you create a new instance that replaces the old one. Immutability avoids aliasing bugs, where one object is shared and silently changed. See DDD Building Blocks (Tactical Patterns) and Entity and Value Object.
+**Value object.** A value object has no identity. Objects with equal attribute values are interchangeable. Value objects are immutable. To change one, you create a new instance that replaces the old one. Immutability avoids aliasing bugs, where one object is shared and silently changed.
 
 **Aggregate.** An aggregate is a cluster of domain objects treated as one unit. It is a consistency boundary that protects transactional rules. Exactly one entity is the root, and the aggregate is looked up through it.
 
@@ -168,7 +168,7 @@ Domain-Driven Design (see Domain-Driven Design) offers building blocks for model
 - **Domain Event:** A domain event records something that happened in the business and that other parts of the domain need to know about. It is named in the past tense, never changes, and can trigger reactions in other aggregates or bounded contexts.
 - **Domain Service:** A domain service is a stateless object that holds business logic which does not fit naturally in one entity or value object. It often covers rules that span several entities or aggregates.
 - **Domain Layer Separation:** Domain layer separation keeps business logic in its own layer, apart from the user interface, the application layer, and technical infrastructure. Several front ends can then reuse the same logic.
-- **Entity Life Cycle:** An entity life cycle is the path an entity follows over time, from the moment it gets an identity until it ends. Named, guarded transitions and invariants stop it from entering invalid states.
+- **Entity Life Cycle:** One framework's guidance models the life cycle of an aggregate as a state machine: a closed set of states, changed only through guarded transition methods.
 - **Entity and Value Object:** An entity is tracked by an identity that lasts even as its attributes change. A value object has no identity, is immutable, and equals another when all its values match.
 - **Constraining Associations:** Constraining associations means limiting how objects in a domain model can reach each other. You impose a direction or add a qualifier, so each remaining link needs less implementation.
 - **Module:** A module groups related domain concepts so people can understand one group at a time. Choose modules by meaning, not by technical category, and give them names the whole team uses.

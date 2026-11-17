@@ -81,20 +81,15 @@ A package diagram is a UML diagram that groups parts of a model into packages. U
 
 **Packages as namespaces.** A package gives its contents an encapsulated namespace. A namespace is a named space in which every element name must be unique. Two elements in the same package cannot share a name.
 
-**Dependencies between packages.** Arrows between packages show how they relate.
+**Dependencies between packages.** Arrows between packages show how they relate. These relationships are directed links from one package to another.
 
 - An unlabeled dependency is read as a package import by default.
-- A package merge is a directed relationship. It says the contents of two packages are to be combined.
-
-The article Package Diagram covers these in detail.
+- A package merge says the contents of two packages are to be combined.
 
 **Layers.** Packages can stand for the layers of a software system. The diagram then shows a layered architecture. See the article Layered Architecture.
 
 **Link to arc42.** The arc42 building block view is a static decomposition of the system. It is mandatory in architecture documentation and makes code structure understandable through abstraction. Packages are one possible building block type. arc42 also organizes this view in levels, where level 2 zooms into blocks of level 1.
 
-**More about package diagram elements.**
-
-- **Package Relationships (Import, Access, Merge):** Package relationships are directed links between packages. A dependency with no label is read as an import.
-
+## Example
 
 An online shop has three packages: "Presentation", "Business Logic", and "Data Access". Each package holds its own elements. "Presentation" has a class called "Order", and "Data Access" may also have one. That is fine, because each package is its own namespace. An arrow from "Presentation" to "Business Logic" and another from "Business Logic" to "Data Access" show the layers. Without a label, each arrow reads as a package import.

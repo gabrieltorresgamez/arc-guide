@@ -44,7 +44,7 @@ review:
 
 ## Explanation
 
-The Zachman Framework is a way to classify the descriptions of an enterprise. Its author calls it an ontology, meaning a structure. He says it is not a methodology, which would be a process. It tells you what kinds of descriptions exist. It does not tell you how to make them.
+The Zachman Framework is a way to classify the descriptions of an enterprise. Its author calls it an ontology, meaning a structure. He says it is not a methodology, which would be a process [src:1]. It tells you what kinds of descriptions exist. It does not tell you how to make them.
 
 **The grid.** The framework is a matrix. The columns are communication questions, called interrogatives. The rows are transformations (reifications) of an idea for different audiences. Six question types times six audiences gives 36 cells.
 

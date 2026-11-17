@@ -70,9 +70,9 @@ review:
 
 Functional suitability is a product quality characteristic in ISO/IEC 25010 (see ISO/IEC 25010 Product Quality Model). It asks whether the product provides functions that meet stated and implied needs under specified conditions.
 
-The 2023 edition, as quoted by the arc42 quality model, words this around the needs of intended users when the product is used under specified conditions. Sonar summarizes it as performing the right functions correctly.
+The 2023 edition, as quoted by the arc42 quality model, words this around the needs of intended users when the product is used under specified conditions [src:2]. Sonar summarizes it as performing the right functions correctly.
 
-The standard splits the characteristic into three sub-characteristics:
+ISO/IEC 25010 lists three subcharacteristics for it:
 
 - **Functional completeness.** The set of functions covers all specified tasks and the objectives of intended users.
 - **Functional correctness.** The product gives accurate results when intended users use it.
@@ -80,7 +80,7 @@ The standard splits the characteristic into three sub-characteristics:
 
 **Where it sits in the quality model.** Functional suitability is one of several product quality characteristics. Security is another. Product quality is distinguished from quality in use. Functional suitability concerns the functions a product provides. It is not the same as the separate "suitability" quality from ISO/IEC 25019.
 
-**In ISO/IEC 25010:2023.** The product quality model has nine characteristics, including Safety and Interaction capability.
+**In ISO/IEC 25010:2023.** The product quality model has nine characteristics, including Safety and Interaction capability [src:3].
 
 **Subcharacteristics.** The ISO/IEC 25010 model lists these subcharacteristics under this characteristic:
 

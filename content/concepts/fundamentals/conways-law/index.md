@@ -36,7 +36,7 @@ review:
 
 ## Explanation
 
-Conway's law links the way an organization communicates to the systems it designs. Melvin Conway described it in his article "How Do Committees Invent?". His wording is that organizations that design systems are constrained to produce designs that are copies of the communication structures of those organizations. Martin Fowler calls it important enough to affect every system he has come across.
+Conway's law links the way an organization communicates to the systems it designs. Melvin Conway described it in his article "How Do Committees Invent?" [src:2]. His wording is that organizations that design systems are constrained to produce designs that are copies of the communication structures of those organizations. Martin Fowler calls it important enough to affect every system he has come across [src:1].
 
 **Why it happens.** For a product to work, the authors of its parts must communicate to make the parts fit together. The technical structure of the system therefore reflects the social boundaries of the organization, because communication is harder across them.
 

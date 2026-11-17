@@ -42,7 +42,7 @@ review:
 
 A deployment view describes the infrastructure under your system. It shows which building blocks are mapped to which infrastructure elements. arc42 covers it in chapter 7, the Deployment View.
 
-**Why document it.** According to arc42, the infrastructure under a system can and will influence the system and/or some of its cross-cutting concepts (see the article arc42 Crosscutting Concepts). Because of this influence, arc42 says you need to know the infrastructure.
+**Why document it.** According to arc42, the infrastructure under a system can and will influence the system and/or some of its cross-cutting concepts (see the article arc42 Crosscutting Concepts) [src:1]. Because of this influence, arc42 says you need to know the infrastructure.
 
 **How to express it.** arc42 says to use UML deployment diagrams, though stakeholders may use any diagram kind that shows nodes and channels. See the article UML Deployment Diagram for the notation.
 

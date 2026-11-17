@@ -82,7 +82,7 @@ Requirements are not all the same kind of statement. One useful way to sort them
 
 arc42 is a template for documenting architecture (see *arc42 Architecture Documentation Template*).
 
-- Section 1 gives a short overview of the functional requirements and driving forces. It lists only the top quality goals.
+- Section 1 gives a short overview of the functional requirements and driving forces. It lists only the top quality goals [src:2].
 - Section 2 documents constraints. These are requirements that limit the architects' freedom of design. Teams must handle them, though some may be negotiable.
 - Section 10 holds the complete set of quality requirements, including those of lesser priority. If the overview of quality requirements is already precise, specific and measurable, the quality scenarios in section 10.2 may be skipped.
 

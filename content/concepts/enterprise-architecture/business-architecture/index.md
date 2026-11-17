@@ -151,7 +151,6 @@ Business architecture is a blueprint of the enterprise. It gives people a shared
 
 **More about business architecture.**
 
-
 - **Operating Model:** An operating model describes how a company delivers value. It sets the needed level of process standardization and integration, and that level tells architects which process and IT capabilities matter most.
 - **Operational Value Stream:** An operational value stream is a high-level, end-to-end set of stages. It starts when a stakeholder has a need and ends when that need is met. It shows how an organization delivers a product or service to a customer.
 - **Strategy Map:** A strategy map is a one-page diagram of roughly 12–20 strategic objectives in four perspectives. Arrows show how lower objectives are expected to drive higher ones. Each arrow is a hypothesis to test.

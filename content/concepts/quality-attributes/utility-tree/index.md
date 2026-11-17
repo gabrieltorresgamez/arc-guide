@@ -21,6 +21,7 @@ checks:
 - Each scenario names a stimulus, a response, and a measurable response measure.
 - No major branch of the tree is empty, or each empty branch is explained.
 - The tree starts from the ISO 25010:2023 quality model.
+- Each leaf scenario is rated for importance and difficulty (H, M or L), and the (H,H) leaves are analyzed first.
 sources:
 - url: https://faq.arc42.org/questions/C-10-3/
   title: 'Question C-10-3: What is a ''quality tree''? | arc42 FAQ'
@@ -42,6 +43,14 @@ sources:
   title: Architecture tradeoff analysis method - Wikipedia
   site: en.wikipedia.org
   accessed: '2026-11-09'
+- url: https://arnon.me/2010/05/utility-trees-hatching-quality-attributes/
+  title: Utility Trees - Hatching quality attributes
+  site: arnon.me
+  accessed: '2026-11-17'
+- url: https://dmccreary.github.io/atam/chapters/07-utility-trees-prioritization/
+  title: Utility Trees and Prioritization - Architecture Tradeoff Analysis Methodology
+  site: dmccreary.github.io
+  accessed: '2026-11-17'
 diagrams:
 - file: diagram-1.mmd
   caption: A small quality tree. The Security branch has no scenario yet, which hints at a gap.
@@ -62,17 +71,19 @@ arc42 groups scenarios into three kinds:
 - change scenarios
 - failure scenarios, where part of the system, its infrastructure, or its neighbors fails
 
-**Where to start.** When using the tree as a checklist, arc42 suggests starting with something similar to the ISO 25010:2023 quality tree. See the article ISO/IEC 25010 Product Quality Model.
+**Where to start.** When using the tree as a checklist, arc42 suggests starting with something similar to the ISO 25010:2023 quality tree [src:2]. See the article ISO/IEC 25010 Product Quality Model.
 
 **Finding gaps.** A graphical tree makes it easier to spot gaps in the quality requirements. If a major branch has no scenarios, that may indicate missing scenarios.
 
 **Where it fits in ATAM.** In the Architecture Tradeoff Analysis Method (ATAM), the utility tree is built in Phase 1, in step 5. Phase 2 covers steps 7-9 and finishes the evaluation.
 
+**Ranking the leaves.** In ATAM, each leaf scenario gets two ratings, each High (H), Medium (M) or Low (L). *Importance* says how much the stakeholders care that the system achieves the scenario. It is a business judgment. *Difficulty* says how hard the current architecture makes it to meet the scenario's response measure. It is a technical judgment by the evaluators together with the architects. The pair is written as (importance, difficulty), for example (H,M). The ratings give a priority order: (H,H) scenarios get the deepest analysis, and (H,M) and (M,H) scenarios come next.
+
 ## Example
 
 A team starts with the root "quality". Under it they place "performance" and "availability". Under "availability" they add a sub-topic, "recovery after failure".
 
-At the leaf they write one failure scenario. The database server stops (stimulus). The system switches to a standby copy (response). Service resumes within a stated number of seconds (response measure).
+At the leaf they write one failure scenario. The database server stops (stimulus). The system switches to a standby copy (response). Service resumes within a stated number of seconds (response measure). The team rates this leaf (H,M): very important, and moderately hard with the current design.
 
 Later the team sees that the "security" branch has no leaves. That signals missing scenarios, so they write some.
 

@@ -52,7 +52,7 @@ An architectural decision is a choice that shapes the system. Teams record the i
 
 **Know where you are free.** Before deciding, an architect needs to know where design is free and where constraints bind. A constraint may be negotiable, but the team must still deal with it. See the article Architectural Constraint.
 
-**One record per decision.** An Architectural Decision Record (ADR) captures a single decision and its rationale. All ADRs of a project together form its decision log. A 2011 blog post titled "Documenting Architecture Decisions" popularized the idea.
+**One record per decision.** An Architectural Decision Record (ADR) captures a single decision and its rationale. All ADRs of a project together form its decision log. A 2011 blog post titled "Documenting Architecture Decisions" popularized the idea [src:3].
 
 **What to write down.**
 - **Context.** Describe the situation. It covers technical, political, social and project aspects, not only technology.

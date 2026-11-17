@@ -76,24 +76,23 @@ review:
 
 ## Explanation
 
-Architects do not start from a blank page. They draw on a toolbox of means. These means help them describe, shape and change a system.
+This page groups the means that help architects shape and describe a system: styles, tactics, patterns, basic and reference architectures, and notations.
 
 **Styles.** An architecture style is a family of architectures that share characteristics. N-tier and microservices are examples. A style limits which elements and relationships are allowed. Those limits make desirable properties emerge. Styles do not require specific technologies, but some technologies fit certain styles better (see Architecture Style).
 
-**Tactics.** A tactic is a design decision that influences how a system responds for one quality attribute, such as availability or performance. Quality attributes therefore guide the choice of tactics. Tactics are simpler and more primitive than patterns (see Architectural Tactic).
+**Tactics.** A tactic is a design decision that influences how a system responds for one quality attribute, such as availability or performance. Tactics are simpler and more primitive than patterns (see Architectural Tactic).
 
 **Patterns.** A pattern usually balances several quality goals at once. A tactic does not. Tactics are put into practice through combinations of patterns, frameworks and code (see Architectural Pattern).
 
-**Basic architectures.** N-tier is one example. It structures a whole application into logical layers and physical tiers. Each layer may only call the layers below it (see Layered Architecture).
+**Basic architectures.** N-tier is one example. It structures a whole application into logical layers and physical tiers. A layer calls only into the layers below it (see Layered Architecture).
 
-**Reference architectures.** A reference architecture is a template generalized from a set of solutions.
+**Reference architectures.** A reference architecture is a template, often generalized from a set of solutions.
 
-**Modelling means.** Notations describe architectures. ISO/IEC/IEEE 42010 defines an architecture description language broadly as any form of expression used in architecture descriptions. So these languages count as modelling means.
+**Notations.** Notations describe architectures. ISO/IEC/IEEE 42010 defines an architecture description language broadly as any form of expression used in architecture descriptions.
 
 **Why it matters.** The fundamental decisions and solution strategies shape the system's architecture. Those decisions are the basis for many detailed ones. They are recorded in the solution strategy (see arc42 Solution Strategy).
 
 **More about means and requirements.**
-
 
 - **Requirements and Means Influence Architecture:** Requirements shape architecture, and constraints limit the architect's choices. Architects need to know which decisions are free and which are bound, and they need to learn key stakeholders' quality goals early.
 

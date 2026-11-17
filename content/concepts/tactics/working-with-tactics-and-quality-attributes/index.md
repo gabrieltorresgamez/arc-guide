@@ -67,11 +67,11 @@ review:
 
 ## Explanation
 
-A quality scenario describes one such need in a concrete situation.
+A tactic is a small design decision that helps meet a specific quality attribute, such as security or performance (see Architectural Tactic). A quality scenario describes one quality need in a concrete situation.
 
 **Start with measurable scenarios.** Scenarios must be specific and measurable. Then the team knows what is good enough and can decide whether the requirements are fulfilled. arc42 separates two kinds. Usage scenarios describe how the running system reacts to a stimulus. Change scenarios describe the effect of a modification or extension.
 
-
+**Pick tactics from catalogues.** Tactics are grouped into taxonomies. Security tactics, for example, are organized as detect, resist, react and recover.
 
 **Record each decision with its reasoning.** A good architectural decision record (ADR) resolves at least one architecturally significant requirement. Base the rationale on actual requirements and trace it back to them. Consider at least two options per issue.
 
@@ -87,4 +87,4 @@ A team has the scenario: "When 500 users search at once, results appear within 2
 
 ## Trade-offs
 
-Check the side effects before you commit to a tactic.
+Favoring one quality attribute can come at the expense of another. Tactic catalogues can record these impacts on other attributes, for example using the ISO 25010 quality model. Check the side effects before you commit to a tactic.

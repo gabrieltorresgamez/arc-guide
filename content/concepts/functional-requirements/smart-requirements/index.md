@@ -54,7 +54,7 @@ SMART is a set of questions you ask about each requirement. The letters below fo
 
 **Traceable.** Is the requirement linked from its conception through its specification, design, implementation and test? See the article on Traceability.
 
-**Where the acronym comes from.** George T. Doran proposed SMART in 1981 in Management Review. The paper's title shows it was written for management goals and objectives.
+**Where the acronym comes from.** George T. Doran proposed SMART in 1981 in Management Review [src:2]. The paper's title shows it was written for management goals and objectives.
 
 **Variants.** Sources differ on some letters. This article only covers Oracle's version: Specific, Measurable, Attainable, Realistic, Traceable.
 

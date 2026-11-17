@@ -67,7 +67,7 @@ A complex system cannot be captured in one model. Rozanski and Woods warn agains
 
 A **viewpoint** is a collection of patterns, templates and conventions for building one type of view. (See *Architecture Viewpoint* and *Architecture View*.) The IEEE standard does not prescribe a fixed set of views. Rozanski and Woods offer a catalog of core viewpoints. (See *ISO/IEC/IEEE 42010 Architecture Description Standard*.)
 
-**Kruchten's 4+1 model** was introduced in a 1995 IEEE Software article, "Architectural Blueprints". It describes software-intensive systems through multiple concurrent views:
+**Kruchten's 4+1 model** was introduced in a 1995 IEEE Software article, "Architectural Blueprints" [src:1]. It describes software-intensive systems through multiple concurrent views [src:1]:
 
 - The **logical view** covers the functionality offered to end users.
 - The **development view**, also called the implementation view, shows the system from a programmer's perspective.
@@ -84,7 +84,7 @@ Other approaches are related but differ in kind. **C4** is a diagramming approac
 
 **More about view models.**
 
-- **4+1 View Model:** The 4+1 View Model describes a software system through several views at once. Each view speaks to different stakeholders. A fifth view, made of scenarios, illustrates how the architecture works.
+- **4+1 View Model:** The 4+1 View Model describes a software system through several views at once [src:1]. Each view speaks to different stakeholders. A fifth view, made of scenarios, illustrates how the architecture works.
 
 ## Example
 

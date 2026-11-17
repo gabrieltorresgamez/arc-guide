@@ -44,7 +44,7 @@ review:
 
 ## Explanation
 
-A team makes many choices while building software. Some are costly to undo. The Last Responsible Moment (LRM) is a timing rule for such choices. It names the point where failing to decide eliminates an important alternative. The advice is to delay commitment until that point.
+A team makes many choices while building software. Some are costly to undo. The Last Responsible Moment (LRM) is a timing rule for such choices. It names the point where failing to decide eliminates an important alternative [src:1]. The advice is to delay commitment until that point.
 
 **Most Responsible Moment.** A related idea is the Most Responsible Moment (MRM). It was proposed as a reaction to the lean principle "Decide as late as possible". The MRM asks for decisions to be taken when the time is right. They should be neither forced nor delayed. LRM thinking can invite late decisions, which is the risk the MRM addresses.
 

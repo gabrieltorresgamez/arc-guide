@@ -75,13 +75,11 @@ Catalogs and matrices take their structure from the attributes of entities in th
 
 **Typical artifacts**
 
-See Data Architecture Artifact.
-- *Data Entity/Business Function matrix.* It maps each entity to the business functions that create and use it. See Data Architecture Artifact.
+- *Data Entity/Business Function matrix.* It maps each entity to the business functions that create and use it.
 - *Conceptual Data diagram.* This business data model shows the relationships between core entities. See Conceptual Data Model.
 - *Other data diagrams.* Phase C also suggests logical, dissemination, lifecycle, security and migration diagrams.
-In that case, define which copy is the master and which are copies.
 
-A logical data model is usually normalized to reduce that duplication. See Conceptual, Logical and Physical Data Model.
+A logical data model is usually normalized to reduce duplicated data. See Conceptual, Logical and Physical Data Model.
 
 **More about data artifacts.**
 

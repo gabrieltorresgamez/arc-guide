@@ -17,6 +17,8 @@ related:
 - messaging
 - remote-procedure-call
 - integration-style
+- file-transfer
+- shared-database
 checks:
 - The record names the problem and links it to at least one quality goal or significant requirement.
 - Rejected options are listed and evaluated, not only the chosen one.
@@ -59,7 +61,7 @@ A good worked example has these parts:
 
 arc42 also wants rejected alternatives and decision criteria documented. Then stakeholders can retrace the decision later.
 
-**An integration-style example.** One worked example asks how programs should exchange information. It lists four options: File Transfer, Shared Database, Remote Procedure Invocation (RPI) and Messaging. It picks Messaging. The reasons are loose coupling in time and the throttling behavior of messaging channels.
+**An integration-style example.** One worked example asks how programs should exchange information. It lists four options: File Transfer, Shared Database, Remote Procedure Invocation (RPI) and Messaging [src:3]. It picks Messaging. The reasons are loose coupling in time and the throttling behavior of messaging channels.
 
 Messaging means applications connect to a common messaging system. They exchange data and trigger behavior through messages. See "Messaging" and "Remote Procedure Call".
 
@@ -79,4 +81,4 @@ A team must decide how a booking system passes updates to a reporting tool.
 
 arc42 limits ADRs to important, costly or risky decisions. Small records are easier to read, create and maintain than one large document.
 
-The main risk is listing only upsides. Zimmermann calls this the "Free Lunch Coupon" anti-pattern: no consequences, or only harmless-looking ones, are recorded. Every option has costs. In the messaging example, the choice rests on specific needs (loose coupling in time, throttling). Under other requirements the same reasoning may not hold. The rationale must stay tied to the context and requirements.
+The main risk is listing only upsides. Zimmermann calls this the "Free Lunch Coupon" anti-pattern: no consequences, or only harmless-looking ones, are recorded, although a chosen concept brings a price as well as benefits [src:2]. In the messaging example, the choice rests on specific needs (loose coupling in time, throttling). Under other requirements the same reasoning may not hold. The rationale must stay tied to the context and requirements.

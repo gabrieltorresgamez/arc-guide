@@ -61,7 +61,7 @@ review:
 
 ## Explanation
 
-Technical debt is a metaphor. A team takes a shortcut, finishes sooner, and pays for it later. Fowler credits Ward Cunningham with introducing the metaphor in 1992.
+Technical debt is a metaphor. A team takes a shortcut, finishes sooner, and pays for it later. Fowler credits Ward Cunningham with introducing the metaphor in 1992 [src:2].
 
 Kruchten, Nord and Ozkaya define technical debt as design or implementation constructs that are expedient in the short term. "Expedient" means quick and convenient now.
 
@@ -75,9 +75,9 @@ Kruchten, Nord and Ozkaya define technical debt as design or implementation cons
 
 **The quadrant.** Fowler sorts debt on two axes: reckless or prudent, and deliberate or inadvertent. A team that knowingly takes on debt, after weighing the payoff of an earlier release against the cost of repaying it, has prudent and deliberate debt. A team that is ignorant of good design takes on reckless debt without realizing how deep it gets. A team that knows good practices but goes "quick and dirty" because it thinks it cannot afford the time also takes on reckless debt, which is deliberate. Fowler also argues that prudent and inadvertent debt exists and is inevitable for excellent teams: afterwards they realize what the design should have been.
 
-**Prudent or reckless.** Fowler argues the useful question is not whether something is debt. It is whether the debt is prudent or reckless. Deliberate debt can be prudent when the team knowingly accepts it.
+**Prudent or reckless.** Fowler argues the useful question is not whether something is debt [src:3]. It is whether the debt is prudent or reckless. Deliberate debt can be prudent when the team knowingly accepts it.
 
-**Repayment.** In Cunningham's view, a little debt speeds development, but only if the team pays it back promptly. SEI describes repayment through refactoring or rewriting. The Refactoring article explains refactoring.
+**Repayment.** In Cunningham's view, a little debt speeds development, but only if the team pays it back promptly. SEI describes repayment through refactoring or rewriting [src:7]. The Refactoring article explains refactoring.
 
 **Documenting it.** arc42 section 11 holds the identified technical risks and technical debts, ordered by priority.
 

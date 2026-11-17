@@ -98,6 +98,8 @@ def split_front(text):
 def fetch_public(url, ua="arc-guide/1.0 (non-commercial)", timeout=30):
     """Body of a public page as text. Falls back to curl (which still verifies certificates) when this Python's OpenSSL
     rejects an incomplete certificate chain that curl accepts. Raises on any other failure."""
+    if m := re.match(r"https://pmc\.ncbi\.nlm\.nih\.gov/articles/(PMC\d+)/?$", url):  # PMC shows scripts a browser check
+        url = f"https://www.ebi.ac.uk/europepmc/webservices/rest/{m[1]}/fullTextXML"  # same open-access text via Europe PMC
     quoted = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
     try:
         with urllib.request.urlopen(urllib.request.Request(quoted, headers={"User-Agent": ua}), timeout=timeout) as r:

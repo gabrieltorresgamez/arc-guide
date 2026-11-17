@@ -55,7 +55,7 @@ The cargo example comes from Eric Evans' book on Domain-Driven Design. A sample 
 
 **Routing.** The RoutingService gives the domain access to an external routing system. It is used to find possible routes. See DDD Building Blocks (Tactical Patterns).
 
-**Aggregates and repositories.** The sample application uses aggregates. They decouple large structures by setting rules for relations between entities. Repositories exist per aggregate root. Cargo Tracker lists entities, value objects, aggregates, services, repositories and factories as its building blocks. See DDD Building Blocks (Tactical Patterns) and DDD Building Blocks (Tactical Patterns).
+**Aggregates and repositories.** The sample application uses aggregates. They decouple large structures by setting rules for relations between entities. Repositories exist per aggregate root. Cargo Tracker lists entities, value objects, aggregates, services, repositories and factories as its building blocks [src:3]. See DDD Building Blocks (Tactical Patterns) and DDD Building Blocks (Tactical Patterns).
 
 The sample's building blocks are described in Evans' book, except Domain Event.
 

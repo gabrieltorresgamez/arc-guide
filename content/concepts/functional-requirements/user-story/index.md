@@ -98,7 +98,7 @@ review:
 
 ## Explanation
 
-A user story is a brief statement of something a stakeholder needs. It is not a detailed specification. One well-known description names three elements: Card, Conversation and Confirmation (see the article User Story).
+A user story is a brief statement of something a stakeholder needs. It is not a detailed specification. One well-known description names three elements: Card, Conversation and Confirmation.
 
 **Card.** The card is only a token that stands for the requirement. It does not hold all the information the requirement needs.
 
@@ -106,9 +106,9 @@ A user story is a brief statement of something a stakeholder needs. It is not a 
 
 **Confirmation.** The customer defines acceptance tests. They show that the story has been implemented correctly (see Acceptance Criterion).
 
-**The template.** A common form is: "As a [type of user], I [need/want/am required] to [do something], so that [reason or benefit]." It names who, what and why. Stakeholders find it natural, and it helps the product owner prioritize. It should not become a ritual. It is useful only while it improves the conversation.
+**The template.** A common form is: "As a [type of user], I [need/want/am required] to [do something], so that [reason or benefit]." It names who, what and why [src:2]. Stakeholders find it natural, and it helps the product owner prioritize. It should not become a ritual. It is useful only while it improves the conversation.
 
-**What a good story looks like.** The INVEST checklist (see User Story) says a story must be valuable to the customer, not just to anybody. It is negotiable, so it captures the essence and not the details. It is estimable enough that the team can rank and schedule it.
+**What a good story looks like.** The INVEST checklist says a story must be valuable to the customer, not just to anybody. It is negotiable, so it captures the essence and not the details. It is estimable enough that the team can rank and schedule it.
 
 **Why teams use stories.**
 - Compared with use cases or long lists of requirement statements, they are usually simpler to estimate and to rank by priority. This suits projects with limited time.

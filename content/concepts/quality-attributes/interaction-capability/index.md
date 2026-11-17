@@ -115,7 +115,7 @@ review:
 
 Interaction capability is about how well people can get things done with a system's user interface. The ISO model renamed usability to interaction capability. Several sources on this page still use the name usability.
 
-**Core usability aspects.** Nielsen Norman Group describes usability with five components:
+**Core usability aspects.** Nielsen Norman Group describes usability with five components [src:1]:
 
 - **Learnability:** how fast people learn to do basic tasks with the design.
 - **Efficiency:** how quickly people work once they have learned the design.
@@ -123,7 +123,7 @@ Interaction capability is about how well people can get things done with a syste
 - **Errors:** how many errors people make, how severe they are, and how easily they recover.
 - **Satisfaction:** how pleasant the design is to use.
 
-**In the ISO quality model.** Interaction capability is one of the nine characteristics of ISO/IEC 25010:2023. It evaluates how effectively users can interact with software to reach their goals. The list of its eight subcharacteristics is below.
+**In the ISO quality model.** Interaction capability is one of the nine characteristics of ISO/IEC 25010:2023 [src:4]. It evaluates how effectively users can interact with software to reach their goals. The list of its eight subcharacteristics is below.
 
 **Undo and cancel.** One of Nielsen's ten usability heuristics is user control and freedom. Users need a clearly marked emergency exit, so they can leave an unwanted action without a long process. In a design, this means support for cancel and undo.
 
