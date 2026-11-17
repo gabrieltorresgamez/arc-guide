@@ -164,7 +164,7 @@ The aim is to expose architectural risks. These are weaknesses that could keep a
 
 The results go into an out-brief presentation, a written report, or both. In arc42, section 11 holds a list of technical risks and debts, ordered by priority (see Placing ATAM Evaluation in arc42).
 
-**Common mistakes.** A vague risk such as "the architecture might have availability problems" names no decision and no scenario, so nobody can act on it. A non-risk or a sensitivity point without a named decision and a named quality cannot be shown.
+**Common mistakes.** A vague risk such as "the architecture might have availability problems" names no decision and no scenario, so nobody can act on it. A sensitivity point is recorded with the decision and the quality it affects, and a non-risk needs evidence.
 
 **When to use it.** ATAM is most valuable early in the life cycle, when the cost of changing the architecture is minimal. It is also suggested when stakeholders have conflicting quality requirements, for example performance versus security. Older systems can be analyzed once their real architecture has been recovered, because their documentation is often missing or inaccurate.
 

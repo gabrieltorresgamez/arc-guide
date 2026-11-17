@@ -69,7 +69,7 @@ The nine blocks are:
 - revenue streams
 - cost structure
 
-Short descriptions of each block work well as guiding questions. For example, revenue streams ask how the company earns income from each customer segment.
+Each block answers a question. For example, revenue streams ask how the company earns income from each customer segment.
 
 **Layout.** Strategyzer explains the layout with a theater analogy. Revenue needs a customer who pays for a value proposition. In the analogy, there is no revenue without a great play and no play without backstage infrastructure.
 
@@ -88,7 +88,7 @@ Short descriptions of each block work well as guiding questions. For example, re
 
 ## Example
 
-A small online bakery fills in a canvas. Its customer segment is office workers. Its value proposition is fresh bread delivered before work. Partners include a delivery service. When the bakery adds a second segment, restaurants, the team redraws the canvas. Channels, activities and costs change too. The architect then lists office customers, restaurants and the delivery partner as candidate stakeholders.
+A small online bakery fills in a canvas. Its customer segment is office workers. Its value proposition is fresh bread delivered before work. Partners include a delivery service. When the bakery adds a second segment, restaurants, the team redraws the canvas. Channels, activities and costs change too.
 
 ## Trade-offs
 

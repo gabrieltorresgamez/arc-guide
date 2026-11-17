@@ -105,7 +105,13 @@ def main(slugs):
     for slug in slugs:
         if slug not in files:
             sys.exit(f"unknown slug: {slug}")
-        probs, skipped = check(files[slug])
+        try:
+            probs, skipped = check(files[slug])
+        except Exception as e:  # an outage or usage limit should not lose the rest of the batch
+            print(f"[{slugs.index(slug) + 1}/{len(slugs)}] {slug}: NOT CHECKED ({str(e)[:120]})", flush=True)
+            rep += [f"### `{slug}`", f"- **not checked**: {str(e)[:200]}", ""]
+            blocking += 1
+            continue
         blocking += sum(p["kind"] in ("unsupported", "contradicted") for p in probs)
         note = f", {len(skipped)} sources NOT READ in full (findings may be false; raise CLAIMCHECK_TOTAL_CHARS or check the page on its own)" if skipped else ""
         print(f"[{slugs.index(slug) + 1}/{len(slugs)}] {slug}: {len(probs)} problems{note}", flush=True)
@@ -113,7 +119,7 @@ def main(slugs):
         rep += [f"- _not read in full (unreadable, over budget or cut):_ {u}" for u in skipped] + [""]
     c.write_report(os.environ.get("CLAIMCHECK_STAGE", "claimcheck"), rep)  # CLAIMCHECK_STAGE lets parallel runs write separate reports
     if blocking:
-        sys.exit(f"{blocking} unsupported or contradicted findings, see build/reports/claimcheck.md")
+        sys.exit(f"{blocking} unsupported, contradicted or unchecked, see build/reports/claimcheck.md")
 
 
 if __name__ == "__main__":

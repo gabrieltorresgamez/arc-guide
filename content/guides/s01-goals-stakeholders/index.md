@@ -8,7 +8,7 @@ review:
     suggestion, not from the articles.
   - unsupported:The ClinicBook vision, business goals, stakeholder list, quality scenarios and the launch-date
     trade-off are invented illustrations, not from the articles.
-  - unsupported:Rating by power and interest in step 5 is applied to the stakeholder list as a suggested
+  - unsupported:Rating by power and interest in step 4 is applied to the stakeholder list as a suggested
     practice; the power grid article supports it, but placing it in this step is a judgment.
 ---
 
@@ -34,22 +34,20 @@ You write the result into section 1 of arc42, "Introduction and Goals". See [arc
 
 ## If something is missing
 
-- **No requirements document.** Write a short overview yourself. Mark it as a first version. Early results get refined over time.
-- **No business description.** Ask the sponsor three questions. Who are the customers? What value do they get? Why does the business pay for this system?
-- **Unclear scope or security needs.** Write your assumptions down and challenge them. An assumption like "we only need a simple login" is risky when nobody has questioned it. See Common Architect Mistakes ([Software Architect](concept:software-architect)).
+- **No requirements document.** Write a short requirements overview yourself and keep it brief ([arc42 Introduction and Goals](concept:arc42-introduction-and-goals)).
+- **Unclear scope or security needs.** Weak scoping, narrow stakeholder lists and self-built security are among the mistakes architects repeat. See Common Architect Mistakes ([Software Architect](concept:software-architect)).
 - **Stakeholders you cannot reach.** List them anyway. Ask someone to speak for each group, so that no class is ignored. See [Stakeholder](concept:stakeholder).
 
 ## How to do it
 
-1. **Write a vision statement.** Keep it short. Name the target customers. Say what value they get. Name the few features that make the system stand out. Do not list every feature. See Vision Statement ([System Idea](concept:system-idea)).
-2. **Connect the vision to business goals.** The value in the vision should link to a business goal and to the business case. See System Idea and Vision Elements ([System Idea](concept:system-idea)).
-3. **Find the stakeholders.** Ask guiding questions. Who gains or loses? Who decides? Who controls resources? Check every class of stakeholder, for example the people who acquire the system and the people who assess it. See Stakeholder Identification ([Stakeholder](concept:stakeholder)).
-4. **Record their concerns.** Build a table with the role, the name or contact, and what each stakeholder expects from the architecture and its documentation. See [Stakeholder Concern](concept:stakeholder-concern).
-5. **Decide how closely to engage each group.** Rate each stakeholder by power and interest. Engage high-power, high-interest stakeholders closely. Keep high-power, low-interest stakeholders satisfied. See Stakeholder Power Grid ([Stakeholder](concept:stakeholder)).
-6. **Choose the top three to five quality goals.** Pick the ones most important to the major stakeholders. Give each goal a short scenario, not only a keyword. Leave detailed quality requirements for section 10 of arc42. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).
-7. **Name concerns that conflict.** Write down which trade-off you choose and why. Record the reasoning in an Architecture Decision Record (ADR). See [Concern](concept:concern).
-8. **Keep the requirements overview short.** Link to the existing requirements documents.
-9. **Review the result with the stakeholders.** Update it later when you learn more.
+1. **Write a vision statement.** Keep it to a short, inspiring statement of the shared goal behind the product. Do not list every feature. See Vision Statement ([System Idea](concept:system-idea)).
+2. **Find the stakeholders.** Check every class of stakeholder. Typical projects involve representatives from many classes, and each class has its own requirements, interests and needs. See Stakeholder Identification ([Stakeholder](concept:stakeholder)).
+3. **Record their concerns.** Build a table with the role, the name or contact, and what each stakeholder expects from the architecture and its documentation. See [Stakeholder Concern](concept:stakeholder-concern).
+4. **Decide how closely to engage each group.** Rate each stakeholder by power and interest. The position on the grid tells you how closely to engage each group. See Stakeholder Power Grid ([Stakeholder](concept:stakeholder)).
+5. **Choose the top three to five quality goals.** Pick the ones most important to the major stakeholders. Give each goal a short scenario, not only a keyword. Leave detailed quality requirements for section 10 of arc42. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).
+6. **Name concerns that conflict.** Concerns can compete, so they must be balanced and prioritized. Record each decision with its reasons in an Architecture Decision Record ([Architectural Decision Record](concept:architectural-decision-record)). See [Concern](concept:concern).
+7. **Keep the requirements overview short.** Link to the existing requirements documents.
+8. **Review the result with the stakeholders.** Update it later when you learn more.
 
 ## Example: ClinicBook
 
@@ -89,7 +87,7 @@ The details, such as exact numbers, move to section 10.
 
 ## Done when
 
-- You wrote a short vision statement that names the target customers, their value and a few standout features. See Vision Statement ([System Idea](concept:system-idea)).
+- You wrote a short, inspiring vision statement of the shared goal behind the product. See Vision Statement ([System Idea](concept:system-idea)).
 - Your stakeholder table lists roles, names or contacts and expectations, and covers every stakeholder class. See Stakeholder Identification ([Stakeholder](concept:stakeholder)).
 - Each stakeholder concern appears in the table and is addressed in the architecture description. See [Stakeholder Concern](concept:stakeholder-concern).
 - Section 1 lists at most five quality goals, each with a short scenario. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).

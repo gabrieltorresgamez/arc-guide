@@ -43,7 +43,7 @@ review:
 
 ## Explanation
 
-A data architecture principle is a basic rule for handling data. It guides design choices about data. The examples below follow TOGAF-style data principles (see the article "TOGAF").
+The principles below are TOGAF-style data principles (see the article "TOGAF").
 
 **Typical principles**
 

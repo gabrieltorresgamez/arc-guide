@@ -27,8 +27,8 @@ reviewed by a person.
 
 ## Checks
 
-- `uv run python -m pipeline.build` also runs the content checks. It fails on: pages under 150 words, pages without sources, unknown references, 2011-model wording, tactic page naming, missing title prefixes in notation groups, duplicate order numbers, empty sections, and blank-line runs left by deleted text. It warns on: pages over 650 words, single-source pages, orphan pages, and "tradeoff" spelling.
-- `uv run python -m pipeline.claimcheck [SLUG ...]` checks articles against their sources with Claude (your subscription). Without slugs it checks the pages changed since the last commit and fails on unsupported or contradicted claims. It warns when a source could not be read in full.
+- `uv run python -m pipeline.build` also runs the content checks. It fails on: pages under 150 words, pages without sources, unknown references, 2011-model wording, tactic page naming, missing title prefixes in notation groups, duplicate order numbers, empty sections, blank-line runs left by deleted text, pages that refer to themselves, and `[src:N]` source markers without a matching source. It warns on: pages over 650 words, single-source pages, orphan pages, and "tradeoff" spelling.
+- `uv run python -m pipeline.claimcheck [SLUG ...]` checks articles against their sources with Claude (your subscription). Without slugs it checks the pages and guides changed since the last commit and fails on unsupported or contradicted claims. Guides are checked against the concept pages they link. It warns when a source could not be read in full.
 - `uv run python -m pipeline.fixaudit` compares the pages with the last commit and reports edits that left broken text (a sentence that refers to a deleted one, or a stub). Run it after fixing claim-check findings.
 - `uv run python -m pipeline.linkcheck` checks that every source URL still loads and is not a captcha page (about 10 minutes for the whole site, with a progress counter).
 

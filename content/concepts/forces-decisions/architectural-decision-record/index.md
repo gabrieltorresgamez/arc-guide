@@ -106,7 +106,7 @@ An Architectural Decision Record (ADR) records one architectural decision. It ex
 
 **Templates.** Several templates exist. The Markdown Architectural Decision Record (MADR) template dates from 2017 [src:1]. It grew out of earlier ADR templates, including the Y-statement, and follows a decision journey from identification to enforcement.
 
-A Y-statement is a single structured sentence. It starts with "In the context of" and "facing", which add feature- and quality-related information. It continues with "we decided for" the chosen option, "and against" the options that were not chosen, then "to achieve" and "accepting that", which state the goal and the trade-off. An optional "because" adds the reason.
+A Y-statement is a single structured sentence. It starts with "In the context of" and "facing", which add feature- and quality-related information. It continues with "we decided for" the chosen option, "and neglected" the options that were not chosen, then "to achieve" and "accepting that", which state the goal and the trade-off. An optional "because" adds the reason.
 
 **Origin and structure.** Michael Nygard proposed ADRs in 2011 for agile projects [src:16]. His record has a title and four parts: context, decision, status and consequences. The decision is written in full sentences and active voice ("We will ..."). The consequences list all effects, not only the positive ones. The whole record should be one or two pages long.
 

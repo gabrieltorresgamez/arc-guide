@@ -53,7 +53,7 @@ review:
 
 ## Explanation
 
-A pattern language is a set of related patterns that work together. This one covers the design of remote APIs. Its online home is the Microservice API Patterns (MAP) site. MAP focuses on message representations, meaning the payloads exchanged when a client calls an API. The structures you choose for these messages strongly shape the API's qualities, both at design time and at runtime.
+Patterns for API Design is a pattern language for the design of remote APIs, organized into categories. The pattern language lives online at the Microservice API Patterns (MAP) site. MAP focuses on message representations, meaning the payloads exchanged when a client calls an API. The structures you choose for these messages strongly shape the API's qualities, both at design time and at runtime.
 
 **How the book is organized**
 

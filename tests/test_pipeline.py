@@ -139,3 +139,9 @@ def test_fixaudit_finds_orphan():
     old = {"a": "**Notes.** The tool is slow. That hurts users. It is fine otherwise.\n"}
     assert fixaudit.audit(old, {"a": "**Notes.** That hurts users. It is fine otherwise.\n"})       # dependent sentence lost its antecedent
     assert not fixaudit.audit(old, {"a": "**Notes.** The tool is slow. That hurts users. It is fine otherwise.\n"})
+
+
+def test_guide_check_reads_linked_pages():
+    from pipeline import claimcheck
+    pages = claimcheck.concept_pages("See [Utility Tree](concept:utility-tree), again [tree](concept:utility-tree).")
+    assert len(pages) == 1 and pages[0].startswith("=== PAGE: Utility Tree")

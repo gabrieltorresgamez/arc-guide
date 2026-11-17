@@ -146,7 +146,7 @@ Interaction capability is about how well people can get things done with a syste
 
 **In the arc42 quality model.** The arc42 quality model has its own page on [Interaction capability](https://quality.arc42.org/qualities/interaction-capability).
 
-**Example quality requirements.** The arc42 quality model has example quality requirements for this characteristic: [New user completes core tasks without prior training](https://quality.arc42.org/requirements/new-user-completes-core-tasks-without-training), [Compliance with WCAG accessibility guidelines](https://quality.arc42.org/requirements/compliance-to-wcag), [Recognize Assistive Technologies](https://quality.arc42.org/requirements/recognize-assistive-technology).
+**Example quality requirements.** The arc42 quality model has example quality requirements for interaction capability and its subcharacteristics, such as learnability: [New user completes core tasks without prior training](https://quality.arc42.org/requirements/new-user-completes-core-tasks-without-training), [Compliance with WCAG accessibility guidelines](https://quality.arc42.org/requirements/compliance-to-wcag), [Recognize Assistive Technologies](https://quality.arc42.org/requirements/recognize-assistive-technology).
 
 ## Example
 

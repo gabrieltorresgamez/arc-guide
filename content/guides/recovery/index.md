@@ -24,7 +24,7 @@ Write only what readers will use. Describe each thing once and reference it else
 
 **Write down first:** a stakeholder table and the top quality goals.
 
-- A stakeholder is a person, team or organization with an interest in the system (Stakeholder Identification ([Stakeholder](concept:stakeholder))). Ask who gains or loses, who decides and who controls resources.
+- A stakeholder is a person, team or organization with an interest in the system (Stakeholder Identification ([Stakeholder](concept:stakeholder))).
 - For each stakeholder, note a role and what they expect from the system.
 - Pick the top three quality goals, five at most, and give each a short scenario ([Quality Attribute Prioritization](concept:quality-attribute-prioritization)). A quality goal is a quality such as speed or security that the system must meet.
 - Keep the requirements overview short. Link to existing requirements documents instead of copying them ([arc42 Introduction and Goals](concept:arc42-introduction-and-goals)).
@@ -48,7 +48,6 @@ Budget, deadlines and mandated technologies count as constraints too.
 
 - Show the system as one box. Put users and other systems around it ([arc42 Context and Scope](concept:arc42-context-and-scope)).
 - Write the business context first. It shows which data flows to and from each partner. Then write the technical context. It shows which channel or protocol carries each flow ([Business and Technical Context](concept:business-and-technical-context)).
-- Draw both directions where data moves both ways (Context View Antipattern: Forgetting Bidirectional Data Flows ([Context View](concept:context-view))).
 - Add a table with one row per partner. Label every arrow with the data, and add a legend.
 
 ### Step 4: Recover the building blocks from the code (arc42 section 5)
@@ -59,9 +58,8 @@ Budget, deadlines and mandated technologies count as constraints too.
 - Do not trust old documents blindly. For a legacy system, recover the real architecture first ([Architecture Tradeoff Analysis Method (ATAM)](concept:architecture-tradeoff-analysis-method-atam)).
 - Make sure you can build the system from scratch. Then sketch its biggest structures from the code. A static analysis tool shows building blocks and their dependencies. Logs and stack traces show what the running system does ([Implicit Architecture](concept:implicit-architecture)).
 - Count commits per developer in version control. The counts show parts of the system where knowledge may be lost ([Implicit Architecture](concept:implicit-architecture)).
-- Group blocks by responsibility. Do not copy code packages such as Facade, Service or Dto into the diagram (Component View Antipattern: Lifting Code to Model Level ([Component View](concept:component-view))).
 - Zoom into a block only if it is important, risky, complex or volatile (Component View Refinement Levels ([Component View](concept:component-view))).
-- Every diagram needs a title that names its type and scope, and a legend.
+- Give every diagram a title that states its type and scope ([Rules of Thumb for Modeling](concept:rules-of-thumb-for-modeling)).
 
 The code can answer "what is here" ([Self-Documentation](concept:self-documentation)). It cannot answer "why", so the next step covers that.
 
@@ -72,7 +70,6 @@ The code can answer "what is here" ([Self-Documentation](concept:self-documentat
 - Look for decisions with far-reaching effects, such as how systems are integrated ([Architecturally Significant Decision](concept:architecturally-significant-decision)). Do not log every small choice.
 - For each one, write the decision, the reason and the consequences, including the bad ones ([arc42 Architecture Decisions](concept:arc42-architecture-decisions)).
 - Use one short record per decision ([Architectural Decision Record](concept:architectural-decision-record)).
-- If nobody knows the reason, write it down as an assumption. Draft it as a decision record where you can ([Architecture Canvas](concept:architecture-canvas)).
 - Ask experienced developers of the system. They often know the solution strategy that the code does not show ([Implicit Architecture](concept:implicit-architecture)). Read the code with the question "why?".
 
 Section 4 holds the most fundamental decisions. Section 9 points there and does not repeat them.
@@ -81,7 +78,7 @@ Section 4 holds the most fundamental decisions. Section 9 points there and does 
 
 **Write down first:** the gaps and weak spots you met in steps 1 to 5.
 
-- Record known gaps between the intended and the implemented architecture as risks or technical debt ([Implicit Architecture](concept:implicit-architecture)).
+- Chapter 11 of arc42 is the list of identified technical risks and technical debts. Add the gaps you found there ([arc42 Risks and Technical Debt](concept:arc42-risks-and-technical-debt)).
 - Technical debt means shortcuts that help in the short term but make later change more costly ([Technical Debt](concept:technical-debt)). List each item and order the list by priority.
 - To find more risks, run a short team session. Rate each risk by probability and impact, and plan a mitigation for the top ones ([Risk Storming](concept:risk-storming)).
 
@@ -99,8 +96,6 @@ ClinicBook is an online booking system for 40 small medical practices. Patients 
 | 6 | Suppose reminders run in the same process as booking. Note that this could hurt availability in the morning peak. Rate the risk and add it to the list. | 11 |
 
 In step 1, you check each top goal against a scenario. For availability, a scenario could read: "During the morning peak, patients can still book." Keep the scenario short, and add a measurable limit once you know one.
-
-In step 3, you check that data flows run both ways where they do. Appointment data probably goes to the practice software and comes back as changes.
 
 ## After the first pass
 

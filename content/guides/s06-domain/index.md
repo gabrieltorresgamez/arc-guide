@@ -18,13 +18,13 @@ review:
 - A list of bounded contexts. A [bounded context](concept:bounded-context) is a boundary inside which one domain model applies.
 - A context map that shows how those contexts relate.
 - A first sketch of the important data, in business terms only.
-- Material for two arc42 sections: section 12 (glossary) and section 5 (building blocks).
+- Material for two arc42 sections: section 12 ([arc42 Glossary](concept:arc42-glossary)) and section 5 ([arc42 Building Block View](concept:arc42-building-block-view)).
 
 ## What you need first
 
 - A short description of what the system must do and for whom.
 - Access to people who know the business. These are your domain experts.
-- A first view of the outside world: which people and external systems exchange data with your system. [Business Domain Understanding](concept:business-domain-understanding) calls this the business context.
+- A first view of the outside world: which people and external systems exchange data with your system ([arc42 Context and Scope](concept:arc42-context-and-scope)).
 
 ## If something is missing
 
@@ -49,11 +49,11 @@ review:
 6. **Look inside each context.** Find the main objects and their roles:
    - Entity ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): defined by its identity. Its attributes can change.
    - Value Object ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): no identity, immutable, equal when all values match.
-   - Aggregate ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): a group treated as one unit, with one root as the only entry point. Other aggregates are referenced by identity.
+   - Aggregate ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): a group treated as one unit, with one root as the only entry point.
    - Domain Event ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): something that happened, named in the past tense.
 
    Where a concept has a life cycle that matters to the business, sketch its states. See Entity Life Cycle ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)).
-7. **Sketch the important data.** Draw a conceptual data model with entities, attributes, relationships and business rules. State for each relationship its cardinality (how many) and whether it is mandatory or optional. Leave out data types, tables and indexes. See Conceptual data model building method and [Conceptual Data Model](concept:conceptual-data-model). Show it to business stakeholders and record the gaps they find. Conceptual Data Model Preparation for Logical and Physical Models explains how the checked model is handed on to later modeling.
+7. **Sketch the important data.** Draw a conceptual data model with entities, attributes, relationships and business rules. Leave out data types, tables and indexes. See Conceptual data model building method and [Conceptual Data Model](concept:conceptual-data-model). Show it to business stakeholders and record the gaps they find.
 8. **Note privacy and ownership.** Mark which data is sensitive and which system holds the master data. [Data Architecture](concept:data-architecture) asks you to name the database of record and to identify privacy and security aspects.
 9. **Turn the contexts into building blocks.** Group concepts that belong together. Mark external systems as external and put a translating wrapper between them and your own components. See [Deriving System Components from the Domain Model](concept:deriving-system-components-from-the-domain-model). Record the result in arc42 section 5.
 10. **Expect to revise.** The model improves as the team learns. Change model and code together. See [Iterative Domain Modeling](concept:iterative-domain-modeling).
@@ -75,10 +75,10 @@ ClinicBook is the online booking system for 40 small practices.
 
 Open questions go on the canvas. One example: do all 40 practices define a "slot" the same way? ClinicBook has only one small team, so that team owns several of these contexts at first. It writes the owner of each down and keeps the owned contexts related.
 
-**Context map.** The practice-management software is external, and it comes from different vendors. ClinicBook cannot influence it, so the team does not label that link customer-supplier. A translating wrapper in Practice Software Link keeps the vendors' models out of ClinicBook's own contexts. Booking is upstream of Reminders. Reminders consumes booking events and sends them by SMS and e-mail. The team explains each arrow in the diagram's legend.
+**Context map.** The practice-management software is external, and it comes from different vendors. ClinicBook cannot influence it, so the team does not label that link customer-supplier. A translating wrapper in Practice Software Link keeps the vendors' models out of ClinicBook's own contexts. Booking is upstream of Reminders. Reminders consumes booking events. The team explains each arrow in the diagram's legend.
 
 **Inside Booking.**
-- *Appointment* is an entity. Its identity is an appointment id. Its life cycle is requested, booked, moved or cancelled, then completed. A cancelled or completed appointment cannot change.
+- *Appointment* is an entity. Its identity is an appointment id. Its life cycle is requested, booked, moved or cancelled, then completed.
 - *Time slot* (start and end) is a value object. To move an appointment, the team replaces the slot with a new one.
 - *Appointment* is also the aggregate root. It refers to the patient and the practice by identity only.
 - *AppointmentCancelled* is a domain event, named in the past tense. Reminders reacts to it so that no reminder goes out for a cancelled visit.
@@ -93,8 +93,8 @@ Open questions go on the canvas. One example: do all 40 practices define a "slot
 - Terms that differ between groups are kept apart, not merged. See [Business Domain Understanding](concept:business-domain-understanding).
 - Each bounded context has an agreed name, a business-language purpose and a core, supporting or generic class. See [Bounded Context Canvas](concept:bounded-context-canvas).
 - A context map shows all contexts and external systems, with explained arrows and named patterns. See [Context Map](concept:context-map).
-- Each aggregate has one root, and other aggregates are referenced by identity. See Aggregate ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)).
-- A conceptual data model with cardinalities and business rules exists. It has no storage details, and business stakeholders have checked it. See [Conceptual Data Model](concept:conceptual-data-model).
+- Each aggregate has one root, its only entry point. See Aggregate ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)).
+- A conceptual data model with entities, attributes, relationships and business rules exists. It has no storage details, and business stakeholders have checked it. See [Conceptual Data Model](concept:conceptual-data-model).
 - Building blocks follow the contexts, with external systems marked. See [Deriving System Components from the Domain Model](concept:deriving-system-components-from-the-domain-model).
 
 ## Learn more

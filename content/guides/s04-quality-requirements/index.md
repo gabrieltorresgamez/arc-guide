@@ -44,10 +44,10 @@ In arc42, the top goals go into section 1.2. The scenarios and the tree go into 
    - *Response measure:* a number or criterion that tells you if the response was good enough.
 
    See [Reliability](concept:reliability), [Security](concept:security), [Performance Efficiency](concept:performance-efficiency) and [Compatibility](concept:compatibility) for example quality requirements per characteristic.
-4. **Check that you can decide.** A reader must be able to say "met" or "not met". Avoid buzzwords like "fast" or "secure". Give a time period for availability percentages. See [Insufficient Quality as Driver of Change](concept:insufficient-quality-as-driver-of-change).
+4. **Check that you can decide.** A reader must be able to say "met" or "not met". Avoid buzzwords like "fast" or "secure". State how long the system must keep working, because reliability is defined for a specified period of time ([Reliability](concept:reliability)). See [Insufficient Quality as Driver of Change](concept:insufficient-quality-as-driver-of-change).
 5. **Cover both kinds of scenario.** Usage scenarios describe the runtime reaction to a stimulus. Change scenarios describe the effect of modifying or extending the system. See [Maintainability](concept:maintainability).
 6. **Add lesser scenarios, but keep the total small.** Around ten scenarios is manageable for most systems.
-7. **Build the quality tree.** Put "quality" at the root. Refine it into categories and topics. Put one scenario at each leaf. Look for empty branches and either add a scenario or note why the branch is empty.
+7. **Build the quality tree.** Put "quality" at the root. Refine it into categories and topics. Put one scenario at each leaf. Look for empty branches: they may point to missing scenarios ([Utility Tree](concept:utility-tree)).
 8. **Rank the leaves.** Rate each scenario twice, as High, Medium or Low. Stakeholders rate its importance. Architects rate how difficult it is to achieve. Write the pair as (importance, difficulty). Give the (H,H) scenarios the most attention in design and review, then (H,M) and (M,H). See [Utility Tree](concept:utility-tree).
 9. **Place everything in arc42.** Top goals go into section 1.2 as a table ordered by priority. Chapter 10 holds the tree and all scenarios and points back to section 1.2.
 

@@ -118,7 +118,7 @@ A class diagram shows classes and the links between them.
 - **UML Generalization and Specialization:** Generalization links a specific class to a more general one. The specific class inherits the general class's characteristics and can add its own. Every instance of the specific class is also an instance of the general class.
 - **UML Class Diagram Relationship:** UML class diagrams use different relationship types to link classes. Pick the type that matches the real link: associations resemble fields, composition means single ownership, and aggregation adds no meaning beyond association.
 - **Instance Specification:** An instance specification is a UML model element that stands for one instance in a modeled system. It gives a concrete example, with attribute values, of something a class describes in general.
-- **Common Class Diagram Modeling Mistakes:** Class diagrams often repeat the same errors: impossible multiplicities, shared parts in a composition, missing multiplicity, and wrong arrows. Knowing them helps you review diagrams, even though tools catch some automatically.
+- **Common Class Diagram Modeling Mistakes:** Common pitfalls in class diagrams are missing multiplicities, confusion about composition, and wrong notation. Knowing them helps you review diagrams, even though tools catch some automatically.
 
 ## Example
 
