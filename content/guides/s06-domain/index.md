@@ -53,7 +53,7 @@ review:
    - Domain Event ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)): something that happened, named in the past tense.
 
    Where a concept has a life cycle that matters to the business, sketch its states. See Entity Life Cycle ([DDD Building Blocks (Tactical Patterns)](concept:ddd-building-blocks-tactical-patterns)).
-7. **Sketch the important data.** Draw a conceptual data model with entities, attributes, relationships and business rules. Leave out data types, tables and indexes. See Conceptual data model building method and [Conceptual Data Model](concept:conceptual-data-model). Show it to business stakeholders and record the gaps they find.
+7. **Sketch the important data.** Draw a conceptual data model with entities, attributes, relationships and business rules. Leave out data types, tables and indexes. See [Conceptual Data Model](concept:conceptual-data-model). Show it to business stakeholders and record the gaps they find.
 8. **Note privacy and ownership.** Mark which data is sensitive and which system holds the master data. [Data Architecture](concept:data-architecture) asks you to name the database of record and to identify privacy and security aspects.
 9. **Turn the contexts into building blocks.** Group concepts that belong together. Mark external systems as external and put a translating wrapper between them and your own components. See [Deriving System Components from the Domain Model](concept:deriving-system-components-from-the-domain-model). Record the result in arc42 section 5.
 10. **Expect to revise.** The model improves as the team learns. Change model and code together. See [Iterative Domain Modeling](concept:iterative-domain-modeling).

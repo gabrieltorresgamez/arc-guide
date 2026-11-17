@@ -14,7 +14,7 @@ review:
 
 Code shows what a system does. It does not show why it was built that way ([Motivation for Architecture Documentation](concept:motivation-for-architecture-documentation)). A system without documentation still has an architecture, though nobody may have planned or understood it ([Implicit Architecture](concept:implicit-architecture)). Your job is to write down what you can recover, in small pieces.
 
-I suggest the order below. It starts with information you can get from people and existing papers. It ends with what takes the most digging. Early results will be rough. Refine them as you learn more (Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start))).
+I suggest the order below. It starts with information you can get from people and existing papers. It ends with what takes the most digging. Early results will be rough. Refine them as you learn more ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)).
 
 Write only what readers will use. Describe each thing once and reference it elsewhere ([Guidelines for Documentation](concept:guidelines-for-documentation)).
 

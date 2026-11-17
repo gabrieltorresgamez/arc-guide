@@ -160,7 +160,7 @@ The aim is to expose architectural risks. These are weaknesses that could keep a
 - **Non-risks.** A decision the team judged well-reasoned for the quality scenarios. A non-risk needs the same evidence as a risk: the quality attribute or scenario, the architectural decision, and the justification that the decision is adequate. An area the team did not examine is not a non-risk.
 - **Sensitivity points and trade-off points.** They are described below.
 - **Risk themes.** ATAM groups individual risks into themes. Each theme shows how a set of risks threatens a business driver.
-- **The utility tree itself.**
+- The utility tree itself.
 
 The results go into an out-brief presentation, a written report, or both. In arc42, section 11 holds a list of technical risks and debts, ordered by priority (see Placing ATAM Evaluation in arc42).
 

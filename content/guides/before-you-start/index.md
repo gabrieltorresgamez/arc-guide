@@ -18,7 +18,7 @@ review:
 ## Vision and system idea
 
 **What it is**
-The vision is a short statement of the shared goal behind the product. See Vision Statement. A Product Vision Board adds the target group, their needs, the key features and the business goals ([System Idea](concept:system-idea)). The system idea is an early, high-level answer to how the system will be built. In arc42, the closest match is the solution strategy. See [System Idea](concept:system-idea).
+The vision is a short statement of the shared goal behind the product. A Product Vision Board adds the target group, their needs, the key features and the business goals ([System Idea](concept:system-idea)). The system idea is an early, high-level answer to how the system will be built. In arc42, the closest match is the solution strategy. See [System Idea](concept:system-idea).
 
 **Why you need it**
 The vision is a short, inspiring statement of the shared goal. The system idea sums up the basic decisions that shape the architecture. Each of those decisions ties back to a quality goal or a key constraint.
@@ -81,7 +81,7 @@ Answer the guiding questions yourself and write a first table. Add each stakehol
 ## Scope and context
 
 **What it is**
-The scope says where the system starts and ends. A [Context View](concept:context-view) shows the system as a black box with its communication partners around it. It shows what data the system exchanges with them. The business context shows data flows. The technical context shows the channels and technical interfaces to the neighbors. See Refining Complex Context Views.
+The scope says where the system starts and ends. A [Context View](concept:context-view) shows the system as a black box with its communication partners around it. It shows what data the system exchanges with them. The business context shows data flows. The technical context shows the channels and technical interfaces to the neighbors.
 
 **Why you need it**
 Everyone can see the boundary of the system and who it talks to. Interfaces to neighboring systems become visible early. Risks can be marked directly in the context.
@@ -163,4 +163,4 @@ One list, in one place. For each constraint, give who wants it, why, what it cos
 For ClinicBook, one technical entry could be: "Practice-management software stays in place. ClinicBook must use the interfaces each vendor offers. Wanted by the practices, who use that software daily. Consequence: extra integration work per vendor. Not negotiable in the short term." The fixed launch date and the small team are pressures. Weigh them against other goals, unless someone declares them fixed.
 
 **If it is missing**
-Ask the people around the project which technology, organizational and convention limits exist. Write each one down with its source. Mark unclear ones as "negotiability unknown". See Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)).
+Ask the people around the project which technology, organizational and convention limits exist. Write each one down with its source. Mark unclear ones as "negotiability unknown". See [Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start).

@@ -440,6 +440,12 @@ def check_content(arts):
                 lines.append("code" if fence else l)
         if m := re.search(r"(?:[Tt]he article|\b[Ss]ee(?: the article)?) \"?" + re.escape(a["title"]) + r"\"?(?=[.,)]| and\b| for\b| covers\b| explains\b| has\b)", body):
             fails.append(f"{s}: refers to itself ('{m[0]}'), usually left by a merge; drop the reference")
+        for i, l in enumerate(lines):  # a list item with no text, or only a bold label and nothing nested under it
+            if re.fullmatch(r"[ \t]*(?:[-*]|\d+\.)(?:[ \t]+\*\*[^*\n]+\*\*:?)?[ \t]*", l):
+                nxt = next((x for x in lines[i + 1:] if x.strip()), "")
+                if "**" not in l or not nxt.startswith((" ", "\t")):
+                    fails.append(f"{s}: empty list item '{l.strip()}' (its text was deleted; rewrite the list)")
+                    break
         if re.search(r"\S\n[ \t]*\n[ \t]*\n", "\n".join(lines)):  # two blank lines in a row are left where a block was deleted
             fails.append(f"{s}: two blank lines in a row (a deleted block? rewrite the paragraph around it)")
         lead = re.compile(r"^\*\*[^*\n]+\*\*\s*[:.]?\s*$")

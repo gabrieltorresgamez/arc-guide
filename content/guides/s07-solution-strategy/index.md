@@ -107,7 +107,7 @@ This follows [Design for Change](concept:design-for-change), which asks for exte
 - The chosen style or pattern is named. Its constraints, benefits and costs are stated. ([Architecture Style](concept:architecture-style))
 - Each top quality goal has a measurable scenario and a table row that lists approaches and side effects. ([Tactic Trade-off Balancing](concept:tactic-trade-off-balancing))
 - Each tactic names the one quality attribute it serves. ([Choosing and Applying Tactics](concept:choosing-and-applying-tactics))
-- Each principle has a name, statement, rationale and implications. (Architecture Principle Structure ([Architecture Principle](concept:architecture-principle)))
+- Each principle has a name, statement, rationale and implications. ([Architecture Principle](concept:architecture-principle))
 - Important decisions name their reasons and their negative consequences. Open decisions are marked. ([Solution as Moving Target](concept:solution-as-moving-target))
 
 ## Learn more

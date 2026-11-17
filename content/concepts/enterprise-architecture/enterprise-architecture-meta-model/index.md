@@ -66,9 +66,9 @@ In the information systems layer, the metamodel separates logical from physical.
 
 For data, this gives a chain:
 
-1.
-2.
-3.
+1. A data entity is a logical business data object.
+2. A logical data component is a logical grouping of data.
+3. A physical data component is an actual database, repository or file.
 
 See the articles on Conceptual, Logical and Physical Data Model and on Data Entity/Data Component Catalog.
 

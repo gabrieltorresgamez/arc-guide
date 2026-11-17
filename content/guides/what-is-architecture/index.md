@@ -10,7 +10,7 @@ review:
 
 Software architecture is the set of fundamental choices about a system. It covers the system's parts, how those parts relate, and the reasoning behind the choices. Definitions differ. Most stress three things: structure, important decisions, and the cost of changing those decisions later. See [Software Architecture](concept:software-architecture) and Software Architecture Definition.
 
-**Building blocks in levels** help from the start. You describe the system as a few large parts. You then zoom into a part only where it matters. Read more in Software Architecture Basic Concepts ([Software Architecture](concept:software-architecture)) and [Architecture Level](concept:architecture-level).
+**Building blocks in levels** help from the start. You describe the system as a few large parts. You then zoom into a part only where it matters. Read more in [Software Architecture](concept:software-architecture) and [Architecture Level](concept:architecture-level).
 
 Every system has an architecture, even if nobody planned or documented it. That is called [implicit architecture](concept:implicit-architecture).
 
@@ -23,7 +23,7 @@ This slow drift away from the intended design is called architecture decay ([Big
 - [Refactoring](concept:refactoring) changes the inside of the software in small steps without changing what it does.
 - Checks that compare the code with the intended design. One option is an [architecturally evident coding style](concept:architecturally-evident-coding-style), where automated tests verify the architecture rules.
 
-Architecture is also where goals meet limits. A *quality goal* is a property the system must have, such as availability. A *constraint* is a limit on your choices, such as a fixed date. A *stakeholder* is a person or group with an interest in the system. Requirements and Means Influence Architecture ([Architecture Means](concept:architecture-means)) explains why you should learn the key stakeholders' quality goals early. You should also know which decisions are free and which are bound. See also Software Architecture in Its Context ([Software Architecture](concept:software-architecture)).
+Architecture is also where goals meet limits. A *quality goal* is a property the system must have, such as availability. A *constraint* is a limit on your choices, such as a fixed date. A *stakeholder* is a person or group with an interest in the system. Requirements and Means Influence Architecture ([Architecture Means](concept:architecture-means)) explains why you should learn the key stakeholders' quality goals early. You should also know which decisions are free and which are bound. See also [Software Architecture](concept:software-architecture).
 
 ## What an architect does
 

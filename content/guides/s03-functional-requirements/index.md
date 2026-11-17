@@ -39,7 +39,7 @@ You do not need a complete requirements document. arc42 asks for a short require
 3. **Write each function as a story or a use case.**
    - A story names a specific user role, a goal and a reason. See User Story Role Formulation ([User Story](concept:user-story)).
    - Mark the goal level of each use case. The user-goal level is the most useful one. See Use Case Goal Level ([Use Case](concept:use-case)).
-4. **Show the scope in a picture, if it helps.** A [use case diagram](concept:uml-use-case-diagram) draws a system boundary. Actors stay outside it. An actor can be a person, an organization or an external system. Avoid the mistakes in Common Use Case Diagram Errors ([UML Use Case Diagram](concept:uml-use-case-diagram)).
+4. **Show the scope in a picture, if it helps.** A [use case diagram](concept:uml-use-case-diagram) draws a system boundary. Actors stay outside it. An actor can be a person, an organization or an external system. Avoid the mistakes in [UML Use Case Diagram](concept:uml-use-case-diagram).
 5. **Split items that are too big or too vague.**
    - A story too large for one iteration is an epic ([User Story](concept:user-story)). Split it before you build it.
    - Look hard at any story with the word "manage". Split it by operation. See [Story Splitting](concept:story-splitting).

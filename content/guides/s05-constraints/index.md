@@ -20,8 +20,8 @@ The second list holds your forces. A force is a pressure that pulls a decision i
 
 ## What you need first
 
-- A short list of who is involved in or affected by the system, and what they expect. See Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)) and [Stakeholder Concern](concept:stakeholder-concern).
-- The quality goals of the most important stakeholders. See Software Architecture in Its Context ([Software Architecture](concept:software-architecture)).
+- A short list of who is involved in or affected by the system, and what they expect. See [Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start) and [Stakeholder Concern](concept:stakeholder-concern).
+- The quality goals of the most important stakeholders. See [Software Architecture](concept:software-architecture).
 - Links to existing requirements documents. Link to them. Do not copy them.
 - Any organization-wide standards, such as mandated technologies. See Relationship between Enterprise Architecture and Application Architecture ([Enterprise Architecture](concept:enterprise-architecture)).
 
@@ -39,7 +39,7 @@ The second list holds your forces. A force is a pressure that pulls a decision i
 3. **Write who wants each constraint and why.** A constraint without a reason is hard to defend or to negotiate. See [Architectural Constraint](concept:architectural-constraint).
 4. **Mark each constraint as fixed or negotiable.** Do this for organizational constraints too. See Requirements and Means Influence Architecture ([Architecture Means](concept:architecture-means)).
 5. **Describe the consequences.** Note extra cost, extra effort or lost options that follow from the constraint.
-6. **Group the list when it gets long.** Use technical, organizational/political, and conventions. Budget, time and processes are organizational. Programming style and naming rules are conventions. Keep constraints from the wider organization apart from those of this system. See Software Architecture in Its Context ([Software Architecture](concept:software-architecture)).
+6. **Group the list when it gets long.** Use technical, organizational/political, and conventions. Budget, time and processes are organizational. Programming style and naming rules are conventions. Keep constraints from the wider organization apart from those of this system. See [Software Architecture](concept:software-architecture).
 7. **List the forces separately.** Name the pressures that pull in different directions. Write each as a pair, for example "launch date versus maintainability". See [Concern](concept:concern).
 8. **State where you are free.** Whatever the constraints leave open is your design space. Say so in the document.
 9. **Expect to revise.** Constraints and forces change as you learn more. Early choices may need correcting, as [Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start) points out. Later, name the forces that drove each important decision in its decision record. See [Architectural Decision Record](concept:architectural-decision-record).
@@ -72,7 +72,7 @@ The rows on the date, integration and health data are fixed. The team cannot tra
 
 - All constraints sit in one list, each with a reason and a named source. See [arc42 Constraints](concept:arc42-constraints).
 - Each constraint is marked fixed or negotiable, and its consequences are written down. See [Architectural Constraint](concept:architectural-constraint).
-- Long lists are grouped, and organization-wide constraints are separate from system-specific ones. See Software Architecture in Its Context ([Software Architecture](concept:software-architecture)).
+- Long lists are grouped, and organization-wide constraints are separate from system-specific ones. See [Software Architecture](concept:software-architecture).
 - Constraints from enterprise-wide standards, such as mandated technologies, are included. See Relationship between Enterprise Architecture and Application Architecture ([Enterprise Architecture](concept:enterprise-architecture)).
 - Forces are listed apart from constraints, and conflicting pairs are named. See [Architectural Force](concept:architectural-force).
 - The document says where the team is free and where it is bound. See Requirements and Means Influence Architecture ([Architecture Means](concept:architecture-means)).

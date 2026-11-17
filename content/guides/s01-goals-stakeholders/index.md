@@ -28,7 +28,7 @@ You write the result into section 1 of arc42, "Introduction and Goals". See [arc
 ## What you need first
 
 - A rough idea of what the system should do and for whom.
-- Any existing requirements documents. You will link to them, not copy them. See Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)).
+- Any existing requirements documents. You will link to them, not copy them. See [Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start).
 - Access to the people who sponsor, build or use the system, or to someone who knows them.
 - If one exists, a description of the business behind the system, such as a [Business Model Canvas](concept:business-model-canvas). It shows the customers and partners you must not forget.
 
@@ -93,7 +93,7 @@ The details, such as exact numbers, move to section 10.
 - Section 1 lists at most five quality goals, each with a short scenario. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).
 - The quality goals are the ones most important to the major stakeholders. See [Stakeholder Perspective and Concern](concept:stakeholder-perspective-and-concern).
 - Conflicting concerns are named, with the chosen trade-off and its reasoning. See [Concern](concept:concern).
-- The requirements overview is short and links to existing documents. See Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)).
+- The requirements overview is short and links to existing documents. See [Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start).
 
 ## Learn more
 

@@ -86,6 +86,7 @@ def test_check_content_empty_section():
     assert not any("empty section" in f for f in fails)
     fails, _ = build.check_content([art("## Explanation\n\n" + filler + "\n\n\n**Next.** " + filler)])
     assert any("blank lines" in f for f in fails)  # left where a block was deleted
+    assert any("empty list item" in f for f in build.check_content([art(filler + "\n\n1. One.\n2.\n")])[0])
     assert any("refers to itself" in f for f in build.check_content([art(filler + " Cards help (see the article A).")])[0])
     assert not any("refers to itself" in f for f in build.check_content([art(filler + " See A Better Page.")])[0])
 

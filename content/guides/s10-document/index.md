@@ -66,8 +66,8 @@ Each diagram has a named audience, a title, a legend and a clear type. Readers c
    - Draw one environment per diagram, for example production.
    - Show infrastructure such as load balancers and firewalls where they matter.
    - Explain how the infrastructure shapes the system.
-   - See [Deployment View](concept:deployment-view), Distribution View Antipatterns and Deployment Diagram Modeling Mistake ([UML Deployment Diagram](concept:uml-deployment-diagram)).
-8. **Describe each thing once.** Give an interface its full description in one place. Other places only point to it (Undetected Duplication Antipattern ([Characteristics of a Good View](concept:characteristics-of-a-good-view))). Keep detail at one abstraction level per diagram (Unclear Level of Abstraction Antipattern).
+   - See [Deployment View](concept:deployment-view), [UML Deployment Diagram](concept:uml-deployment-diagram).
+8. **Describe each thing once.** Give an interface its full description in one place. Other places only point to it ([Characteristics of a Good View](concept:characteristics-of-a-good-view)). Keep detail at one abstraction level per diagram (Unclear Level of Abstraction Antipattern).
 9. **Name an owner.** One named person is responsible for the amount and quality of the documentation ([Guidelines for Documentation](concept:guidelines-for-documentation)).
 
 ## Example: ClinicBook
@@ -116,7 +116,7 @@ Every diagram has a title with type and scope, a legend and labeled arrows. One 
 - Section 3 shows the system as a black box with all communication partners. The technical context sits in a separate view. See [Business and Technical Context](concept:business-and-technical-context).
 - Section 5 has a level 1 white box. Deeper levels exist only for important, risky, complex or volatile blocks. See Component View Refinement Levels ([Component View](concept:component-view)).
 - Section 6 has a few architecturally relevant scenarios. Each step maps to a building block. See [Runtime View](concept:runtime-view).
-- Section 7 maps building blocks to infrastructure, one environment per diagram. See Distribution View Antipatterns ([Deployment View](concept:deployment-view)).
+- Section 7 maps building blocks to infrastructure, one environment per diagram. See [Deployment View](concept:deployment-view).
 - Each view names the readers and concerns it serves. See [Architecture View](concept:architecture-view).
 - Any BPMN model has been checked for soundness. See [Soundness of Process Models](concept:soundness-of-process-models).
 
