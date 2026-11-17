@@ -160,3 +160,16 @@ def test_torres_source_themes_diagrams_but_not_bpmn():
     assert torres_source("mermaid", "flowchart TD\n  A --> B").startswith("%%{init: {\"theme\": \"base\"")
     assert torres_source("c4plantuml", "@startuml\n!include <C4/C4_Context>\n@enduml").split("\n")[1] == "skinparam monochrome true"
     assert torres_source("bpmn", "<xml/>") == "<xml/>"
+
+
+def test_pin_inline_scripts_adds_hash_policy(tmp_path):
+    import base64, hashlib
+    from pipeline.build import pin_inline_scripts
+    page = tmp_path / "index.html"
+    page.write_text('<html><head><meta charset="utf-8"/><script>run()</script><script type="application/json">{}</script>'
+                    '<script src="/a.js"></script></head></html>')
+    assert pin_inline_scripts(tmp_path) == []
+    want = base64.b64encode(hashlib.sha256(b"run()").digest()).decode()
+    out = page.read_text()
+    assert f"script-src 'self' 'wasm-unsafe-eval' 'sha256-{want}'\">" in out  # only the script that runs
+    assert out.index("Content-Security-Policy") < out.index("<script>")  # before the first script

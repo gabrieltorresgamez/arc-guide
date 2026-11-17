@@ -1,4 +1,6 @@
 """Build the site: diagrams, Starlight pages, .md versions, llms.txt files, checks."""
+import base64
+import hashlib
 import html
 import json
 import os
@@ -96,9 +98,12 @@ def page_head(md_url, llms_url):
             {"tag": "link", "attrs": {"rel": "describedby", "href": llms_url}}]
 
 
-def write_page(url_path, title, desc, body, md_body, llms_url, order=None):
-    """url_path like 'concepts/cat/slug' (no slashes at the ends). Writes the Starlight page and the .md version."""
+def write_page(url_path, title, desc, body, md_body, llms_url, order=None, doc_title=None):
+    """url_path like 'concepts/cat/slug' (no slashes at the ends). Writes the Starlight page and the .md version.
+    doc_title: a different browser and search-result title (the <title> tag); the page heading stays `title`."""
     fm = {"title": title, "description": desc, "head": page_head(f"/{url_path}.md", llms_url)}
+    if doc_title:
+        fm["head"].append({"tag": "title", "content": f"{doc_title} | Software Architecture Guide"})
     if not re.search(r"^## ", body, re.M):  # no sections: the "On this page" box would only say "Overview"
         fm["tableOfContents"] = False
     if order is not None:
@@ -308,8 +313,10 @@ def main(argv=None):
             intro = "This category covers " + (scope[0].lower() + scope[1:] if scope[1:2].islower() else scope)  # keep "ISO", "UML"
             return "\n\n".join([intro] + [l if len(lists) == 1 else f"## {t}\n\n{l}" for t, l in lists])
         title = cats[cat]["title"]
+        # doc_title: some categories share their name with a page in them ("Data Architecture"); two pages with one title
+        # compete in search results
         write_page(f"concepts/{cat}", title, f"Overview of the {title} pages: what each one covers, in one sentence.",
-                   overview(False), f"# {title}\n\n" + overview(True), f"/concepts/{cat}/llms.txt")
+                   overview(False), f"# {title}\n\n" + overview(True), f"/concepts/{cat}/llms.txt", doc_title=f"{title} overview")
     # guides
     gl = []
     for i, g in enumerate(c.TAXONOMY["guides"]):
@@ -392,6 +399,7 @@ def main(argv=None):
     if r.returncode:
         fails.append("npm run build failed:\n" + (r.stdout + r.stderr)[-2000:])
     else:
+        fails += pin_inline_scripts(SITE / "dist")
         fails += check_dist(arts)
     rep += [f"- FAIL {f}" for f in fails] or ["- all checks passed"]
     c.write_report("build", rep)
@@ -546,6 +554,31 @@ def check_content(arts):
                 warns.append(f"{a['slug']}: names '{t}' but does not link it (add 'See {t}.' or put {slug} in related)")
                 break
     return fails, warns
+
+
+CHARSET = '<meta charset="utf-8"/>'
+INLINE_SCRIPT = re.compile(r"<script(?![^>]*\ssrc=)([^>]*)>(.*?)</script>", re.S)
+
+
+def pin_inline_scripts(dist):
+    """Allow exactly the site's own inline scripts. nginx.conf has to allow inline scripts ('unsafe-inline': Starlight
+    writes them into every page), which would also run an injected one. So every page gets a second policy as a meta
+    tag, right after the charset: scripts from this site plus the hashes of the inline scripts the build wrote (13 when
+    this was added), nothing else. Browsers enforce both policies, so the stricter one decides. Styles stay with
+    nginx.conf (Starlight sets style attributes, which hashes cannot allow). Returns build failures."""
+    pages = {h: h.read_text(encoding="utf-8") for h in dist.rglob("*.html")}
+    hashes = sorted({base64.b64encode(hashlib.sha256(body.encode()).digest()).decode()
+                     for page in pages.values() for attrs, body in INLINE_SCRIPT.findall(page)
+                     if "json" not in attrs})  # data blocks (JSON, JSON-LD) do not run
+    policy = " ".join(["script-src 'self' 'wasm-unsafe-eval'"] + [f"'sha256-{h}'" for h in hashes])  # wasm: Pagefind
+    meta = f'<meta http-equiv="Content-Security-Policy" content="{policy}">'
+    fails = []
+    for h, page in pages.items():
+        if CHARSET not in page:
+            fails.append(f"{h.relative_to(dist)}: no {CHARSET}, so no script policy")
+            continue
+        h.write_text(page.replace(CHARSET, CHARSET + meta, 1), encoding="utf-8")
+    return fails
 
 
 def check_dist(arts):

@@ -39,7 +39,8 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 					<svg class="pg-svg pg-zoom" role="group" aria-label="Pages linked with this one, two steps out" />
 				</div>
 				<p class="pg-caption" aria-live="polite">
-					Point at a dot to see its name. Scroll to zoom, drag the background to move, double-click to fit.
+					Dots link to this page, rings are one step further. Point at one to see its name. Scroll to zoom, drag the
+					background to move, double-click to fit.
 				</p>
 			</dialog>
 		</div>
@@ -72,6 +73,8 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 			grew = false;
 			for (const [i, t] of [...step]) if (t === s - 1) for (const j of adj[i]) if (!step.has(j)) step.set(j, s), (grew = true);
 		}
+		// A page two steps out stays only if at least two direct neighbors link to it; one shared link is noise.
+		for (const [i, s] of step) if (s === 2 && [...adj[i]].filter((j) => step.get(j) === 1).length < 2) step.delete(i);
 		// Dot radius on screen as in Quartz: 2px plus the square root of the page's number of links, so hubs stand out.
 		const nodes: Node[] = [...step].map(([i, s]) => ({ s, r: 2 + Math.sqrt(adj[i].size), url: data.nodes[i][0], title: data.nodes[i][1] }));
 		const at = new Map([...step.keys()].map((i, k) => [i, k]));
@@ -89,11 +92,13 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 		const dots = nodes.map((n) => {
 			const a = el('a', { href: n.url, class: `pg-${Math.min(n.s, 2)}`, 'aria-label': n.title }, svg);
 			if (n.s !== 1) a.setAttribute('tabindex', '-1'); // keyboard users get the direct neighbors only
-			el('circle', {}, a);
+			el('circle', { class: 'pg-hit' }, a); // a bigger target than the dot
+			el('circle', { class: 'pg-dot' }, a);
 			el('text', {}, a).textContent = n.title;
 			return a;
 		});
-		const circles = dots.map((d) => d.querySelector('circle')!);
+		const circles = dots.map((d) => d.querySelector('.pg-dot')!);
+		const hits = dots.map((d) => d.querySelector('.pg-hit')!);
 
 		// The view: fitted to the dots (zoom out like Obsidian) until the reader zooms or pans. Dots, lines and labels
 		// keep their size on screen at any zoom.
@@ -102,6 +107,7 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 			const k = w / (svg.clientWidth || 256); // user units per screen pixel
 			svg.style.setProperty('--k', `${k}`);
 			circles.forEach((c, j) => c.setAttribute('r', `${nodes[j].r * k}`));
+			hits.forEach((c, j) => c.setAttribute('r', `${(nodes[j].r + 4) * k}`));
 		};
 		let userView = false;
 		let dragging: number | null = null;
@@ -312,16 +318,27 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 		cursor: pointer;
 		transition: opacity 160ms ease;
 	}
-	.pg-svg :global(circle) {
-		fill: var(--border);
-		stroke: transparent;
-		stroke-width: calc(8px * var(--k, 1)); /* a bigger target than the dot */
+	/* This page: an accent dot. Direct neighbors: ink dots. Two steps out (large view): rings in the border colour,
+	   hollow, so the two steps differ in shape, not only in tone. --pg-bg is the ground the graph sits on. */
+	.pg-svg {
+		--pg-bg: var(--canvas-soft);
 	}
-	.pg-svg :global(.pg-1 circle) {
+	.pg-window .pg-svg {
+		--pg-bg: var(--surface-raised);
+	}
+	.pg-svg :global(.pg-hit) {
+		fill: transparent;
+	}
+	.pg-svg :global(.pg-dot) {
 		fill: var(--ink);
 	}
-	.pg-svg :global(.pg-0 circle) {
+	.pg-svg :global(.pg-0 .pg-dot) {
 		fill: var(--accent);
+	}
+	.pg-svg :global(.pg-2 .pg-dot) {
+		fill: var(--pg-bg);
+		stroke: var(--border);
+		stroke-width: calc(1.5px * var(--k, 1));
 	}
 	.pg-svg :global(text) {
 		fill: var(--ink);
@@ -329,7 +346,7 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 		font-weight: 500;
 		text-anchor: middle;
 		paint-order: stroke;
-		stroke: var(--canvas-soft);
+		stroke: var(--pg-bg);
 		stroke-width: calc(3px * var(--k, 1));
 		translate: 0 calc(-10px * var(--k, 1));
 		pointer-events: none;
@@ -351,7 +368,7 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 	.pg-svg :global(a:focus-visible) {
 		outline: none;
 	}
-	.pg-svg :global(a:focus-visible circle) {
+	.pg-svg :global(a:focus-visible .pg-dot) {
 		stroke: var(--accent);
 		stroke-width: calc(2px * var(--k, 1));
 	}
@@ -369,9 +386,6 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 	.pg-window {
 		width: calc(100vw - 4rem);
 		height: calc(100dvh - 4rem);
-	}
-	.pg-window .pg-svg :global(text) {
-		stroke: var(--surface-raised);
 	}
 	.pg-stage {
 		position: relative;
