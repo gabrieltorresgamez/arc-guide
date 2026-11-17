@@ -16,13 +16,13 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 		<div class="page-graph sl-hidden lg:sl-block">
 			<div class="pg-head">
 				<h2>Linked pages</h2>
+			</div>
+			<div class="pg-box">
 				<button class="t-icon pg-open" type="button" aria-label="Show linked pages in a large view">
 					<svg viewBox="0 0 20 20" aria-hidden="true">
 						<path d="M12 3h5v5M17 3l-6 6M8 17H3v-5M3 17l6-6" />
 					</svg>
 				</button>
-			</div>
-			<div class="pg-box">
 				<svg class="pg-svg" role="group" aria-label="Pages linked with this one" />
 			</div>
 			<p class="pg-caption" aria-live="polite">Point at a dot to see its name. Drag to move it.</p>
@@ -198,11 +198,12 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 			userView = true;
 			setView(c.x - (c.x - v.x) * r, c.y - (c.y - v.y) * r, w, v.height * r);
 		};
-		svg.onwheel = (e) => {
-			if (!zoomable) return;
-			e.preventDefault();
-			zoom(Math.exp(e.deltaY * 0.0015), toSvg(e));
-		};
+		// Only the large view takes the wheel; the small one leaves it to the sidebar (no listener, so no scroll delay).
+		if (zoomable)
+			svg.onwheel = (e) => {
+				e.preventDefault();
+				zoom(Math.exp(e.deltaY * 0.0015), toSvg(e));
+			};
 		svg.ondblclick = (e) => {
 			if (!zoomable || (e.target as Element).closest('a')) return;
 			userView = false;
@@ -213,17 +214,6 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 			zoom,
 			fit: () => ((userView = false), fit()),
 		};
-	}
-
-	// The right sidebar scrolls on its own once its content is taller than the window (short screens). Then the
-	// wheel over it should scroll only the sidebar, not hand over to the page at its end; while it has nothing to
-	// scroll, the wheel must reach the page. So `overscroll-behavior: contain` applies only while it overflows.
-	const side = document.querySelector<HTMLElement>('.right-sidebar');
-	if (side) {
-		const check = () => side.classList.toggle('scrolls', side.scrollHeight > side.clientHeight + 1);
-		const watch = new ResizeObserver(check);
-		watch.observe(side);
-		for (const child of side.children) watch.observe(child);
 	}
 
 	if (box) {
@@ -272,10 +262,6 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 		padding: 1rem var(--sl-sidebar-pad-x);
 	}
 	.pg-head {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		max-width: 16rem;
 		margin-bottom: 0.5rem;
 	}
 	.pg-head h2 {
@@ -285,16 +271,25 @@ const title = Astro.locals.starlightRoute.entry.data.title;
 		line-height: var(--sl-line-height-headings);
 	}
 	.pg-box {
+		position: relative;
 		max-width: 16rem;
 		background: var(--canvas-soft);
 		border-radius: var(--radius);
 		overflow: hidden;
 	}
+	/* The enlarge button sits in the box's top corner. Its inset is the difference of the two radii (12px - 6px), so its
+	   corner runs parallel to the box's corner; the 6px also leaves room for its focus ring inside the box. */
+	.pg-box .pg-open {
+		position: absolute;
+		z-index: 1;
+		inset-block-start: calc(var(--radius) - var(--radius-sm));
+		inset-inline-end: calc(var(--radius) - var(--radius-sm));
+	}
 	:global(:root[data-contrast]) .pg-box {
 		outline: 1px solid var(--hairline);
 	}
 	.pg-box .pg-svg {
-		aspect-ratio: 1;
+		aspect-ratio: 4 / 3; /* wider than tall: the column fits on a 900px screen */
 	}
 	.pg-svg {
 		display: block;

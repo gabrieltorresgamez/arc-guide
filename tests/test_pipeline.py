@@ -153,3 +153,10 @@ def test_link_graph_counts_each_link_once():
     bodies = {"a": "See [B](/concepts/x/b/).", "b": "Back to [A](/concepts/x/a/) and [C](/concepts/x/c/).", "c": "[C](/concepts/x/c/)"}
     urls, links = build.link_graph(titles, bodies)
     assert links == [(0, 1), (1, 2)]  # a-b once although both link, b-c, no self link
+
+
+def test_torres_source_themes_diagrams_but_not_bpmn():
+    from pipeline.build import torres_source
+    assert torres_source("mermaid", "flowchart TD\n  A --> B").startswith("%%{init: {\"theme\": \"base\"")
+    assert torres_source("c4plantuml", "@startuml\n!include <C4/C4_Context>\n@enduml").split("\n")[1] == "skinparam monochrome true"
+    assert torres_source("bpmn", "<xml/>") == "<xml/>"

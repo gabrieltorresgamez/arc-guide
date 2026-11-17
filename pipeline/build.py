@@ -116,6 +116,26 @@ def load_articles():
     return arts
 
 
+# Torres colours for diagrams (they sit on a white plate in every theme): one accent at most, everything else coffee,
+# cream or grey, never the tool's default palette. Mermaid gets its "base" theme in the light Torres neutrals (mindmap
+# branches in hairline grey); PlantUML and C4 render in monochrome. Only the rendering changes; the source shown under
+# "Diagram source" stays as written.
+_SCALE = {f"cScale{i}": "#c5c0b1" for i in range(12)} | {f"cScaleLabel{i}": "#201515" for i in range(12)}
+MERMAID_INIT = "%%{init: " + json.dumps({"theme": "base", "themeVariables": {
+    "primaryColor": "#f8f4f0", "primaryBorderColor": "#8a877b", "primaryTextColor": "#201515", "lineColor": "#201515",
+    "secondaryColor": "#fffefb", "tertiaryColor": "#fffefb", "clusterBkg": "#fffefb", "clusterBorder": "#8a877b",
+    "noteBkgColor": "#f8f4f0", "noteBorderColor": "#8a877b", "actorBkg": "#f8f4f0", "actorBorder": "#8a877b",
+    "signalColor": "#201515", **_SCALE}, "themeCSS": "g.node * { filter: none !important; }"}) + "}%%\n"  # flat, no shadows
+
+
+def torres_source(lang, src):
+    if lang == "mermaid":
+        return MERMAID_INIT + src
+    if lang in ("plantuml", "c4plantuml"):
+        return re.sub(r"^(@start\w+.*)$", r"\1\nskinparam monochrome true", src, count=1, flags=re.M)
+    return src
+
+
 def render_diagrams():
     """Render every diagram file in content/ with Kroki; copy the source next to the SVG. Returns count and failures."""
     ok, bad = 0, []
@@ -123,7 +143,8 @@ def render_diagrams():
         if f.is_file() and f.suffix not in (".md", ".json"):
             rel = f.relative_to(c.CONTENT)
             try:
-                svg = c.kroki_render(c.kroki_lang(f.name), f.read_text())
+                lang = c.kroki_lang(f.name)
+                svg = c.kroki_render(lang, torres_source(lang, f.read_text()))
             except (c.KrokiError, ValueError, OSError) as e:
                 bad.append(f"{rel}: {str(e)[:200]}")
                 continue
@@ -350,7 +371,8 @@ def main(argv=None):
     # sidebar (read by site/astro.config.mjs)
     sb = []
     if gl:
-        sb.append({"label": "Start here", "items": [{"autogenerate": {"directory": "guides"}}]})
+        # collapsed: on concept pages it would push the current page below the fold; Starlight opens it on guide pages
+        sb.append({"label": "Start here", "collapsed": True, "items": [{"autogenerate": {"directory": "guides"}}]})
     def cat_items(k):
         if not cats[k].get("subcategories"):
             return [{"slug": f"concepts/{k}/{a['slug']}"} for a in groups(k)[0][1]]  # explicit list, so `order:` is respected

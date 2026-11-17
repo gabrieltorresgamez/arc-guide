@@ -6,3 +6,9 @@ import font from '@fontsource-variable/bricolage-grotesque/files/bricolage-grote
 
 <Default />
 <link rel="preload" as="font" type="font/woff2" href={font} crossorigin />
+<!-- Before first paint, so a hidden nav does not flash in (SiteTitle.astro has the button). -->
+<script is:inline>
+	try {
+		if (localStorage.getItem('nav-hidden')) document.documentElement.setAttribute('data-nav-hidden', '');
+	} catch {}
+</script>

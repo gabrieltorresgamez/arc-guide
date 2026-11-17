@@ -4,3 +4,51 @@
 ---
 
 <a href={Astro.locals.starlightRoute.siteTitleHref} class="site-title" translate="no">ARC</a>
+<!-- The nav's hide and show button. It sits here so it exists while the nav is hidden; custom.css fixes it to the
+     foot of the nav. -->
+<div class="nav-shelf">
+	<button class="t-icon nav-toggle" type="button" aria-label="Hide navigation" aria-controls="starlight__sidebar">
+		<svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.75" y="3.75" width="14.5" height="12.5" rx="2" /><path d="M7.75 3.75v12.5" /></svg>
+	</button>
+</div>
+
+<script>
+	// The nav: hide and show it (state set before first paint by Head.astro), and keep the current page in view. Starlight
+	// restores the nav's last scroll position, which can leave the current page above or below the visible part.
+	const root = document.documentElement;
+	const pane = document.getElementById('starlight__sidebar');
+	const reveal = () => {
+		const cur = pane?.querySelector('a[aria-current="page"]');
+		if (!pane || !cur) return;
+		const p = pane.getBoundingClientRect();
+		const c = cur.getBoundingClientRect();
+		if (c.top < p.top || c.bottom > p.bottom) pane.scrollTop += c.top - p.top - pane.clientHeight / 3; // instant
+	};
+	const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle')!;
+	const show = (hidden: boolean) => {
+		root.toggleAttribute('data-nav-hidden', hidden);
+		toggle.setAttribute('aria-label', hidden ? 'Show navigation' : 'Hide navigation');
+		if (!hidden) reveal();
+	};
+	toggle.addEventListener('click', () => {
+		const hidden = !root.hasAttribute('data-nav-hidden');
+		show(hidden);
+		try {
+			if (hidden) localStorage.setItem('nav-hidden', '1');
+			else localStorage.removeItem('nav-hidden');
+		} catch {}
+	});
+	show(root.hasAttribute('data-nav-hidden'));
+	pane?.addEventListener('toggle', (e) => (e as ToggleEvent).newState === 'open' && reveal()); // the menu on phones
+
+	// The nav and the right sidebar scroll on their own when their content is taller than the window. While they do,
+	// the wheel over them scrolls only them and does not hand over to the page at their end (custom.css: `.scrolls`,
+	// overscroll-behavior: contain). While they have nothing to scroll, the wheel must reach the page, so the class
+	// is set only while they overflow.
+	for (const box of document.querySelectorAll<HTMLElement>('#starlight__sidebar, .right-sidebar')) {
+		const check = () => box.classList.toggle('scrolls', box.scrollHeight > box.clientHeight + 1);
+		const watch = new ResizeObserver(check);
+		watch.observe(box);
+		for (const child of box.children) watch.observe(child); // the nav's content grows when a group opens
+	}
+</script>

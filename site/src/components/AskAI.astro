@@ -105,6 +105,9 @@ const data = JSON.stringify({ providers, prompts, mdPath }).replace(/</g, '\\u00
 		font-weight: 500;
 		line-height: 1.3;
 	}
+	.ask-meta {
+		text-wrap: pretty; /* no single word on the last line */
+	}
 	.ask-note:empty {
 		display: none;
 	}

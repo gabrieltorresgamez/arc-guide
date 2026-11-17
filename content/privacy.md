@@ -33,7 +33,9 @@ The theme switch (Light, Dark, Auto) saves your choice in your browser's local s
 
 If you pick an AI assistant in the "Ask an AI" box, the site saves that choice under the name `ai-provider`, so the next page offers the same assistant. It also stays in your browser.
 
-You can delete both values at any time by clearing the data of this site in your browser settings. You can also block site data for this site. The site still works, but it may not remember your choices.
+If you hide the navigation with the button in its bottom corner, the site saves that under the name `nav-hidden`, so the next page opens without it too. It also stays in your browser.
+
+You can delete these values at any time by clearing the data of this site in your browser settings. You can also block site data for this site. The site still works, but it may not remember your choices.
 
 ## Who receives your data
 

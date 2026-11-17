@@ -84,7 +84,8 @@
   --sl-shadow-md: none;
   --sl-shadow-lg: none;
 
-  /* 18px body in a 40rem column: about 70 characters per line. */
+  /* 18px body in a 40rem column: about 70 characters per line (applied to .sl-markdown-content below; Starlight
+     itself reads --sl-text-body only in cards and notices). */
   --sl-text-body: 1.125rem;
   --sl-line-height: 1.6;
   --sl-content-width: 40rem;
@@ -408,7 +409,7 @@ img[src^="/diagrams/"] {
   }
 }
 .t-window::backdrop {
-  background: color-mix(in srgb, var(--canvas) 75%, transparent);
+  background: var(--veil);
   opacity: 0;
   transition: opacity 120ms var(--ease-out), display 120ms allow-discrete, overlay 120ms allow-discrete;
 }
@@ -490,8 +491,8 @@ html:has(.t-window[open]) {
   }
 }
 
-/* The right sidebar, while it has something to scroll, keeps the wheel to itself (see PageSidebar.astro). */
-.right-sidebar.scrolls {
+/* The nav and the right sidebar, while they have something to scroll, keep the wheel to themselves (SiteTitle.astro). */
+:is(.sidebar-pane, .right-sidebar).scrolls {
   overscroll-behavior: contain;
 }
 
@@ -500,7 +501,7 @@ html:has(.t-window[open]) {
    plate of the diagrams (above) stays on the zoomed image. */
 html:root {
   --starlight-image-zoom-animation-duration: 250ms;
-  --starlight-image-zoom-backdrop-bg: var(--canvas);
+  --starlight-image-zoom-backdrop-bg: var(--veil);
 }
 body .starlight-image-zoom-image {
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
@@ -553,5 +554,102 @@ body .starlight-image-zoom-dialog figcaption {
 @media (hover: hover) and (pointer: fine) {
   :is(.t-icon, .starlight-image-zoom-control, .sl-menu-button, site-search button[data-open-modal], starlight-theme-select label, .ask-provider, .expressive-code .copy button):hover {
     border-color: var(--ink);
+  }
+}
+
+/* The one veil behind anything modal: the graph window, search and the zoomed image. */
+:root {
+  --veil: color-mix(in srgb, var(--canvas) 75%, transparent);
+}
+site-search dialog::backdrop {
+  background: var(--veil);
+  backdrop-filter: none;
+}
+
+/* Running text in the Torres body style; navigation (sidebar and "On this page") in the meta style, 16px. */
+.sl-markdown-content {
+  font-size: var(--sl-text-body);
+}
+nav.sidebar a,
+:is(starlight-toc, mobile-starlight-toc) a {
+  font-size: 1rem;
+}
+
+/* Title and text: one 2rem gap and no rule between them (Torres: space first). The image zoom plugin puts an element
+   before the text, which gave the text Starlight's 1.5rem sibling margin on top of both panel paddings. */
+main > .content-panel:first-of-type {
+  padding-bottom: 0;
+}
+main > .content-panel + .content-panel {
+  padding-top: 2rem;
+  border-top: 0;
+}
+.sl-container > .sl-markdown-content {
+  margin-top: 0;
+}
+
+/* Content links keep the link colour on hover; only the underline thickens (Torres link). */
+@media (hover: hover) and (pointer: fine) {
+  .sl-markdown-content a:hover:not(:where(.not-content *)) {
+    color: var(--sl-color-text-accent);
+  }
+}
+
+/* Starlight's divider after the social icons, which this site has none of. */
+header .social-icons {
+  display: none;
+}
+
+/* The nav's scrollbar in the palette, not the browser's grey. */
+.sidebar-pane {
+  scrollbar-color: var(--border) transparent;
+}
+
+/* Hide or show the nav: a small button on a shelf at the foot of the nav. The nav's scroll area ends above the shelf,
+   so nothing in the nav can sit behind it. While the nav is hidden only the button stays, in the same place. The
+   choice stays in localStorage `nav-hidden`. Screens of 50rem and wider only: below that the nav is the menu. */
+.nav-shelf {
+  display: none;
+}
+@media (min-width: 50rem) {
+  :root {
+    --nav-shelf: 3.75rem;
+  }
+  .nav-shelf {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: var(--sl-z-index-menu);
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    width: var(--sl-sidebar-width);
+    height: var(--nav-shelf);
+    padding-inline: var(--sl-sidebar-pad-x);
+    background: var(--sl-color-bg-sidebar);
+    border-top: 1px solid var(--hairline);
+    border-inline-end: 1px solid var(--sl-color-hairline-shade); /* continues the nav's edge line */
+  }
+  .sidebar-pane {
+    inset-block-end: var(--nav-shelf);
+  }
+  :root[data-nav-hidden] .nav-shelf {
+    width: auto;
+    background: none;
+    border: 0;
+  }
+  :root[data-nav-hidden] .sidebar-pane {
+    display: none;
+  }
+  :root[data-nav-hidden][data-has-sidebar] {
+    --sl-content-inline-start: 0rem;
+  }
+  :root[data-nav-hidden] header.header {
+    --sl-content-inline-start: 0rem;
+  }
+}
+/* Between 50 and 72rem there is no "On this page" column: with the nav hidden, the text column sits in the middle. */
+@media (min-width: 50rem) and (max-width: 71.99rem) {
+  :root[data-nav-hidden] .sl-container {
+    margin-inline: auto;
   }
 }
