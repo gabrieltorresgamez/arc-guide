@@ -34,21 +34,20 @@ Keep the two parts separate. See [Business and Technical Context](concept:busine
 
 ## If something is missing
 
-- **No stakeholder list:** Make a quick one. Ask who gains or loses from the system, who decides, and who controls resources. Users and neighbor systems often show up this way. See Stakeholder Identification ([Stakeholder](concept:stakeholder)).
-- **Unsure whether something is inside or outside:** Write down your best guess, mark it as open, and ask the people who decide. Do not leave the boundary implicit. See [Architecture Disciplines](concept:architecture-disciplines).
-- **No quality goals yet:** Draft up to five and keep going. The context often shows which goals are at risk. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).
+- **No stakeholder list:** Make a quick one. A stakeholder is anyone with an interest in the system, and every class of stakeholder needs a representative. See Stakeholder Identification ([Stakeholder](concept:stakeholder)).
+- **No quality goals yet:** Write down the top three, at most five. See [arc42 Introduction and Goals](concept:arc42-introduction-and-goals).
 
 ## How to do it
 
 1. **State the scope.** Write down what is inside the system and what is outside. Make the boundary explicit. See [Architecture Disciplines](concept:architecture-disciplines).
 2. **List all communication partners.** Include human users and other IT systems. Leave none out. Questions about external systems and users are answered in the context view. See [Stakeholder Questions Addressed in Views](concept:stakeholder-questions-addressed-in-views).
 3. **Draw the business context.** Show your system as one black box. A black box shows no internals. Put the partners around it, outside the boundary. See [Context View](concept:context-view) and [C4 Level 1: System Context Diagram](concept:c4-level-1-system-context-diagram).
-4. **Label each arrow with the data that flows.** Arrows show data flows, not dependencies. If data moves both ways, draw both directions. See Context View Antipattern: Forgetting Bidirectional Data Flows ([Context View](concept:context-view)).
+4. **Label each arrow with the data that flows.** Arrows show data flows, not dependencies. See [Context View](concept:context-view).
 5. **Group partners if there are many.** Use criteria you state openly. Keep the top diagram a simple overview. See Refining Complex Context Views ([Context View](concept:context-view)).
-6. **Write a context table.** Give each partner one row. Add the domain data exchanged. Keep each row short and describe interface details only once, elsewhere. See [arc42 Context and Scope](concept:arc42-context-and-scope) and Undetected Duplication Antipattern ([Characteristics of a Good View](concept:characteristics-of-a-good-view)).
+6. **Write a context table.** Give each partner one row. Add the domain data exchanged. See [arc42 Context and Scope](concept:arc42-context-and-scope).
 7. **Add the technical context.** For each domain interface, name the channel or protocol that carries it. Keep this apart from the business context. See [Business and Technical Context](concept:business-and-technical-context).
 8. **Mark risks.** Show risky neighbors or interfaces explicitly in the context. See [Context View](concept:context-view).
-9. **Check the diagram.** Give it a title that states its type and scope. Add a legend. Use plain names and avoid unexplained acronyms. Leave out technologies and internals in the business view. See Context View Antipatterns ([Business and Technical Context](concept:business-and-technical-context)) and Architectural Overview Antipattern ([Architectural Overview Diagram](concept:architectural-overview-diagram)).
+9. **Check the diagram.** Give it a title that states its type and scope. Add a legend. Use only acronyms that every reader knows ([Characteristics of a Good View](concept:characteristics-of-a-good-view)). Leave out technologies and internals in the business view. See Context View Antipatterns ([Business and Technical Context](concept:business-and-technical-context)) and Architectural Overview Antipattern ([Architectural Overview Diagram](concept:architectural-overview-diagram)).
 10. **If you use open data, list it as a partner.** State its license or public-domain status. State that it is machine-readable and how to obtain it. See [Use of external and open data](concept:use-of-external-and-open-data).
 
 ## Example: ClinicBook
@@ -95,7 +94,6 @@ The table points to the main forces. Privacy shows up at every patient-facing an
 - The scope states what is inside and outside the system, and the boundary is explicit. See [Architecture Disciplines](concept:architecture-disciplines).
 - Every user and external system appears as a communication partner. See [arc42 Context and Scope](concept:arc42-context-and-scope).
 - The business context shows the system as a black box, and each arrow carries a label naming the data. See Context View Antipatterns ([Business and Technical Context](concept:business-and-technical-context)).
-- Two-way exchanges show both directions. See Context View Antipattern: Forgetting Bidirectional Data Flows ([Context View](concept:context-view)).
 - A table lists each partner, its data and its technical channel, and the technical context is kept separate. See [Business and Technical Context](concept:business-and-technical-context).
 - Risks at interfaces are marked. See [Context View](concept:context-view).
 - The diagram has a title and a legend, and readers can understand it without a long explanation. See Architectural Overview Antipattern ([Architectural Overview Diagram](concept:architectural-overview-diagram)).

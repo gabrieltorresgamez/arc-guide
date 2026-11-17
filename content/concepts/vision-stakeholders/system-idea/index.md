@@ -74,6 +74,8 @@ In arc42, the solution strategy (see the article arc42 Solution Strategy) briefl
 
 The arc42 whitebox template for the overall system in the building block view contains an overview diagram. (See Architectural Overview Diagram and Context View.)
 
+**Product Vision Board.** This template has sections for the vision, the target group (who benefits, who the users and customers are), the needs (the main problem the product addresses or its primary benefit), the key features and the business goals.
+
 **More about the vision.**
 
 - **Vision Statement:** A vision statement is a short, inspiring statement of the shared goal behind a product.

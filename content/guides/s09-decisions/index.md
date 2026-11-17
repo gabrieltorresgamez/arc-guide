@@ -15,7 +15,7 @@ review:
 
 You get a short list of the decisions that shape your system. Each one has a record that says what you decided, why, which options you rejected, and what the choice costs. This list becomes section 9 of your arc42 document. See [arc42 Architecture Decisions](concept:arc42-architecture-decisions).
 
-An [Architectural Decision](concept:architectural-decision) is a choice of one option from several, made against stated criteria. Writing it down lets others retrace the choice later. It also helps the team avoid reopening settled questions.
+An [Architectural Decision](concept:architectural-decision) is a choice of one option from several, made against stated criteria. Writing it down lets others retrace the choice later. A decision record also helps the team avoid reopening settled questions ([Architectural Decision Record](concept:architectural-decision-record)).
 
 ## What you need first
 
@@ -38,7 +38,7 @@ An [Architectural Decision](concept:architectural-decision) is a choice of one o
 2. **Keep the list small.** A log you cannot maintain helps nobody. Tie each entry to a significant requirement, and state why you judged it significant. See [Architectural Decision Management](concept:architectural-decision-management).
 3. **Phrase each decision as a short question.** One question covers one concern. See Architectural Design Issue ([Architectural Decision Management](concept:architectural-decision-management)).
 4. **Check that you are ready to decide.** Ask five things. Who are the stakeholders? Is there time? Are there alternatives? Are the requirements known? Is there a template? See Architectural Decision Definition of Ready ([Architectural Decision Management](concept:architectural-decision-management)).
-5. **List criteria and real options.** Take the criteria from the context and the requirements, not from the strengths of the option you prefer. List at least two real options, not filler. See ADR Common Mistakes and Review Checklist ([Architectural Decision Record](concept:architectural-decision-record)).
+5. **List criteria and real options.** Take the criteria from the requirements, and do not leave any criteria hidden. List at least two real options, not filler. See ADR Common Mistakes and Review Checklist ([Architectural Decision Record](concept:architectural-decision-record)).
 6. **Decide with the right people.** Name the decision makers. Plan stakeholder involvement ahead of time. See Architectural Decision Management Cycle ([Architectural Decision Management](concept:architectural-decision-management)).
 7. **Write one record per decision.** Include the context, the criteria, the options, the outcome and the reasons. Explain why you chose the option; do not repeat the title. See [Architectural Decision Record](concept:architectural-decision-record) (ADR) and [Architecture Decision Rationale](concept:architecture-decision-rationale).
 8. **List all consequences, good and bad.** Name a concrete price. "More effort later" is weak. Say where the effort goes. See [Decision Documentation and Requirements Management](concept:decision-documentation-and-requirements-management).
@@ -83,7 +83,7 @@ The team does not record small local choices, such as the date-format library. T
 >
 > **Why:**
 > - Option 2 leaves calendars out of date for hours. That risks double bookings.
-> - Option 3 is outside the project's control. Practices would likely refuse the cost of switching.
+> - Option 3 is outside the project's control.
 > - Option 1 keeps calendars current and keeps vendor details in one place.
 >
 > **Consequences:**

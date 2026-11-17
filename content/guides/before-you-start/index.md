@@ -4,11 +4,6 @@ id: before-you-start
 review:
   status: generated
   flags:
-  - 'unsupported:The business side usually owns business goals (Business goals: Who usually provides it).'
-  - 'unsupported:The architect usually drafts the system idea (Vision and system idea: Who usually provides
-    it).'
-  - unsupported:The architect usually draws the context view with input from stakeholders and neighboring-system
-    owners (Scope and context).
   - unsupported:The architect adds detail to functional requirements where decisions need it (Key functional
     requirements).
   - unsupported:Stakeholders rank qualities and the architect turns wishes into scenarios (Top quality
@@ -23,21 +18,21 @@ review:
 ## Vision and system idea
 
 **What it is**
-The vision is a short statement of the shared goal behind the product. It names the target customers, the value they get, and the few features that make the product stand out. See Vision Statement. A full vision also covers needs and context, as described in System Idea and Vision Elements. The system idea is an early, high-level answer to how the system will be built. In arc42, the closest match is the solution strategy. See [System Idea](concept:system-idea).
+The vision is a short statement of the shared goal behind the product. See Vision Statement. A Product Vision Board adds the target group, their needs, the key features and the business goals ([System Idea](concept:system-idea)). The system idea is an early, high-level answer to how the system will be built. In arc42, the closest match is the solution strategy. See [System Idea](concept:system-idea).
 
 **Why you need it**
-The vision gives everyone the same picture of the intention and motivation behind the system. The system idea sums up the basic decisions that shape the architecture. Each of those decisions ties back to a quality goal or a key constraint. Without both, the later decisions have nothing to point at.
+The vision is a short, inspiring statement of the shared goal. The system idea sums up the basic decisions that shape the architecture. Each of those decisions ties back to a quality goal or a key constraint.
 
 **Who usually provides it**
-Business requirements, including the vision, usually sit in a vision and scope document. See [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty). Reference that document instead of copying it, as Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)) advises. The system idea is the architecture's own first answer, so the architect usually drafts it.
+Business requirements, including the vision, usually sit in a vision and scope document. See [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty). In arc42 section 1, point to it instead of copying it ([arc42 Introduction and Goals](concept:arc42-introduction-and-goals)).
 
 **Good enough is**
-A vision that fits in two or three sentences and a rough system idea. Early versions get refined over time. See [Twin Peaks Model](concept:twin-peaks-model).
+A short vision statement and a rough system idea. Early versions get refined over time. See [Twin Peaks Model](concept:twin-peaks-model).
 
 For ClinicBook, the vision could read: "Patients of 40 small practices book, move and cancel appointments on the web or in an app. Practice staff keep their calendars in sync." The system idea could be one sentence: "Web and mobile clients use one central booking service. One connector per vendor links it to each practice's software." Treat that sentence as a draft. Revise it once the quality goals and constraints are clearer.
 
 **If it is missing**
-Write a draft yourself from the vision elements: target group, need, value and context. Mark it as a draft and have the people behind the product confirm it. Write the system idea last, or revise it after you have the quality goals and constraints. Early choices may prove wrong, so record them as revisable. See [Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start).
+Write a draft yourself, for example as a Product Vision Board: target group, needs, key features and business goals ([System Idea](concept:system-idea)). Mark it as a draft and have the people behind the product confirm it. Write the system idea last, or revise it after you have the quality goals and constraints. Early choices may prove wrong, so record them as revisable. See [Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start).
 
 ## Business goals
 
@@ -45,10 +40,10 @@ Write a draft yourself from the vision elements: target group, need, value and c
 Business goals say what the organization wants to achieve with the system. They count as business requirements and belong in a vision and scope document, apart from detailed software requirements. See [Requirement Types and Documents (Wiegers/Beatty)](concept:requirement-types-and-documents-wiegers-beatty). The [Business Model Canvas](concept:business-model-canvas) describes the business on one page. It covers who the business serves, what it offers, how it delivers, and what it costs and earns.
 
 **Why you need it**
-The value in a vision links to business goals and the business case. An important requirement is tied to business value, risk, or a key stakeholder's concern. See [Architecturally Significant Requirement](concept:architecturally-significant-requirement). Without goals, you cannot tell which requirements deserve the most design effort.
+An important requirement is tied to business value, risk, or a key stakeholder's concern. See [Architecturally Significant Requirement](concept:architecturally-significant-requirement).
 
 **Who usually provides it**
-The business side of the organization usually owns these goals. The architect collects them from existing documents. If you cite a canvas, date it and give it a version.
+If you cite a canvas, date it and give it a version.
 
 **Good enough is**
 A short list of goals, each with one line of reasoning. For ClinicBook, it could say: bring all 40 practices onto the platform by the fixed launch date; give patients an easy way to book, move and cancel; keep health data trustworthy. Each goal should connect to a stakeholder's concern.
@@ -65,7 +60,7 @@ A stakeholder is a person, team, organization, or class of such parties with an 
 Architects must balance different needs. Concerns can conflict, for example time-to-market against maintainability. The chosen trade-off must be explicit. A stakeholder list helps avoid surprises later in development. Every concern should be addressed in the architecture description.
 
 **Who usually provides it**
-The architect finds stakeholders, using guiding questions: who gains or loses, who decides, who controls resources. See Stakeholder Identification ([Stakeholder](concept:stakeholder)). Every stakeholder class needs a representative.
+The architect finds the stakeholders: everyone with an interest in the system. See Stakeholder Identification ([Stakeholder](concept:stakeholder)). Every stakeholder class needs a representative.
 
 **Good enough is**
 A table with role or name, contact, expectations and concerns. Cover every class of stakeholder.
@@ -86,16 +81,16 @@ Answer the guiding questions yourself and write a first table. Add each stakehol
 ## Scope and context
 
 **What it is**
-The scope says where the system starts and ends. A [Context View](concept:context-view) shows the system as a black box with its communication partners around it. It shows what data the system exchanges with them. The business context shows data flows. The technical context shows channels and transmission media. See Refining Complex Context Views.
+The scope says where the system starts and ends. A [Context View](concept:context-view) shows the system as a black box with its communication partners around it. It shows what data the system exchanges with them. The business context shows data flows. The technical context shows the channels and technical interfaces to the neighbors. See Refining Complex Context Views.
 
 **Why you need it**
 Everyone can see the boundary of the system and who it talks to. Interfaces to neighboring systems become visible early. Risks can be marked directly in the context.
 
 **Who usually provides it**
-The architect usually draws it, with input from the stakeholders and from the owners of neighboring systems.
+Infrastructure and hardware designers in particular decide the technical interfaces to neighbors ([Context View](concept:context-view)).
 
 **Good enough is**
-One overview diagram plus a table with one row per communication partner. Label each flow with the data exchanged. Draw both directions where data moves both ways. See Context View Antipattern: Forgetting Bidirectional Data Flows ([Context View](concept:context-view)).
+One overview diagram plus a table with one row per communication partner. Label each flow with the data exchanged. See [Context View](concept:context-view).
 
 For ClinicBook, the partners are patients (web and app), practice staff, the practices' management software from several vendors, an SMS channel and an e-mail channel. The flows with the practice software run both ways. ClinicBook sends booked appointments out. Changes made in the practice software come back in. Mark the differing vendor interfaces as a risk. With many vendors, group them by an explicit criterion.
 
@@ -157,7 +152,7 @@ Pick candidates from the standard list and rank them with the stakeholders. Writ
 A constraint is a requirement that limits how freely architects can design and build. Teams must deal with it, though some constraints can be negotiated. See [Architectural Constraint](concept:architectural-constraint). Constraints fall into groups: technical, organizational or political, and conventions. They differ from forces, which you weigh against each other. See [Architectural Force](concept:architectural-force).
 
 **Why you need it**
-A written list shows where the design is free and where it is bound. It stops you from spending effort on options that are not allowed. Keep organization-wide constraints apart from system-specific ones.
+A written list shows where the design is free and where it is bound. It stops you from spending effort on options that are not allowed.
 
 **Who usually provides it**
 Each constraint has someone who wants it, and that party can explain why. Record both.

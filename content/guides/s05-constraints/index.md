@@ -27,9 +27,9 @@ The second list holds your forces. A force is a pressure that pulls a decision i
 
 ## If something is missing
 
-- **No stakeholder list yet:** Write a first, rough list of who is involved. Early results get refined over time, as Architect Settles In Method Phase ([Architecture Challenges at Project Start](concept:architecture-challenges-at-project-start)) describes.
+- **No stakeholder list yet:** Write a first, rough list of who is involved. See [Stakeholder](concept:stakeholder).
 - **No quality goals yet:** Ask the key stakeholders what they care about most. Write down what you hear and mark it as a first version.
-- **No known organization-wide standards:** Ask whether the organization keeps an IT Component Catalogue ([Technology Architecture](concept:technology-architecture)). It shows which technologies are standard, need approval, or are not permitted. If no such list exists, record the open question.
+- **No known organization-wide standards:** Ask whether the organization keeps an IT Component Catalogue ([Technology Architecture](concept:technology-architecture)). It gives each component a status, such as keep, approve or retire. If no such list exists, record the open question.
 - **You cannot tell whether a constraint is fixed:** Record it as a constraint and mark it as unclear. Then ask the person who wants it. See [Architectural Constraint](concept:architectural-constraint).
 
 ## How to do it
@@ -62,7 +62,7 @@ The rows on the date, integration and health data are fixed. The team cannot tra
 **Forces (weighed, not obeyed)**
 
 - **Privacy and security versus easy booking.** Strong protection can make booking slower for patients.
-- **Availability in morning peaks versus effort and cost.** Redundancy helps keep booking up when parts fail. It also adds cost and complexity. See [Reliability Tactic](concept:reliability-tactic).
+- **Availability in morning peaks versus effort and cost.** Redundant spares help keep booking up when parts fail. See [Reliability Tactic](concept:reliability-tactic).
 - **Legacy integration versus the launch date.** Each vendor's software adds work, and the date does not move.
 - **A small team versus everything above.** Every choice costs the team time.
 

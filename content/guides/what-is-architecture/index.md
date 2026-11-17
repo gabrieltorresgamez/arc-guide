@@ -10,16 +10,13 @@ review:
 
 Software architecture is the set of fundamental choices about a system. It covers the system's parts, how those parts relate, and the reasoning behind the choices. Definitions differ. Most stress three things: structure, important decisions, and the cost of changing those decisions later. See [Software Architecture](concept:software-architecture) and Software Architecture Definition.
 
-Two ideas help from the start:
-
-- **System boundary.** The architecture separates the system from its environment. Everything inside is yours to design. Everything outside is a neighbor you must work with.
-- **Building blocks in levels.** You describe the system as a few large parts. You then zoom into a part only where it matters. Read more in Software Architecture Basic Concepts ([Software Architecture](concept:software-architecture)) and [Architecture Level](concept:architecture-level).
+**Building blocks in levels** help from the start. You describe the system as a few large parts. You then zoom into a part only where it matters. Read more in Software Architecture Basic Concepts ([Software Architecture](concept:software-architecture)) and [Architecture Level](concept:architecture-level).
 
 Every system has an architecture, even if nobody planned or documented it. That is called [implicit architecture](concept:implicit-architecture).
 
 ## Why it matters
 
-An architecture that nobody chose is an accidental architecture. It is only implied by the code. Quick fixes and piecemeal growth erode it. In the end it can become a [Big Ball of Mud](concept:big-ball-of-mud), a system held together by patches.
+An architecture that nobody chose on purpose still exists, but it is not visible or well communicated to the team. Small, unplanned changes pile up and erode it. In the end it can become a [Big Ball of Mud](concept:big-ball-of-mud), a system held together by patches.
 
 This slow drift away from the intended design is called architecture decay ([Big Ball of Mud](concept:big-ball-of-mud)). Two habits counter it:
 
@@ -30,11 +27,9 @@ Architecture is also where goals meet limits. A *quality goal* is a property the
 
 ## What an architect does
 
-A [software architect](concept:software-architect) links business goals and technical work. The architect decides what matters, weighs trade-offs, talks with people at every level of the organization, and stays close to building the system. Role of the Software Architect ([Software Architect](concept:software-architect)) adds that the architect makes the big design decisions and leads the teams that build the system.
+A [software architect](concept:software-architect) links business goals and technical work. The architect decides what matters, weighs trade-offs, talks with people at every level of the organization, and stays close to building the system. The role needs technical skill, communication skill and hands-on involvement in delivery ([Software Architect](concept:software-architect)).
 
 The work follows a repeated cycle. [Architectural thinking](concept:architectural-thinking) means designing, checking, and refining. It starts from requirements, quality goals, and constraints. It ends in a documented architecture whose risks and trade-offs are understood.
-
-Four work products make the result concrete. Architect's Four Key Work Products ([Software Architect](concept:software-architect)) lists them: a vision, a context view, an architecture overview, and an operational model.
 
 The architect does not design everything upfront. [Agile architecture](concept:agile-architecture) means doing just enough architecture, guided by the biggest risks, and revisiting it as the product changes.
 
@@ -42,9 +37,9 @@ The architect does not design everything upfront. [Agile architecture](concept:a
 
 ClinicBook is an online appointment booking system for 40 small medical practices. Patients book, move, and cancel appointments on the web and in a mobile app. Staff manage calendars. Here is how the ideas above apply.
 
-**Forces first.** The main forces are privacy and security, availability during morning peaks, integration with legacy systems, a small team, and a fixed launch date. The architect names the most important quality goals and records which constraints are fixed. The launch date is one candidate.
+**Forces first.** The main forces are privacy and security, availability during morning peaks, integration with legacy systems, a small team, and a fixed launch date. The architect names the most important quality goals and learns which decisions are free and which are bound.
 
-**Draw the boundary.** A context view shows ClinicBook as a black box. Around it sit its communication partners and the data exchanged. Partners include patients, practice staff, the practices' management software from different vendors, and the SMS and e-mail channels. The architect asks for just this much detail at first. The [four work products article](concept:software-architect) says a context view and a container view suffice for most teams.
+**Draw the boundary.** A context view shows ClinicBook as a black box. Around it sit its communication partners and the data exchanged. Partners include patients, practice staff, the practices' management software from different vendors, and the SMS and e-mail channels.
 
 **Let risks guide the effort.** With a small team and a fixed date, a complete upfront design is not realistic. Skipping design is no better. Following [Agile Architecture](concept:agile-architecture), the architect ties design effort to the biggest risks. For ClinicBook, those risks are health data protection, the morning peaks, and the vendor integrations.
 

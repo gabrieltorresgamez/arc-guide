@@ -41,7 +41,7 @@ Each diagram has a named audience, a title, a legend and a clear type. Readers c
 ## How to do it
 
 1. **Name the readers and their questions.** Write down who reads each section and why. Every diagram states its notation, audience and purpose ([View Creation Method](concept:view-creation-method)). Include only what a named reader will use ([Guidelines for Documentation](concept:guidelines-for-documentation)).
-2. **Agree on a small modeling method.** Every diagram gets a title with its type and scope, plus a legend. Every arrow gets a specific label. Use color the same way in all diagrams. See [Modeling Method](concept:modeling-method) and [Rules of Thumb for Modeling](concept:rules-of-thumb-for-modeling). Avoid made-up symbols (Self-Invented Notation Drawback ([Characteristics of a Good View](concept:characteristics-of-a-good-view))). Choose C4, UML or BPMN on purpose, and say which you use ([UML in Architecture Documentation](concept:uml-in-architecture-documentation)). If you keep diagrams as text in version control, see [Diagrams as Code](concept:diagrams-as-code).
+2. **Agree on a small modeling method.** Every diagram gets a title with its type and scope, plus a legend. Every arrow gets a specific label. Use color the same way in all diagrams. See [Modeling Method](concept:modeling-method) and [Rules of Thumb for Modeling](concept:rules-of-thumb-for-modeling). Choose C4, UML or BPMN on purpose, and say which you use ([UML in Architecture Documentation](concept:uml-in-architecture-documentation)). If you keep diagrams as text in version control, see [Diagrams as Code](concept:diagrams-as-code).
 3. **Write section 3: the context.**
    - Draw the system as one black box. A black box shows only what is visible from outside.
    - Put users and neighboring systems around it.
@@ -51,22 +51,20 @@ Each diagram has a named audience, a title, a legend and a clear type. Readers c
    - A [C4 System Context Diagram](concept:c4-level-1-system-context-diagram) is a good first diagram. See [Business and Technical Context](concept:business-and-technical-context) and Context View Antipatterns.
 4. **Write section 5, level 1: the big parts.**
    - Draw the white box of the whole system. A white box shows the black boxes inside it.
-   - Describe each block's responsibility and interfaces.
+   - Give each black box a description.
    - A [C4 Level 2: Container Diagram](concept:c4-level-2-container-diagram) fits here. A container is a separately running application or a data store, such as a database.
    - Show the main technology of each container. Leave clustering and load balancing for the deployment view.
-   - Group blocks by responsibility. Do not copy code packages (Component View Antipattern: Lifting Code to Model Level ([Component View](concept:component-view))).
 5. **Refine only where it pays off.** Zoom into a block only if it is important, risky, complex or volatile. Leave simple or standard blocks as black boxes. See Component View Refinement Levels ([Component View](concept:component-view)). A [C4 Level 3: Component Diagram](concept:c4-level-3-component-diagram) opens up exactly one container. Draw one only when it adds value. Code-level diagrams are rarely needed, and tools can generate them ([C4 Level 4: Code Diagram](concept:c4-level-4-code-diagram)).
 6. **Write section 6: a few scenarios.**
    - Pick scenarios for architectural relevance, not completeness. Good candidates are key use cases, external interfaces, start-up or administration, and error cases ([Runtime View](concept:runtime-view)).
    - Use a [UML Sequence Diagram](concept:uml-sequence-diagram) to show how building blocks exchange messages. Separate synchronous from asynchronous messages (Message Types in Sequence Diagrams).
    - Use BPMN when a business process crosses several parties. A [BPMN Collaboration Diagram](concept:bpmn-collaboration-diagram) gives each party its own pool and connects pools with message flows.
-   - Make every step belong to a building block from section 5. Do not describe code-level steps (Runtime View Antipattern: Code-Level Activity Diagram ([Runtime View](concept:runtime-view))).
+   - Make every step belong to a building block from section 5. See [Runtime View](concept:runtime-view).
    - Check each BPMN model for deadlock and lack of synchronization ([Soundness of Process Models](concept:soundness-of-process-models)).
 7. **Write section 7: the deployment.**
    - Draw a [UML Deployment Diagram](concept:uml-deployment-diagram). Put software artifacts on the nodes that run them.
    - Draw one environment per diagram, for example production.
    - Show infrastructure such as load balancers and firewalls where they matter.
-   - Label each connection with its protocol.
    - Explain how the infrastructure shapes the system.
    - See [Deployment View](concept:deployment-view), Distribution View Antipatterns and Deployment Diagram Modeling Mistake ([UML Deployment Diagram](concept:uml-deployment-diagram)).
 8. **Describe each thing once.** Give an interface its full description in one place. Other places only point to it (Undetected Duplication Antipattern ([Characteristics of a Good View](concept:characteristics-of-a-good-view))). Keep detail at one abstraction level per diagram (Unclear Level of Abstraction Antipattern).

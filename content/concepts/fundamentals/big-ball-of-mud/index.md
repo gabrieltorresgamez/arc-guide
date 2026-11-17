@@ -56,6 +56,8 @@ A Big Ball of Mud is a system with a loose, haphazard structure. Its organizatio
 
 Such systems show clear signs of unregulated growth. They are repaired again and again with quick fixes. People call the result a spaghetti-code jungle.
 
+**How to slow it down.** Small, unplanned changes pile up and erode the structure. Once a system works, the authors' advice for its growth is to keep it working. They also suggest alternating periods of expansion with periods of consolidation, in which the structure is refactored (see Refactoring).
+
 **Throwaway code.** Throwaway code is a quick piece of code meant to be discarded. The real problem starts when nobody discards it and it stays in the system.
 
 **Different rates of change.** Systems and their parts evolve at different rates. The Shearing Layers pattern builds on this idea (see Shearing Layers).
